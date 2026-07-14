@@ -60,15 +60,39 @@ class AccountApiTests(unittest.TestCase):
         self.assertEqual(status, 200)
         self.assertEqual(data["articles"][0]["article_id"], "article-1")
 
-        status, _, _ = self.request("POST", "/api/forum/topics", {
+        status, topic_data, _ = self.request("POST", "/api/forum/topics", {
             "title": "Ett nytt gott initiativ", "category": "Lokalt",
             "body": "Det här är ett tillräckligt långt foruminlägg."
         }, cookie)
         self.assertEqual(status, 202)
+        topic_id = topic_data["topicId"]
         status, own, _ = self.request("GET", "/api/forum/topics", cookie=cookie)
         status, public, _ = self.request("GET", "/api/forum/topics")
         self.assertEqual(len(own["topics"]), 1)
         self.assertEqual(len(public["topics"]), 0)
+
+        status, index, _ = self.request("GET", "/api/forum/index")
+        self.assertEqual(status, 200)
+        self.assertEqual(len(index["groups"]), 3)
+        self.assertEqual(sum(len(group["sections"]) for group in index["groups"]), 10)
+
+        status, section, _ = self.request("GET", "/api/forum/topics?section=lokalt-engagemang", cookie=cookie)
+        self.assertEqual(status, 200)
+        self.assertEqual(section["topics"][0]["id"], topic_id)
+        self.assertEqual(section["topics"][0]["status"], "pending")
+
+        with server.db_connect() as db:
+            db.execute("UPDATE forum_topics SET status='published' WHERE id=?", (topic_id,))
+        status, followed, _ = self.request("POST", "/api/forum/follow", {"topicId": topic_id}, cookie)
+        self.assertEqual(status, 201)
+        self.assertTrue(followed["followed"])
+        status, detail, _ = self.request("GET", f"/api/forum/topic?id={topic_id}", cookie=cookie)
+        self.assertEqual(status, 200)
+        self.assertEqual(detail["section"]["id"], "lokalt-engagemang")
+        self.assertTrue(detail["topic"]["followed"])
+        status, unfollowed, _ = self.request("DELETE", f"/api/forum/follow/{topic_id}", cookie=cookie)
+        self.assertEqual(status, 200)
+        self.assertFalse(unfollowed["followed"])
 
 
 class PasswordTests(unittest.TestCase):

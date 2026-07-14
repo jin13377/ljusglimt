@@ -1,44 +1,49 @@
 <!doctype html>
 <html lang="sv">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ljusglimts förhandsmodererade forum för vänliga och konstruktiva samtal.">
-  <title>Forum – Ljusglimt</title><link rel="stylesheet" href="/assets/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ljusglimts forum med huvudgrupper, underforum och vänliga samtal om positiva nyheter.">
+  <title>Forum – Ljusglimt</title>
+  <link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Hoppa till innehållet</a>
   <div class="demo-bar"><span>● MODERERAT FORUM</span> Nya inlägg granskas före publicering.</div>
-  <header class="site-header"><div class="header-inner container">
-    <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">☀</span><span>Ljusglimt</span></a>
-    <nav class="main-nav compact-nav" aria-label="Huvudmeny"><a href="/">Nyheter</a><a class="active" href="/forum">Forum</a><a href="/om">Om oss</a><a data-auth-link href="/profil">Logga in</a></nav>
-  </div></header>
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">☀</span><span>Ljusglimt</span></a>
+      <nav class="main-nav compact-nav" aria-label="Huvudmeny">
+        <a href="/">Nyheter</a><a class="active" href="/forum">Forum</a><a href="/om">Om oss</a><a data-auth-link href="/profil">Logga in</a>
+      </nav>
+    </div>
+  </header>
 
-  <main id="main" class="forum-page container">
-    <section class="forum-hero">
-      <div><span class="eyebrow">Samtalet</span><h1>En vänligare plats på internet</h1>
-      <p>Prata om lösningar, vardagsglädje och människor som gör skillnad. Du kan läsa öppet; nya bidrag går först till moderering.</p></div>
-      <aside class="rules-card"><h2>Tre enkla regler</h2><ol><li>Var vänlig och saklig.</li><li>Dela inga personuppgifter.</li><li>Länka källa när du gör faktapåståenden.</li></ol></aside>
-    </section>
-
-    <section class="forum-layout" aria-labelledby="threads-title">
-      <div><div class="section-heading"><div><span class="eyebrow">Aktuellt</span><h2 id="threads-title">Pågående samtal</h2></div></div>
-        <div id="forum-filters" class="filters forum-filters" aria-label="Filtrera forum"><button class="filter-chip active" data-forum-filter="Alla" type="button">Alla</button><button class="filter-chip" data-forum-filter="Vardagsglädje" type="button">Vardagsglädje</button><button class="filter-chip" data-forum-filter="Lokalt" type="button">Lokalt</button><button class="filter-chip" data-forum-filter="Goda idéer" type="button">Goda idéer</button><button class="filter-chip" data-forum-filter="Vetenskap" type="button">Vetenskap</button></div>
-        <div id="forum-topics" class="topic-list" aria-live="polite"><p>Laddar samtal…</p></div>
+  <main id="main" class="forum-page forum-shell container">
+    <section class="forum-hero forum-hero-compact">
+      <div>
+        <span class="eyebrow">Ljusglimt Forum</span>
+        <h1>Samtal som ger energi</h1>
+        <p>Hitta din avdelning, starta en tråd och prata om lösningar, framsteg och sådant som gör vardagen bättre.</p>
       </div>
-      <aside class="new-topic-card">
-        <span class="eyebrow">Starta ett samtal</span><h2>Dela något gott</h2>
-        <p id="forum-identity" class="identity-note"></p>
-        <form id="topic-form" class="stack-form">
-          <label>Rubrik <input name="title" required minlength="5" maxlength="100" placeholder="Vad vill du berätta?"></label>
-          <label>Kategori <select name="category"><option>Vardagsglädje</option><option>Lokalt</option><option>Goda idéer</option><option>Nyheter</option><option>Miljö</option><option>Vetenskap</option></select></label>
-          <label>Inlägg <textarea name="body" required minlength="10" maxlength="2000" rows="6" placeholder="Skriv varmt, konkret och respektfullt."></textarea></label>
-          <label class="honeypot" aria-hidden="true">Webbplats <input name="website" tabindex="-1" autocomplete="off"></label>
-          <button class="button button-primary" type="submit">Skicka till moderering</button>
-          <p id="forum-status" class="form-status" role="status"></p>
-        </form>
+      <aside class="forum-welcome">
+        <strong>Vänligt. Sakligt. Källbelagt.</strong>
+        <span>Du kan läsa utan konto. Logga in för att skriva, följa och rapportera.</span>
       </aside>
     </section>
+
+    <div id="forum-app" aria-live="polite">
+      <div class="forum-loading"><span class="brand-mark">☀</span><p>Forumet laddas…</p></div>
+    </div>
   </main>
-  <footer class="site-footer"><div class="container footer-bottom"><a class="brand footer-brand" href="/"><span class="brand-mark">☀</span><span>Ljusglimt</span></a><span>Trygga samtal · Tydlig moderering</span></div></footer>
-  <script src="/assets/auth.js"></script><script src="/assets/forum.js"></script>
-</body></html>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <a class="brand footer-brand" href="/"><span class="brand-mark">☀</span><span>Ljusglimt</span></a>
+      <span>Trygga samtal · Tydlig moderering</span>
+    </div>
+  </footer>
+  <script src="/assets/auth.js"></script>
+  <script src="/assets/forum.js"></script>
+</body>
+</html>

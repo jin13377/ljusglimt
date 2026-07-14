@@ -35,6 +35,41 @@ PUBLIC_DATA = {"data/news.json", "data/seed-news.json"}
 MAX_BODY = 32_000
 SESSION_DAYS = 30
 FORUM_CATEGORIES = {"Vardagsglädje", "Lokalt", "Goda idéer", "Nyheter", "Miljö", "Vetenskap"}
+FORUM_STRUCTURE = (
+    {
+        "id": "nyheter-framsteg", "title": "Nyheter & framsteg",
+        "description": "Positiva händelser, forskning och lösningar som för världen framåt.",
+        "sections": (
+            ("dagens-nyheter", "Dagens positiva nyheter", "Diskutera dagens ljusaste nyheter och dela fler källor.", "☀"),
+            ("miljo-klimat", "Miljö & klimat", "Naturvård, ren energi och lösningar för planeten.", "♻"),
+            ("vetenskap-teknik", "Vetenskap & teknik", "Upptäckter och teknik som förbättrar människors liv.", "⚛"),
+            ("halsa-liv", "Hälsa & livskvalitet", "Framsteg inom hälsa, omsorg och välmående.", "♥"),
+        ),
+    },
+    {
+        "id": "samhalle-vardag", "title": "Samhälle & vardag",
+        "description": "Det goda som händer nära oss, i vardagen och kulturen.",
+        "sections": (
+            ("lokalt-engagemang", "Lokalt engagemang", "Initiativ, föreningar och eldsjälar där du bor.", "⌂"),
+            ("vardagsgladje", "Vardagsglädje", "Små segrar, vänlighet och sådant som gjorde dagen bättre.", "☺"),
+            ("kultur-kreativitet", "Kultur & kreativitet", "Musik, film, spel, konst och skapande som inspirerar.", "✦"),
+        ),
+    },
+    {
+        "id": "gemenskap", "title": "Gemenskap & Ljusglimt",
+        "description": "Lär känna medlemmarna och hjälp gemenskapen att utvecklas.",
+        "sections": (
+            ("presentationer", "Presentationer", "Ny här? Säg hej och berätta lite om dig själv.", "👋"),
+            ("goda-ideer", "Goda idéer", "Idéer, projekt och samarbeten som fler kan bygga vidare på.", "💡"),
+            ("sajtsnack", "Om Ljusglimt", "Förslag, frågor, regler och återkoppling om sajten.", "⚙"),
+        ),
+    },
+)
+FORUM_CATEGORY_TO_SECTION = {
+    "Vardagsglädje": "vardagsgladje", "Lokalt": "lokalt-engagemang",
+    "Goda idéer": "goda-ideer", "Nyheter": "dagens-nyheter",
+    "Miljö": "miljo-klimat", "Vetenskap": "vetenskap-teknik",
+}
 _rate_state: dict[tuple[str, str], float] = {}
 _rate_lock = threading.Lock()
 
@@ -83,6 +118,12 @@ def db_connect():
         connection.close()
 
 
+def ensure_column(db: sqlite3.Connection, table: str, column: str, declaration: str) -> None:
+    columns = {row["name"] for row in db.execute(f"PRAGMA table_info({table})")}
+    if column not in columns:
+        db.execute(f"ALTER TABLE {table} ADD COLUMN {column} {declaration}")
+
+
 def init_db() -> None:
     DB_FILE.parent.mkdir(parents=True, exist_ok=True)
     with db_connect() as db:
@@ -116,6 +157,20 @@ def init_db() -> None:
               saved_at TEXT NOT NULL,
               PRIMARY KEY (user_id, article_id)
             );
+            CREATE TABLE IF NOT EXISTS forum_groups (
+              id TEXT PRIMARY KEY,
+              title TEXT NOT NULL,
+              description TEXT NOT NULL DEFAULT '',
+              sort_order INTEGER NOT NULL DEFAULT 0
+            );
+            CREATE TABLE IF NOT EXISTS forum_sections (
+              id TEXT PRIMARY KEY,
+              group_id TEXT NOT NULL REFERENCES forum_groups(id) ON DELETE CASCADE,
+              title TEXT NOT NULL,
+              description TEXT NOT NULL DEFAULT '',
+              icon TEXT NOT NULL DEFAULT '☀',
+              sort_order INTEGER NOT NULL DEFAULT 0
+            );
             CREATE TABLE IF NOT EXISTS forum_topics (
               id TEXT PRIMARY KEY,
               user_id TEXT REFERENCES users(id) ON DELETE SET NULL,
@@ -143,27 +198,67 @@ def init_db() -> None:
               created_at TEXT NOT NULL,
               UNIQUE(topic_id, user_id)
             );
+            CREATE TABLE IF NOT EXISTS forum_follows (
+              user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+              topic_id TEXT NOT NULL REFERENCES forum_topics(id) ON DELETE CASCADE,
+              created_at TEXT NOT NULL,
+              PRIMARY KEY (user_id, topic_id)
+            );
             CREATE INDEX IF NOT EXISTS idx_sessions_expiry ON sessions(expires_at);
             CREATE INDEX IF NOT EXISTS idx_topics_status ON forum_topics(status, created_at DESC);
             CREATE INDEX IF NOT EXISTS idx_replies_topic ON forum_replies(topic_id, created_at);
             """
         )
-        if db.execute("SELECT COUNT(*) FROM forum_topics").fetchone()[0] == 0:
-            seed = read_json(FORUM_SEED, {"topics": []})
-            for topic in seed.get("topics", []):
+        ensure_column(db, "forum_topics", "section_id", "TEXT")
+        ensure_column(db, "forum_topics", "views", "INTEGER NOT NULL DEFAULT 0")
+        ensure_column(db, "forum_topics", "is_pinned", "INTEGER NOT NULL DEFAULT 0")
+        ensure_column(db, "forum_topics", "is_locked", "INTEGER NOT NULL DEFAULT 0")
+        ensure_column(db, "forum_topics", "last_activity", "TEXT")
+        for group_order, group in enumerate(FORUM_STRUCTURE):
+            db.execute(
+                """INSERT INTO forum_groups(id,title,description,sort_order) VALUES (?,?,?,?)
+                   ON CONFLICT(id) DO UPDATE SET title=excluded.title,description=excluded.description,sort_order=excluded.sort_order""",
+                (group["id"], group["title"], group["description"], group_order),
+            )
+            for section_order, (section_id, title, description, icon) in enumerate(group["sections"]):
                 db.execute(
-                    "INSERT OR IGNORE INTO forum_topics VALUES (?, NULL, ?, ?, ?, ?, ?, ?)",
-                    (topic["id"], topic.get("author", "Redaktionen"), topic["title"],
-                     topic.get("category", "Nyheter"), topic.get("body", ""),
-                     topic.get("status", "published"), topic.get("createdAt", iso_now())),
+                    """INSERT INTO forum_sections(id,group_id,title,description,icon,sort_order) VALUES (?,?,?,?,?,?)
+                       ON CONFLICT(id) DO UPDATE SET group_id=excluded.group_id,title=excluded.title,
+                       description=excluded.description,icon=excluded.icon,sort_order=excluded.sort_order""",
+                    (section_id, group["id"], title, description, icon, section_order),
                 )
-                for reply in topic.get("replies", []):
-                    db.execute(
-                        "INSERT OR IGNORE INTO forum_replies VALUES (?, ?, NULL, ?, ?, ?, ?)",
-                        (reply["id"], topic["id"], reply.get("author", "Redaktionen"),
-                         reply.get("body", ""), reply.get("status", "published"),
-                         reply.get("createdAt", iso_now())),
-                    )
+        seed = read_json(FORUM_SEED, {"topics": []})
+        for topic in seed.get("topics", []):
+            replies = topic.get("replies", [])
+            timestamps = [topic.get("createdAt", iso_now())] + [reply.get("createdAt", "") for reply in replies]
+            last_activity = max(value for value in timestamps if value)
+            db.execute(
+                """INSERT OR IGNORE INTO forum_topics
+                   (id,user_id,author_name,title,category,body,status,created_at,section_id,
+                    views,is_pinned,is_locked,last_activity)
+                   VALUES (?,NULL,?,?,?,?,?,?,?,?,?,?,?)""",
+                (topic["id"], topic.get("author", "Redaktionen"), topic["title"],
+                 topic.get("category", "Nyheter"), topic.get("body", ""),
+                 topic.get("status", "published"), topic.get("createdAt", iso_now()),
+                 topic.get("sectionId") or FORUM_CATEGORY_TO_SECTION.get(topic.get("category", "Nyheter"), "dagens-nyheter"),
+                 int(topic.get("views", 0)), int(bool(topic.get("pinned"))), int(bool(topic.get("locked"))),
+                 last_activity),
+            )
+            for reply in replies:
+                db.execute(
+                    """INSERT OR IGNORE INTO forum_replies
+                       (id,topic_id,user_id,author_name,body,status,created_at) VALUES (?,?,NULL,?,?,?,?)""",
+                    (reply["id"], topic["id"], reply.get("author", "Redaktionen"),
+                     reply.get("body", ""), reply.get("status", "published"),
+                     reply.get("createdAt", iso_now())),
+                )
+        for category, section_id in FORUM_CATEGORY_TO_SECTION.items():
+            db.execute(
+                "UPDATE forum_topics SET section_id=? WHERE (section_id IS NULL OR section_id='') AND category=?",
+                (section_id, category),
+            )
+        db.execute("UPDATE forum_topics SET section_id='dagens-nyheter' WHERE section_id IS NULL OR section_id=''")
+        db.execute("UPDATE forum_topics SET last_activity=created_at WHERE last_activity IS NULL OR last_activity=''")
 
 
 def hash_password(password: str) -> str:
@@ -232,40 +327,153 @@ def google_identity(credential: str) -> dict:
     return profile
 
 
+def forum_index_payload(current_user: dict | None = None) -> dict:
+    with db_connect() as db:
+        groups = []
+        for group in db.execute("SELECT * FROM forum_groups ORDER BY sort_order,title").fetchall():
+            sections = []
+            rows = db.execute(
+                "SELECT * FROM forum_sections WHERE group_id=? ORDER BY sort_order,title", (group["id"],)
+            ).fetchall()
+            for section in rows:
+                topic_count = db.execute(
+                    "SELECT COUNT(*) FROM forum_topics WHERE section_id=? AND status='published'", (section["id"],)
+                ).fetchone()[0]
+                reply_count = db.execute(
+                    """SELECT COUNT(*) FROM forum_replies r JOIN forum_topics t ON t.id=r.topic_id
+                       WHERE t.section_id=? AND t.status='published' AND r.status='published'""", (section["id"],)
+                ).fetchone()[0]
+                latest = db.execute(
+                    """SELECT id,title,author_name,last_activity FROM forum_topics
+                       WHERE section_id=? AND status='published'
+                       ORDER BY last_activity DESC LIMIT 1""", (section["id"],)
+                ).fetchone()
+                sections.append({
+                    "id": section["id"], "title": section["title"],
+                    "description": section["description"], "icon": section["icon"],
+                    "topicCount": topic_count, "postCount": topic_count + reply_count,
+                    "latest": ({"id": latest["id"], "title": latest["title"],
+                                "author": latest["author_name"], "createdAt": latest["last_activity"]}
+                               if latest else None),
+                })
+            groups.append({
+                "id": group["id"], "title": group["title"],
+                "description": group["description"], "sections": sections,
+            })
+        latest_rows = db.execute(
+            """SELECT t.id,t.title,t.author_name,t.last_activity,t.section_id,s.title AS section_title
+               FROM forum_topics t JOIN forum_sections s ON s.id=t.section_id
+               WHERE t.status='published' ORDER BY t.last_activity DESC LIMIT 8"""
+        ).fetchall()
+        stats = {
+            "topics": db.execute("SELECT COUNT(*) FROM forum_topics WHERE status='published'").fetchone()[0],
+            "posts": db.execute("SELECT COUNT(*) FROM forum_topics WHERE status='published'").fetchone()[0]
+                     + db.execute("SELECT COUNT(*) FROM forum_replies WHERE status='published'").fetchone()[0],
+            "members": db.execute("SELECT COUNT(*) FROM users").fetchone()[0],
+        }
+    return {
+        "groups": groups,
+        "latest": [{"id": row["id"], "title": row["title"], "author": row["author_name"],
+                    "createdAt": row["last_activity"], "sectionId": row["section_id"],
+                    "sectionTitle": row["section_title"]} for row in latest_rows],
+        "stats": stats,
+    }
+
+
+def forum_topics_payload(section_id: str, current_user: dict | None) -> dict | None:
+    user_id = current_user["id"] if current_user else ""
+    with db_connect() as db:
+        section = db.execute(
+            """SELECT s.*,g.title AS group_title,g.id AS group_id
+               FROM forum_sections s JOIN forum_groups g ON g.id=s.group_id WHERE s.id=?""", (section_id,)
+        ).fetchone()
+        if not section:
+            return None
+        topics = db.execute(
+            """SELECT t.*,u.avatar_url,
+                      (SELECT COUNT(*) FROM forum_replies r WHERE r.topic_id=t.id AND r.status='published') AS reply_count,
+                      EXISTS(SELECT 1 FROM forum_follows f WHERE f.topic_id=t.id AND f.user_id=?) AS followed
+               FROM forum_topics t LEFT JOIN users u ON u.id=t.user_id
+               WHERE t.section_id=? AND (t.status='published' OR t.user_id=?)
+               ORDER BY t.is_pinned DESC,t.last_activity DESC""", (user_id, section_id, user_id)
+        ).fetchall()
+    return {
+        "section": {"id": section["id"], "title": section["title"],
+                    "description": section["description"], "icon": section["icon"],
+                    "groupId": section["group_id"], "groupTitle": section["group_title"]},
+        "topics": [{
+            "id": row["id"], "title": row["title"], "body": row["body"],
+            "author": row["author_name"], "avatarUrl": row["avatar_url"],
+            "createdAt": row["created_at"], "lastActivity": row["last_activity"],
+            "status": row["status"], "replyCount": row["reply_count"], "views": row["views"],
+            "pinned": bool(row["is_pinned"]), "locked": bool(row["is_locked"]),
+            "followed": bool(row["followed"]),
+        } for row in topics],
+    }
+
+
+def forum_topic_payload(topic_id: str, current_user: dict | None, increment_view: bool = True) -> dict | None:
+    user_id = current_user["id"] if current_user else ""
+    with db_connect() as db:
+        visible = db.execute(
+            "SELECT id,status FROM forum_topics WHERE id=? AND (status='published' OR user_id=?)",
+            (topic_id, user_id),
+        ).fetchone()
+        if not visible:
+            return None
+        if increment_view and visible["status"] == "published":
+            db.execute("UPDATE forum_topics SET views=views+1 WHERE id=?", (topic_id,))
+        topic = db.execute(
+            """SELECT t.*,u.avatar_url,u.created_at AS member_since,u.role,
+                      s.title AS section_title,s.description AS section_description,s.icon AS section_icon,
+                      g.id AS group_id,g.title AS group_title,
+                      EXISTS(SELECT 1 FROM forum_follows f WHERE f.topic_id=t.id AND f.user_id=?) AS followed
+               FROM forum_topics t LEFT JOIN users u ON u.id=t.user_id
+               JOIN forum_sections s ON s.id=t.section_id JOIN forum_groups g ON g.id=s.group_id
+               WHERE t.id=?""", (user_id, topic_id)
+        ).fetchone()
+        replies = db.execute(
+            """SELECT r.*,u.avatar_url,u.created_at AS member_since,u.role
+               FROM forum_replies r LEFT JOIN users u ON u.id=r.user_id
+               WHERE r.topic_id=? AND (r.status='published' OR r.user_id=?) ORDER BY r.created_at""",
+            (topic_id, user_id),
+        ).fetchall()
+    author = {
+        "name": topic["author_name"], "avatarUrl": topic["avatar_url"],
+        "memberSince": topic["member_since"], "role": topic["role"] or "member",
+    }
+    return {
+        "section": {"id": topic["section_id"], "title": topic["section_title"],
+                    "description": topic["section_description"], "icon": topic["section_icon"],
+                    "groupId": topic["group_id"], "groupTitle": topic["group_title"]},
+        "topic": {
+            "id": topic["id"], "title": topic["title"], "body": topic["body"],
+            "author": author, "createdAt": topic["created_at"], "lastActivity": topic["last_activity"],
+            "status": topic["status"], "views": topic["views"], "pinned": bool(topic["is_pinned"]),
+            "locked": bool(topic["is_locked"]), "followed": bool(topic["followed"]),
+            "replies": [{
+                "id": row["id"], "body": row["body"], "createdAt": row["created_at"],
+                "status": row["status"], "author": {"name": row["author_name"],
+                "avatarUrl": row["avatar_url"], "memberSince": row["member_since"],
+                "role": row["role"] or "member"},
+            } for row in replies],
+        },
+    }
+
+
 def forum_payload(current_user: dict | None) -> dict:
+    """Bakåtkompatibel lista för äldre klienter och tester."""
     user_id = current_user["id"] if current_user else ""
     with db_connect() as db:
         topics = db.execute(
-            """SELECT t.*, u.avatar_url FROM forum_topics t
-               LEFT JOIN users u ON u.id=t.user_id
-               WHERE t.status='published' OR t.user_id=?
-               ORDER BY t.created_at DESC""", (user_id,)
+            """SELECT t.* FROM forum_topics t WHERE t.status='published' OR t.user_id=?
+               ORDER BY t.last_activity DESC""", (user_id,)
         ).fetchall()
-        output = []
-        for topic in topics:
-            replies = db.execute(
-                """SELECT r.*, u.avatar_url FROM forum_replies r
-                   LEFT JOIN users u ON u.id=r.user_id
-                   WHERE r.topic_id=? AND (r.status='published' OR r.user_id=?)
-                   ORDER BY r.created_at""", (topic["id"], user_id)
-            ).fetchall()
-            output.append({
-                "id": topic["id"], "title": topic["title"], "category": topic["category"],
-                "author": topic["author_name"], "authorId": topic["user_id"],
-                "avatarUrl": topic["avatar_url"], "body": topic["body"],
-                "createdAt": topic["created_at"], "status": topic["status"],
-                "replies": [{
-                    "id": reply["id"], "author": reply["author_name"],
-                    "authorId": reply["user_id"], "avatarUrl": reply["avatar_url"],
-                    "body": reply["body"], "createdAt": reply["created_at"],
-                    "status": reply["status"],
-                } for reply in replies],
-            })
-    return {"topics": output, "categories": sorted(FORUM_CATEGORIES)}
+    return {"topics": [dict(row) for row in topics], "categories": sorted(FORUM_CATEGORIES)}
 
 
 class Handler(BaseHTTPRequestHandler):
-    server_version = "Ljusglimt/2.0"
+    server_version = "Ljusglimt/3.0"
 
     def log_message(self, fmt, *args):
         print(f"[{self.log_date_time_string()}] {fmt % args}")
@@ -334,9 +542,11 @@ class Handler(BaseHTTPRequestHandler):
         return value + ("; Secure" if secure else "")
 
     def do_GET(self):
-        route = urlparse(self.path).path
+        parsed = urlparse(self.path)
+        route = parsed.path
+        query = urllib.parse.parse_qs(parsed.query)
         if route == "/api/health":
-            return self._json({"ok": True, "service": "ljusglimt", "version": 2})
+            return self._json({"ok": True, "service": "ljusglimt", "version": 3})
         if route == "/api/config":
             client_id = os.getenv("GOOGLE_CLIENT_ID", "").strip()
             return self._json({"googleClientId": client_id, "googleEnabled": bool(client_id)})
@@ -354,8 +564,18 @@ class Handler(BaseHTTPRequestHandler):
                     "SELECT * FROM saved_articles WHERE user_id=? ORDER BY saved_at DESC", (user["id"],)
                 ).fetchall()
             return self._json({"articles": [dict(row) for row in rows]})
+        if route == "/api/forum/index" or route == "/api/forum/latest":
+            return self._json(forum_index_payload(self._current_user()))
         if route == "/api/forum/topics":
-            return self._json(forum_payload(self._current_user()))
+            section_id = clean_text((query.get("section") or [""])[0], 80)
+            if not section_id:
+                return self._json(forum_payload(self._current_user()))
+            result = forum_topics_payload(section_id, self._current_user())
+            return self._json(result, HTTPStatus.OK) if result else self._json({"error": "Forumdelen hittades inte."}, HTTPStatus.NOT_FOUND)
+        if route == "/api/forum/topic":
+            topic_id = clean_text((query.get("id") or [""])[0], 80)
+            result = forum_topic_payload(topic_id, self._current_user())
+            return self._json(result, HTTPStatus.OK) if result else self._json({"error": "Tråden hittades inte."}, HTTPStatus.NOT_FOUND)
         self._serve_static(route)
 
     def do_POST(self):
@@ -386,6 +606,8 @@ class Handler(BaseHTTPRequestHandler):
             return self._create_reply(payload)
         if route == "/api/forum/report":
             return self._report_topic(payload)
+        if route == "/api/forum/follow":
+            return self._follow_topic(payload)
         if route == "/api/newsletter":
             email = clean_text(payload.get("email"), 180).lower()
             if not valid_email(email):
@@ -405,6 +627,14 @@ class Handler(BaseHTTPRequestHandler):
             with db_connect() as db:
                 db.execute("DELETE FROM saved_articles WHERE user_id=? AND article_id=?", (user["id"], article_id))
             return self._json({"ok": True})
+        if route.startswith("/api/forum/follow/"):
+            user = self._require_user()
+            if not user:
+                return
+            topic_id = clean_text(unquote(route.removeprefix("/api/forum/follow/")), 80)
+            with db_connect() as db:
+                db.execute("DELETE FROM forum_follows WHERE user_id=? AND topic_id=?", (user["id"], topic_id))
+            return self._json({"ok": True, "followed": False})
         self._json({"error": "Okänd endpoint."}, HTTPStatus.NOT_FOUND)
 
     def _register(self, payload: dict):
@@ -517,15 +747,24 @@ class Handler(BaseHTTPRequestHandler):
         title = clean_text(payload.get("title"), 100)
         body = clean_text(payload.get("body"), 2000)
         category = clean_text(payload.get("category"), 30)
-        if len(title) < 5 or len(body) < 10 or category not in FORUM_CATEGORIES:
-            return self._json({"error": "Kontrollera rubrik, kategori och innehåll."}, HTTPStatus.BAD_REQUEST)
+        section_id = clean_text(payload.get("sectionId"), 80) or FORUM_CATEGORY_TO_SECTION.get(category, "")
+        if len(title) < 5 or len(body) < 10:
+            return self._json({"error": "Kontrollera rubrik och innehåll."}, HTTPStatus.BAD_REQUEST)
         topic_id = f"topic-{secrets.token_hex(6)}"
+        created_at = iso_now()
         with db_connect() as db:
+            section = db.execute("SELECT title FROM forum_sections WHERE id=?", (section_id,)).fetchone()
+            if not section:
+                return self._json({"error": "Välj ett giltigt underforum."}, HTTPStatus.BAD_REQUEST)
             db.execute(
-                "INSERT INTO forum_topics VALUES (?,?,?,?,?,?,?,?)",
-                (topic_id, user["id"], user["name"], title, category, body, "pending", iso_now()),
+                """INSERT INTO forum_topics
+                   (id,user_id,author_name,title,category,body,status,created_at,section_id,last_activity)
+                   VALUES (?,?,?,?,?,?,?,?,?,?)""",
+                (topic_id, user["id"], user["name"], title, category or section["title"], body,
+                 "pending", created_at, section_id, created_at),
             )
-        self._json({"ok": True, "status": "pending", "message": "Tråden är sparad och väntar på moderering."}, HTTPStatus.ACCEPTED)
+        self._json({"ok": True, "topicId": topic_id, "status": "pending",
+                    "message": "Tråden är sparad och väntar på moderering."}, HTTPStatus.ACCEPTED)
 
     def _create_reply(self, payload: dict):
         user = self._require_user()
@@ -538,11 +777,16 @@ class Handler(BaseHTTPRequestHandler):
         if len(body) < 10:
             return self._json({"error": "Svaret behöver minst 10 tecken."}, HTTPStatus.BAD_REQUEST)
         with db_connect() as db:
-            topic = db.execute("SELECT id FROM forum_topics WHERE id=? AND status='published'", (topic_id,)).fetchone()
+            topic = db.execute(
+                "SELECT id,is_locked FROM forum_topics WHERE id=? AND status='published'", (topic_id,)
+            ).fetchone()
             if not topic:
                 return self._json({"error": "Tråden hittades inte."}, HTTPStatus.NOT_FOUND)
+            if topic["is_locked"]:
+                return self._json({"error": "Tråden är låst för nya svar."}, HTTPStatus.CONFLICT)
             db.execute(
-                "INSERT INTO forum_replies VALUES (?,?,?,?,?,?,?)",
+                """INSERT INTO forum_replies(id,topic_id,user_id,author_name,body,status,created_at)
+                   VALUES (?,?,?,?,?,?,?)""",
                 (f"reply-{secrets.token_hex(6)}", topic_id, user["id"], user["name"], body, "pending", iso_now()),
             )
         self._json({"ok": True, "status": "pending", "message": "Svaret väntar på moderering."}, HTTPStatus.ACCEPTED)
@@ -562,6 +806,21 @@ class Handler(BaseHTTPRequestHandler):
         except sqlite3.IntegrityError:
             return self._json({"error": "Du har redan rapporterat den tråden."}, HTTPStatus.CONFLICT)
         self._json({"ok": True, "message": "Tack. Moderatorerna granskar tråden."}, HTTPStatus.CREATED)
+
+    def _follow_topic(self, payload: dict):
+        user = self._require_user()
+        if not user:
+            return
+        topic_id = clean_text(payload.get("topicId"), 80)
+        with db_connect() as db:
+            topic = db.execute("SELECT id FROM forum_topics WHERE id=? AND status='published'", (topic_id,)).fetchone()
+            if not topic:
+                return self._json({"error": "Tråden hittades inte."}, HTTPStatus.NOT_FOUND)
+            db.execute(
+                "INSERT OR IGNORE INTO forum_follows(user_id,topic_id,created_at) VALUES (?,?,?)",
+                (user["id"], topic_id, iso_now()),
+            )
+        self._json({"ok": True, "followed": True, "message": "Du följer nu tråden."}, HTTPStatus.CREATED)
 
     def _serve_static(self, route: str):
         route = unquote(route)

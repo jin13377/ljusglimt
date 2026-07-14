@@ -27,6 +27,122 @@
       "createdAt": "2026-07-13T16:20:00+02:00",
       "status": "published",
       "replies": []
+    },
+    {
+      "id": "topic-dagens-positiva",
+      "title": "Vilken positiv nyhet borde fler känna till?",
+      "category": "Nyheter",
+      "sectionId": "dagens-nyheter",
+      "author": "Redaktionen",
+      "body": "Dela en aktuell positiv nyhet som du tycker förtjänar mer uppmärksamhet. Skriv en kort sammanfattning och länka alltid till originalkällan.",
+      "createdAt": "2026-07-14T10:15:00+02:00",
+      "status": "published",
+      "pinned": true,
+      "views": 42,
+      "replies": [
+        {
+          "id": "reply-dagens-1",
+          "author": "Elin",
+          "body": "Jag fastnade för nyheten om fler återställda våtmarker. Det är konkret naturvård som hjälper både arter och klimat.",
+          "createdAt": "2026-07-14T11:02:00+02:00",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "id": "topic-miljolosningar",
+      "title": "Smarta miljölösningar som redan fungerar",
+      "category": "Miljö",
+      "sectionId": "miljo-klimat",
+      "author": "Redaktionen",
+      "body": "Här samlar vi exempel på natur- och klimatlösningar som har gett mätbara resultat. Berätta gärna var lösningen används och länka till en trovärdig källa.",
+      "createdAt": "2026-07-13T14:10:00+02:00",
+      "status": "published",
+      "views": 31,
+      "replies": []
+    },
+    {
+      "id": "topic-vetenskapshopp",
+      "title": "Forskning som ger hopp just nu",
+      "category": "Vetenskap",
+      "sectionId": "vetenskap-teknik",
+      "author": "Redaktionen",
+      "body": "Tipsa om en ny upptäckt eller teknisk lösning som kan förbättra människors liv. Förklara den enkelt och länka helst till universitetet, studien eller en etablerad vetenskapskälla.",
+      "createdAt": "2026-07-12T18:40:00+02:00",
+      "status": "published",
+      "views": 27,
+      "replies": []
+    },
+    {
+      "id": "topic-halsaframsteg",
+      "title": "Små och stora framsteg inom hälsa",
+      "category": "Hälsa",
+      "sectionId": "halsa-liv",
+      "author": "Redaktionen",
+      "body": "Dela verifierade framsteg inom vård, omsorg, folkhälsa och livskvalitet. Forumet ersätter inte medicinsk rådgivning, så håll diskussionen allmän och källbaserad.",
+      "createdAt": "2026-07-11T09:25:00+02:00",
+      "status": "published",
+      "views": 19,
+      "replies": []
+    },
+    {
+      "id": "topic-kulturgladje",
+      "title": "Vad har inspirerat dig den här veckan?",
+      "category": "Kultur",
+      "sectionId": "kultur-kreativitet",
+      "author": "Redaktionen",
+      "body": "Tipsa om en bok, låt, film, ett spel, konstverk eller eget projekt som har gett dig energi. Berätta gärna varför, utan att avslöja för mycket av handlingen.",
+      "createdAt": "2026-07-10T19:30:00+02:00",
+      "status": "published",
+      "views": 36,
+      "replies": [
+        {
+          "id": "reply-kultur-1",
+          "author": "Noah",
+          "body": "Jag gick på en liten gratiskonsert i parken. Att se så många generationer samlas gjorde hela veckan bättre.",
+          "createdAt": "2026-07-11T08:12:00+02:00",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "id": "topic-presentera-dig",
+      "title": "Ny på Ljusglimt? Presentera dig här",
+      "category": "Gemenskap",
+      "sectionId": "presentationer",
+      "author": "Redaktionen",
+      "body": "Välkommen! Berätta gärna vad du heter eller vill kallas, vilket ämne du är mest nyfiken på och vilken sorts positiva nyheter du gärna läser. Dela inga privata kontaktuppgifter.",
+      "createdAt": "2026-07-09T12:00:00+02:00",
+      "status": "published",
+      "pinned": true,
+      "views": 64,
+      "replies": []
+    },
+    {
+      "id": "topic-ideverkstad",
+      "title": "Idéverkstad: något gott vi kan göra tillsammans",
+      "category": "Goda idéer",
+      "sectionId": "goda-ideer",
+      "author": "Redaktionen",
+      "body": "Har du en enkel idé som kan göra skolan, jobbet, kvarteret eller nätet lite bättre? Beskriv problemet, idén och ett första litet steg som går att testa.",
+      "createdAt": "2026-07-08T15:45:00+02:00",
+      "status": "published",
+      "views": 48,
+      "replies": []
+    },
+    {
+      "id": "topic-forumregler",
+      "title": "Välkommen – så håller vi forumet vänligt",
+      "category": "Ljusglimt",
+      "sectionId": "sajtsnack",
+      "author": "Redaktionen",
+      "body": "Var vänlig och saklig, skydda personuppgifter och länka källa vid faktapåståenden. Rapportera innehåll som behöver granskas i stället för att gå till personangrepp. Nya inlägg förhandsmodereras.",
+      "createdAt": "2026-07-07T08:00:00+02:00",
+      "status": "published",
+      "pinned": true,
+      "locked": true,
+      "views": 88,
+      "replies": []
     }
   ]
 }
