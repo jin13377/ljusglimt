@@ -7,3 +7,5 @@ data/*.tmp
 codex-output.md
 data/summaries.pending.json
 .server.pid
+.tunnel.pid
+.tunnel.url

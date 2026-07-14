@@ -22,6 +22,8 @@ ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "data"
 FORUM_FILE = DATA / "forum.json"
 NEWS_FILE = DATA / "news.json"
+PUBLIC_PAGES = {"index.html", "forum.html", "om.html", "404.html"}
+PUBLIC_DATA = {"data/news.json", "data/seed-news.json"}
 MAX_BODY = 24_000
 RATE_LIMIT_SECONDS = 20
 _last_post: dict[str, float] = {}
@@ -175,6 +177,12 @@ class Handler(BaseHTTPRequestHandler):
         route = unquote(route)
         aliases = {"/": "index.html", "/forum": "forum.html", "/om": "om.html"}
         relative = aliases.get(route, route.lstrip("/"))
+        normalized = relative.replace("\\", "/")
+        is_asset = normalized.startswith("assets/") and not any(
+            part.startswith(".") for part in Path(normalized).parts
+        )
+        if normalized not in PUBLIC_PAGES and normalized not in PUBLIC_DATA and not is_asset:
+            return self._json({"error": "Sidan hittades inte"}, HTTPStatus.NOT_FOUND)
         candidate = (ROOT / relative).resolve()
         if ROOT not in candidate.parents and candidate != ROOT:
             return self._json({"error": "Ogiltig sökväg"}, HTTPStatus.FORBIDDEN)
