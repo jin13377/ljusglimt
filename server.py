@@ -1,18 +1,25 @@
 #!/usr/bin/env python3
-"""Glimt Nyheter: liten lokal webbserver och modererat forum-API."""
+"""Ljusglimt: webbserver, konton, profiler, sparade nyheter och modererat forum."""
 
 from __future__ import annotations
 
+import base64
+import hashlib
 import json
 import mimetypes
 import os
 import re
-import tempfile
+import secrets
+import sqlite3
 import threading
 import time
-import uuid
-from datetime import datetime, timezone
+import urllib.parse
+import urllib.request
+from contextlib import contextmanager
+from datetime import datetime, timedelta, timezone
+from email.utils import format_datetime
 from http import HTTPStatus
+from http.cookies import SimpleCookie
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import unquote, urlparse
@@ -20,14 +27,38 @@ from urllib.parse import unquote, urlparse
 
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "data"
-FORUM_FILE = DATA / "forum.json"
+FORUM_SEED = DATA / "forum.json"
 NEWS_FILE = DATA / "news.json"
-PUBLIC_PAGES = {"index.html", "forum.html", "om.html", "404.html"}
+DB_FILE = Path(os.getenv("GLIMT_DB_PATH", str(DATA / "glimt.db")))
+PUBLIC_PAGES = {"index.html", "forum.html", "profil.html", "om.html", "404.html"}
 PUBLIC_DATA = {"data/news.json", "data/seed-news.json"}
-MAX_BODY = 24_000
-RATE_LIMIT_SECONDS = 20
-_last_post: dict[str, float] = {}
+MAX_BODY = 32_000
+SESSION_DAYS = 30
+FORUM_CATEGORIES = {"Vardagsglädje", "Lokalt", "Goda idéer", "Nyheter", "Miljö", "Vetenskap"}
+_rate_state: dict[tuple[str, str], float] = {}
 _rate_lock = threading.Lock()
+
+
+def utc_now() -> datetime:
+    return datetime.now(timezone.utc)
+
+
+def iso_now() -> str:
+    return utc_now().isoformat()
+
+
+def clean_text(value, limit: int) -> str:
+    return re.sub(r"\s+", " ", str(value or "")).strip()[:limit]
+
+
+def valid_email(value: str) -> bool:
+    return bool(re.fullmatch(r"[^\s@]+@[^\s@]+\.[^\s@]+", value)) and len(value) <= 180
+
+
+def safe_http_url(value: str) -> str:
+    value = clean_text(value, 1200)
+    parsed = urlparse(value)
+    return value if parsed.scheme in {"http", "https"} and parsed.netloc else ""
 
 
 def read_json(path: Path, fallback):
@@ -37,173 +68,527 @@ def read_json(path: Path, fallback):
         return fallback
 
 
-def atomic_write(path: Path, value) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    fd, tmp_name = tempfile.mkstemp(prefix=path.name, suffix=".tmp", dir=path.parent)
+@contextmanager
+def db_connect():
+    connection = sqlite3.connect(DB_FILE, timeout=10)
+    connection.row_factory = sqlite3.Row
+    connection.execute("PRAGMA foreign_keys = ON")
     try:
-        with os.fdopen(fd, "w", encoding="utf-8") as handle:
-            json.dump(value, handle, ensure_ascii=False, indent=2)
-            handle.write("\n")
-        os.replace(tmp_name, path)
+        yield connection
+        connection.commit()
+    except Exception:
+        connection.rollback()
+        raise
     finally:
-        if os.path.exists(tmp_name):
-            os.unlink(tmp_name)
+        connection.close()
 
 
-def clean_text(value, limit: int) -> str:
-    text = re.sub(r"\s+", " ", str(value or "")).strip()
-    return text[:limit]
+def init_db() -> None:
+    DB_FILE.parent.mkdir(parents=True, exist_ok=True)
+    with db_connect() as db:
+        db.execute("PRAGMA journal_mode = WAL")
+        db.executescript(
+            """
+            CREATE TABLE IF NOT EXISTS users (
+              id TEXT PRIMARY KEY,
+              email TEXT NOT NULL UNIQUE COLLATE NOCASE,
+              name TEXT NOT NULL,
+              password_hash TEXT,
+              google_sub TEXT UNIQUE,
+              avatar_url TEXT,
+              role TEXT NOT NULL DEFAULT 'member',
+              created_at TEXT NOT NULL
+            );
+            CREATE TABLE IF NOT EXISTS sessions (
+              token_hash TEXT PRIMARY KEY,
+              user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+              expires_at TEXT NOT NULL,
+              created_at TEXT NOT NULL
+            );
+            CREATE TABLE IF NOT EXISTS saved_articles (
+              user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+              article_id TEXT NOT NULL,
+              title TEXT NOT NULL,
+              summary TEXT NOT NULL DEFAULT '',
+              source TEXT NOT NULL DEFAULT '',
+              url TEXT NOT NULL,
+              image TEXT NOT NULL DEFAULT '',
+              saved_at TEXT NOT NULL,
+              PRIMARY KEY (user_id, article_id)
+            );
+            CREATE TABLE IF NOT EXISTS forum_topics (
+              id TEXT PRIMARY KEY,
+              user_id TEXT REFERENCES users(id) ON DELETE SET NULL,
+              author_name TEXT NOT NULL,
+              title TEXT NOT NULL,
+              category TEXT NOT NULL,
+              body TEXT NOT NULL,
+              status TEXT NOT NULL DEFAULT 'pending',
+              created_at TEXT NOT NULL
+            );
+            CREATE TABLE IF NOT EXISTS forum_replies (
+              id TEXT PRIMARY KEY,
+              topic_id TEXT NOT NULL REFERENCES forum_topics(id) ON DELETE CASCADE,
+              user_id TEXT REFERENCES users(id) ON DELETE SET NULL,
+              author_name TEXT NOT NULL,
+              body TEXT NOT NULL,
+              status TEXT NOT NULL DEFAULT 'pending',
+              created_at TEXT NOT NULL
+            );
+            CREATE TABLE IF NOT EXISTS forum_reports (
+              id TEXT PRIMARY KEY,
+              topic_id TEXT NOT NULL REFERENCES forum_topics(id) ON DELETE CASCADE,
+              user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+              reason TEXT NOT NULL,
+              created_at TEXT NOT NULL,
+              UNIQUE(topic_id, user_id)
+            );
+            CREATE INDEX IF NOT EXISTS idx_sessions_expiry ON sessions(expires_at);
+            CREATE INDEX IF NOT EXISTS idx_topics_status ON forum_topics(status, created_at DESC);
+            CREATE INDEX IF NOT EXISTS idx_replies_topic ON forum_replies(topic_id, created_at);
+            """
+        )
+        if db.execute("SELECT COUNT(*) FROM forum_topics").fetchone()[0] == 0:
+            seed = read_json(FORUM_SEED, {"topics": []})
+            for topic in seed.get("topics", []):
+                db.execute(
+                    "INSERT OR IGNORE INTO forum_topics VALUES (?, NULL, ?, ?, ?, ?, ?, ?)",
+                    (topic["id"], topic.get("author", "Redaktionen"), topic["title"],
+                     topic.get("category", "Nyheter"), topic.get("body", ""),
+                     topic.get("status", "published"), topic.get("createdAt", iso_now())),
+                )
+                for reply in topic.get("replies", []):
+                    db.execute(
+                        "INSERT OR IGNORE INTO forum_replies VALUES (?, ?, NULL, ?, ?, ?, ?)",
+                        (reply["id"], topic["id"], reply.get("author", "Redaktionen"),
+                         reply.get("body", ""), reply.get("status", "published"),
+                         reply.get("createdAt", iso_now())),
+                    )
 
 
-def visible_forum():
-    payload = read_json(FORUM_FILE, {"topics": []})
-    topics = []
-    for topic in payload.get("topics", []):
-        if topic.get("status") != "published":
-            continue
-        item = dict(topic)
-        item["replies"] = [
-            reply for reply in topic.get("replies", []) if reply.get("status") == "published"
-        ]
-        topics.append(item)
-    return {"topics": topics}
+def hash_password(password: str) -> str:
+    salt = secrets.token_bytes(16)
+    digest = hashlib.scrypt(password.encode("utf-8"), salt=salt, n=2**14, r=8, p=1)
+    return "scrypt$" + base64.urlsafe_b64encode(salt).decode() + "$" + base64.urlsafe_b64encode(digest).decode()
+
+
+def verify_password(password: str, encoded: str | None) -> bool:
+    try:
+        algorithm, salt_text, digest_text = (encoded or "").split("$", 2)
+        if algorithm != "scrypt":
+            return False
+        salt = base64.urlsafe_b64decode(salt_text)
+        expected = base64.urlsafe_b64decode(digest_text)
+        actual = hashlib.scrypt(password.encode("utf-8"), salt=salt, n=2**14, r=8, p=1)
+        return secrets.compare_digest(actual, expected)
+    except (ValueError, TypeError):
+        return False
+
+
+def token_hash(token: str) -> str:
+    return hashlib.sha256(token.encode("utf-8")).hexdigest()
+
+
+def user_public(row: sqlite3.Row | dict) -> dict:
+    return {
+        "id": row["id"], "email": row["email"], "name": row["name"],
+        "avatarUrl": row["avatar_url"], "role": row["role"],
+    }
+
+
+def create_session(user_id: str) -> tuple[str, datetime]:
+    token = secrets.token_urlsafe(32)
+    expires = utc_now() + timedelta(days=SESSION_DAYS)
+    with db_connect() as db:
+        db.execute("DELETE FROM sessions WHERE expires_at <= ?", (iso_now(),))
+        db.execute(
+            "INSERT INTO sessions VALUES (?, ?, ?, ?)",
+            (token_hash(token), user_id, expires.isoformat(), iso_now()),
+        )
+    return token, expires
+
+
+def google_identity(credential: str) -> dict:
+    client_id = os.getenv("GOOGLE_CLIENT_ID", "").strip()
+    if not client_id:
+        raise ValueError("Google-inloggning är inte aktiverad ännu.")
+    try:
+        from google.auth.transport import requests as google_requests
+        from google.oauth2 import id_token as google_id_token
+        return google_id_token.verify_oauth2_token(credential, google_requests.Request(), client_id)
+    except ImportError:
+        pass
+    query = urllib.parse.urlencode({"id_token": credential})
+    request = urllib.request.Request(
+        f"https://oauth2.googleapis.com/tokeninfo?{query}",
+        headers={"User-Agent": "Ljusglimt/1.0"},
+    )
+    with urllib.request.urlopen(request, timeout=10) as response:
+        profile = json.loads(response.read().decode("utf-8"))
+    if profile.get("aud") != client_id or profile.get("email_verified") not in {"true", True}:
+        raise ValueError("Google-kontot kunde inte verifieras.")
+    if int(profile.get("exp", "0")) <= int(time.time()):
+        raise ValueError("Google-inloggningen har gått ut.")
+    return profile
+
+
+def forum_payload(current_user: dict | None) -> dict:
+    user_id = current_user["id"] if current_user else ""
+    with db_connect() as db:
+        topics = db.execute(
+            """SELECT t.*, u.avatar_url FROM forum_topics t
+               LEFT JOIN users u ON u.id=t.user_id
+               WHERE t.status='published' OR t.user_id=?
+               ORDER BY t.created_at DESC""", (user_id,)
+        ).fetchall()
+        output = []
+        for topic in topics:
+            replies = db.execute(
+                """SELECT r.*, u.avatar_url FROM forum_replies r
+                   LEFT JOIN users u ON u.id=r.user_id
+                   WHERE r.topic_id=? AND (r.status='published' OR r.user_id=?)
+                   ORDER BY r.created_at""", (topic["id"], user_id)
+            ).fetchall()
+            output.append({
+                "id": topic["id"], "title": topic["title"], "category": topic["category"],
+                "author": topic["author_name"], "authorId": topic["user_id"],
+                "avatarUrl": topic["avatar_url"], "body": topic["body"],
+                "createdAt": topic["created_at"], "status": topic["status"],
+                "replies": [{
+                    "id": reply["id"], "author": reply["author_name"],
+                    "authorId": reply["user_id"], "avatarUrl": reply["avatar_url"],
+                    "body": reply["body"], "createdAt": reply["created_at"],
+                    "status": reply["status"],
+                } for reply in replies],
+            })
+    return {"topics": output, "categories": sorted(FORUM_CATEGORIES)}
 
 
 class Handler(BaseHTTPRequestHandler):
-    server_version = "GlimtServer/1.0"
+    server_version = "Ljusglimt/2.0"
 
     def log_message(self, fmt, *args):
         print(f"[{self.log_date_time_string()}] {fmt % args}")
 
-    def _headers(self, status=HTTPStatus.OK, content_type="application/json; charset=utf-8"):
+    def _headers(self, status=HTTPStatus.OK, content_type="application/json; charset=utf-8", extra=None):
         self.send_response(status)
         self.send_header("Content-Type", content_type)
         self.send_header("X-Content-Type-Options", "nosniff")
         self.send_header("Referrer-Policy", "strict-origin-when-cross-origin")
         self.send_header("X-Frame-Options", "DENY")
+        self.send_header("Permissions-Policy", "camera=(), microphone=(), geolocation=()")
         self.send_header("Cache-Control", "no-store" if self.path.startswith("/api/") else "no-cache")
+        for key, value in (extra or {}).items():
+            self.send_header(key, value)
         self.end_headers()
 
-    def _json(self, value, status=HTTPStatus.OK):
-        body = json.dumps(value, ensure_ascii=False).encode("utf-8")
-        self._headers(status)
-        self.wfile.write(body)
+    def _json(self, value, status=HTTPStatus.OK, extra=None):
+        self._headers(status, extra=extra)
+        self.wfile.write(json.dumps(value, ensure_ascii=False).encode("utf-8"))
+
+    def _payload(self) -> dict | None:
+        try:
+            size = int(self.headers.get("Content-Length", "0") or 0)
+            if size <= 0 or size > MAX_BODY:
+                return None
+            value = json.loads(self.rfile.read(size))
+            return value if isinstance(value, dict) else None
+        except (ValueError, json.JSONDecodeError, UnicodeDecodeError):
+            return None
+
+    def _same_origin(self) -> bool:
+        origin = self.headers.get("Origin")
+        return not origin or urlparse(origin).netloc == self.headers.get("Host", "")
+
+    def _rate_ok(self, bucket: str, seconds: int) -> bool:
+        key = (self.headers.get("CF-Connecting-IP") or self.client_address[0], bucket)
+        now = time.monotonic()
+        with _rate_lock:
+            if now - _rate_state.get(key, 0) < seconds:
+                return False
+            _rate_state[key] = now
+        return True
+
+    def _current_user(self) -> dict | None:
+        cookie = SimpleCookie(self.headers.get("Cookie", ""))
+        morsel = cookie.get("glimt_session")
+        if not morsel:
+            return None
+        with db_connect() as db:
+            row = db.execute(
+                """SELECT u.* FROM sessions s JOIN users u ON u.id=s.user_id
+                   WHERE s.token_hash=? AND s.expires_at>?""",
+                (token_hash(morsel.value), iso_now()),
+            ).fetchone()
+        return user_public(row) if row else None
+
+    def _require_user(self) -> dict | None:
+        user = self._current_user()
+        if not user:
+            self._json({"error": "Logga in för att fortsätta.", "code": "AUTH_REQUIRED"}, HTTPStatus.UNAUTHORIZED)
+        return user
+
+    def _session_cookie(self, token: str, expires: datetime) -> str:
+        secure = self.headers.get("X-Forwarded-Proto") == "https"
+        value = f"glimt_session={token}; Path=/; HttpOnly; SameSite=Lax; Max-Age={SESSION_DAYS * 86400}; Expires={format_datetime(expires, usegmt=True)}"
+        return value + ("; Secure" if secure else "")
 
     def do_GET(self):
         route = urlparse(self.path).path
         if route == "/api/health":
-            return self._json({"ok": True, "service": "glimt"})
+            return self._json({"ok": True, "service": "ljusglimt", "version": 2})
+        if route == "/api/config":
+            client_id = os.getenv("GOOGLE_CLIENT_ID", "").strip()
+            return self._json({"googleClientId": client_id, "googleEnabled": bool(client_id)})
         if route == "/api/news":
-            return self._json(read_json(NEWS_FILE, {"updatedAt": None, "articles": []}))
+            return self._json(read_json(NEWS_FILE, {"items": []}))
+        if route == "/api/auth/me":
+            user = self._current_user()
+            return self._json({"user": user})
+        if route == "/api/saved":
+            user = self._require_user()
+            if not user:
+                return
+            with db_connect() as db:
+                rows = db.execute(
+                    "SELECT * FROM saved_articles WHERE user_id=? ORDER BY saved_at DESC", (user["id"],)
+                ).fetchall()
+            return self._json({"articles": [dict(row) for row in rows]})
         if route == "/api/forum/topics":
-            return self._json(visible_forum())
+            return self._json(forum_payload(self._current_user()))
         self._serve_static(route)
 
     def do_POST(self):
         route = urlparse(self.path).path
-        if route not in {"/api/forum/topics", "/api/forum/replies", "/api/newsletter"}:
-            return self._json({"error": "Okänd endpoint"}, HTTPStatus.NOT_FOUND)
-
-        size = int(self.headers.get("Content-Length", "0") or 0)
-        if size <= 0 or size > MAX_BODY:
-            return self._json({"error": "Ogiltig datamängd"}, HTTPStatus.BAD_REQUEST)
-        try:
-            payload = json.loads(self.rfile.read(size))
-        except (json.JSONDecodeError, UnicodeDecodeError):
-            return self._json({"error": "Ogiltig JSON"}, HTTPStatus.BAD_REQUEST)
-
+        if not self._same_origin():
+            return self._json({"error": "Begäran blockerades."}, HTTPStatus.FORBIDDEN)
+        payload = self._payload()
+        if payload is None:
+            return self._json({"error": "Ogiltig datamängd."}, HTTPStatus.BAD_REQUEST)
         if payload.get("website"):
-            return self._json({"ok": True, "status": "pending"}, HTTPStatus.ACCEPTED)
+            return self._json({"ok": True}, HTTPStatus.ACCEPTED)
 
-        client = self.client_address[0]
-        now = time.monotonic()
-        with _rate_lock:
-            if now - _last_post.get(client, 0) < RATE_LIMIT_SECONDS:
-                return self._json(
-                    {"error": "Vänta en liten stund innan du skickar igen."},
-                    HTTPStatus.TOO_MANY_REQUESTS,
-                )
-            _last_post[client] = now
-
+        if route == "/api/auth/register":
+            return self._register(payload)
+        if route == "/api/auth/login":
+            return self._login(payload)
+        if route == "/api/auth/google":
+            return self._google_login(payload)
+        if route == "/api/auth/logout":
+            return self._logout()
+        if route == "/api/profile":
+            return self._update_profile(payload)
+        if route == "/api/saved":
+            return self._save_article(payload)
+        if route == "/api/forum/topics":
+            return self._create_topic(payload)
+        if route == "/api/forum/replies":
+            return self._create_reply(payload)
+        if route == "/api/forum/report":
+            return self._report_topic(payload)
         if route == "/api/newsletter":
             email = clean_text(payload.get("email"), 180).lower()
-            if not re.fullmatch(r"[^\s@]+@[^\s@]+\.[^\s@]+", email):
+            if not valid_email(email):
                 return self._json({"error": "Kontrollera e-postadressen."}, HTTPStatus.BAD_REQUEST)
-            return self._json({"ok": True, "message": "Tack! Du är anmäld till demolistan."})
+            return self._json({"ok": True, "message": "Tack! Nyhetsbrevet aktiveras i nästa steg."})
+        self._json({"error": "Okänd endpoint."}, HTTPStatus.NOT_FOUND)
 
-        forum = read_json(FORUM_FILE, {"topics": []})
-        timestamp = datetime.now(timezone.utc).isoformat()
-        author = clean_text(payload.get("author"), 40) or "Anonym glädjespridare"
+    def do_DELETE(self):
+        route = urlparse(self.path).path
+        if not self._same_origin():
+            return self._json({"error": "Begäran blockerades."}, HTTPStatus.FORBIDDEN)
+        if route.startswith("/api/saved/"):
+            user = self._require_user()
+            if not user:
+                return
+            article_id = clean_text(unquote(route.removeprefix("/api/saved/")), 140)
+            with db_connect() as db:
+                db.execute("DELETE FROM saved_articles WHERE user_id=? AND article_id=?", (user["id"], article_id))
+            return self._json({"ok": True})
+        self._json({"error": "Okänd endpoint."}, HTTPStatus.NOT_FOUND)
+
+    def _register(self, payload: dict):
+        if not self._rate_ok("register", 3):
+            return self._json({"error": "Vänta några sekunder och försök igen."}, HTTPStatus.TOO_MANY_REQUESTS)
+        name = clean_text(payload.get("name"), 50)
+        email = clean_text(payload.get("email"), 180).lower()
+        password = str(payload.get("password") or "")
+        if len(name) < 2 or not valid_email(email) or len(password) < 8:
+            return self._json({"error": "Ange namn, giltig e-post och minst 8 tecken i lösenordet."}, HTTPStatus.BAD_REQUEST)
+        user_id = f"user-{secrets.token_hex(8)}"
+        try:
+            with db_connect() as db:
+                db.execute(
+                    "INSERT INTO users(id,email,name,password_hash,created_at) VALUES (?,?,?,?,?)",
+                    (user_id, email, name, hash_password(password), iso_now()),
+                )
+        except sqlite3.IntegrityError:
+            return self._json({"error": "Det finns redan ett konto med den e-postadressen."}, HTTPStatus.CONFLICT)
+        token, expires = create_session(user_id)
+        with db_connect() as db:
+            user = user_public(db.execute("SELECT * FROM users WHERE id=?", (user_id,)).fetchone())
+        self._json({"ok": True, "user": user}, HTTPStatus.CREATED, {"Set-Cookie": self._session_cookie(token, expires)})
+
+    def _login(self, payload: dict):
+        if not self._rate_ok("login", 2):
+            return self._json({"error": "Vänta ett ögonblick och försök igen."}, HTTPStatus.TOO_MANY_REQUESTS)
+        email = clean_text(payload.get("email"), 180).lower()
+        password = str(payload.get("password") or "")
+        with db_connect() as db:
+            row = db.execute("SELECT * FROM users WHERE email=?", (email,)).fetchone()
+        if not row or not verify_password(password, row["password_hash"]):
+            return self._json({"error": "Fel e-post eller lösenord."}, HTTPStatus.UNAUTHORIZED)
+        token, expires = create_session(row["id"])
+        self._json({"ok": True, "user": user_public(row)}, extra={"Set-Cookie": self._session_cookie(token, expires)})
+
+    def _google_login(self, payload: dict):
+        if not self._rate_ok("google", 2):
+            return self._json({"error": "Vänta ett ögonblick och försök igen."}, HTTPStatus.TOO_MANY_REQUESTS)
+        try:
+            profile = google_identity(clean_text(payload.get("credential"), 5000))
+        except Exception as exc:
+            return self._json({"error": clean_text(exc, 180)}, HTTPStatus.UNAUTHORIZED)
+        email = profile["email"].lower()
+        with db_connect() as db:
+            row = db.execute("SELECT * FROM users WHERE google_sub=? OR email=?", (profile["sub"], email)).fetchone()
+            if row:
+                db.execute(
+                    "UPDATE users SET google_sub=?, avatar_url=COALESCE(?,avatar_url) WHERE id=?",
+                    (profile["sub"], profile.get("picture"), row["id"]),
+                )
+                user_id = row["id"]
+            else:
+                user_id = f"user-{secrets.token_hex(8)}"
+                db.execute(
+                    "INSERT INTO users(id,email,name,google_sub,avatar_url,created_at) VALUES (?,?,?,?,?,?)",
+                    (user_id, email, clean_text(profile.get("name"), 50) or email.split("@")[0],
+                     profile["sub"], safe_http_url(profile.get("picture", "")), iso_now()),
+                )
+            row = db.execute("SELECT * FROM users WHERE id=?", (user_id,)).fetchone()
+        token, expires = create_session(user_id)
+        self._json({"ok": True, "user": user_public(row)}, extra={"Set-Cookie": self._session_cookie(token, expires)})
+
+    def _logout(self):
+        cookie = SimpleCookie(self.headers.get("Cookie", ""))
+        morsel = cookie.get("glimt_session")
+        if morsel:
+            with db_connect() as db:
+                db.execute("DELETE FROM sessions WHERE token_hash=?", (token_hash(morsel.value),))
+        self._json({"ok": True}, extra={"Set-Cookie": "glimt_session=; Path=/; HttpOnly; SameSite=Lax; Max-Age=0"})
+
+    def _update_profile(self, payload: dict):
+        user = self._require_user()
+        if not user:
+            return
+        name = clean_text(payload.get("name"), 50)
+        if len(name) < 2:
+            return self._json({"error": "Namnet behöver minst två tecken."}, HTTPStatus.BAD_REQUEST)
+        with db_connect() as db:
+            db.execute("UPDATE users SET name=? WHERE id=?", (name, user["id"]))
+            row = db.execute("SELECT * FROM users WHERE id=?", (user["id"],)).fetchone()
+        self._json({"ok": True, "user": user_public(row)})
+
+    def _save_article(self, payload: dict):
+        user = self._require_user()
+        if not user:
+            return
+        article_id = clean_text(payload.get("id"), 140)
+        title = clean_text(payload.get("title"), 260)
+        url = safe_http_url(payload.get("url", ""))
+        if not article_id or not title or not url:
+            return self._json({"error": "Nyheten saknar nödvändiga fält."}, HTTPStatus.BAD_REQUEST)
+        with db_connect() as db:
+            db.execute(
+                """INSERT INTO saved_articles(user_id,article_id,title,summary,source,url,image,saved_at)
+                   VALUES (?,?,?,?,?,?,?,?) ON CONFLICT(user_id,article_id) DO UPDATE SET
+                   title=excluded.title,summary=excluded.summary,source=excluded.source,
+                   url=excluded.url,image=excluded.image,saved_at=excluded.saved_at""",
+                (user["id"], article_id, title, clean_text(payload.get("excerpt"), 1400),
+                 clean_text(payload.get("source"), 120), url, safe_http_url(payload.get("image", "")), iso_now()),
+            )
+        self._json({"ok": True, "saved": True}, HTTPStatus.CREATED)
+
+    def _create_topic(self, payload: dict):
+        user = self._require_user()
+        if not user:
+            return
+        if not self._rate_ok("topic", 20):
+            return self._json({"error": "Vänta en liten stund innan du postar igen."}, HTTPStatus.TOO_MANY_REQUESTS)
+        title = clean_text(payload.get("title"), 100)
+        body = clean_text(payload.get("body"), 2000)
+        category = clean_text(payload.get("category"), 30)
+        if len(title) < 5 or len(body) < 10 or category not in FORUM_CATEGORIES:
+            return self._json({"error": "Kontrollera rubrik, kategori och innehåll."}, HTTPStatus.BAD_REQUEST)
+        topic_id = f"topic-{secrets.token_hex(6)}"
+        with db_connect() as db:
+            db.execute(
+                "INSERT INTO forum_topics VALUES (?,?,?,?,?,?,?,?)",
+                (topic_id, user["id"], user["name"], title, category, body, "pending", iso_now()),
+            )
+        self._json({"ok": True, "status": "pending", "message": "Tråden är sparad och väntar på moderering."}, HTTPStatus.ACCEPTED)
+
+    def _create_reply(self, payload: dict):
+        user = self._require_user()
+        if not user:
+            return
+        if not self._rate_ok("reply", 10):
+            return self._json({"error": "Vänta en liten stund innan du svarar igen."}, HTTPStatus.TOO_MANY_REQUESTS)
+        topic_id = clean_text(payload.get("topicId"), 80)
         body = clean_text(payload.get("body"), 1600)
         if len(body) < 10:
-            return self._json({"error": "Skriv minst 10 tecken."}, HTTPStatus.BAD_REQUEST)
-
-        if route == "/api/forum/topics":
-            title = clean_text(payload.get("title"), 100)
-            category = clean_text(payload.get("category"), 30) or "Samtal"
-            if len(title) < 5:
-                return self._json({"error": "Rubriken behöver minst 5 tecken."}, HTTPStatus.BAD_REQUEST)
-            forum["topics"].insert(0, {
-                "id": f"topic-{uuid.uuid4().hex[:10]}",
-                "title": title,
-                "category": category,
-                "author": author,
-                "body": body,
-                "createdAt": timestamp,
-                "status": "pending",
-                "replies": [],
-            })
-        else:
-            topic_id = clean_text(payload.get("topicId"), 80)
-            topic = next((item for item in forum["topics"] if item.get("id") == topic_id), None)
+            return self._json({"error": "Svaret behöver minst 10 tecken."}, HTTPStatus.BAD_REQUEST)
+        with db_connect() as db:
+            topic = db.execute("SELECT id FROM forum_topics WHERE id=? AND status='published'", (topic_id,)).fetchone()
             if not topic:
                 return self._json({"error": "Tråden hittades inte."}, HTTPStatus.NOT_FOUND)
-            topic.setdefault("replies", []).append({
-                "id": f"reply-{uuid.uuid4().hex[:10]}",
-                "author": author,
-                "body": body,
-                "createdAt": timestamp,
-                "status": "pending",
-            })
+            db.execute(
+                "INSERT INTO forum_replies VALUES (?,?,?,?,?,?,?)",
+                (f"reply-{secrets.token_hex(6)}", topic_id, user["id"], user["name"], body, "pending", iso_now()),
+            )
+        self._json({"ok": True, "status": "pending", "message": "Svaret väntar på moderering."}, HTTPStatus.ACCEPTED)
 
-        atomic_write(FORUM_FILE, forum)
-        self._json({
-            "ok": True,
-            "status": "pending",
-            "message": "Tack! Inlägget väntar på en snabb modereringskontroll.",
-        }, HTTPStatus.ACCEPTED)
+    def _report_topic(self, payload: dict):
+        user = self._require_user()
+        if not user:
+            return
+        topic_id = clean_text(payload.get("topicId"), 80)
+        reason = clean_text(payload.get("reason"), 300) or "Olämpligt innehåll"
+        try:
+            with db_connect() as db:
+                db.execute(
+                    "INSERT INTO forum_reports VALUES (?,?,?,?,?)",
+                    (f"report-{secrets.token_hex(6)}", topic_id, user["id"], reason, iso_now()),
+                )
+        except sqlite3.IntegrityError:
+            return self._json({"error": "Du har redan rapporterat den tråden."}, HTTPStatus.CONFLICT)
+        self._json({"ok": True, "message": "Tack. Moderatorerna granskar tråden."}, HTTPStatus.CREATED)
 
     def _serve_static(self, route: str):
         route = unquote(route)
-        aliases = {"/": "index.html", "/forum": "forum.html", "/om": "om.html"}
+        aliases = {"/": "index.html", "/forum": "forum.html", "/profil": "profil.html", "/om": "om.html"}
         relative = aliases.get(route, route.lstrip("/"))
         normalized = relative.replace("\\", "/")
-        is_asset = normalized.startswith("assets/") and not any(
-            part.startswith(".") for part in Path(normalized).parts
-        )
+        is_asset = normalized.startswith("assets/") and not any(part.startswith(".") for part in Path(normalized).parts)
         if normalized not in PUBLIC_PAGES and normalized not in PUBLIC_DATA and not is_asset:
             return self._json({"error": "Sidan hittades inte"}, HTTPStatus.NOT_FOUND)
         candidate = (ROOT / relative).resolve()
         if ROOT not in candidate.parents and candidate != ROOT:
             return self._json({"error": "Ogiltig sökväg"}, HTTPStatus.FORBIDDEN)
         if not candidate.is_file():
-            candidate = ROOT / "404.html"
-            if not candidate.is_file():
-                return self._json({"error": "Sidan hittades inte"}, HTTPStatus.NOT_FOUND)
-            status = HTTPStatus.NOT_FOUND
+            candidate, status = ROOT / "404.html", HTTPStatus.NOT_FOUND
         else:
             status = HTTPStatus.OK
         mime = mimetypes.guess_type(candidate.name)[0] or "application/octet-stream"
-        body = candidate.read_bytes()
         self._headers(status, f"{mime}; charset=utf-8" if mime.startswith("text/") else mime)
-        self.wfile.write(body)
+        self.wfile.write(candidate.read_bytes())
 
 
 def main():
+    init_db()
     host = os.getenv("GLIMT_HOST", "127.0.0.1")
     port = int(os.getenv("PORT", "4173"))
     server = ThreadingHTTPServer((host, port), Handler)
-    print(f"Glimt Nyheter kör på http://{host}:{port}")
+    print(f"Ljusglimt kör på http://{host}:{port}")
     try:
         server.serve_forever()
     except KeyboardInterrupt:

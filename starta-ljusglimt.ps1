@@ -3,6 +3,15 @@ $root = Split-Path -Parent $MyInvocation.MyCommand.Path
 $healthUrl = "http://127.0.0.1:4173/api/health"
 $siteUrl = "http://127.0.0.1:4173"
 
+$localConfig = Join-Path $root "config\local.env"
+if (Test-Path $localConfig) {
+    Get-Content $localConfig | ForEach-Object {
+        if ($_ -match '^\s*([^#][^=]+)=(.*)$') {
+            [Environment]::SetEnvironmentVariable($matches[1].Trim(), $matches[2].Trim(), "Process")
+        }
+    }
+}
+
 try {
     $health = Invoke-RestMethod $healthUrl -TimeoutSec 2
 } catch {

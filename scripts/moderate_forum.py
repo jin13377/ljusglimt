@@ -1,47 +1,37 @@
 #!/usr/bin/env python3
-"""Lista eller godkänn väntande foruminlägg."""
+"""Lista, godkänn eller avslå väntande forumtrådar och svar i SQLite."""
 
 import argparse
-import json
-import os
-import tempfile
+import sqlite3
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-PATH = ROOT / "data" / "forum.json"
-
-
-def save(data):
-    fd, name = tempfile.mkstemp(prefix="forum", suffix=".tmp", dir=PATH.parent)
-    with os.fdopen(fd, "w", encoding="utf-8") as handle:
-        json.dump(data, handle, ensure_ascii=False, indent=2)
-        handle.write("\n")
-    os.replace(name, PATH)
+DB = ROOT / "data" / "glimt.db"
 
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--approve", help="ID för tråd eller svar som ska publiceras")
-    parser.add_argument("--reject", help="ID för tråd eller svar som ska avslås")
+    parser.add_argument("--approve", help="ID för tråd eller svar")
+    parser.add_argument("--reject", help="ID för tråd eller svar")
     args = parser.parse_args()
-    data = json.loads(PATH.read_text(encoding="utf-8"))
-    found = False
-    for topic in data.get("topics", []):
-        items = [topic, *topic.get("replies", [])]
-        for item in items:
-            if item.get("status") == "pending" and not (args.approve or args.reject):
-                print(f"{item['id']} | {item.get('author')} | {item.get('title', item.get('body', '')[:70])}")
-            if item.get("id") == args.approve:
-                item["status"] = "published"
-                found = True
-            if item.get("id") == args.reject:
-                item["status"] = "rejected"
-                found = True
-    if args.approve or args.reject:
-        if not found:
-            raise SystemExit("ID hittades inte.")
-        save(data)
-        print("Modereringen sparades.")
+    if not DB.exists():
+        raise SystemExit("Databasen finns inte. Starta server.py först.")
+    with sqlite3.connect(DB) as db:
+        if not (args.approve or args.reject):
+            for table in ("forum_topics", "forum_replies"):
+                rows = db.execute(f"SELECT id,author_name,COALESCE(title,body) FROM {table} WHERE status='pending'" if table == "forum_topics" else "SELECT id,author_name,body FROM forum_replies WHERE status='pending'").fetchall()
+                for item_id, author, text in rows:
+                    print(f"{item_id} | {author} | {text[:90]}")
+            return
+        item_id = args.approve or args.reject
+        status = "published" if args.approve else "rejected"
+        changed = 0
+        for table in ("forum_topics", "forum_replies"):
+            cursor = db.execute(f"UPDATE {table} SET status=? WHERE id=? AND status='pending'", (status, item_id))
+            changed += cursor.rowcount
+        if not changed:
+            raise SystemExit("ID hittades inte bland väntande inlägg.")
+    print(f"{item_id} markerades som {status}.")
 
 
 if __name__ == "__main__":

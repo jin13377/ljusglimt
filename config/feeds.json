@@ -4,18 +4,40 @@
       "name": "Reasons to be Cheerful",
       "url": "https://reasonstobecheerful.world/feed/",
       "language": "en",
+      "base_score": 2,
+      "max_items": 10,
       "enabled": true
     },
     {
       "name": "Positive News",
       "url": "https://www.positive.news/feed/",
       "language": "en",
+      "base_score": 2,
+      "max_items": 10,
       "enabled": true
     },
     {
       "name": "Good Good Good",
       "url": "https://www.goodgoodgood.co/articles/rss.xml",
       "language": "en",
+      "base_score": 2,
+      "max_items": 14,
+      "enabled": true
+    },
+    {
+      "name": "NASA News Releases",
+      "url": "https://www.nasa.gov/news-release/feed/",
+      "language": "en",
+      "base_score": 1,
+      "max_items": 8,
+      "enabled": true
+    },
+    {
+      "name": "UN News",
+      "url": "https://news.un.org/feed/subscribe/en/news/all/rss.xml",
+      "language": "en",
+      "base_score": 0,
+      "max_items": 6,
       "enabled": true
     },
     {
@@ -29,6 +51,7 @@
     "breakthrough", "community", "conservation", "discovery", "donation",
     "education", "hope", "improves", "innovation", "milestone", "progress",
     "recovery", "renewable", "rescue", "solution", "success", "volunteer",
+    "research", "science", "mission", "technology", "restoration", "treatment",
     "återhämtning", "framsteg", "glädje", "hjälper", "innovation", "lösning",
     "räddad", "rekord", "samarbete", "upptäckt"
   ],
@@ -38,7 +61,7 @@
     "jordbävning", "krig", "mord", "skjutning", "terror"
   ],
   "minimum_score": 2,
-  "max_items": 24,
+  "max_items": 48,
   "request_timeout_seconds": 20,
-  "user_agent": "GladnyttBot/1.0 (+https://github.com/; public RSS reader)"
+  "user_agent": "LjusglimtBot/2.0 (+https://github.com/; public RSS reader)"
 }

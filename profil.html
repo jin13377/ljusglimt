@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="sv"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Logga in på Ljusglimt, hantera din profil och läs dina sparade nyheter.">
+<title>Min profil – Ljusglimt</title><link rel="stylesheet" href="/assets/styles.css"></head>
+<body><a class="skip-link" href="#main">Hoppa till innehållet</a>
+<div class="demo-bar"><span>● DIN LJUSGLIMT</span> Spara nyheter och delta i samtalet.</div>
+<header class="site-header"><div class="header-inner container"><a class="brand" href="/"><span class="brand-mark">☀</span><span>Ljusglimt</span></a>
+<nav class="main-nav compact-nav" aria-label="Huvudmeny"><a href="/">Nyheter</a><a href="/forum">Forum</a><a href="/om">Om oss</a><a class="active" data-auth-link href="/profil">Logga in</a></nav></div></header>
+
+<main id="main" class="profile-page container">
+  <section class="profile-intro"><span class="eyebrow">Din plats</span><h1 id="profile-title">Logga in på Ljusglimt</h1><p id="profile-lead">Spara nyheter, bygg en egen läslista och delta i det modererade forumet.</p></section>
+
+  <section id="auth-panel" class="auth-layout">
+    <div class="auth-card">
+      <div class="auth-tabs" role="tablist"><button class="active" type="button" data-auth-tab="login">Logga in</button><button type="button" data-auth-tab="register">Skapa konto</button></div>
+      <form id="login-form" class="stack-form auth-form">
+        <label>E-post <input name="email" type="email" autocomplete="email" required></label>
+        <label>Lösenord <input name="password" type="password" autocomplete="current-password" required></label>
+        <button class="button button-primary" type="submit">Logga in</button>
+      </form>
+      <form id="register-form" class="stack-form auth-form" hidden>
+        <label>Namn <input name="name" autocomplete="name" minlength="2" maxlength="50" required></label>
+        <label>E-post <input name="email" type="email" autocomplete="email" required></label>
+        <label>Lösenord <input name="password" type="password" autocomplete="new-password" minlength="8" required><small>Minst 8 tecken.</small></label>
+        <button class="button button-primary" type="submit">Skapa konto</button>
+      </form>
+      <div class="auth-divider"><span>eller</span></div>
+      <div id="google-signin"></div><p id="google-note" class="small-note"></p>
+      <p id="auth-status" class="form-status" role="status"></p>
+    </div>
+    <aside class="member-benefits"><span class="eyebrow">Som medlem</span><h2>Allt du tycker om på ett ställe</h2><ul><li>Spara artiklar till din profil.</li><li>Starta forumtrådar under ditt namn.</li><li>Följ dina inlägg genom modereringen.</li><li>Rapportera innehåll som bryter mot reglerna.</li></ul></aside>
+  </section>
+
+  <section id="member-panel" hidden>
+    <div class="profile-grid">
+      <aside class="profile-card"><div id="profile-avatar" class="profile-avatar">L</div><h2 id="profile-name"></h2><p id="profile-email"></p>
+        <form id="profile-form" class="stack-form"><label>Visningsnamn <input name="name" minlength="2" maxlength="50" required></label><button class="button button-outline" type="submit">Spara profil</button></form>
+        <button id="logout-button" class="text-button" type="button">Logga ut</button><p id="profile-status" class="form-status"></p></aside>
+      <div><div class="section-heading"><div><span class="eyebrow">Din läslista</span><h2>Sparade nyheter</h2></div><span id="saved-count" class="count-pill">0 sparade</span></div><div id="saved-list" class="saved-list"></div></div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer"><div class="container footer-bottom"><a class="brand footer-brand" href="/"><span class="brand-mark">☀</span><span>Ljusglimt</span></a><span>Din data stannar i den lokala Ljusglimt-databasen</span></div></footer>
+<script src="/assets/auth.js"></script><script src="/assets/profile.js"></script></body></html>

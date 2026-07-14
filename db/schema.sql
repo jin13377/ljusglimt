@@ -1,4 +1,5 @@
--- SQLite-compatible MVP schema. Store bodies as plain text and escape on output.
+-- Framtida portabel produktionsmodell. Den körbara lokala SQLite-modellen
+-- skapas och migreras av init_db() i server.py.
 PRAGMA foreign_keys = ON;
 
 CREATE TABLE users (

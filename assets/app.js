@@ -9,6 +9,7 @@ let articles = [];
 let activeFilter = "alla";
 let searchTerm = "";
 let visibleCount = 6;
+const savedIds = new Set();
 
 const newsGrid = document.querySelector("#news-grid");
 const emptyState = document.querySelector("#empty-state");
@@ -93,7 +94,8 @@ function filteredArticles() {
 function articleCard(article) {
   const badge = article.isDemo ? "Demo · " : "Källhämtad · ";
   return `<article class="news-card">
-    <div class="card-image"><img src="${article.image}" alt="" loading="lazy"><span class="card-category">${escapeHTML(article.label)}</span></div>
+    <div class="card-image"><img src="${article.image}" alt="" loading="lazy"><span class="card-category">${escapeHTML(article.label)}</span>
+    <button class="card-save ${savedIds.has(article.id) ? "saved" : ""}" type="button" data-save-article="${escapeHTML(article.id)}" aria-label="${savedIds.has(article.id) ? "Ta bort från sparade" : "Spara nyheten"}">${savedIds.has(article.id) ? "♥" : "♡"}</button></div>
     <div class="card-content">
       <h3>${escapeHTML(article.title)}</h3><p>${escapeHTML(article.excerpt)}</p>
       <div class="card-footer"><span>${badge}${escapeHTML(article.date)}</span>
@@ -116,11 +118,42 @@ function openArticle(id) {
     <h2>${escapeHTML(article.title)}</h2><p class="dialog-lead">${escapeHTML(article.excerpt)}</p>
     <p>${article.isDemo ? "Det här är en nyskriven demosammanfattning av den länkade originalkällan." : "Notisen är automatiskt hämtad från ett offentligt flöde och ska alltid läsas tillsammans med originalkällan."}</p>
     <div class="dialog-source"><strong>Källa:</strong> ${escapeHTML(article.source)} · ${escapeHTML(article.date)}</div>
-    <a class="button button-primary" href="${article.url}" target="_blank" rel="noopener noreferrer">Läs originalkällan →</a></article>`;
-  dialog.showModal();
+    <div class="dialog-actions"><a class="button button-primary" href="${article.url}" target="_blank" rel="noopener noreferrer">Läs originalkällan →</a>
+    <button class="button button-outline" type="button" data-save-article="${escapeHTML(article.id)}">${savedIds.has(article.id) ? "♥ Sparad" : "♡ Spara"}</button></div></article>`;
+  if (!dialog.open) dialog.showModal();
+}
+
+async function loadSavedIds() {
+  await window.ljusglimtAuth.ready;
+  if (!window.ljusglimtAuth.state.user) return;
+  try {
+    const data = await window.ljusglimtAuth.request("/api/saved", {method:"GET"});
+    data.articles.forEach(article => savedIds.add(article.article_id));
+    renderArticles();
+  } catch {}
+}
+
+async function toggleSaved(id) {
+  const article = articles.find(item => item.id === id); if (!article) return;
+  if (!window.ljusglimtAuth.state.user) {
+    window.location.href = `/profil?next=${encodeURIComponent(location.pathname)}`; return;
+  }
+  try {
+    if (savedIds.has(id)) {
+      await window.ljusglimtAuth.request(`/api/saved/${encodeURIComponent(id)}`, {method:"DELETE"});
+      savedIds.delete(id); showToast("Nyheten togs bort från din profil.");
+    } else {
+      await window.ljusglimtAuth.request("/api/saved", {method:"POST", body:JSON.stringify(article)});
+      savedIds.add(id); showToast("Nyheten sparades till din profil.");
+    }
+    renderArticles();
+    if (dialog.open) openArticle(id);
+  } catch (error) { showToast(error.message); }
 }
 
 document.addEventListener("click", event => {
+  const saver = event.target.closest("[data-save-article]");
+  if (saver) { event.preventDefault(); toggleSaved(saver.dataset.saveArticle); return; }
   const opener = event.target.closest(".article-open");
   if (opener) openArticle(opener.dataset.article);
 });
@@ -169,4 +202,4 @@ document.querySelector("#newsletter-form").addEventListener("submit", async even
 });
 
 document.querySelector(".demo-action")?.addEventListener("click", () => { window.location.href = "/forum"; });
-loadArticles();
+Promise.all([loadArticles(), loadSavedIds()]);

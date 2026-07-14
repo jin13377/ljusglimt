@@ -120,8 +120,10 @@ def score_item(item: dict, positive: list[str], blocked: list[str]) -> tuple[int
     hits = sorted({word for word in positive if word.casefold() in haystack})
     # Rubric is intentionally transparent and conservative.
     title = item["title"].casefold()
-    score = len(hits) + sum(1 for word in hits if word.casefold() in title)
-    return score, hits
+    source_bonus = int(item.get("source_tier_bonus", 0))
+    score = source_bonus + len(hits) + sum(1 for word in hits if word.casefold() in title)
+    reasons = (["curated-positive-source"] if source_bonus else []) + hits
+    return score, reasons
 
 
 def atomic_json_write(path: Path, data: object) -> None:
@@ -196,7 +198,11 @@ def main(argv: list[str] | None = None) -> int:
             continue
         try:
             payload = fetch(feed["url"], int(config.get("request_timeout_seconds", 20)), config.get("user_agent", "GladnyttBot/1.0"))
-            candidates.extend(parse_feed(payload, feed["name"], feed.get("language", "und")))
+            parsed = parse_feed(payload, feed["name"], feed.get("language", "und"))
+            for item in parsed:
+                item["source_tier_bonus"] = int(feed.get("base_score", 0))
+                item["source_item_limit"] = int(feed.get("max_items", config.get("max_items", 48)))
+            candidates.extend(parsed)
         except Exception as exc:  # One broken third-party feed must not stop the others.
             errors.append({"source": feed.get("name", "Unknown"), "error": str(exc)[:300]})
 
@@ -216,8 +222,18 @@ def main(argv: list[str] | None = None) -> int:
         unique[key] = item
         title_keys.add(title_key)
 
-    items = sorted(unique.values(), key=lambda x: (x["positivity_score"], x.get("published_at") or ""), reverse=True)
-    items = items[: int(config.get("max_items", 24))]
+    ranked = sorted(unique.values(), key=lambda x: (x["positivity_score"], x.get("published_at") or ""), reverse=True)
+    items = []
+    source_counts: dict[str, int] = {}
+    for item in ranked:
+        source = item["source"]
+        limit = item.pop("source_item_limit", int(config.get("max_items", 48)))
+        if source_counts.get(source, 0) >= limit:
+            continue
+        source_counts[source] = source_counts.get(source, 0) + 1
+        items.append(item)
+        if len(items) >= int(config.get("max_items", 48)):
+            break
     new_ids = [item["id"] for item in items if item["id"] not in seen_ids]
     seen_ids.update(item["id"] for item in items)
 

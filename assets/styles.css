@@ -18,6 +18,7 @@
 }
 
 * { box-sizing: border-box; }
+html, body { overflow-x: clip; }
 html { scroll-behavior: smooth; }
 body { margin: 0; color: var(--ink); background: var(--cream); font-family: "DM Sans", sans-serif; line-height: 1.55; }
 button, input { font: inherit; }
@@ -243,7 +244,7 @@ h1, h2, h3 { font-family: "Newsreader", Georgia, serif; line-height: 1.04; lette
 .stack-form label { display: grid; gap: 7px; font-size: .86rem; font-weight: 800; }
 .stack-form input, .stack-form textarea, .stack-form select { width: 100%; border: 1px solid var(--line); border-radius: 10px; padding: 12px 13px; background: var(--white); color: var(--ink); font: inherit; }
 .stack-form input:focus, .stack-form textarea:focus, .stack-form select:focus { outline: 3px solid color-mix(in srgb, var(--green) 25%, transparent); border-color: var(--green); }
-.honeypot { position: absolute !important; left: -10000px !important; }
+.honeypot { position: absolute !important; width: 1px !important; height: 1px !important; overflow: hidden !important; clip-path: inset(50%) !important; white-space: nowrap !important; }
 .form-status { min-height: 1.4em; color: var(--green); font-weight: 700; }
 .about-hero { padding: 28px 0 70px; }
 .principle-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-bottom: 70px; }
@@ -260,6 +261,55 @@ h1, h2, h3 { font-family: "Newsreader", Georgia, serif; line-height: 1.04; lette
 .not-found { min-height: 100vh; display: grid; place-content: center; justify-items: start; gap: 16px; }
 .not-found h1 { font-family: var(--font-display); font-size: clamp(3rem, 8vw, 6rem); margin: 0; }
 .dialog-source { margin: 24px 0; padding: 16px; background: var(--cream); border-left: 4px solid var(--green); }
+.profile-link { border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px !important; }
+.profile-link.is-signed-in { background: var(--green); color: white; border-color: var(--green); }
+.card-save { position: absolute; top: 14px; right: 14px; width: 42px; height: 42px; display: grid; place-items: center; border: 0; border-radius: 50%; background: rgba(255,255,255,.94); color: var(--ink); font-size: 23px; cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,.16); }
+.card-save.saved { background: var(--coral); color: white; }
+.dialog-actions, .saved-actions, .topic-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.profile-page { padding-top: 56px; padding-bottom: 100px; }
+.profile-intro { max-width: 850px; padding-bottom: 48px; }
+.profile-intro h1 { font-family: var(--font-display); font-size: clamp(2.8rem,7vw,5.5rem); line-height: .98; margin: 10px 0 20px; }
+.profile-intro p { color: var(--muted); font-size: 1.2rem; line-height: 1.65; }
+.auth-layout { display: grid; grid-template-columns: minmax(320px,.8fr) minmax(320px,1.2fr); gap: 40px; align-items: stretch; }
+.auth-card, .member-benefits, .profile-card { border: 1px solid var(--line); border-radius: var(--radius-lg); padding: clamp(26px,5vw,44px); background: var(--white); box-shadow: var(--shadow-sm); }
+.member-benefits { background: var(--green); color: white; }
+.member-benefits h2 { font-family: var(--font-display); font-size: clamp(2.2rem,5vw,3.5rem); }
+.member-benefits li { margin: 18px 0; font-size: 1.05rem; }
+.auth-tabs { display: grid; grid-template-columns: 1fr 1fr; padding: 5px; border-radius: 12px; background: var(--cream); }
+.auth-tabs button { border: 0; padding: 12px; border-radius: 9px; background: transparent; font: inherit; font-weight: 800; cursor: pointer; }
+.auth-tabs button.active { background: white; color: var(--green); box-shadow: var(--shadow-sm); }
+.auth-divider { display: flex; align-items: center; gap: 12px; color: var(--muted); margin: 24px 0; }
+.auth-divider::before, .auth-divider::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.small-note { color: var(--muted); line-height: 1.5; font-size: .84rem; }
+.form-status.error { color: #a52a2a; }
+.profile-grid { display: grid; grid-template-columns: minmax(260px,.65fr) minmax(0,1.6fr); gap: 44px; align-items: start; }
+.profile-grid > *, .auth-layout > *, .forum-layout > * { min-width: 0; }
+.profile-card { position: sticky; top: 100px; text-align: center; }
+.profile-avatar, .member-avatar { display: grid; place-items: center; border-radius: 50%; object-fit: cover; background: var(--sun); color: var(--ink); font-weight: 900; }
+.profile-avatar { width: 92px; height: 92px; margin: 0 auto 20px; font-size: 2rem; }
+.member-avatar { width: 38px; height: 38px; min-width: 38px; font-size: .72rem; }
+.profile-card h2 { font-family: var(--font-display); font-size: 2rem; margin-bottom: 2px; }
+.profile-card > p { color: var(--muted); }
+.text-button { border: 0; background: transparent; color: var(--muted); text-decoration: underline; cursor: pointer; margin-top: 20px; }
+.count-pill, .pending-badge { display: inline-flex; align-items: center; border-radius: 999px; font-size: .72rem; font-weight: 800; }
+.count-pill { padding: 8px 12px; background: var(--cream); color: var(--green); }
+.pending-badge { padding: 4px 8px; margin-left: 8px; background: #fff1bd; color: #725800; }
+.saved-list { display: grid; gap: 16px; }
+.saved-card { padding: 24px; border: 1px solid var(--line); border-radius: var(--radius-md); background: white; }
+.saved-card h3 { font-family: var(--font-display); font-size: 1.55rem; margin: 7px 0; }
+.saved-card h3, .saved-card p, .topic-card h3, .topic-card p { overflow-wrap: anywhere; }
+.saved-card p { color: var(--muted); line-height: 1.6; }
+.saved-actions a, .saved-actions button, .topic-actions button { border: 0; background: none; color: var(--green); font-weight: 800; cursor: pointer; padding: 0; }
+.saved-actions button, .topic-actions button { color: var(--muted); text-decoration: underline; }
+.empty-saved { padding: 48px 28px; text-align: center; background: var(--cream); border-radius: var(--radius-lg); }
+.empty-saved > span { font-size: 3rem; color: var(--coral); }
+.forum-filters { margin: -10px 0 24px; }
+.identity-note, .login-prompt { padding: 12px 14px; border-radius: 10px; background: #edf8f2; color: var(--green); line-height: 1.5; }
+.topic-author, .member-row { display: flex; align-items: center; gap: 10px; }
+.topic-author { margin-top: 18px; font-size: .84rem; font-weight: 800; }
+.member-row { align-items: flex-start; }
+.member-row > div { flex: 1; }
+.topic-actions { justify-content: space-between; color: var(--muted); }
 
 @media (max-width: 850px) {
   .forum-hero, .forum-layout, .method-card { grid-template-columns: 1fr; }
@@ -268,4 +318,6 @@ h1, h2, h3 { font-family: "Newsreader", Georgia, serif; line-height: 1.04; lette
   .forum-page, .about-page { padding-top: 38px; }
   .compact-nav { display: flex; position: static; padding: 0; border: 0; box-shadow: none; flex-direction: row; background: transparent; width: auto; }
   .compact-nav a { padding: 8px; }
+  .auth-layout, .profile-grid { grid-template-columns: 1fr; }
+  .profile-card { position: static; }
 }

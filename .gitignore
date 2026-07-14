@@ -9,3 +9,7 @@ data/summaries.pending.json
 .server.pid
 .tunnel.pid
 .tunnel.url
+data/glimt.db
+data/glimt.db-shm
+data/glimt.db-wal
+config/local.env

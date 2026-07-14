@@ -21,6 +21,9 @@ python server.py
 - kategorifilter, sök, artikelmodal och tydlig länk till originalkälla;
 - responsiv mobilmeny utan horisontell overflow;
 - forum med trådar/svar, honeypot, hastighetsgräns och modereringskö;
+- konton med e-post och säkert scrypt-hashade lösenord;
+- personlig profil med sparade nyheter;
+- Google Identity Services-inloggning när ett Google Client ID konfigurerats;
 - manuell forumgranskning via `python scripts/moderate_forum.py`;
 - nattlig hämtning exakt 02:00 Europe/Stockholm, även över sommar-/vintertid;
 - Codex-agent som bara får skriva källbundna svenska sammanfattningar.
@@ -47,4 +50,5 @@ node --check assets/forum.js
 ```
 
 Läs [automationsdetaljer](docs/automation.md), [forum-API](docs/forum-api.md)
-och [designresearch](docs/inspiration.md) för nästa produktionssteg.
+och [designresearch](docs/inspiration.md) för nästa produktionssteg. För Google,
+följ [Google-inloggningsguiden](docs/google-login.md).
