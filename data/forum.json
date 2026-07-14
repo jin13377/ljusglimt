@@ -1,0 +1,32 @@
+{
+  "topics": [
+    {
+      "id": "topic-vardagsgladje",
+      "title": "Vad gjorde dig glad i dag?",
+      "category": "Vardagsglädje",
+      "author": "Redaktionen",
+      "body": "Dela en liten eller stor sak som gav dig energi i dag. Håll tonen varm, konkret och respektfull.",
+      "createdAt": "2026-07-14T07:30:00+02:00",
+      "status": "published",
+      "replies": [
+        {
+          "id": "reply-demo-1",
+          "author": "Maja",
+          "body": "En granne hjälpte mig bära upp matkassarna utan att jag behövde fråga.",
+          "createdAt": "2026-07-14T08:05:00+02:00",
+          "status": "published"
+        }
+      ]
+    },
+    {
+      "id": "topic-lokala-initiativ",
+      "title": "Tipsa om ett positivt initiativ där du bor",
+      "category": "Lokalt",
+      "author": "Redaktionen",
+      "body": "Känner du till en förening, person eller idé som förbättrar ditt område? Tipsa oss och länka gärna till en verifierbar källa.",
+      "createdAt": "2026-07-13T16:20:00+02:00",
+      "status": "published",
+      "replies": []
+    }
+  ]
+}

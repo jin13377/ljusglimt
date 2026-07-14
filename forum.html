@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ljusglimts förhandsmodererade forum för vänliga och konstruktiva samtal.">
+  <title>Forum – Ljusglimt</title><link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Hoppa till innehållet</a>
+  <div class="demo-bar"><span>● MODERERAT FORUM</span> Nya inlägg granskas före publicering.</div>
+  <header class="site-header"><div class="header-inner container">
+    <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">☀</span><span>Ljusglimt</span></a>
+    <nav class="main-nav compact-nav" aria-label="Huvudmeny"><a href="/">Nyheter</a><a class="active" href="/forum">Forum</a><a href="/om">Om oss</a></nav>
+  </div></header>
+
+  <main id="main" class="forum-page container">
+    <section class="forum-hero">
+      <div><span class="eyebrow">Samtalet</span><h1>En vänligare plats på internet</h1>
+      <p>Prata om lösningar, vardagsglädje och människor som gör skillnad. Du kan läsa öppet; nya bidrag går först till moderering.</p></div>
+      <aside class="rules-card"><h2>Tre enkla regler</h2><ol><li>Var vänlig och saklig.</li><li>Dela inga personuppgifter.</li><li>Länka källa när du gör faktapåståenden.</li></ol></aside>
+    </section>
+
+    <section class="forum-layout" aria-labelledby="threads-title">
+      <div><div class="section-heading"><div><span class="eyebrow">Aktuellt</span><h2 id="threads-title">Pågående samtal</h2></div></div>
+        <div id="forum-topics" class="topic-list" aria-live="polite"><p>Laddar samtal…</p></div>
+      </div>
+      <aside class="new-topic-card">
+        <span class="eyebrow">Starta ett samtal</span><h2>Dela något gott</h2>
+        <form id="topic-form" class="stack-form">
+          <label>Namn <input name="author" maxlength="40" placeholder="Ditt namn eller alias"></label>
+          <label>Rubrik <input name="title" required minlength="5" maxlength="100" placeholder="Vad vill du berätta?"></label>
+          <label>Kategori <select name="category"><option>Vardagsglädje</option><option>Lokalt</option><option>Goda idéer</option><option>Nyheter</option></select></label>
+          <label>Inlägg <textarea name="body" required minlength="10" maxlength="1600" rows="6" placeholder="Skriv varmt, konkret och respektfullt."></textarea></label>
+          <label class="honeypot" aria-hidden="true">Webbplats <input name="website" tabindex="-1" autocomplete="off"></label>
+          <button class="button button-primary" type="submit">Skicka till moderering</button>
+          <p id="forum-status" class="form-status" role="status"></p>
+        </form>
+      </aside>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-bottom"><a class="brand footer-brand" href="/"><span class="brand-mark">☀</span><span>Ljusglimt</span></a><span>Trygga samtal · Tydlig moderering</span></div></footer>
+  <script src="/assets/forum.js"></script>
+</body></html>

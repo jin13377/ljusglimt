@@ -1,0 +1,44 @@
+{
+  "feeds": [
+    {
+      "name": "Reasons to be Cheerful",
+      "url": "https://reasonstobecheerful.world/feed/",
+      "language": "en",
+      "enabled": true
+    },
+    {
+      "name": "Positive News",
+      "url": "https://www.positive.news/feed/",
+      "language": "en",
+      "enabled": true
+    },
+    {
+      "name": "Good Good Good",
+      "url": "https://www.goodgoodgood.co/articles/rss.xml",
+      "language": "en",
+      "enabled": true
+    },
+    {
+      "name": "BBC Innovation",
+      "url": "https://feeds.bbci.co.uk/news/topics/c1038wnx38vt/rss.xml",
+      "language": "en",
+      "enabled": false
+    }
+  ],
+  "positive_keywords": [
+    "breakthrough", "community", "conservation", "discovery", "donation",
+    "education", "hope", "improves", "innovation", "milestone", "progress",
+    "recovery", "renewable", "rescue", "solution", "success", "volunteer",
+    "återhämtning", "framsteg", "glädje", "hjälper", "innovation", "lösning",
+    "räddad", "rekord", "samarbete", "upptäckt"
+  ],
+  "blocked_keywords": [
+    "abuse", "assault", "bomb", "death", "earthquake", "fraud", "killed",
+    "murder", "shooting", "terror", "war", "övergrepp", "bomb", "död",
+    "jordbävning", "krig", "mord", "skjutning", "terror"
+  ],
+  "minimum_score": 2,
+  "max_items": 24,
+  "request_timeout_seconds": 20,
+  "user_agent": "GladnyttBot/1.0 (+https://github.com/; public RSS reader)"
+}

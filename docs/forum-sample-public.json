@@ -1,0 +1,13 @@
+{
+  "threads": [
+    {
+      "id": "demo-welcome",
+      "title": "Välkommen till Gladnytts forum",
+      "body": "Här kan vi dela vänliga, konkreta berättelser som gör dagen lite ljusare.",
+      "category": "gemenskap",
+      "display_name": "Redaktionen",
+      "published_at": "2026-07-14T08:00:00Z",
+      "reply_count": 0
+    }
+  ]
+}

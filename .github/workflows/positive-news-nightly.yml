@@ -1,0 +1,108 @@
+name: Ljusglimt nightly news
+
+on:
+  schedule:
+    # 02:00 Stockholm är 00 UTC sommartid och 01 UTC vintertid.
+    - cron: "0 0 * * *"
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: positive-news-nightly
+  cancel-in-progress: false
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Gate exactly 02:00 Europe/Stockholm
+        id: clock
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            python - <<'PY' >> "$GITHUB_OUTPUT"
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          print(f"run={'true' if datetime.now(ZoneInfo('Europe/Stockholm')).hour == 2 else 'false'}")
+          PY
+          fi
+
+      - name: Fetch and rank allowlisted RSS news
+        if: steps.clock.outputs.run == 'true'
+        run: python scripts/fetch_positive_news.py --force
+
+      - name: Test deterministic pipeline
+        if: steps.clock.outputs.run == 'true'
+        run: python -m unittest discover -s tests -v
+
+      - name: Commit source-bound update
+        if: steps.clock.outputs.run == 'true'
+        shell: bash
+        run: |
+          if git diff --quiet -- data/news.json data/history.json; then
+            echo "No source changes"
+          else
+            git config user.name "ljusglimt-bot"
+            git config user.email "ljusglimt-bot@users.noreply.github.com"
+            git add data/news.json data/history.json
+            git commit -m "chore(news): nightly source update"
+            git push
+          fi
+
+      - name: Check optional OpenAI secret
+        if: steps.clock.outputs.run == 'true'
+        id: openai
+        shell: bash
+        env:
+          OPENAI_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          if [ -n "$OPENAI_KEY" ]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "OPENAI_API_KEY is missing; RSS update succeeded and Codex summaries are skipped."
+          fi
+
+      - name: Let Codex draft source-bound Swedish summaries
+        if: steps.clock.outputs.run == 'true' && steps.openai.outputs.available == 'true'
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          prompt-file: .github/codex/prompts/positive-news-summary.md
+          sandbox: workspace-write
+          safety-strategy: drop-sudo
+          codex-args: '["--ephemeral", "--ignore-user-config"]'
+          output-file: codex-output.md
+
+      - name: Validate and commit agent summaries only
+        if: steps.clock.outputs.run == 'true' && steps.openai.outputs.available == 'true'
+        shell: bash
+        run: |
+          unexpected="$(git diff --name-only | grep -Ev '^(data/news.json|data/summaries.pending.json)$' || true)"
+          if [ -n "$unexpected" ]; then
+            echo "Codex changed disallowed files:"
+            echo "$unexpected"
+            exit 1
+          fi
+          python -m unittest discover -s tests -v
+          python -m json.tool data/news.json > /dev/null
+          if git diff --quiet -- data/news.json; then
+            echo "No new summaries"
+            exit 0
+          fi
+          git add data/news.json
+          git commit -m "chore(news): add source-bound Codex summaries"
+          git push

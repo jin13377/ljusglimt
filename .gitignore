@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.DS_Store
+.env
+data/candidates.json
+data/*.tmp
+codex-output.md
+data/summaries.pending.json
+.server.pid

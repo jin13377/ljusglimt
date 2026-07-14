@@ -1,0 +1,147 @@
+{
+  "_meta": {
+    "purpose": "Källbelagda demo-sammanfattningar för utveckling och visuell testning",
+    "language": "sv-SE",
+    "isDemoContent": true,
+    "verifiedAt": "2026-07-14",
+    "notice": "Texterna är nyskrivna svenska sammanfattningar av länkade originalkällor. De är inte egen rapportering och ska visas med märkningen Demo. Kontrollera alltid originalkällan före riktig publicering."
+  },
+  "articles": [
+    {
+      "id": "demo-vaccin-100-miljoner-doser",
+      "slug": "100-miljoner-vaccindoser-nadde-barn-som-missat-sitt-skydd",
+      "title": "100 miljoner vaccindoser nådde barn som missat sitt skydd",
+      "summary": "Den internationella satsningen Big Catch-Up levererade över 100 miljoner doser till uppskattningsvis 18,3 miljoner barn i 36 länder mellan 2023 och 2025. WHO, UNICEF och Gavi uppger att 12,3 miljoner av barnen tidigare inte hade fått någon vaccindos alls.",
+      "category": "Hälsa",
+      "location": "Världen",
+      "publishedAt": "2026-04-24",
+      "readTimeMinutes": 2,
+      "featured": true,
+      "isDemo": true,
+      "contentType": "demo-summary",
+      "source": {
+        "name": "WHO",
+        "url": "https://www.who.int/news/item/24-04-2026-largest-catch-up-initiative-delivers-over-100-million-childhood-vaccinations"
+      }
+    },
+    {
+      "id": "demo-solenergi-ledde-tillvaxt",
+      "slug": "solenergi-ledde-varldens-energitillvaxt-for-forsta-gangen",
+      "title": "Solenergi ledde världens energitillväxt för första gången",
+      "summary": "Solkraft stod för mer än en fjärdedel av ökningen i världens energitillförsel under 2025. Enligt Internationella energiorganet var det första gången en modern förnybar energikälla bidrog mest till den globala tillväxten.",
+      "category": "Miljö",
+      "location": "Världen",
+      "publishedAt": "2026-04-20",
+      "readTimeMinutes": 2,
+      "featured": true,
+      "isDemo": true,
+      "contentType": "demo-summary",
+      "source": {
+        "name": "International Energy Agency",
+        "url": "https://www.iea.org/news/global-energy-demand-growth-was-met-by-diverse-range-of-sources-in-2025-led-by-solar-and-then-gas"
+      }
+    },
+    {
+      "id": "demo-euclid-26-miljoner-galaxer",
+      "slug": "euclid-oppnade-en-skattkista-med-26-miljoner-galaxer",
+      "title": "Euclid öppnade en skattkista med 26 miljoner galaxer",
+      "summary": "ESA:s rymdteleskop Euclid hittade 26 miljoner galaxer i sin första förhandsvisning av tre djupfält. Materialet omfattar även en katalog där volontärer och AI hjälpt till att klassificera mer än 380 000 galaxer.",
+      "category": "Vetenskap",
+      "location": "Rymden",
+      "publishedAt": "2025-03-19",
+      "readTimeMinutes": 3,
+      "featured": false,
+      "isDemo": true,
+      "contentType": "demo-summary",
+      "source": {
+        "name": "European Space Agency",
+        "url": "https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_opens_data_treasure_trove_offers_glimpse_of_deep_fields"
+      }
+    },
+    {
+      "id": "demo-havsmiljo-fem-miljoner-hektar",
+      "slug": "tre-restaureringsprojekt-hjalper-nastan-fem-miljoner-hektar-hav",
+      "title": "Tre restaureringsprojekt hjälper nästan fem miljoner hektar hav",
+      "summary": "FN har utsett initiativ i Östafrika, Mexiko och Spanien till World Restoration Flagships. Tillsammans arbetar projekten med nästan fem miljoner hektar marina ekosystem och kombinerar naturvård med lokalt deltagande.",
+      "category": "Natur",
+      "location": "Afrika, Mexiko och Spanien",
+      "publishedAt": "2025-06-11",
+      "readTimeMinutes": 2,
+      "featured": false,
+      "isDemo": true,
+      "contentType": "demo-summary",
+      "source": {
+        "name": "UN Environment Programme",
+        "url": "https://www.unep.org/news-and-stories/press-release/un-recognizes-world-restoration-flagships-east-africa-mexico-and"
+      }
+    },
+    {
+      "id": "demo-mosul-landmarken-ateroppnade",
+      "slug": "mosuls-moske-kloster-och-kyrka-aterinvigda",
+      "title": "Mosuls moské, kloster och kyrka återinvigda",
+      "summary": "Tre välkända kulturarv i Mosul invigdes efter omfattande restaurering: Al-Nouri-moskén, Al-Saa'a-klostret och Al-Tahera-kyrkan. UNESCO beskriver arbetet som en gemensam satsning på återhämtning, samexistens och lokala restaureringskunskaper.",
+      "category": "Kultur",
+      "location": "Mosul, Irak",
+      "publishedAt": "2025-09-03",
+      "readTimeMinutes": 3,
+      "featured": false,
+      "isDemo": true,
+      "contentType": "demo-summary",
+      "source": {
+        "name": "UNESCO",
+        "url": "https://www.unesco.org/en/articles/milestone-mosul-iraq-inaugurates-iconic-landmarks-rehabilitated-unesco?hub=66974"
+      }
+    },
+    {
+      "id": "demo-grasmarker-skyddas",
+      "slug": "lantbrukare-och-naturvardare-starker-13-miljoner-acres-grasmark",
+      "title": "Lantbrukare och naturvårdare stärker 1,3 miljoner acres gräsmark",
+      "summary": "Ett samarbete med ranchägare i Nordamerikas Northern Great Plains nådde under 2025 en milstolpe: förbättrad skötsel och skydd för 1,3 miljoner acres av ett av världens sista stora tempererade gräsmarksområden.",
+      "category": "Natur",
+      "location": "Northern Great Plains, Nordamerika",
+      "publishedAt": "2025-12-03",
+      "readTimeMinutes": 2,
+      "featured": false,
+      "isDemo": true,
+      "contentType": "demo-summary",
+      "source": {
+        "name": "World Wildlife Fund",
+        "url": "https://www.worldwildlife.org/news/stories/conservation-highlights-of-2025/"
+      }
+    },
+    {
+      "id": "demo-fler-lander-malariafria",
+      "slug": "tre-lander-certifierades-som-malariafria-under-2025",
+      "title": "Tre länder certifierades som malariafria under 2025",
+      "summary": "Georgien, Surinam och Timor-Leste certifierades som malariafria under året. Samtidigt införde ytterligare sju afrikanska länder malariavaccin, vilket innebar att 24 länder nådde över tio miljoner barn årligen.",
+      "category": "Hälsa",
+      "location": "Världen",
+      "publishedAt": "2025-12-23",
+      "readTimeMinutes": 2,
+      "featured": false,
+      "isDemo": true,
+      "contentType": "demo-summary",
+      "source": {
+        "name": "WHO",
+        "url": "https://www.who.int/news-room/spotlight/stronger-together-milestones-that-mattered-in-2025"
+      }
+    },
+    {
+      "id": "demo-unga-innovatorer-tamil-nadu",
+      "slug": "850000-elever-har-tranats-i-att-losa-lokala-problem",
+      "title": "850 000 elever har tränats i att lösa lokala problem",
+      "summary": "Ett innovationsprogram i offentliga skolor i Tamil Nadu har sedan 2022 nått över 850 000 elever med stöd av 25 000 utbildade lärare. Under 2025 tog elever fram nära 45 000 projektidéer, bland annat lösningar för sanitet och trafiksäkerhet.",
+      "category": "Människor",
+      "location": "Tamil Nadu, Indien",
+      "publishedAt": "2025-12-05",
+      "readTimeMinutes": 3,
+      "featured": false,
+      "isDemo": true,
+      "contentType": "demo-summary",
+      "source": {
+        "name": "UNICEF Office of Innovation",
+        "url": "https://www.unicef.org/innovation/stories/innovation-not-privilege-its-public-good"
+      }
+    }
+  ]
+}
