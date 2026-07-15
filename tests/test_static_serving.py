@@ -16,9 +16,11 @@ class StaticServingTests(unittest.TestCase):
         server.DIST_DIR = Path(cls.temp.name) / "dist"
         (server.DIST_DIR / "assets").mkdir(parents=True)
         (server.DIST_DIR / "news-images/ai").mkdir(parents=True)
+        (server.DIST_DIR / "news-images/ai/articles").mkdir(parents=True)
         (server.DIST_DIR / "index.html").write_text("<!doctype html><title>Vite shell</title>", encoding="utf-8")
         (server.DIST_DIR / "assets/app-123.js").write_text("console.log('vite');", encoding="utf-8")
         (server.DIST_DIR / "news-images/ai/health.webp").write_bytes(b"webp-test")
+        (server.DIST_DIR / "news-images/ai/articles/0123456789abcdefabcd-aabbccdd-v1.webp").write_bytes(b"article-webp")
         cls.httpd = server.ThreadingHTTPServer(("127.0.0.1", 0), server.Handler)
         cls.port = cls.httpd.server_address[1]
         cls.thread = threading.Thread(target=cls.httpd.serve_forever, daemon=True)
@@ -68,6 +70,13 @@ class StaticServingTests(unittest.TestCase):
         headers = dict(headers)
         self.assertIn("image/webp", headers["Content-Type"])
         self.assertIn("max-age=604800", headers["Cache-Control"])
+
+        status, nested_headers, nested_body = self.request(
+            "/news-images/ai/articles/0123456789abcdefabcd-aabbccdd-v1.webp"
+        )
+        self.assertEqual(status, 200)
+        self.assertEqual(nested_body, b"article-webp")
+        self.assertIn("image/webp", dict(nested_headers)["Content-Type"])
 
     def test_traversal_is_rejected(self):
         status, _, body = self.request("/%2e%2e/server.py")

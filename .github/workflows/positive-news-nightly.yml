@@ -5,6 +5,12 @@ on:
     - cron: "0 0,12 * * *"
       timezone: "Europe/Stockholm"
   workflow_dispatch:
+    inputs:
+      generate_images:
+        description: "Skapa upp till tre betalda AI-bilder"
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -16,13 +22,13 @@ concurrency:
 jobs:
   update-news:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 35
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5
         with:
           fetch-depth: 0
           persist-credentials: false
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: "3.11"
 
@@ -57,18 +63,115 @@ jobs:
         id: openai
         shell: bash
         env:
-          OPENAI_KEY: ${{ secrets.OPENAI_API_KEY }}
+          SUMMARY_KEY: ${{ secrets.OPENAI_API_KEY }}
+          IMAGE_KEY: ${{ secrets.OPENAI_IMAGE_API_KEY }}
         run: |
-          if [ -n "$OPENAI_KEY" ]; then
-            echo "available=true" >> "$GITHUB_OUTPUT"
+          if [ -n "$SUMMARY_KEY" ]; then
+            echo "summaries_available=true" >> "$GITHUB_OUTPUT"
           else
-            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "summaries_available=false" >> "$GITHUB_OUTPUT"
             echo "OPENAI_API_KEY is missing; RSS update succeeded and Codex summaries are skipped."
           fi
+          if [ -n "$IMAGE_KEY" ] || [ -n "$SUMMARY_KEY" ]; then
+            echo "images_available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "images_available=false" >> "$GITHUB_OUTPUT"
+            echo "No image API key is configured; local category illustrations remain active."
+          fi
+          if [ "${{ github.event_name }}" != "workflow_dispatch" ] || [ "${{ inputs.generate_images }}" = "true" ]; then
+            echo "images_enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "images_enabled=false" >> "$GITHUB_OUTPUT"
+            echo "Manual image generation was not enabled."
+          fi
+
+      - name: Generate source-bound article illustrations
+        if: steps.openai.outputs.images_available == 'true' && steps.openai.outputs.images_enabled == 'true'
+        shell: bash
+        env:
+          OPENAI_IMAGE_API_KEY: ${{ secrets.OPENAI_IMAGE_API_KEY || secrets.OPENAI_API_KEY }}
+        run: |
+          cp data/news.json "$RUNNER_TEMP/news-before-images.json"
+          set +e
+          python scripts/generate_article_images.py \
+            --news data/news.json \
+            --output-dir public/news-images/ai/articles \
+            --max-images 3
+          generator_status=$?
+          set -e
+          if [ "$generator_status" -eq 2 ]; then
+            echo "The image generator configuration is invalid."
+            exit 2
+          fi
+          if [ "$generator_status" -ne 0 ]; then
+            echo "No article image was generated; the site keeps its local category fallback."
+          fi
+
+      - name: Validate and commit article illustrations only
+        if: steps.openai.outputs.images_available == 'true' && steps.openai.outputs.images_enabled == 'true'
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          remote="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --force "$remote" "refs/heads/${GITHUB_REF_NAME}:refs/remotes/origin/${GITHUB_REF_NAME}"
+          trusted_head="$(git rev-parse "refs/remotes/origin/${GITHUB_REF_NAME}")"
+          if [ "$(git rev-parse HEAD)" != "$trusted_head" ]; then
+            echo "The remote branch changed during image generation; refusing to publish."
+            exit 1
+          fi
+
+          changed_paths="$(git status --porcelain --untracked-files=all | sed 's/^...//')"
+          unexpected="$(printf '%s\n' "$changed_paths" | grep -Ev '^(data/news.json|public/news-images/ai/articles/[0-9a-f]{20}-[0-9a-f]{8}-v1\.webp)$' || true)"
+          if [ -n "$unexpected" ]; then
+            echo "The image generator changed disallowed files:"
+            echo "$unexpected"
+            exit 1
+          fi
+
+          python scripts/validate_generated_image_changes.py \
+            --before "$RUNNER_TEMP/news-before-images.json" \
+            --after data/news.json \
+            --images-dir public/news-images/ai/articles \
+            --max-changes 3
+
+          python - "$RUNNER_TEMP/news-before-images.json" data/news.json > "$RUNNER_TEMP/expected-image-paths.txt" <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+
+          before = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
+          after = json.loads(Path(sys.argv[2]).read_text(encoding="utf-8"))
+          for old, new in zip(before.get("items", []), after.get("items", []), strict=True):
+              if old.get("ai_image") != new.get("ai_image"):
+                  print("public" + new["ai_image"]["url"])
+          PY
+          printf '%s\n' "$changed_paths" | grep '^public/news-images/ai/articles/' > "$RUNNER_TEMP/actual-image-paths.txt" || true
+          while IFS= read -r path; do
+            if ! grep -Fxq "$path" "$RUNNER_TEMP/expected-image-paths.txt"; then
+              echo "Generated file is not referenced by changed article metadata: $path"
+              exit 1
+            fi
+          done < "$RUNNER_TEMP/actual-image-paths.txt"
+
+          python -m unittest discover -s tests -v
+          python -m json.tool data/news.json > /dev/null
+          git add data/news.json
+          while IFS= read -r path; do
+            [ -n "$path" ] && git add -- "$path"
+          done < "$RUNNER_TEMP/actual-image-paths.txt"
+          if git diff --cached --quiet; then
+            echo "No new article illustrations"
+            exit 0
+          fi
+          git config user.name "ljusglimt-bot"
+          git config user.email "ljusglimt-bot@users.noreply.github.com"
+          git commit -m "chore(news): add source-bound article illustrations"
+          git push "$remote" "HEAD:${GITHUB_REF_NAME}"
 
       - name: Let Codex draft source-bound Swedish summaries
-        if: steps.openai.outputs.available == 'true'
-        uses: openai/codex-action@v1
+        if: steps.openai.outputs.summaries_available == 'true'
+        uses: openai/codex-action@52fe01ec70a42f454c9d2ebd47598f9fd6893d56 # v1
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
           prompt-file: .github/codex/prompts/positive-news-summary.md
@@ -78,7 +181,7 @@ jobs:
           output-file: codex-output.md
 
       - name: Validate and commit agent summaries only
-        if: steps.openai.outputs.available == 'true'
+        if: steps.openai.outputs.summaries_available == 'true'
         shell: bash
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

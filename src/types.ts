@@ -1,8 +1,10 @@
 export type NewsOrigin = 'demo' | 'fetched'
 export type NewsImageKind = 'source' | 'ai'
+export type NewsAiOrigin = 'generated' | 'category'
 
 export interface NewsImage {
   kind: NewsImageKind
+  aiOrigin?: NewsAiOrigin
   url: string
   alt: string
   caption: string
@@ -10,6 +12,18 @@ export interface NewsImage {
   height: number
   credit?: string
   rightsUrl?: string
+}
+
+export interface RawAiNewsImage {
+  url: string
+  alt: string
+  model: string
+  prompt_version: string
+  source_fingerprint: string
+  width: number
+  height: number
+  sha256: string
+  generated_at: string
 }
 
 export interface RawFetchedNews {
@@ -24,6 +38,9 @@ export interface RawFetchedNews {
   source_tier_bonus?: number
   positivity_score?: number
   positive_signals?: string[]
+  source_fingerprint?: string
+  public_eligible?: boolean
+  ai_image?: RawAiNewsImage
   source_image_verified?: boolean
   source_image_url?: string
   source_image_alt?: string
@@ -69,6 +86,8 @@ export interface NewsArticle {
   score: number
   signals: string[]
   image: NewsImage
+  fallbackImage?: NewsImage
+  publicEligible?: boolean
 }
 
 export interface User {

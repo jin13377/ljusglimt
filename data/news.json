@@ -1,46 +1,10 @@
 {
-  "generated_at": "2026-07-14T16:07:21.634096Z",
+  "generated_at": "2026-07-15T17:06:22.741635Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [
-    "639a1e6c71111b99f830",
-    "4eb476d78b32ccfb4a21",
-    "1ae68353729d3d5e7db1",
-    "a565cea889b4c1b9f390",
-    "2217dc1400037ccccbb1",
-    "1fbcf0264f855be91730",
-    "aac71e037ce187970031",
-    "793f8f03b8f4a4faa4c2",
-    "b0a0755793758f53667f",
-    "7289a63605efd25a564a",
-    "1f8b64d9bf3ec6404716",
-    "501130db4332810a59a8",
-    "9903963d38b1027f54da",
-    "17bf0e9a1e71e1f8f1b0",
-    "70c501486cfb004112dd",
-    "122b09246e5fd94b6c11",
-    "962852d55b904987d3be",
-    "c86cd88b9bb2244e54da"
-  ],
+  "new_item_ids": [],
   "fetch_errors": [],
   "items": [
-    {
-      "id": "345fda8eb9e553ba3b93",
-      "title": "The Coast Guard rescued a loggerhead sea turtle after an anchor line mangled her flipper. See her incredible 4-week recovery",
-      "url": "https://www.goodgoodgood.co/articles/sea-turtle-loggerhead-hope-anchor-flipper",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-07-10T18:07:00Z",
-      "source_excerpt": "In early June, the U.S. Coast Guard responded to an injured sea turtle off the coast of Florida.",
-      "agent_summary": "",
-      "source_tier_bonus": 2,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "recovery",
-        "rescue"
-      ]
-    },
     {
       "id": "b2a50a7e834fe5a51d69",
       "title": "Firefighters free raccoon trapped under sewer grate in 'jaws of life' rescue mission",
@@ -50,13 +14,15 @@
       "published_at": "2026-07-08T17:33:00Z",
       "source_excerpt": "After the first responders had completed the job, the masked critter ran back to its natural habitat.",
       "agent_summary": "",
+      "source_fingerprint": "685882d51a0346bca596",
       "source_tier_bonus": 2,
       "positivity_score": 6,
       "positive_signals": [
         "curated-positive-source",
         "mission",
         "rescue"
-      ]
+      ],
+      "public_eligible": false
     },
     {
       "id": "4dfcf68479bd517dccdb",
@@ -67,13 +33,15 @@
       "published_at": "2026-06-26T18:02:00Z",
       "source_excerpt": "While enjoying a tour of Magnetic Island off the coast of Australia, the jet ski riders ended their outing early to help a turtle in need.",
       "agent_summary": "",
+      "source_fingerprint": "2b9539162a770dbeabc7",
       "source_tier_bonus": 2,
       "positivity_score": 6,
       "positive_signals": [
         "curated-positive-source",
         "mission",
         "rescue"
-      ]
+      ],
+      "public_eligible": false
     },
     {
       "id": "1975208a7e6ad125a4af",
@@ -84,65 +52,15 @@
       "published_at": "2026-06-17T15:47:00Z",
       "source_excerpt": "The new hatchling, which will be named by the public, is the child of mother and father pancake tortoises Waffle and Maple.",
       "agent_summary": "",
+      "source_fingerprint": "84c32865a61a64525826",
       "source_tier_bonus": 2,
       "positivity_score": 6,
       "positive_signals": [
         "curated-positive-source",
         "conservation",
         "hope"
-      ]
-    },
-    {
-      "id": "4ff8d29c7928834447e8",
-      "title": "Endangered West African leopards show signs of recovery: 'A rare piece of good news'",
-      "url": "https://www.goodgoodgood.co/articles/endangered-west-african-leopards-recovery-conservation",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-07-14T14:05:00Z",
-      "source_excerpt": "Despite heavy conflict and rampant wildlife trafficking, new studies suggest cause for hope for the West African leopard population.",
-      "agent_summary": "",
-      "source_tier_bonus": 2,
-      "positivity_score": 5,
-      "positive_signals": [
-        "curated-positive-source",
-        "hope",
-        "recovery"
-      ]
-    },
-    {
-      "id": "55c03da056299001ea92",
-      "title": "Baby 'sloth bear' found abandoned and injured on the forest floor given second chance by rescuers",
-      "url": "https://www.goodgoodgood.co/articles/baby-sloth-bear-rescue-india",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-07-13T17:00:00Z",
-      "source_excerpt": "Experts say the young bear cub is now “responding well” to treatment.",
-      "agent_summary": "",
-      "source_tier_bonus": 2,
-      "positivity_score": 5,
-      "positive_signals": [
-        "curated-positive-source",
-        "rescue",
-        "treatment"
-      ]
-    },
-    {
-      "id": "8784e38b2b432864366c",
-      "title": "NASA Volunteers Help Zooniverse Reach 1 Billion Classifications",
-      "url": "https://science.nasa.gov/get-involved/citizen-science/nasa-volunteers-help-zooniverse-reach-1-billion-classifications",
-      "source": "NASA News Releases",
-      "language": "en",
-      "published_at": "2026-07-10T19:00:53Z",
-      "source_excerpt": "The Zooniverse, a NASA grantee that runs the world’s largest platform for online people-powered research, has reached an extraordinary milestone: 1 billion classifications contributed by volunteers around the world. This milestone is a celebration of everyone who has marked a dip in a light curve, confirmed the presence of a moving object in a short […]",
-      "agent_summary": "",
-      "source_tier_bonus": 1,
-      "positivity_score": 5,
-      "positive_signals": [
-        "curated-positive-source",
-        "milestone",
-        "research",
-        "volunteer"
-      ]
+      ],
+      "public_eligible": true
     },
     {
       "id": "b633381743991714a6b4",
@@ -153,6 +71,7 @@
       "published_at": "2026-07-08T17:22:00Z",
       "source_excerpt": "A daring sea turtle recovery mission in Australia was just the latest in a long list of sea turtle rescues.",
       "agent_summary": "",
+      "source_fingerprint": "086701e752b53a7bf210",
       "source_tier_bonus": 2,
       "positivity_score": 5,
       "positive_signals": [
@@ -160,7 +79,27 @@
         "mission",
         "recovery",
         "rescue"
-      ]
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "01a0b9cb8d977d78d1f8",
+      "title": "Report finds Indigenous cultural practices are a climate solution",
+      "url": "https://www.goodgoodgood.co/articles/report-finds-indigenous-cultural-practices-climate-solution",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-06-26T11:40:00Z",
+      "source_excerpt": "Indigenous lands are crucial for climate mitigation and resilience. Research shows their health is a direct result of Indigenous stewardship.",
+      "agent_summary": "",
+      "source_fingerprint": "ba75038e3a9563da2075",
+      "source_tier_bonus": 2,
+      "positivity_score": 5,
+      "positive_signals": [
+        "curated-positive-source",
+        "research",
+        "solution"
+      ],
+      "public_eligible": false
     },
     {
       "id": "ab5b28e149238ea74097",
@@ -171,13 +110,15 @@
       "published_at": "2026-06-19T14:35:00Z",
       "source_excerpt": "Bowser, a 172-pound loggerhead sea turtle, was rescued from the Navarre Beach Fishing Pier recently. The operation was one of a growing number of rescues in areas where sea turtles and humans overlap.",
       "agent_summary": "",
+      "source_fingerprint": "800968ed974d32314890",
       "source_tier_bonus": 2,
       "positivity_score": 5,
       "positive_signals": [
         "curated-positive-source",
         "rescue",
         "volunteer"
-      ]
+      ],
+      "public_eligible": false
     },
     {
       "id": "72f48d316701bacb0439",
@@ -188,13 +129,52 @@
       "published_at": "2026-06-16T15:49:00Z",
       "source_excerpt": "Kraken, a green sea turtle, is in recovery after a harrowing boat strike in Abu Dhabi.",
       "agent_summary": "",
+      "source_fingerprint": "5fc057df27cbb0188d46",
       "source_tier_bonus": 2,
       "positivity_score": 5,
       "positive_signals": [
         "curated-positive-source",
         "recovery",
         "rescue"
-      ]
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "9a227c3910aa2c6a2a31",
+      "title": "Volunteer Measures Record Louisiana Rainfall",
+      "url": "https://science.nasa.gov/get-involved/citizen-science/volunteer-measures-record-louisiana-rainfall",
+      "source": "NASA News Releases",
+      "language": "en",
+      "published_at": "2026-07-15T12:32:00Z",
+      "source_excerpt": "Join a national community of precipitation reporters providing critical data to improve scientific understanding and forecasts.",
+      "agent_summary": "",
+      "source_fingerprint": "a36669d8220bf7056b69",
+      "source_tier_bonus": 1,
+      "positivity_score": 4,
+      "positive_signals": [
+        "curated-positive-source",
+        "community",
+        "volunteer"
+      ],
+      "public_eligible": true
+    },
+    {
+      "id": "1b82a78f627942caa9fb",
+      "title": "The marginalised groups finding community through football",
+      "url": "https://www.positive.news/society/the-marginalised-groups-finding-community-through-football",
+      "source": "Positive News",
+      "language": "en",
+      "published_at": "2026-07-15T10:30:46Z",
+      "source_excerpt": "Shut out of the sport for generations, women, disabled players and minority groups are flooding into grassroots clubs The post The marginalised groups finding community through football appeared first on Positive News .",
+      "agent_summary": "",
+      "source_fingerprint": "6bcb3dbd26bb8f03da81",
+      "source_tier_bonus": 2,
+      "positivity_score": 4,
+      "positive_signals": [
+        "curated-positive-source",
+        "community"
+      ],
+      "public_eligible": false
     },
     {
       "id": "0363d6f192a42626ecc3",
@@ -205,12 +185,14 @@
       "published_at": "2026-07-12T15:15:00Z",
       "source_excerpt": "Nepal is home to more than 900 bird species, of which 40 are globally threatened and 172 are nationally threatened.",
       "agent_summary": "",
+      "source_fingerprint": "77ed3d2e5fcd0de770e6",
       "source_tier_bonus": 2,
       "positivity_score": 4,
       "positive_signals": [
         "curated-positive-source",
         "conservation"
-      ]
+      ],
+      "public_eligible": false
     },
     {
       "id": "b4c32b3233cc9084b2b3",
@@ -221,13 +203,15 @@
       "published_at": "2026-07-10T05:07:49Z",
       "source_excerpt": "The world’s ‘greatest forest recovery’, a new test for womb cancer, and Europe’s environmental progress, plus more The post What went right this week: the good news that matters appeared first on Positive News .",
       "agent_summary": "",
+      "source_fingerprint": "26722ee5f828a25e3699",
       "source_tier_bonus": 2,
       "positivity_score": 4,
       "positive_signals": [
         "curated-positive-source",
         "progress",
         "recovery"
-      ]
+      ],
+      "public_eligible": false
     },
     {
       "id": "600742420eb388aab0d9",
@@ -238,12 +222,14 @@
       "published_at": "2026-07-08T18:01:00Z",
       "source_excerpt": "The Provo Canyon School’s Springville campus is closing, but the Provo campus is keeping its license under new conditions.",
       "agent_summary": "",
+      "source_fingerprint": "46d2e6a868954e7ba815",
       "source_tier_bonus": 2,
       "positivity_score": 4,
       "positive_signals": [
         "curated-positive-source",
         "treatment"
-      ]
+      ],
+      "public_eligible": false
     },
     {
       "id": "e2079e78a1f3711c7643",
@@ -254,12 +240,14 @@
       "published_at": "2026-07-05T20:15:00Z",
       "source_excerpt": "Young people are facing a future shaped by climate anxiety, political extremism, economic instability, and chronic loneliness. But that's only part of the story.",
       "agent_summary": "",
+      "source_fingerprint": "29768a1b34927b265661",
       "source_tier_bonus": 2,
       "positivity_score": 4,
       "positive_signals": [
         "curated-positive-source",
         "hope"
-      ]
+      ],
+      "public_eligible": false
     },
     {
       "id": "59d1baf73158830c7c72",
@@ -270,12 +258,14 @@
       "published_at": "2026-07-02T17:00:00Z",
       "source_excerpt": "The Obô Giant Snail is just one of many vulnerable species worth protecting in the “Galapagos of Africa.”",
       "agent_summary": "",
+      "source_fingerprint": "db12fb82eab1700e898f",
       "source_tier_bonus": 2,
       "positivity_score": 4,
       "positive_signals": [
         "curated-positive-source",
         "conservation"
-      ]
+      ],
+      "public_eligible": false
     },
     {
       "id": "e6ab936520421c01f62d",
@@ -286,12 +276,50 @@
       "published_at": "2026-07-01T16:48:00Z",
       "source_excerpt": "Volunteers are gearing up for their sixth-annual “comfort sessions” at their local animal shelter.",
       "agent_summary": "",
+      "source_fingerprint": "530f717066e612bd74e8",
       "source_tier_bonus": 2,
       "positivity_score": 4,
       "positive_signals": [
         "curated-positive-source",
         "volunteer"
-      ]
+      ],
+      "public_eligible": true
+    },
+    {
+      "id": "f9cdb3027dff30cc08c9",
+      "title": "Virginia fishermen fight 20 mph winds to rescue 700-pound leatherback from crab trap: 'I've never seen a turtle in distress like that'",
+      "url": "https://www.goodgoodgood.co/articles/leatherback-sea-turtle-rescue-crab-trap",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-07-01T16:12:00Z",
+      "source_excerpt": "Three fishermen were cruising for fish in the Chesapeake Bay when they came across the biggest sea turtle species in the world.",
+      "agent_summary": "",
+      "source_fingerprint": "60fcb72993c7dc477164",
+      "source_tier_bonus": 2,
+      "positivity_score": 4,
+      "positive_signals": [
+        "curated-positive-source",
+        "rescue"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "2d0d6968d2e8256c21ea",
+      "title": "A 250-pound sea turtle was found stranded on the highway, unable to move. She left rescuers with a single egg",
+      "url": "https://www.goodgoodgood.co/articles/tybee-island-sea-turtle-on-highway-rescue",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-06-30T16:00:00Z",
+      "source_excerpt": "The Loggerhead desperately needed help getting back to the water. Rescuers got there just in time.",
+      "agent_summary": "",
+      "source_fingerprint": "2f394b08b973d57b5943",
+      "source_tier_bonus": 2,
+      "positivity_score": 4,
+      "positive_signals": [
+        "curated-positive-source",
+        "rescue"
+      ],
+      "public_eligible": false
     },
     {
       "id": "639a1e6c71111b99f830",
@@ -302,268 +330,86 @@
       "published_at": "2026-07-10T07:37:44Z",
       "source_excerpt": "Young people are not just optimistic about the world, but full of ideas for making it kinder, fairer and greener, research finds The post Children are overwhelmingly positive for the future, says survey appeared first on Positive News .",
       "agent_summary": "",
+      "source_fingerprint": "e4c079b16efe7d8c6621",
       "source_tier_bonus": 2,
       "positivity_score": 3,
       "positive_signals": [
         "curated-positive-source",
         "research"
-      ]
+      ],
+      "public_eligible": false
     },
     {
-      "id": "4eb476d78b32ccfb4a21",
-      "title": "What positive change have you seen unfold over many years?",
-      "url": "https://www.positive.news/society/what-positive-change-have-you-watched-unfold-over-many-years",
-      "source": "Positive News",
-      "language": "en",
-      "published_at": "2026-07-14T07:00:06Z",
-      "source_excerpt": "Share the stories of change you’ve witnessed that took patience, persistence and time The post What positive change have you seen unfold over many years? appeared first on Positive News .",
-      "agent_summary": "",
-      "source_tier_bonus": 2,
-      "positivity_score": 2,
-      "positive_signals": [
-        "curated-positive-source"
-      ]
-    },
-    {
-      "id": "1ae68353729d3d5e7db1",
-      "title": "NASA Study Points to Smoother Air Taxi Rides",
-      "url": "https://www.nasa.gov/centers-and-facilities/armstrong/nasa-study-points-to-smoother-air-taxi-rides",
+      "id": "d533d0cc2b75a49046e2",
+      "title": "NASA’s Perseverance Rover Reads Record of Ancient Mars Impacts",
+      "url": "https://www.nasa.gov/solar-system/planets/mars/nasas-perseverance-rover-reads-record-of-ancient-mars-impacts",
       "source": "NASA News Releases",
       "language": "en",
-      "published_at": "2026-07-13T21:46:11Z",
-      "source_excerpt": "No one wants to get into an uncomfortable aircraft. NASA research could help the emerging industry of air taxis —small, vertical-takeoff-and-landing aircraft meant for short trips — understand the relationship between comfort and willingness to fly. That’s where NASA comes in, with data that can help identify how to plan air taxi rides that can […]",
+      "published_at": "2026-07-15T15:30:04Z",
+      "source_excerpt": "NASA’s Perseverance Mars rover has uncovered evidence that a 245-foot-thick (75-meter-thick) stack of ancient rock on the rim of Jezero Crater was built by repeated asteroid impacts. Referred to as the “Broom Point member” by the rover’s science team, this sequence of layered bedrock is likely more than 3.9 billion years old, making it among […]",
       "agent_summary": "",
+      "source_fingerprint": "a3eeb1eaa2d98acaef79",
+      "source_tier_bonus": 1,
+      "positivity_score": 2,
+      "positive_signals": [
+        "curated-positive-source",
+        "science"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "75b497f29e5c1d300945",
+      "title": "Curiosity Blog, Sols 4947-4953: Gale Crater Then and Now",
+      "url": "https://science.nasa.gov/blog/curiosity-blog-sols-4947-4953-gale-crater-then-and-now",
+      "source": "NASA News Releases",
+      "language": "en",
+      "published_at": "2026-07-15T05:25:30Z",
+      "source_excerpt": "Written by Alex Innanen, Atmospheric Scientist at York University, Toronto Earth planning date: Friday, July 10, 2026 Curiosity had a successful long weekend and came into this week ready to explore some more. We’ve been moving fairly rapidly through different mapped “units,” or distinct geological areas of interest, visiting a different one at each of […]",
+      "agent_summary": "",
+      "source_fingerprint": "5c562e80ea2e5aecae8d",
+      "source_tier_bonus": 1,
+      "positivity_score": 2,
+      "positive_signals": [
+        "curated-positive-source",
+        "success"
+      ],
+      "public_eligible": true
+    },
+    {
+      "id": "84a52e4a7360627d27c0",
+      "title": "NASA Jets Turn Red, White, and Blue",
+      "url": "https://www.nasa.gov/image-article/nasa-jets-turn-red-white-and-blue",
+      "source": "NASA News Releases",
+      "language": "en",
+      "published_at": "2026-07-14T17:13:53Z",
+      "source_excerpt": "In honor of America’s 250th birthday, two of NASA’s most iconic aircraft got a fresh coat of red, white, and blue paint ahead of a flyover in Washington on July 4, 2026, with other NASA aircraft. An F-15 and an F/A-18 from NASA’s Armstrong Flight Research Center in Edwards, California, recently were repainted in […]",
+      "agent_summary": "",
+      "source_fingerprint": "690cbc7d4109ea233173",
       "source_tier_bonus": 1,
       "positivity_score": 2,
       "positive_signals": [
         "curated-positive-source",
         "research"
-      ]
+      ],
+      "public_eligible": false
     },
     {
-      "id": "a565cea889b4c1b9f390",
-      "title": "The City That Chose Beauty Over Billboards",
-      "url": "https://reasonstobecheerful.world/grenoble-beauty-over-billboards",
-      "source": "Reasons to be Cheerful",
+      "id": "495c4626de6766f616f7",
+      "title": "NASA’s Roman Telescope Will Spot Distant Black Holes That Shred Stars",
+      "url": "https://www.nasa.gov/missions/roman-space-telescope/nasas-roman-telescope-will-spot-distant-black-holes-that-shred-stars",
+      "source": "NASA News Releases",
       "language": "en",
-      "published_at": "2026-07-13T08:00:40Z",
-      "source_excerpt": "“There used to be a massive block of concrete here, there was an advertising column, it wasn’t so beautiful,” says Gilles Namur, waving his hand along the length of Cours Lafontaine, a street that runs through the historic center of Grenoble. Today, it’s a different sight altogether. The street has... The post The City That Chose Beauty Over Billboards appeared first on Reasons to be Cheerful .",
+      "published_at": "2026-07-14T14:00:00Z",
+      "source_excerpt": "Lee esta nota de prensa en español aquí. How do black holes at the center of galaxies form and grow over time? To answer this question, scientists need to detect and study supermassive black holes at great distances, which existed much earlier in the universe’s history. New research suggests NASA’s Nancy Grace Roman Space Telescope, which […]",
       "agent_summary": "",
-      "source_tier_bonus": 2,
+      "source_fingerprint": "3856e2c60dc7f849cbb8",
+      "source_tier_bonus": 1,
       "positivity_score": 2,
       "positive_signals": [
-        "curated-positive-source"
-      ]
-    },
-    {
-      "id": "2217dc1400037ccccbb1",
-      "title": "Revealed: the world’s most liveable cities in 2026",
-      "url": "https://www.positive.news/society/revealed-the-worlds-best-cities-in-2026",
-      "source": "Positive News",
-      "language": "en",
-      "published_at": "2026-07-09T08:35:38Z",
-      "source_excerpt": "Asian cities have shot up the latest Global Liveability Index, which has just been released. Where does your city rank? The post Revealed: the world’s most liveable cities in 2026 appeared first on Positive News .",
-      "agent_summary": "",
-      "source_tier_bonus": 2,
-      "positivity_score": 2,
-      "positive_signals": [
-        "curated-positive-source"
-      ]
-    },
-    {
-      "id": "1fbcf0264f855be91730",
-      "title": "Reclaiming the game. What to expect in the new issue of Positive News magazine",
-      "url": "https://www.positive.news/society/media/what-to-expect-in-the-new-positive-news-magazine",
-      "source": "Positive News",
-      "language": "en",
-      "published_at": "2026-07-08T10:03:04Z",
-      "source_excerpt": "Editor Tom Pattinson introduces the new issue of Positive News magazine, which is out now The post Reclaiming the game. What to expect in the new issue of Positive News magazine appeared first on Positive News .",
-      "agent_summary": "",
-      "source_tier_bonus": 2,
-      "positivity_score": 2,
-      "positive_signals": [
-        "curated-positive-source"
-      ]
-    },
-    {
-      "id": "aac71e037ce187970031",
-      "title": "How the ancient art of candle making is creating a brighter future for refugees",
-      "url": "https://www.positive.news/economics/social-enterprise/refugee-candlemakers-rebuilding-lives-through-work",
-      "source": "Positive News",
-      "language": "en",
-      "published_at": "2026-07-07T07:00:12Z",
-      "source_excerpt": "In the US, refugees are being hired to make candles, helping them earn money, practise English and build a CV The post How the ancient art of candle making is creating a brighter future for refugees appeared first on Positive News .",
-      "agent_summary": "",
-      "source_tier_bonus": 2,
-      "positivity_score": 2,
-      "positive_signals": [
-        "curated-positive-source"
-      ]
-    },
-    {
-      "id": "793f8f03b8f4a4faa4c2",
-      "title": "The national dance company opening doors for young performers",
-      "url": "https://www.positive.news/lifestyle/arts/the-national-dance-company-opening-doors-for-young-performers",
-      "source": "Positive News",
-      "language": "en",
-      "published_at": "2026-07-06T05:00:00Z",
-      "source_excerpt": "A national youth dance programme is bringing together 16–24-year-olds from across England to perform on major stages The post The national dance company opening doors for young performers appeared first on Positive News .",
-      "agent_summary": "",
-      "source_tier_bonus": 2,
-      "positivity_score": 2,
-      "positive_signals": [
-        "curated-positive-source"
-      ]
-    },
-    {
-      "id": "b0a0755793758f53667f",
-      "title": "In It for the Long Haul",
-      "url": "https://reasonstobecheerful.world/americas-250th-birthday-reader-responses",
-      "source": "Reasons to be Cheerful",
-      "language": "en",
-      "published_at": "2026-07-03T08:00:24Z",
-      "source_excerpt": "As the United States celebrates its 250th birthday this weekend, many of its residents can sense the big, ideologically divided elephant in the room. But while the country reckons with its national identity, on a local level, Americans continue to come together in ways that transcend politics, as they have... The post In It for the Long Haul appeared first on Reasons to be Cheerful .",
-      "agent_summary": "",
-      "source_tier_bonus": 2,
-      "positivity_score": 2,
-      "positive_signals": [
-        "curated-positive-source"
-      ]
-    },
-    {
-      "id": "7289a63605efd25a564a",
-      "title": "What went right this week: Europe breathes easier, plus more",
-      "url": "https://www.positive.news/society/good-news-stories-from-week-27-of-2026",
-      "source": "Positive News",
-      "language": "en",
-      "published_at": "2026-07-03T05:43:56Z",
-      "source_excerpt": "Europeans breathed easier, silenced US scientists hit back, and a healthy diet was linked to lower dementia risk, plus more The post What went right this week: Europe breathes easier, plus more appeared first on Positive News .",
-      "agent_summary": "",
-      "source_tier_bonus": 2,
-      "positivity_score": 2,
-      "positive_signals": [
-        "curated-positive-source"
-      ]
-    },
-    {
-      "id": "1f8b64d9bf3ec6404716",
-      "title": "The Spark: Would You Drive Six Hours to Save a Hummingbird?",
-      "url": "https://reasonstobecheerful.world/the-spark-wildlife-care",
-      "source": "Reasons to be Cheerful",
-      "language": "en",
-      "published_at": "2026-07-02T08:00:08Z",
-      "source_excerpt": "Welcome back to The Spark, our monthly celebration of how people just like you are creating positive change, one meaningful step at a time. The Spark is generously supported by Laura Rice. Sign up to Reasons to be Cheerful’s weekly newsletter here and you’ll get The Spark in your inbox at... The post The Spark: Would You Drive Six Hours to Save a Hummingbird? appeared first on Reasons to be Cheerf",
-      "agent_summary": "",
-      "source_tier_bonus": 2,
-      "positivity_score": 2,
-      "positive_signals": [
-        "curated-positive-source"
-      ]
-    },
-    {
-      "id": "501130db4332810a59a8",
-      "title": "Can provocative climate messaging on OnlyFans cut through social media’s noise?",
-      "url": "https://www.positive.news/environment/can-provocative-climate-messaging-on-only-fans-cut-through-social-medias-noise",
-      "source": "Positive News",
-      "language": "en",
-      "published_at": "2026-07-02T07:00:00Z",
-      "source_excerpt": "A climate narrator is using OnlyFans to reach new audiences in unlikely places. It turns out, people listen The post Can provocative climate messaging on OnlyFans cut through social media’s noise? appeared first on Positive News .",
-      "agent_summary": "",
-      "source_tier_bonus": 2,
-      "positivity_score": 2,
-      "positive_signals": [
-        "curated-positive-source"
-      ]
-    },
-    {
-      "id": "9903963d38b1027f54da",
-      "title": "What We’re Reading: How to Fix the Reflecting Pool Mess — Naturally",
-      "url": "https://reasonstobecheerful.world/what-were-reading-reflecting-pool-natural-solutions",
-      "source": "Reasons to be Cheerful",
-      "language": "en",
-      "published_at": "2026-07-01T08:00:28Z",
-      "source_excerpt": "Welcome back to our weekly behind-the-scenes glimpse at what’s getting our team talking. Tell us what you’ve been reading at info@reasonstobecheerful.world and we just might feature it here. Not easy being green The saga of the algae-filled Lincoln Memorial Reflecting Pool continues, with the U.S. National Park Service now planning... The post What We’re Reading: How to Fix the Reflecting Pool Mes",
-      "agent_summary": "",
-      "source_tier_bonus": 2,
-      "positivity_score": 2,
-      "positive_signals": [
-        "curated-positive-source"
-      ]
-    },
-    {
-      "id": "17bf0e9a1e71e1f8f1b0",
-      "title": "Love unplugged: What happened when I swapped apps for dating in real life",
-      "url": "https://www.positive.news/society/love-unplugged-the-in-person-dating-events-sparking-real-connection",
-      "source": "Positive News",
-      "language": "en",
-      "published_at": "2026-07-01T07:00:49Z",
-      "source_excerpt": "Burnt out by the apps, Angela Garwood took her quest for love offline. Here’s how she got on The post Love unplugged: What happened when I swapped apps for dating in real life appeared first on Positive News .",
-      "agent_summary": "",
-      "source_tier_bonus": 2,
-      "positivity_score": 2,
-      "positive_signals": [
-        "curated-positive-source"
-      ]
-    },
-    {
-      "id": "70c501486cfb004112dd",
-      "title": "To Solve a Major Problem With Data Centers, Put Them in Oil Fields",
-      "url": "https://reasonstobecheerful.world/data-centers-oil-fields",
-      "source": "Reasons to be Cheerful",
-      "language": "en",
-      "published_at": "2026-06-29T14:00:15Z",
-      "source_excerpt": "This story was originally published by Grist. Sign up for Grist’s weekly newsletter here. Most Americans loathe data centers. Recent polling found that Democrats and Republicans alike would oppose having one in their neighborhood, and hundreds of communities across the country have fought against them, citing fears about noise, water... The post To Solve a Major Problem With Data Centers, Put Them",
-      "agent_summary": "",
-      "source_tier_bonus": 2,
-      "positivity_score": 2,
-      "positive_signals": [
-        "curated-positive-source"
-      ]
-    },
-    {
-      "id": "122b09246e5fd94b6c11",
-      "title": "Yellow Means Creepy: The Color-Coded Anti-Harassment System Used by Restaurant Workers",
-      "url": "https://reasonstobecheerful.world/yellow-means-creepy-the-color-coded-anti-harassment-system-used-by-restaurant-workers",
-      "source": "Reasons to be Cheerful",
-      "language": "en",
-      "published_at": "2026-06-26T08:00:41Z",
-      "source_excerpt": "When Chef Erin Wade learned that most of her staff had experienced sexual harassment at her restaurant Homeroom in Oakland, California, she was stunned. The inciting incident back in 2015 involved a father of four who reached under a server’s blouse in front of his children. “We’re a family restaurant,... The post Yellow Means Creepy: The Color-Coded Anti-Harassment System Used by Restaurant Worke",
-      "agent_summary": "",
-      "source_tier_bonus": 2,
-      "positivity_score": 2,
-      "positive_signals": [
-        "curated-positive-source"
-      ]
-    },
-    {
-      "id": "962852d55b904987d3be",
-      "title": "Singing the Shopping List: How Music Can Rewire the Brain After Stroke",
-      "url": "https://reasonstobecheerful.world/music-therapy-brain-injury",
-      "source": "Reasons to be Cheerful",
-      "language": "en",
-      "published_at": "2026-06-25T08:00:36Z",
-      "source_excerpt": "In 2023, a stroke transformed Naresh Shanbhag, a 53-year-old smooth-talking sales professional in Bengaluru, into someone who was unable to speak words, let alone sentences. “I began physical therapy to regain strength in my paralyzed right side, but forming sentences or remembering the right words was hard for me,” he... The post Singing the Shopping List: How Music Can Rewire the Brain After Str",
-      "agent_summary": "",
-      "source_tier_bonus": 2,
-      "positivity_score": 2,
-      "positive_signals": [
-        "curated-positive-source"
-      ]
-    },
-    {
-      "id": "c86cd88b9bb2244e54da",
-      "title": "What We’re Reading: The Data Center Backlash Is Uniting Americans",
-      "url": "https://reasonstobecheerful.world/what-were-reading-data-center-backlash-utah-shark-tank",
-      "source": "Reasons to be Cheerful",
-      "language": "en",
-      "published_at": "2026-06-24T08:00:51Z",
-      "source_excerpt": "Welcome back to our weekly behind-the-scenes glimpse at what’s getting our team talking. Tell us what you’ve been reading at info@reasonstobecheerful.world and we just might feature it here. Crunching the data When Kevin O’Leary — a.k.a. Mr. Wonderful of Shark Tank — decided to generate his next windfall by building... The post What We’re Reading: The Data Center Backlash Is Uniting Americans appe",
-      "agent_summary": "",
-      "source_tier_bonus": 2,
-      "positivity_score": 2,
-      "positive_signals": [
-        "curated-positive-source"
-      ]
+        "curated-positive-source",
+        "research"
+      ],
+      "public_eligible": false
     }
   ]
 }

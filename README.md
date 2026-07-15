@@ -5,9 +5,10 @@ Projektet innehåller en responsiv redaktionell startsida, sök/filter,
 originalkällor, nyhetsbrev-demo, ett förhandsmodererat forum och en schemalagd
 Codex/RSS-pipeline.
 
-Nyhetsbilder använder en lokal, optimerad AI-illustrationsbank med tydlig
-märkning. Verifierade källbilder stöds i datamodellen men visas bara med
-fullständig kredit och rättighetslänk. Se `docs/image-policy.md`.
+Nyhetsbilder använder verifierade källbilder när användningsrätten är tydlig.
+Annars kan natt-/lunchjobbet skapa en unik, lokalt lagrad AI-illustration för
+artikeln. En optimerad illustrationsbank är alltid sista reserv. Alla AI-bilder
+märks tydligt. Se `docs/image-policy.md`.
 
 ## Starta lokalt
 
@@ -46,7 +47,8 @@ Python fortfarande visa den äldre beroendefria frontendversionen.
 - personlig profil med sparade nyheter;
 - Google Identity Services-inloggning när ett Google Client ID konfigurerats;
 - manuell forumgranskning via `python scripts/moderate_forum.py`;
-- automatisk hämtning 00:00 och 12:00 Europe/Stockholm, även över sommar-/vintertid;
+- automatisk hämtning och bildkontroll 00:00 och 12:00 Europe/Stockholm, även över sommar-/vintertid;
+- högst tre nya, källbundna AI-illustrationer per schemalagd körning;
 - Codex-agent som bara får skriva källbundna svenska sammanfattningar.
 
 ## Aktivera det schemalagda jobbet
@@ -54,7 +56,10 @@ Python fortfarande visa den äldre beroendefria frontendversionen.
 1. Publicera projektet i ett GitHub-repository.
 2. Lägg in `OPENAI_API_KEY` som GitHub Actions-secret för svenska
    Codex-sammanfattningar. RSS-boten fungerar även utan nyckeln.
-3. Aktivera Actions. Workflow-filen är
+3. Lägg helst in en separat `OPENAI_IMAGE_API_KEY` för artikelbilder. Om den
+   saknas kan workflow-filen använda `OPENAI_API_KEY`; om båda saknas används
+   de lokala ämnesbilderna utan att nyhetskörningen stoppas.
+4. Aktivera Actions. Workflow-filen är
    `.github/workflows/positive-news-nightly.yml` och kan även köras manuellt.
 
 Källhämtningen committas innan Codex-steget. Sidan uppdateras därför med
@@ -62,6 +67,11 @@ källmaterial även om agentnyckeln saknas eller sammanfattningen misslyckas.
 Agenten körs utan sparade Git-uppgifter, styrs av en låst prompt och workflow-
 jobbet avvisar andra filer och ändringar av importerade källfält. Endast nya
 `agent_summary`-värden kan publiceras av det betrodda slutsteget.
+
+Schemakörningar försöker automatiskt fylla på unika bilder. Vid manuell
+`workflow_dispatch` är betald bildgenerering avstängd som standard och måste
+väljas uttryckligen. Generatorn använder `gpt-image-2`, WebP och en hård gräns
+på tre lyckade bilder per körning.
 
 ## Testa
 

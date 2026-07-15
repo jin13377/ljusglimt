@@ -26,6 +26,36 @@ from zoneinfo import ZoneInfo
 STOCKHOLM = ZoneInfo("Europe/Stockholm")
 TAG_RE = re.compile(r"<[^>]+>")
 SPACE_RE = re.compile(r"\s+")
+MEDIA_RSS_NAMESPACE = "http://search.yahoo.com/mrss/"
+CC_RSS_NAMESPACES = {
+    MEDIA_RSS_NAMESPACE,
+    "http://backend.userland.com/creativeCommonsRssModule",
+    "http://creativecommons.org/ns#",
+}
+DC_CREATOR_NAMESPACES = {
+    "http://purl.org/dc/elements/1.1/",
+    "http://purl.org/dc/terms/",
+}
+ALLOWED_IMAGE_LICENSES = {
+    "https://creativecommons.org/publicdomain/zero/1.0/": "CC0-1.0",
+    "https://creativecommons.org/licenses/by/4.0/": "CC-BY-4.0",
+}
+SENSITIVE_CANDIDATE_RE = re.compile(
+    r"\b(?:abandon(?:ed|ment)?|abuse|anxiety|assault|backlash|blood|bloody|bomb|chronic loneliness|closing|conflict|criticiz(?:e|ed|es|ing)|crush(?:ed|ing)?|death|desperat(?:e|ely)|distress(?:ed|ing)?|earthquake|extinct(?:ion)?|extremism|fraud|harass(?:ment|ed|ing)?|harrowing|hooks? in|injur(?:ed|y|ies)|killed|loathe|mangled|missing flipper|murder|onlyfans|revok(?:e|ed|es|ing)|shooting|shocked|stranded|strangl(?:e|ed|es|ing)|stroke|terror|threaten(?:ed|ing)?|traffick(?:ing|ed)?|trap(?:ped)?|treatment center|unable to move|violence|war)\b",
+    re.IGNORECASE,
+)
+FEED_NOISE_RE = re.compile(r"\b(?:appeared first on|share the stories)\b", re.IGNORECASE)
+POSITIVE_CANDIDATE_RE = re.compile(
+    r"\b(?:achiev(?:e|ed|ement)|award(?:ed|s)?|birth|breakthrough|celebrat(?:e|ed|es|ing|ion)|conservation(?:ist|ists)?|discov(?:er|ered|ery)|free(?:d|ing)?|help(?:s|ed|ing)?|hope(?:ful)?|improv(?:e|ed|ement)|milestone|protect(?:s|ed|ing|ion)?|recover(?:ed|y)|rescu(?:e|ed|es|ing)|restor(?:e|ed|es|ing|ation)|save(?:d|s|ing)?|second chance|smooth(?:er|est)|solv(?:e|ed|es|ing)|success(?:ful)?|volunteer(?:s|ed|ing)?|win(?:s|ning)?)\b",
+    re.IGNORECASE,
+)
+AI_IMAGE_KEYS = {
+    "url", "alt", "model", "prompt_version", "source_fingerprint",
+    "width", "height", "sha256", "generated_at",
+}
+HEX_20_RE = re.compile(r"^[0-9a-f]{20}$")
+SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
+ISO_UTC_RE = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,6})?Z$")
 WORD_RE = re.compile(r"[^\wåäö]+", re.IGNORECASE)
 
 
@@ -61,6 +91,152 @@ def reusable_summary(item: dict, previous: dict | None) -> str:
     return summary if isinstance(summary, str) else ""
 
 
+def public_eligible(item: dict) -> bool:
+    """Mirror the frontend's fetched-news suitability filter."""
+    title = str(item.get("title") or "")
+    summary = item.get("agent_summary")
+    excerpt = summary.strip() if isinstance(summary, str) and summary.strip() else str(item.get("source_excerpt") or "")
+    combined = f"{title} {excerpt}"
+    return (not title.strip().endswith("?")
+            and not SENSITIVE_CANDIDATE_RE.search(combined)
+            and not FEED_NOISE_RE.search(excerpt)
+            and bool(POSITIVE_CANDIDATE_RE.search(combined)))
+
+
+def reusable_ai_image(item: dict, previous: dict | None) -> dict:
+    """Keep a generated image only when its complete nested schema is intact."""
+    fingerprint = str(item.get("source_fingerprint") or "")
+    article_id = str(item.get("id") or "")
+    if (not previous or previous.get("source_fingerprint") != fingerprint
+            or not HEX_20_RE.fullmatch(article_id) or not HEX_20_RE.fullmatch(fingerprint)):
+        return {}
+    image = previous.get("ai_image")
+    if not isinstance(image, dict) or set(image) != AI_IMAGE_KEYS:
+        return {}
+    expected_url = f"/news-images/ai/articles/{article_id}-{fingerprint[:8]}-v1.webp"
+    alt = image.get("alt")
+    generated_at = image.get("generated_at")
+    if (image.get("url") != expected_url
+            or not isinstance(alt, str) or not alt.strip() or len(alt) > 400 or clean_text(alt) != alt
+            or image.get("model") != "gpt-image-2"
+            or image.get("prompt_version") != "editorial-concept-v1"
+            or image.get("source_fingerprint") != fingerprint
+            or type(image.get("width")) is not int or image.get("width") != 1280
+            or type(image.get("height")) is not int or image.get("height") != 848
+            or not isinstance(image.get("sha256"), str) or not SHA256_RE.fullmatch(image["sha256"])
+            or not isinstance(generated_at, str) or not ISO_UTC_RE.fullmatch(generated_at)):
+        return {}
+    try:
+        datetime.fromisoformat(generated_at.replace("Z", "+00:00"))
+    except ValueError:
+        return {}
+    return {"ai_image": dict(image)}
+
+
+def _safe_https_url(value: object, allowed_hosts: set[str] | None = None) -> str:
+    if not isinstance(value, str) or len(value.strip()) > 1200:
+        return ""
+    value = value.strip()
+    try:
+        parsed = urllib.parse.urlsplit(value)
+        port = parsed.port
+    except ValueError:
+        return ""
+    hostname = (parsed.hostname or "").casefold()
+    if (parsed.scheme.casefold() != "https" or not hostname or parsed.username or parsed.password
+            or port not in (None, 443)):
+        return ""
+    if allowed_hosts is not None and hostname not in allowed_hosts:
+        return ""
+    return value
+
+
+def _tag_parts(node: ET.Element) -> tuple[str, str]:
+    if node.tag.startswith("{") and "}" in node.tag:
+        namespace, local = node.tag[1:].split("}", 1)
+        return namespace, local.casefold()
+    return "", node.tag.casefold()
+
+
+def verified_rss_source_image(node: ET.Element, article_url: str, article_title: str,
+                              image_policy: dict | None) -> dict:
+    """Return displayable source metadata only for explicitly licensed media."""
+    if not isinstance(image_policy, dict) or image_policy.get("enabled") is not True:
+        return {}
+    configured_hosts = image_policy.get("allowed_image_hosts")
+    if not isinstance(configured_hosts, list) or not configured_hosts:
+        return {}
+    configured_licenses = image_policy.get("allowed_license_urls")
+    if (not isinstance(configured_licenses, list) or not configured_licenses
+            or any(not isinstance(url, str) or url not in ALLOWED_IMAGE_LICENSES
+                   for url in configured_licenses)):
+        return {}
+    allowed_license_urls = set(configured_licenses)
+    allowed_hosts = {
+        host.casefold() for host in configured_hosts
+        if isinstance(host, str) and re.fullmatch(r"[a-z0-9.-]+", host.casefold())
+        and not host.startswith(".") and not host.endswith(".")
+    }
+    if not allowed_hosts:
+        return {}
+
+    licenses = []
+    credits = []
+    media_titles = []
+    candidates = []
+    for child in node.iter():
+        namespace, local = _tag_parts(child)
+        if local == "license" and namespace in CC_RSS_NAMESPACES:
+            license_url = (child.attrib.get("href") or child.attrib.get("url") or child.text or "").strip()
+            if license_url:
+                licenses.append(license_url)
+        elif ((local == "credit" and namespace == MEDIA_RSS_NAMESPACE)
+              or (local == "creator" and namespace in DC_CREATOR_NAMESPACES)):
+            credit = clean_text(child.text)[:240]
+            if credit and credit not in credits:
+                credits.append(credit)
+        elif local == "title" and namespace == MEDIA_RSS_NAMESPACE:
+            media_title = clean_text(child.text)[:400]
+            if media_title:
+                media_titles.append(media_title)
+
+        if namespace != MEDIA_RSS_NAMESPACE:
+            continue
+        candidate_url = ""
+        if local == "content":
+            medium = child.attrib.get("medium", "").casefold()
+            mime = child.attrib.get("type", "").casefold()
+            if medium == "image" or mime.startswith("image/"):
+                candidate_url = child.attrib.get("url", "")
+        elif local == "thumbnail":
+            candidate_url = child.attrib.get("url", "")
+        candidate_url = _safe_https_url(candidate_url, allowed_hosts)
+        if candidate_url and candidate_url not in candidates:
+            candidates.append(candidate_url)
+
+    unique_licenses = set(licenses)
+    if len(unique_licenses) != 1 or not candidates or not credits:
+        return {}
+    license_url = next(iter(unique_licenses))
+    license_id = ALLOWED_IMAGE_LICENSES.get(license_url)
+    source_url = _safe_https_url(article_url)
+    if not license_id or license_url not in allowed_license_urls or not source_url:
+        return {}
+    creator = " · ".join(credits)[:240]
+    return {
+        "source_image_verified": True,
+        "source_image_url": candidates[0],
+        "source_image_alt": media_titles[0] if media_titles else article_title,
+        "source_image_credit": creator,
+        "source_image_rights_url": license_url,
+        "source_image_creator": creator,
+        "source_image_license_id": license_id,
+        "source_image_license_url": license_url,
+        "source_image_source_url": source_url,
+        "source_image_verification_method": "rss-license-v1",
+    }
+
+
 def reusable_source_image(item: dict, previous: dict | None) -> dict:
     if not previous or previous.get("source_fingerprint") != item.get("source_fingerprint"):
         return {}
@@ -75,13 +251,26 @@ def reusable_source_image(item: dict, previous: dict | None) -> dict:
             or rights_parts.scheme != "https" or not rights_parts.netloc
             or rights_parts.username or rights_parts.password):
         return {}
-    return {
+    reusable = {
         "source_image_verified": True,
         "source_image_url": image_url[:1200],
         "source_image_alt": clean_text(previous.get("source_image_alt"))[:400],
         "source_image_credit": credit,
         "source_image_rights_url": rights_url[:1200],
     }
+    license_url = _safe_https_url(previous.get("source_image_license_url"))
+    source_url = _safe_https_url(previous.get("source_image_source_url"))
+    license_id = previous.get("source_image_license_id")
+    creator = clean_text(previous.get("source_image_creator"))[:240]
+    if license_url in ALLOWED_IMAGE_LICENSES and license_id == ALLOWED_IMAGE_LICENSES[license_url]:
+        reusable.update({"source_image_license_id": license_id, "source_image_license_url": license_url})
+    if source_url:
+        reusable["source_image_source_url"] = source_url
+    if creator:
+        reusable["source_image_creator"] = creator
+    if previous.get("source_image_verification_method") == "rss-license-v1":
+        reusable["source_image_verification_method"] = "rss-license-v1"
+    return reusable
 
 
 def parse_date(value: str | None) -> str | None:
@@ -121,7 +310,7 @@ def entry_link(node: ET.Element) -> str:
     return ""
 
 
-def parse_feed(payload: bytes, source: str, language: str) -> list[dict]:
+def parse_feed(payload: bytes, source: str, language: str, image_policy: dict | None = None) -> list[dict]:
     root = ET.fromstring(payload)
     nodes = [n for n in root.iter() if n.tag.rsplit("}", 1)[-1].casefold() in ("item", "entry")]
     result = []
@@ -145,6 +334,7 @@ def parse_feed(payload: bytes, source: str, language: str) -> list[dict]:
             "agent_summary": "",
         }
         item["source_fingerprint"] = source_fingerprint(item)
+        item.update(verified_rss_source_image(node, link, title, image_policy))
         result.append(item)
     return result
 
@@ -255,7 +445,7 @@ def main(argv: list[str] | None = None) -> int:
             continue
         try:
             payload = fetch(feed["url"], int(config.get("request_timeout_seconds", 20)), config.get("user_agent", "GladnyttBot/1.0"))
-            parsed = parse_feed(payload, feed["name"], feed.get("language", "und"))
+            parsed = parse_feed(payload, feed["name"], feed.get("language", "und"), feed.get("image_policy"))
             for item in parsed:
                 item["source_tier_bonus"] = int(feed.get("base_score", 0))
                 item["source_item_limit"] = int(feed.get("max_items", config.get("max_items", 48)))
@@ -279,8 +469,13 @@ def main(argv: list[str] | None = None) -> int:
             continue
         item["positivity_score"] = score
         item["positive_signals"] = reasons
-        item["agent_summary"] = reusable_summary(item, old_items.get(item["id"]))
-        item.update(reusable_source_image(item, old_items.get(item["id"])))
+        previous = old_items.get(item["id"])
+        item["agent_summary"] = reusable_summary(item, previous)
+        item["public_eligible"] = public_eligible(item)
+        item.update(reusable_ai_image(item, previous))
+        # Fresh, fully licensed feed metadata wins over any previous image.
+        if item.get("source_image_verified") is not True:
+            item.update(reusable_source_image(item, previous))
         unique[key] = item
         title_keys.add(title_key)
 

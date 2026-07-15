@@ -26,9 +26,17 @@ tidszonsmedvetna schema för `Europe/Stockholm` och körs klockan 00:00 och 12:0
 Det gör att sommar- och vintertid hanteras automatiskt. `workflow_dispatch` kan
 alltid köras manuellt.
 
-Workflow-jobbet committar endast ändringar i `data/news.json` och
-`data/history.json`. Det behöver `contents: write`, vilket är deklarerat med
-minsta rimliga behörighet i workflow-filen.
+Workflow-jobbet publicerar i tre kontrollerade steg: först källdata, därefter
+unika artikelbilder och sist eventuella svenska Codex-sammanfattningar. Varje
+steg validerar sin egen tillåtna ändringsmängd innan commit.
+
+Bildsteget körs automatiskt vid schemakörningar. Det prioriterar nya publika
+artiklar och fortsätter sedan med äldre artiklar som saknar giltig bild. Högst
+tre bilder kan skapas per körning. Saknad nyckel eller ett bildfel lämnar
+artikeln med sin lokala kategoriillustration och påverkar inte källuppdateringen.
+För bildsteget rekommenderas GitHub-secret `OPENAI_IMAGE_API_KEY`; den vanliga
+`OPENAI_API_KEY` kan användas som reserv. Manuell workflow-körning genererar
+inte betalda bilder om inte `generate_images` väljs uttryckligen.
 
 ## Agent-/Codex-sammanfattning
 

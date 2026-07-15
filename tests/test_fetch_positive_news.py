@@ -33,6 +33,63 @@ class PositiveNewsTests(unittest.TestCase):
         self.assertEqual(items[0]["url"], "https://example.com/story?keep=1")
         self.assertEqual(items[0]["source"], "Example")
 
+    def test_rss_source_image_requires_explicit_policy_host_credit_and_license(self):
+        xml = b"""<rss xmlns:media="http://search.yahoo.com/mrss/">
+        <channel><item><title>Community rescue success</title>
+        <link>https://example.com/story</link><description>Volunteers helped.</description>
+        <media:content url="https://cdn.example.com/photo.jpg" type="image/jpeg">
+          <media:title>Volunteers celebrate</media:title>
+          <media:credit role="photographer">Ada Example</media:credit>
+          <media:license href="https://creativecommons.org/licenses/by/4.0/" />
+        </media:content></item></channel></rss>"""
+        policy = {
+            "enabled": True,
+            "allowed_image_hosts": ["cdn.example.com"],
+            "allowed_license_urls": ["https://creativecommons.org/licenses/by/4.0/"],
+        }
+        image = news.parse_feed(xml, "Example", "en", policy)[0]
+        self.assertTrue(image["source_image_verified"])
+        self.assertEqual(image["source_image_credit"], "Ada Example")
+        self.assertEqual(image["source_image_license_id"], "CC-BY-4.0")
+        self.assertEqual(image["source_image_source_url"], "https://example.com/story")
+        self.assertEqual(image["source_image_verification_method"], "rss-license-v1")
+
+        self.assertNotIn("source_image_verified", news.parse_feed(xml, "Example", "en")[0])
+        no_license_policy = {"enabled": True, "allowed_image_hosts": ["cdn.example.com"]}
+        self.assertNotIn("source_image_verified", news.parse_feed(xml, "Example", "en", no_license_policy)[0])
+        wrong_license_policy = {
+            "enabled": True,
+            "allowed_image_hosts": ["cdn.example.com"],
+            "allowed_license_urls": ["https://creativecommons.org/publicdomain/zero/1.0/"],
+        }
+        self.assertNotIn("source_image_verified", news.parse_feed(xml, "Example", "en", wrong_license_policy)[0])
+        wrong_host = {
+            "enabled": True,
+            "allowed_image_hosts": ["other.example.com"],
+            "allowed_license_urls": ["https://creativecommons.org/licenses/by/4.0/"],
+        }
+        self.assertNotIn("source_image_verified", news.parse_feed(xml, "Example", "en", wrong_host)[0])
+
+    def test_rss_source_image_rejects_missing_or_unsupported_rights_metadata(self):
+        policy = {
+            "enabled": True,
+            "allowed_image_hosts": ["cdn.example.com"],
+            "allowed_license_urls": ["https://creativecommons.org/licenses/by/4.0/"],
+        }
+        templates = (
+            "<media:license href='https://creativecommons.org/licenses/by/4.0/' />",
+            "<media:credit>Ada Example</media:credit>",
+            "<media:credit>Ada Example</media:credit><media:license href='https://creativecommons.org/licenses/by-nc/4.0/' />",
+        )
+        for metadata in templates:
+            with self.subTest(metadata=metadata):
+                xml = f"""<rss xmlns:media="http://search.yahoo.com/mrss/"><channel><item>
+                <title>Community rescue success</title><link>https://example.com/story</link>
+                <description>Volunteers helped.</description>
+                <media:content url="https://cdn.example.com/photo.jpg" medium="image">
+                {metadata}</media:content></item></channel></rss>""".encode()
+                self.assertNotIn("source_image_verified", news.parse_feed(xml, "Example", "en", policy)[0])
+
     def test_blocked_topic_is_rejected(self):
         item = {"title": "War update", "source_excerpt": "community rescue"}
         score, reasons = news.score_item(item, ["community", "rescue"], ["war"])
@@ -49,6 +106,21 @@ class PositiveNewsTests(unittest.TestCase):
         item = {"title": "Magazine subscription update", "source_excerpt": "Read our latest issue", "source_tier_bonus": 2}
         score, _ = news.score_item(item, ["community", "progress"], [])
         self.assertEqual(score, 0)
+
+    def test_public_eligible_matches_frontend_rules(self):
+        cases = (
+            ({"title": "Community rescue success", "source_excerpt": "Volunteers helped."}, True),
+            ({"title": "Could this rescue succeed?", "source_excerpt": "Volunteers helped."}, False),
+            ({"title": "Rescue success after bloody injury", "source_excerpt": "Volunteers helped."}, False),
+            ({"title": "Rescue from a crab trap", "source_excerpt": "The animal was in distress."}, False),
+            ({"title": "A stranded animal needed help", "source_excerpt": "It was unable to move."}, False),
+            ({"title": "Community rescue success", "source_excerpt": "Appeared first on Example."}, False),
+            ({"title": "Community update", "source_excerpt": "A normal update."}, False),
+            ({"title": "Community update", "source_excerpt": "A rescue success.", "agent_summary": "En neutral notis."}, False),
+        )
+        for item, expected in cases:
+            with self.subTest(title=item["title"]):
+                self.assertEqual(news.public_eligible(item), expected)
 
     def test_summary_is_reused_only_for_an_unchanged_source(self):
         item = {"title": "Progress", "source_excerpt": "A source excerpt", "published_at": "2026-07-15"}
@@ -75,6 +147,61 @@ class PositiveNewsTests(unittest.TestCase):
         changed["source_fingerprint"] = news.source_fingerprint(changed)
         self.assertEqual(news.reusable_source_image(changed, previous), {})
         self.assertEqual(news.reusable_source_image(item, {**previous, "source_image_rights_url": ""}), {})
+
+    def test_ai_image_is_reused_only_when_nested_schema_and_fingerprint_are_valid(self):
+        item = {"id": "a" * 20, "source_fingerprint": "b" * 20}
+        image = {
+            "url": f"/news-images/ai/articles/{'a' * 20}-{'b' * 8}-v1.webp",
+            "alt": "Redaktionell AI-illustration om lokalt samarbete.",
+            "model": "gpt-image-2",
+            "prompt_version": "editorial-concept-v1",
+            "source_fingerprint": "b" * 20,
+            "width": 1280,
+            "height": 848,
+            "sha256": "c" * 64,
+            "generated_at": "2026-07-15T12:00:00Z",
+        }
+        previous = {"source_fingerprint": "b" * 20, "ai_image": image}
+        self.assertEqual(news.reusable_ai_image(item, previous), {"ai_image": image})
+
+        invalid_images = (
+            {**image, "model": "another-model"},
+            {**image, "sha256": "not-a-hash"},
+            {**image, "url": "/news-images/ai/articles/wrong.webp"},
+            {**image, "extra": "not-allowed"},
+        )
+        for invalid in invalid_images:
+            with self.subTest(invalid=invalid):
+                self.assertEqual(news.reusable_ai_image(item, {**previous, "ai_image": invalid}), {})
+        changed = {**item, "source_fingerprint": "d" * 20}
+        self.assertEqual(news.reusable_ai_image(changed, previous), {})
+
+    def test_fresh_licensed_rss_image_wins_over_previous_image(self):
+        xml = b"""<rss xmlns:media="http://search.yahoo.com/mrss/"><channel><item>
+        <title>Community rescue success</title><link>https://example.com/story</link>
+        <description>Volunteers helped.</description>
+        <media:content url="https://cdn.example.com/new.jpg" medium="image">
+          <media:credit>Ada Example</media:credit>
+          <media:license href="https://creativecommons.org/publicdomain/zero/1.0/" />
+        </media:content></item></channel></rss>"""
+        parsed = news.parse_feed(
+            xml, "Example", "en",
+            {
+                "enabled": True,
+                "allowed_image_hosts": ["cdn.example.com"],
+                "allowed_license_urls": ["https://creativecommons.org/publicdomain/zero/1.0/"],
+            },
+        )[0]
+        previous = {
+            **parsed,
+            "source_image_url": "https://old.example.com/old.jpg",
+            "source_image_credit": "Old credit",
+            "source_image_rights_url": "https://old.example.com/rights",
+        }
+        if parsed.get("source_image_verified") is not True:
+            parsed.update(news.reusable_source_image(parsed, previous))
+        self.assertEqual(parsed["source_image_url"], "https://cdn.example.com/new.jpg")
+        self.assertEqual(parsed["source_image_license_id"], "CC0-1.0")
 
     def test_atomic_write_replaces_valid_json(self):
         with tempfile.TemporaryDirectory() as folder:

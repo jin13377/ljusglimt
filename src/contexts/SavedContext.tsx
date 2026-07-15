@@ -39,7 +39,8 @@ export function SavedProvider({ children }: { children: ReactNode }) {
         setSaved((items) => items.filter((item) => item.article_id !== article.id))
         return 'removed'
       }
-      const image = article.image.url.startsWith('/news-images/ai/') ? article.image.url : ''
+      const image = [article.image, article.fallbackImage]
+        .find((candidate) => candidate?.url.startsWith('/news-images/ai/'))?.url || ''
       await post('/api/saved', { id: article.id, title: article.title, excerpt: article.excerpt, source: article.source, url: article.url, image })
       await refresh()
       return 'saved'

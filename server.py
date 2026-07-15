@@ -109,7 +109,9 @@ def safe_http_url(value: str) -> str:
 
 def safe_saved_image(value: str) -> str:
     value = clean_text(value, 180)
-    return value if re.fullmatch(r"/news-images/ai/[a-z0-9-]+\.webp", value) else ""
+    category_image = r"/news-images/ai/[a-z0-9-]+\.webp"
+    article_image = r"/news-images/ai/articles/[a-f0-9]{20}-[a-f0-9]{8}-v1\.webp"
+    return value if re.fullmatch(rf"(?:{category_image}|{article_image})", value) else ""
 
 
 def read_json(path: Path, fallback):

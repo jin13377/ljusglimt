@@ -1,7 +1,7 @@
 import { Image as ImageIcon, Sparkles } from 'lucide-react'
 import { useState } from 'react'
 import { getAiCategoryImage } from '../lib/news'
-import type { NewsArticle } from '../types'
+import type { NewsArticle, NewsImage } from '../types'
 import { CategoryArt } from './CategoryArt'
 
 type VisualVariant = 'card' | 'hero' | 'article' | 'search'
@@ -13,9 +13,11 @@ export function NewsVisual({ article, variant = 'card', priority = false, showCa
   showCaption?: boolean
 }) {
   const [failedUrls, setFailedUrls] = useState<string[]>([])
-  const aiFallback = getAiCategoryImage(article.category)
-  const image = article.image.kind === 'source' && failedUrls.includes(article.image.url) ? aiFallback : article.image
-  if (failedUrls.includes(image.url)) return <CategoryArt category={article.category} className={`news-visual-fallback visual-${variant}`} />
+  const candidates = [article.image, article.fallbackImage, getAiCategoryImage(article.category)]
+    .filter((candidate): candidate is NewsImage => Boolean(candidate))
+    .filter((candidate, index, images) => images.findIndex((image) => image.url === candidate.url) === index)
+  const image = candidates.find((candidate) => !failedUrls.includes(candidate.url))
+  if (!image) return <CategoryArt category={article.category} className={`news-visual-fallback visual-${variant}`} />
 
   const media = <div className={`news-visual visual-${variant}`}>
     <img

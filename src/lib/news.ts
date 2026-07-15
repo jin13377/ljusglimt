@@ -1,4 +1,4 @@
-import type { NewsArticle, NewsImage, RawFetchedNews, RawSeedNews } from '../types'
+import type { NewsArticle, NewsImage, RawAiNewsImage, RawFetchedNews, RawSeedNews } from '../types'
 
 const aiCategoryImages: Record<string, { url: string; alt: string }> = {
   Hälsa: { url: '/news-images/ai/health.webp', alt: 'Redaktionell AI-illustration om hälsa, omsorg och återhämtning.' },
@@ -10,7 +10,17 @@ const aiCategoryImages: Record<string, { url: string; alt: string }> = {
   Framsteg: { url: '/news-images/ai/progress.webp', alt: 'Redaktionell AI-illustration om praktiska lösningar och framsteg.' },
 }
 
-type RawImageFields = Pick<RawFetchedNews, 'title' | 'source_image_verified' | 'source_image_url' | 'source_image_alt' | 'source_image_credit' | 'source_image_rights_url'>
+interface RawImageFields {
+  id?: string
+  title: string
+  source_fingerprint?: string
+  ai_image?: RawAiNewsImage
+  source_image_verified?: boolean
+  source_image_url?: string
+  source_image_alt?: string
+  source_image_credit?: string
+  source_image_rights_url?: string
+}
 
 function safeHttpsUrl(value = ''): string {
   try {
@@ -23,6 +33,7 @@ export function getAiCategoryImage(category: string): NewsImage {
   const fallback = aiCategoryImages[category] || aiCategoryImages.Framsteg
   return {
     kind: 'ai',
+    aiOrigin: 'category',
     url: fallback.url,
     alt: fallback.alt,
     caption: 'AI-illustration – redaktionellt motiv, inte en dokumentation av händelsen.',
@@ -31,7 +42,7 @@ export function getAiCategoryImage(category: string): NewsImage {
   }
 }
 
-export function resolveNewsImage(item: RawImageFields, category: string): NewsImage {
+function resolveSourceImage(item: RawImageFields): NewsImage | undefined {
   const sourceUrl = safeHttpsUrl(item.source_image_url)
   const rightsUrl = safeHttpsUrl(item.source_image_rights_url)
   const credit = item.source_image_credit?.trim() || ''
@@ -47,7 +58,48 @@ export function resolveNewsImage(item: RawImageFields, category: string): NewsIm
       height: 853,
     }
   }
-  return getAiCategoryImage(category)
+  return undefined
+}
+
+function resolveGeneratedImage(item: RawImageFields): NewsImage | undefined {
+  const image = item.ai_image
+  const id = item.id || ''
+  const fingerprint = item.source_fingerprint || ''
+  if (!image || !/^[a-f0-9]{20}$/.test(id) || !/^[a-f0-9]{20}$/.test(fingerprint)) return undefined
+  const expectedUrl = `/news-images/ai/articles/${id}-${fingerprint.slice(0, 8)}-v1.webp`
+  const validGeneratedAt = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,6})?Z$/.test(image.generated_at)
+  if (image.url !== expectedUrl
+      || image.source_fingerprint !== fingerprint
+      || image.model !== 'gpt-image-2'
+      || image.prompt_version !== 'editorial-concept-v1'
+      || image.width !== 1280
+      || image.height !== 848
+      || !/^[a-f0-9]{64}$/.test(image.sha256)
+      || !image.alt?.trim()
+      || !validGeneratedAt
+      || Number.isNaN(Date.parse(image.generated_at))) return undefined
+  return {
+    kind: 'ai',
+    aiOrigin: 'generated',
+    url: image.url,
+    alt: image.alt.trim(),
+    caption: 'Unik AI-illustration – redaktionellt motiv, inte en dokumentation av händelsen.',
+    width: image.width,
+    height: image.height,
+  }
+}
+
+function resolveNewsImages(item: RawImageFields, category: string): Pick<NewsArticle, 'image' | 'fallbackImage'> {
+  const categoryImage = getAiCategoryImage(category)
+  const generatedImage = resolveGeneratedImage(item)
+  const sourceImage = resolveSourceImage(item)
+  if (sourceImage) return { image: sourceImage, fallbackImage: generatedImage || categoryImage }
+  if (generatedImage) return { image: generatedImage, fallbackImage: categoryImage }
+  return { image: categoryImage }
+}
+
+export function resolveNewsImage(item: RawImageFields, category: string): NewsImage {
+  return resolveNewsImages(item, category).image
 }
 
 const categoryWords: Record<string, string[]> = {
@@ -106,7 +158,8 @@ export function normalizeFetched(item: RawFetchedNews): NewsArticle {
     hasAgentSummary: Boolean(agentSummary),
     score: item.positivity_score || 0,
     signals: item.positive_signals || [],
-    image: resolveNewsImage(item, category),
+    publicEligible: typeof item.public_eligible === 'boolean' ? item.public_eligible : undefined,
+    ...resolveNewsImages(item, category),
   }
 }
 
@@ -130,16 +183,17 @@ export function normalizeSeed(item: RawSeedNews): NewsArticle {
     hasAgentSummary: false,
     score: 0,
     signals: [],
-    image: resolveNewsImage(item, category),
+    ...resolveNewsImages(item, category),
   }
 }
 
-const sensitiveCandidate = /\b(?:abandon(?:ed|ment)?|abuse|anxiety|assault|backlash|blood|bloody|bomb|chronic loneliness|closing|conflict|criticiz(?:e|ed|es|ing)|crush(?:ed|ing)?|death|earthquake|extinct(?:ion)?|extremism|fraud|harass(?:ment|ed|ing)?|harrowing|hooks? in|injur(?:ed|y|ies)|killed|loathe|mangled|missing flipper|murder|onlyfans|revok(?:e|ed|es|ing)|shooting|shocked|strangl(?:e|ed|es|ing)|stroke|terror|threaten(?:ed|ing)?|traffick(?:ing|ed)?|trapped|treatment center|violence|war)\b/i
+const sensitiveCandidate = /\b(?:abandon(?:ed|ment)?|abuse|anxiety|assault|backlash|blood|bloody|bomb|chronic loneliness|closing|conflict|criticiz(?:e|ed|es|ing)|crush(?:ed|ing)?|death|desperat(?:e|ely)|distress(?:ed|ing)?|earthquake|extinct(?:ion)?|extremism|fraud|harass(?:ment|ed|ing)?|harrowing|hooks? in|injur(?:ed|y|ies)|killed|loathe|mangled|missing flipper|murder|onlyfans|revok(?:e|ed|es|ing)|shooting|shocked|stranded|strangl(?:e|ed|es|ing)|stroke|terror|threaten(?:ed|ing)?|traffick(?:ing|ed)?|trap(?:ped)?|treatment center|unable to move|violence|war)\b/i
 const feedNoise = /\b(?:appeared first on|share the stories)\b/i
 const positiveCandidate = /\b(?:achiev(?:e|ed|ement)|award(?:ed|s)?|birth|breakthrough|celebrat(?:e|ed|es|ing|ion)|conservation(?:ist|ists)?|discov(?:er|ered|ery)|free(?:d|ing)?|help(?:s|ed|ing)?|hope(?:ful)?|improv(?:e|ed|ement)|milestone|protect(?:s|ed|ing|ion)?|recover(?:ed|y)|rescu(?:e|ed|es|ing)|restor(?:e|ed|es|ing|ation)|save(?:d|s|ing)?|second chance|smooth(?:er|est)|solv(?:e|ed|es|ing)|success(?:ful)?|volunteer(?:s|ed|ing)?|win(?:s|ning)?)\b/i
 
 export function isSuitableForPublicFeed(article: NewsArticle): boolean {
   if (article.origin === 'demo') return true
+  if (typeof article.publicEligible === 'boolean') return article.publicEligible
   return !article.title.trim().endsWith('?')
     && !sensitiveCandidate.test(`${article.title} ${article.excerpt}`)
     && !feedNoise.test(article.excerpt)

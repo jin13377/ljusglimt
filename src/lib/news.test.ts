@@ -4,6 +4,18 @@ import { fetchNews, inferCategory, isSuitableForPublicFeed, normalizeFetched, no
 afterEach(() => { vi.unstubAllGlobals() })
 
 describe('news normalizer', () => {
+  const generatedImage = {
+    url: '/news-images/ai/articles/0123456789abcdefabcd-aabbccdd-v1.webp',
+    alt: 'Redaktionell AI-illustration av ett lokalt naturprojekt.',
+    model: 'gpt-image-2',
+    prompt_version: 'editorial-concept-v1',
+    source_fingerprint: 'aabbccddeeff00112233',
+    width: 1280,
+    height: 848,
+    sha256: 'a'.repeat(64),
+    generated_at: '2026-07-15T10:00:00Z',
+  }
+
   it('infers a category without relying on missing API fields', () => {
     expect(inferCategory({ id: '1', title: 'New solar energy record', url: 'https://example.com', source: 'Test' })).toBe('Miljö')
   })
@@ -46,6 +58,33 @@ describe('news normalizer', () => {
     expect(incomplete.image.kind).toBe('ai')
   })
 
+  it('uses a source-bound unique AI image before the category fallback', () => {
+    const item = normalizeFetched({
+      id: '0123456789abcdefabcd', title: 'Volunteers restore a local wetland', url: 'https://example.com/story', source: 'Feed',
+      source_fingerprint: 'aabbccddeeff00112233', ai_image: generatedImage,
+    })
+    expect(item.image.kind).toBe('ai')
+    expect(item.image.aiOrigin).toBe('generated')
+    expect(item.image.url).toBe(generatedImage.url)
+    expect(item.fallbackImage?.aiOrigin).toBe('category')
+  })
+
+  it('rejects stale AI images and keeps a generated backup behind a verified source image', () => {
+    const stale = normalizeFetched({
+      id: '0123456789abcdefabcd', title: 'Volunteers restore a local wetland', url: 'https://example.com/stale', source: 'Feed',
+      source_fingerprint: 'ffffffffffffffffffff', ai_image: generatedImage,
+    })
+    const sourced = normalizeFetched({
+      id: '0123456789abcdefabcd', title: 'Volunteers restore a local wetland', url: 'https://example.com/source', source: 'Feed',
+      source_fingerprint: 'aabbccddeeff00112233', ai_image: generatedImage,
+      source_image_verified: true, source_image_url: 'https://images.example.com/photo.jpg',
+      source_image_credit: 'Foto: Example', source_image_rights_url: 'https://example.com/rights',
+    })
+    expect(stale.image.aiOrigin).toBe('category')
+    expect(sourced.image.kind).toBe('source')
+    expect(sourced.fallbackImage?.aiOrigin).toBe('generated')
+  })
+
   it('filters sensitive candidates from the public feed', () => {
     const item = normalizeFetched({ id: 'abc123', title: 'A bloody rescue story', url: 'https://example.com', source: 'Feed' })
     expect(isSuitableForPublicFeed(item)).toBe(false)
@@ -59,10 +98,19 @@ describe('news normalizer', () => {
   it('requires a clear positive signal and rejects distressing rescue language', () => {
     const generic = normalizeFetched({ id: 'generic', title: 'A new policy update', url: 'https://example.com', source: 'Feed', source_excerpt: 'Officials shared the latest details.' })
     const distressing = normalizeFetched({ id: 'distressing', title: 'Volunteers rescue turtle with a crushed shell', url: 'https://example.com', source: 'Feed', source_excerpt: 'The animal is recovering.' })
+    const stranded = normalizeFetched({ id: 'stranded', title: 'Rescuers find an animal stranded in a trap', url: 'https://example.com', source: 'Feed', source_excerpt: 'It was in distress and unable to move.' })
     const constructive = normalizeFetched({ id: 'constructive', title: 'Volunteers restore a local wetland', url: 'https://example.com', source: 'Feed', source_excerpt: 'The project reached a new milestone.' })
     expect(isSuitableForPublicFeed(generic)).toBe(false)
     expect(isSuitableForPublicFeed(distressing)).toBe(false)
+    expect(isSuitableForPublicFeed(stranded)).toBe(false)
     expect(isSuitableForPublicFeed(constructive)).toBe(true)
+  })
+
+  it('uses the pipeline public eligibility decision when present', () => {
+    const hidden = normalizeFetched({ id: 'hidden', title: 'Volunteers restore a local wetland', url: 'https://example.com/hidden', source: 'Feed', public_eligible: false })
+    const approved = normalizeFetched({ id: 'approved', title: 'A neutral update', url: 'https://example.com/approved', source: 'Feed', public_eligible: true })
+    expect(isSuitableForPublicFeed(hidden)).toBe(false)
+    expect(isSuitableForPublicFeed(approved)).toBe(true)
   })
 
   it('keeps demo news available when the live API is temporarily down', async () => {
