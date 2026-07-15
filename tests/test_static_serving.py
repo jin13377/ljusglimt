@@ -15,8 +15,10 @@ class StaticServingTests(unittest.TestCase):
         cls.original_dist = server.DIST_DIR
         server.DIST_DIR = Path(cls.temp.name) / "dist"
         (server.DIST_DIR / "assets").mkdir(parents=True)
+        (server.DIST_DIR / "news-images/ai").mkdir(parents=True)
         (server.DIST_DIR / "index.html").write_text("<!doctype html><title>Vite shell</title>", encoding="utf-8")
         (server.DIST_DIR / "assets/app-123.js").write_text("console.log('vite');", encoding="utf-8")
+        (server.DIST_DIR / "news-images/ai/health.webp").write_bytes(b"webp-test")
         cls.httpd = server.ThreadingHTTPServer(("127.0.0.1", 0), server.Handler)
         cls.port = cls.httpd.server_address[1]
         cls.thread = threading.Thread(target=cls.httpd.serve_forever, daemon=True)
@@ -58,6 +60,14 @@ class StaticServingTests(unittest.TestCase):
         status, _, body = self.request("/assets/missing.js")
         self.assertEqual(status, 404)
         self.assertNotIn(b"Vite shell", body)
+
+    def test_editorial_image_asset_is_served_with_image_content_type(self):
+        status, headers, body = self.request("/news-images/ai/health.webp")
+        self.assertEqual(status, 200)
+        self.assertEqual(body, b"webp-test")
+        headers = dict(headers)
+        self.assertIn("image/webp", headers["Content-Type"])
+        self.assertIn("max-age=604800", headers["Cache-Control"])
 
     def test_traversal_is_rejected(self):
         status, _, body = self.request("/%2e%2e/server.py")

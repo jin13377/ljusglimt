@@ -3,7 +3,9 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { formatDate, excerpt } from '../lib/news'
 import type { NewsArticle } from '../types'
-import { CategoryArt } from './CategoryArt'
+import { NewsVisual } from './NewsVisual'
+
+export type NewsCardVariant = 'lead' | 'standard' | 'compact' | 'text' | 'search'
 
 export function OriginBadge({ article }: { article: NewsArticle }) {
   return article.origin === 'demo'
@@ -11,15 +13,19 @@ export function OriginBadge({ article }: { article: NewsArticle }) {
     : <span className="origin-badge fetched">{article.hasAgentSummary ? 'Källnotis · svensk agentsammanfattning' : 'Källnotis · engelska'}</span>
 }
 
-export function NewsCard({ article, onSave, saved = false }: { article: NewsArticle; onSave?: (article: NewsArticle) => void; saved?: boolean }) {
+export function NewsCard({ article, onSave, saved = false, variant = 'standard' }: { article: NewsArticle; onSave?: (article: NewsArticle) => void; saved?: boolean; variant?: NewsCardVariant }) {
+  const imageLabel = article.image.kind === 'ai' ? 'AI-illustration' : `Källbild${article.image.credit ? ` av ${article.image.credit}` : ''}`
   return (
-    <motion.article className="news-card" initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: .15 }}>
-      <Link to={`/nyhet/${encodeURIComponent(article.id)}`} className="news-card-art" aria-label={`Läs ${article.title}`}>
-        <CategoryArt category={article.category} />
-        <span className="category-pill">{article.category}</span>
-      </Link>
+    <motion.article className={`news-card ${variant}`} initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: .15 }}>
+      {variant !== 'text' && <div className="news-card-art">
+        <Link to={`/nyhet/${encodeURIComponent(article.id)}`} className="news-card-image-link" aria-label={`${imageLabel}. Läs ${article.title}`}>
+          <NewsVisual article={article} variant={variant === 'search' ? 'search' : 'card'} />
+          <span className="category-pill">{article.category}</span>
+        </Link>
+      </div>}
       <div className="news-card-body">
         <OriginBadge article={article} />
+        {article.image.kind === 'source' && article.image.credit && article.image.rightsUrl && <div className="card-image-credit">Källbild: {article.image.credit} · <a href={article.image.rightsUrl} target="_blank" rel="noreferrer">bildrättigheter</a></div>}
         <h3 lang={article.language}><Link to={`/nyhet/${encodeURIComponent(article.id)}`}>{article.title}</Link></h3>
         <p lang={article.excerptLanguage}>{excerpt(article.excerpt)}</p>
         {article.location && <div className="news-card-location"><MapPin size={14} /> {article.location}</div>}

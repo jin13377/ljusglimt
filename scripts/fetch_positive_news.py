@@ -61,6 +61,29 @@ def reusable_summary(item: dict, previous: dict | None) -> str:
     return summary if isinstance(summary, str) else ""
 
 
+def reusable_source_image(item: dict, previous: dict | None) -> dict:
+    if not previous or previous.get("source_fingerprint") != item.get("source_fingerprint"):
+        return {}
+    image_url = str(previous.get("source_image_url") or "").strip()
+    rights_url = str(previous.get("source_image_rights_url") or "").strip()
+    credit = clean_text(previous.get("source_image_credit"))[:240]
+    image_parts = urllib.parse.urlsplit(image_url)
+    rights_parts = urllib.parse.urlsplit(rights_url)
+    if (previous.get("source_image_verified") is not True or not credit
+            or image_parts.scheme != "https" or not image_parts.netloc
+            or image_parts.username or image_parts.password
+            or rights_parts.scheme != "https" or not rights_parts.netloc
+            or rights_parts.username or rights_parts.password):
+        return {}
+    return {
+        "source_image_verified": True,
+        "source_image_url": image_url[:1200],
+        "source_image_alt": clean_text(previous.get("source_image_alt"))[:400],
+        "source_image_credit": credit,
+        "source_image_rights_url": rights_url[:1200],
+    }
+
+
 def parse_date(value: str | None) -> str | None:
     if not value:
         return None
@@ -257,6 +280,7 @@ def main(argv: list[str] | None = None) -> int:
         item["positivity_score"] = score
         item["positive_signals"] = reasons
         item["agent_summary"] = reusable_summary(item, old_items.get(item["id"]))
+        item.update(reusable_source_image(item, old_items.get(item["id"])))
         unique[key] = item
         title_keys.add(title_key)
 

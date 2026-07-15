@@ -1,4 +1,54 @@
-import type { NewsArticle, RawFetchedNews, RawSeedNews } from '../types'
+import type { NewsArticle, NewsImage, RawFetchedNews, RawSeedNews } from '../types'
+
+const aiCategoryImages: Record<string, { url: string; alt: string }> = {
+  Hälsa: { url: '/news-images/ai/health.webp', alt: 'Redaktionell AI-illustration om hälsa, omsorg och återhämtning.' },
+  Miljö: { url: '/news-images/ai/environment.webp', alt: 'Redaktionell AI-illustration om ren energi och miljöframsteg.' },
+  Natur: { url: '/news-images/ai/nature.webp', alt: 'Redaktionell AI-illustration om natur, biologisk mångfald och återhämtning.' },
+  Vetenskap: { url: '/news-images/ai/science.webp', alt: 'Redaktionell AI-illustration om vetenskap, upptäckter och delad kunskap.' },
+  Kultur: { url: '/news-images/ai/culture.webp', alt: 'Redaktionell AI-illustration om kultur, kreativitet och restaurerat kulturarv.' },
+  Människor: { url: '/news-images/ai/community.webp', alt: 'Redaktionell AI-illustration om lokalt samarbete och gemensamma idéer.' },
+  Framsteg: { url: '/news-images/ai/progress.webp', alt: 'Redaktionell AI-illustration om praktiska lösningar och framsteg.' },
+}
+
+type RawImageFields = Pick<RawFetchedNews, 'title' | 'source_image_verified' | 'source_image_url' | 'source_image_alt' | 'source_image_credit' | 'source_image_rights_url'>
+
+function safeHttpsUrl(value = ''): string {
+  try {
+    const parsed = new URL(value)
+    return parsed.protocol === 'https:' && !parsed.username && !parsed.password ? parsed.href : ''
+  } catch { return '' }
+}
+
+export function getAiCategoryImage(category: string): NewsImage {
+  const fallback = aiCategoryImages[category] || aiCategoryImages.Framsteg
+  return {
+    kind: 'ai',
+    url: fallback.url,
+    alt: fallback.alt,
+    caption: 'AI-illustration – redaktionellt motiv, inte en dokumentation av händelsen.',
+    width: 1280,
+    height: 853,
+  }
+}
+
+export function resolveNewsImage(item: RawImageFields, category: string): NewsImage {
+  const sourceUrl = safeHttpsUrl(item.source_image_url)
+  const rightsUrl = safeHttpsUrl(item.source_image_rights_url)
+  const credit = item.source_image_credit?.trim() || ''
+  if (item.source_image_verified === true && sourceUrl && rightsUrl && credit) {
+    return {
+      kind: 'source',
+      url: sourceUrl,
+      alt: item.source_image_alt?.trim() || `Källbild till ${item.title}`,
+      caption: `Källbild · ${credit}`,
+      credit,
+      rightsUrl,
+      width: 1280,
+      height: 853,
+    }
+  }
+  return getAiCategoryImage(category)
+}
 
 const categoryWords: Record<string, string[]> = {
   Hälsa: ['health', 'medical', 'vaccine', 'malaria', 'care', 'brain', 'stroke', 'hospital', 'dementia'],
@@ -37,12 +87,13 @@ export function normalizeFetched(item: RawFetchedNews): NewsArticle {
   const agentSummary = item.agent_summary?.trim() || ''
   const excerpt = agentSummary || item.source_excerpt?.trim() || 'Kort källnotis utan sammanfattning.'
   const language = item.language || 'en'
+  const category = inferCategory(item)
   return {
     id: item.id,
     slug: `${slugify(item.title)}-${item.id.slice(0, 6)}`,
     title: item.title,
     excerpt,
-    category: inferCategory(item),
+    category,
     location: '',
     publishedAt: item.published_at || '',
     readTime: Math.max(1, Math.ceil(excerpt.split(/\s+/).length / 180)),
@@ -55,16 +106,18 @@ export function normalizeFetched(item: RawFetchedNews): NewsArticle {
     hasAgentSummary: Boolean(agentSummary),
     score: item.positivity_score || 0,
     signals: item.positive_signals || [],
+    image: resolveNewsImage(item, category),
   }
 }
 
 export function normalizeSeed(item: RawSeedNews): NewsArticle {
+  const category = item.category || 'Framsteg'
   return {
     id: item.id,
     slug: item.slug || slugify(item.title),
     title: item.title,
     excerpt: item.summary,
-    category: item.category || 'Framsteg',
+    category,
     location: item.location || 'Världen',
     publishedAt: item.publishedAt || '',
     readTime: item.readTimeMinutes || Math.max(1, Math.ceil(item.summary.split(/\s+/).length / 180)),
@@ -77,6 +130,7 @@ export function normalizeSeed(item: RawSeedNews): NewsArticle {
     hasAgentSummary: false,
     score: 0,
     signals: [],
+    image: resolveNewsImage(item, category),
   }
 }
 
@@ -129,7 +183,7 @@ export async function fetchNews(): Promise<NewsCollection> {
     fetchedAvailable: Boolean(fetchedResponse?.ok),
     seedAvailable: Boolean(seedResponse?.ok),
     warning: !fetchedResponse?.ok
-      ? 'Det automatiska nattflödet kunde inte hämtas. Demosammanfattningarna visas fortfarande.'
+      ? 'Det automatiska flödet kunde inte hämtas. Demosammanfattningarna visas fortfarande.'
       : !seedResponse?.ok
         ? 'Demosammanfattningarna kunde inte hämtas. De aktuella källnotiserna visas fortfarande.'
         : '',

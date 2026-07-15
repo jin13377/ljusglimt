@@ -1,9 +1,9 @@
 import { ArrowRight, Atom, Clock3, Database, HeartPulse, Leaf, Lightbulb, Newspaper, Palette, Quote, RefreshCw, ShieldCheck, Sparkles, Trees, Users } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { Link, useNavigate } from 'react-router-dom'
-import { CategoryArt } from '../components/CategoryArt'
 import { NewsCard, OriginBadge } from '../components/NewsCard'
 import { NewsletterForm } from '../components/NewsletterForm'
+import { NewsVisual } from '../components/NewsVisual'
 import { useSaved } from '../contexts/SavedContext'
 import { formatDate } from '../lib/news'
 import { useNews } from '../lib/useNews'
@@ -36,7 +36,7 @@ export function HomePage() {
         {hero && <><OriginBadge article={hero} /><div className="hero-meta"><span>{hero.category}</span>{hero.location && <span>{hero.location}</span>}<time dateTime={hero.publishedAt}>{formatDate(hero.publishedAt)}</time></div>
         <div className="hero-buttons"><Link className="button primary" to={`/nyhet/${encodeURIComponent(hero.id)}`}>Läs sammanfattningen <ArrowRight size={18} /></Link><a className="button ghost" href={hero.url} target="_blank" rel="noreferrer">Öppna källsidan</a></div></>}
       </div>
-      <div className="hero-art-wrap">{hero && <CategoryArt category={hero.category} className="hero-art" />}<div className="hero-caption"><span>{hero?.source}</span><small>Illustration anpassad efter ämnet</small></div></div>
+      <div className="hero-art-wrap">{hero && <NewsVisual article={hero} variant="hero" priority showCaption />}</div>
     </section>
 
     <section className="trust-strip">
@@ -50,12 +50,12 @@ export function HomePage() {
 
     <section className="section page-wrap">
       <header className="section-header"><div><span className="eyebrow">Källbelagda exempel</span><h2>Svenska demosammanfattningar</h2><p>Exempel på hur en lugn och tydligt källmärkt nyhetsupplevelse kan fungera.</p></div><Link to="/sok?typ=demo">Visa alla demos <ArrowRight size={16} /></Link></header>
-      <div className="news-grid">{demoHighlights.map((article) => <NewsCard key={article.id} article={article} onSave={save} saved={isSaved(article.id)} />)}</div>
+      <div className="news-grid editorial-news-grid">{demoHighlights.map((article, index) => <NewsCard key={article.id} article={article} variant={homeCardVariant(index)} onSave={save} saved={isSaved(article.id)} />)}</div>
     </section>
 
     {fetchedHighlights.length > 0 && <section className="section fetched-news-section"><div className="page-wrap">
       <header className="section-header"><div><span className="eyebrow">Automatiskt flöde</span><h2>Senast källhämtat</h2><p>Aktuella kandidater från offentliga flöden. Rubrik och utdrag märks med språk – källsidan är alltid facit.</p></div><Link to="/sok?typ=fetched">Se alla källnotiser <ArrowRight size={16} /></Link></header>
-      <div className="news-grid">{fetchedHighlights.map((article) => <NewsCard key={article.id} article={article} onSave={save} saved={isSaved(article.id)} />)}</div>
+      <div className="news-grid editorial-news-grid">{fetchedHighlights.map((article, index) => <NewsCard key={article.id} article={article} variant={homeCardVariant(index)} onSave={save} saved={isSaved(article.id)} />)}</div>
     </div></section>}
 
     <CategoryCompass />
@@ -73,6 +73,13 @@ export function HomePage() {
     <section className="journey-section"><div className="page-wrap"><header><span className="eyebrow">Tre enkla steg</span><h2>Från nyfiken till källan</h2></header><div className="journey-grid"><article><span>01</span><h3>Upptäck</h3><p>Välj ett ämne i Kategorikompassen eller sök i hela arkivet.</p></article><article><span>02</span><h3>Förstå märkningen</h3><p>Se direkt om det är en demosammanfattning eller engelsk källnotis.</p></article><article><span>03</span><h3>Öppna källsidan</h3><p>Gå vidare till ursprungspubliceringen för hela sammanhanget.</p></article></div></div></section>
     <FinalCta />
   </>
+}
+
+function homeCardVariant(index: number): 'lead' | 'standard' | 'compact' | 'text' {
+  if (index === 0) return 'lead'
+  if (index < 3) return 'standard'
+  if (index < 5) return 'compact'
+  return 'text'
 }
 
 function CategoryCompass() {

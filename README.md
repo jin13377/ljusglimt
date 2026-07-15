@@ -5,6 +5,10 @@ Projektet innehåller en responsiv redaktionell startsida, sök/filter,
 originalkällor, nyhetsbrev-demo, ett förhandsmodererat forum och en schemalagd
 Codex/RSS-pipeline.
 
+Nyhetsbilder använder en lokal, optimerad AI-illustrationsbank med tydlig
+märkning. Verifierade källbilder stöds i datamodellen men visas bara med
+fullständig kredit och rättighetslänk. Se `docs/image-policy.md`.
+
 ## Starta lokalt
 
 Installera frontendberoendena en gång och dubbelklicka sedan på

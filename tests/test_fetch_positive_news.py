@@ -59,6 +59,23 @@ class PositiveNewsTests(unittest.TestCase):
         changed["source_fingerprint"] = news.source_fingerprint(changed)
         self.assertEqual(news.reusable_summary(changed, previous), "")
 
+    def test_verified_source_image_is_reused_only_for_unchanged_source(self):
+        item = {"title": "Progress", "source_excerpt": "A source excerpt", "published_at": "2026-07-15"}
+        item["source_fingerprint"] = news.source_fingerprint(item)
+        previous = {
+            **item,
+            "source_image_verified": True,
+            "source_image_url": "https://images.example.com/progress.jpg",
+            "source_image_alt": "A verified source image",
+            "source_image_credit": "Photo: Example",
+            "source_image_rights_url": "https://example.com/rights",
+        }
+        self.assertEqual(news.reusable_source_image(item, previous)["source_image_credit"], "Photo: Example")
+        changed = {**item, "source_excerpt": "Changed excerpt"}
+        changed["source_fingerprint"] = news.source_fingerprint(changed)
+        self.assertEqual(news.reusable_source_image(changed, previous), {})
+        self.assertEqual(news.reusable_source_image(item, {**previous, "source_image_rights_url": ""}), {})
+
     def test_atomic_write_replaces_valid_json(self):
         with tempfile.TemporaryDirectory() as folder:
             path = Path(folder) / "news.json"

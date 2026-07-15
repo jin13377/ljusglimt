@@ -59,12 +59,13 @@ class AccountApiTests(unittest.TestCase):
 
         status, data, _ = self.request("POST", "/api/saved", {
             "id": "article-1", "title": "En positiv nyhet", "excerpt": "Kort text",
-            "source": "Testkälla", "url": "https://example.com/news", "image": "https://example.com/image.jpg"
+            "source": "Testkälla", "url": "https://example.com/news", "image": "/news-images/ai/progress.webp"
         }, cookie)
         self.assertEqual(status, 201)
         status, data, _ = self.request("GET", "/api/saved", cookie=cookie)
         self.assertEqual(status, 200)
         self.assertEqual(data["articles"][0]["article_id"], "article-1")
+        self.assertEqual(data["articles"][0]["image"], "/news-images/ai/progress.webp")
 
         status, topic_data, _ = self.request("POST", "/api/forum/topics", {
             "title": "Ett nytt gott initiativ", "category": "Lokalt",
@@ -159,6 +160,11 @@ class AccountApiTests(unittest.TestCase):
 
 
 class PasswordTests(unittest.TestCase):
+    def test_saved_images_only_accept_local_ai_assets(self):
+        self.assertEqual(server.safe_saved_image("/news-images/ai/nature.webp"), "/news-images/ai/nature.webp")
+        self.assertEqual(server.safe_saved_image("https://tracker.example/image.jpg"), "")
+        self.assertEqual(server.safe_saved_image("/news-images/ai/../../server.py"), "")
+
     def test_scrypt_password_roundtrip(self):
         encoded = server.hash_password("ett långt lösenord")
         self.assertTrue(server.verify_password("ett långt lösenord", encoded))

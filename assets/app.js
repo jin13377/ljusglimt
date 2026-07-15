@@ -1,8 +1,8 @@
 const categoryImages = {
-  miljo: "https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1200&q=82",
-  forskning: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1200&q=82",
-  manniskor: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=82",
-  kultur: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1200&q=82"
+  miljo: "/news-images/ai/environment.webp",
+  forskning: "/news-images/ai/science.webp",
+  manniskor: "/news-images/ai/community.webp",
+  kultur: "/news-images/ai/culture.webp"
 };
 
 let articles = [];
@@ -94,7 +94,7 @@ function filteredArticles() {
 function articleCard(article) {
   const badge = article.isDemo ? "Demo · " : "Källhämtad · ";
   return `<article class="news-card">
-    <div class="card-image"><img src="${article.image}" alt="" loading="lazy"><span class="card-category">${escapeHTML(article.label)}</span>
+    <div class="card-image"><img src="${article.image}" alt="" loading="lazy"><span class="card-category">${escapeHTML(article.label)}</span><span class="ai-disclosure">AI-illustration</span>
     <button class="card-save ${savedIds.has(article.id) ? "saved" : ""}" type="button" data-save-article="${escapeHTML(article.id)}" aria-label="${savedIds.has(article.id) ? "Ta bort från sparade" : "Spara nyheten"}">${savedIds.has(article.id) ? "♥" : "♡"}</button></div>
     <div class="card-content">
       <h3>${escapeHTML(article.title)}</h3><p>${escapeHTML(article.excerpt)}</p>
@@ -113,7 +113,7 @@ function renderArticles() {
 function openArticle(id) {
   const article = articles.find(item => item.id === id);
   if (!article) return;
-  dialogContent.innerHTML = `<img class="dialog-hero" src="${article.image}" alt="">
+  dialogContent.innerHTML = `<div class="dialog-image"><img class="dialog-hero" src="${article.image}" alt=""><span class="ai-disclosure">AI-illustration</span></div>
     <article class="dialog-body"><span class="eyebrow">${escapeHTML(article.label)}</span>
     <h2>${escapeHTML(article.title)}</h2><p class="dialog-lead">${escapeHTML(article.excerpt)}</p>
     <p>${article.isDemo ? "Det här är en nyskriven demosammanfattning av den länkade originalkällan." : "Notisen är automatiskt hämtad från ett offentligt flöde och ska alltid läsas tillsammans med originalkällan."}</p>

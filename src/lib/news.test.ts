@@ -14,6 +14,8 @@ describe('news normalizer', () => {
     expect(item.excerpt).toBe('Useful context.')
     expect(item.location).toBe('')
     expect(item.excerptLanguage).toBe('en')
+    expect(item.image.kind).toBe('ai')
+    expect(item.image.url).toBe('/news-images/ai/science.webp')
   })
 
   it('preserves demo source transparency', () => {
@@ -27,6 +29,21 @@ describe('news normalizer', () => {
     expect(item.language).toBe('en')
     expect(item.excerptLanguage).toBe('sv')
     expect(item.hasAgentSummary).toBe(true)
+  })
+
+  it('uses a source image only with explicit verification, credit and rights evidence', () => {
+    const verified = normalizeFetched({
+      id: 'image', title: 'Community volunteers reach a milestone', url: 'https://example.com/story', source: 'Feed',
+      source_image_verified: true, source_image_url: 'https://images.example.com/photo.jpg', source_image_alt: 'Volunteers at work',
+      source_image_credit: 'Foto: Example', source_image_rights_url: 'https://example.com/rights',
+    })
+    const incomplete = normalizeFetched({
+      id: 'unsafe', title: 'Community volunteers reach a milestone', url: 'https://example.com/story-2', source: 'Feed',
+      source_image_verified: true, source_image_url: 'https://images.example.com/photo.jpg',
+    })
+    expect(verified.image.kind).toBe('source')
+    expect(verified.image.credit).toBe('Foto: Example')
+    expect(incomplete.image.kind).toBe('ai')
   })
 
   it('filters sensitive candidates from the public feed', () => {
@@ -57,6 +74,6 @@ describe('news normalizer', () => {
     expect(result.demoCount).toBe(1)
     expect(result.fetchedCount).toBe(0)
     expect(result.fetchedAvailable).toBe(false)
-    expect(result.warning).toContain('nattflödet')
+    expect(result.warning).toContain('automatiska flödet')
   })
 })

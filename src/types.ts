@@ -1,4 +1,16 @@
 export type NewsOrigin = 'demo' | 'fetched'
+export type NewsImageKind = 'source' | 'ai'
+
+export interface NewsImage {
+  kind: NewsImageKind
+  url: string
+  alt: string
+  caption: string
+  width: number
+  height: number
+  credit?: string
+  rightsUrl?: string
+}
 
 export interface RawFetchedNews {
   id: string
@@ -12,6 +24,11 @@ export interface RawFetchedNews {
   source_tier_bonus?: number
   positivity_score?: number
   positive_signals?: string[]
+  source_image_verified?: boolean
+  source_image_url?: string
+  source_image_alt?: string
+  source_image_credit?: string
+  source_image_rights_url?: string
 }
 
 export interface RawSeedNews {
@@ -25,6 +42,11 @@ export interface RawSeedNews {
   readTimeMinutes?: number
   featured?: boolean
   isDemo?: boolean
+  source_image_verified?: boolean
+  source_image_url?: string
+  source_image_alt?: string
+  source_image_credit?: string
+  source_image_rights_url?: string
   source: { name: string; url: string }
 }
 
@@ -46,6 +68,7 @@ export interface NewsArticle {
   hasAgentSummary: boolean
   score: number
   signals: string[]
+  image: NewsImage
 }
 
 export interface User {

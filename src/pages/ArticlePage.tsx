@@ -1,8 +1,8 @@
 import { ArrowLeft, Bookmark, ExternalLink, MapPin, Share2 } from 'lucide-react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { useState } from 'react'
-import { CategoryArt } from '../components/CategoryArt'
 import { NewsCard, OriginBadge } from '../components/NewsCard'
+import { NewsVisual } from '../components/NewsVisual'
 import { useAuth } from '../contexts/AuthContext'
 import { useSaved } from '../contexts/SavedContext'
 import { formatDate } from '../lib/news'
@@ -53,7 +53,7 @@ export function ArticlePage() {
           <h1 lang={article.language}>{article.title}</h1>
           <p className="article-lead" lang={article.excerptLanguage}>{article.excerpt}</p>
           <div className="article-meta"><span>{article.category}</span>{article.location && <span><MapPin size={14} /> {article.location}</span>}<time dateTime={article.publishedAt}>{formatDate(article.publishedAt)}</time><span>{article.readTime} min läsning</span></div>
-          <CategoryArt category={article.category} className="article-art" />
+          <NewsVisual article={article} variant="article" priority showCaption />
           <div className="article-copy">
             {article.origin === 'demo' ? <>
               <h2>Om demosammanfattningen</h2>

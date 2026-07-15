@@ -4,6 +4,7 @@ import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 import { useSaved } from '../contexts/SavedContext'
 import { api, post } from '../lib/api'
+import type { SavedArticle } from '../types'
 
 declare global {
   interface Window {
@@ -56,10 +57,10 @@ export function ProfilePage() {
   return <section className="profile-page page-wrap"><header><div className="profile-avatar">{user.name.slice(0, 1).toLocaleUpperCase('sv')}</div><div><span className="eyebrow">Din profil</span><h1>Hej {user.name}</h1><p>{user.email}</p></div><button type="button" className="button ghost" onClick={async () => { try { await logout(); navigate('/') } catch (reason) { setStatus(reason instanceof Error ? reason.message : 'Kunde inte logga ut.') } }}><LogOut size={17} /> Logga ut</button></header>{status && <p className="form-status" role="status">{status}</p>}<div className="profile-layout"><aside><a href="#sparade"><Bookmark /> Sparade nyheter</a><a href="#installningar"><Settings /> Inställningar</a><Link to="/forum"><UserRound /> Forumet</Link></aside><div><section id="sparade" className="profile-panel"><header><div><span className="eyebrow">Läslista</span><h2>Sparade nyheter</h2></div><span>{saved.length} sparade</span></header>{savedError && <p className="form-error" role="alert">{savedError}</p>}{saved.length ? <div className="saved-list">{saved.map((item) => <SavedRow key={item.article_id} item={item} onRemove={removeSaved} />)}</div> : !savedError && <div className="empty-state"><Bookmark /><h3>Läslistan är tom</h3><p>Spara en nyhet så hamnar den här.</p><Link className="button primary" to="/">Hitta nyheter</Link></div>}</section><ProfileSettings name={user.name} onUpdated={refresh} /></div></div></section>
 }
 
-function SavedRow({ item, onRemove }: { item: { article_id: string; title: string; summary: string; source: string; url: string }; onRemove: (id: string) => Promise<void> }) {
+function SavedRow({ item, onRemove }: { item: SavedArticle; onRemove: (id: string) => Promise<void> }) {
   const [status, setStatus] = useState('')
   const [removing, setRemoving] = useState(false)
-  return <article><div><span>{item.source}</span><h3>{item.title}</h3><p>{item.summary}</p></div><div><a href={item.url} target="_blank" rel="noreferrer">Öppna källan</a><button type="button" disabled={removing} onClick={async () => { setRemoving(true); setStatus(''); try { await onRemove(item.article_id) } catch (reason) { setStatus(reason instanceof Error ? reason.message : 'Kunde inte ta bort nyheten.'); setRemoving(false) } }}>{removing ? 'Tar bort…' : 'Ta bort'}</button>{status && <span className="form-error" role="status">{status}</span>}</div></article>
+  return <article>{item.image && <div className="saved-thumb-wrap"><img className="saved-thumb" src={item.image} width="160" height="107" loading="lazy" decoding="async" alt="" /><span className="visual-disclosure ai">AI-illustration</span></div>}<div><span>{item.source}</span><h3>{item.title}</h3><p>{item.summary}</p></div><div><a href={item.url} target="_blank" rel="noreferrer">Öppna källan</a><button type="button" disabled={removing} onClick={async () => { setRemoving(true); setStatus(''); try { await onRemove(item.article_id) } catch (reason) { setStatus(reason instanceof Error ? reason.message : 'Kunde inte ta bort nyheten.'); setRemoving(false) } }}>{removing ? 'Tar bort…' : 'Ta bort'}</button>{status && <span className="form-error" role="status">{status}</span>}</div></article>
 }
 
 function ProfileSettings({ name, onUpdated }: { name: string; onUpdated: () => Promise<void> }) {

@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "generatedAt": "2026-07-15",
+  "generator": "OpenAI built-in image generation",
+  "disclosure": "AI-illustration – redaktionellt motiv, inte en dokumentation av händelsen.",
+  "style": "Skandinavisk redaktionell gouache och papperscollage med varm, lugn Ljusglimt-palett.",
+  "constraints": [
+    "Inga verkliga eller påhittade personer",
+    "Ingen rekonstruktion av en nyhetshändelse",
+    "Ingen text, logotyp eller vattenstämpel"
+  ],
+  "assets": [
+    { "category": "Hälsa", "file": "health.webp", "alt": "Redaktionell AI-illustration om hälsa, omsorg och återhämtning." },
+    { "category": "Miljö", "file": "environment.webp", "alt": "Redaktionell AI-illustration om ren energi och miljöframsteg." },
+    { "category": "Natur", "file": "nature.webp", "alt": "Redaktionell AI-illustration om natur, biologisk mångfald och återhämtning." },
+    { "category": "Vetenskap", "file": "science.webp", "alt": "Redaktionell AI-illustration om vetenskap, upptäckter och delad kunskap." },
+    { "category": "Människor", "file": "community.webp", "alt": "Redaktionell AI-illustration om lokalt samarbete och gemensamma idéer." },
+    { "category": "Kultur", "file": "culture.webp", "alt": "Redaktionell AI-illustration om kultur, kreativitet och restaurerat kulturarv." },
+    { "category": "Framsteg", "file": "progress.webp", "alt": "Redaktionell AI-illustration om praktiska lösningar och framsteg." }
+  ]
+}

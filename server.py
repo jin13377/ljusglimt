@@ -107,6 +107,11 @@ def safe_http_url(value: str) -> str:
     return value if parsed.scheme in {"http", "https"} and parsed.netloc else ""
 
 
+def safe_saved_image(value: str) -> str:
+    value = clean_text(value, 180)
+    return value if re.fullmatch(r"/news-images/ai/[a-z0-9-]+\.webp", value) else ""
+
+
 def read_json(path: Path, fallback):
     try:
         return json.loads(path.read_text(encoding="utf-8"))
@@ -802,7 +807,7 @@ class Handler(BaseHTTPRequestHandler):
                    title=excluded.title,summary=excluded.summary,source=excluded.source,
                    url=excluded.url,image=excluded.image,saved_at=excluded.saved_at""",
                 (user["id"], article_id, title, clean_text(payload.get("excerpt"), 1400),
-                 clean_text(payload.get("source"), 120), url, safe_http_url(payload.get("image", "")), iso_now()),
+                 clean_text(payload.get("source"), 120), url, safe_saved_image(payload.get("image", "")), iso_now()),
             )
         self._json({"ok": True, "saved": True}, HTTPStatus.CREATED)
 
@@ -915,7 +920,9 @@ class Handler(BaseHTTPRequestHandler):
                 return self._send_static_file(dist_index)
             candidate = self._safe_static_candidate(DIST_DIR, normalized)
             if candidate and candidate.is_file():
-                cache = "public, max-age=31536000, immutable" if normalized.startswith("assets/") else "no-cache"
+                cache = ("public, max-age=31536000, immutable" if normalized.startswith("assets/")
+                         else "public, max-age=604800" if normalized.startswith("news-images/")
+                         else "no-cache")
                 return self._send_static_file(candidate, cache_control=cache)
             # Missing file-like requests must not receive HTML with status 200.
             if Path(normalized).suffix:
@@ -938,7 +945,8 @@ class Handler(BaseHTTPRequestHandler):
 
     def _send_static_file(self, candidate: Path, status=HTTPStatus.OK, cache_control="no-cache"):
         content = candidate.read_bytes()
-        mime = mimetypes.guess_type(candidate.name)[0] or "application/octet-stream"
+        mime = {".webp": "image/webp", ".avif": "image/avif"}.get(candidate.suffix.casefold())
+        mime = mime or mimetypes.guess_type(candidate.name)[0] or "application/octet-stream"
         content_type = f"{mime}; charset=utf-8" if mime.startswith("text/") or mime in {"application/javascript", "application/json"} else mime
         self._headers(status, content_type, {
             "Cache-Control": cache_control,
