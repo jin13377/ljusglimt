@@ -1,14 +1,17 @@
 {
-  "generated_at": "2026-07-15T19:03:25.937641Z",
+  "generated_at": "2026-07-15T19:24:10.644703Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "bfd82ff3870062e244f3",
-    "d7ac037bee6dd16b981e",
-    "d7457a5f022d18d4ebc8",
-    "3243141d4530035d173c"
+    "94bf54b68e3a343fc6fc",
+    "82f817fc1a24248a351d"
   ],
-  "fetch_errors": [],
+  "fetch_errors": [
+    {
+      "source": "Reasons to be Cheerful",
+      "error": "HTTP Error 408: Request Timeout"
+    }
+  ],
   "items": [
     {
       "id": "b2a50a7e834fe5a51d69",
@@ -372,6 +375,42 @@
       "public_eligible": false
     },
     {
+      "id": "94bf54b68e3a343fc6fc",
+      "title": "How NASA’s Artemis III Lander Test Will Pave Way for Moon Landings",
+      "url": "https://www.nasa.gov/directorates/esdmd/artemis-campaign-development-division/human-landing-system-program/how-nasas-artemis-iii-lander-test-will-pave-way-for-moon-landings",
+      "source": "NASA News Releases",
+      "language": "en",
+      "published_at": "2026-07-15T18:50:52Z",
+      "source_excerpt": "Before Artemis astronauts land on the Moon’s surface in 2028, NASA will conduct the Artemis III demonstration mission in 2027, allowing teams on Earth and in orbit to practice rendezvous and docking operations between commercial human landing systems and the Orion spacecraft. Data from that mission, along with future uncrewed demonstration missions at the Moon, […]",
+      "agent_summary": "",
+      "source_fingerprint": "1d474ae8584fb5056ad7",
+      "source_tier_bonus": 1,
+      "positivity_score": 2,
+      "positive_signals": [
+        "curated-positive-source",
+        "mission"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "82f817fc1a24248a351d",
+      "title": "Anil Menon Launches to Space Station",
+      "url": "https://www.nasa.gov/image-article/anil-menon-launches-to-space-station",
+      "source": "NASA News Releases",
+      "language": "en",
+      "published_at": "2026-07-15T18:48:36Z",
+      "source_excerpt": "NASA astronaut candidate Anna Menon and her children watch as a Soyuz rocket launches to the International Space Station with NASA astronaut Anil Menon and Roscosmos cosmonauts Pyotr Dubrov and Anna Kikina, Tuesday, July 14, 2026, at the Baikonur Cosmodrome in Kazakhstan. The trio lifted off for the Soyuz MS-29 mission at 7:47 p.m. local […]",
+      "agent_summary": "",
+      "source_fingerprint": "660ac6a25511b3c4d7ae",
+      "source_tier_bonus": 1,
+      "positivity_score": 2,
+      "positive_signals": [
+        "curated-positive-source",
+        "mission"
+      ],
+      "public_eligible": false
+    },
+    {
       "id": "d7ac037bee6dd16b981e",
       "title": "NASA’s Perseverance Rover Provides Sweeping View of Broom Point",
       "url": "https://science.nasa.gov/photojournal/nasas-perseverance-rover-provides-sweeping-view-of-broom-point",
@@ -424,32 +463,6 @@
         "science"
       ],
       "public_eligible": false
-    },
-    {
-      "id": "3243141d4530035d173c",
-      "title": "New guidance offers hope for reducing the global toll of dementia",
-      "url": "https://news.un.org/feed/view/en/story/2026/07/1167948",
-      "source": "UN News",
-      "language": "en",
-      "published_at": "2026-07-15T12:00:00Z",
-      "source_excerpt": "The World Health Organization (WHO) has issued updated global guidelines aimed at reducing the risk of cognitive decline and dementia, saying that up to 45 per cent of cases may be preventable or delayed by addressing modifiable risk factors throughout life.",
-      "agent_summary": "",
-      "source_fingerprint": "688f76b4f22554ef2cdd",
-      "source_tier_bonus": 0,
-      "positivity_score": 2,
-      "positive_signals": [
-        "hope"
-      ],
-      "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/3243141d4530035d173c-688f76b4-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-abstract-v1",
-        "source_fingerprint": "688f76b4f22554ef2cdd",
-        "width": 1280,
-        "height": 848,
-        "sha256": "18a131b68fa501e91f971b412a91db2a75e1d330db8e9b04b18ede525a0c3d87"
-      }
     },
     {
       "id": "75b497f29e5c1d300945",
