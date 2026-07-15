@@ -40,6 +40,6 @@ export function NewsVisual({ article, variant = 'card', priority = false, showCa
   if (!showCaption) return media
   return <figure className={`news-figure visual-${variant}`}>
     {media}
-    <figcaption><span>{image.caption}</span>{image.rightsUrl && <a href={image.rightsUrl} target="_blank" rel="noreferrer">Bildrättigheter</a>}</figcaption>
+    {image.kind === 'source' && <figcaption><span>{image.caption}</span>{image.rightsUrl && <a href={image.rightsUrl} target="_blank" rel="noreferrer">Bildrättigheter</a>}</figcaption>}
   </figure>
 }
