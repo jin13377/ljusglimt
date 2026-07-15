@@ -9,9 +9,9 @@
   "scripts": {
     "dev": "node scripts/dev.mjs",
     "dev:web": "vite --host 127.0.0.1 --port 5173",
-    "build": "tsc -b && vite build && node scripts/prepare_static_build.mjs",
+    "build": "tsc -b && tsc -p tsconfig.worker.json --pretty false && vite build && node scripts/prepare_static_build.mjs",
     "deploy:cloudflare": "npm run build && wrangler deploy",
-    "typecheck": "tsc -b --pretty false",
+    "typecheck": "tsc -b --pretty false && tsc -p tsconfig.worker.json --pretty false",
     "lint": "eslint .",
     "test": "vitest run"
   },

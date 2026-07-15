@@ -16,7 +16,7 @@ function Avatar({ name, url, large = false }: { name: string; url?: string | nul
   return url ? <img className={`avatar ${large ? 'large' : ''}`} src={url} alt="" /> : <span className={`avatar fallback ${large ? 'large' : ''}`}>{initials}</span>
 }
 
-function ForumShell({ children, eyebrow = 'Ljusglimt forum', title = 'Kloka samtal i vänlig ton', description = 'Öppet att läsa. Medlemskap krävs för att skriva, följa och rapportera.' }: { children: React.ReactNode; eyebrow?: string; title?: string; description?: string }) {
+function ForumShell({ children, eyebrow = 'Ljusglimt forum', title = 'Kloka samtal i vänlig ton', description = 'Öppet att läsa. Medlemskap krävs för att skriva, följa och rapportera. AI-startinlägg är tydligt märkta.' }: { children: React.ReactNode; eyebrow?: string; title?: string; description?: string }) {
   return <><section className="forum-mast"><div className="page-wrap"><span className="eyebrow">{eyebrow}</span><h1>{title}</h1><p>{description}</p></div></section><div className="forum-page page-wrap">{children}</div></>
 }
 
@@ -75,13 +75,13 @@ function NewTopicForm({ section, onCreated }: { section: ForumSection; onCreated
   const titleId = useId()
   const close = () => dialog.current?.close()
   const submit = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault(); setStatus('Skickar…')
+    event.preventDefault(); setStatus('Publicerar…')
     const form = event.currentTarget
     const values = Object.fromEntries(new FormData(form))
     try { const result = await post<{ message: string }>('/api/forum/topics', values); setStatus(result.message); form.reset(); await onCreated(); window.setTimeout(close, 700) }
-    catch (e) { setStatus(e instanceof Error ? e.message : 'Kunde inte skapa tråden.') }
+    catch (e) { setStatus(e instanceof Error ? e.message : 'Kunde inte publicera tråden.') }
   }
-  return <div className="compose-pop"><button ref={trigger} className="button primary" type="button" onClick={() => { setStatus(''); dialog.current?.showModal(); window.requestAnimationFrame(() => titleInput.current?.focus()) }}><Plus size={17} /> Ny tråd</button><dialog ref={dialog} className="compose-dialog" aria-labelledby={titleId} onClose={() => trigger.current?.focus()}><form className="compose-card" onSubmit={submit}><header><h3 id={titleId}>Ny tråd i {section.title}</h3><button className="dialog-close" type="button" onClick={close} aria-label="Stäng formuläret"><X /></button></header><input type="hidden" name="sectionId" value={section.id} /><label>Rubrik<input ref={titleInput} name="title" required minLength={5} maxLength={100} /></label><label>Inlägg<textarea name="body" required minLength={10} maxLength={2000} rows={6} /></label><button className="button primary" type="submit"><Send size={16} /> Skicka till moderering</button><p role="status">{status}</p></form></dialog></div>
+  return <div className="compose-pop"><button ref={trigger} className="button primary" type="button" onClick={() => { setStatus(''); dialog.current?.showModal(); window.requestAnimationFrame(() => titleInput.current?.focus()) }}><Plus size={17} /> Ny tråd</button><dialog ref={dialog} className="compose-dialog" aria-labelledby={titleId} onClose={() => trigger.current?.focus()}><form className="compose-card" onSubmit={submit}><header><h3 id={titleId}>Ny tråd i {section.title}</h3><button className="dialog-close" type="button" onClick={close} aria-label="Stäng formuläret"><X /></button></header><input type="hidden" name="sectionId" value={section.id} /><label>Rubrik<input ref={titleInput} name="title" required minLength={5} maxLength={100} /></label><label>Inlägg<textarea name="body" required minLength={10} maxLength={2000} rows={6} /></label><button className="button primary" type="submit"><Send size={16} /> Publicera tråd</button><p className="form-hint">Publiceras direkt och kan rapporteras för granskning.</p><p role="status">{status}</p></form></dialog></div>
 }
 
 export function ForumThreadPage() {
@@ -121,7 +121,7 @@ export function ForumThreadPage() {
     try { const result = await post<{ message: string }>('/api/forum/report', { topicId: topic.id, reason }); setStatus(result.message) }
     catch (e) { setStatus(e instanceof Error ? e.message : 'Kunde inte rapportera.') }
   }
-  return <ForumShell eyebrow={section.title} title={topic.title} description="Ett förhandsmodererat samtal i Ljusglimts forum.">
+  return <ForumShell eyebrow={section.title} title={topic.title} description="Ett öppet samtal i Ljusglimts forum. Innehåll kan rapporteras för granskning.">
     <div className="breadcrumbs"><Link to="/forum">Forum</Link><span>›</span><Link to={`/forum/sektion/${section.id}`}>{section.title}</Link><span>›</span><strong>{topic.title}</strong></div>
     <header className="thread-head"><div><span className="eyebrow">Trådinformation</span><h2 className="sr-only">Verktyg för tråden</h2><p>{topic.replies.length + 1} inlägg · {topic.views} visningar</p></div><div><button className="button ghost" type="button" onClick={follow} aria-pressed={topic.followed}><Bell size={16} /> {topic.followed ? 'Följer' : 'Följ tråden'}</button><button className="text-action" type="button" onClick={report}><Flag size={15} /> Rapportera</button></div></header>
     {status && <div className="status-banner" role="status"><Check size={17} /> {status}</div>}
@@ -132,17 +132,18 @@ export function ForumThreadPage() {
 }
 
 function ForumPost({ title, body, author, createdAt, status, opening, index }: { title?: string; body: string; author: { name: string; avatarUrl?: string | null; memberSince?: string | null; role?: string }; createdAt: string; status: string; opening?: boolean; index?: number }) {
-  return <article className={`forum-post ${status !== 'published' ? 'pending' : ''}`}><aside><Avatar name={author.name} url={author.avatarUrl} large /><strong>{author.name}</strong><span>{author.role === 'admin' ? 'Administratör' : author.role === 'moderator' ? 'Moderator' : 'Medlem'}</span></aside><div><header><span>{opening ? 'Trådstart' : `Svar #${index}`}</span><time dateTime={createdAt}>{formatDate(createdAt, true)}</time></header>{status !== 'published' && <p className="pending-note">Syns bara för dig tills moderatorerna har granskat inlägget.</p>}{opening && <h2>{title}</h2>}<p>{body}</p></div></article>
+  const role = author.role === 'admin' ? 'Administratör' : author.role === 'moderator' ? 'Moderator' : author.role === 'ai' ? 'AI-startinlägg' : 'Medlem'
+  return <article className={`forum-post ${status !== 'published' ? 'pending' : ''}`}><aside><Avatar name={author.name} url={author.avatarUrl} large /><strong>{author.name}</strong><span>{role}</span></aside><div><header><span>{opening ? 'Trådstart' : `Svar #${index}`}</span><time dateTime={createdAt}>{formatDate(createdAt, true)}</time></header>{status !== 'published' && <p className="pending-note">Inlägget väntar på granskning.</p>}{opening && <h2>{title}</h2>}<p>{body}</p></div></article>
 }
 
 function ReplyForm({ topicId, onCreated }: { topicId: string; onCreated: () => void }) {
   const [status, setStatus] = useState('')
   return <form className="reply-form" onSubmit={async (event) => {
-    event.preventDefault(); setStatus('Skickar…'); const form = event.currentTarget
+    event.preventDefault(); setStatus('Publicerar…'); const form = event.currentTarget
     try { const result = await post<{ message: string }>('/api/forum/replies', { topicId, body: new FormData(form).get('body') }); setStatus(result.message); form.reset(); setTimeout(onCreated, 500) }
-    catch (e) { setStatus(e instanceof Error ? e.message : 'Kunde inte skicka svaret.') }
-  }}><label>Skriv ett svar<textarea name="body" minLength={10} maxLength={1600} required rows={6} placeholder="Håll tonen vänlig, saklig och konkret." /></label><div><button className="button primary" type="submit"><Send size={16} /> Skicka till moderering</button><span role="status">{status}</span></div></form>
+    catch (e) { setStatus(e instanceof Error ? e.message : 'Kunde inte publicera svaret.') }
+  }}><label>Skriv ett svar<textarea name="body" minLength={10} maxLength={1600} required rows={6} placeholder="Håll tonen vänlig, saklig och konkret." /></label><div><button className="button primary" type="submit"><Send size={16} /> Publicera svar</button><span role="status">{status}</span></div></form>
 }
 
-function ForumRules() { return <section className="forum-rules"><ShieldCheck /><h2>Så håller vi tonen</h2><ol><li>Var vänlig och saklig.</li><li>Skydda personuppgifter.</li><li>Länka källan vid faktapåståenden.</li></ol><p>Nya inlägg förhandsmodereras.</p></section> }
+function ForumRules() { return <section className="forum-rules"><ShieldCheck /><h2>Så håller vi tonen</h2><ol><li>Var vänlig och saklig.</li><li>Skydda personuppgifter.</li><li>Länka källan vid faktapåståenden.</li></ol><p>Inlägg publiceras direkt och kan rapporteras för granskning.</p></section> }
 function ForumError({ message }: { message: string }) { return <div className="empty-state"><AlertTriangle /><h2>Forumet kunde inte laddas</h2><p>{message}</p><Link className="button primary" to="/forum">Försök från forumstarten</Link></div> }

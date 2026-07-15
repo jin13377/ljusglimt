@@ -16,4 +16,8 @@ export default tseslint.config(
       'react-refresh/only-export-components': 'off',
     },
   },
+  {
+    files: ['worker/**/*.ts'],
+    languageOptions: { globals: globals.worker },
+  },
 )
