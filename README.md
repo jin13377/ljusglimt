@@ -7,18 +7,35 @@ Codex/RSS-pipeline.
 
 ## Starta lokalt
 
-Dubbelklicka på `Starta Ljusglimt.cmd`, eller kör:
+Installera frontendberoendena en gång och dubbelklicka sedan på
+`Starta Ljusglimt.cmd`:
 
 ```powershell
+npm install
+node scripts/dev.mjs
+```
+
+Utvecklingsservern öppnas på [http://127.0.0.1:5173](http://127.0.0.1:5173)
+och Python-API:t kör på port 4173. Dev-skriptet startar båda processerna och
+stänger dem tillsammans med `Ctrl+C`.
+
+För ett produktionslikt lokalt läge:
+
+```powershell
+npm run build
 python server.py
 ```
 
-Öppna sedan [http://127.0.0.1:4173](http://127.0.0.1:4173).
+Python serverar då Vite-bygget från `dist/` på
+[http://127.0.0.1:4173](http://127.0.0.1:4173). Direkta SPA-länkar och de äldre
+adresserna `/forum.html`, `/profil.html` och `/om.html` fortsätter fungera,
+även med befintliga query-parametrar. Om Vite ännu inte är installerat kan
+Python fortfarande visa den äldre beroendefria frontendversionen.
 
 ## Det som fungerar
 
 - startsida med källbelagda demoartiklar och automatiskt hämtade RSS-notiser;
-- kategorifilter, sök, artikelmodal och tydlig länk till originalkälla;
+- kategorifilter, sök, egna artikelsidor och tydlig länk till originalkälla;
 - responsiv mobilmeny utan horisontell overflow;
 - forum med trådar/svar, honeypot, hastighetsgräns och modereringskö;
 - konton med e-post och säkert scrypt-hashade lösenord;
@@ -45,8 +62,8 @@ avvisar ändringar utanför de tillåtna datafilerna.
 
 ```powershell
 python -m unittest discover -s tests -v
-node --check assets/app.js
-node --check assets/forum.js
+node --check scripts/dev.mjs
+npm run build
 ```
 
 Läs [automationsdetaljer](docs/automation.md), [forum-API](docs/forum-api.md)

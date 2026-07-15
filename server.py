@@ -27,11 +27,18 @@ from urllib.parse import unquote, urlparse
 
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "data"
+DIST_DIR = Path(os.getenv("GLIMT_DIST_PATH", str(ROOT / "dist")))
 FORUM_SEED = DATA / "forum.json"
 NEWS_FILE = DATA / "news.json"
 DB_FILE = Path(os.getenv("GLIMT_DB_PATH", str(DATA / "glimt.db")))
 PUBLIC_PAGES = {"index.html", "forum.html", "profil.html", "om.html", "404.html"}
 PUBLIC_DATA = {"data/news.json", "data/seed-news.json"}
+LEGACY_ALIASES = {
+    "/": "index.html", "/index.html": "index.html",
+    "/forum": "forum.html", "/forum/": "forum.html", "/forum.html": "forum.html",
+    "/profil": "profil.html", "/profil/": "profil.html", "/profil.html": "profil.html",
+    "/om": "om.html", "/om/": "om.html", "/om.html": "om.html",
+}
 MAX_BODY = 32_000
 SESSION_DAYS = 30
 FORUM_CATEGORIES = {"Vardagsglädje", "Lokalt", "Goda idéer", "Nyheter", "Miljö", "Vetenskap"}
@@ -479,14 +486,17 @@ class Handler(BaseHTTPRequestHandler):
         print(f"[{self.log_date_time_string()}] {fmt % args}")
 
     def _headers(self, status=HTTPStatus.OK, content_type="application/json; charset=utf-8", extra=None):
+        extra = dict(extra or {})
         self.send_response(status)
         self.send_header("Content-Type", content_type)
         self.send_header("X-Content-Type-Options", "nosniff")
         self.send_header("Referrer-Policy", "strict-origin-when-cross-origin")
         self.send_header("X-Frame-Options", "DENY")
         self.send_header("Permissions-Policy", "camera=(), microphone=(), geolocation=()")
-        self.send_header("Cache-Control", "no-store" if self.path.startswith("/api/") else "no-cache")
-        for key, value in (extra or {}).items():
+        self.send_header("Cache-Control", extra.pop(
+            "Cache-Control", "no-store" if self.path.startswith("/api/") else "no-cache"
+        ))
+        for key, value in extra.items():
             self.send_header(key, value)
         self.end_headers()
 
@@ -576,6 +586,8 @@ class Handler(BaseHTTPRequestHandler):
             topic_id = clean_text((query.get("id") or [""])[0], 80)
             result = forum_topic_payload(topic_id, self._current_user())
             return self._json(result, HTTPStatus.OK) if result else self._json({"error": "Tråden hittades inte."}, HTTPStatus.NOT_FOUND)
+        if route == "/api" or route.startswith("/api/"):
+            return self._json({"error": "Okänd endpoint."}, HTTPStatus.NOT_FOUND)
         self._serve_static(route)
 
     def do_POST(self):
@@ -823,23 +835,68 @@ class Handler(BaseHTTPRequestHandler):
         self._json({"ok": True, "followed": True, "message": "Du följer nu tråden."}, HTTPStatus.CREATED)
 
     def _serve_static(self, route: str):
-        route = unquote(route)
-        aliases = {"/": "index.html", "/forum": "forum.html", "/profil": "profil.html", "/om": "om.html"}
-        relative = aliases.get(route, route.lstrip("/"))
-        normalized = relative.replace("\\", "/")
-        is_asset = normalized.startswith("assets/") and not any(part.startswith(".") for part in Path(normalized).parts)
-        if normalized not in PUBLIC_PAGES and normalized not in PUBLIC_DATA and not is_asset:
-            return self._json({"error": "Sidan hittades inte"}, HTTPStatus.NOT_FOUND)
-        candidate = (ROOT / relative).resolve()
-        if ROOT not in candidate.parents and candidate != ROOT:
+        try:
+            decoded = unquote(route, errors="strict")
+        except UnicodeDecodeError:
+            return self._json({"error": "Ogiltig sökväg"}, HTTPStatus.BAD_REQUEST)
+        if not decoded.startswith("/") or "\\" in decoded or "\x00" in decoded:
             return self._json({"error": "Ogiltig sökväg"}, HTTPStatus.FORBIDDEN)
-        if not candidate.is_file():
-            candidate, status = ROOT / "404.html", HTTPStatus.NOT_FOUND
-        else:
-            status = HTTPStatus.OK
+
+        relative = decoded.lstrip("/")
+        parts = tuple(part for part in relative.split("/") if part)
+        if any(part in {".", ".."} or part.startswith(".") for part in parts):
+            return self._json({"error": "Ogiltig sökväg"}, HTTPStatus.FORBIDDEN)
+
+        normalized = "/".join(parts)
+        if normalized in PUBLIC_DATA:
+            candidate = self._safe_static_candidate(ROOT, normalized)
+            return self._send_static_file(candidate) if candidate and candidate.is_file() else self._static_not_found()
+
+        # A built Vite app is authoritative when dist/index.html exists.
+        dist_index = self._safe_static_candidate(DIST_DIR, "index.html")
+        if dist_index and dist_index.is_file():
+            if decoded in LEGACY_ALIASES:
+                return self._send_static_file(dist_index)
+            candidate = self._safe_static_candidate(DIST_DIR, normalized)
+            if candidate and candidate.is_file():
+                cache = "public, max-age=31536000, immutable" if normalized.startswith("assets/") else "no-cache"
+                return self._send_static_file(candidate, cache_control=cache)
+            # Missing file-like requests must not receive HTML with status 200.
+            if Path(normalized).suffix:
+                return self._static_not_found()
+            return self._send_static_file(dist_index)
+
+        # Development fallback keeps the previous dependency-free site usable.
+        legacy_relative = LEGACY_ALIASES.get(decoded, normalized)
+        is_asset = legacy_relative.startswith("assets/")
+        if legacy_relative not in PUBLIC_PAGES and not is_asset:
+            return self._static_not_found()
+        candidate = self._safe_static_candidate(ROOT, legacy_relative)
+        return self._send_static_file(candidate) if candidate and candidate.is_file() else self._static_not_found()
+
+    @staticmethod
+    def _safe_static_candidate(base: Path, relative: str) -> Path | None:
+        base = base.resolve()
+        candidate = (base / relative).resolve()
+        return candidate if candidate == base or base in candidate.parents else None
+
+    def _send_static_file(self, candidate: Path, status=HTTPStatus.OK, cache_control="no-cache"):
+        content = candidate.read_bytes()
         mime = mimetypes.guess_type(candidate.name)[0] or "application/octet-stream"
-        self._headers(status, f"{mime}; charset=utf-8" if mime.startswith("text/") else mime)
-        self.wfile.write(candidate.read_bytes())
+        content_type = f"{mime}; charset=utf-8" if mime.startswith("text/") or mime in {"application/javascript", "application/json"} else mime
+        self._headers(status, content_type, {
+            "Cache-Control": cache_control,
+            "Content-Length": str(len(content)),
+        })
+        self.wfile.write(content)
+
+    def _static_not_found(self):
+        not_found = self._safe_static_candidate(DIST_DIR, "404.html")
+        if not not_found or not not_found.is_file():
+            not_found = self._safe_static_candidate(ROOT, "404.html")
+        if not_found and not_found.is_file():
+            return self._send_static_file(not_found, HTTPStatus.NOT_FOUND)
+        return self._json({"error": "Sidan hittades inte"}, HTTPStatus.NOT_FOUND)
 
 
 def main():
