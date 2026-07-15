@@ -49,3 +49,6 @@ pnpm-debug.log*
 Thumbs.db
 .idea/
 .vscode/
+
+# Local Codex attachments
+.codex-remote-attachments/

@@ -39,17 +39,19 @@ Python fortfarande visa den äldre beroendefria frontendversionen.
 
 ## Gratis statisk publicering
 
-Projektet är förberett för Cloudflare Pages med GitHub som källa. Använd:
+Projektet är förberett för Cloudflare Workers Static Assets med GitHub som
+källa. Använd under Worker-inställningen `Settings > Builds`:
 
 - produktionsgren: `main`
 - build command: `npm run build`
-- output directory: `dist`
+- deploy command: `npx wrangler deploy`
+- root directory: lämnas tom
 - Node.js: 22 eller senare
 - obligatoriska environment variables: inga
 
 Bygget kopierar automatiskt `data/news.json` och `data/seed-news.json` till
-`dist/data/`. Route-filen `public/_redirects` gör att direkta länkar i React-
-appen fungerar på en statisk host.
+`dist/data/`. `wrangler.jsonc` publicerar mappen `dist` och ser till att direkta
+länkar i React-appen fungerar som en SPA.
 
 Nyheter, sök, artiklar och Om-sidan fungerar statiskt. Forumskrivning,
 inloggning, profiler, sparade nyheter och nyhetsbrevsregistrering kräver
