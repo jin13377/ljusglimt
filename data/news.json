@@ -65,7 +65,16 @@
         "conservation",
         "hope"
       ],
-      "public_eligible": true
+      "public_eligible": true,
+      "generated_image": {
+        "url": "/news-images/generated/1975208a7e6ad125a4af-84c32865-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-abstract-v1",
+        "source_fingerprint": "84c32865a61a64525826",
+        "width": 1280,
+        "height": 848,
+        "sha256": "04a6d27b029abb0658fc7f1064b936b9992fabf4638c6343d5cd194931804b3a"
+      }
     },
     {
       "id": "b633381743991714a6b4",
@@ -179,7 +188,16 @@
         "community",
         "volunteer"
       ],
-      "public_eligible": true
+      "public_eligible": true,
+      "generated_image": {
+        "url": "/news-images/generated/9a227c3910aa2c6a2a31-a36669d8-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-abstract-v1",
+        "source_fingerprint": "a36669d8220bf7056b69",
+        "width": 1280,
+        "height": 848,
+        "sha256": "d1e4301fa57207fcaddcf74ffaf3a2f28b36fd8a370df5678df46235a616e023"
+      }
     },
     {
       "id": "1b82a78f627942caa9fb",
@@ -306,7 +324,16 @@
         "curated-positive-source",
         "volunteer"
       ],
-      "public_eligible": true
+      "public_eligible": true,
+      "generated_image": {
+        "url": "/news-images/generated/e6ab936520421c01f62d-530f7170-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-abstract-v1",
+        "source_fingerprint": "530f717066e612bd74e8",
+        "width": 1280,
+        "height": 848,
+        "sha256": "d8e957f5353182d55049b9d22f028cd3fcae287f2a0c5df162050a152b83bf29"
+      }
     },
     {
       "id": "f9cdb3027dff30cc08c9",
@@ -413,7 +440,16 @@
       "positive_signals": [
         "hope"
       ],
-      "public_eligible": true
+      "public_eligible": true,
+      "generated_image": {
+        "url": "/news-images/generated/3243141d4530035d173c-688f76b4-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-abstract-v1",
+        "source_fingerprint": "688f76b4f22554ef2cdd",
+        "width": 1280,
+        "height": 848,
+        "sha256": "18a131b68fa501e91f971b412a91db2a75e1d330db8e9b04b18ede525a0c3d87"
+      }
     },
     {
       "id": "75b497f29e5c1d300945",
@@ -431,7 +467,16 @@
         "curated-positive-source",
         "success"
       ],
-      "public_eligible": true
+      "public_eligible": true,
+      "generated_image": {
+        "url": "/news-images/generated/75b497f29e5c1d300945-5c562e80-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-abstract-v1",
+        "source_fingerprint": "5c562e80ea2e5aecae8d",
+        "width": 1280,
+        "height": 848,
+        "sha256": "f8f4e049b1e007262f188fe5a58d4337553b6bedfc6a4f2fddd6bdc88fb8dc6e"
+      }
     }
   ]
 }

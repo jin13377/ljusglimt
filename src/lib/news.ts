@@ -1,4 +1,4 @@
-import type { NewsArticle, NewsImage, RawAiNewsImage, RawFetchedNews, RawSeedNews } from '../types'
+import type { NewsArticle, NewsImage, RawAiNewsImage, RawFetchedNews, RawGeneratedNewsImage, RawSeedNews } from '../types'
 
 const aiCategoryImages: Record<string, { url: string; alt: string }> = {
   Hälsa: { url: '/news-images/ai/health.webp', alt: 'Redaktionell AI-illustration om hälsa, omsorg och återhämtning.' },
@@ -15,6 +15,7 @@ interface RawImageFields {
   title: string
   source_fingerprint?: string
   ai_image?: RawAiNewsImage
+  generated_image?: RawGeneratedNewsImage
   source_image_verified?: boolean
   source_image_url?: string
   source_image_alt?: string
@@ -61,7 +62,7 @@ function resolveSourceImage(item: RawImageFields): NewsImage | undefined {
   return undefined
 }
 
-function resolveGeneratedImage(item: RawImageFields): NewsImage | undefined {
+function resolveAiImage(item: RawImageFields): NewsImage | undefined {
   const image = item.ai_image
   const id = item.id || ''
   const fingerprint = item.source_fingerprint || ''
@@ -89,12 +90,37 @@ function resolveGeneratedImage(item: RawImageFields): NewsImage | undefined {
   }
 }
 
+function resolveAutomaticIllustration(item: RawImageFields): NewsImage | undefined {
+  const image = item.generated_image
+  const id = item.id || ''
+  const fingerprint = item.source_fingerprint || ''
+  if (!image || !/^[a-f0-9]{20}$/.test(id) || !/^[a-f0-9]{20}$/.test(fingerprint)) return undefined
+  const expectedUrl = `/news-images/generated/${id}-${fingerprint.slice(0, 8)}-v1.svg`
+  if (image.url !== expectedUrl
+      || image.source_fingerprint !== fingerprint
+      || image.style_version !== 'glimt-abstract-v1'
+      || image.width !== 1280
+      || image.height !== 848
+      || !/^[a-f0-9]{64}$/.test(image.sha256)
+      || !image.alt?.trim()) return undefined
+  return {
+    kind: 'generated',
+    url: image.url,
+    alt: image.alt.trim(),
+    caption: 'Automatiskt skapad redaktionell illustration.',
+    width: image.width,
+    height: image.height,
+  }
+}
+
 function resolveNewsImages(item: RawImageFields, category: string): Pick<NewsArticle, 'image' | 'fallbackImage'> {
   const categoryImage = getAiCategoryImage(category)
-  const generatedImage = resolveGeneratedImage(item)
+  const aiImage = resolveAiImage(item)
+  const automaticIllustration = resolveAutomaticIllustration(item)
   const sourceImage = resolveSourceImage(item)
-  if (sourceImage) return { image: sourceImage, fallbackImage: generatedImage || categoryImage }
-  if (generatedImage) return { image: generatedImage, fallbackImage: categoryImage }
+  if (sourceImage) return { image: sourceImage, fallbackImage: aiImage || automaticIllustration || categoryImage }
+  if (aiImage) return { image: aiImage, fallbackImage: automaticIllustration || categoryImage }
+  if (automaticIllustration) return { image: automaticIllustration, fallbackImage: categoryImage }
   return { image: categoryImage }
 }
 

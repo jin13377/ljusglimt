@@ -580,6 +580,10 @@ function safeUrl(value: string) {
   }
 }
 
+function safeSavedImage(value: string) {
+  return /^\/news-images\/(?:ai\/[a-z0-9-]+\.webp|ai\/articles\/[a-f0-9]{20}-[a-f0-9]{8}-v1\.webp|generated\/[a-f0-9]{20}-[a-f0-9]{8}-v1\.svg)$/.test(value) ? value : ''
+}
+
 async function saveArticle(env: Env, request: Request) {
   const user = await requireUser(env, request)
   const body = await readBody(request)
@@ -588,7 +592,7 @@ async function saveArticle(env: Env, request: Request) {
   const summary = clean(body.excerpt, 1_000)
   const source = clean(body.source, 120)
   const url = clean(body.url, 1_000)
-  const image = clean(body.image, 1_000)
+  const image = safeSavedImage(clean(body.image, 1_000))
   if (!id || !title || !safeUrl(url)) return json({ error: 'Nyheten kunde inte sparas.' }, 400)
   await env.DB.prepare(`INSERT INTO saved_articles (user_id, article_id, title, summary, source, url, image, saved_at)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(user_id, article_id) DO UPDATE SET

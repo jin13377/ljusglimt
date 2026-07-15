@@ -34,7 +34,9 @@ export function NewsVisual({ article, variant = 'card', priority = false, showCa
     />
     {image.kind === 'ai'
       ? <AiImageBadge />
-      : <span className="visual-disclosure source"><ImageIcon size={13} />Källbild</span>}
+      : image.kind === 'generated'
+        ? <span className="visual-disclosure generated"><ImageIcon size={13} />Illustration</span>
+        : <span className="visual-disclosure source"><ImageIcon size={13} />Källbild</span>}
   </div>
 
   if (!showCaption) return media

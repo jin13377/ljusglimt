@@ -1,5 +1,5 @@
 export type NewsOrigin = 'demo' | 'fetched'
-export type NewsImageKind = 'source' | 'ai'
+export type NewsImageKind = 'source' | 'ai' | 'generated'
 export type NewsAiOrigin = 'generated' | 'category'
 
 export interface NewsImage {
@@ -26,6 +26,16 @@ export interface RawAiNewsImage {
   generated_at: string
 }
 
+export interface RawGeneratedNewsImage {
+  url: string
+  alt: string
+  style_version: string
+  source_fingerprint: string
+  width: number
+  height: number
+  sha256: string
+}
+
 export interface RawFetchedNews {
   id: string
   title: string
@@ -41,6 +51,7 @@ export interface RawFetchedNews {
   source_fingerprint?: string
   public_eligible?: boolean
   ai_image?: RawAiNewsImage
+  generated_image?: RawGeneratedNewsImage
   source_image_verified?: boolean
   source_image_url?: string
   source_image_alt?: string

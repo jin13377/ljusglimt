@@ -15,6 +15,15 @@ describe('news normalizer', () => {
     sha256: 'a'.repeat(64),
     generated_at: '2026-07-15T10:00:00Z',
   }
+  const freeIllustration = {
+    url: '/news-images/generated/0123456789abcdefabcd-aabbccdd-v1.svg',
+    alt: 'Automatiskt skapad redaktionell illustration.',
+    style_version: 'glimt-abstract-v1',
+    source_fingerprint: 'aabbccddeeff00112233',
+    width: 1280,
+    height: 848,
+    sha256: 'b'.repeat(64),
+  }
 
   it('infers a category without relying on missing API fields', () => {
     expect(inferCategory({ id: '1', title: 'New solar energy record', url: 'https://example.com', source: 'Test' })).toBe('Miljö')
@@ -66,6 +75,16 @@ describe('news normalizer', () => {
     expect(item.image.kind).toBe('ai')
     expect(item.image.aiOrigin).toBe('generated')
     expect(item.image.url).toBe(generatedImage.url)
+    expect(item.fallbackImage?.aiOrigin).toBe('category')
+  })
+
+  it('uses a free local illustration without treating it as an AI image', () => {
+    const item = normalizeFetched({
+      id: '0123456789abcdefabcd', title: 'Volunteers restore a local wetland', url: 'https://example.com/free', source: 'Feed',
+      source_fingerprint: 'aabbccddeeff00112233', generated_image: freeIllustration,
+    })
+    expect(item.image.kind).toBe('generated')
+    expect(item.image.url).toBe(freeIllustration.url)
     expect(item.fallbackImage?.aiOrigin).toBe('category')
   })
 

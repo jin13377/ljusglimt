@@ -40,7 +40,7 @@ export function SavedProvider({ children }: { children: ReactNode }) {
         return 'removed'
       }
       const image = [article.image, article.fallbackImage]
-        .find((candidate) => candidate?.url.startsWith('/news-images/ai/'))?.url || ''
+        .find((candidate) => candidate && candidate.kind !== 'source' && candidate.url.startsWith('/news-images/'))?.url || ''
       await post('/api/saved', { id: article.id, title: article.title, excerpt: article.excerpt, source: article.source, url: article.url, image })
       await refresh()
       return 'saved'

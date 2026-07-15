@@ -176,6 +176,24 @@ class PositiveNewsTests(unittest.TestCase):
         changed = {**item, "source_fingerprint": "d" * 20}
         self.assertEqual(news.reusable_ai_image(changed, previous), {})
 
+    def test_free_generated_image_is_reused_only_for_unchanged_source(self):
+        item = {"id": "a" * 20, "source_fingerprint": "b" * 20}
+        image = {
+            "url": f"/news-images/generated/{'a' * 20}-{'b' * 8}-v1.svg",
+            "alt": "Automatiskt skapad redaktionell illustration.",
+            "style_version": "glimt-abstract-v1",
+            "source_fingerprint": "b" * 20,
+            "width": 1280,
+            "height": 848,
+            "sha256": "c" * 64,
+        }
+        previous = {"source_fingerprint": "b" * 20, "generated_image": image}
+        self.assertEqual(news.reusable_generated_image(item, previous), {"generated_image": image})
+        self.assertEqual(news.reusable_generated_image(
+            {**item, "source_fingerprint": "d" * 20}, previous), {})
+        self.assertEqual(news.reusable_generated_image(
+            item, {**previous, "generated_image": {**image, "style_version": "wrong"}}), {})
+
     def test_fresh_licensed_rss_image_wins_over_previous_image(self):
         xml = b"""<rss xmlns:media="http://search.yahoo.com/mrss/"><channel><item>
         <title>Community rescue success</title><link>https://example.com/story</link>

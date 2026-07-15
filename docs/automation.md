@@ -30,13 +30,12 @@ Workflow-jobbet publicerar i tre kontrollerade steg: först källdata, därefter
 unika artikelbilder och sist eventuella svenska Codex-sammanfattningar. Varje
 steg validerar sin egen tillåtna ändringsmängd innan commit.
 
-Bildsteget körs automatiskt vid schemakörningar. Det prioriterar nya publika
-artiklar och fortsätter sedan med äldre artiklar som saknar giltig bild. Högst
-tre bilder kan skapas per körning. Saknad nyckel eller ett bildfel lämnar
-artikeln med sin lokala kategoriillustration och påverkar inte källuppdateringen.
-För bildsteget rekommenderas GitHub-secret `OPENAI_IMAGE_API_KEY`; den vanliga
-`OPENAI_API_KEY` kan användas som reserv. Manuell workflow-körning genererar
-inte betalda bilder om inte `generate_images` väljs uttryckligen.
+Det första bildsteget är alltid kostnadsfritt. Det skapar en deterministisk,
+abstrakt SVG för varje publik artikel och kräver varken API-nyckel eller
+betalningsplan. Om samma artikel återkommer återanvänds exakt samma bild.
+Källtext läggs aldrig i SVG-filen. Ett valfritt senare bildsteg kan använda
+`OPENAI_IMAGE_API_KEY`, men körs inte när nyckeln saknas. Manuell körning
+aktiverar aldrig det betalda steget om inte `generate_images` väljs uttryckligen.
 
 ## Agent-/Codex-sammanfattning
 

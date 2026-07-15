@@ -160,11 +160,14 @@ class AccountApiTests(unittest.TestCase):
 
 
 class PasswordTests(unittest.TestCase):
-    def test_saved_images_only_accept_local_ai_assets(self):
+    def test_saved_images_only_accept_approved_local_assets(self):
         self.assertEqual(server.safe_saved_image("/news-images/ai/nature.webp"), "/news-images/ai/nature.webp")
         article_image = "/news-images/ai/articles/0123456789abcdefabcd-aabbccdd-v1.webp"
         self.assertEqual(server.safe_saved_image(article_image), article_image)
         self.assertEqual(server.safe_saved_image(article_image.replace("-v1.webp", "-v2.webp")), "")
+        generated = "/news-images/generated/0123456789abcdefabcd-aabbccdd-v1.svg"
+        self.assertEqual(server.safe_saved_image(generated), generated)
+        self.assertEqual(server.safe_saved_image(generated.replace("-v1.svg", "-v2.svg")), "")
         self.assertEqual(server.safe_saved_image("https://tracker.example/image.jpg"), "")
         self.assertEqual(server.safe_saved_image("/news-images/ai/../../server.py"), "")
         self.assertEqual(server.safe_saved_image("/news-images/ai/articles/../../server.py.webp"), "")

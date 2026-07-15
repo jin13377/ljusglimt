@@ -53,6 +53,10 @@ AI_IMAGE_KEYS = {
     "url", "alt", "model", "prompt_version", "source_fingerprint",
     "width", "height", "sha256", "generated_at",
 }
+GENERATED_IMAGE_KEYS = {
+    "url", "alt", "style_version", "source_fingerprint",
+    "width", "height", "sha256",
+}
 HEX_20_RE = re.compile(r"^[0-9a-f]{20}$")
 SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
 ISO_UTC_RE = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,6})?Z$")
@@ -131,6 +135,28 @@ def reusable_ai_image(item: dict, previous: dict | None) -> dict:
     except ValueError:
         return {}
     return {"ai_image": dict(image)}
+
+
+def reusable_generated_image(item: dict, previous: dict | None) -> dict:
+    """Keep a free local illustration only while its source fingerprint matches."""
+    if not previous or previous.get("source_fingerprint") != item.get("source_fingerprint"):
+        return {}
+    article_id = str(item.get("id") or "")
+    fingerprint = str(item.get("source_fingerprint") or "")
+    image = previous.get("generated_image")
+    if (not HEX_20_RE.fullmatch(article_id) or not HEX_20_RE.fullmatch(fingerprint)
+            or not isinstance(image, dict) or set(image) != GENERATED_IMAGE_KEYS):
+        return {}
+    expected_url = f"/news-images/generated/{article_id}-{fingerprint[:8]}-v1.svg"
+    if (image.get("url") != expected_url
+            or image.get("alt") != "Automatiskt skapad redaktionell illustration."
+            or image.get("style_version") != "glimt-abstract-v1"
+            or image.get("source_fingerprint") != fingerprint
+            or image.get("width") != 1280 or image.get("height") != 848
+            or not isinstance(image.get("sha256"), str)
+            or not SHA256_RE.fullmatch(image["sha256"])):
+        return {}
+    return {"generated_image": dict(image)}
 
 
 def _safe_https_url(value: object, allowed_hosts: set[str] | None = None) -> str:
@@ -473,6 +499,7 @@ def main(argv: list[str] | None = None) -> int:
         item["agent_summary"] = reusable_summary(item, previous)
         item["public_eligible"] = public_eligible(item)
         item.update(reusable_ai_image(item, previous))
+        item.update(reusable_generated_image(item, previous))
         # Fresh, fully licensed feed metadata wins over any previous image.
         if item.get("source_image_verified") is not True:
             item.update(reusable_source_image(item, previous))

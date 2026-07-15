@@ -41,6 +41,12 @@ jobs:
             python scripts/fetch_positive_news.py
           fi
 
+      - name: Create free local article illustrations
+        run: |
+          python scripts/generate_free_article_visuals.py \
+            --news data/news.json \
+            --output-dir public/news-images/generated
+
       - name: Test deterministic pipeline
         run: python -m unittest discover -s tests -v
 
@@ -49,13 +55,13 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if git diff --quiet -- data/news.json data/history.json; then
+          if git diff --quiet -- data/news.json data/history.json public/news-images/generated; then
             echo "No source changes"
           else
             git config user.name "ljusglimt-bot"
             git config user.email "ljusglimt-bot@users.noreply.github.com"
-            git add data/news.json data/history.json
-            git commit -m "chore(news): scheduled source update"
+            git add data/news.json data/history.json public/news-images/generated
+            git commit -m "chore(news): scheduled editorial update"
             git push "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "HEAD:${GITHUB_REF_NAME}"
           fi
 
