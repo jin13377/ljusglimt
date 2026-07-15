@@ -1,6 +1,6 @@
 import { MotionConfig } from 'framer-motion'
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
-import { lazy, Suspense, useEffect } from 'react'
+import { lazy, Suspense, useEffect, useRef } from 'react'
 import { Layout } from './components/Layout'
 import { AuthProvider } from './contexts/AuthContext'
 import { SavedProvider } from './contexts/SavedContext'
@@ -16,8 +16,27 @@ const ForumSectionPage = lazy(() => import('./pages/ForumPage').then((module) =>
 const ForumThreadPage = lazy(() => import('./pages/ForumPage').then((module) => ({ default: module.ForumThreadPage })))
 
 function ScrollManager() {
-  const { pathname } = useLocation()
-  useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [pathname])
+  const { pathname, hash } = useLocation()
+  const firstRender = useRef(true)
+  useEffect(() => {
+    const title = pathname === '/' || pathname === '/nyheter' ? 'Ljusglimt – nyheter som ger perspektiv'
+      : pathname === '/sok' ? 'Sök nyheter – Ljusglimt'
+        : pathname.startsWith('/nyhet/') ? 'Nyhet – Ljusglimt'
+          : pathname.startsWith('/forum/trad/') ? 'Forumtråd – Ljusglimt'
+            : pathname.startsWith('/forum/sektion/') ? 'Forumavdelning – Ljusglimt'
+              : pathname === '/forum' ? 'Forum – Ljusglimt'
+                : pathname === '/profil' ? 'Profil – Ljusglimt'
+                  : pathname === '/om' ? 'Om Ljusglimt'
+                    : 'Sidan hittades inte – Ljusglimt'
+    document.title = title
+    const timer = window.setTimeout(() => {
+      if (hash) document.getElementById(decodeURIComponent(hash.slice(1)))?.scrollIntoView()
+      else window.scrollTo({ top: 0, behavior: 'auto' })
+      if (!firstRender.current) document.querySelector<HTMLElement>('#main')?.focus({ preventScroll: true })
+      firstRender.current = false
+    }, 50)
+    return () => window.clearTimeout(timer)
+  }, [hash, pathname])
   return null
 }
 

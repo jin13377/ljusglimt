@@ -12,7 +12,7 @@ Installera frontendberoendena en gång och dubbelklicka sedan på
 
 ```powershell
 npm install
-node scripts/dev.mjs
+npm run dev
 ```
 
 Utvecklingsservern öppnas på [http://127.0.0.1:5173](http://127.0.0.1:5173)
@@ -55,14 +55,18 @@ Python fortfarande visa den äldre beroendefria frontendversionen.
 
 Källhämtningen committas innan Codex-steget. Sidan uppdateras därför med
 källmaterial även om agentnyckeln saknas eller sammanfattningen misslyckas.
-Agenten körs i `workspace-write`, styrs av en låst prompt och workflow-jobbet
-avvisar ändringar utanför de tillåtna datafilerna.
+Agenten körs utan sparade Git-uppgifter, styrs av en låst prompt och workflow-
+jobbet avvisar andra filer och ändringar av importerade källfält. Endast nya
+`agent_summary`-värden kan publiceras av det betrodda slutsteget.
 
 ## Testa
 
 ```powershell
 python -m unittest discover -s tests -v
 node --check scripts/dev.mjs
+npm run typecheck
+npm run lint
+npm test
 npm run build
 ```
 

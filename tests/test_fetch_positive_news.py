@@ -1,6 +1,8 @@
 import importlib.util
+import json
 import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 MODULE_PATH = Path(__file__).resolve().parents[1] / "scripts/fetch_positive_news.py"
@@ -26,11 +28,48 @@ class PositiveNewsTests(unittest.TestCase):
         self.assertEqual(score, -100)
         self.assertIn("blocked:war", reasons)
 
+    def test_blocked_words_do_not_match_inside_positive_words(self):
+        item = {"title": "Community award success", "source_excerpt": "volunteer progress", "source_tier_bonus": 2}
+        score, reasons = news.score_item(item, ["community", "success"], ["war"])
+        self.assertGreater(score, 0)
+        self.assertNotIn("blocked:war", reasons)
+
+    def test_curated_source_still_requires_a_positive_signal(self):
+        item = {"title": "Magazine subscription update", "source_excerpt": "Read our latest issue", "source_tier_bonus": 2}
+        score, _ = news.score_item(item, ["community", "progress"], [])
+        self.assertEqual(score, 0)
+
+    def test_summary_is_reused_only_for_an_unchanged_source(self):
+        item = {"title": "Progress", "source_excerpt": "A source excerpt", "published_at": "2026-07-15"}
+        item["source_fingerprint"] = news.source_fingerprint(item)
+        previous = {**item, "agent_summary": "En svensk sammanfattning."}
+        self.assertEqual(news.reusable_summary(item, previous), "En svensk sammanfattning.")
+        changed = {**item, "source_excerpt": "Updated source excerpt"}
+        changed["source_fingerprint"] = news.source_fingerprint(changed)
+        self.assertEqual(news.reusable_summary(changed, previous), "")
+
     def test_atomic_write_replaces_valid_json(self):
         with tempfile.TemporaryDirectory() as folder:
             path = Path(folder) / "news.json"
             news.atomic_json_write(path, {"items": ["åäö"]})
             self.assertIn("åäö", path.read_text(encoding="utf-8"))
+
+    def test_total_feed_failure_keeps_the_last_good_output(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            config = root / "feeds.json"
+            output = root / "news.json"
+            history = root / "history.json"
+            config.write_text(json.dumps({
+                "feeds": [{"name": "Broken", "url": "https://example.com/feed", "enabled": True}],
+                "positive_keywords": ["progress"], "blocked_keywords": [], "minimum_score": 1,
+            }), encoding="utf-8")
+            original = {"generated_at": "earlier", "items": [{"id": "safe-copy"}]}
+            output.write_text(json.dumps(original), encoding="utf-8")
+            with patch.object(news, "fetch", side_effect=RuntimeError("offline")):
+                result = news.main(["--force", "--config", str(config), "--output", str(output), "--history", str(history)])
+            self.assertEqual(result, 1)
+            self.assertEqual(json.loads(output.read_text(encoding="utf-8")), original)
 
 
 if __name__ == "__main__":

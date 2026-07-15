@@ -44,6 +44,7 @@ class StaticServingTests(unittest.TestCase):
             self.assertEqual(status, 200, path)
             self.assertIn(b"Vite shell", body)
             self.assertIn("text/html", dict(headers)["Content-Type"])
+            self.assertIn("default-src 'self'", dict(headers)["Content-Security-Policy"])
 
     def test_vite_asset_has_content_type_and_long_cache(self):
         status, headers, body = self.request("/assets/app-123.js")

@@ -4,7 +4,9 @@
 from __future__ import annotations
 
 import base64
+from collections import OrderedDict
 import hashlib
+import ipaddress
 import json
 import mimetypes
 import os
@@ -77,8 +79,10 @@ FORUM_CATEGORY_TO_SECTION = {
     "Goda idéer": "goda-ideer", "Nyheter": "dagens-nyheter",
     "Miljö": "miljo-klimat", "Vetenskap": "vetenskap-teknik",
 }
-_rate_state: dict[tuple[str, str], float] = {}
+_rate_state: OrderedDict[tuple[str, str], float] = OrderedDict()
 _rate_lock = threading.Lock()
+RATE_STATE_MAX = 10_000
+RATE_STATE_TTL = 3_600
 
 
 def utc_now() -> datetime:
@@ -307,7 +311,27 @@ def create_session(user_id: str) -> tuple[str, datetime]:
             "INSERT INTO sessions VALUES (?, ?, ?, ?)",
             (token_hash(token), user_id, expires.isoformat(), iso_now()),
         )
+        db.execute(
+            """DELETE FROM sessions WHERE user_id=? AND token_hash NOT IN
+               (SELECT token_hash FROM sessions WHERE user_id=? ORDER BY created_at DESC LIMIT 10)""",
+            (user_id, user_id),
+        )
     return token, expires
+
+
+def validate_google_profile(profile: dict, client_id: str) -> dict:
+    verified = profile.get("email_verified")
+    if profile.get("aud") != client_id or verified not in {"true", True}:
+        raise ValueError("Google-kontot kunde inte verifieras.")
+    try:
+        expires = int(profile.get("exp", "0"))
+    except (TypeError, ValueError) as exc:
+        raise ValueError("Google-inloggningen saknar giltig livslängd.") from exc
+    if expires <= int(time.time()):
+        raise ValueError("Google-inloggningen har gått ut.")
+    if not profile.get("sub") or not valid_email(str(profile.get("email") or "")):
+        raise ValueError("Google-kontot saknar nödvändiga identitetsuppgifter.")
+    return profile
 
 
 def google_identity(credential: str) -> dict:
@@ -317,21 +341,16 @@ def google_identity(credential: str) -> dict:
     try:
         from google.auth.transport import requests as google_requests
         from google.oauth2 import id_token as google_id_token
-        return google_id_token.verify_oauth2_token(credential, google_requests.Request(), client_id)
+        profile = google_id_token.verify_oauth2_token(credential, google_requests.Request(), client_id)
     except ImportError:
-        pass
-    query = urllib.parse.urlencode({"id_token": credential})
-    request = urllib.request.Request(
-        f"https://oauth2.googleapis.com/tokeninfo?{query}",
-        headers={"User-Agent": "Ljusglimt/1.0"},
-    )
-    with urllib.request.urlopen(request, timeout=10) as response:
-        profile = json.loads(response.read().decode("utf-8"))
-    if profile.get("aud") != client_id or profile.get("email_verified") not in {"true", True}:
-        raise ValueError("Google-kontot kunde inte verifieras.")
-    if int(profile.get("exp", "0")) <= int(time.time()):
-        raise ValueError("Google-inloggningen har gått ut.")
-    return profile
+        query = urllib.parse.urlencode({"id_token": credential})
+        request = urllib.request.Request(
+            f"https://oauth2.googleapis.com/tokeninfo?{query}",
+            headers={"User-Agent": "Ljusglimt/1.0"},
+        )
+        with urllib.request.urlopen(request, timeout=10) as response:
+            profile = json.loads(response.read().decode("utf-8"))
+    return validate_google_profile(profile, client_id)
 
 
 def forum_index_payload(current_user: dict | None = None) -> dict:
@@ -493,6 +512,8 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header("Referrer-Policy", "strict-origin-when-cross-origin")
         self.send_header("X-Frame-Options", "DENY")
         self.send_header("Permissions-Policy", "camera=(), microphone=(), geolocation=()")
+        self.send_header("Cross-Origin-Opener-Policy", "same-origin-allow-popups")
+        self.send_header("Content-Security-Policy", "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self' https://accounts.google.com; style-src 'self' 'unsafe-inline' https://accounts.google.com; frame-src https://accounts.google.com; connect-src 'self' https://accounts.google.com https://oauth2.googleapis.com; img-src 'self' data: https:")
         self.send_header("Cache-Control", extra.pop(
             "Cache-Control", "no-store" if self.path.startswith("/api/") else "no-cache"
         ))
@@ -519,12 +540,27 @@ class Handler(BaseHTTPRequestHandler):
         return not origin or urlparse(origin).netloc == self.headers.get("Host", "")
 
     def _rate_ok(self, bucket: str, seconds: int) -> bool:
-        key = (self.headers.get("CF-Connecting-IP") or self.client_address[0], bucket)
+        client_ip = self.client_address[0]
+        if os.getenv("GLIMT_TRUST_PROXY", "").strip().lower() in {"1", "true", "yes"}:
+            forwarded = self.headers.get("CF-Connecting-IP", "").strip()
+            try:
+                client_ip = str(ipaddress.ip_address(forwarded))
+            except ValueError:
+                pass
+        key = (client_ip, bucket)
         now = time.monotonic()
         with _rate_lock:
+            while _rate_state:
+                oldest_key, oldest = next(iter(_rate_state.items()))
+                if now - oldest <= RATE_STATE_TTL:
+                    break
+                _rate_state.pop(oldest_key, None)
             if now - _rate_state.get(key, 0) < seconds:
                 return False
             _rate_state[key] = now
+            _rate_state.move_to_end(key)
+            while len(_rate_state) > RATE_STATE_MAX:
+                _rate_state.popitem(last=False)
         return True
 
     def _current_user(self) -> dict | None:
@@ -546,10 +582,15 @@ class Handler(BaseHTTPRequestHandler):
             self._json({"error": "Logga in för att fortsätta.", "code": "AUTH_REQUIRED"}, HTTPStatus.UNAUTHORIZED)
         return user
 
+    def _secure_cookie_enabled(self) -> bool:
+        secure_setting = os.getenv("GLIMT_SECURE_COOKIES", "").strip().lower() in {"1", "true", "yes"}
+        trusted_https = (os.getenv("GLIMT_TRUST_PROXY", "").strip().lower() in {"1", "true", "yes"}
+                         and self.headers.get("X-Forwarded-Proto") == "https")
+        return secure_setting or trusted_https
+
     def _session_cookie(self, token: str, expires: datetime) -> str:
-        secure = self.headers.get("X-Forwarded-Proto") == "https"
         value = f"glimt_session={token}; Path=/; HttpOnly; SameSite=Lax; Max-Age={SESSION_DAYS * 86400}; Expires={format_datetime(expires, usegmt=True)}"
-        return value + ("; Secure" if secure else "")
+        return value + ("; Secure" if self._secure_cookie_enabled() else "")
 
     def do_GET(self):
         parsed = urlparse(self.path)
@@ -561,7 +602,12 @@ class Handler(BaseHTTPRequestHandler):
             client_id = os.getenv("GOOGLE_CLIENT_ID", "").strip()
             return self._json({"googleClientId": client_id, "googleEnabled": bool(client_id)})
         if route == "/api/news":
-            return self._json(read_json(NEWS_FILE, {"items": []}))
+            try:
+                return self._json(json.loads(NEWS_FILE.read_text(encoding="utf-8")))
+            except FileNotFoundError:
+                return self._json({"items": []})
+            except json.JSONDecodeError:
+                return self._json({"error": "Nyhetsdatan är tillfälligt otillgänglig."}, HTTPStatus.SERVICE_UNAVAILABLE)
         if route == "/api/auth/me":
             user = self._current_user()
             return self._json({"user": user})
@@ -584,7 +630,7 @@ class Handler(BaseHTTPRequestHandler):
             return self._json(result, HTTPStatus.OK) if result else self._json({"error": "Forumdelen hittades inte."}, HTTPStatus.NOT_FOUND)
         if route == "/api/forum/topic":
             topic_id = clean_text((query.get("id") or [""])[0], 80)
-            result = forum_topic_payload(topic_id, self._current_user())
+            result = forum_topic_payload(topic_id, self._current_user(), self._rate_ok(f"view:{topic_id}", 300))
             return self._json(result, HTTPStatus.OK) if result else self._json({"error": "Tråden hittades inte."}, HTTPStatus.NOT_FOUND)
         if route == "/api" or route.startswith("/api/"):
             return self._json({"error": "Okänd endpoint."}, HTTPStatus.NOT_FOUND)
@@ -624,7 +670,7 @@ class Handler(BaseHTTPRequestHandler):
             email = clean_text(payload.get("email"), 180).lower()
             if not valid_email(email):
                 return self._json({"error": "Kontrollera e-postadressen."}, HTTPStatus.BAD_REQUEST)
-            return self._json({"ok": True, "message": "Tack! Nyhetsbrevet aktiveras i nästa steg."})
+            return self._json({"ok": True, "message": "Demo: adressen kontrollerades men sparades inte."})
         self._json({"error": "Okänd endpoint."}, HTTPStatus.NOT_FOUND)
 
     def do_DELETE(self):
@@ -655,8 +701,10 @@ class Handler(BaseHTTPRequestHandler):
         name = clean_text(payload.get("name"), 50)
         email = clean_text(payload.get("email"), 180).lower()
         password = str(payload.get("password") or "")
-        if len(name) < 2 or not valid_email(email) or len(password) < 8:
-            return self._json({"error": "Ange namn, giltig e-post och minst 8 tecken i lösenordet."}, HTTPStatus.BAD_REQUEST)
+        if len(password) > 256:
+            return self._json({"error": "Fel e-post eller lösenord."}, HTTPStatus.UNAUTHORIZED)
+        if len(name) < 2 or not valid_email(email) or not 8 <= len(password) <= 256:
+            return self._json({"error": "Ange namn, giltig e-post och 8–256 tecken i lösenordet."}, HTTPStatus.BAD_REQUEST)
         user_id = f"user-{secrets.token_hex(8)}"
         try:
             with db_connect() as db:
@@ -689,23 +737,30 @@ class Handler(BaseHTTPRequestHandler):
         try:
             profile = google_identity(clean_text(payload.get("credential"), 5000))
         except Exception as exc:
-            return self._json({"error": clean_text(exc, 180)}, HTTPStatus.UNAUTHORIZED)
+            self.log_error("Google login failed: %s", clean_text(exc, 180))
+            return self._json({"error": "Google-kontot kunde inte verifieras."}, HTTPStatus.UNAUTHORIZED)
         email = profile["email"].lower()
         with db_connect() as db:
-            row = db.execute("SELECT * FROM users WHERE google_sub=? OR email=?", (profile["sub"], email)).fetchone()
+            row = db.execute("SELECT * FROM users WHERE google_sub=?", (profile["sub"],)).fetchone()
             if row:
                 db.execute(
-                    "UPDATE users SET google_sub=?, avatar_url=COALESCE(?,avatar_url) WHERE id=?",
-                    (profile["sub"], profile.get("picture"), row["id"]),
+                    "UPDATE users SET avatar_url=COALESCE(?,avatar_url) WHERE id=?",
+                    (safe_http_url(profile.get("picture", "")) or None, row["id"]),
                 )
                 user_id = row["id"]
             else:
+                existing_email = db.execute("SELECT id FROM users WHERE email=?", (email,)).fetchone()
+                if existing_email:
+                    return self._json({"error": "E-postadressen har redan ett konto. Logga in med lösenord först."}, HTTPStatus.CONFLICT)
                 user_id = f"user-{secrets.token_hex(8)}"
-                db.execute(
-                    "INSERT INTO users(id,email,name,google_sub,avatar_url,created_at) VALUES (?,?,?,?,?,?)",
-                    (user_id, email, clean_text(profile.get("name"), 50) or email.split("@")[0],
-                     profile["sub"], safe_http_url(profile.get("picture", "")), iso_now()),
-                )
+                try:
+                    db.execute(
+                        "INSERT INTO users(id,email,name,google_sub,avatar_url,created_at) VALUES (?,?,?,?,?,?)",
+                        (user_id, email, clean_text(profile.get("name"), 50) or email.split("@")[0],
+                         profile["sub"], safe_http_url(profile.get("picture", "")), iso_now()),
+                    )
+                except sqlite3.IntegrityError:
+                    return self._json({"error": "Google-kontot kunde inte kopplas just nu."}, HTTPStatus.CONFLICT)
             row = db.execute("SELECT * FROM users WHERE id=?", (user_id,)).fetchone()
         token, expires = create_session(user_id)
         self._json({"ok": True, "user": user_public(row)}, extra={"Set-Cookie": self._session_cookie(token, expires)})
@@ -716,7 +771,8 @@ class Handler(BaseHTTPRequestHandler):
         if morsel:
             with db_connect() as db:
                 db.execute("DELETE FROM sessions WHERE token_hash=?", (token_hash(morsel.value),))
-        self._json({"ok": True}, extra={"Set-Cookie": "glimt_session=; Path=/; HttpOnly; SameSite=Lax; Max-Age=0"})
+        expired = "glimt_session=; Path=/; HttpOnly; SameSite=Lax; Max-Age=0"
+        self._json({"ok": True}, extra={"Set-Cookie": expired + ("; Secure" if self._secure_cookie_enabled() else "")})
 
     def _update_profile(self, payload: dict):
         user = self._require_user()

@@ -34,21 +34,25 @@ export function slugify(value: string): string {
 }
 
 export function normalizeFetched(item: RawFetchedNews): NewsArticle {
-  const excerpt = item.agent_summary?.trim() || item.source_excerpt?.trim() || 'Kort källnotis utan sammanfattning.'
+  const agentSummary = item.agent_summary?.trim() || ''
+  const excerpt = agentSummary || item.source_excerpt?.trim() || 'Kort källnotis utan sammanfattning.'
+  const language = item.language || 'en'
   return {
     id: item.id,
     slug: `${slugify(item.title)}-${item.id.slice(0, 6)}`,
     title: item.title,
     excerpt,
     category: inferCategory(item),
-    location: item.language === 'sv' ? 'Sverige' : 'Världen',
+    location: '',
     publishedAt: item.published_at || '',
     readTime: Math.max(1, Math.ceil(excerpt.split(/\s+/).length / 180)),
     featured: false,
     source: item.source || 'Extern källa',
     url: item.url,
     origin: 'fetched',
-    language: item.language || 'en',
+    language,
+    excerptLanguage: agentSummary ? 'sv' : language,
+    hasAgentSummary: Boolean(agentSummary),
     score: item.positivity_score || 0,
     signals: item.positive_signals || [],
   }
@@ -69,9 +73,23 @@ export function normalizeSeed(item: RawSeedNews): NewsArticle {
     url: item.source.url,
     origin: 'demo',
     language: 'sv',
+    excerptLanguage: 'sv',
+    hasAgentSummary: false,
     score: 0,
     signals: [],
   }
+}
+
+const sensitiveCandidate = /\b(?:abandon(?:ed|ment)?|abuse|anxiety|assault|backlash|blood|bloody|bomb|chronic loneliness|closing|conflict|criticiz(?:e|ed|es|ing)|crush(?:ed|ing)?|death|earthquake|extinct(?:ion)?|extremism|fraud|harass(?:ment|ed|ing)?|harrowing|hooks? in|injur(?:ed|y|ies)|killed|loathe|mangled|missing flipper|murder|onlyfans|revok(?:e|ed|es|ing)|shooting|shocked|strangl(?:e|ed|es|ing)|stroke|terror|threaten(?:ed|ing)?|traffick(?:ing|ed)?|trapped|treatment center|violence|war)\b/i
+const feedNoise = /\b(?:appeared first on|share the stories)\b/i
+const positiveCandidate = /\b(?:achiev(?:e|ed|ement)|award(?:ed|s)?|birth|breakthrough|celebrat(?:e|ed|es|ing|ion)|conservation(?:ist|ists)?|discov(?:er|ered|ery)|free(?:d|ing)?|help(?:s|ed|ing)?|hope(?:ful)?|improv(?:e|ed|ement)|milestone|protect(?:s|ed|ing|ion)?|recover(?:ed|y)|rescu(?:e|ed|es|ing)|restor(?:e|ed|es|ing|ation)|save(?:d|s|ing)?|second chance|smooth(?:er|est)|solv(?:e|ed|es|ing)|success(?:ful)?|volunteer(?:s|ed|ing)?|win(?:s|ning)?)\b/i
+
+export function isSuitableForPublicFeed(article: NewsArticle): boolean {
+  if (article.origin === 'demo') return true
+  return !article.title.trim().endsWith('?')
+    && !sensitiveCandidate.test(`${article.title} ${article.excerpt}`)
+    && !feedNoise.test(article.excerpt)
+    && positiveCandidate.test(`${article.title} ${article.excerpt}`)
 }
 
 export interface NewsCollection {
@@ -80,19 +98,26 @@ export interface NewsCollection {
   demoCount: number
   sourceCount: number
   latestFetchedAt: string
+  fetchedAvailable: boolean
+  seedAvailable: boolean
+  warning: string
 }
 
 export async function fetchNews(): Promise<NewsCollection> {
-  const [fetchedResponse, seedResponse] = await Promise.all([
+  const [fetchedResult, seedResult] = await Promise.allSettled([
     fetch('/api/news', { credentials: 'same-origin' }),
     fetch('/data/seed-news.json'),
   ])
-  if (!fetchedResponse.ok) throw new Error('Nyhetsflödet kunde inte laddas.')
-  const fetchedData = (await fetchedResponse.json()) as { items?: RawFetchedNews[]; generated_at?: string }
-  const seedData = seedResponse.ok
-    ? ((await seedResponse.json()) as { articles?: RawSeedNews[] })
+  const fetchedResponse = fetchedResult.status === 'fulfilled' ? fetchedResult.value : null
+  const seedResponse = seedResult.status === 'fulfilled' ? seedResult.value : null
+  if (!fetchedResponse?.ok && !seedResponse?.ok) throw new Error('Nyhetsflödet kunde inte laddas.')
+  const fetchedData = fetchedResponse?.ok
+    ? (await fetchedResponse.json()) as { items?: RawFetchedNews[]; generated_at?: string }
+    : { items: [] }
+  const seedData = seedResponse?.ok
+    ? (await seedResponse.json()) as { articles?: RawSeedNews[] }
     : { articles: [] }
-  const fetched = (fetchedData.items ?? []).map(normalizeFetched)
+  const fetched = (fetchedData.items ?? []).map(normalizeFetched).filter(isSuitableForPublicFeed)
   const demo = (seedData.articles ?? []).map(normalizeSeed)
   const articles = [...demo, ...fetched].sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt))
   return {
@@ -101,6 +126,13 @@ export async function fetchNews(): Promise<NewsCollection> {
     demoCount: demo.length,
     sourceCount: new Set(fetched.map((item) => item.source)).size,
     latestFetchedAt: fetchedData.generated_at || '',
+    fetchedAvailable: Boolean(fetchedResponse?.ok),
+    seedAvailable: Boolean(seedResponse?.ok),
+    warning: !fetchedResponse?.ok
+      ? 'Det automatiska nattflödet kunde inte hämtas. Demosammanfattningarna visas fortfarande.'
+      : !seedResponse?.ok
+        ? 'Demosammanfattningarna kunde inte hämtas. De aktuella källnotiserna visas fortfarande.'
+        : '',
   }
 }
 

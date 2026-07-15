@@ -1,8 +1,9 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { Globe2, Menu, Search, UserRound, X } from 'lucide-react'
 import { useEffect, useRef, useState, type ReactNode } from 'react'
-import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
+import { NewsletterForm } from './NewsletterForm'
 
 const nav = [
   ['Nyheter', '/'],
@@ -36,12 +37,14 @@ function GlobeMenu() {
 }
 
 export function Layout({ children }: { children: ReactNode }) {
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [menuPath, setMenuPath] = useState<string | null>(null)
   const [search, setSearch] = useState('')
   const { user } = useAuth()
   const navigate = useNavigate()
+  const { pathname } = useLocation()
+  const menuOpen = menuPath === pathname
   useEffect(() => {
-    const escape = (event: KeyboardEvent) => { if (event.key === 'Escape') setMenuOpen(false) }
+    const escape = (event: KeyboardEvent) => { if (event.key === 'Escape') setMenuPath(null) }
     document.addEventListener('keydown', escape)
     return () => document.removeEventListener('keydown', escape)
   }, [])
@@ -57,35 +60,21 @@ export function Layout({ children }: { children: ReactNode }) {
             <GlobeMenu />
             <form className="header-search" onSubmit={(e) => { e.preventDefault(); navigate(`/sok?q=${encodeURIComponent(search)}`) }}><Search size={17} /><input aria-label="Sök" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Sök" /></form>
             <Link className="profile-button" to="/profil"><UserRound size={18} /><span>{user?.name || 'Logga in'}</span></Link>
-            <button type="button" className="mobile-menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-label={menuOpen ? 'Stäng meny' : 'Öppna meny'}>{menuOpen ? <X /> : <Menu />}</button>
+            <button type="button" className="mobile-menu-button" onClick={() => setMenuPath(menuOpen ? null : pathname)} aria-expanded={menuOpen} aria-label={menuOpen ? 'Stäng meny' : 'Öppna meny'}>{menuOpen ? <X /> : <Menu />}</button>
           </div>
         </div>
-        <AnimatePresence>{menuOpen && <motion.nav className="mobile-nav" initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }}>{nav.map(([label, href]) => <NavLink key={href} to={href} onClick={() => setMenuOpen(false)}>{label}</NavLink>)}<Link to="/profil" onClick={() => setMenuOpen(false)}>{user?.name || 'Logga in'}</Link></motion.nav>}</AnimatePresence>
+        <AnimatePresence>{menuOpen && <motion.nav className="mobile-nav" aria-label="Mobilmeny" initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }}>{nav.map(([label, href]) => <NavLink key={href} to={href} onClick={() => setMenuPath(null)}>{label}</NavLink>)}<Link to="/profil" onClick={() => setMenuPath(null)}>{user?.name || 'Logga in'}</Link></motion.nav>}</AnimatePresence>
       </header>
-      <main id="main">{children}</main>
+      <main id="main" tabIndex={-1}>{children}</main>
       <footer className="site-footer">
         <div className="footer-main page-wrap">
           <div><Link to="/" className="brand footer-brand"><span className="brand-sun">☀</span><span>Ljusglimt</span></Link><p>En varsamt formgiven samling av positiva källnotiser, demosammanfattningar och konstruktiva samtal.</p></div>
           <div><h2>Utforska</h2><Link to="/">Nyheter</Link><Link to="/sok">Sök och filtrera</Link><Link to="/forum">Forum</Link></div>
           <div><h2>Transparens</h2><Link to="/om">Om och metod</Link><Link to="/om#kallor">Källor och märkning</Link><Link to="/profil">Mitt konto</Link></div>
-          <div><h2>Varje morgon</h2><p>En kort dos framsteg, utan brus.</p><NewsletterMini /></div>
+          <div><h2>Nyhetsbrev · demo</h2><p>Testa formuläret. Adressen sparas inte ännu.</p><NewsletterForm compact /></div>
         </div>
         <div className="footer-bottom page-wrap"><span>© 2026 Ljusglimt</span><span>Byggd med omtanke i Sverige</span></div>
       </footer>
     </div>
   )
-}
-
-function NewsletterMini() {
-  const [message, setMessage] = useState('')
-  return <form className="footer-newsletter" onSubmit={async (event) => {
-    event.preventDefault()
-    const form = new FormData(event.currentTarget)
-    try {
-      const response = await fetch('/api/newsletter', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: form.get('email') }) })
-      const data = await response.json() as { message?: string; error?: string }
-      setMessage(response.ok ? 'Tack! Formuläret fungerar. Nyhetsbrevet är inte aktiverat ännu.' : (data.error || 'Kunde inte skicka.'))
-      if (response.ok) event.currentTarget.reset()
-    } catch { setMessage('Kunde inte ansluta just nu.') }
-  }}><div><input type="email" name="email" required placeholder="din@epost.se" aria-label="E-postadress" /><button type="submit">→</button></div>{message && <small role="status">{message}</small>}</form>
 }

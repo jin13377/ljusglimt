@@ -57,7 +57,8 @@
   ],
   "blocked_keywords": [
     "abuse", "assault", "bomb", "death", "earthquake", "fraud", "killed",
-    "murder", "shooting", "terror", "war", "övergrepp", "bomb", "död",
+    "abandoned", "conflict", "harassment", "injured", "mangled", "murder", "onlyfans", "shooting", "stroke", "trafficking",
+    "terror", "violence", "war", "övergrepp", "bomb", "död",
     "jordbävning", "krig", "mord", "skjutning", "terror"
   ],
   "minimum_score": 2,

@@ -1,9 +1,10 @@
-import { AlertTriangle, ArrowLeft, Bell, Check, Eye, Flag, LockKeyhole, MessageCircle, Pin, Plus, Search, Send, ShieldCheck } from 'lucide-react'
-import { useCallback, useEffect, useMemo, useState, type FormEvent } from 'react'
+import { AlertTriangle, ArrowLeft, Bell, Check, Eye, Flag, LockKeyhole, MessageCircle, Pin, Plus, Search, Send, ShieldCheck, X } from 'lucide-react'
+import { useCallback, useEffect, useId, useMemo, useRef, useState, type FormEvent } from 'react'
 import { Link, Navigate, useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 import { api, post, remove } from '../lib/api'
 import { formatDate } from '../lib/news'
+import { useDocumentTitle } from '../lib/useDocumentTitle'
 import type { ForumGroup, ForumLatest, ForumSection, ForumTopic, ForumTopicSummary } from '../types'
 
 interface IndexData { groups: ForumGroup[]; latest: ForumLatest[]; stats: { topics: number; posts: number; members: number } }
@@ -15,8 +16,8 @@ function Avatar({ name, url, large = false }: { name: string; url?: string | nul
   return url ? <img className={`avatar ${large ? 'large' : ''}`} src={url} alt="" /> : <span className={`avatar fallback ${large ? 'large' : ''}`}>{initials}</span>
 }
 
-function ForumShell({ children }: { children: React.ReactNode }) {
-  return <><section className="forum-mast"><div className="page-wrap"><span className="eyebrow">Ljusglimt forum</span><h1>Kloka samtal i vänlig ton</h1><p>Öppet att läsa. Medlemskap krävs för att skriva, följa och rapportera.</p></div></section><div className="forum-page page-wrap">{children}</div></>
+function ForumShell({ children, eyebrow = 'Ljusglimt forum', title = 'Kloka samtal i vänlig ton', description = 'Öppet att läsa. Medlemskap krävs för att skriva, följa och rapportera.' }: { children: React.ReactNode; eyebrow?: string; title?: string; description?: string }) {
+  return <><section className="forum-mast"><div className="page-wrap"><span className="eyebrow">{eyebrow}</span><h1>{title}</h1><p>{description}</p></div></section><div className="forum-page page-wrap">{children}</div></>
 }
 
 export function ForumIndexPage() {
@@ -38,45 +39,71 @@ export function ForumIndexPage() {
 
 export function ForumSectionPage() {
   const { sectionId = '' } = useParams()
-  const [data, setData] = useState<SectionData | null>(null)
-  const [error, setError] = useState('')
+  const [loaded, setLoaded] = useState<{ key: string; data: SectionData } | null>(null)
+  const [failure, setFailure] = useState<{ key: string; message: string } | null>(null)
   const [search, setSearch] = useState('')
   const { user } = useAuth()
-  const load = useCallback(() => api<SectionData>(`/api/forum/topics?section=${encodeURIComponent(sectionId)}`).then(setData).catch((e: Error) => setError(e.message)), [sectionId])
-  useEffect(() => { void load() }, [load])
+  const requestId = useRef(0)
+  const data = loaded?.key === sectionId ? loaded.data : null
+  const error = failure?.key === sectionId ? failure.message : ''
+  useDocumentTitle(data?.section.title)
+  const load = useCallback(() => {
+    const current = ++requestId.current
+    return api<SectionData>(`/api/forum/topics?section=${encodeURIComponent(sectionId)}`).then((result) => {
+      if (current === requestId.current) { setLoaded({ key: sectionId, data: result }); setFailure(null) }
+    }).catch((reason: unknown) => {
+      if (current === requestId.current) setFailure({ key: sectionId, message: reason instanceof Error ? reason.message : 'Avdelningen kunde inte laddas.' })
+    })
+  }, [sectionId])
+  useEffect(() => { void load(); return () => { requestId.current += 1 } }, [load])
   const topics = useMemo(() => (data?.topics || []).filter((topic) => `${topic.title} ${topic.body} ${topic.author}`.toLocaleLowerCase('sv').includes(search.toLocaleLowerCase('sv'))), [data, search])
   if (error) return <ForumShell><ForumError message={error} /></ForumShell>
   if (!data) return <ForumShell><p className="loading-copy">Laddar avdelningen…</p></ForumShell>
-  return <ForumShell>
+  return <ForumShell eyebrow={data.section.groupTitle} title={data.section.title} description={data.section.description}>
     <div className="breadcrumbs"><Link to="/forum">Forum</Link><span>›</span><strong>{data.section.title}</strong></div>
-    <header className="forum-section-head"><div className="section-title"><span className="section-icon large">{data.section.icon}</span><div><span className="eyebrow">{data.section.groupTitle}</span><h2>{data.section.title}</h2><p>{data.section.description}</p></div></div>{user ? <NewTopicForm section={data.section} onCreated={load} /> : <Link className="button primary" to={`/profil?next=${encodeURIComponent(location.pathname)}`}><Plus size={17} /> Logga in för ny tråd</Link>}</header>
+    <header className="forum-section-head"><div className="section-title"><span className="section-icon large">{data.section.icon}</span><div><span className="eyebrow">Avdelning</span><h2>Alla trådar</h2><p>Bläddra, sök eller starta ett nytt samtal.</p></div></div>{user ? <NewTopicForm section={data.section} onCreated={load} /> : <Link className="button primary" to={`/profil?next=${encodeURIComponent(location.pathname)}`}><Plus size={17} /> Logga in för ny tråd</Link>}</header>
     <div className="forum-toolbar"><label><span className="sr-only">Sök i avdelningen</span><Search size={17} /><input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Sök i avdelningen…" /></label><span>{topics.length} trådar</span></div>
     <div className="topic-list">{topics.length ? topics.map((topic) => <article className="topic-row" key={topic.id}><Link className="topic-main" to={`/forum/trad/${encodeURIComponent(topic.id)}`}><Avatar name={topic.author} url={topic.avatarUrl} /><span><strong>{topic.title}</strong><small>{topic.pinned && <em><Pin size={11} /> Fäst</em>} {topic.locked && <em><LockKeyhole size={11} /> Låst</em>} {topic.status !== 'published' && <em>Väntar på granskning</em>}</small><small>Startad av {topic.author} · {formatDate(topic.createdAt, true)}</small></span></Link><div className="topic-counts"><span><MessageCircle size={14} /> {topic.replyCount}</span><span><Eye size={14} /> {topic.views}</span></div><span className="last-active">Senast {formatDate(topic.lastActivity, true)}</span></article>) : <div className="empty-state"><MessageCircle /><h2>Här är det lugnt</h2><p>Prova en annan sökning eller starta den första tråden.</p></div>}</div>
   </ForumShell>
 }
 
-function NewTopicForm({ section, onCreated }: { section: ForumSection; onCreated: () => void }) {
-  const [open, setOpen] = useState(false)
+function NewTopicForm({ section, onCreated }: { section: ForumSection; onCreated: () => void | Promise<void> }) {
   const [status, setStatus] = useState('')
+  const dialog = useRef<HTMLDialogElement>(null)
+  const trigger = useRef<HTMLButtonElement>(null)
+  const titleInput = useRef<HTMLInputElement>(null)
+  const titleId = useId()
+  const close = () => dialog.current?.close()
   const submit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault(); setStatus('Skickar…')
     const form = event.currentTarget
     const values = Object.fromEntries(new FormData(form))
-    try { const result = await post<{ message: string }>('/api/forum/topics', values); setStatus(result.message); form.reset(); setTimeout(onCreated, 500) }
+    try { const result = await post<{ message: string }>('/api/forum/topics', values); setStatus(result.message); form.reset(); await onCreated(); window.setTimeout(close, 700) }
     catch (e) { setStatus(e instanceof Error ? e.message : 'Kunde inte skapa tråden.') }
   }
-  return <div className="compose-pop"><button className="button primary" type="button" onClick={() => setOpen(!open)}><Plus size={17} /> Ny tråd</button>{open && <form className="compose-card" onSubmit={submit}><h3>Ny tråd i {section.title}</h3><input type="hidden" name="sectionId" value={section.id} /><label>Rubrik<input name="title" required minLength={5} maxLength={100} /></label><label>Inlägg<textarea name="body" required minLength={10} maxLength={2000} rows={6} /></label><button className="button primary" type="submit"><Send size={16} /> Skicka till moderering</button><p role="status">{status}</p></form>}</div>
+  return <div className="compose-pop"><button ref={trigger} className="button primary" type="button" onClick={() => { setStatus(''); dialog.current?.showModal(); window.requestAnimationFrame(() => titleInput.current?.focus()) }}><Plus size={17} /> Ny tråd</button><dialog ref={dialog} className="compose-dialog" aria-labelledby={titleId} onClose={() => trigger.current?.focus()}><form className="compose-card" onSubmit={submit}><header><h3 id={titleId}>Ny tråd i {section.title}</h3><button className="dialog-close" type="button" onClick={close} aria-label="Stäng formuläret"><X /></button></header><input type="hidden" name="sectionId" value={section.id} /><label>Rubrik<input ref={titleInput} name="title" required minLength={5} maxLength={100} /></label><label>Inlägg<textarea name="body" required minLength={10} maxLength={2000} rows={6} /></label><button className="button primary" type="submit"><Send size={16} /> Skicka till moderering</button><p role="status">{status}</p></form></dialog></div>
 }
 
 export function ForumThreadPage() {
   const { topicId = '' } = useParams()
-  const [data, setData] = useState<TopicData | null>(null)
-  const [error, setError] = useState('')
+  const [loaded, setLoaded] = useState<{ key: string; data: TopicData } | null>(null)
+  const [failure, setFailure] = useState<{ key: string; message: string } | null>(null)
   const [status, setStatus] = useState('')
   const { user } = useAuth()
   const navigate = useNavigate()
-  const load = useCallback(() => api<TopicData>(`/api/forum/topic?id=${encodeURIComponent(topicId)}`).then(setData).catch((e: Error) => setError(e.message)), [topicId])
-  useEffect(() => { void load() }, [load])
+  const requestId = useRef(0)
+  const data = loaded?.key === topicId ? loaded.data : null
+  const error = failure?.key === topicId ? failure.message : ''
+  useDocumentTitle(data?.topic.title)
+  const load = useCallback(() => {
+    const current = ++requestId.current
+    return api<TopicData>(`/api/forum/topic?id=${encodeURIComponent(topicId)}`).then((result) => {
+      if (current === requestId.current) { setLoaded({ key: topicId, data: result }); setFailure(null) }
+    }).catch((reason: unknown) => {
+      if (current === requestId.current) setFailure({ key: topicId, message: reason instanceof Error ? reason.message : 'Tråden kunde inte laddas.' })
+    })
+  }, [topicId])
+  useEffect(() => { void load(); return () => { requestId.current += 1 } }, [load])
   if (error) return <ForumShell><ForumError message={error} /></ForumShell>
   if (!data) return <ForumShell><p className="loading-copy">Laddar tråden…</p></ForumShell>
   const { topic, section } = data
@@ -84,7 +111,7 @@ export function ForumThreadPage() {
     if (!user) { navigate(`/profil?next=${encodeURIComponent(location.pathname)}`); return }
     try {
       const result = topic.followed ? await remove<{ followed: boolean }>(`/api/forum/follow/${encodeURIComponent(topic.id)}`) : await post<{ followed: boolean; message?: string }>('/api/forum/follow', { topicId: topic.id })
-      setData({ ...data, topic: { ...topic, followed: result.followed } }); setStatus(result.followed ? 'Du följer tråden.' : 'Du följer inte längre tråden.')
+      setLoaded({ key: topicId, data: { ...data, topic: { ...topic, followed: result.followed } } }); setStatus(result.followed ? 'Du följer tråden.' : 'Du följer inte längre tråden.')
     } catch (e) { setStatus(e instanceof Error ? e.message : 'Kunde inte ändra följning.') }
   }
   const report = async () => {
@@ -94,9 +121,9 @@ export function ForumThreadPage() {
     try { const result = await post<{ message: string }>('/api/forum/report', { topicId: topic.id, reason }); setStatus(result.message) }
     catch (e) { setStatus(e instanceof Error ? e.message : 'Kunde inte rapportera.') }
   }
-  return <ForumShell>
+  return <ForumShell eyebrow={section.title} title={topic.title} description="Ett förhandsmodererat samtal i Ljusglimts forum.">
     <div className="breadcrumbs"><Link to="/forum">Forum</Link><span>›</span><Link to={`/forum/sektion/${section.id}`}>{section.title}</Link><span>›</span><strong>{topic.title}</strong></div>
-    <header className="thread-head"><div><span className="eyebrow">{section.title}</span><h2>{topic.title}</h2><p>{topic.replies.length + 1} inlägg · {topic.views} visningar</p></div><div><button className="button ghost" type="button" onClick={follow} aria-pressed={topic.followed}><Bell size={16} /> {topic.followed ? 'Följer' : 'Följ tråden'}</button><button className="text-action" type="button" onClick={report}><Flag size={15} /> Rapportera</button></div></header>
+    <header className="thread-head"><div><span className="eyebrow">Trådinformation</span><h2 className="sr-only">Verktyg för tråden</h2><p>{topic.replies.length + 1} inlägg · {topic.views} visningar</p></div><div><button className="button ghost" type="button" onClick={follow} aria-pressed={topic.followed}><Bell size={16} /> {topic.followed ? 'Följer' : 'Följ tråden'}</button><button className="text-action" type="button" onClick={report}><Flag size={15} /> Rapportera</button></div></header>
     {status && <div className="status-banner" role="status"><Check size={17} /> {status}</div>}
     <div className="post-list"><ForumPost title={topic.title} body={topic.body} author={topic.author} createdAt={topic.createdAt} status={topic.status} opening />{topic.replies.map((reply, index) => <ForumPost key={reply.id} body={reply.body} author={reply.author} createdAt={reply.createdAt} status={reply.status} index={index + 1} />)}</div>
     {topic.locked ? <div className="locked-banner"><LockKeyhole /> Tråden är låst för nya svar.</div> : user ? <ReplyForm topicId={topic.id} onCreated={load} /> : <div className="login-prompt"><MessageCircle /><div><strong>Delta i samtalet</strong><p>Logga in för att skriva ett vänligt och konstruktivt svar.</p></div><Link className="button primary" to={`/profil?next=${encodeURIComponent(location.pathname)}`}>Logga in</Link></div>}
@@ -105,7 +132,7 @@ export function ForumThreadPage() {
 }
 
 function ForumPost({ title, body, author, createdAt, status, opening, index }: { title?: string; body: string; author: { name: string; avatarUrl?: string | null; memberSince?: string | null; role?: string }; createdAt: string; status: string; opening?: boolean; index?: number }) {
-  return <article className={`forum-post ${status !== 'published' ? 'pending' : ''}`}><aside><Avatar name={author.name} url={author.avatarUrl} large /><strong>{author.name}</strong><span>{author.role === 'admin' ? 'Administratör' : author.role === 'moderator' ? 'Moderator' : 'Medlem'}</span></aside><div><header><span>{opening ? 'Trådstart' : `Svar #${index}`}</span><time>{formatDate(createdAt, true)}</time></header>{status !== 'published' && <p className="pending-note">Syns bara för dig tills moderatorerna har granskat inlägget.</p>}{opening && <h2>{title}</h2>}<p>{body}</p></div></article>
+  return <article className={`forum-post ${status !== 'published' ? 'pending' : ''}`}><aside><Avatar name={author.name} url={author.avatarUrl} large /><strong>{author.name}</strong><span>{author.role === 'admin' ? 'Administratör' : author.role === 'moderator' ? 'Moderator' : 'Medlem'}</span></aside><div><header><span>{opening ? 'Trådstart' : `Svar #${index}`}</span><time dateTime={createdAt}>{formatDate(createdAt, true)}</time></header>{status !== 'published' && <p className="pending-note">Syns bara för dig tills moderatorerna har granskat inlägget.</p>}{opening && <h2>{title}</h2>}<p>{body}</p></div></article>
 }
 
 function ReplyForm({ topicId, onCreated }: { topicId: string; onCreated: () => void }) {

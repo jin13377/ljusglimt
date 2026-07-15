@@ -49,6 +49,18 @@ def canonical_url(value: str) -> str:
     )
 
 
+def source_fingerprint(item: dict) -> str:
+    source_text = "\n".join(str(item.get(key) or "") for key in ("title", "source_excerpt", "published_at"))
+    return hashlib.sha256(source_text.encode("utf-8")).hexdigest()[:20]
+
+
+def reusable_summary(item: dict, previous: dict | None) -> str:
+    if not previous or previous.get("source_fingerprint") != item.get("source_fingerprint"):
+        return ""
+    summary = previous.get("agent_summary", "")
+    return summary if isinstance(summary, str) else ""
+
+
 def parse_date(value: str | None) -> str | None:
     if not value:
         return None
@@ -91,15 +103,15 @@ def parse_feed(payload: bytes, source: str, language: str) -> list[dict]:
     nodes = [n for n in root.iter() if n.tag.rsplit("}", 1)[-1].casefold() in ("item", "entry")]
     result = []
     for node in nodes:
-        title = clean_text(first_text(node, ("title",)))
+        title = clean_text(first_text(node, ("title",)))[:260]
         link = canonical_url(entry_link(node))
-        if not title or not link or urllib.parse.urlsplit(link).scheme not in ("http", "https"):
+        if not title or not link or len(link) > 1200 or urllib.parse.urlsplit(link).scheme != "https":
             continue
         # Keep only a short source-provided excerpt; the full article stays at source.
         description = clean_text(first_text(node, ("description", "summary", "content")))[:400]
         published = parse_date(first_text(node, ("pubdate", "published", "updated", "date")))
         stable = link or normalize_title(title)
-        result.append({
+        item = {
             "id": hashlib.sha256(stable.encode("utf-8")).hexdigest()[:20],
             "title": title,
             "url": link,
@@ -108,20 +120,24 @@ def parse_feed(payload: bytes, source: str, language: str) -> list[dict]:
             "published_at": published,
             "source_excerpt": description,
             "agent_summary": "",
-        })
+        }
+        item["source_fingerprint"] = source_fingerprint(item)
+        result.append(item)
     return result
 
 
 def score_item(item: dict, positive: list[str], blocked: list[str]) -> tuple[int, list[str]]:
     haystack = f"{item['title']} {item['source_excerpt']}".casefold()
-    blocked_hits = sorted({word for word in blocked if word.casefold() in haystack})
+    blocked_hits = sorted({word for word in blocked if re.search(
+        rf"(?<!\w){re.escape(word.casefold().strip())}(?:s|es)?(?!\w)", haystack
+    )})
     if blocked_hits:
         return -100, [f"blocked:{word}" for word in blocked_hits]
     hits = sorted({word for word in positive if word.casefold() in haystack})
     # Rubric is intentionally transparent and conservative.
     title = item["title"].casefold()
     source_bonus = int(item.get("source_tier_bonus", 0))
-    score = source_bonus + len(hits) + sum(1 for word in hits if word.casefold() in title)
+    score = (source_bonus if hits else 0) + len(hits) + sum(1 for word in hits if word.casefold() in title)
     reasons = (["curated-positive-source"] if source_bonus else []) + hits
     return score, reasons
 
@@ -156,7 +172,12 @@ def fetch(url: str, timeout: int, user_agent: str) -> bytes:
     with urllib.request.urlopen(request, timeout=timeout) as response:
         if response.status != 200:
             raise RuntimeError(f"HTTP {response.status}")
-        return response.read(5_000_000)
+        if urllib.parse.urlsplit(response.geturl()).scheme != "https":
+            raise RuntimeError("feed redirected to a non-HTTPS URL")
+        payload = response.read(5_000_001)
+        if len(payload) > 5_000_000:
+            raise RuntimeError("feed exceeds the 5 MB limit")
+        return payload
 
 
 def should_run(force: bool, now: datetime) -> bool:
@@ -183,13 +204,19 @@ def main(argv: list[str] | None = None) -> int:
         return 2
 
     old_output = load_json(args.output, {"items": []})
-    old_summaries = {
-        item.get("id"): item.get("agent_summary", "")
+    old_items = {
+        item.get("id"): item
         for item in old_output.get("items", [])
         if isinstance(item, dict) and item.get("id")
     } if isinstance(old_output, dict) else {}
     history = load_json(args.history, {"seen_ids": []})
-    seen_ids = set(history.get("seen_ids", [])) if isinstance(history, dict) else set()
+    local_date = now.astimezone(STOCKHOLM).date().isoformat()
+    if not args.force and isinstance(history, dict) and history.get("last_successful_local_date") == local_date:
+        print(f"Skip: news has already been published for {local_date} Europe/Stockholm.")
+        return 0
+    history_ids = history.get("seen_ids", []) if isinstance(history, dict) else []
+    ordered_seen = list(dict.fromkeys(item for item in history_ids if isinstance(item, str)))
+    seen_ids = set(ordered_seen)
 
     candidates: list[dict] = []
     errors: list[dict] = []
@@ -206,6 +233,10 @@ def main(argv: list[str] | None = None) -> int:
         except Exception as exc:  # One broken third-party feed must not stop the others.
             errors.append({"source": feed.get("name", "Unknown"), "error": str(exc)[:300]})
 
+    if errors and not candidates:
+        print(f"Fetch failed for every usable feed; keeping {args.output} unchanged.", file=sys.stderr)
+        return 1
+
     unique: dict[str, dict] = {}
     title_keys: set[str] = set()
     for item in candidates:
@@ -218,7 +249,7 @@ def main(argv: list[str] | None = None) -> int:
             continue
         item["positivity_score"] = score
         item["positive_signals"] = reasons
-        item["agent_summary"] = old_summaries.get(item["id"], "")
+        item["agent_summary"] = reusable_summary(item, old_items.get(item["id"]))
         unique[key] = item
         title_keys.add(title_key)
 
@@ -235,7 +266,10 @@ def main(argv: list[str] | None = None) -> int:
         if len(items) >= int(config.get("max_items", 48)):
             break
     new_ids = [item["id"] for item in items if item["id"] not in seen_ids]
-    seen_ids.update(item["id"] for item in items)
+    for item in items:
+        if item["id"] not in seen_ids:
+            ordered_seen.append(item["id"])
+            seen_ids.add(item["id"])
 
     output = {
         "generated_at": now.isoformat().replace("+00:00", "Z"),
@@ -246,7 +280,8 @@ def main(argv: list[str] | None = None) -> int:
         "items": items,
     }
     atomic_json_write(args.output, output)
-    atomic_json_write(args.history, {"updated_at": output["generated_at"], "seen_ids": sorted(seen_ids)[-5000:]})
+    atomic_json_write(args.history, {"updated_at": output["generated_at"], "last_successful_local_date": local_date,
+                                     "seen_ids": ordered_seen[-5000:]})
     print(f"Published {len(items)} items ({len(new_ids)} new); {len(errors)} feed errors.")
     return 0 if items or not errors else 1
 

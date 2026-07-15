@@ -42,6 +42,8 @@ export interface NewsArticle {
   url: string
   origin: NewsOrigin
   language: string
+  excerptLanguage: string
+  hasAgentSummary: boolean
   score: number
   signals: string[]
 }

@@ -20,3 +20,7 @@ offentlig lansering.
 Backend verifierar Googles ID-token mot rätt audience och använder Googles
 stabila `sub`-fält som kontoidentitet. I produktion används paketet
 `google-auth`; tokeninfo-fallbacken finns bara för lokal utveckling.
+
+Ett befintligt lösenordskonto länkas inte automatiskt bara för att Google-
+kontot har samma e-postadress. Användaren behöver först logga in med lösenord;
+ett uttryckligt kontolänkningsflöde är ett separat produktionssteg.
