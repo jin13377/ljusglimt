@@ -1,7 +1,8 @@
-import { Image as ImageIcon, Sparkles } from 'lucide-react'
+import { Image as ImageIcon } from 'lucide-react'
 import { useState } from 'react'
 import { getAiCategoryImage } from '../lib/news'
 import type { NewsArticle, NewsImage } from '../types'
+import { AiImageBadge } from './AiImageBadge'
 import { CategoryArt } from './CategoryArt'
 
 type VisualVariant = 'card' | 'hero' | 'article' | 'search'
@@ -31,10 +32,9 @@ export function NewsVisual({ article, variant = 'card', priority = false, showCa
       referrerPolicy={image.kind === 'source' ? 'no-referrer' : undefined}
       onError={() => setFailedUrls((urls) => urls.includes(image.url) ? urls : [...urls, image.url])}
     />
-    <span className={`visual-disclosure ${image.kind}`}>
-      {image.kind === 'ai' ? <Sparkles size={13} /> : <ImageIcon size={13} />}
-      {image.kind === 'ai' ? 'AI-illustration' : 'Källbild'}
-    </span>
+    {image.kind === 'ai'
+      ? <AiImageBadge />
+      : <span className="visual-disclosure source"><ImageIcon size={13} />Källbild</span>}
   </div>
 
   if (!showCaption) return media

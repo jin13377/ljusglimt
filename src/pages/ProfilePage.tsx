@@ -1,6 +1,7 @@
 import { Bookmark, CheckCircle2, LogOut, Settings, Shield, UserRound } from 'lucide-react'
 import { useEffect, useState, type FormEvent } from 'react'
 import { Link, useNavigate, useSearchParams } from 'react-router-dom'
+import { AiImageBadge } from '../components/AiImageBadge'
 import { useAuth } from '../contexts/AuthContext'
 import { useSaved } from '../contexts/SavedContext'
 import { api, post } from '../lib/api'
@@ -60,7 +61,7 @@ export function ProfilePage() {
 function SavedRow({ item, onRemove }: { item: SavedArticle; onRemove: (id: string) => Promise<void> }) {
   const [status, setStatus] = useState('')
   const [removing, setRemoving] = useState(false)
-  return <article>{item.image && <div className="saved-thumb-wrap"><img className="saved-thumb" src={item.image} width="160" height="107" loading="lazy" decoding="async" alt="" /><span className="visual-disclosure ai">AI-illustration</span></div>}<div><span>{item.source}</span><h3>{item.title}</h3><p>{item.summary}</p></div><div><a href={item.url} target="_blank" rel="noreferrer">Öppna källan</a><button type="button" disabled={removing} onClick={async () => { setRemoving(true); setStatus(''); try { await onRemove(item.article_id) } catch (reason) { setStatus(reason instanceof Error ? reason.message : 'Kunde inte ta bort nyheten.'); setRemoving(false) } }}>{removing ? 'Tar bort…' : 'Ta bort'}</button>{status && <span className="form-error" role="status">{status}</span>}</div></article>
+  return <article>{item.image && <div className="saved-thumb-wrap"><img className="saved-thumb" src={item.image} width="160" height="107" loading="lazy" decoding="async" alt="" /><AiImageBadge /></div>}<div><span>{item.source}</span><h3>{item.title}</h3><p>{item.summary}</p></div><div><a href={item.url} target="_blank" rel="noreferrer">Öppna källan</a><button type="button" disabled={removing} onClick={async () => { setRemoving(true); setStatus(''); try { await onRemove(item.article_id) } catch (reason) { setStatus(reason instanceof Error ? reason.message : 'Kunde inte ta bort nyheten.'); setRemoving(false) } }}>{removing ? 'Tar bort…' : 'Ta bort'}</button>{status && <span className="form-error" role="status">{status}</span>}</div></article>
 }
 
 function ProfileSettings({ name, onUpdated }: { name: string; onUpdated: () => Promise<void> }) {
