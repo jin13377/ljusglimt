@@ -51,7 +51,7 @@ export function Layout({ children }: { children: ReactNode }) {
   return (
     <div className="app-shell">
       <a href="#main" className="skip-link">Hoppa till innehållet</a>
-      <div className="top-note">Positiva källnotiser och demosammanfattningar · Ny hämtning varje natt 02:00</div>
+      <div className="top-note">Positiva källnotiser och demosammanfattningar · Uppdateras 00:00 och 12:00</div>
       <header className="site-header">
         <div className="header-container">
           <Link to="/" className="brand" aria-label="Ljusglimt startsida"><span className="brand-sun">☀</span><span>Ljusglimt<small>NYHETER SOM GER PERSPEKTIV</small></span></Link>

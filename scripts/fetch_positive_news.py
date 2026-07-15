@@ -181,7 +181,13 @@ def fetch(url: str, timeout: int, user_agent: str) -> bytes:
 
 
 def should_run(force: bool, now: datetime) -> bool:
-    return force or now.astimezone(STOCKHOLM).hour == 2
+    return force or now.astimezone(STOCKHOLM).hour in {0, 12}
+
+
+def publication_slot(now: datetime) -> str:
+    local = now.astimezone(STOCKHOLM)
+    slot_hour = 12 if local.hour >= 12 else 0
+    return f"{local.date().isoformat()}T{slot_hour:02d}:00"
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -190,12 +196,12 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--config", type=Path, default=base / "config/feeds.json")
     parser.add_argument("--output", type=Path, default=base / "data/news.json")
     parser.add_argument("--history", type=Path, default=base / "data/history.json")
-    parser.add_argument("--force", action="store_true", help="bypass the 02:00 Europe/Stockholm gate")
+    parser.add_argument("--force", action="store_true", help="bypass the 00:00/12:00 Europe/Stockholm gate")
     args = parser.parse_args(argv)
 
     now = datetime.now(timezone.utc)
     if not should_run(args.force, now):
-        print("Skip: local time in Europe/Stockholm is not 02:xx.")
+        print("Skip: local time in Europe/Stockholm is not 00:xx or 12:xx.")
         return 0
 
     config = load_json(args.config, {})
@@ -211,8 +217,9 @@ def main(argv: list[str] | None = None) -> int:
     } if isinstance(old_output, dict) else {}
     history = load_json(args.history, {"seen_ids": []})
     local_date = now.astimezone(STOCKHOLM).date().isoformat()
-    if not args.force and isinstance(history, dict) and history.get("last_successful_local_date") == local_date:
-        print(f"Skip: news has already been published for {local_date} Europe/Stockholm.")
+    local_slot = publication_slot(now)
+    if not args.force and isinstance(history, dict) and history.get("last_successful_local_slot") == local_slot:
+        print(f"Skip: news has already been published for {local_slot} Europe/Stockholm.")
         return 0
     history_ids = history.get("seen_ids", []) if isinstance(history, dict) else []
     ordered_seen = list(dict.fromkeys(item for item in history_ids if isinstance(item, str)))
@@ -281,6 +288,7 @@ def main(argv: list[str] | None = None) -> int:
     }
     atomic_json_write(args.output, output)
     atomic_json_write(args.history, {"updated_at": output["generated_at"], "last_successful_local_date": local_date,
+                                     "last_successful_local_slot": local_slot,
                                      "seen_ids": ordered_seen[-5000:]})
     print(f"Published {len(items)} items ({len(new_ids)} new); {len(errors)} feed errors.")
     return 0 if items or not errors else 1

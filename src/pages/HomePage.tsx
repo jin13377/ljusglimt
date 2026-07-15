@@ -43,8 +43,8 @@ export function HomePage() {
       <div className="page-wrap trust-grid">
         <div><Database /><strong>{data.fetchedCount}</strong><span>källnotiser i flödet</span></div>
         <div><Newspaper /><strong>{data.sourceCount}</strong><span>olika källor</span></div>
-        <div><RefreshCw /><strong>{data.latestFetchedAt ? formatDate(data.latestFetchedAt, true) : 'Nästa natt'}</strong><span>senaste hämtning</span></div>
-        <div><Clock3 /><strong>02:00</strong><span>schemalagd nattkörning</span></div>
+        <div><RefreshCw /><strong>{data.latestFetchedAt ? formatDate(data.latestFetchedAt, true) : 'Nästa körning'}</strong><span>senaste hämtning</span></div>
+        <div><Clock3 /><strong>00:00 & 12:00</strong><span>dagliga körningar</span></div>
       </div>
     </section>
 

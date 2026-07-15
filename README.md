@@ -2,7 +2,7 @@
 
 En körbar svensk konceptsajt för positiva, konstruktiva och källnära nyheter.
 Projektet innehåller en responsiv redaktionell startsida, sök/filter,
-originalkällor, nyhetsbrev-demo, ett förhandsmodererat forum och en nattlig
+originalkällor, nyhetsbrev-demo, ett förhandsmodererat forum och en schemalagd
 Codex/RSS-pipeline.
 
 ## Starta lokalt
@@ -42,10 +42,10 @@ Python fortfarande visa den äldre beroendefria frontendversionen.
 - personlig profil med sparade nyheter;
 - Google Identity Services-inloggning när ett Google Client ID konfigurerats;
 - manuell forumgranskning via `python scripts/moderate_forum.py`;
-- nattlig hämtning exakt 02:00 Europe/Stockholm, även över sommar-/vintertid;
+- automatisk hämtning 00:00 och 12:00 Europe/Stockholm, även över sommar-/vintertid;
 - Codex-agent som bara får skriva källbundna svenska sammanfattningar.
 
-## Aktivera nattjobbet
+## Aktivera det schemalagda jobbet
 
 1. Publicera projektet i ett GitHub-repository.
 2. Lägg in `OPENAI_API_KEY` som GitHub Actions-secret för svenska

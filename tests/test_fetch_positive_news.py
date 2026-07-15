@@ -2,6 +2,7 @@ import importlib.util
 import json
 import tempfile
 import unittest
+from datetime import datetime, timezone
 from unittest.mock import patch
 from pathlib import Path
 
@@ -12,6 +13,16 @@ SPEC.loader.exec_module(news)
 
 
 class PositiveNewsTests(unittest.TestCase):
+    def test_schedule_runs_at_midnight_and_noon_stockholm(self):
+        winter_midnight = datetime(2026, 1, 14, 23, 10, tzinfo=timezone.utc)
+        summer_noon = datetime(2026, 7, 15, 10, 10, tzinfo=timezone.utc)
+        outside_schedule = datetime(2026, 7, 15, 11, 10, tzinfo=timezone.utc)
+        self.assertTrue(news.should_run(False, winter_midnight))
+        self.assertTrue(news.should_run(False, summer_noon))
+        self.assertFalse(news.should_run(False, outside_schedule))
+        self.assertEqual(news.publication_slot(winter_midnight), "2026-01-15T00:00")
+        self.assertEqual(news.publication_slot(summer_noon), "2026-07-15T12:00")
+
     def test_rss_parse_and_tracking_cleanup(self):
         xml = b"""<rss><channel><item><title>Community rescue success</title>
         <link>https://example.com/story?utm_source=x&amp;keep=1</link>

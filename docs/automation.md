@@ -19,13 +19,12 @@ Resultatet skrivs atomiskt till `data/news.json`. Skriptet:
 - återanvänder tidigare manuella/agentgjorda sammanfattningar;
 - skriver först en temporär fil och byter sedan fil atomiskt.
 
-## Nattlig körning kl. 02 Europe/Stockholm
+## Dagliga körningar kl. 00 och 12 Europe/Stockholm
 
-Arbetsflödet i `.github/workflows/positive-news-nightly.yml` triggas både 00:00
-och 01:00 UTC. Skriptet kontrollerar sedan `Europe/Stockholm` och fortsätter
-bara när den lokala timmen verkligen är 02. Det gör att sommar- och vintertid
-fungerar utan att cron-uttrycket behöver ändras. `workflow_dispatch` kan alltid
-köras manuellt.
+Arbetsflödet i `.github/workflows/positive-news-nightly.yml` använder GitHubs
+tidszonsmedvetna schema för `Europe/Stockholm` och körs klockan 00:00 och 12:00.
+Det gör att sommar- och vintertid hanteras automatiskt. `workflow_dispatch` kan
+alltid köras manuellt.
 
 Workflow-jobbet committar endast ändringar i `data/news.json` och
 `data/history.json`. Det behöver `contents: write`, vilket är deklarerat med

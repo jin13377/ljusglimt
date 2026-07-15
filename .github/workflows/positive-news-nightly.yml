@@ -1,17 +1,16 @@
-name: Ljusglimt nightly news
+name: Ljusglimt scheduled news
 
 on:
   schedule:
-    # 02:00 Stockholm är 00 UTC sommartid och 01 UTC vintertid.
-    - cron: "0 0 * * *"
-    - cron: "0 1 * * *"
+    - cron: "0 0,12 * * *"
+      timezone: "Europe/Stockholm"
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: positive-news-nightly
+  group: positive-news-scheduled
   cancel-in-progress: false
 
 jobs:
@@ -27,22 +26,7 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Gate exactly 02:00 Europe/Stockholm
-        id: clock
-        shell: bash
-        run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "run=true" >> "$GITHUB_OUTPUT"
-          else
-            python - <<'PY' >> "$GITHUB_OUTPUT"
-          from datetime import datetime
-          from zoneinfo import ZoneInfo
-          print(f"run={'true' if datetime.now(ZoneInfo('Europe/Stockholm')).hour == 2 else 'false'}")
-          PY
-          fi
-
       - name: Fetch and rank allowlisted RSS news
-        if: steps.clock.outputs.run == 'true'
         shell: bash
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
@@ -52,11 +36,9 @@ jobs:
           fi
 
       - name: Test deterministic pipeline
-        if: steps.clock.outputs.run == 'true'
         run: python -m unittest discover -s tests -v
 
       - name: Commit source-bound update
-        if: steps.clock.outputs.run == 'true'
         shell: bash
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -67,12 +49,11 @@ jobs:
             git config user.name "ljusglimt-bot"
             git config user.email "ljusglimt-bot@users.noreply.github.com"
             git add data/news.json data/history.json
-            git commit -m "chore(news): nightly source update"
+            git commit -m "chore(news): scheduled source update"
             git push "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "HEAD:${GITHUB_REF_NAME}"
           fi
 
       - name: Check optional OpenAI secret
-        if: steps.clock.outputs.run == 'true'
         id: openai
         shell: bash
         env:
@@ -86,7 +67,7 @@ jobs:
           fi
 
       - name: Let Codex draft source-bound Swedish summaries
-        if: steps.clock.outputs.run == 'true' && steps.openai.outputs.available == 'true'
+        if: steps.openai.outputs.available == 'true'
         uses: openai/codex-action@v1
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
@@ -97,7 +78,7 @@ jobs:
           output-file: codex-output.md
 
       - name: Validate and commit agent summaries only
-        if: steps.clock.outputs.run == 'true' && steps.openai.outputs.available == 'true'
+        if: steps.openai.outputs.available == 'true'
         shell: bash
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
