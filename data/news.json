@@ -1,8 +1,13 @@
 {
-  "generated_at": "2026-07-15T17:06:22.741635Z",
+  "generated_at": "2026-07-15T19:03:25.937641Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "bfd82ff3870062e244f3",
+    "d7ac037bee6dd16b981e",
+    "d7457a5f022d18d4ebc8",
+    "3243141d4530035d173c"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -136,6 +141,24 @@
         "curated-positive-source",
         "recovery",
         "rescue"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "bfd82ff3870062e244f3",
+      "title": "Mamdani, NYC public schools invest $67.5M in special education amid federal budget cuts",
+      "url": "https://www.goodgoodgood.co/articles/new-york-city-special-education-expansion",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-07-15T17:22:00Z",
+      "source_excerpt": "New York City’s $67.5 million investment in preschoolers comes as families and advocates worry federal changes could make special education services even harder to access.",
+      "agent_summary": "",
+      "source_fingerprint": "394304400a7a59b01149",
+      "source_tier_bonus": 2,
+      "positivity_score": 4,
+      "positive_signals": [
+        "curated-positive-source",
+        "education"
       ],
       "public_eligible": false
     },
@@ -304,24 +327,6 @@
       "public_eligible": false
     },
     {
-      "id": "2d0d6968d2e8256c21ea",
-      "title": "A 250-pound sea turtle was found stranded on the highway, unable to move. She left rescuers with a single egg",
-      "url": "https://www.goodgoodgood.co/articles/tybee-island-sea-turtle-on-highway-rescue",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-06-30T16:00:00Z",
-      "source_excerpt": "The Loggerhead desperately needed help getting back to the water. Rescuers got there just in time.",
-      "agent_summary": "",
-      "source_fingerprint": "2f394b08b973d57b5943",
-      "source_tier_bonus": 2,
-      "positivity_score": 4,
-      "positive_signals": [
-        "curated-positive-source",
-        "rescue"
-      ],
-      "public_eligible": false
-    },
-    {
       "id": "639a1e6c71111b99f830",
       "title": "Children are overwhelmingly positive for the future, says survey",
       "url": "https://www.positive.news/society/children-are-overwhelmingly-positive-for-the-future-says-survey",
@@ -336,6 +341,42 @@
       "positive_signals": [
         "curated-positive-source",
         "research"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "d7ac037bee6dd16b981e",
+      "title": "NASA’s Perseverance Rover Provides Sweeping View of Broom Point",
+      "url": "https://science.nasa.gov/photojournal/nasas-perseverance-rover-provides-sweeping-view-of-broom-point",
+      "source": "NASA News Releases",
+      "language": "en",
+      "published_at": "2026-07-15T17:59:50Z",
+      "source_excerpt": "Description This view looking back up at the outside lip of the 490-foot-tall (150-meter-tall) rim of Jezero Crater was taken by the Mastcam-Z instrument aboard NASA’s Perseverance on May 15, 2025, the 1,505th day, or sol, of the rover’s mission to Mars. The bright-colored rocks exposed across the slope, running from middle left to middle right of […]",
+      "agent_summary": "",
+      "source_fingerprint": "1fec690726898ccb7432",
+      "source_tier_bonus": 1,
+      "positivity_score": 2,
+      "positive_signals": [
+        "curated-positive-source",
+        "mission"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "d7457a5f022d18d4ebc8",
+      "title": "Perseverance’s Trip to ‘Broom Point’",
+      "url": "https://science.nasa.gov/photojournal/perseverances-trip-to-broom-point",
+      "source": "NASA News Releases",
+      "language": "en",
+      "published_at": "2026-07-15T17:27:10Z",
+      "source_excerpt": "Description This orbital map shows the path NASA’s Perseverance Mars rover took to get to a location the science team has dubbed the “Broom Point member,” a sequence of layered bedrock likely more than 3.9 billion years old. As planned, the rover landed inside Jezero Crater on Feb. 18, 2021. It investigated the crater’s western delta […]",
+      "agent_summary": "",
+      "source_fingerprint": "232f41266a994852a214",
+      "source_tier_bonus": 1,
+      "positivity_score": 2,
+      "positive_signals": [
+        "curated-positive-source",
+        "science"
       ],
       "public_eligible": false
     },
@@ -358,6 +399,23 @@
       "public_eligible": false
     },
     {
+      "id": "3243141d4530035d173c",
+      "title": "New guidance offers hope for reducing the global toll of dementia",
+      "url": "https://news.un.org/feed/view/en/story/2026/07/1167948",
+      "source": "UN News",
+      "language": "en",
+      "published_at": "2026-07-15T12:00:00Z",
+      "source_excerpt": "The World Health Organization (WHO) has issued updated global guidelines aimed at reducing the risk of cognitive decline and dementia, saying that up to 45 per cent of cases may be preventable or delayed by addressing modifiable risk factors throughout life.",
+      "agent_summary": "",
+      "source_fingerprint": "688f76b4f22554ef2cdd",
+      "source_tier_bonus": 0,
+      "positivity_score": 2,
+      "positive_signals": [
+        "hope"
+      ],
+      "public_eligible": true
+    },
+    {
       "id": "75b497f29e5c1d300945",
       "title": "Curiosity Blog, Sols 4947-4953: Gale Crater Then and Now",
       "url": "https://science.nasa.gov/blog/curiosity-blog-sols-4947-4953-gale-crater-then-and-now",
@@ -374,42 +432,6 @@
         "success"
       ],
       "public_eligible": true
-    },
-    {
-      "id": "84a52e4a7360627d27c0",
-      "title": "NASA Jets Turn Red, White, and Blue",
-      "url": "https://www.nasa.gov/image-article/nasa-jets-turn-red-white-and-blue",
-      "source": "NASA News Releases",
-      "language": "en",
-      "published_at": "2026-07-14T17:13:53Z",
-      "source_excerpt": "In honor of America’s 250th birthday, two of NASA’s most iconic aircraft got a fresh coat of red, white, and blue paint ahead of a flyover in Washington on July 4, 2026, with other NASA aircraft. An F-15 and an F/A-18 from NASA’s Armstrong Flight Research Center in Edwards, California, recently were repainted in […]",
-      "agent_summary": "",
-      "source_fingerprint": "690cbc7d4109ea233173",
-      "source_tier_bonus": 1,
-      "positivity_score": 2,
-      "positive_signals": [
-        "curated-positive-source",
-        "research"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "495c4626de6766f616f7",
-      "title": "NASA’s Roman Telescope Will Spot Distant Black Holes That Shred Stars",
-      "url": "https://www.nasa.gov/missions/roman-space-telescope/nasas-roman-telescope-will-spot-distant-black-holes-that-shred-stars",
-      "source": "NASA News Releases",
-      "language": "en",
-      "published_at": "2026-07-14T14:00:00Z",
-      "source_excerpt": "Lee esta nota de prensa en español aquí. How do black holes at the center of galaxies form and grow over time? To answer this question, scientists need to detect and study supermassive black holes at great distances, which existed much earlier in the universe’s history. New research suggests NASA’s Nancy Grace Roman Space Telescope, which […]",
-      "agent_summary": "",
-      "source_fingerprint": "3856e2c60dc7f849cbb8",
-      "source_tier_bonus": 1,
-      "positivity_score": 2,
-      "positive_signals": [
-        "curated-positive-source",
-        "research"
-      ],
-      "public_eligible": false
     }
   ]
 }
