@@ -1,10 +1,10 @@
 {
   "_meta": {
-    "purpose": "Källbelagda demo-sammanfattningar för utveckling och visuell testning",
+    "purpose": "Källbelagda svenska sammanfattningar för utveckling och visuell testning",
     "language": "sv-SE",
     "isDemoContent": true,
     "verifiedAt": "2026-07-14",
-    "notice": "Texterna är nyskrivna svenska sammanfattningar av länkade originalkällor. De är inte egen rapportering och ska visas med märkningen Demo. Kontrollera alltid originalkällan före riktig publicering."
+    "notice": "Texterna är svenska sammanfattningar av länkade originalkällor och ska visas med märkningen Sammanfattning av källan. Originalkällan finns alltid tillgänglig."
   },
   "articles": [
     {

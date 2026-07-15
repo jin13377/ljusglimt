@@ -677,7 +677,7 @@ class Handler(BaseHTTPRequestHandler):
             email = clean_text(payload.get("email"), 180).lower()
             if not valid_email(email):
                 return self._json({"error": "Kontrollera e-postadressen."}, HTTPStatus.BAD_REQUEST)
-            return self._json({"ok": True, "message": "Demo: adressen kontrollerades men sparades inte."})
+            return self._json({"ok": True, "message": "Adressen kontrollerades men sparades inte ännu."})
         self._json({"error": "Okänd endpoint."}, HTTPStatus.NOT_FOUND)
 
     def do_DELETE(self):

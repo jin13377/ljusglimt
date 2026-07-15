@@ -92,7 +92,7 @@ function filteredArticles() {
 }
 
 function articleCard(article) {
-  const badge = article.isDemo ? "Demo · " : "Källhämtad · ";
+  const badge = article.isDemo ? "Sammanfattning av källan · " : "Källhämtad · ";
   return `<article class="news-card">
     <div class="card-image"><img src="${article.image}" alt="" loading="lazy"><span class="card-category">${escapeHTML(article.label)}</span><span class="ai-disclosure">AI-illustration</span>
     <button class="card-save ${savedIds.has(article.id) ? "saved" : ""}" type="button" data-save-article="${escapeHTML(article.id)}" aria-label="${savedIds.has(article.id) ? "Ta bort från sparade" : "Spara nyheten"}">${savedIds.has(article.id) ? "♥" : "♡"}</button></div>
@@ -116,7 +116,7 @@ function openArticle(id) {
   dialogContent.innerHTML = `<div class="dialog-image"><img class="dialog-hero" src="${article.image}" alt=""><span class="ai-disclosure">AI-illustration</span></div>
     <article class="dialog-body"><span class="eyebrow">${escapeHTML(article.label)}</span>
     <h2>${escapeHTML(article.title)}</h2><p class="dialog-lead">${escapeHTML(article.excerpt)}</p>
-    <p>${article.isDemo ? "Det här är en nyskriven demosammanfattning av den länkade originalkällan." : "Notisen är automatiskt hämtad från ett offentligt flöde och ska alltid läsas tillsammans med originalkällan."}</p>
+    <p>${article.isDemo ? "Det här är en svensk sammanfattning av den länkade originalkällan." : "Notisen är automatiskt hämtad från ett offentligt flöde och ska alltid läsas tillsammans med originalkällan."}</p>
     <div class="dialog-source"><strong>Källa:</strong> ${escapeHTML(article.source)} · ${escapeHTML(article.date)}</div>
     <div class="dialog-actions"><a class="button button-primary" href="${article.url}" target="_blank" rel="noopener noreferrer">Läs originalkällan →</a>
     <button class="button button-outline" type="button" data-save-article="${escapeHTML(article.id)}">${savedIds.has(article.id) ? "♥ Sparad" : "♡ Spara"}</button></div></article>`;
@@ -198,7 +198,7 @@ document.querySelector("#newsletter-form").addEventListener("submit", async even
     const result = await response.json();
     showToast(result.message || result.error || "Tack!");
     if (response.ok) event.target.reset();
-  } catch { showToast("Demo: formuläret fungerar när server.py körs."); }
+  } catch { showToast("Formuläret fungerar när server.py körs."); }
 });
 
 document.querySelector(".demo-action")?.addEventListener("click", () => { window.location.href = "/forum"; });

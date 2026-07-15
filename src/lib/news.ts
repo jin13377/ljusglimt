@@ -237,9 +237,9 @@ export async function fetchNews(): Promise<NewsCollection> {
     fetchedAvailable: Boolean(fetchedResponse?.ok),
     seedAvailable: Boolean(seedResponse?.ok),
     warning: !fetchedResponse?.ok
-      ? 'Det automatiska flödet kunde inte hämtas. Demosammanfattningarna visas fortfarande.'
+      ? 'Det automatiska flödet kunde inte hämtas. De svenska källsammanfattningarna visas fortfarande.'
       : !seedResponse?.ok
-        ? 'Demosammanfattningarna kunde inte hämtas. De aktuella källnotiserna visas fortfarande.'
+        ? 'Källsammanfattningarna kunde inte hämtas. De aktuella källnotiserna visas fortfarande.'
         : '',
   }
 }

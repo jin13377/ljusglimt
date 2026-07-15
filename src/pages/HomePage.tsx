@@ -34,7 +34,7 @@ export function HomePage() {
         <motion.h1 initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }}>{hero?.title || 'Nyheter som gör världen lite större'}</motion.h1>
         <p>{hero?.excerpt || 'Vi samlar framsteg och initiativ från tydligt märkta källor.'}</p>
         {hero && <><OriginBadge article={hero} /><div className="hero-meta"><span>{hero.category}</span>{hero.location && <span>{hero.location}</span>}<time dateTime={hero.publishedAt}>{formatDate(hero.publishedAt)}</time></div>
-        <div className="hero-buttons"><Link className="button primary" to={`/nyhet/${encodeURIComponent(hero.id)}`}>Läs sammanfattningen <ArrowRight size={18} /></Link><a className="button ghost" href={hero.url} target="_blank" rel="noreferrer">Öppna källsidan</a></div></>}
+        <div className="hero-buttons"><Link className="button primary" to={`/nyhet/${encodeURIComponent(hero.slug)}`}>Läs sammanfattningen <ArrowRight size={18} /></Link><a className="button ghost" href={hero.url} target="_blank" rel="noreferrer">Öppna källsidan</a></div></>}
       </div>
       <div className="hero-art-wrap">{hero && <NewsVisual article={hero} variant="hero" priority showCaption />}</div>
     </section>
@@ -49,7 +49,7 @@ export function HomePage() {
     </section>
 
     <section className="section page-wrap">
-      <header className="section-header"><div><span className="eyebrow">Källbelagda exempel</span><h2>Svenska demosammanfattningar</h2><p>Exempel på hur en lugn och tydligt källmärkt nyhetsupplevelse kan fungera.</p></div><Link to="/sok?typ=demo">Visa alla demos <ArrowRight size={16} /></Link></header>
+      <header className="section-header"><div><span className="eyebrow">Källbelagda nyheter</span><h2>Svenska källsammanfattningar</h2><p>Korta svenska sammanfattningar med tydlig länk till originalkällan.</p></div><Link to="/sok?typ=sammanfattning">Visa alla sammanfattningar <ArrowRight size={16} /></Link></header>
       <div className="news-grid editorial-news-grid">{demoHighlights.map((article, index) => <NewsCard key={article.id} article={article} variant={homeCardVariant(index)} onSave={save} saved={isSaved(article.id)} />)}</div>
     </section>
 
@@ -65,12 +65,12 @@ export function HomePage() {
     <section className="editorial-band">
       <div className="page-wrap editorial-grid">
         <div><Quote size={46} /><blockquote>”Vi samlar det som går framåt – och visar alltid var uppgifterna kommer ifrån.”</blockquote><p>Ljusglimts metodlöfte</p></div>
-        <div className="editorial-points"><article><ShieldCheck /><div><h3>Tydlig märkning</h3><p>Demo och källhämtat innehåll hålls isär på varje sida.</p></div></article><article><Sparkles /><div><h3>Automatik med gränser</h3><p>Känsliga kandidater filtreras bort, men automatiken kan göra misstag. Källsidan ger hela sammanhanget.</p></div></article><Link className="button light" to="/om">Läs om metoden</Link></div>
+        <div className="editorial-points"><article><ShieldCheck /><div><h3>Tydlig märkning</h3><p>Sammanfattningar och källhämtat innehåll märks tydligt på varje sida.</p></div></article><article><Sparkles /><div><h3>Automatik med gränser</h3><p>Känsliga kandidater filtreras bort, men automatiken kan göra misstag. Källsidan ger hela sammanhanget.</p></div></article><Link className="button light" to="/om">Läs om metoden</Link></div>
       </div>
     </section>
 
     <ForumTeaser />
-    <section className="journey-section"><div className="page-wrap"><header><span className="eyebrow">Tre enkla steg</span><h2>Från nyfiken till källan</h2></header><div className="journey-grid"><article><span>01</span><h3>Upptäck</h3><p>Välj ett ämne i Kategorikompassen eller sök i hela arkivet.</p></article><article><span>02</span><h3>Förstå märkningen</h3><p>Se direkt om det är en demosammanfattning eller engelsk källnotis.</p></article><article><span>03</span><h3>Öppna källsidan</h3><p>Gå vidare till ursprungspubliceringen för hela sammanhanget.</p></article></div></div></section>
+    <section className="journey-section"><div className="page-wrap"><header><span className="eyebrow">Tre enkla steg</span><h2>Från nyfiken till källan</h2></header><div className="journey-grid"><article><span>01</span><h3>Upptäck</h3><p>Välj ett ämne i Kategorikompassen eller sök i hela arkivet.</p></article><article><span>02</span><h3>Förstå märkningen</h3><p>Se direkt om det är en svensk sammanfattning eller en engelsk källnotis.</p></article><article><span>03</span><h3>Öppna källsidan</h3><p>Gå vidare till ursprungspubliceringen för hela sammanhanget.</p></article></div></div></section>
     <FinalCta />
   </>
 }
@@ -88,7 +88,7 @@ function CategoryCompass() {
 }
 
 function FinalCta() {
-  return <section className="final-cta"><div className="page-wrap"><div><span className="eyebrow light">Nyhetsbrev · demo</span><h2>Fem ljusglimtar. När nyhetsbrevet öppnar.</h2><p>Testa formuläret. Inga mejl skickas och adressen sparas inte ännu.</p></div><NewsletterForm /></div></section>
+  return <section className="final-cta"><div className="page-wrap"><div><span className="eyebrow light">Nyhetsbrev · kommer snart</span><h2>Fem ljusglimtar. När nyhetsbrevet öppnar.</h2><p>Testa formuläret. Inga mejl skickas och adressen sparas inte ännu.</p></div><NewsletterForm /></div></section>
 }
 
 function ForumTeaser() {

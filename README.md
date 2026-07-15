@@ -2,7 +2,7 @@
 
 En körbar svensk konceptsajt för positiva, konstruktiva och källnära nyheter.
 Projektet innehåller en responsiv redaktionell startsida, sök/filter,
-originalkällor, nyhetsbrev-demo, ett förhandsmodererat forum och en schemalagd
+originalkällor, ett nyhetsbrevsformulär, ett förhandsmodererat forum och en schemalagd
 Codex/RSS-pipeline.
 
 Nyhetsbilder använder verifierade källbilder när användningsrätten är tydlig.
@@ -39,7 +39,7 @@ Python fortfarande visa den äldre beroendefria frontendversionen.
 
 ## Det som fungerar
 
-- startsida med källbelagda demoartiklar och automatiskt hämtade RSS-notiser;
+- startsida med källbelagda svenska sammanfattningar och automatiskt hämtade RSS-notiser;
 - kategorifilter, sök, egna artikelsidor och tydlig länk till originalkälla;
 - responsiv mobilmeny utan horisontell overflow;
 - forum med trådar/svar, honeypot, hastighetsgräns och modereringskö;

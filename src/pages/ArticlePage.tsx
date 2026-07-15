@@ -56,8 +56,8 @@ export function ArticlePage() {
           <NewsVisual article={article} variant="article" priority showCaption />
           <div className="article-copy">
             {article.origin === 'demo' ? <>
-              <h2>Om demosammanfattningen</h2>
-              <p>Ingressen ovan är en nyskriven svensk testtext baserad på den länkade källan. Den är inte Ljusglimts egen rapportering. Kontrollera alltid källsidan för fullständigt sammanhang, metod och eventuella uppdateringar.</p>
+              <h2>Om sammanfattningen</h2>
+              <p>Ingressen ovan sammanfattar den länkade källan på svenska. Öppna källsidan för hela sammanhanget och eventuella uppdateringar.</p>
             </> : <>
               <h2>Om källnotisen</h2>
               <p>Rubriken är automatiskt hämtad från den angivna publiceringen. {article.hasAgentSummary ? 'Ingressen är en källbunden svensk agentsammanfattning.' : 'Ingressen är källans engelska utdrag.'} Öppna källsidan för hela publiceringen och dess sammanhang.</p>
@@ -65,7 +65,7 @@ export function ArticlePage() {
           </div>
         </div>
         <aside className="article-aside">
-          <div className="source-card"><span className="eyebrow">Källa</span><h2>{article.source}</h2><p>{article.origin === 'demo' ? 'Demo · sammanfattning av källan' : article.hasAgentSummary ? 'Källnotis · svensk agentsammanfattning' : 'Källnotis · engelska'}</p><a className="button primary" href={article.url} target="_blank" rel="noreferrer">{article.origin === 'demo' ? 'Öppna originalkällan' : 'Öppna källsidan'} <ExternalLink size={16} /></a></div>
+          <div className="source-card"><span className="eyebrow">Källa</span><h2>{article.source}</h2><p>{article.origin === 'demo' ? 'Sammanfattning av källan' : article.hasAgentSummary ? 'Källnotis · svensk agentsammanfattning' : 'Källnotis · engelska'}</p><a className="button primary" href={article.url} target="_blank" rel="noreferrer">{article.origin === 'demo' ? 'Öppna originalkällan' : 'Öppna källsidan'} <ExternalLink size={16} /></a></div>
           <div className="article-tools"><button type="button" disabled={saving} onClick={save} aria-pressed={isSaved(article.id)} aria-label={isSaved(article.id) ? 'Ta bort från sparade' : 'Spara nyheten'}><Bookmark size={18} fill={isSaved(article.id) ? 'currentColor' : 'none'} /> {saving ? 'Sparar…' : isSaved(article.id) ? 'Sparad' : 'Spara'}</button><button type="button" onClick={share}><Share2 size={18} /> Dela</button>{message && <p role="status">{message}</p>}</div>
         </aside>
       </div>

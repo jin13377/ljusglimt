@@ -51,7 +51,7 @@ export function Layout({ children }: { children: ReactNode }) {
   return (
     <div className="app-shell">
       <a href="#main" className="skip-link">Hoppa till innehållet</a>
-      <div className="top-note">Positiva källnotiser och demosammanfattningar · Uppdateras 00:00 och 12:00</div>
+      <div className="top-note">Positiva nyheter från tydliga källor · Uppdateras 00:00 och 12:00</div>
       <header className="site-header">
         <div className="header-container">
           <Link to="/" className="brand" aria-label="Ljusglimt startsida"><span className="brand-sun">☀</span><span>Ljusglimt<small>NYHETER SOM GER PERSPEKTIV</small></span></Link>
@@ -68,10 +68,10 @@ export function Layout({ children }: { children: ReactNode }) {
       <main id="main" tabIndex={-1}>{children}</main>
       <footer className="site-footer">
         <div className="footer-main page-wrap">
-          <div><Link to="/" className="brand footer-brand"><span className="brand-sun">☀</span><span>Ljusglimt</span></Link><p>En varsamt formgiven samling av positiva källnotiser, demosammanfattningar och konstruktiva samtal.</p></div>
+          <div><Link to="/" className="brand footer-brand"><span className="brand-sun">☀</span><span>Ljusglimt</span></Link><p>En varsamt formgiven samling av positiva nyheter, tydliga källor och konstruktiva samtal.</p></div>
           <div><h2>Utforska</h2><Link to="/">Nyheter</Link><Link to="/sok">Sök och filtrera</Link><Link to="/forum">Forum</Link></div>
           <div><h2>Transparens</h2><Link to="/om">Om och metod</Link><Link to="/om#kallor">Källor och märkning</Link><Link to="/profil">Mitt konto</Link></div>
-          <div><h2>Nyhetsbrev · demo</h2><p>Testa formuläret. Adressen sparas inte ännu.</p><NewsletterForm compact /></div>
+          <div><h2>Nyhetsbrev · kommer snart</h2><p>Testa formuläret. Adressen sparas inte ännu.</p><NewsletterForm compact /></div>
         </div>
         <div className="footer-bottom page-wrap"><span>© 2026 Ljusglimt</span><span>Byggd med omtanke i Sverige</span></div>
       </footer>

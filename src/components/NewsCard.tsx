@@ -9,7 +9,7 @@ export type NewsCardVariant = 'lead' | 'standard' | 'compact' | 'text' | 'search
 
 export function OriginBadge({ article }: { article: NewsArticle }) {
   return article.origin === 'demo'
-    ? <span className="origin-badge demo">Demo · sammanfattning av källan</span>
+    ? <span className="origin-badge demo">Sammanfattning av källan</span>
     : <span className="origin-badge fetched">{article.hasAgentSummary ? 'Källnotis · svensk agentsammanfattning' : 'Källnotis · engelska'}</span>
 }
 
@@ -18,7 +18,7 @@ export function NewsCard({ article, onSave, saved = false, variant = 'standard' 
   return (
     <motion.article className={`news-card ${variant}`} initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: .15 }}>
       {variant !== 'text' && <div className="news-card-art">
-        <Link to={`/nyhet/${encodeURIComponent(article.id)}`} className="news-card-image-link" aria-label={`${imageLabel}. Läs ${article.title}`}>
+        <Link to={`/nyhet/${encodeURIComponent(article.slug)}`} className="news-card-image-link" aria-label={`${imageLabel}. Läs ${article.title}`}>
           <NewsVisual article={article} variant={variant === 'search' ? 'search' : 'card'} />
           <span className="category-pill">{article.category}</span>
         </Link>
@@ -26,7 +26,7 @@ export function NewsCard({ article, onSave, saved = false, variant = 'standard' 
       <div className="news-card-body">
         <OriginBadge article={article} />
         {article.image.kind === 'source' && article.image.credit && article.image.rightsUrl && <div className="card-image-credit">Källbild: {article.image.credit} · <a href={article.image.rightsUrl} target="_blank" rel="noreferrer">bildrättigheter</a></div>}
-        <h3 lang={article.language}><Link to={`/nyhet/${encodeURIComponent(article.id)}`}>{article.title}</Link></h3>
+        <h3 lang={article.language}><Link to={`/nyhet/${encodeURIComponent(article.slug)}`}>{article.title}</Link></h3>
         <p lang={article.excerptLanguage}>{excerpt(article.excerpt)}</p>
         {article.location && <div className="news-card-location"><MapPin size={14} /> {article.location}</div>}
         <footer>
