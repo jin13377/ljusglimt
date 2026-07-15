@@ -37,6 +37,28 @@ adresserna `/forum.html`, `/profil.html` och `/om.html` fortsätter fungera,
 även med befintliga query-parametrar. Om Vite ännu inte är installerat kan
 Python fortfarande visa den äldre beroendefria frontendversionen.
 
+## Gratis statisk publicering
+
+Projektet är förberett för Cloudflare Pages med GitHub som källa. Använd:
+
+- produktionsgren: `main`
+- build command: `npm run build`
+- output directory: `dist`
+- Node.js: 22 eller senare
+- obligatoriska environment variables: inga
+
+Bygget kopierar automatiskt `data/news.json` och `data/seed-news.json` till
+`dist/data/`. Route-filen `public/_redirects` gör att direkta länkar i React-
+appen fungerar på en statisk host.
+
+Nyheter, sök, artiklar och Om-sidan fungerar statiskt. Forumskrivning,
+inloggning, profiler, sparade nyheter och nyhetsbrevsregistrering kräver
+Python-API:t och SQLite, eller en framtida migrering till en hostad backend.
+
+De schemalagda GitHub Actions-jobben kan valfritt använda
+`OPENAI_API_KEY` och `OPENAI_IMAGE_API_KEY`. De behövs inte för att bygga eller
+visa den statiska webbplatsen.
+
 ## Det som fungerar
 
 - startsida med källbelagda svenska sammanfattningar och automatiskt hämtade RSS-notiser;

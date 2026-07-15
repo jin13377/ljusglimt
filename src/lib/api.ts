@@ -19,6 +19,10 @@ export async function api<T>(url: string, options: RequestInit = {}): Promise<T>
       : options.headers,
   })
   let data: unknown = {}
+  const contentType = response.headers.get('content-type') || ''
+  if (!contentType.toLowerCase().includes('application/json')) {
+    throw new ApiError('Serverdelen är inte tillgänglig på den statiska webbplatsen.', 503, 'BACKEND_UNAVAILABLE')
+  }
   try {
     data = await response.json()
   } catch {

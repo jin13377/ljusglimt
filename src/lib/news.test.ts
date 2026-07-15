@@ -124,4 +124,19 @@ describe('news normalizer', () => {
     expect(result.fetchedAvailable).toBe(false)
     expect(result.warning).toContain('automatiska flödet')
   })
+
+  it('uses the bundled news feed when the API is unavailable on static hosting', async () => {
+    const mockedFetch = vi.fn()
+      .mockResolvedValueOnce(new Response('<!doctype html><title>Ljusglimt</title>', { status: 200, headers: { 'Content-Type': 'text/html' } }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ articles: [] }), { status: 200, headers: { 'Content-Type': 'application/json' } }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ items: [{ id: 'static-1', title: 'A constructive update', url: 'https://example.com/news', source: 'Example', public_eligible: true }], generated_at: '2026-07-15T12:00:00Z' }), { status: 200, headers: { 'Content-Type': 'application/json' } }))
+    vi.stubGlobal('fetch', mockedFetch)
+
+    const result = await fetchNews()
+
+    expect(mockedFetch).toHaveBeenNthCalledWith(3, '/data/news.json', undefined)
+    expect(result.fetchedAvailable).toBe(true)
+    expect(result.fetchedCount).toBe(1)
+    expect(result.warning).toBe('')
+  })
 })

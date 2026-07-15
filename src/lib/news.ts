@@ -211,34 +211,38 @@ export interface NewsCollection {
   warning: string
 }
 
+async function fetchJson<T>(path: string, options?: RequestInit): Promise<T | null> {
+  try {
+    const response = await fetch(`${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`, options)
+    if (!response.ok) return null
+    return (await response.json()) as T
+  } catch {
+    return null
+  }
+}
+
 export async function fetchNews(): Promise<NewsCollection> {
-  const [fetchedResult, seedResult] = await Promise.allSettled([
-    fetch('/api/news', { credentials: 'same-origin' }),
-    fetch('/data/seed-news.json'),
+  const [apiData, seedData] = await Promise.all([
+    fetchJson<{ items?: RawFetchedNews[]; generated_at?: string }>('/api/news', { credentials: 'same-origin' }),
+    fetchJson<{ articles?: RawSeedNews[] }>('/data/seed-news.json'),
   ])
-  const fetchedResponse = fetchedResult.status === 'fulfilled' ? fetchedResult.value : null
-  const seedResponse = seedResult.status === 'fulfilled' ? seedResult.value : null
-  if (!fetchedResponse?.ok && !seedResponse?.ok) throw new Error('Nyhetsflödet kunde inte laddas.')
-  const fetchedData = fetchedResponse?.ok
-    ? (await fetchedResponse.json()) as { items?: RawFetchedNews[]; generated_at?: string }
-    : { items: [] }
-  const seedData = seedResponse?.ok
-    ? (await seedResponse.json()) as { articles?: RawSeedNews[] }
-    : { articles: [] }
-  const fetched = (fetchedData.items ?? []).map(normalizeFetched).filter(isSuitableForPublicFeed)
-  const demo = (seedData.articles ?? []).map(normalizeSeed)
+  const staticData = apiData ? null : await fetchJson<{ items?: RawFetchedNews[]; generated_at?: string }>('/data/news.json')
+  const fetchedData = apiData || staticData
+  if (!fetchedData && !seedData) throw new Error('Nyhetsflödet kunde inte laddas.')
+  const fetched = (fetchedData?.items ?? []).map(normalizeFetched).filter(isSuitableForPublicFeed)
+  const demo = (seedData?.articles ?? []).map(normalizeSeed)
   const articles = [...demo, ...fetched].sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt))
   return {
     articles,
     fetchedCount: fetched.length,
     demoCount: demo.length,
     sourceCount: new Set(fetched.map((item) => item.source)).size,
-    latestFetchedAt: fetchedData.generated_at || '',
-    fetchedAvailable: Boolean(fetchedResponse?.ok),
-    seedAvailable: Boolean(seedResponse?.ok),
-    warning: !fetchedResponse?.ok
+    latestFetchedAt: fetchedData?.generated_at || '',
+    fetchedAvailable: Boolean(fetchedData),
+    seedAvailable: Boolean(seedData),
+    warning: !fetchedData
       ? 'Det automatiska flödet kunde inte hämtas. De svenska källsammanfattningarna visas fortfarande.'
-      : !seedResponse?.ok
+      : !seedData
         ? 'Källsammanfattningarna kunde inte hämtas. De aktuella källnotiserna visas fortfarande.'
         : '',
   }
