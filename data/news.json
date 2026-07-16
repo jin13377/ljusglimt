@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-16T05:49:09.031770Z",
+  "generated_at": "2026-07-16T06:07:24.119578Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [],
@@ -352,6 +352,13 @@
       "source_excerpt": "Testing new aerospace concepts in flight remains one of NASA’s most effective ways to advance knowledge and reduce risk. The Dale Reed Subscale Flight Research Laboratory at NASA’s Armstrong Flight Research Center in Edwards, California, supports this mission by using small, remotely piloted and autonomous aircraft as cost‑effective platforms to mature innovative ideas, accelerate learning, […]",
       "agent_summary": "",
       "source_fingerprint": "699c1ffd1b6471221e44",
+      "source_video": {
+        "provider": "youtube",
+        "video_id": "Fb08ooo7MhI",
+        "embed_url": "https://www.youtube-nocookie.com/embed/Fb08ooo7MhI",
+        "source_url": "https://www.youtube.com/watch?v=Fb08ooo7MhI",
+        "title": "NASA Uses Subscale Aircraft to Accelerate Flight Innovation"
+      },
       "source_tier_bonus": 1,
       "positivity_score": 5,
       "positive_signals": [
@@ -360,7 +367,16 @@
         "mission",
         "research"
       ],
-      "public_eligible": false
+      "public_eligible": true,
+      "generated_image": {
+        "url": "/news-images/generated/b634e8c36ed593bd94d7-699c1ffd-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-abstract-v1",
+        "source_fingerprint": "699c1ffd1b6471221e44",
+        "width": 1280,
+        "height": 848,
+        "sha256": "ad0a93712691cf8245bfafbd96f4275ff22fc01e978b7e6d6cb55b1bc926cd8f"
+      }
     },
     {
       "id": "1b82a78f627942caa9fb",
@@ -742,6 +758,13 @@
       "source_excerpt": "NASA astronaut candidate Anna Menon and her children watch as a Soyuz rocket launches to the International Space Station with NASA astronaut Anil Menon and Roscosmos cosmonauts Pyotr Dubrov and Anna Kikina, Tuesday, July 14, 2026, at the Baikonur Cosmodrome in Kazakhstan. The trio lifted off for the Soyuz MS-29 mission at 7:47 p.m. local […]",
       "agent_summary": "",
       "source_fingerprint": "660ac6a25511b3c4d7ae",
+      "source_video": {
+        "provider": "youtube",
+        "video_id": "SwhPXxNtdoc",
+        "embed_url": "https://www.youtube-nocookie.com/embed/SwhPXxNtdoc",
+        "source_url": "https://www.youtube.com/watch?v=SwhPXxNtdoc",
+        "title": "Anil Menon Launches to Space Station"
+      },
       "source_tier_bonus": 1,
       "positivity_score": 2,
       "positive_signals": [

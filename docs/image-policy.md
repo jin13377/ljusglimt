@@ -61,7 +61,9 @@ fullständigt bildunderlag saknas.
 
 ## Video
 
-Videor bäddas bara in när ett granskat flöde lämnar ett verifierbart video-id.
-The Dodos publika Dailymotion-flöde är aktiv källa; spelaren har även strikt
-validerat stöd för YouTube. Videon laddas först när besökaren trycker på spela
-och har alltid en separat länk till källvideon.
+Videor kan visas i alla kategorier, men bäddas bara in när ett granskat RSS-,
+Atom- eller videoflöde lämnar ett verifierbart YouTube- eller Dailymotion-id.
+Exempelvis kan NASA:s RSS-notiser innehålla en officiell YouTube-spelare medan
+The Dodos publika flöde använder Dailymotion. Andra värdar och tvetydiga video-id:n
+avvisas. Videon laddas först när besökaren trycker på spela och har alltid en
+separat länk till källvideon.

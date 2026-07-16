@@ -47,7 +47,7 @@ SENSITIVE_CANDIDATE_RE = re.compile(
 )
 FEED_NOISE_RE = re.compile(r"\b(?:appeared first on|share the stories)\b", re.IGNORECASE)
 POSITIVE_CANDIDATE_RE = re.compile(
-    r"\b(?:achiev(?:e|ed|ement)|adopt(?:ed|ion)?|adorable|award(?:ed|s)?|best friend|birth|breakthrough|celebrat(?:e|ed|es|ing|ion)|conservation(?:ist|ists)?|cuddl(?:e|ed|es|ing|y)|discov(?:er|ered|ery)|free(?:d|ing)?|friend(?:s|ship)?|help(?:s|ed|ing)?|hope(?:ful)?|improv(?:e|ed|ement)|kitten(?:s)?|lov(?:e|ed|es|ing)|milestone|play(?:s|ed|ing|ful)?|priceless|protect(?:s|ed|ing|ion)?|pupp(?:y|ies)|recover(?:ed|y)|rescu(?:e|ed|es|ing)|restor(?:e|ed|es|ing|ation)|save(?:d|s|ing)?|second chance|smooth(?:er|est)|solv(?:e|ed|es|ing)|spoil(?:s|ed|ing)?|success(?:ful)?|surpris(?:e|ed|es|ing)|together|treat(?:s|ed|ing)?|volunteer(?:s|ed|ing)?|win(?:s|ning)?)\b",
+    r"\b(?:achiev(?:e|ed|ement)|adopt(?:ed|ion)?|adorable|award(?:ed|s)?|best friend|birth|breakthrough|celebrat(?:e|ed|es|ing|ion)|conservation(?:ist|ists)?|cuddl(?:e|ed|es|ing|y)|discov(?:er|ered|ery)|free(?:d|ing)?|friend(?:s|ship)?|help(?:s|ed|ing)?|hope(?:ful)?|improv(?:e|ed|ement)|innovation|kitten(?:s)?|lov(?:e|ed|es|ing)|milestone|play(?:s|ed|ing|ful)?|priceless|protect(?:s|ed|ing|ion)?|pupp(?:y|ies)|recover(?:ed|y)|rescu(?:e|ed|es|ing)|restor(?:e|ed|es|ing|ation)|save(?:d|s|ing)?|second chance|smooth(?:er|est)|solv(?:e|ed|es|ing)|spoil(?:s|ed|ing)?|success(?:ful)?|surpris(?:e|ed|es|ing)|together|treat(?:s|ed|ing)?|volunteer(?:s|ed|ing)?|win(?:s|ning)?)\b",
     re.IGNORECASE,
 )
 AI_IMAGE_KEYS = {
@@ -337,35 +337,127 @@ def reusable_source_image(item: dict, previous: dict | None) -> dict:
     return reusable
 
 
+def _video_policy_providers(video_policy: dict | None) -> set[str]:
+    if not isinstance(video_policy, dict) or video_policy.get("enabled") is not True:
+        return set()
+    configured = video_policy.get("providers")
+    if not isinstance(configured, list):
+        configured = [video_policy.get("provider")]
+    return {
+        provider for provider in configured
+        if isinstance(provider, str) and provider in {"youtube", "dailymotion"}
+    }
+
+
+def _supported_video_from_url(value: object, providers: set[str]) -> dict:
+    safe_url = _safe_https_url(html.unescape(value) if isinstance(value, str) else value)
+    if not safe_url:
+        return {}
+    parsed = urllib.parse.urlsplit(safe_url)
+    host = (parsed.hostname or "").casefold()
+    path_parts = [part for part in parsed.path.split("/") if part]
+
+    if "youtube" in providers and host in {
+        "youtube.com", "www.youtube.com", "m.youtube.com", "youtu.be", "www.youtube-nocookie.com",
+    }:
+        video_id = ""
+        if host == "youtu.be" and path_parts:
+            video_id = path_parts[0]
+        elif path_parts and path_parts[0] in {"embed", "shorts", "live"} and len(path_parts) >= 2:
+            video_id = path_parts[1]
+        elif parsed.path.rstrip("/") == "/watch":
+            video_id = urllib.parse.parse_qs(parsed.query).get("v", [""])[0]
+        if re.fullmatch(r"[A-Za-z0-9_-]{11}", video_id):
+            return {
+                "provider": "youtube",
+                "video_id": video_id,
+                "embed_url": f"https://www.youtube-nocookie.com/embed/{video_id}",
+                "source_url": f"https://www.youtube.com/watch?v={video_id}",
+            }
+
+    if "dailymotion" in providers and host in {
+        "dailymotion.com", "www.dailymotion.com", "geo.dailymotion.com", "dai.ly",
+    }:
+        video_id = ""
+        if host == "dai.ly" and path_parts:
+            video_id = path_parts[0]
+        elif len(path_parts) >= 2 and path_parts[0] == "video":
+            video_id = path_parts[1].split("_", 1)[0]
+        elif host == "geo.dailymotion.com" and parsed.path.rstrip("/") == "/player.html":
+            video_id = urllib.parse.parse_qs(parsed.query).get("video", [""])[0]
+        if re.fullmatch(r"x[a-z0-9]+", video_id):
+            return {
+                "provider": "dailymotion",
+                "video_id": video_id,
+                "embed_url": f"https://geo.dailymotion.com/player.html?video={video_id}",
+                "source_url": f"https://www.dailymotion.com/video/{video_id}",
+            }
+    return {}
+
+
 def verified_source_video(node: ET.Element, article_url: str, article_title: str,
                           video_policy: dict | None) -> dict:
-    """Return a privacy-enhanced YouTube embed only for an explicit video feed."""
-    if (not isinstance(video_policy, dict) or video_policy.get("enabled") is not True
-            or video_policy.get("provider") != "youtube"):
+    """Accept only exact YouTube/Dailymotion IDs supplied by RSS/Atom metadata."""
+    providers = _video_policy_providers(video_policy)
+    if not providers:
         return {}
-    video_ids = []
+    candidates: dict[tuple[str, str], dict] = {}
     for child in node.iter():
         namespace, local = _tag_parts(child)
-        if namespace == YOUTUBE_NAMESPACE and local == "videoid" and child.text:
-            video_id = child.text.strip()
-            if re.fullmatch(r"[A-Za-z0-9_-]{11}", video_id) and video_id not in video_ids:
-                video_ids.append(video_id)
-    source_url = _safe_https_url(article_url)
-    if len(video_ids) != 1 or not source_url:
+        if namespace == YOUTUBE_NAMESPACE and local == "videoid" and "youtube" in providers:
+            video_id = (child.text or "").strip()
+            if re.fullmatch(r"[A-Za-z0-9_-]{11}", video_id):
+                candidates[("youtube", video_id)] = {
+                    "provider": "youtube",
+                    "video_id": video_id,
+                    "embed_url": f"https://www.youtube-nocookie.com/embed/{video_id}",
+                    "source_url": f"https://www.youtube.com/watch?v={video_id}",
+                }
+
+        mime = child.attrib.get("type", "").casefold()
+        medium = child.attrib.get("medium", "").casefold()
+        is_video_metadata = (
+            (namespace == MEDIA_RSS_NAMESPACE and local in {"content", "player"}
+             and (local == "player" or medium == "video" or mime.startswith("video/")))
+            or (local == "enclosure" and mime.startswith("video/"))
+        )
+        if is_video_metadata:
+            candidate = _supported_video_from_url(
+                child.attrib.get("url") or child.attrib.get("href") or child.attrib.get("src"), providers)
+            if candidate:
+                candidates[(candidate["provider"], candidate["video_id"])] = candidate
+
+        raw_text = html.unescape(child.text or "")
+        if raw_text and ("youtube" in raw_text.casefold() or "youtu.be" in raw_text.casefold()
+                         or "dailymotion" in raw_text.casefold() or "dai.ly" in raw_text.casefold()):
+            for possible_url in re.findall(r"https://[^\s\"'<>]+", raw_text):
+                candidate = _supported_video_from_url(possible_url.rstrip(".,);]"), providers)
+                if candidate:
+                    candidates[(candidate["provider"], candidate["video_id"])] = candidate
+
+    if len(candidates) != 1 or not _safe_https_url(article_url):
         return {}
-    source_host = (urllib.parse.urlsplit(source_url).hostname or "").casefold()
-    if source_host not in {"youtube.com", "www.youtube.com", "youtu.be"}:
+    video = next(iter(candidates.values()))
+    video["title"] = article_title
+    return {"source_video": video}
+
+
+def reusable_source_video(item: dict, previous: dict | None) -> dict:
+    if not previous or previous.get("source_fingerprint") != item.get("source_fingerprint"):
         return {}
-    video_id = video_ids[0]
-    return {
-        "source_video": {
-            "provider": "youtube",
-            "video_id": video_id,
-            "embed_url": f"https://www.youtube-nocookie.com/embed/{video_id}",
-            "source_url": source_url,
-            "title": article_title,
-        }
-    }
+    video = previous.get("source_video")
+    if not isinstance(video, dict):
+        return {}
+    provider = video.get("provider")
+    if provider not in {"youtube", "dailymotion"}:
+        return {}
+    normalized = _supported_video_from_url(video.get("source_url"), {provider})
+    title = clean_text(video.get("title"))[:260]
+    if (not normalized or normalized.get("video_id") != video.get("video_id")
+            or normalized.get("embed_url") != video.get("embed_url") or not title):
+        return {}
+    normalized["title"] = title
+    return {"source_video": normalized}
 
 
 def parse_date(value: str | None) -> str | None:
@@ -450,8 +542,7 @@ def parse_dailymotion_feed(payload: bytes, source: str, language: str,
         raise ValueError("Dailymotion response is missing its list")
     if (not isinstance(image_policy, dict) or image_policy.get("enabled") is not True
             or image_policy.get("mode") != "feed-thumbnail"
-            or not isinstance(video_policy, dict) or video_policy.get("enabled") is not True
-            or video_policy.get("provider") != "dailymotion"):
+            or "dailymotion" not in _video_policy_providers(video_policy)):
         return []
     configured_image_hosts = image_policy.get("allowed_image_hosts")
     configured_article_hosts = image_policy.get("allowed_article_hosts")
@@ -617,12 +708,13 @@ def main(argv: list[str] | None = None) -> int:
             continue
         try:
             payload = fetch(feed["url"], int(config.get("request_timeout_seconds", 20)), config.get("user_agent", "GladnyttBot/1.0"))
+            video_policy = feed.get("video_policy", config.get("video_policy"))
             if feed.get("format") == "dailymotion-json":
                 parsed = parse_dailymotion_feed(payload, feed["name"], feed.get("language", "und"),
-                                                 feed.get("image_policy"), feed.get("video_policy"))
+                                                 feed.get("image_policy"), video_policy)
             else:
                 parsed = parse_feed(payload, feed["name"], feed.get("language", "und"),
-                                    feed.get("image_policy"), feed.get("video_policy"))
+                                    feed.get("image_policy"), video_policy)
             selected = []
             for item in parsed:
                 category = feed.get("category")
@@ -671,6 +763,8 @@ def main(argv: list[str] | None = None) -> int:
         item["public_eligible"] = public_eligible(item)
         item.update(reusable_ai_image(item, previous))
         item.update(reusable_generated_image(item, previous))
+        if not isinstance(item.get("source_video"), dict):
+            item.update(reusable_source_video(item, previous))
         # Fresh, fully licensed feed metadata wins over any previous image.
         if item.get("source_image_verified") is not True:
             item.update(reusable_source_image(item, previous))

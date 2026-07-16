@@ -172,7 +172,10 @@ export function inferCategory(item: RawFetchedNews): string {
   let best = 'Framsteg'
   let bestScore = 0
   for (const [category, words] of Object.entries(categoryWords)) {
-    const score = words.reduce((sum, word) => sum + (text.includes(word) ? 1 : 0), 0)
+    const score = words.reduce((sum, word) => {
+      const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\s+/g, '\\s+')
+      return sum + (new RegExp(`\\b${escaped}\\b`, 'i').test(text) ? 1 : 0)
+    }, 0)
     if (score > bestScore) {
       best = category
       bestScore = score
@@ -246,7 +249,7 @@ export function normalizeSeed(item: RawSeedNews): NewsArticle {
 
 const sensitiveCandidate = /\b(?:abandon(?:ed|ment)?|abuse|anxiety|assault|backlash|blood|bloody|bomb|chronic loneliness|closing|conflict|criticiz(?:e|ed|es|ing)|crush(?:ed|ing)?|death|desperat(?:e|ely)|distress(?:ed|ing)?|earthquake|extinct(?:ion)?|extremism|fraud|gasp(?:ing)?|harass(?:ment|ed|ing)?|harrowing|hooks? in|injur(?:ed|y|ies)|killed|loathe|locked away|lost (?:a |both |back )?legs?|mange|mangled|missing flipper|murder|onlyfans|revok(?:e|ed|es|ing)|scared|shooting|shocked|sick|stranded|strangl(?:e|ed|es|ing)|stroke|stuck in|terror|terrified|threaten(?:ed|ing)?|traffick(?:ing|ed)?|trap(?:ped)?|traumatized|treatment center|unable to move|violence|war)\b/i
 const feedNoise = /\b(?:appeared first on|share the stories)\b/i
-const positiveCandidate = /\b(?:achiev(?:e|ed|ement)|adopt(?:ed|ion)?|adorable|award(?:ed|s)?|best friend|birth|breakthrough|celebrat(?:e|ed|es|ing|ion)|conservation(?:ist|ists)?|cuddl(?:e|ed|es|ing|y)|discov(?:er|ered|ery)|free(?:d|ing)?|friend(?:s|ship)?|help(?:s|ed|ing)?|hope(?:ful)?|improv(?:e|ed|ement)|kitten(?:s)?|lov(?:e|ed|es|ing)|milestone|play(?:s|ed|ing|ful)?|priceless|protect(?:s|ed|ing|ion)?|pupp(?:y|ies)|recover(?:ed|y)|rescu(?:e|ed|es|ing)|restor(?:e|ed|es|ing|ation)|save(?:d|s|ing)?|second chance|smooth(?:er|est)|solv(?:e|ed|es|ing)|spoil(?:s|ed|ing)?|success(?:ful)?|surpris(?:e|ed|es|ing)|together|treat(?:s|ed|ing)?|volunteer(?:s|ed|ing)?|win(?:s|ning)?)\b/i
+const positiveCandidate = /\b(?:achiev(?:e|ed|ement)|adopt(?:ed|ion)?|adorable|award(?:ed|s)?|best friend|birth|breakthrough|celebrat(?:e|ed|es|ing|ion)|conservation(?:ist|ists)?|cuddl(?:e|ed|es|ing|y)|discov(?:er|ered|ery)|free(?:d|ing)?|friend(?:s|ship)?|help(?:s|ed|ing)?|hope(?:ful)?|improv(?:e|ed|ement)|innovation|kitten(?:s)?|lov(?:e|ed|es|ing)|milestone|play(?:s|ed|ing|ful)?|priceless|protect(?:s|ed|ing|ion)?|pupp(?:y|ies)|recover(?:ed|y)|rescu(?:e|ed|es|ing)|restor(?:e|ed|es|ing|ation)|save(?:d|s|ing)?|second chance|smooth(?:er|est)|solv(?:e|ed|es|ing)|spoil(?:s|ed|ing)?|success(?:ful)?|surpris(?:e|ed|es|ing)|together|treat(?:s|ed|ing)?|volunteer(?:s|ed|ing)?|win(?:s|ning)?)\b/i
 
 export function isSuitableForPublicFeed(article: NewsArticle): boolean {
   if (article.origin === 'demo') return true

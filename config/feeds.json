@@ -77,6 +77,10 @@
       "enabled": false
     }
   ],
+  "video_policy": {
+    "enabled": true,
+    "providers": ["youtube", "dailymotion"]
+  },
   "positive_keywords": [
     "breakthrough", "community", "conservation", "discovery", "donation",
     "education", "hope", "improves", "innovation", "milestone", "progress",

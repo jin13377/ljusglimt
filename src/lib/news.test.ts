@@ -64,6 +64,21 @@ describe('news normalizer', () => {
     expect(item.video?.embedUrl).toBe('https://geo.dailymotion.com/player.html?video=xamx6nm')
   })
 
+  it('accepts a validated YouTube video on a regular science news article', () => {
+    const item = normalizeFetched({
+      id: 'nasa-video', title: 'NASA Uses Subscale Aircraft to Accelerate Flight Innovation',
+      url: 'https://www.nasa.gov/example/flight-innovation', source: 'NASA News Releases',
+      source_excerpt: 'The research platform advances practical innovation.',
+      source_video: {
+        provider: 'youtube', video_id: 'Fb08ooo7MhI', title: 'NASA flight innovation',
+        embed_url: 'https://www.youtube-nocookie.com/embed/Fb08ooo7MhI', source_url: 'https://www.youtube.com/watch?v=Fb08ooo7MhI',
+      },
+    })
+    expect(item.category).toBe('Vetenskap')
+    expect(item.video?.provider).toBe('youtube')
+    expect(isSuitableForPublicFeed(item)).toBe(true)
+  })
+
   it('preserves demo source transparency', () => {
     const item = normalizeSeed({ id: 'demo', title: 'En ljus nyhet', summary: 'Sammanfattning', source: { name: 'WHO', url: 'https://who.int' } })
     expect(item.origin).toBe('demo')

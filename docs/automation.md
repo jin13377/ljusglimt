@@ -18,7 +18,7 @@ Resultatet skrivs atomiskt till `data/news.json`. Skriptet:
 - deduplicerar på kanonisk länk och normaliserad rubrik;
 - återanvänder tidigare manuella/agentgjorda sammanfattningar;
 - hämtar källans egna flödesbilder från strikt tillåtna värdar;
-- kopplar verifierade videor till djurnyheter från The Dodos publika flöde;
+- kopplar verifierade YouTube- och Dailymotion-videor till nyheter i alla kategorier när källflödet lämnar video-id eller säker spelarlänk;
 - skriver först en temporär fil och byter sedan fil atomiskt.
 
 ## Dagliga körningar kl. 00 och 12 Europe/Stockholm

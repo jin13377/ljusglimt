@@ -134,6 +134,45 @@ class PositiveNewsTests(unittest.TestCase):
         self.assertEqual(item["source_video"]["video_id"], "PahtM3xtRus")
         self.assertEqual(item["source_video"]["embed_url"], "https://www.youtube-nocookie.com/embed/PahtM3xtRus")
 
+    def test_regular_news_rss_gets_safe_youtube_video_from_media_metadata(self):
+        xml = b"""<rss xmlns:media="http://search.yahoo.com/mrss/"><channel><item>
+        <title>NASA flight innovation accelerates research</title>
+        <link>https://www.nasa.gov/example/flight-innovation/</link>
+        <description>A new research platform advances knowledge.</description>
+        <media:content url="https://www.youtube.com/embed/Fb08ooo7MhI" medium="video" />
+        <media:player url="https://www.youtube.com/embed/Fb08ooo7MhI" />
+        </item></channel></rss>"""
+        policy = {"enabled": True, "providers": ["youtube", "dailymotion"]}
+        item = news.parse_feed(xml, "NASA News Releases", "en", video_policy=policy)[0]
+        self.assertEqual(item["url"], "https://www.nasa.gov/example/flight-innovation")
+        self.assertEqual(item["source_video"]["provider"], "youtube")
+        self.assertEqual(item["source_video"]["video_id"], "Fb08ooo7MhI")
+        self.assertEqual(item["source_video"]["source_url"], "https://www.youtube.com/watch?v=Fb08ooo7MhI")
+
+        lookalike = xml.replace(b"www.youtube.com", b"www.youtube.com.evil.example")
+        self.assertNotIn(
+            "source_video",
+            news.parse_feed(lookalike, "NASA News Releases", "en", video_policy=policy)[0],
+        )
+
+    def test_source_video_is_reused_only_for_unchanged_source(self):
+        item = {"title": "Flight innovation", "source_excerpt": "Research advances.", "published_at": "2026-07-16"}
+        item["source_fingerprint"] = news.source_fingerprint(item)
+        previous = {
+            **item,
+            "source_video": {
+                "provider": "youtube",
+                "video_id": "Fb08ooo7MhI",
+                "embed_url": "https://www.youtube-nocookie.com/embed/Fb08ooo7MhI",
+                "source_url": "https://www.youtube.com/watch?v=Fb08ooo7MhI",
+                "title": "Flight innovation",
+            },
+        }
+        self.assertEqual(news.reusable_source_video(item, previous)["source_video"]["video_id"], "Fb08ooo7MhI")
+        changed = {**item, "source_excerpt": "Changed source text."}
+        changed["source_fingerprint"] = news.source_fingerprint(changed)
+        self.assertEqual(news.reusable_source_video(changed, previous), {})
+
     def test_dailymotion_listing_gets_source_image_and_video(self):
         payload = json.dumps({"list": [{
             "id": "xamx6nm", "title": "Boyfriend Has Best Reaction To Surprise Foster Kittens",
@@ -179,6 +218,7 @@ class PositiveNewsTests(unittest.TestCase):
             ({"title": "Community rescue success", "source_excerpt": "Appeared first on Example."}, False),
             ({"title": "Community update", "source_excerpt": "A normal update."}, False),
             ({"title": "Community update", "source_excerpt": "A rescue success.", "agent_summary": "En neutral notis."}, False),
+            ({"title": "Flight innovation accelerates research", "source_excerpt": "A practical platform."}, True),
         )
         for item, expected in cases:
             with self.subTest(title=item["title"]):

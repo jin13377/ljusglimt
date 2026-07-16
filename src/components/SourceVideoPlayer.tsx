@@ -12,7 +12,7 @@ export function SourceVideoPlayer({ video, poster }: { video: NewsVideo; poster:
     <header>
       <div>
         <span className="eyebrow">Video från källan</span>
-        <h2 id="source-video-title">Se djurglimten här</h2>
+        <h2 id="source-video-title">Se videon här</h2>
       </div>
       <a href={video.sourceUrl} target="_blank" rel="noreferrer">Öppna på {platform} <ExternalLink size={15} /></a>
     </header>
