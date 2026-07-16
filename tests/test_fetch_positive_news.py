@@ -217,8 +217,11 @@ class PositiveNewsTests(unittest.TestCase):
             ({"title": "A stranded animal needed help", "source_excerpt": "It was unable to move."}, False),
             ({"title": "Community rescue success", "source_excerpt": "Appeared first on Example."}, False),
             ({"title": "Community update", "source_excerpt": "A normal update."}, False),
-            ({"title": "Community update", "source_excerpt": "A rescue success.", "agent_summary": "En neutral notis."}, False),
+            ({"title": "Community update", "source_excerpt": "A rescue success.", "agent_summary": "En neutral notis."}, True),
             ({"title": "Flight innovation accelerates research", "source_excerpt": "A practical platform."}, True),
+            ({"title": "Community rescue success", "source_excerpt": "Volunteers helped.", "language": "en"}, False),
+            ({"title": "Community rescue success", "source_excerpt": "Volunteers helped.", "language": "en",
+              "display_title_sv": "Framgång för lokal räddningsinsats", "agent_summary": "Volontärer hjälpte till."}, True),
         )
         for item, expected in cases:
             with self.subTest(title=item["title"]):
@@ -232,6 +235,21 @@ class PositiveNewsTests(unittest.TestCase):
         changed = {**item, "source_excerpt": "Updated source excerpt"}
         changed["source_fingerprint"] = news.source_fingerprint(changed)
         self.assertEqual(news.reusable_summary(changed, previous), "")
+
+    def test_curated_swedish_copy_requires_matching_source_fingerprint(self):
+        item = {"id": "a" * 20, "source_fingerprint": "b" * 20}
+        catalog = {"items": {"a" * 20: {
+            "source_fingerprint": "b" * 20,
+            "title": "En svensk rubrik",
+            "summary": "En kort svensk sammanfattning.",
+        }}}
+        self.assertEqual(news.curated_swedish_copy(item, catalog), {
+            "display_title_sv": "En svensk rubrik",
+            "agent_summary": "En kort svensk sammanfattning.",
+        })
+        self.assertEqual(news.curated_swedish_copy(
+            {**item, "source_fingerprint": "c" * 20}, catalog,
+        ), {})
 
     def test_verified_source_image_is_reused_only_for_unchanged_source(self):
         item = {"title": "Progress", "source_excerpt": "A source excerpt", "published_at": "2026-07-15"}

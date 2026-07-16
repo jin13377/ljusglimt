@@ -55,7 +55,7 @@ export function HomePage() {
     </section>
 
     {fetchedHighlights.length > 0 && <section className="section fetched-news-section"><div className="page-wrap">
-      <header className="section-header"><div><span className="eyebrow">Automatiskt flöde</span><h2>Senast källhämtat</h2><p>Aktuella kandidater från offentliga flöden. Rubrik och utdrag märks med språk – källsidan är alltid facit.</p></div><Link to="/sok?typ=fetched">Se alla källnotiser <ArrowRight size={16} /></Link></header>
+      <header className="section-header"><div><span className="eyebrow">Automatiskt flöde</span><h2>Senast källhämtat</h2><p>Nyheter från offentliga flöden visas först när rubrik och sammanfattning finns på svenska. Källsidan är alltid facit.</p></div><Link to="/sok?typ=fetched">Se alla källnotiser <ArrowRight size={16} /></Link></header>
       <div className="news-grid editorial-news-grid">{fetchedHighlights.map((article, index) => <NewsCard key={article.id} article={article} variant={homeCardVariant(index)} onSave={save} saved={isSaved(article.id)} />)}</div>
     </div></section>}
 
@@ -79,7 +79,7 @@ export function HomePage() {
     </section>
 
     <ForumTeaser />
-    <section className="journey-section"><div className="page-wrap"><header><span className="eyebrow">Tre enkla steg</span><h2>Från nyfiken till källan</h2></header><div className="journey-grid"><article><span>01</span><h3>Upptäck</h3><p>Välj ett ämne i Kategorikompassen eller sök i hela arkivet.</p></article><article><span>02</span><h3>Förstå märkningen</h3><p>Se direkt om det är en svensk sammanfattning eller en engelsk källnotis.</p></article><article><span>03</span><h3>Öppna källsidan</h3><p>Gå vidare till ursprungspubliceringen för hela sammanhanget.</p></article></div></div></section>
+    <section className="journey-section"><div className="page-wrap"><header><span className="eyebrow">Tre enkla steg</span><h2>Från nyfiken till källan</h2></header><div className="journey-grid"><article><span>01</span><h3>Upptäck</h3><p>Välj ett ämne i Kategorikompassen eller sök i hela arkivet.</p></article><article><span>02</span><h3>Läs på svenska</h3><p>Rubriker och sammanfattningar visas på svenska, även när originalkällan använder ett annat språk.</p></article><article><span>03</span><h3>Öppna källsidan</h3><p>Gå vidare till ursprungspubliceringen för hela sammanhanget.</p></article></div></div></section>
     <FinalCta />
   </>
 }

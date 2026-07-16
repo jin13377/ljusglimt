@@ -31,7 +31,7 @@ function GlobeMenu() {
         <strong>Sverige</strong><p>Svenska · SEK</p>
         <div className="popover-rule" />
         <button type="button" onClick={() => setOpen(false)}>Svenska <span>Valt</span></button>
-        <small>Fler språk kommer senare. Källnotiser kan vara på engelska och märks tydligt.</small>
+        <small>Fler språk kommer senare. Allt innehåll på Ljusglimt visas på svenska.</small>
       </motion.div>}</AnimatePresence>
     </div>
   )

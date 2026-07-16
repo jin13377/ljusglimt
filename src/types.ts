@@ -62,6 +62,7 @@ export interface RawFetchedNews {
   published_at?: string
   source_excerpt?: string
   agent_summary?: string
+  display_title_sv?: string
   source_tier_bonus?: number
   positivity_score?: number
   positive_signals?: string[]

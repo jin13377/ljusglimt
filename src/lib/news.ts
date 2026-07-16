@@ -196,20 +196,27 @@ export function slugify(value: string): string {
 
 export function normalizeFetched(item: RawFetchedNews): NewsArticle {
   const agentSummary = item.agent_summary?.trim() || ''
+  const swedishTitle = item.display_title_sv?.trim() || ''
+  const title = swedishTitle || item.title
   const excerpt = agentSummary || item.source_excerpt?.trim() || 'Kort källnotis utan sammanfattning.'
-  const language = item.language || 'en'
+  const language = swedishTitle ? 'sv' : item.language || 'en'
   const category = item.category?.trim() || inferCategory(item)
+  const sourceNames: Record<string, string> = {
+    'NASA News Releases': 'NASA:s nyheter',
+    'UN News': 'FN-nyheter',
+  }
+  const video = resolveSourceVideo(item.source_video)
   return {
     id: item.id,
     slug: `${slugify(item.title)}-${item.id.slice(0, 6)}`,
-    title: item.title,
+    title,
     excerpt,
     category,
     location: '',
     publishedAt: item.published_at || '',
     readTime: Math.max(1, Math.ceil(excerpt.split(/\s+/).length / 180)),
     featured: false,
-    source: item.source || 'Extern källa',
+    source: sourceNames[item.source] || item.source || 'Extern källa',
     url: item.url,
     origin: 'fetched',
     language,
@@ -218,8 +225,8 @@ export function normalizeFetched(item: RawFetchedNews): NewsArticle {
     score: item.positivity_score || 0,
     signals: item.positive_signals || [],
     publicEligible: typeof item.public_eligible === 'boolean' ? item.public_eligible : undefined,
-    video: resolveSourceVideo(item.source_video),
-    ...resolveNewsImages(item, category),
+    video: video ? { ...video, title } : undefined,
+    ...resolveNewsImages({ ...item, title, source_image_alt: swedishTitle || item.source_image_alt }, category),
   }
 }
 
@@ -253,6 +260,7 @@ const positiveCandidate = /\b(?:achiev(?:e|ed|ement)|adopt(?:ed|ion)?|adorable|a
 
 export function isSuitableForPublicFeed(article: NewsArticle): boolean {
   if (article.origin === 'demo') return true
+  if (article.language !== 'sv' || article.excerptLanguage !== 'sv') return false
   if (typeof article.publicEligible === 'boolean') return article.publicEligible
   return !article.title.trim().endsWith('?')
     && !sensitiveCandidate.test(`${article.title} ${article.excerpt}`)

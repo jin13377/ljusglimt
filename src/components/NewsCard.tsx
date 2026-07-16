@@ -10,7 +10,7 @@ export type NewsCardVariant = 'lead' | 'standard' | 'compact' | 'text' | 'search
 export function OriginBadge({ article }: { article: NewsArticle }) {
   return article.origin === 'demo'
     ? <span className="origin-badge demo">Sammanfattning av källan</span>
-    : <span className="origin-badge fetched">{article.hasAgentSummary ? 'Källnotis · svensk agentsammanfattning' : 'Källnotis · engelska'}</span>
+    : <span className="origin-badge fetched">Svensk källsammanfattning</span>
 }
 
 export function NewsCard({ article, onSave, saved = false, variant = 'standard' }: { article: NewsArticle; onSave?: (article: NewsArticle) => void; saved?: boolean; variant?: NewsCardVariant }) {

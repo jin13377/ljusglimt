@@ -69,12 +69,17 @@ describe('news normalizer', () => {
       id: 'nasa-video', title: 'NASA Uses Subscale Aircraft to Accelerate Flight Innovation',
       url: 'https://www.nasa.gov/example/flight-innovation', source: 'NASA News Releases',
       source_excerpt: 'The research platform advances practical innovation.',
+      display_title_sv: 'NASA testar små flygplan för snabbare innovation',
+      agent_summary: 'NASA provar nya flygidéer med små testflygplan.',
+      public_eligible: true,
       source_video: {
         provider: 'youtube', video_id: 'Fb08ooo7MhI', title: 'NASA flight innovation',
         embed_url: 'https://www.youtube-nocookie.com/embed/Fb08ooo7MhI', source_url: 'https://www.youtube.com/watch?v=Fb08ooo7MhI',
       },
     })
     expect(item.category).toBe('Vetenskap')
+    expect(item.title).toBe('NASA testar små flygplan för snabbare innovation')
+    expect(item.source).toBe('NASA:s nyheter')
     expect(item.video?.provider).toBe('youtube')
     expect(isSuitableForPublicFeed(item)).toBe(true)
   })
@@ -158,7 +163,7 @@ describe('news normalizer', () => {
     const generic = normalizeFetched({ id: 'generic', title: 'A new policy update', url: 'https://example.com', source: 'Feed', source_excerpt: 'Officials shared the latest details.' })
     const distressing = normalizeFetched({ id: 'distressing', title: 'Volunteers rescue turtle with a crushed shell', url: 'https://example.com', source: 'Feed', source_excerpt: 'The animal is recovering.' })
     const stranded = normalizeFetched({ id: 'stranded', title: 'Rescuers find an animal stranded in a trap', url: 'https://example.com', source: 'Feed', source_excerpt: 'It was in distress and unable to move.' })
-    const constructive = normalizeFetched({ id: 'constructive', title: 'Volunteers restore a local wetland', url: 'https://example.com', source: 'Feed', source_excerpt: 'The project reached a new milestone.' })
+    const constructive = normalizeFetched({ id: 'constructive', title: 'Volunteers restore a local wetland', url: 'https://example.com', source: 'Feed', source_excerpt: 'The project reached a new milestone.', display_title_sv: 'Volontärer återställer en våtmark', agent_summary: 'Projektet nådde en ny milstolpe.', public_eligible: true })
     expect(isSuitableForPublicFeed(generic)).toBe(false)
     expect(isSuitableForPublicFeed(distressing)).toBe(false)
     expect(isSuitableForPublicFeed(stranded)).toBe(false)
@@ -167,7 +172,7 @@ describe('news normalizer', () => {
 
   it('uses the pipeline public eligibility decision when present', () => {
     const hidden = normalizeFetched({ id: 'hidden', title: 'Volunteers restore a local wetland', url: 'https://example.com/hidden', source: 'Feed', public_eligible: false })
-    const approved = normalizeFetched({ id: 'approved', title: 'A neutral update', url: 'https://example.com/approved', source: 'Feed', public_eligible: true })
+    const approved = normalizeFetched({ id: 'approved', title: 'A neutral update', url: 'https://example.com/approved', source: 'Feed', display_title_sv: 'En svensk nyhet', agent_summary: 'En svensk sammanfattning.', public_eligible: true })
     expect(isSuitableForPublicFeed(hidden)).toBe(false)
     expect(isSuitableForPublicFeed(approved)).toBe(true)
   })
@@ -188,7 +193,7 @@ describe('news normalizer', () => {
     const mockedFetch = vi.fn()
       .mockResolvedValueOnce(new Response('<!doctype html><title>Ljusglimt</title>', { status: 200, headers: { 'Content-Type': 'text/html' } }))
       .mockResolvedValueOnce(new Response(JSON.stringify({ articles: [] }), { status: 200, headers: { 'Content-Type': 'application/json' } }))
-      .mockResolvedValueOnce(new Response(JSON.stringify({ items: [{ id: 'static-1', title: 'A constructive update', url: 'https://example.com/news', source: 'Example', public_eligible: true }], generated_at: '2026-07-15T12:00:00Z' }), { status: 200, headers: { 'Content-Type': 'application/json' } }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ items: [{ id: 'static-1', title: 'A constructive update', display_title_sv: 'En konstruktiv nyhet', agent_summary: 'En svensk sammanfattning.', url: 'https://example.com/news', source: 'Example', public_eligible: true }], generated_at: '2026-07-15T12:00:00Z' }), { status: 200, headers: { 'Content-Type': 'application/json' } }))
     vi.stubGlobal('fetch', mockedFetch)
 
     const result = await fetchNews()

@@ -98,6 +98,7 @@
   ],
   "minimum_score": 2,
   "max_items": 48,
+  "retain_localized_per_source": 6,
   "request_timeout_seconds": 20,
   "user_agent": "LjusglimtBot/2.0 (+https://github.com/; public RSS reader)"
 }

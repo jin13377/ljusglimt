@@ -1,14 +1,9 @@
 {
-  "generated_at": "2026-07-16T06:12:36.927448Z",
+  "generated_at": "2026-07-16T12:29:06.168311Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [],
-  "fetch_errors": [
-    {
-      "source": "UN News",
-      "error": "not well-formed (invalid token): line 1, column 0"
-    }
-  ],
+  "fetch_errors": [],
   "items": [
     {
       "id": "772deb64d5f80c5b5454",
@@ -18,9 +13,9 @@
       "language": "en",
       "published_at": "2026-07-08T14:34:07Z",
       "source_excerpt": "When your boyfriend requests foster kittens... you deliver. Our producer Monica shared her first-ever experience fostering kittens from Wallis Annenberg PetSpace and how her dogs unexpectedly became the kittens' biggest fans!",
-      "agent_summary": "",
+      "agent_summary": "När hennes pojkvän önskade sig fosterkattungar ordnade Monica det. Hon berättar om sin första tid som jourhem åt kattungar från Wallis Annenberg PetSpace – och hur hennes hundar oväntat blev kattungarnas största fans.",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/cLTto1gJkgKXx3_pz/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/cLTto1gJkgKXx3_pz/x720",
       "source_image_alt": "Boyfriend Has Best Reaction To Surprise Foster Kittens",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xamx6nm",
@@ -44,6 +39,7 @@
         "kitten",
         "surprise"
       ],
+      "display_title_sv": "Överraskningen med fosterkattungar gav pojkvännen bästa reaktionen",
       "public_eligible": true
     },
     {
@@ -54,9 +50,9 @@
       "language": "en",
       "published_at": "2026-07-08T14:34:11Z",
       "source_excerpt": "Watch how this chill pig on the run finally got rescued! Lancaster Farm Sanctuary shared how Petey spent weeks roaming free before people came together to get him to safety. Now he’s living the good life with a whole crew of potbelly pig friends.",
-      "agent_summary": "",
+      "agent_summary": "Grisen Petey strövade fritt i flera veckor innan människor samlades för att föra honom i säkerhet. Nu lever han på Lancaster Farm Sanctuary tillsammans med en grupp andra minigrisar.",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/cLTwQ1gJkcx08TuRo/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/cLTwQ1gJkcx08TuRo/x720",
       "source_image_alt": "This Pig Was On The Run Until Everyone Came Together",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xamx6sa",
@@ -80,6 +76,7 @@
         "rescue",
         "together"
       ],
+      "display_title_sv": "Alla hjälptes åt för att rädda grisen Petey",
       "public_eligible": true
     },
     {
@@ -90,9 +87,9 @@
       "language": "en",
       "published_at": "2026-06-07T01:03:57Z",
       "source_excerpt": "Then things escalated! We talked to Rachel and Connor about the big surprise — and how an even bigger one came a few weeks later when they brought Jupiter’s sister home, too.",
-      "agent_summary": "",
+      "agent_summary": "Rachel överraskade Connor med Jupiter. Några veckor senare växte familjen igen när de också tog hem Jupiters syster.",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/bQSIo1gIKYAIOFShZ/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/bQSIo1gIKYAIOFShZ/x720",
       "source_image_alt": "Boyfriend Gets The Absolute BEST Valentines Day Gift",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xadpjn6",
@@ -115,7 +112,227 @@
         "friend",
         "surprise"
       ],
+      "display_title_sv": "Pojkvännen fick den bästa alla hjärtans dag-presenten",
       "public_eligible": true
+    },
+    {
+      "id": "56c225a54e232fce1fea",
+      "title": "Woman Rescues A Cat She Found At A Car Dealership",
+      "url": "https://www.dailymotion.com/video/xamxvli",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-07-08T15:18:39Z",
+      "source_excerpt": "She got right into the passenger seat like she’s ready to go home! Sam shared what it was like rescuing Adeline outside a car dealership — and gave us an update on where this sweet girl landed just one month later.",
+      "agent_summary": "Katten Adeline hoppade direkt in på passagerarsätet som om hon var redo att följa med hem. Sam berättar om räddningen utanför bilfirman och hur Adeline hade det en månad senare.",
+      "source_image_verified": true,
+      "source_image_url": "https://s2.dmcdn.net/v/cLbms1gLNlyGRmBrE/x720",
+      "source_image_alt": "Woman Rescues A Cat She Found At A Car Dealership",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xamxvli",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xamxvli",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xamxvli",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xamxvli",
+        "source_url": "https://www.dailymotion.com/video/xamxvli",
+        "title": "Woman Rescues A Cat She Found At A Car Dealership"
+      },
+      "source_fingerprint": "9fa7b19e1359a8cb018a",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "rescue"
+      ],
+      "display_title_sv": "Kvinna räddade en katt vid en bilfirma",
+      "public_eligible": true
+    },
+    {
+      "id": "dfb26fd407a2369341ae",
+      "title": "Moment Between Shelter Dog And Girl Is Priceless",
+      "url": "https://www.dailymotion.com/video/xamh2yi",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-07-07T17:03:55Z",
+      "source_excerpt": "Their bond was undeniable from the very first moment! Natalie shared with The Dodo how this sweet shelter dog seemed to know she’d found her person the moment she met her daughter, Piper. All they had to do was convince Dad — and the rest fell right into place.",
+      "agent_summary": "Bandet mellan hunden på djurhemmet och flickan Piper märktes direkt. Natalie berättar hur familjen blev övertygad om att hunden hade hittat sin människa.",
+      "source_image_verified": true,
+      "source_image_url": "https://s1.dmcdn.net/v/cIcSw1gLgz0iDwIJb/x720",
+      "source_image_alt": "Moment Between Shelter Dog And Girl Is Priceless",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xamh2yi",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xamh2yi",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xamh2yi",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xamh2yi",
+        "source_url": "https://www.dailymotion.com/video/xamh2yi",
+        "title": "Moment Between Shelter Dog And Girl Is Priceless"
+      },
+      "source_fingerprint": "fd638d0c019eba5da1a9",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "priceless"
+      ],
+      "display_title_sv": "Mötet mellan hunden och flickan blev början på en vänskap",
+      "public_eligible": true
+    },
+    {
+      "id": "e6ab936520421c01f62d",
+      "title": "Volunteers read aloud and play music for shelter pets amid fireworks on July 4th",
+      "url": "https://www.goodgoodgood.co/articles/reading-to-shelter-pets-on-july-4th-fireworks",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-07-01T16:48:00Z",
+      "source_excerpt": "Volunteers are gearing up for their sixth-annual “comfort sessions” at their local animal shelter.",
+      "agent_summary": "För sjätte året i rad förbereder volontärer lugnande lässtunder och musik på sitt lokala djurhem under fyrverkerierna den 4 juli.",
+      "source_fingerprint": "530f717066e612bd74e8",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a4543909bf39338390fabfa_reading-to-shelter-pets-on-july-4th-fireworks.jpg",
+      "source_image_alt": "Volunteers read aloud and play music for shelter pets amid fireworks on July 4th",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/reading-to-shelter-pets-on-july-4th-fireworks",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/reading-to-shelter-pets-on-july-4th-fireworks",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "source_tier_bonus": 2,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "play",
+        "volunteer"
+      ],
+      "display_title_sv": "Volontärer läser och spelar musik för djur under fyrverkerier",
+      "public_eligible": true
+    },
+    {
+      "id": "1975208a7e6ad125a4af",
+      "title": "Conservationists celebrate birth of baby pancake tortoise, hope for one of the world's most endangered reptiles",
+      "url": "https://www.goodgoodgood.co/articles/baby-pancake-tortoise-endangered",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-06-17T15:47:00Z",
+      "source_excerpt": "The new hatchling, which will be named by the public, is the child of mother and father pancake tortoises Waffle and Maple.",
+      "agent_summary": "Naturvårdare firar att en pannkakssköldpadda har kläckts. Ungen, vars föräldrar heter Waffle och Maple, ska få sitt namn genom en omröstning bland allmänheten.",
+      "source_fingerprint": "84c32865a61a64525826",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a32c0eca74cf5cabc8d2997_baby-pancake-tortoise-endangered.jpg",
+      "source_image_alt": "Conservationists celebrate birth of baby pancake tortoise, hope for one of the world's most endangered reptiles",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/baby-pancake-tortoise-endangered",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/baby-pancake-tortoise-endangered",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "source_tier_bonus": 2,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "conservation",
+        "hope"
+      ],
+      "display_title_sv": "Nyfödd pannkakssköldpadda ger hopp åt hotad art",
+      "public_eligible": true
+    },
+    {
+      "id": "b634e8c36ed593bd94d7",
+      "title": "NASA Uses Subscale Aircraft to Accelerate Flight Innovation",
+      "url": "https://www.nasa.gov/centers-and-facilities/armstrong/nasa-uses-subscale-aircraft-to-accelerate-flight-innovation",
+      "source": "NASA News Releases",
+      "language": "en",
+      "published_at": "2026-07-15T21:56:38Z",
+      "source_excerpt": "Testing new aerospace concepts in flight remains one of NASA’s most effective ways to advance knowledge and reduce risk. The Dale Reed Subscale Flight Research Laboratory at NASA’s Armstrong Flight Research Center in Edwards, California, supports this mission by using small, remotely piloted and autonomous aircraft as cost‑effective platforms to mature innovative ideas, accelerate learning, […]",
+      "agent_summary": "NASA:s Armstrong-center använder små fjärrstyrda och självgående flygplan för att prova nya flygidéer billigare och med lägre risk. Testerna ska ge snabbare lärande innan tekniken prövas i större skala.",
+      "source_fingerprint": "699c1ffd1b6471221e44",
+      "source_video": {
+        "provider": "youtube",
+        "video_id": "Fb08ooo7MhI",
+        "embed_url": "https://www.youtube-nocookie.com/embed/Fb08ooo7MhI",
+        "source_url": "https://www.youtube.com/watch?v=Fb08ooo7MhI",
+        "title": "NASA Uses Subscale Aircraft to Accelerate Flight Innovation"
+      },
+      "source_tier_bonus": 1,
+      "positivity_score": 5,
+      "positive_signals": [
+        "curated-positive-source",
+        "innovation",
+        "mission",
+        "research"
+      ],
+      "display_title_sv": "NASA testar små flygplan för snabbare innovation",
+      "public_eligible": true,
+      "generated_image": {
+        "url": "/news-images/generated/b634e8c36ed593bd94d7-699c1ffd-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-abstract-v1",
+        "source_fingerprint": "699c1ffd1b6471221e44",
+        "width": 1280,
+        "height": 848,
+        "sha256": "ad0a93712691cf8245bfafbd96f4275ff22fc01e978b7e6d6cb55b1bc926cd8f"
+      }
+    },
+    {
+      "id": "9a227c3910aa2c6a2a31",
+      "title": "Volunteer Measures Record Louisiana Rainfall",
+      "url": "https://science.nasa.gov/get-involved/citizen-science/volunteer-measures-record-louisiana-rainfall",
+      "source": "NASA News Releases",
+      "language": "en",
+      "published_at": "2026-07-15T12:32:00Z",
+      "source_excerpt": "Join a national community of precipitation reporters providing critical data to improve scientific understanding and forecasts.",
+      "agent_summary": "Ett nationellt nätverk av frivilliga nederbördsmätare samlar in data som hjälper forskare att förbättra förståelsen av regn och göra bättre prognoser.",
+      "source_fingerprint": "a36669d8220bf7056b69",
+      "source_tier_bonus": 1,
+      "positivity_score": 4,
+      "positive_signals": [
+        "curated-positive-source",
+        "community",
+        "volunteer"
+      ],
+      "display_title_sv": "Volontärers mätningar dokumenterar Louisianas regn",
+      "public_eligible": true,
+      "generated_image": {
+        "url": "/news-images/generated/9a227c3910aa2c6a2a31-a36669d8-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-abstract-v1",
+        "source_fingerprint": "a36669d8220bf7056b69",
+        "width": 1280,
+        "height": 848,
+        "sha256": "d1e4301fa57207fcaddcf74ffaf3a2f28b36fd8a370df5678df46235a616e023"
+      }
+    },
+    {
+      "id": "3243141d4530035d173c",
+      "title": "New guidance offers hope for reducing the global toll of dementia",
+      "url": "https://news.un.org/feed/view/en/story/2026/07/1167948",
+      "source": "UN News",
+      "language": "en",
+      "published_at": "2026-07-15T12:00:00Z",
+      "source_excerpt": "The World Health Organization (WHO) has issued updated global guidelines aimed at reducing the risk of cognitive decline and dementia, saying that up to 45 per cent of cases may be preventable or delayed by addressing modifiable risk factors throughout life.",
+      "agent_summary": "WHO har uppdaterat sina globala råd för att minska risken för kognitiv svikt och demens. Organisationen bedömer att upp till 45 procent av fallen kan förebyggas eller fördröjas genom att påverka riskfaktorer under livet.",
+      "source_fingerprint": "688f76b4f22554ef2cdd",
+      "source_tier_bonus": 0,
+      "positivity_score": 2,
+      "positive_signals": [
+        "hope"
+      ],
+      "display_title_sv": "Nya råd ger hopp om att förebygga demens",
+      "public_eligible": true,
+      "generated_image": {
+        "url": "/news-images/generated/3243141d4530035d173c-688f76b4-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-abstract-v1",
+        "source_fingerprint": "688f76b4f22554ef2cdd",
+        "width": 1280,
+        "height": 848,
+        "sha256": "18a131b68fa501e91f971b412a91db2a75e1d330db8e9b04b18ede525a0c3d87"
+      }
     },
     {
       "id": "600742420eb388aab0d9",
@@ -172,74 +389,6 @@
       "public_eligible": false
     },
     {
-      "id": "56c225a54e232fce1fea",
-      "title": "Woman Rescues A Cat She Found At A Car Dealership",
-      "url": "https://www.dailymotion.com/video/xamxvli",
-      "source": "The Dodo",
-      "language": "en",
-      "published_at": "2026-07-08T15:18:39Z",
-      "source_excerpt": "She got right into the passenger seat like she’s ready to go home! Sam shared what it was like rescuing Adeline outside a car dealership — and gave us an update on where this sweet girl landed just one month later.",
-      "agent_summary": "",
-      "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/cLbms1gLNlyGRmBrE/x720",
-      "source_image_alt": "Woman Rescues A Cat She Found At A Car Dealership",
-      "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xamxvli",
-      "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xamxvli",
-      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
-      "source_video": {
-        "provider": "dailymotion",
-        "video_id": "xamxvli",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xamxvli",
-        "source_url": "https://www.dailymotion.com/video/xamxvli",
-        "title": "Woman Rescues A Cat She Found At A Car Dealership"
-      },
-      "source_fingerprint": "9fa7b19e1359a8cb018a",
-      "category": "Djur",
-      "source_tier_bonus": 4,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "rescue"
-      ],
-      "public_eligible": true
-    },
-    {
-      "id": "dfb26fd407a2369341ae",
-      "title": "Moment Between Shelter Dog And Girl Is Priceless",
-      "url": "https://www.dailymotion.com/video/xamh2yi",
-      "source": "The Dodo",
-      "language": "en",
-      "published_at": "2026-07-07T17:03:55Z",
-      "source_excerpt": "Their bond was undeniable from the very first moment! Natalie shared with The Dodo how this sweet shelter dog seemed to know she’d found her person the moment she met her daughter, Piper. All they had to do was convince Dad — and the rest fell right into place.",
-      "agent_summary": "",
-      "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/cIcSw1gLgz0iDwIJb/x720",
-      "source_image_alt": "Moment Between Shelter Dog And Girl Is Priceless",
-      "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xamh2yi",
-      "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xamh2yi",
-      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
-      "source_video": {
-        "provider": "dailymotion",
-        "video_id": "xamh2yi",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xamh2yi",
-        "source_url": "https://www.dailymotion.com/video/xamh2yi",
-        "title": "Moment Between Shelter Dog And Girl Is Priceless"
-      },
-      "source_fingerprint": "fd638d0c019eba5da1a9",
-      "category": "Djur",
-      "source_tier_bonus": 4,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "priceless"
-      ],
-      "public_eligible": true
-    },
-    {
       "id": "59d1baf73158830c7c72",
       "title": "This giant snail is the size of a croissant. Conservationists are banding together to save it from extinction",
       "url": "https://www.goodgoodgood.co/articles/obo-giant-snail-endangered-species",
@@ -267,33 +416,6 @@
       "public_eligible": false
     },
     {
-      "id": "e6ab936520421c01f62d",
-      "title": "Volunteers read aloud and play music for shelter pets amid fireworks on July 4th",
-      "url": "https://www.goodgoodgood.co/articles/reading-to-shelter-pets-on-july-4th-fireworks",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-07-01T16:48:00Z",
-      "source_excerpt": "Volunteers are gearing up for their sixth-annual “comfort sessions” at their local animal shelter.",
-      "agent_summary": "",
-      "source_fingerprint": "530f717066e612bd74e8",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a4543909bf39338390fabfa_reading-to-shelter-pets-on-july-4th-fireworks.jpg",
-      "source_image_alt": "Volunteers read aloud and play music for shelter pets amid fireworks on July 4th",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/reading-to-shelter-pets-on-july-4th-fireworks",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/reading-to-shelter-pets-on-july-4th-fireworks",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "play",
-        "volunteer"
-      ],
-      "public_eligible": true
-    },
-    {
       "id": "4dfcf68479bd517dccdb",
       "title": "Jet ski riders conduct rescue mission for sea turtle with 'bloody, peeling' infection on her shell",
       "url": "https://www.goodgoodgood.co/articles/jetski-riders-save-sea-turtle-australia",
@@ -319,69 +441,6 @@
         "rescue"
       ],
       "public_eligible": false
-    },
-    {
-      "id": "1975208a7e6ad125a4af",
-      "title": "Conservationists celebrate birth of baby pancake tortoise, hope for one of the world's most endangered reptiles",
-      "url": "https://www.goodgoodgood.co/articles/baby-pancake-tortoise-endangered",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-06-17T15:47:00Z",
-      "source_excerpt": "The new hatchling, which will be named by the public, is the child of mother and father pancake tortoises Waffle and Maple.",
-      "agent_summary": "",
-      "source_fingerprint": "84c32865a61a64525826",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a32c0eca74cf5cabc8d2997_baby-pancake-tortoise-endangered.jpg",
-      "source_image_alt": "Conservationists celebrate birth of baby pancake tortoise, hope for one of the world's most endangered reptiles",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/baby-pancake-tortoise-endangered",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/baby-pancake-tortoise-endangered",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "conservation",
-        "hope"
-      ],
-      "public_eligible": true
-    },
-    {
-      "id": "b634e8c36ed593bd94d7",
-      "title": "NASA Uses Subscale Aircraft to Accelerate Flight Innovation",
-      "url": "https://www.nasa.gov/centers-and-facilities/armstrong/nasa-uses-subscale-aircraft-to-accelerate-flight-innovation",
-      "source": "NASA News Releases",
-      "language": "en",
-      "published_at": "2026-07-15T21:56:38Z",
-      "source_excerpt": "Testing new aerospace concepts in flight remains one of NASA’s most effective ways to advance knowledge and reduce risk. The Dale Reed Subscale Flight Research Laboratory at NASA’s Armstrong Flight Research Center in Edwards, California, supports this mission by using small, remotely piloted and autonomous aircraft as cost‑effective platforms to mature innovative ideas, accelerate learning, […]",
-      "agent_summary": "",
-      "source_fingerprint": "699c1ffd1b6471221e44",
-      "source_video": {
-        "provider": "youtube",
-        "video_id": "Fb08ooo7MhI",
-        "embed_url": "https://www.youtube-nocookie.com/embed/Fb08ooo7MhI",
-        "source_url": "https://www.youtube.com/watch?v=Fb08ooo7MhI",
-        "title": "NASA Uses Subscale Aircraft to Accelerate Flight Innovation"
-      },
-      "source_tier_bonus": 1,
-      "positivity_score": 5,
-      "positive_signals": [
-        "curated-positive-source",
-        "innovation",
-        "mission",
-        "research"
-      ],
-      "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/b634e8c36ed593bd94d7-699c1ffd-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-abstract-v1",
-        "source_fingerprint": "699c1ffd1b6471221e44",
-        "width": 1280,
-        "height": 848,
-        "sha256": "ad0a93712691cf8245bfafbd96f4275ff22fc01e978b7e6d6cb55b1bc926cd8f"
-      }
     },
     {
       "id": "1b82a78f627942caa9fb",
@@ -538,34 +597,6 @@
       "public_eligible": false
     },
     {
-      "id": "9a227c3910aa2c6a2a31",
-      "title": "Volunteer Measures Record Louisiana Rainfall",
-      "url": "https://science.nasa.gov/get-involved/citizen-science/volunteer-measures-record-louisiana-rainfall",
-      "source": "NASA News Releases",
-      "language": "en",
-      "published_at": "2026-07-15T12:32:00Z",
-      "source_excerpt": "Join a national community of precipitation reporters providing critical data to improve scientific understanding and forecasts.",
-      "agent_summary": "",
-      "source_fingerprint": "a36669d8220bf7056b69",
-      "source_tier_bonus": 1,
-      "positivity_score": 4,
-      "positive_signals": [
-        "curated-positive-source",
-        "community",
-        "volunteer"
-      ],
-      "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/9a227c3910aa2c6a2a31-a36669d8-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-abstract-v1",
-        "source_fingerprint": "a36669d8220bf7056b69",
-        "width": 1280,
-        "height": 848,
-        "sha256": "d1e4301fa57207fcaddcf74ffaf3a2f28b36fd8a370df5678df46235a616e023"
-      }
-    },
-    {
       "id": "0363d6f192a42626ecc3",
       "title": "Nepal's young birdwatchers are becoming conservationists one sighting at a time",
       "url": "https://www.goodgoodgood.co/articles/nepal-birdwatching-conservation-tourism",
@@ -593,14 +624,14 @@
     },
     {
       "id": "b4c32b3233cc9084b2b3",
-      "title": "What went right this week: the good news that matters",
+      "title": "What went right this week: eco leader Estonia, plus more",
       "url": "https://www.positive.news/society/good-news-stories-from-week-28-of-2026",
       "source": "Positive News",
       "language": "en",
       "published_at": "2026-07-10T05:07:49Z",
-      "source_excerpt": "The world’s ‘greatest forest recovery’, a new test for womb cancer, and Europe’s environmental progress, plus more The post What went right this week: the good news that matters appeared first on Positive News .",
+      "source_excerpt": "The world’s ‘greatest forest recovery’, a new test for womb cancer, and Europe’s environmental progress, plus more The post What went right this week: eco leader Estonia, plus more appeared first on Positive News .",
       "agent_summary": "",
-      "source_fingerprint": "26722ee5f828a25e3699",
+      "source_fingerprint": "25d7ec8179a2e227673f",
       "source_tier_bonus": 2,
       "positivity_score": 4,
       "positive_signals": [
@@ -831,32 +862,6 @@
         "science"
       ],
       "public_eligible": false
-    },
-    {
-      "id": "3243141d4530035d173c",
-      "title": "New guidance offers hope for reducing the global toll of dementia",
-      "url": "https://news.un.org/feed/view/en/story/2026/07/1167948",
-      "source": "UN News",
-      "language": "en",
-      "published_at": "2026-07-15T12:00:00Z",
-      "source_excerpt": "The World Health Organization (WHO) has issued updated global guidelines aimed at reducing the risk of cognitive decline and dementia, saying that up to 45 per cent of cases may be preventable or delayed by addressing modifiable risk factors throughout life.",
-      "agent_summary": "",
-      "source_fingerprint": "688f76b4f22554ef2cdd",
-      "source_tier_bonus": 0,
-      "positivity_score": 2,
-      "positive_signals": [
-        "hope"
-      ],
-      "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/3243141d4530035d173c-688f76b4-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-abstract-v1",
-        "source_fingerprint": "688f76b4f22554ef2cdd",
-        "width": 1280,
-        "height": 848,
-        "sha256": "18a131b68fa501e91f971b412a91db2a75e1d330db8e9b04b18ede525a0c3d87"
-      }
     }
   ]
 }

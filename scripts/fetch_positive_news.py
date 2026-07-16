@@ -105,13 +105,48 @@ def reusable_summary(item: dict, previous: dict | None) -> str:
     return summary if isinstance(summary, str) else ""
 
 
+def reusable_swedish_title(item: dict, previous: dict | None) -> dict:
+    if not previous or previous.get("source_fingerprint") != item.get("source_fingerprint"):
+        return {}
+    raw_title = previous.get("display_title_sv")
+    title = clean_text(raw_title)[:260] if isinstance(raw_title, str) else ""
+    return {"display_title_sv": title} if title else {}
+
+
+def curated_swedish_copy(item: dict, catalog: dict | None) -> dict:
+    entries = catalog.get("items") if isinstance(catalog, dict) else None
+    entry = entries.get(item.get("id")) if isinstance(entries, dict) else None
+    if (not isinstance(entry, dict)
+            or entry.get("source_fingerprint") != item.get("source_fingerprint")):
+        return {}
+    raw_title = entry.get("title")
+    raw_summary = entry.get("summary")
+    title = clean_text(raw_title)[:260] if isinstance(raw_title, str) else ""
+    summary = clean_text(raw_summary)[:500] if isinstance(raw_summary, str) else ""
+    if not title or not summary:
+        return {}
+    return {"display_title_sv": title, "agent_summary": summary}
+
+
+def has_swedish_copy(item: dict) -> bool:
+    language = str(item.get("language") or "und").casefold()
+    if language == "sv" or language.startswith("sv-"):
+        return True
+    if not (language == "en" or language.startswith("en-")):
+        return True
+    title = item.get("display_title_sv")
+    summary = item.get("agent_summary")
+    return bool(isinstance(title, str) and clean_text(title)
+                and isinstance(summary, str) and clean_text(summary))
+
+
 def public_eligible(item: dict) -> bool:
     """Mirror the frontend's fetched-news suitability filter."""
     title = str(item.get("title") or "")
-    summary = item.get("agent_summary")
-    excerpt = summary.strip() if isinstance(summary, str) and summary.strip() else str(item.get("source_excerpt") or "")
+    excerpt = str(item.get("source_excerpt") or "")
     combined = f"{title} {excerpt}"
-    return (not title.strip().endswith("?")
+    return (has_swedish_copy(item)
+            and not title.strip().endswith("?")
             and not SENSITIVE_CANDIDATE_RE.search(combined)
             and not FEED_NOISE_RE.search(excerpt)
             and bool(POSITIVE_CANDIDATE_RE.search(combined)))
@@ -672,6 +707,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--config", type=Path, default=base / "config/feeds.json")
     parser.add_argument("--output", type=Path, default=base / "data/news.json")
     parser.add_argument("--history", type=Path, default=base / "data/history.json")
+    parser.add_argument("--translations", type=Path, default=base / "config/swedish-copy.json")
     parser.add_argument("--force", action="store_true", help="bypass the 00:00/12:00 Europe/Stockholm gate")
     args = parser.parse_args(argv)
 
@@ -681,6 +717,7 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     config = load_json(args.config, {})
+    translations = load_json(args.translations, {"items": {}})
     if not isinstance(config, dict) or not config.get("feeds"):
         print(f"Invalid or empty config: {args.config}", file=sys.stderr)
         return 2
@@ -727,6 +764,18 @@ def main(argv: list[str] | None = None) -> int:
                 item["source_tier_bonus"] = int(feed.get("base_score", 0))
                 item["source_item_limit"] = int(feed.get("max_items", config.get("max_items", 48)))
                 selected.append(item)
+            retained_limit = int(config.get("retain_localized_per_source", 6))
+            selected_ids = {item.get("id") for item in selected}
+            retained_count = 0
+            for previous_item in old_items.values():
+                if (retained_count >= retained_limit or previous_item.get("source") != feed.get("name")
+                        or previous_item.get("id") in selected_ids or not has_swedish_copy(previous_item)):
+                    continue
+                retained = dict(previous_item)
+                retained["source_tier_bonus"] = int(feed.get("base_score", 0))
+                retained["source_item_limit"] = int(feed.get("max_items", config.get("max_items", 48)))
+                selected.append(retained)
+                retained_count += 1
             candidates.extend(selected)
         except Exception as exc:  # One broken third-party feed must not stop the others.
             source_name = feed.get("name", "Unknown")
@@ -760,6 +809,8 @@ def main(argv: list[str] | None = None) -> int:
         item["positive_signals"] = reasons
         previous = old_items.get(item["id"])
         item["agent_summary"] = reusable_summary(item, previous)
+        item.update(reusable_swedish_title(item, previous))
+        item.update(curated_swedish_copy(item, translations))
         item["public_eligible"] = public_eligible(item)
         item.update(reusable_ai_image(item, previous))
         item.update(reusable_generated_image(item, previous))
@@ -771,7 +822,9 @@ def main(argv: list[str] | None = None) -> int:
         unique[key] = item
         title_keys.add(title_key)
 
-    ranked = sorted(unique.values(), key=lambda x: (x["positivity_score"], x.get("published_at") or ""), reverse=True)
+    ranked = sorted(unique.values(), key=lambda x: (
+        bool(x.get("public_eligible")), x["positivity_score"], x.get("published_at") or ""
+    ), reverse=True)
     items = []
     source_counts: dict[str, int] = {}
     for item in ranked:

@@ -67,6 +67,7 @@ visa den statiska webbplatsen.
 - startsida med källbelagda svenska sammanfattningar och automatiskt hämtade RSS-notiser;
 - särskild Djur-sektion där varje nyhet måste ha en riktig bild från källflödet;
 - klickbara, responsiva videor när ett granskat källflöde lämnar säker YouTube- eller Dailymotion-metadata;
+- svenska rubriker och sammanfattningar i hela det publika nyhetsflödet; engelska källposter hålls dolda tills svensk text finns;
 - kategorifilter, sök, egna artikelsidor och tydlig länk till originalkälla;
 - responsiv mobilmeny utan horisontell overflow;
 - forum med trådar/svar, honeypot, hastighetsgräns och modereringskö;

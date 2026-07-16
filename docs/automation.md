@@ -19,6 +19,7 @@ Resultatet skrivs atomiskt till `data/news.json`. Skriptet:
 - återanvänder tidigare manuella/agentgjorda sammanfattningar;
 - hämtar källans egna flödesbilder från strikt tillåtna värdar;
 - kopplar verifierade YouTube- och Dailymotion-videor till nyheter i alla kategorier när källflödet lämnar video-id eller säker spelarlänk;
+- lägger bara ut engelskspråkiga källposter när en granskad svensk rubrik och sammanfattning finns i `config/swedish-copy.json`;
 - skriver först en temporär fil och byter sedan fil atomiskt.
 
 ## Dagliga körningar kl. 00 och 12 Europe/Stockholm
