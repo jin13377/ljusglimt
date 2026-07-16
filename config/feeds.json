@@ -55,6 +55,33 @@
       "enabled": true
     },
     {
+      "name": "Forskning.se",
+      "url": "https://forskning.se/feed/",
+      "language": "sv",
+      "category": "Vetenskap",
+      "base_score": 2,
+      "max_items": 10,
+      "max_age_days": 180,
+      "image_policy": {
+        "enabled": true,
+        "mode": "feed-thumbnail",
+        "allowed_article_hosts": ["forskning.se"],
+        "allowed_image_hosts": ["forskning.se"],
+        "credit": "Forskning.se"
+      },
+      "enabled": true
+    },
+    {
+      "name": "ESA Sverige",
+      "url": "https://www.esa.int/rssfeed/Sweden",
+      "language": "sv",
+      "category": "Rymden",
+      "base_score": 2,
+      "max_items": 8,
+      "max_age_days": 180,
+      "enabled": true
+    },
+    {
       "name": "NASA News Releases",
       "url": "https://www.nasa.gov/news-release/feed/",
       "language": "en",
@@ -68,7 +95,8 @@
       "language": "en",
       "base_score": 0,
       "max_items": 6,
-      "enabled": true
+      "enabled": false,
+      "disabled_reason": "Flödet har återkommande returnerat ogiltig XML i GitHub Actions."
     },
     {
       "name": "BBC Innovation",
@@ -87,8 +115,10 @@
     "recovery", "renewable", "rescue", "solution", "success", "volunteer",
     "research", "science", "mission", "technology", "restoration", "treatment",
     "adopted", "adorable", "best friend", "cuddle", "friend", "kitten", "love", "play", "priceless", "puppy", "spoiling", "surprise", "together", "treat",
-    "återhämtning", "framsteg", "glädje", "hjälper", "innovation", "lösning",
-    "räddad", "rekord", "samarbete", "upptäckt"
+    "återhämtning", "bevara", "elever", "experiment", "firar", "forskning",
+    "framsteg", "förbättrar", "förebygga", "glädje", "hjälper", "hopp",
+    "innovation", "lägre risk", "lösning", "lovande", "ny metod", "ny teknik",
+    "räddad", "rekord", "samarbete", "skydda", "stärker", "upptäckt"
   ],
   "blocked_keywords": [
     "abuse", "assault", "bomb", "death", "earthquake", "fraud", "killed",

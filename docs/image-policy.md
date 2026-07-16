@@ -55,7 +55,7 @@ Webben väljer i denna ordning:
 5. kodritad illustration om en bildfil ändå inte kan laddas.
 
 RSS-källbilder aktiveras per granskad källa med explicita listor över tillåtna
-artikel- och bildvärdar. Good Good Good och The Dodo använder sina egna
+artikel- och bildvärdar. Good Good Good, The Dodo och Forskning.se använder sina egna
 flödesminiatyrer; övriga källor fortsätter använda den lokala reservkedjan när
 fullständigt bildunderlag saknas.
 

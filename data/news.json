@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-16T12:35:56.036044Z",
+  "generated_at": "2026-07-16T16:01:45.056926Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [],
@@ -125,7 +125,7 @@
       "source_excerpt": "She got right into the passenger seat like she’s ready to go home! Sam shared what it was like rescuing Adeline outside a car dealership — and gave us an update on where this sweet girl landed just one month later.",
       "agent_summary": "Katten Adeline hoppade direkt in på passagerarsätet som om hon var redo att följa med hem. Sam berättar om räddningen utanför bilfirman och hur Adeline hade det en månad senare.",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/cLbms1gLNlyGRmBrE/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/cLbms1gLNlyGRmBrE/x720",
       "source_image_alt": "Woman Rescues A Cat She Found At A Car Dealership",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xamxvli",
@@ -242,6 +242,36 @@
       "public_eligible": true
     },
     {
+      "id": "a1ff56772fa1e76a2f23",
+      "title": "SubOrbital Express-5 skickar upp tolv experiment till mikrogravitation",
+      "url": "https://www.esa.int/Space_in_Member_States/Sweden/SubOrbital_Express-5_skickar_upp_tolv_experiment_till_mikrogravitation",
+      "source": "ESA Sverige",
+      "language": "sv",
+      "published_at": "2026-06-11T13:22:00Z",
+      "source_excerpt": "Sex minuter i rymden banar väg för framsteg inom hälsa, material och framtida utforskning",
+      "agent_summary": "",
+      "source_fingerprint": "b05d127f20f87ce8080d",
+      "category": "Rymden",
+      "source_tier_bonus": 2,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "experiment",
+        "forskning",
+        "framsteg"
+      ],
+      "public_eligible": true,
+      "generated_image": {
+        "url": "/news-images/generated/a1ff56772fa1e76a2f23-b05d127f-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-abstract-v1",
+        "source_fingerprint": "b05d127f20f87ce8080d",
+        "width": 1280,
+        "height": 848,
+        "sha256": "abfe73f105fb1a227277ef0033ddacd468fb867ffb1f26cd85c40a7e5b0bb460"
+      }
+    },
+    {
       "id": "b634e8c36ed593bd94d7",
       "title": "NASA Uses Subscale Aircraft to Accelerate Flight Innovation",
       "url": "https://www.nasa.gov/centers-and-facilities/armstrong/nasa-uses-subscale-aircraft-to-accelerate-flight-innovation",
@@ -279,6 +309,93 @@
       }
     },
     {
+      "id": "0581c7633c440d8b7c2e",
+      "title": "20 år med ESERO: att föra rymden till miljontals elever",
+      "url": "https://www.esa.int/Space_in_Member_States/Sweden/20_aar_med_ESERO_att_foera_rymden_till_miljontals_elever",
+      "source": "ESA Sverige",
+      "language": "sv",
+      "published_at": "2026-06-29T12:36:00Z",
+      "source_excerpt": "År 2006 lanserade ESA det första European Space Education Resource Office (ESERO) i Nederländerna. Uppdraget var tydligt och ambitiöst: att stödja lärare i att använda rymdens spänning för att inspirera elever att engagera sig i naturvetenskap, teknik, ingenjörsvetenskap och matematik (STEM). Två decennier senare har ESERO vuxit till ESA:s största och mest inflytelserika utbildningsinitiativ på sk",
+      "agent_summary": "",
+      "source_fingerprint": "87e71d6b054c43e457a8",
+      "category": "Rymden",
+      "source_tier_bonus": 2,
+      "positivity_score": 5,
+      "positive_signals": [
+        "curated-positive-source",
+        "education",
+        "elever"
+      ],
+      "public_eligible": true,
+      "generated_image": {
+        "url": "/news-images/generated/0581c7633c440d8b7c2e-87e71d6b-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-abstract-v1",
+        "source_fingerprint": "87e71d6b054c43e457a8",
+        "width": 1280,
+        "height": 848,
+        "sha256": "9e6c6d463bdfdb5c659d614a84e6787024ecb1db0c775fd40eddcea78cf5e776"
+      }
+    },
+    {
+      "id": "057865da8dd0eb6e51f3",
+      "title": "Längre pappaledighet kopplas till lägre risk för depression",
+      "url": "https://forskning.se/2026/06/19/langre-pappaledighet-kopplas-lagre-risk-depression",
+      "source": "Forskning.se",
+      "language": "sv",
+      "published_at": "2026-06-19T06:00:00Z",
+      "source_excerpt": "Forskning om föräldraledighet har traditionellt fokuserat på mammors hälsa, medan pappors psykiska hälsa studerats i mindre utsträckning. I en studie från bland annat Karolinska institutet har forskare nu följt 746 svenska pappor under 18 månader. Studien startade när deras barn var omkring nio månader gamla och avslutades vid en uppföljning när barnen var cirka 27 […] The post Längre pappaledighe",
+      "agent_summary": "",
+      "source_fingerprint": "fdba70adc681d7c1b16d",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/06/pappor-foraldraledighet-psykisk-halsa-1024x576.jpg",
+      "source_image_alt": "Längre pappaledighet kopplas till lägre risk för depression",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/06/19/langre-pappaledighet-kopplas-lagre-risk-depression",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/06/19/langre-pappaledighet-kopplas-lagre-risk-depression",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
+      "source_tier_bonus": 2,
+      "positivity_score": 5,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "lägre risk"
+      ],
+      "public_eligible": true
+    },
+    {
+      "id": "883aa62a7813099dd8b2",
+      "title": "ESA och DON’T NOD ger sig ut på en resa till planeten Persephone i Aphelion",
+      "url": "https://www.esa.int/Space_in_Member_States/Sweden/ESA_och_DON_T_NOD_ger_sig_ut_paa_en_resa_till_planeten_Persephone_i_Aphelion",
+      "source": "ESA Sverige",
+      "language": "sv",
+      "published_at": "2026-05-11T09:37:00Z",
+      "source_excerpt": "Europeiska rymdorganisationen (ESA) har inlett ett samarbete med den franska spelstudion DON’T NOD Entertainment för utvecklingen av Aphelion , ett berättelsedrivet science fiction-spel inspirerat av rymdutforskning och vetenskaplig expertis.",
+      "agent_summary": "",
+      "source_fingerprint": "e6b980ff34b6c73c2089",
+      "category": "Rymden",
+      "source_tier_bonus": 2,
+      "positivity_score": 5,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "samarbete",
+        "science"
+      ],
+      "public_eligible": true,
+      "generated_image": {
+        "url": "/news-images/generated/883aa62a7813099dd8b2-e6b980ff-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-abstract-v1",
+        "source_fingerprint": "e6b980ff34b6c73c2089",
+        "width": 1280,
+        "height": 848,
+        "sha256": "5fc1062b01699329572c0ada7ea1bb0f7602369bbd428018c71145517acc5e3c"
+      }
+    },
+    {
       "id": "9a227c3910aa2c6a2a31",
       "title": "Volunteer Measures Record Louisiana Rainfall",
       "url": "https://science.nasa.gov/get-involved/citizen-science/volunteer-measures-record-louisiana-rainfall",
@@ -308,31 +425,58 @@
       }
     },
     {
-      "id": "3243141d4530035d173c",
-      "title": "New guidance offers hope for reducing the global toll of dementia",
-      "url": "https://news.un.org/feed/view/en/story/2026/07/1167948",
-      "source": "UN News",
-      "language": "en",
-      "published_at": "2026-07-15T12:00:00Z",
-      "source_excerpt": "The World Health Organization (WHO) has issued updated global guidelines aimed at reducing the risk of cognitive decline and dementia, saying that up to 45 per cent of cases may be preventable or delayed by addressing modifiable risk factors throughout life.",
-      "agent_summary": "WHO har uppdaterat sina globala råd för att minska risken för kognitiv svikt och demens. Organisationen bedömer att upp till 45 procent av fallen kan förebyggas eller fördröjas genom att påverka riskfaktorer under livet.",
-      "source_fingerprint": "688f76b4f22554ef2cdd",
-      "source_tier_bonus": 0,
-      "positivity_score": 2,
+      "id": "a0402e58d294e2932d3d",
+      "title": "Bakterier vid infektion kan snabbt spåras med lovande metod",
+      "url": "https://forskning.se/2026/06/18/bakterier-vid-infektion-kan-snabbt-sparas-med-lovande-metod",
+      "source": "Forskning.se",
+      "language": "sv",
+      "published_at": "2026-06-18T12:14:51Z",
+      "source_excerpt": "Med hjälp av metoden som har utvärderats vid Universitetssjukhuset Örebro kan bakterier i blodet upptäckas blodet på några timmar i stället för dagar. – Vi har visat att det teoretiskt är möjligt att identifiera sjukdomsorsakande bakterier direkt från ett blodprov taget på akutmottagningen. Nu behöver vi fortsätta utveckla metoderna för att göra dem tillräckligt känsliga […] The post Bakterier vid",
+      "agent_summary": "",
+      "source_fingerprint": "3563df0caa0369e1f520",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/06/blodprover-ror-labb-1024x576.jpg",
+      "source_image_alt": "Bakterier vid infektion kan snabbt spåras med lovande metod",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/06/18/bakterier-vid-infektion-kan-snabbt-sparas-med-lovande-metod",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/06/18/bakterier-vid-infektion-kan-snabbt-sparas-med-lovande-metod",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
+      "source_tier_bonus": 2,
+      "positivity_score": 4,
       "positive_signals": [
-        "hope"
+        "curated-positive-source",
+        "lovande"
       ],
-      "display_title_sv": "Nya råd ger hopp om att förebygga demens",
-      "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/3243141d4530035d173c-688f76b4-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-abstract-v1",
-        "source_fingerprint": "688f76b4f22554ef2cdd",
-        "width": 1280,
-        "height": 848,
-        "sha256": "18a131b68fa501e91f971b412a91db2a75e1d330db8e9b04b18ede525a0c3d87"
-      }
+      "public_eligible": true
+    },
+    {
+      "id": "e3e7e57180a3977ae24b",
+      "title": "Gammalt skinn var Sveriges äldsta sko",
+      "url": "https://forskning.se/2026/06/22/gammalt-skinn-var-sveriges-aldsta-sko",
+      "source": "Forskning.se",
+      "language": "sv",
+      "published_at": "2026-06-22T13:08:32Z",
+      "source_excerpt": "Ett skinnfragment har funnits i Statens historiska museers samlingar sedan 1943, då arkeologer undersökte ett gravröse i Igelsta i Söderby-Karl, Norrtälje kommun. Vid utgrävningen hittades bland annat en unik romersk bronskittel. I kitteln låg beslag och kedjor till två praktfulla dryckeshorn. Fynden har daterats till omkring år 100 e.Kr. Sensationell upptäckt Under bronskitteln fanns skinnfragmen",
+      "agent_summary": "",
+      "source_fingerprint": "ef89be3c0431b294fa39",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/06/Sko_laderfragment-1024x576.jpg",
+      "source_image_alt": "Gammalt skinn var Sveriges äldsta sko",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/06/22/gammalt-skinn-var-sveriges-aldsta-sko",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/06/22/gammalt-skinn-var-sveriges-aldsta-sko",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
+      "source_tier_bonus": 2,
+      "positivity_score": 3,
+      "positive_signals": [
+        "curated-positive-source",
+        "upptäckt"
+      ],
+      "public_eligible": true
     },
     {
       "id": "600742420eb388aab0d9",
@@ -763,6 +907,33 @@
       "positive_signals": [
         "curated-positive-source",
         "together"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "f27f0ef4525f009adb95",
+      "title": "Stopp för ersättningar i kris slår hårt mot hushållen",
+      "url": "https://forskning.se/2026/06/18/stopp-for-ersattningar-i-kris-slar-hart-mot-hushallen",
+      "source": "Forskning.se",
+      "language": "sv",
+      "published_at": "2026-06-18T10:10:42Z",
+      "source_excerpt": "En studie från Totalförsvarets forskningsinstitut, FOI, har undersökt vad som kan hända om staten tillfälligt inte kan betala ut löner, pensioner och sjuk- eller familjeersättningar till följd av en allvarlig störning, kris eller annan samhällspåverkande händelse. Enligt rapporten är utbetalningarna en grundläggande förutsättning för att samhället ska fungera. – Statens utbetalningsförmåga är en d",
+      "agent_summary": "",
+      "source_fingerprint": "fd96d3b4f3bade4d54e9",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/06/Betalning-mobil-1024x576.jpg",
+      "source_image_alt": "Stopp för ersättningar i kris slår hårt mot hushållen",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/06/18/stopp-for-ersattningar-i-kris-slar-hart-mot-hushallen",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/06/18/stopp-for-ersattningar-i-kris-slar-hart-mot-hushallen",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
+      "source_tier_bonus": 2,
+      "positivity_score": 3,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning"
       ],
       "public_eligible": false
     },

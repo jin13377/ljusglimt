@@ -38,7 +38,7 @@ jobs:
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             python scripts/fetch_positive_news.py --force
           else
-            python scripts/fetch_positive_news.py
+            python scripts/fetch_positive_news.py --scheduled
           fi
 
       - name: Create free local article illustrations

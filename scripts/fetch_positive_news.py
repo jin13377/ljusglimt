@@ -18,7 +18,7 @@ import tempfile
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -42,12 +42,12 @@ ALLOWED_IMAGE_LICENSES = {
     "https://creativecommons.org/licenses/by/4.0/": "CC-BY-4.0",
 }
 SENSITIVE_CANDIDATE_RE = re.compile(
-    r"\b(?:abandon(?:ed|ment)?|abuse|anxiety|assault|backlash|blood|bloody|bomb|chronic loneliness|closing|conflict|criticiz(?:e|ed|es|ing)|crush(?:ed|ing)?|death|desperat(?:e|ely)|distress(?:ed|ing)?|earthquake|extinct(?:ion)?|extremism|fraud|gasp(?:ing)?|harass(?:ment|ed|ing)?|harrowing|hooks? in|injur(?:ed|y|ies)|killed|loathe|locked away|lost (?:a |both |back )?legs?|mange|mangled|missing flipper|murder|onlyfans|revok(?:e|ed|es|ing)|scared|shooting|shocked|sick|stranded|strangl(?:e|ed|es|ing)|stroke|stuck in|terror|terrified|threaten(?:ed|ing)?|traffick(?:ing|ed)?|trap(?:ped)?|traumatized|treatment center|unable to move|violence|war)\b",
+    r"\b(?:abandon(?:ed|ment)?|abuse|anxiety|assault|backlash|blood|bloody|bomb|chronic loneliness|closing|conflict|criticiz(?:e|ed|es|ing)|crush(?:ed|ing)?|death|desperat(?:e|ely)|distress(?:ed|ing)?|earthquake|extinct(?:ion)?|extremism|fraud|gasp(?:ing)?|harass(?:ment|ed|ing)?|harrowing|hooks? in|injur(?:ed|y|ies)|killed|loathe|locked away|lost (?:a |both |back )?legs?|mange|mangled|missing flipper|murder|onlyfans|revok(?:e|ed|es|ing)|scared|shooting|shocked|sick|stranded|strangl(?:e|ed|es|ing)|stroke|stuck in|terror|terrified|threaten(?:ed|ing)?|traffick(?:ing|ed)?|trap(?:ped)?|traumatized|treatment center|unable to move|violence|war|bomb|död(?:a|ade)?|jordbävning|krig|mord|skjutning|terror|övergrepp)\b",
     re.IGNORECASE,
 )
 FEED_NOISE_RE = re.compile(r"\b(?:appeared first on|share the stories)\b", re.IGNORECASE)
 POSITIVE_CANDIDATE_RE = re.compile(
-    r"\b(?:achiev(?:e|ed|ement)|adopt(?:ed|ion)?|adorable|award(?:ed|s)?|best friend|birth|breakthrough|celebrat(?:e|ed|es|ing|ion)|conservation(?:ist|ists)?|cuddl(?:e|ed|es|ing|y)|discov(?:er|ered|ery)|free(?:d|ing)?|friend(?:s|ship)?|help(?:s|ed|ing)?|hope(?:ful)?|improv(?:e|ed|ement)|innovation|kitten(?:s)?|lov(?:e|ed|es|ing)|milestone|play(?:s|ed|ing|ful)?|priceless|protect(?:s|ed|ing|ion)?|pupp(?:y|ies)|recover(?:ed|y)|rescu(?:e|ed|es|ing)|restor(?:e|ed|es|ing|ation)|save(?:d|s|ing)?|second chance|smooth(?:er|est)|solv(?:e|ed|es|ing)|spoil(?:s|ed|ing)?|success(?:ful)?|surpris(?:e|ed|es|ing)|together|treat(?:s|ed|ing)?|volunteer(?:s|ed|ing)?|win(?:s|ning)?)\b",
+    r"\b(?:achiev(?:e|ed|ement)|adopt(?:ed|ion)?|adorable|award(?:ed|s)?|best friend|birth|breakthrough|celebrat(?:e|ed|es|ing|ion)|conservation(?:ist|ists)?|cuddl(?:e|ed|es|ing|y)|discov(?:er|ered|ery)|free(?:d|ing)?|friend(?:s|ship)?|help(?:s|ed|ing)?|hope(?:ful)?|improv(?:e|ed|ement)|innovation|kitten(?:s)?|lov(?:e|ed|es|ing)|milestone|play(?:s|ed|ing|ful)?|priceless|protect(?:s|ed|ing|ion)?|pupp(?:y|ies)|recover(?:ed|y)|rescu(?:e|ed|es|ing)|restor(?:e|ed|es|ing|ation)|save(?:d|s|ing)?|second chance|smooth(?:er|est)|solv(?:e|ed|es|ing)|spoil(?:s|ed|ing)?|success(?:ful)?|surpris(?:e|ed|es|ing)|together|treat(?:s|ed|ing)?|volunteer(?:s|ed|ing)?|win(?:s|ning)?|bevara|elev(?:er)?|firar|framsteg|förbättr(?:a|ar|ad|ats)|förebygg(?:a|er|ande)|glädje|hjälp(?:a|er|te)|hopp|innovation|lägre risk|lösning(?:ar)?|lovande|ny metod|ny teknik|rekord|räddad|samarbete|skydda|stärk(?:a|er|t)|upptäckt|utbildning)\b",
     re.IGNORECASE,
 )
 AI_IMAGE_KEYS = {
@@ -691,14 +691,30 @@ def fetch(url: str, timeout: int, user_agent: str) -> bytes:
         return payload
 
 
-def should_run(force: bool, now: datetime) -> bool:
-    return force or now.astimezone(STOCKHOLM).hour in {0, 12}
+def should_run(force: bool, scheduled: bool, now: datetime) -> bool:
+    """Allow a scheduled job even when GitHub starts it after the target hour."""
+    return force or scheduled or now.astimezone(STOCKHOLM).hour in {0, 12}
 
 
 def publication_slot(now: datetime) -> str:
     local = now.astimezone(STOCKHOLM)
     slot_hour = 12 if local.hour >= 12 else 0
     return f"{local.date().isoformat()}T{slot_hour:02d}:00"
+
+
+def is_within_max_age(item: dict, max_age_days: object, now: datetime) -> bool:
+    if max_age_days is None:
+        return True
+    if type(max_age_days) is not int or max_age_days < 1:
+        return False
+    published = str(item.get("published_at") or "").strip()
+    try:
+        published_at = datetime.fromisoformat(published.replace("Z", "+00:00"))
+    except ValueError:
+        return False
+    if published_at.tzinfo is None:
+        published_at = published_at.replace(tzinfo=timezone.utc)
+    return published_at <= now and now - published_at.astimezone(timezone.utc) <= timedelta(days=max_age_days)
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -709,10 +725,11 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--history", type=Path, default=base / "data/history.json")
     parser.add_argument("--translations", type=Path, default=base / "config/swedish-copy.json")
     parser.add_argument("--force", action="store_true", help="bypass the 00:00/12:00 Europe/Stockholm gate")
+    parser.add_argument("--scheduled", action="store_true", help="run the current 00:00/12:00 slot even if the scheduler was delayed")
     args = parser.parse_args(argv)
 
     now = datetime.now(timezone.utc)
-    if not should_run(args.force, now):
+    if not should_run(args.force, args.scheduled, now):
         print("Skip: local time in Europe/Stockholm is not 00:xx or 12:xx.")
         return 0
 
@@ -754,6 +771,8 @@ def main(argv: list[str] | None = None) -> int:
                                     feed.get("image_policy"), video_policy)
             selected = []
             for item in parsed:
+                if not is_within_max_age(item, feed.get("max_age_days"), now):
+                    continue
                 category = feed.get("category")
                 if isinstance(category, str) and category.strip():
                     item["category"] = category.strip()[:80]
@@ -769,7 +788,8 @@ def main(argv: list[str] | None = None) -> int:
             retained_count = 0
             for previous_item in old_items.values():
                 if (retained_count >= retained_limit or previous_item.get("source") != feed.get("name")
-                        or previous_item.get("id") in selected_ids or not has_swedish_copy(previous_item)):
+                        or previous_item.get("id") in selected_ids or not has_swedish_copy(previous_item)
+                        or not is_within_max_age(previous_item, feed.get("max_age_days"), now)):
                     continue
                 retained = dict(previous_item)
                 retained["source_tier_bonus"] = int(feed.get("base_score", 0))

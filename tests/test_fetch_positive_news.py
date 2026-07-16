@@ -17,11 +17,31 @@ class PositiveNewsTests(unittest.TestCase):
         winter_midnight = datetime(2026, 1, 14, 23, 10, tzinfo=timezone.utc)
         summer_noon = datetime(2026, 7, 15, 10, 10, tzinfo=timezone.utc)
         outside_schedule = datetime(2026, 7, 15, 11, 10, tzinfo=timezone.utc)
-        self.assertTrue(news.should_run(False, winter_midnight))
-        self.assertTrue(news.should_run(False, summer_noon))
-        self.assertFalse(news.should_run(False, outside_schedule))
+        delayed_noon = datetime(2026, 7, 15, 11, 39, tzinfo=timezone.utc)
+        self.assertTrue(news.should_run(False, False, winter_midnight))
+        self.assertTrue(news.should_run(False, False, summer_noon))
+        self.assertFalse(news.should_run(False, False, outside_schedule))
+        self.assertTrue(news.should_run(False, True, delayed_noon))
         self.assertEqual(news.publication_slot(winter_midnight), "2026-01-15T00:00")
         self.assertEqual(news.publication_slot(summer_noon), "2026-07-15T12:00")
+        self.assertEqual(news.publication_slot(delayed_noon), "2026-07-15T12:00")
+
+    def test_swedish_positive_and_sensitive_language_filters(self):
+        positive = {
+            "title": "Ny lovande metod kan hjälpa fler",
+            "source_excerpt": "Forskningen innebär framsteg och lägre risk.",
+            "language": "sv",
+        }
+        sensitive = {**positive, "title": "Ny metod används under krig"}
+        self.assertTrue(news.public_eligible(positive))
+        self.assertFalse(news.public_eligible(sensitive))
+
+    def test_source_max_age_rejects_stale_or_missing_dates(self):
+        now = datetime(2026, 7, 16, 12, 0, tzinfo=timezone.utc)
+        self.assertTrue(news.is_within_max_age({"published_at": "2026-06-01T10:00:00Z"}, 180, now))
+        self.assertFalse(news.is_within_max_age({"published_at": "2023-07-01T10:00:00Z"}, 180, now))
+        self.assertFalse(news.is_within_max_age({}, 180, now))
+        self.assertTrue(news.is_within_max_age({}, None, now))
 
     def test_rss_parse_and_tracking_cleanup(self):
         xml = b"""<rss><channel><item><title>Community rescue success</title>

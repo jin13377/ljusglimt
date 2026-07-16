@@ -13,6 +13,8 @@ python scripts/fetch_positive_news.py --force
 Resultatet skrivs atomiskt till `data/news.json`. Skriptet:
 
 - hämtar endast konfigurerade flöden från `config/feeds.json`;
+- prioriterar svenska källor från Forskning.se och ESA Sverige tillsammans med
+  de granskade internationella flödena;
 - behåller källans titel, länk, datum och beskrivning utan att hitta på fakta;
 - poängsätter positiva signaler och filtrerar bort tydligt allvarliga ämnen;
 - deduplicerar på kanonisk länk och normaliserad rubrik;
@@ -63,3 +65,7 @@ python scripts/apply_agent_summaries.py
 
 Appliceringsskriptet kan enbart ändra `agent_summary`, inte importerad rubrik,
 källa eller länk. En redaktör bör granska texten före publik användning.
+
+Schemakörningen använder en unik svensk 00:00- eller 12:00-period. Om GitHub
+startar jobbet sent körs rätt period ändå, medan `data/history.json` hindrar en
+andra publicering under samma period.
