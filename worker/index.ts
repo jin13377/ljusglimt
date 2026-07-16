@@ -41,9 +41,28 @@ interface SeedTopic {
   replies?: Array<{ id: string; body: string; createdAt: string }>
 }
 
+interface GoogleIdTokenClaims {
+  aud: string | string[]
+  email: string
+  email_verified: boolean
+  exp: number
+  iat?: number
+  iss: string
+  name?: string
+  nbf?: number
+  picture?: string
+  sub: string
+}
+
+interface GoogleJwk extends JsonWebKey {
+  kid?: string
+}
+
 const SESSION_COOKIE = 'glimt_session'
 const SESSION_SECONDS = 60 * 60 * 24 * 30
 const encoder = new TextEncoder()
+const GOOGLE_CERTS_URL = 'https://www.googleapis.com/oauth2/v3/certs'
+const GOOGLE_ISSUERS = new Set(['accounts.google.com', 'https://accounts.google.com'])
 
 const SCHEMA_SQL = `
 CREATE TABLE IF NOT EXISTS app_meta (
@@ -213,6 +232,7 @@ const SEED_TOPICS: SeedTopic[] = [
 ]
 
 let schemaPromise: Promise<void> | undefined
+let googleKeysCache: { expiresAt: number; keys: GoogleJwk[] } | undefined
 
 function nowIso() {
   return new Date().toISOString()
@@ -290,7 +310,7 @@ async function ensureDatabase(env: Env) {
   schemaPromise = (async () => {
     try {
       const marker = await env.DB.prepare("SELECT value FROM app_meta WHERE key = 'schema_version'").first<{ value: string }>()
-      if (marker?.value === '1') return
+      if (Number(marker?.value || 0) >= 2) return
     } catch {
       // The first request creates the schema below.
     }
@@ -318,11 +338,97 @@ async function ensureDatabase(env: Env) {
       }
     }
     await env.DB.prepare("INSERT OR REPLACE INTO app_meta (key, value) VALUES ('schema_version', '1')").run()
+
+    const columns = (await env.DB.prepare('PRAGMA table_info(users)').all<{ name: string }>()).results || []
+    if (!columns.some((column) => column.name === 'google_sub')) {
+      try {
+        await env.DB.exec('ALTER TABLE users ADD COLUMN google_sub TEXT;')
+      } catch (error) {
+        const refreshed = (await env.DB.prepare('PRAGMA table_info(users)').all<{ name: string }>()).results || []
+        if (!refreshed.some((column) => column.name === 'google_sub')) throw error
+      }
+    }
+    await env.DB.exec('CREATE UNIQUE INDEX IF NOT EXISTS idx_users_google_sub ON users(google_sub);')
+    await env.DB.prepare("INSERT OR REPLACE INTO app_meta (key, value) VALUES ('schema_version', '2')").run()
   })().catch((error) => {
     schemaPromise = undefined
     throw error
   })
   return schemaPromise
+}
+
+function decodeJsonSegment<T>(segment: string): T {
+  try {
+    return JSON.parse(new TextDecoder().decode(base64UrlToBytes(segment))) as T
+  } catch {
+    throw new Error('Ogiltig Google-token.')
+  }
+}
+
+function googleCacheSeconds(response: Response) {
+  const match = response.headers.get('cache-control')?.match(/max-age=(\d+)/i)
+  return Math.min(Math.max(Number(match?.[1] || 3_600), 300), 86_400)
+}
+
+async function googleSigningKeys(forceRefresh = false) {
+  if (!forceRefresh && googleKeysCache && googleKeysCache.expiresAt > Date.now()) return googleKeysCache.keys
+  const response = await fetch(GOOGLE_CERTS_URL, { headers: { accept: 'application/json' } })
+  if (!response.ok) throw new Error('Google kunde inte verifieras just nu.')
+  const body = await response.json() as { keys?: GoogleJwk[] }
+  if (!Array.isArray(body.keys) || !body.keys.length) throw new Error('Google skickade inga verifieringsnycklar.')
+  googleKeysCache = { keys: body.keys, expiresAt: Date.now() + googleCacheSeconds(response) * 1_000 }
+  return body.keys
+}
+
+async function verifyGoogleIdToken(credential: string, clientId: string) {
+  const parts = credential.split('.')
+  if (parts.length !== 3 || credential.length > 12_000) throw new Error('Ogiltig Google-token.')
+  const header = decodeJsonSegment<{ alg?: string; kid?: string; typ?: string }>(parts[0])
+  if (header.alg !== 'RS256' || !header.kid) throw new Error('Google-token använder fel signering.')
+
+  let keys = await googleSigningKeys()
+  let jwk = keys.find((key) => key.kid === header.kid)
+  if (!jwk) {
+    keys = await googleSigningKeys(true)
+    jwk = keys.find((key) => key.kid === header.kid)
+  }
+  if (!jwk) throw new Error('Google-token kunde inte verifieras.')
+
+  const key = await crypto.subtle.importKey(
+    'jwk',
+    jwk,
+    { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' },
+    false,
+    ['verify'],
+  )
+  const validSignature = await crypto.subtle.verify(
+    'RSASSA-PKCS1-v1_5',
+    key,
+    base64UrlToBytes(parts[2]),
+    encoder.encode(`${parts[0]}.${parts[1]}`),
+  )
+  if (!validSignature) throw new Error('Google-token kunde inte verifieras.')
+
+  const claims = decodeJsonSegment<GoogleIdTokenClaims>(parts[1])
+  const now = Math.floor(Date.now() / 1_000)
+  const audiences = Array.isArray(claims.aud) ? claims.aud : [claims.aud]
+  if (!audiences.includes(clientId)) throw new Error('Google-token är avsedd för en annan webbplats.')
+  if (!GOOGLE_ISSUERS.has(claims.iss)) throw new Error('Google-token har fel utgivare.')
+  if (!Number.isFinite(claims.exp) || claims.exp <= now - 60) throw new Error('Google-inloggningen har gått ut. Försök igen.')
+  if (claims.nbf && claims.nbf > now + 60) throw new Error('Google-token är inte giltig ännu.')
+  if (claims.iat && claims.iat > now + 300) throw new Error('Google-token har fel tid.')
+  if (!claims.sub || !isEmail(claims.email) || claims.email_verified !== true) throw new Error('Google-kontots e-postadress är inte verifierad.')
+  return claims
+}
+
+function safeGoogleAvatar(value: string | undefined) {
+  if (!value) return null
+  try {
+    const url = new URL(value)
+    return url.protocol === 'https:' && (url.hostname === 'googleusercontent.com' || url.hostname.endsWith('.googleusercontent.com')) ? url.href : null
+  } catch {
+    return null
+  }
 }
 
 async function readBody(request: Request) {
@@ -361,6 +467,7 @@ async function requireUser(env: Env, request: Request) {
 async function createSession(env: Env, userId: string) {
   const raw = bytesToBase64Url(crypto.getRandomValues(new Uint8Array(32)))
   const expiresAt = Date.now() + SESSION_SECONDS * 1000
+  await env.DB.prepare('DELETE FROM sessions WHERE expires_at <= ?').bind(Date.now()).run()
   await env.DB.prepare('INSERT INTO sessions (id, user_id, token_hash, expires_at, created_at) VALUES (?, ?, ?, ?, ?)')
     .bind(crypto.randomUUID(), userId, await sha256(raw), expiresAt, nowIso()).run()
   return `${SESSION_COOKIE}=${encodeURIComponent(raw)}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=${SESSION_SECONDS}`
@@ -406,6 +513,51 @@ async function handleLogin(env: Env, request: Request) {
   if (!await rateLimit(env, `login:${clientAddress(request)}`, 1_500)) return json({ error: 'Vänta en liten stund och försök igen.' }, 429)
   const row = await env.DB.prepare('SELECT id, email, name, password_hash, avatar_url, role FROM users WHERE email = ?').bind(email).first<{ id: string; email: string; name: string; password_hash: string; avatar_url: string | null; role: string }>()
   if (!row || !await verifyPassword(password, row.password_hash)) return json({ error: 'Fel e-postadress eller lösenord.' }, 401)
+  const user: SessionUser = { id: row.id, email: row.email, name: row.name, avatarUrl: row.avatar_url, role: row.role }
+  return json({ user }, 200, { 'set-cookie': await createSession(env, user.id) })
+}
+
+async function handleGoogleLogin(env: Env, request: Request) {
+  if (!env.GOOGLE_CLIENT_ID) return json({ error: 'Google-inloggning är inte aktiverad ännu.' }, 501)
+  if (!await rateLimit(env, `google:${clientAddress(request)}`, 1_500)) return json({ error: 'Vänta en liten stund och försök igen.' }, 429)
+  const body = await readBody(request)
+  const credential = typeof body.credential === 'string' ? body.credential : ''
+  if (!credential) return json({ error: 'Google skickade ingen giltig inloggning.' }, 400)
+
+  let claims: GoogleIdTokenClaims
+  try {
+    claims = await verifyGoogleIdToken(credential, env.GOOGLE_CLIENT_ID)
+  } catch (error) {
+    console.warn('Google identity verification failed', error)
+    return json({ error: error instanceof Error ? error.message : 'Google-inloggningen kunde inte verifieras.' }, 401)
+  }
+
+  const email = claims.email.toLocaleLowerCase('sv')
+  const avatarUrl = safeGoogleAvatar(claims.picture)
+  let row = await env.DB.prepare('SELECT id, email, name, avatar_url, role FROM users WHERE google_sub = ?')
+    .bind(claims.sub).first<{ id: string; email: string; name: string; avatar_url: string | null; role: string }>()
+
+  if (!row) {
+    const existing = await env.DB.prepare('SELECT id, email, name, avatar_url, role, google_sub FROM users WHERE email = ?')
+      .bind(email).first<{ id: string; email: string; name: string; avatar_url: string | null; role: string; google_sub: string | null }>()
+    if (existing?.google_sub && existing.google_sub !== claims.sub) {
+      return json({ error: 'E-postadressen är redan kopplad till ett annat Google-konto.' }, 409)
+    }
+    if (existing) {
+      await env.DB.prepare('UPDATE users SET google_sub = ?, avatar_url = COALESCE(avatar_url, ?) WHERE id = ?')
+        .bind(claims.sub, avatarUrl, existing.id).run()
+      row = { ...existing, avatar_url: existing.avatar_url || avatarUrl }
+    } else {
+      const id = crypto.randomUUID()
+      const name = clean(claims.name, 40) || email.split('@')[0].slice(0, 40)
+      await env.DB.prepare(`INSERT INTO users
+        (id, email, name, password_hash, avatar_url, role, created_at, google_sub)
+        VALUES (?, ?, ?, ?, ?, 'member', ?, ?)`)
+        .bind(id, email, name, `google$disabled$${bytesToBase64Url(crypto.getRandomValues(new Uint8Array(24)))}`, avatarUrl, nowIso(), claims.sub).run()
+      row = { id, email, name, avatar_url: avatarUrl, role: 'member' }
+    }
+  }
+
   const user: SessionUser = { id: row.id, email: row.email, name: row.name, avatarUrl: row.avatar_url, role: row.role }
   return json({ user }, 200, { 'set-cookie': await createSession(env, user.id) })
 }
@@ -624,7 +776,7 @@ async function handleApi(env: Env, request: Request) {
   if (request.method === 'POST' && path === '/api/auth/register') return handleRegister(env, request)
   if (request.method === 'POST' && path === '/api/auth/login') return handleLogin(env, request)
   if (request.method === 'POST' && path === '/api/auth/logout') return handleLogout(env, request)
-  if (request.method === 'POST' && path === '/api/auth/google') return json({ error: 'Google-inloggning är inte aktiverad ännu.' }, 501)
+  if (request.method === 'POST' && path === '/api/auth/google') return handleGoogleLogin(env, request)
   if (request.method === 'POST' && path === '/api/profile') return updateProfile(env, request)
 
   if (request.method === 'GET' && path === '/api/forum/index') return json(await forumIndex(env))

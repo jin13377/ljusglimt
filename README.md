@@ -54,9 +54,9 @@ Bygget kopierar automatiskt `data/news.json` och `data/seed-news.json` till
 `dist/data/`. `wrangler.jsonc` publicerar mappen `dist` och ser till att direkta
 länkar i React-appen fungerar som en SPA.
 
-Nyheter, sök, artiklar och Om-sidan fungerar statiskt. Forumskrivning,
-inloggning, profiler, sparade nyheter och nyhetsbrevsregistrering kräver
-Python-API:t och SQLite, eller en framtida migrering till en hostad backend.
+Cloudflare Workern använder D1 för permanent lagring av forum, konton,
+sessioner, följda trådar och sparade nyheter. Samma funktioner körs lokalt via
+Python-API:t och SQLite när du använder `npm run dev`.
 
 De schemalagda GitHub Actions-jobben kan valfritt använda
 `OPENAI_API_KEY` och `OPENAI_IMAGE_API_KEY`. De behövs inte för att bygga eller
@@ -70,10 +70,10 @@ visa den statiska webbplatsen.
 - svenska rubriker och sammanfattningar i hela det publika nyhetsflödet; engelska källposter hålls dolda tills svensk text finns;
 - kategorifilter, sök, egna artikelsidor och tydlig länk till originalkälla;
 - responsiv mobilmeny utan horisontell overflow;
-- forum med trådar/svar, honeypot, hastighetsgräns och modereringskö;
-- konton med e-post och säkert scrypt-hashade lösenord;
+- forum med trådar/svar, rapportering och hastighetsgränser;
+- konton med e-post och säkert hashade lösenord;
 - personlig profil med sparade nyheter;
-- Google Identity Services-inloggning när ett Google Client ID konfigurerats;
+- verifierad Google-inloggning när ett Google Client ID konfigurerats;
 - manuell forumgranskning via `python scripts/moderate_forum.py`;
 - automatisk hämtning och bildkontroll 00:00 och 12:00 Europe/Stockholm, även över sommar-/vintertid;
 - kostnadsfria, unika lokala artikelillustrationer vid varje schemalagd körning;

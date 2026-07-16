@@ -8,19 +8,23 @@ ett OAuth-klient-ID av typen **Web application**.
 3. Skapa Credentials → OAuth client ID → Web application.
 4. Lägg till webbplatsens permanenta HTTPS-adress under **Authorized JavaScript origins**.
    För lokal utveckling kan du även lägga till `http://127.0.0.1:4173`.
-5. Kopiera `config/local.env.example` till `config/local.env` och ersätt värdet
-   med ditt klient-ID.
-6. Installera beroenden med `python -m pip install -r requirements.txt` och
-   starta om webbplatsen.
+5. Öppna din Worker i Cloudflare och välj **Inställningar → Variabler och
+   hemligheter**. Lägg till textvariabeln `GOOGLE_CLIENT_ID` med klient-ID:t.
+6. Distribuera om Workern. Google-knappen visas automatiskt när variabeln finns.
+
+För lokal Worker-utveckling skapar du filen `.dev.vars` med:
+
+```text
+GOOGLE_CLIENT_ID=din-klient.apps.googleusercontent.com
+```
+
+Filen är ignorerad av Git och ska inte skickas till GitHub.
 
 Tillfälliga `trycloudflare.com`-adresser byts när tunneln startas om. Google
 kräver att varje origin är registrerad, så använd en permanent domän före
 offentlig lansering.
 
-Backend verifierar Googles ID-token mot rätt audience och använder Googles
-stabila `sub`-fält som kontoidentitet. I produktion används paketet
-`google-auth`; tokeninfo-fallbacken finns bara för lokal utveckling.
-
-Ett befintligt lösenordskonto länkas inte automatiskt bara för att Google-
-kontot har samma e-postadress. Användaren behöver först logga in med lösenord;
-ett uttryckligt kontolänkningsflöde är ett separat produktionssteg.
+Cloudflare Workern verifierar signaturen, webbplatsens klient-ID, utgivaren,
+giltighetstiden och att e-postadressen är verifierad. Googles stabila `sub`-fält
+används som kontoidentitet. Om samma verifierade e-postadress redan har ett
+Ljusglimt-konto kopplas Google-inloggningen till det kontot.
