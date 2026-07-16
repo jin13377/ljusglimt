@@ -50,6 +50,11 @@ källa. Använd under Worker-inställningen `Settings > Builds`:
 - Node.js: 22 eller senare
 - obligatoriska environment variables: inga
 
+FÃ¶r verifiering i Google Search Console kan den valfria byggvariabeln
+`VITE_GOOGLE_SITE_VERIFICATION` anges med verifieringskoden frÃ¥n Google.
+Sidan fungerar utan variabeln. `robots.txt`, `sitemap.xml`, kanoniska adresser,
+delningsmetadata och strukturerad nyhetsdata skapas automatiskt vid varje bygge.
+
 Bygget kopierar automatiskt `data/news.json` och `data/seed-news.json` till
 `dist/data/`. `wrangler.jsonc` publicerar mappen `dist` och ser till att direkta
 länkar i React-appen fungerar som en SPA.

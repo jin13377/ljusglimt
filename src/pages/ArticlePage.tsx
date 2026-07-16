@@ -8,7 +8,7 @@ import { useAuth } from '../contexts/AuthContext'
 import { useSaved } from '../contexts/SavedContext'
 import { formatDate } from '../lib/news'
 import { useNews } from '../lib/useNews'
-import { useDocumentTitle } from '../lib/useDocumentTitle'
+import { SITE_NAME, SITE_URL, usePageMetadata } from '../lib/seo'
 
 export function ArticlePage() {
   const { id = '' } = useParams()
@@ -19,7 +19,33 @@ export function ArticlePage() {
   const [message, setMessage] = useState('')
   const [saving, setSaving] = useState(false)
   const article = data.articles.find((item) => item.id === decodeURIComponent(id) || item.slug === decodeURIComponent(id))
-  useDocumentTitle(article?.title)
+  const articlePath = article ? `/nyhet/${encodeURIComponent(article.slug)}` : `/nyhet/${encodeURIComponent(id)}`
+  const articleJsonLd = article ? {
+    '@context': 'https://schema.org',
+    '@type': 'NewsArticle',
+    headline: article.title,
+    description: article.excerpt,
+    image: [article.image.url.startsWith('http') ? article.image.url : `${SITE_URL}${article.image.url}`],
+    datePublished: article.publishedAt,
+    dateModified: article.publishedAt,
+    inLanguage: 'sv-SE',
+    isAccessibleForFree: true,
+    mainEntityOfPage: `${SITE_URL}${articlePath}`,
+    author: { '@type': 'Organization', name: article.source, url: article.url },
+    publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL, logo: { '@type': 'ImageObject', url: `${SITE_URL}/sun.svg` } },
+    citation: article.url,
+    articleSection: article.category,
+  } : undefined
+  usePageMetadata({
+    title: article?.title || 'Nyhet',
+    description: article?.excerpt || 'En positiv nyhet från Ljusglimt.',
+    canonicalPath: articlePath,
+    image: article?.image.url,
+    imageAlt: article?.image.alt,
+    type: 'article',
+    noIndex: !loading && !article,
+    jsonLd: articleJsonLd,
+  })
   if (loading) return <section className="page-wrap state-page"><p>Laddar nyheten…</p></section>
   if (error) return <section className="page-wrap state-page"><h1>Nyheten kunde inte laddas</h1><p>{error}</p><button className="button primary" type="button" onClick={() => { void refresh().catch(() => undefined) }}>Försök igen</button></section>
   if (!article && !data.fetchedAvailable) return <section className="page-wrap state-page"><h1>Källnotisen kunde inte hämtas</h1><p>Det automatiska flödet är tillfälligt otillgängligt.</p><button className="button primary" type="button" onClick={() => { void refresh().catch(() => undefined) }}>Försök igen</button></section>

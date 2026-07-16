@@ -4,7 +4,7 @@ import { Link, Navigate, useNavigate, useParams, useSearchParams } from 'react-r
 import { useAuth } from '../contexts/AuthContext'
 import { api, post, remove } from '../lib/api'
 import { formatDate } from '../lib/news'
-import { useDocumentTitle } from '../lib/useDocumentTitle'
+import { usePageMetadata } from '../lib/seo'
 import type { ForumGroup, ForumLatest, ForumSection, ForumTopic, ForumTopicSummary } from '../types'
 
 interface IndexData { groups: ForumGroup[]; latest: ForumLatest[]; stats: { topics: number; posts: number; members: number } }
@@ -46,7 +46,11 @@ export function ForumSectionPage() {
   const requestId = useRef(0)
   const data = loaded?.key === sectionId ? loaded.data : null
   const error = failure?.key === sectionId ? failure.message : ''
-  useDocumentTitle(data?.section.title)
+  usePageMetadata({
+    title: data?.section.title || 'Forumavdelning',
+    description: data?.section.description || 'Samtal i Ljusglimts vänliga forum.',
+    canonicalPath: `/forum/sektion/${encodeURIComponent(sectionId)}`,
+  })
   const load = useCallback(() => {
     const current = ++requestId.current
     return api<SectionData>(`/api/forum/topics?section=${encodeURIComponent(sectionId)}`).then((result) => {
@@ -94,7 +98,11 @@ export function ForumThreadPage() {
   const requestId = useRef(0)
   const data = loaded?.key === topicId ? loaded.data : null
   const error = failure?.key === topicId ? failure.message : ''
-  useDocumentTitle(data?.topic.title)
+  usePageMetadata({
+    title: data?.topic.title || 'Forumtråd',
+    description: data?.topic.body ? `${data.topic.body.slice(0, 155).trim()}${data.topic.body.length > 155 ? '…' : ''}` : 'Ett samtal i Ljusglimts vänliga forum.',
+    canonicalPath: `/forum/trad/${encodeURIComponent(topicId)}`,
+  })
   const load = useCallback(() => {
     const current = ++requestId.current
     return api<TopicData>(`/api/forum/topic?id=${encodeURIComponent(topicId)}`).then((result) => {

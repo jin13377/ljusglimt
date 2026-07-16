@@ -4,6 +4,7 @@ import { lazy, Suspense, useEffect, useRef } from 'react'
 import { Layout } from './components/Layout'
 import { AuthProvider } from './contexts/AuthContext'
 import { SavedProvider } from './contexts/SavedContext'
+import { usePageMetadata, websiteJsonLd } from './lib/seo'
 
 const HomePage = lazy(() => import('./pages/HomePage').then((module) => ({ default: module.HomePage })))
 const ArticlePage = lazy(() => import('./pages/ArticlePage').then((module) => ({ default: module.ArticlePage })))
@@ -19,16 +20,6 @@ function ScrollManager() {
   const { pathname, hash } = useLocation()
   const firstRender = useRef(true)
   useEffect(() => {
-    const title = pathname === '/' || pathname === '/nyheter' ? 'Ljusglimt – nyheter som ger perspektiv'
-      : pathname === '/sok' ? 'Sök nyheter – Ljusglimt'
-        : pathname.startsWith('/nyhet/') ? 'Nyhet – Ljusglimt'
-          : pathname.startsWith('/forum/trad/') ? 'Forumtråd – Ljusglimt'
-            : pathname.startsWith('/forum/sektion/') ? 'Forumavdelning – Ljusglimt'
-              : pathname === '/forum' ? 'Forum – Ljusglimt'
-                : pathname === '/profil' ? 'Profil – Ljusglimt'
-                  : pathname === '/om' ? 'Om Ljusglimt'
-                    : 'Sidan hittades inte – Ljusglimt'
-    document.title = title
     const timer = window.setTimeout(() => {
       if (hash) document.getElementById(decodeURIComponent(hash.slice(1)))?.scrollIntoView()
       else window.scrollTo({ top: 0, behavior: 'auto' })
@@ -40,12 +31,36 @@ function ScrollManager() {
   return null
 }
 
+function RouteMetadata() {
+  const { pathname } = useLocation()
+  const metadata = pathname === '/' || pathname === '/nyheter'
+    ? { canonicalPath: '/', jsonLd: websiteJsonLd() }
+    : pathname === '/sok'
+      ? { title: 'Sök positiva nyheter', description: 'Sök bland Ljusglimts positiva nyheter och svenska källsammanfattningar.', canonicalPath: '/sok' }
+      : pathname === '/forum'
+        ? { title: 'Forum', description: 'Delta i vänliga och konstruktiva samtal i Ljusglimts forum.', canonicalPath: '/forum' }
+        : pathname === '/profil'
+          ? { title: 'Din profil', description: 'Hantera din profil och dina sparade nyheter på Ljusglimt.', canonicalPath: '/profil', noIndex: true }
+          : pathname === '/om'
+            ? { title: 'Om Ljusglimt', description: 'Så hittar, sammanfattar och märker Ljusglimt positiva nyheter och deras källor.', canonicalPath: '/om' }
+            : pathname.startsWith('/nyhet/') || pathname.startsWith('/forum/')
+              ? null
+              : { title: 'Sidan hittades inte', canonicalPath: pathname, noIndex: true }
+  return metadata ? <Metadata {...metadata} /> : null
+}
+
+function Metadata(metadata: Parameters<typeof usePageMetadata>[0]) {
+  usePageMetadata(metadata)
+  return null
+}
+
 export default function App() {
   return <MotionConfig reducedMotion="user">
     <BrowserRouter>
       <AuthProvider>
         <SavedProvider>
           <ScrollManager />
+          <RouteMetadata />
           <Layout>
             <Suspense fallback={<div className="route-loading" role="status">Laddar sidan…</div>}>
               <Routes>

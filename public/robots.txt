@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /profil
+Disallow: /api/
+
+Sitemap: https://ljusglimt.daniel-eklund1981.workers.dev/sitemap.xml
