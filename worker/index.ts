@@ -63,6 +63,10 @@ const SESSION_SECONDS = 60 * 60 * 24 * 30
 const encoder = new TextEncoder()
 const GOOGLE_CERTS_URL = 'https://www.googleapis.com/oauth2/v3/certs'
 const GOOGLE_ISSUERS = new Set(['accounts.google.com', 'https://accounts.google.com'])
+const PROFILE_AVATARS = new Set([
+  '/profile-icons/sol.svg', '/profile-icons/katt.svg', '/profile-icons/hund.svg', '/profile-icons/hjarta.svg',
+  '/profile-icons/blomma.svg', '/profile-icons/regnbage.svg', '/profile-icons/stjarna.svg', '/profile-icons/bi.svg',
+])
 
 const SCHEMA_SQL = `
 CREATE TABLE IF NOT EXISTS app_meta (
@@ -757,11 +761,13 @@ async function updateProfile(env: Env, request: Request) {
   const user = await requireUser(env, request)
   const body = await readBody(request)
   const name = clean(body.name, 40)
+  const requestedAvatar = clean(body.avatarUrl, 160)
   if (name.length < 2) return json({ error: 'Namnet måste ha minst två tecken.' }, 400)
-  await env.DB.prepare('UPDATE users SET name = ? WHERE id = ?').bind(name, user.id).run()
+  if (requestedAvatar && !PROFILE_AVATARS.has(requestedAvatar)) return json({ error: 'Välj en av Ljusglimts profilbilder.' }, 400)
+  await env.DB.prepare('UPDATE users SET name = ?, avatar_url = COALESCE(?, avatar_url) WHERE id = ?').bind(name, requestedAvatar || null, user.id).run()
   await env.DB.prepare('UPDATE forum_topics SET author_name = ? WHERE user_id = ?').bind(name, user.id).run()
   await env.DB.prepare('UPDATE forum_replies SET author_name = ? WHERE user_id = ?').bind(name, user.id).run()
-  return json({ user: { ...user, name } })
+  return json({ user: { ...user, name, avatarUrl: requestedAvatar || user.avatarUrl } })
 }
 
 async function handleApi(env: Env, request: Request) {

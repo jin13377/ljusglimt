@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Glad sol">
+  <rect width="96" height="96" rx="48" fill="#e9f5ef"/><g stroke="#e7a72b" stroke-width="5" stroke-linecap="round"><path d="M48 11v8M48 77v8M11 48h8M77 48h8M22 22l6 6M68 68l6 6M74 22l-6 6M28 68l-6 6"/></g>
+  <circle cx="48" cy="48" r="25" fill="#f6c957"/><circle cx="39" cy="44" r="2.8" fill="#183f34"/><circle cx="57" cy="44" r="2.8" fill="#183f34"/><path d="M37 54c6 7 16 7 22 0" fill="none" stroke="#183f34" stroke-width="3.5" stroke-linecap="round"/>
+</svg>

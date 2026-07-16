@@ -787,10 +787,18 @@ class Handler(BaseHTTPRequestHandler):
         if not user:
             return
         name = clean_text(payload.get("name"), 50)
+        avatar_url = clean_text(payload.get("avatarUrl"), 160)
+        allowed_avatars = {
+            "/profile-icons/sol.svg", "/profile-icons/katt.svg", "/profile-icons/hund.svg", "/profile-icons/hjarta.svg",
+            "/profile-icons/blomma.svg", "/profile-icons/regnbage.svg", "/profile-icons/stjarna.svg", "/profile-icons/bi.svg",
+        }
         if len(name) < 2:
             return self._json({"error": "Namnet behöver minst två tecken."}, HTTPStatus.BAD_REQUEST)
+        if avatar_url and avatar_url not in allowed_avatars:
+            return self._json({"error": "Välj en av Ljusglimts profilbilder."}, HTTPStatus.BAD_REQUEST)
         with db_connect() as db:
-            db.execute("UPDATE users SET name=? WHERE id=?", (name, user["id"]))
+            db.execute("UPDATE users SET name=?, avatar_url=COALESCE(?,avatar_url) WHERE id=?",
+                       (name, avatar_url or None, user["id"]))
             row = db.execute("SELECT * FROM users WHERE id=?", (user["id"],)).fetchone()
         self._json({"ok": True, "user": user_public(row)})
 

@@ -111,6 +111,26 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; letter-spacing: -.0
 @media (max-width: 430px) { .compass-grid { grid-template-columns: 1fr; }.trust-grid { grid-template-columns: 1fr; }.trust-grid > div { border-right: 0; }.hero-buttons .button { width: 100%; }.forum-post > div { padding: 18px; }.thread-head > div:last-child { align-items: flex-start; flex-direction: column; } }
 @media (prefers-reduced-motion: reduce) { *,*::before,*::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
 
+.profile-avatar { overflow: hidden; }
+.profile-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.avatar-picker { margin: 22px 0; padding: 0; border: 0; }
+.avatar-picker legend { margin-bottom: 4px; font-size: 13px; font-weight: 800; }
+.avatar-picker > p { margin: 0 0 14px; color: var(--muted); font-size: 11px; }
+.avatar-picker > div { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 10px; }
+.avatar-choice { min-width: 0; margin: 0 !important; cursor: pointer; }
+.avatar-choice input { position: absolute; width: 1px !important; height: 1px; overflow: hidden; opacity: 0; }
+.avatar-choice span { min-height: 112px; display: grid; place-items: center; align-content: center; gap: 7px; padding: 10px 6px; border: 1px solid var(--line); border-radius: 14px; background: #f8faf8; text-align: center; transition: border-color .2s ease,box-shadow .2s ease,transform .2s ease; }
+.avatar-choice img { width: 58px; height: 58px; border-radius: 50%; }
+.avatar-choice strong { color: var(--ink); font-size: 10px; line-height: 1.25; }
+.avatar-choice:hover span { transform: translateY(-2px); border-color: #8bb3a5; }
+.avatar-choice input:checked + span { border-color: var(--green); background: var(--mint); box-shadow: 0 0 0 2px var(--green); }
+.avatar-choice input:focus-visible + span { outline: 3px solid #df9f24; outline-offset: 3px; }
+
+@media (max-width: 600px) {
+  .avatar-picker > div { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .avatar-choice span { min-height: 105px; }
+}
+
 .sr-only { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0,0,0,0) !important; white-space: nowrap !important; border: 0 !important; }
 .forum-post h2 { margin: 22px 0 15px; font-size: 32px; }
 
