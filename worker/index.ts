@@ -771,9 +771,9 @@ async function updateProfile(env: Env, request: Request) {
 }
 
 async function handleApi(env: Env, request: Request) {
-  await ensureDatabase(env)
   const url = new URL(request.url)
   const path = url.pathname
+  await ensureDatabase(env)
   if (request.method !== 'GET' && request.method !== 'HEAD') assertSameOrigin(request)
 
   if (request.method === 'GET' && path === '/api/health') return json({ ok: true, database: true })
@@ -813,7 +813,11 @@ async function handleApi(env: Env, request: Request) {
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     try {
-      if (new URL(request.url).pathname.startsWith('/api/')) return await handleApi(env, request)
+      const path = new URL(request.url).pathname
+      if ((request.method === 'GET' || request.method === 'HEAD') && path === '/api/news') {
+        return env.ASSETS.fetch(new Request(new URL('/data/news.json', request.url), request))
+      }
+      if (path.startsWith('/api/')) return await handleApi(env, request)
       return env.ASSETS.fetch(request)
     } catch (error) {
       if (error instanceof Response) return error
