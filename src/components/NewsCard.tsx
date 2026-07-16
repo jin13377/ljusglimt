@@ -1,4 +1,4 @@
-import { Bookmark, ExternalLink, MapPin } from 'lucide-react'
+import { Bookmark, ExternalLink, MapPin, PlayCircle } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { formatDate, excerpt } from '../lib/news'
@@ -14,18 +14,21 @@ export function OriginBadge({ article }: { article: NewsArticle }) {
 }
 
 export function NewsCard({ article, onSave, saved = false, variant = 'standard' }: { article: NewsArticle; onSave?: (article: NewsArticle) => void; saved?: boolean; variant?: NewsCardVariant }) {
-  const imageLabel = article.image.kind === 'ai' ? 'AI-illustration' : `Källbild${article.image.credit ? ` av ${article.image.credit}` : ''}`
+  const imageLabel = article.image.kind === 'source'
+    ? `Källbild${article.image.credit ? ` av ${article.image.credit}` : ''}`
+    : article.image.kind === 'generated' ? 'Redaktionell illustration' : 'AI-illustration'
   return (
     <motion.article className={`news-card ${variant}`} initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: .15 }}>
       {variant !== 'text' && <div className="news-card-art">
         <Link to={`/nyhet/${encodeURIComponent(article.slug)}`} className="news-card-image-link" aria-label={`${imageLabel}. Läs ${article.title}`}>
           <NewsVisual article={article} variant={variant === 'search' ? 'search' : 'card'} />
           <span className="category-pill">{article.category}</span>
+          {article.video && <span className="video-pill"><PlayCircle size={14} /> Video</span>}
         </Link>
       </div>}
       <div className="news-card-body">
         <OriginBadge article={article} />
-        {article.image.kind === 'source' && article.image.credit && article.image.rightsUrl && <div className="card-image-credit">Källbild: {article.image.credit} · <a href={article.image.rightsUrl} target="_blank" rel="noreferrer">bildrättigheter</a></div>}
+        {article.image.kind === 'source' && article.image.credit && article.image.rightsUrl && <div className="card-image-credit">Källbild: {article.image.credit} · <a href={article.image.rightsUrl} target="_blank" rel="noreferrer">bildkälla</a></div>}
         <h3 lang={article.language}><Link to={`/nyhet/${encodeURIComponent(article.slug)}`}>{article.title}</Link></h3>
         <p lang={article.excerptLanguage}>{excerpt(article.excerpt)}</p>
         {article.location && <div className="news-card-location"><MapPin size={14} /> {article.location}</div>}

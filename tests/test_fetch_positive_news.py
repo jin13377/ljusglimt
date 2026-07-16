@@ -90,6 +90,68 @@ class PositiveNewsTests(unittest.TestCase):
                 {metadata}</media:content></item></channel></rss>""".encode()
                 self.assertNotIn("source_image_verified", news.parse_feed(xml, "Example", "en", policy)[0])
 
+    def test_allowlisted_feed_thumbnail_is_accepted_as_source_media(self):
+        xml = b"""<rss xmlns:media="http://search.yahoo.com/mrss/"><channel><item>
+        <title>Adorable puppy finds a best friend</title>
+        <link>https://example.com/animals/friends</link><description>A happy friendship.</description>
+        <media:thumbnail url="https://images.example.com/puppy.jpg" />
+        </item></channel></rss>"""
+        policy = {
+            "enabled": True,
+            "mode": "feed-thumbnail",
+            "allowed_article_hosts": ["example.com"],
+            "allowed_image_hosts": ["images.example.com"],
+            "credit": "Example Animals",
+        }
+        item = news.parse_feed(xml, "Example Animals", "en", policy)[0]
+        self.assertTrue(item["source_image_verified"])
+        self.assertEqual(item["source_image_credit"], "Example Animals")
+        self.assertEqual(item["source_image_rights_url"], "https://example.com/animals/friends")
+        self.assertEqual(item["source_image_verification_method"], "rss-syndicated-thumbnail-v1")
+
+        wrong_host = {**policy, "allowed_article_hosts": ["other.example.com"]}
+        self.assertNotIn("source_image_verified", news.parse_feed(xml, "Example Animals", "en", wrong_host)[0])
+
+    def test_youtube_atom_entry_gets_safe_privacy_enhanced_video(self):
+        xml = b"""<feed xmlns="http://www.w3.org/2005/Atom"
+          xmlns:yt="http://www.youtube.com/xml/schemas/2015"
+          xmlns:media="http://search.yahoo.com/mrss/"><entry>
+          <yt:videoId>PahtM3xtRus</yt:videoId>
+          <title>Adorable animals become best friends</title>
+          <link rel="alternate" href="https://www.youtube.com/watch?v=PahtM3xtRus" />
+          <published>2026-07-15T21:00:30+00:00</published>
+          <media:group><media:description>A happy friendship.</media:description>
+          <media:thumbnail url="https://i1.ytimg.com/vi/PahtM3xtRus/hqdefault.jpg" /></media:group>
+        </entry></feed>"""
+        image_policy = {
+            "enabled": True, "mode": "feed-thumbnail",
+            "allowed_article_hosts": ["www.youtube.com"],
+            "allowed_image_hosts": ["i1.ytimg.com"], "credit": "The Dodo",
+        }
+        video_policy = {"enabled": True, "provider": "youtube"}
+        item = news.parse_feed(xml, "The Dodo", "en", image_policy, video_policy)[0]
+        self.assertTrue(item["source_image_verified"])
+        self.assertEqual(item["source_video"]["video_id"], "PahtM3xtRus")
+        self.assertEqual(item["source_video"]["embed_url"], "https://www.youtube-nocookie.com/embed/PahtM3xtRus")
+
+    def test_dailymotion_listing_gets_source_image_and_video(self):
+        payload = json.dumps({"list": [{
+            "id": "xamx6nm", "title": "Boyfriend Has Best Reaction To Surprise Foster Kittens",
+            "description": "A joyful surprise with kittens.",
+            "thumbnail_720_url": "https://s2.dmcdn.net/v/example/x720",
+            "url": "https://www.dailymotion.com/video/xamx6nm", "created_time": 1783521247,
+        }]}).encode()
+        image_policy = {
+            "enabled": True, "mode": "feed-thumbnail", "allowed_article_hosts": ["www.dailymotion.com"],
+            "allowed_image_hosts": ["s2.dmcdn.net"], "credit": "The Dodo",
+        }
+        video_policy = {"enabled": True, "provider": "dailymotion"}
+        item = news.parse_dailymotion_feed(payload, "The Dodo", "en", image_policy, video_policy)[0]
+        self.assertTrue(item["source_image_verified"])
+        self.assertEqual(item["source_video"]["provider"], "dailymotion")
+        self.assertEqual(item["source_video"]["embed_url"], "https://geo.dailymotion.com/player.html?video=xamx6nm")
+        self.assertEqual(item["source_image_credit"], "The Dodo")
+
     def test_blocked_topic_is_rejected(self):
         item = {"title": "War update", "source_excerpt": "community rescue"}
         score, reasons = news.score_item(item, ["community", "rescue"], ["war"])
@@ -243,6 +305,41 @@ class PositiveNewsTests(unittest.TestCase):
                 result = news.main(["--force", "--config", str(config), "--output", str(output), "--history", str(history)])
             self.assertEqual(result, 1)
             self.assertEqual(json.loads(output.read_text(encoding="utf-8")), original)
+
+    def test_one_failed_feed_keeps_its_last_published_items(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            config = root / "feeds.json"
+            output = root / "news.json"
+            history = root / "history.json"
+            config.write_text(json.dumps({
+                "feeds": [
+                    {"name": "Temporarily offline", "url": "https://offline.example/feed", "base_score": 2},
+                    {"name": "Working", "url": "https://working.example/feed", "base_score": 2},
+                ],
+                "positive_keywords": ["friend", "community", "rescue"],
+                "blocked_keywords": [], "minimum_score": 1, "max_items": 10,
+            }), encoding="utf-8")
+            old_item = {
+                "id": "a" * 20, "title": "Adorable kitten finds a best friend",
+                "url": "https://offline.example/story", "source": "Temporarily offline",
+                "language": "en", "source_excerpt": "A happy friendship.",
+                "agent_summary": "", "source_fingerprint": "b" * 20,
+                "positivity_score": 5, "positive_signals": ["friend"], "public_eligible": True,
+            }
+            output.write_text(json.dumps({"items": [old_item]}), encoding="utf-8")
+            working_xml = b"""<rss><channel><item><title>Community rescue success</title>
+            <link>https://working.example/story</link><description>Friends helped.</description></item></channel></rss>"""
+
+            def fake_fetch(url, *_args):
+                if "offline" in url:
+                    raise RuntimeError("temporary outage")
+                return working_xml
+
+            with patch.object(news, "fetch", side_effect=fake_fetch):
+                self.assertEqual(news.main(["--force", "--config", str(config), "--output", str(output), "--history", str(history)]), 0)
+            saved = json.loads(output.read_text(encoding="utf-8"))["items"]
+            self.assertEqual({item["source"] for item in saved}, {"Temporarily offline", "Working"})
 
 
 if __name__ == "__main__":

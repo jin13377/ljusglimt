@@ -14,6 +14,22 @@ export interface NewsImage {
   rightsUrl?: string
 }
 
+export interface RawSourceNewsVideo {
+  provider: 'youtube' | 'dailymotion'
+  video_id: string
+  embed_url: string
+  source_url: string
+  title: string
+}
+
+export interface NewsVideo {
+  provider: 'youtube' | 'dailymotion'
+  videoId: string
+  embedUrl: string
+  sourceUrl: string
+  title: string
+}
+
 export interface RawAiNewsImage {
   url: string
   alt: string
@@ -42,6 +58,7 @@ export interface RawFetchedNews {
   url: string
   source: string
   language?: string
+  category?: string
   published_at?: string
   source_excerpt?: string
   agent_summary?: string
@@ -52,6 +69,7 @@ export interface RawFetchedNews {
   public_eligible?: boolean
   ai_image?: RawAiNewsImage
   generated_image?: RawGeneratedNewsImage
+  source_video?: RawSourceNewsVideo
   source_image_verified?: boolean
   source_image_url?: string
   source_image_alt?: string
@@ -98,6 +116,7 @@ export interface NewsArticle {
   signals: string[]
   image: NewsImage
   fallbackImage?: NewsImage
+  video?: NewsVideo
   publicEligible?: boolean
 }
 

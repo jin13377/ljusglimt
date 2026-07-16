@@ -142,7 +142,10 @@ def process(news_path: Path, output_dir: Path) -> tuple[int, int, int]:
     created = reused = skipped = 0
     referenced: set[str] = set()
     for item in items:
-        if not isinstance(item, dict) or item.get("public_eligible") is not True:
+        if (not isinstance(item, dict) or item.get("public_eligible") is not True
+                or item.get("source_image_verified") is True):
+            if isinstance(item, dict) and item.get("source_image_verified") is True:
+                item.pop("generated_image", None)
             skipped += 1
             continue
         filename = expected_filename(item)
@@ -178,7 +181,7 @@ def main() -> int:
     parser.add_argument("--output-dir", type=Path, default=base / "public/news-images/generated")
     args = parser.parse_args()
     created, reused, skipped = process(args.news, args.output_dir)
-    print(f"Free visuals: {created} created, {reused} reused, {skipped} ineligible.")
+    print(f"Free visuals: {created} created, {reused} reused, {skipped} ineligible or source-backed.")
     return 0
 
 

@@ -5,7 +5,8 @@ Projektet innehåller en responsiv redaktionell startsida, sök/filter,
 originalkällor, ett nyhetsbrevsformulär, ett förhandsmodererat forum och en schemalagd
 Codex/RSS-pipeline.
 
-Nyhetsbilder använder verifierade källbilder när användningsrätten är tydlig.
+Nyhetsbilder använder verifierade källbilder eller miniatyrer som den granskade
+källan själv syndikerar i sitt publika flöde.
 Annars skapar natt-/lunchjobbet automatiskt en unik, lokalt lagrad abstrakt
 artikelillustration utan API-nyckel eller bildkostnad. En optimerad
 illustrationsbank är alltid sista reserv. Se `docs/image-policy.md`.
@@ -64,6 +65,8 @@ visa den statiska webbplatsen.
 ## Det som fungerar
 
 - startsida med källbelagda svenska sammanfattningar och automatiskt hämtade RSS-notiser;
+- särskild Djur-sektion där varje nyhet måste ha en riktig bild från källflödet;
+- klickbara, responsiva videor från The Dodos publika videoflöde;
 - kategorifilter, sök, egna artikelsidor och tydlig länk till originalkälla;
 - responsiv mobilmeny utan horisontell overflow;
 - forum med trådar/svar, honeypot, hastighetsgräns och modereringskö;

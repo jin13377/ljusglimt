@@ -27,6 +27,7 @@ STOCKHOLM = ZoneInfo("Europe/Stockholm")
 TAG_RE = re.compile(r"<[^>]+>")
 SPACE_RE = re.compile(r"\s+")
 MEDIA_RSS_NAMESPACE = "http://search.yahoo.com/mrss/"
+YOUTUBE_NAMESPACE = "http://www.youtube.com/xml/schemas/2015"
 CC_RSS_NAMESPACES = {
     MEDIA_RSS_NAMESPACE,
     "http://backend.userland.com/creativeCommonsRssModule",
@@ -41,12 +42,12 @@ ALLOWED_IMAGE_LICENSES = {
     "https://creativecommons.org/licenses/by/4.0/": "CC-BY-4.0",
 }
 SENSITIVE_CANDIDATE_RE = re.compile(
-    r"\b(?:abandon(?:ed|ment)?|abuse|anxiety|assault|backlash|blood|bloody|bomb|chronic loneliness|closing|conflict|criticiz(?:e|ed|es|ing)|crush(?:ed|ing)?|death|desperat(?:e|ely)|distress(?:ed|ing)?|earthquake|extinct(?:ion)?|extremism|fraud|harass(?:ment|ed|ing)?|harrowing|hooks? in|injur(?:ed|y|ies)|killed|loathe|mangled|missing flipper|murder|onlyfans|revok(?:e|ed|es|ing)|shooting|shocked|stranded|strangl(?:e|ed|es|ing)|stroke|terror|threaten(?:ed|ing)?|traffick(?:ing|ed)?|trap(?:ped)?|treatment center|unable to move|violence|war)\b",
+    r"\b(?:abandon(?:ed|ment)?|abuse|anxiety|assault|backlash|blood|bloody|bomb|chronic loneliness|closing|conflict|criticiz(?:e|ed|es|ing)|crush(?:ed|ing)?|death|desperat(?:e|ely)|distress(?:ed|ing)?|earthquake|extinct(?:ion)?|extremism|fraud|gasp(?:ing)?|harass(?:ment|ed|ing)?|harrowing|hooks? in|injur(?:ed|y|ies)|killed|loathe|locked away|lost (?:a |both |back )?legs?|mange|mangled|missing flipper|murder|onlyfans|revok(?:e|ed|es|ing)|scared|shooting|shocked|sick|stranded|strangl(?:e|ed|es|ing)|stroke|stuck in|terror|terrified|threaten(?:ed|ing)?|traffick(?:ing|ed)?|trap(?:ped)?|traumatized|treatment center|unable to move|violence|war)\b",
     re.IGNORECASE,
 )
 FEED_NOISE_RE = re.compile(r"\b(?:appeared first on|share the stories)\b", re.IGNORECASE)
 POSITIVE_CANDIDATE_RE = re.compile(
-    r"\b(?:achiev(?:e|ed|ement)|award(?:ed|s)?|birth|breakthrough|celebrat(?:e|ed|es|ing|ion)|conservation(?:ist|ists)?|discov(?:er|ered|ery)|free(?:d|ing)?|help(?:s|ed|ing)?|hope(?:ful)?|improv(?:e|ed|ement)|milestone|protect(?:s|ed|ing|ion)?|recover(?:ed|y)|rescu(?:e|ed|es|ing)|restor(?:e|ed|es|ing|ation)|save(?:d|s|ing)?|second chance|smooth(?:er|est)|solv(?:e|ed|es|ing)|success(?:ful)?|volunteer(?:s|ed|ing)?|win(?:s|ning)?)\b",
+    r"\b(?:achiev(?:e|ed|ement)|adopt(?:ed|ion)?|adorable|award(?:ed|s)?|best friend|birth|breakthrough|celebrat(?:e|ed|es|ing|ion)|conservation(?:ist|ists)?|cuddl(?:e|ed|es|ing|y)|discov(?:er|ered|ery)|free(?:d|ing)?|friend(?:s|ship)?|help(?:s|ed|ing)?|hope(?:ful)?|improv(?:e|ed|ement)|kitten(?:s)?|lov(?:e|ed|es|ing)|milestone|play(?:s|ed|ing|ful)?|priceless|protect(?:s|ed|ing|ion)?|pupp(?:y|ies)|recover(?:ed|y)|rescu(?:e|ed|es|ing)|restor(?:e|ed|es|ing|ation)|save(?:d|s|ing)?|second chance|smooth(?:er|est)|solv(?:e|ed|es|ing)|spoil(?:s|ed|ing)?|success(?:ful)?|surpris(?:e|ed|es|ing)|together|treat(?:s|ed|ing)?|volunteer(?:s|ed|ing)?|win(?:s|ning)?)\b",
     re.IGNORECASE,
 )
 AI_IMAGE_KEYS = {
@@ -67,6 +68,15 @@ def clean_text(value: str | None) -> str:
     value = html.unescape(value or "")
     value = TAG_RE.sub(" ", value)
     return SPACE_RE.sub(" ", value).strip()
+
+
+def clean_source_description(value: str | None, video_policy: dict | None = None) -> str:
+    text = value or ""
+    if isinstance(video_policy, dict) and video_policy.get("provider") == "youtube":
+        for marker in ("Love Animals? Subscribe:", "Follow The Dodo:", "Produced by", "Hosted by"):
+            text = text.split(marker, 1)[0]
+        text = re.sub(r"https?://\S+", " ", text)
+    return clean_text(text)[:400]
 
 
 def normalize_title(value: str) -> str:
@@ -186,18 +196,13 @@ def _tag_parts(node: ET.Element) -> tuple[str, str]:
 
 def verified_rss_source_image(node: ET.Element, article_url: str, article_title: str,
                               image_policy: dict | None) -> dict:
-    """Return displayable source metadata only for explicitly licensed media."""
+    """Return a strict, allowlisted image supplied by the source feed."""
     if not isinstance(image_policy, dict) or image_policy.get("enabled") is not True:
         return {}
     configured_hosts = image_policy.get("allowed_image_hosts")
     if not isinstance(configured_hosts, list) or not configured_hosts:
         return {}
-    configured_licenses = image_policy.get("allowed_license_urls")
-    if (not isinstance(configured_licenses, list) or not configured_licenses
-            or any(not isinstance(url, str) or url not in ALLOWED_IMAGE_LICENSES
-                   for url in configured_licenses)):
-        return {}
-    allowed_license_urls = set(configured_licenses)
+    mode = image_policy.get("mode", "licensed")
     allowed_hosts = {
         host.casefold() for host in configured_hosts
         if isinstance(host, str) and re.fullmatch(r"[a-z0-9.-]+", host.casefold())
@@ -240,12 +245,44 @@ def verified_rss_source_image(node: ET.Element, article_url: str, article_title:
         if candidate_url and candidate_url not in candidates:
             candidates.append(candidate_url)
 
+    source_url = _safe_https_url(article_url)
+    if not candidates or not source_url:
+        return {}
+
+    if mode == "feed-thumbnail":
+        configured_article_hosts = image_policy.get("allowed_article_hosts")
+        configured_credit = clean_text(image_policy.get("credit"))[:240]
+        if not isinstance(configured_article_hosts, list) or not configured_credit:
+            return {}
+        allowed_article_hosts = {
+            host.casefold() for host in configured_article_hosts
+            if isinstance(host, str) and re.fullmatch(r"[a-z0-9.-]+", host.casefold())
+        }
+        article_host = (urllib.parse.urlsplit(source_url).hostname or "").casefold()
+        if article_host not in allowed_article_hosts:
+            return {}
+        return {
+            "source_image_verified": True,
+            "source_image_url": candidates[0],
+            "source_image_alt": media_titles[0] if media_titles else article_title,
+            "source_image_credit": configured_credit,
+            "source_image_rights_url": source_url,
+            "source_image_creator": configured_credit,
+            "source_image_source_url": source_url,
+            "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+        }
+
+    configured_licenses = image_policy.get("allowed_license_urls")
+    if (not isinstance(configured_licenses, list) or not configured_licenses
+            or any(not isinstance(url, str) or url not in ALLOWED_IMAGE_LICENSES
+                   for url in configured_licenses)):
+        return {}
+    allowed_license_urls = set(configured_licenses)
     unique_licenses = set(licenses)
-    if len(unique_licenses) != 1 or not candidates or not credits:
+    if len(unique_licenses) != 1 or not credits:
         return {}
     license_url = next(iter(unique_licenses))
     license_id = ALLOWED_IMAGE_LICENSES.get(license_url)
-    source_url = _safe_https_url(article_url)
     if not license_id or license_url not in allowed_license_urls or not source_url:
         return {}
     creator = " · ".join(credits)[:240]
@@ -294,9 +331,41 @@ def reusable_source_image(item: dict, previous: dict | None) -> dict:
         reusable["source_image_source_url"] = source_url
     if creator:
         reusable["source_image_creator"] = creator
-    if previous.get("source_image_verification_method") == "rss-license-v1":
-        reusable["source_image_verification_method"] = "rss-license-v1"
+    verification_method = previous.get("source_image_verification_method")
+    if verification_method in {"rss-license-v1", "rss-syndicated-thumbnail-v1"}:
+        reusable["source_image_verification_method"] = verification_method
     return reusable
+
+
+def verified_source_video(node: ET.Element, article_url: str, article_title: str,
+                          video_policy: dict | None) -> dict:
+    """Return a privacy-enhanced YouTube embed only for an explicit video feed."""
+    if (not isinstance(video_policy, dict) or video_policy.get("enabled") is not True
+            or video_policy.get("provider") != "youtube"):
+        return {}
+    video_ids = []
+    for child in node.iter():
+        namespace, local = _tag_parts(child)
+        if namespace == YOUTUBE_NAMESPACE and local == "videoid" and child.text:
+            video_id = child.text.strip()
+            if re.fullmatch(r"[A-Za-z0-9_-]{11}", video_id) and video_id not in video_ids:
+                video_ids.append(video_id)
+    source_url = _safe_https_url(article_url)
+    if len(video_ids) != 1 or not source_url:
+        return {}
+    source_host = (urllib.parse.urlsplit(source_url).hostname or "").casefold()
+    if source_host not in {"youtube.com", "www.youtube.com", "youtu.be"}:
+        return {}
+    video_id = video_ids[0]
+    return {
+        "source_video": {
+            "provider": "youtube",
+            "video_id": video_id,
+            "embed_url": f"https://www.youtube-nocookie.com/embed/{video_id}",
+            "source_url": source_url,
+            "title": article_title,
+        }
+    }
 
 
 def parse_date(value: str | None) -> str | None:
@@ -336,7 +405,8 @@ def entry_link(node: ET.Element) -> str:
     return ""
 
 
-def parse_feed(payload: bytes, source: str, language: str, image_policy: dict | None = None) -> list[dict]:
+def parse_feed(payload: bytes, source: str, language: str, image_policy: dict | None = None,
+               video_policy: dict | None = None) -> list[dict]:
     root = ET.fromstring(payload)
     nodes = [n for n in root.iter() if n.tag.rsplit("}", 1)[-1].casefold() in ("item", "entry")]
     result = []
@@ -346,7 +416,8 @@ def parse_feed(payload: bytes, source: str, language: str, image_policy: dict | 
         if not title or not link or len(link) > 1200 or urllib.parse.urlsplit(link).scheme != "https":
             continue
         # Keep only a short source-provided excerpt; the full article stays at source.
-        description = clean_text(first_text(node, ("description", "summary", "content")))[:400]
+        description = clean_source_description(
+            first_text(node, ("description", "summary", "content")), video_policy)
         published = parse_date(first_text(node, ("pubdate", "published", "updated", "date")))
         stable = link or normalize_title(title)
         item = {
@@ -361,6 +432,81 @@ def parse_feed(payload: bytes, source: str, language: str, image_policy: dict | 
         }
         item["source_fingerprint"] = source_fingerprint(item)
         item.update(verified_rss_source_image(node, link, title, image_policy))
+        item.update(verified_source_video(node, link, title, video_policy))
+        result.append(item)
+    return result
+
+
+def parse_dailymotion_feed(payload: bytes, source: str, language: str,
+                           image_policy: dict | None = None,
+                           video_policy: dict | None = None) -> list[dict]:
+    """Normalize The Dodo's public Dailymotion listing without an API key."""
+    try:
+        document = json.loads(payload.decode("utf-8"))
+    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+        raise ValueError("invalid Dailymotion JSON") from exc
+    entries = document.get("list") if isinstance(document, dict) else None
+    if not isinstance(entries, list):
+        raise ValueError("Dailymotion response is missing its list")
+    if (not isinstance(image_policy, dict) or image_policy.get("enabled") is not True
+            or image_policy.get("mode") != "feed-thumbnail"
+            or not isinstance(video_policy, dict) or video_policy.get("enabled") is not True
+            or video_policy.get("provider") != "dailymotion"):
+        return []
+    configured_image_hosts = image_policy.get("allowed_image_hosts")
+    configured_article_hosts = image_policy.get("allowed_article_hosts")
+    credit = clean_text(image_policy.get("credit"))[:240]
+    if (not isinstance(configured_image_hosts, list) or not isinstance(configured_article_hosts, list)
+            or not credit):
+        return []
+    image_hosts = {str(host).casefold() for host in configured_image_hosts}
+    article_hosts = {str(host).casefold() for host in configured_article_hosts}
+
+    result = []
+    for entry in entries:
+        if not isinstance(entry, dict):
+            continue
+        video_id = str(entry.get("id") or "").strip()
+        title = clean_text(entry.get("title"))[:260]
+        link = _safe_https_url(entry.get("url"))
+        image_url = _safe_https_url(entry.get("thumbnail_720_url"), image_hosts)
+        if (not re.fullmatch(r"x[a-z0-9]+", video_id) or not title or not link or not image_url
+                or (urllib.parse.urlsplit(link).hostname or "").casefold() not in article_hosts):
+            continue
+        published = None
+        created_time = entry.get("created_time")
+        if isinstance(created_time, int) and not isinstance(created_time, bool) and created_time > 0:
+            try:
+                published = datetime.fromtimestamp(created_time, timezone.utc).isoformat().replace("+00:00", "Z")
+            except (OverflowError, OSError, ValueError):
+                published = None
+        description = clean_text(entry.get("description"))[:400]
+        item = {
+            "id": hashlib.sha256(canonical_url(link).encode("utf-8")).hexdigest()[:20],
+            "title": title,
+            "url": canonical_url(link),
+            "source": source,
+            "language": language,
+            "published_at": published,
+            "source_excerpt": description,
+            "agent_summary": "",
+            "source_image_verified": True,
+            "source_image_url": image_url,
+            "source_image_alt": title,
+            "source_image_credit": credit,
+            "source_image_rights_url": canonical_url(link),
+            "source_image_creator": credit,
+            "source_image_source_url": canonical_url(link),
+            "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+            "source_video": {
+                "provider": "dailymotion",
+                "video_id": video_id,
+                "embed_url": f"https://geo.dailymotion.com/player.html?video={video_id}",
+                "source_url": canonical_url(link),
+                "title": title,
+            },
+        }
+        item["source_fingerprint"] = source_fingerprint(item)
         result.append(item)
     return result
 
@@ -407,7 +553,7 @@ def load_json(path: Path, default: object) -> object:
 
 
 def fetch(url: str, timeout: int, user_agent: str) -> bytes:
-    request = urllib.request.Request(url, headers={"User-Agent": user_agent, "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml"})
+    request = urllib.request.Request(url, headers={"User-Agent": user_agent, "Accept": "application/rss+xml, application/atom+xml, application/xml, application/json, text/xml"})
     with urllib.request.urlopen(request, timeout=timeout) as response:
         if response.status != 200:
             raise RuntimeError(f"HTTP {response.status}")
@@ -471,13 +617,38 @@ def main(argv: list[str] | None = None) -> int:
             continue
         try:
             payload = fetch(feed["url"], int(config.get("request_timeout_seconds", 20)), config.get("user_agent", "GladnyttBot/1.0"))
-            parsed = parse_feed(payload, feed["name"], feed.get("language", "und"), feed.get("image_policy"))
+            if feed.get("format") == "dailymotion-json":
+                parsed = parse_dailymotion_feed(payload, feed["name"], feed.get("language", "und"),
+                                                 feed.get("image_policy"), feed.get("video_policy"))
+            else:
+                parsed = parse_feed(payload, feed["name"], feed.get("language", "und"),
+                                    feed.get("image_policy"), feed.get("video_policy"))
+            selected = []
             for item in parsed:
+                category = feed.get("category")
+                if isinstance(category, str) and category.strip():
+                    item["category"] = category.strip()[:80]
+                if feed.get("require_source_image") is True and item.get("source_image_verified") is not True:
+                    continue
+                if feed.get("require_video") is True and not isinstance(item.get("source_video"), dict):
+                    continue
                 item["source_tier_bonus"] = int(feed.get("base_score", 0))
                 item["source_item_limit"] = int(feed.get("max_items", config.get("max_items", 48)))
-            candidates.extend(parsed)
+                selected.append(item)
+            candidates.extend(selected)
         except Exception as exc:  # One broken third-party feed must not stop the others.
-            errors.append({"source": feed.get("name", "Unknown"), "error": str(exc)[:300]})
+            source_name = feed.get("name", "Unknown")
+            errors.append({"source": source_name, "error": str(exc)[:300]})
+            # A temporary outage must not make an entire section disappear.
+            # Keep the last published entries from that exact source until its
+            # allowlisted feed succeeds again.
+            for previous_item in old_items.values():
+                if previous_item.get("source") != source_name:
+                    continue
+                retained = dict(previous_item)
+                retained["source_tier_bonus"] = int(feed.get("base_score", 0))
+                retained["source_item_limit"] = int(feed.get("max_items", config.get("max_items", 48)))
+                candidates.append(retained)
 
     if errors and not candidates:
         print(f"Fetch failed for every usable feed; keeping {args.output} unchanged.", file=sys.stderr)

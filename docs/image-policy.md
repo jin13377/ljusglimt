@@ -32,11 +32,17 @@ En extern bild får bara visas när nyhetsmanifesten uttryckligen innehåller:
 - `source_image_verified: true`;
 - HTTPS-bildadress utan användaruppgifter;
 - fotograf eller korrekt kredit;
-- HTTPS-länk till licens eller annat rättighetsunderlag.
+- HTTPS-länk till licens, bildkälla eller annat rättighetsunderlag.
 
-Om ett fält saknas används i stället en lokal artikelillustration. En bildadress i
-ett RSS-flöde är endast en kandidat och räknas inte i sig som tillstånd.
-Sammanfattningsagenten får inte ändra bild- eller rättighetsfält.
+Två kontrollerade vägar är tillåtna: en uttrycklig fri licens med skaparkredit,
+eller en miniatyrbild som den granskade källan själv har lagt i sitt publika
+RSS-/Atom-flöde för syndikering. Den senare visas direkt från en strikt
+tillåten bildvärd, krediteras med källans namn och länkar tillbaka till
+originalpubliceringen. Godtyckliga bilder som hittas på en artikelsida godtas inte.
+
+Djursektionen kräver alltid `source_image_verified: true`. Artiklar som saknar
+en fungerande källbild visas därför inte där och får inte ersättas av en
+AI-bild eller lokal illustration.
 
 ## Reservkedja
 
@@ -48,7 +54,14 @@ Webben väljer i denna ordning:
 4. lokal AI-ämnesbild för kategorin;
 5. kodritad illustration om en bildfil ändå inte kan laddas.
 
-RSS-källbilder kan bara aktiveras per granskad källa med en explicit lista över
-tillåtna bildvärdar och licenser. Kandidaten måste samtidigt innehålla skapare,
-ursprung och exakt godkänd licens. Aktiva flöden saknar i nuläget den kompletta
-informationen och använder därför den lokala illustrationsreserven.
+RSS-källbilder aktiveras per granskad källa med explicita listor över tillåtna
+artikel- och bildvärdar. Good Good Good och The Dodo använder sina egna
+flödesminiatyrer; övriga källor fortsätter använda den lokala reservkedjan när
+fullständigt bildunderlag saknas.
+
+## Video
+
+Videor bäddas bara in när ett granskat flöde lämnar ett verifierbart video-id.
+The Dodos publika Dailymotion-flöde är aktiv källa; spelaren har även strikt
+validerat stöd för YouTube. Videon laddas först när besökaren trycker på spela
+och har alltid en separat länk till källvideon.

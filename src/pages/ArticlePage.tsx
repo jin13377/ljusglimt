@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 import { useState } from 'react'
 import { NewsCard, OriginBadge } from '../components/NewsCard'
 import { NewsVisual } from '../components/NewsVisual'
+import { SourceVideoPlayer } from '../components/SourceVideoPlayer'
 import { useAuth } from '../contexts/AuthContext'
 import { useSaved } from '../contexts/SavedContext'
 import { formatDate } from '../lib/news'
@@ -54,6 +55,7 @@ export function ArticlePage() {
           <p className="article-lead" lang={article.excerptLanguage}>{article.excerpt}</p>
           <div className="article-meta"><span>{article.category}</span>{article.location && <span><MapPin size={14} /> {article.location}</span>}<time dateTime={article.publishedAt}>{formatDate(article.publishedAt)}</time><span>{article.readTime} min läsning</span></div>
           <NewsVisual article={article} variant="article" priority showCaption />
+          {article.video && <SourceVideoPlayer video={article.video} poster={article.image} />}
           <div className="article-copy">
             {article.origin === 'demo' ? <>
               <h2>Om sammanfattningen</h2>

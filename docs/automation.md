@@ -17,6 +17,8 @@ Resultatet skrivs atomiskt till `data/news.json`. Skriptet:
 - poängsätter positiva signaler och filtrerar bort tydligt allvarliga ämnen;
 - deduplicerar på kanonisk länk och normaliserad rubrik;
 - återanvänder tidigare manuella/agentgjorda sammanfattningar;
+- hämtar källans egna flödesbilder från strikt tillåtna värdar;
+- kopplar verifierade videor till djurnyheter från The Dodos publika flöde;
 - skriver först en temporär fil och byter sedan fil atomiskt.
 
 ## Dagliga körningar kl. 00 och 12 Europe/Stockholm
@@ -30,9 +32,10 @@ Workflow-jobbet publicerar i tre kontrollerade steg: först källdata, därefter
 unika artikelbilder och sist eventuella svenska Codex-sammanfattningar. Varje
 steg validerar sin egen tillåtna ändringsmängd innan commit.
 
-Det första bildsteget är alltid kostnadsfritt. Det skapar en deterministisk,
-abstrakt SVG för varje publik artikel och kräver varken API-nyckel eller
-betalningsplan. Om samma artikel återkommer återanvänds exakt samma bild.
+Det första bildsteget är alltid kostnadsfritt. En verifierad källbild prioriteras.
+Om en publik artikel saknar källbild skapas i stället en deterministisk, abstrakt
+SVG utan API-nyckel eller betalningsplan. Om samma artikel återkommer
+återanvänds exakt samma bild.
 Källtext läggs aldrig i SVG-filen. Ett valfritt senare bildsteg kan använda
 `OPENAI_IMAGE_API_KEY`, men körs inte när nyckeln saknas. Manuell körning
 aktiverar aldrig det betalda steget om inte `generate_images` väljs uttryckligen.

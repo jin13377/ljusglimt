@@ -39,6 +39,31 @@ describe('news normalizer', () => {
     expect(item.image.url).toBe('/news-images/ai/science.webp')
   })
 
+  it('keeps the animal category and accepts only a validated YouTube embed', () => {
+    const item = normalizeFetched({
+      id: 'animal-video', title: 'Adorable animals become best friends', url: 'https://www.youtube.com/watch?v=PahtM3xtRus', source: 'The Dodo', category: 'Djur',
+      source_video: {
+        provider: 'youtube', video_id: 'PahtM3xtRus', title: 'Adorable animals become best friends',
+        embed_url: 'https://www.youtube-nocookie.com/embed/PahtM3xtRus', source_url: 'https://www.youtube.com/watch?v=PahtM3xtRus',
+      },
+    })
+    expect(item.category).toBe('Djur')
+    expect(item.video?.videoId).toBe('PahtM3xtRus')
+    expect(item.video?.embedUrl).toBe('https://www.youtube-nocookie.com/embed/PahtM3xtRus')
+  })
+
+  it('accepts a validated Dailymotion source video', () => {
+    const item = normalizeFetched({
+      id: 'animal-dailymotion', title: 'Surprise foster kittens find love', url: 'https://www.dailymotion.com/video/xamx6nm', source: 'The Dodo', category: 'Djur',
+      source_video: {
+        provider: 'dailymotion', video_id: 'xamx6nm', title: 'Surprise foster kittens find love',
+        embed_url: 'https://geo.dailymotion.com/player.html?video=xamx6nm', source_url: 'https://www.dailymotion.com/video/xamx6nm',
+      },
+    })
+    expect(item.video?.provider).toBe('dailymotion')
+    expect(item.video?.embedUrl).toBe('https://geo.dailymotion.com/player.html?video=xamx6nm')
+  })
+
   it('preserves demo source transparency', () => {
     const item = normalizeSeed({ id: 'demo', title: 'En ljus nyhet', summary: 'Sammanfattning', source: { name: 'WHO', url: 'https://who.int' } })
     expect(item.origin).toBe('demo')

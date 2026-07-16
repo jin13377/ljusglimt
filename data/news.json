@@ -1,17 +1,144 @@
 {
-  "generated_at": "2026-07-15T22:58:18.273220Z",
+  "generated_at": "2026-07-16T05:42:44.990819Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [
-    "b634e8c36ed593bd94d7"
-  ],
-  "fetch_errors": [
-    {
-      "source": "UN News",
-      "error": "not well-formed (invalid token): line 1, column 0"
-    }
-  ],
+  "new_item_ids": [],
+  "fetch_errors": [],
   "items": [
+    {
+      "id": "772deb64d5f80c5b5454",
+      "title": "Boyfriend Has Best Reaction To Surprise Foster Kittens",
+      "url": "https://www.dailymotion.com/video/xamx6nm",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-07-08T14:34:07Z",
+      "source_excerpt": "When your boyfriend requests foster kittens... you deliver. Our producer Monica shared her first-ever experience fostering kittens from Wallis Annenberg PetSpace and how her dogs unexpectedly became the kittens' biggest fans!",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s2.dmcdn.net/v/cLTto1gJkgKXx3_pz/x720",
+      "source_image_alt": "Boyfriend Has Best Reaction To Surprise Foster Kittens",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xamx6nm",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xamx6nm",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xamx6nm",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xamx6nm",
+        "source_url": "https://www.dailymotion.com/video/xamx6nm",
+        "title": "Boyfriend Has Best Reaction To Surprise Foster Kittens"
+      },
+      "source_fingerprint": "39f8615568f17582de75",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 10,
+      "positive_signals": [
+        "curated-positive-source",
+        "friend",
+        "kitten",
+        "surprise"
+      ],
+      "public_eligible": true
+    },
+    {
+      "id": "33e4d91318071bc1b90a",
+      "title": "This Pig Was On The Run Until Everyone Came Together",
+      "url": "https://www.dailymotion.com/video/xamx6sa",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-07-08T14:34:11Z",
+      "source_excerpt": "Watch how this chill pig on the run finally got rescued! Lancaster Farm Sanctuary shared how Petey spent weeks roaming free before people came together to get him to safety. Now he’s living the good life with a whole crew of potbelly pig friends.",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s2.dmcdn.net/v/cLTwQ1gJkcx08TuRo/x720",
+      "source_image_alt": "This Pig Was On The Run Until Everyone Came Together",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xamx6sa",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xamx6sa",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xamx6sa",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xamx6sa",
+        "source_url": "https://www.dailymotion.com/video/xamx6sa",
+        "title": "This Pig Was On The Run Until Everyone Came Together"
+      },
+      "source_fingerprint": "b166770818c3b8024529",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "friend",
+        "rescue",
+        "together"
+      ],
+      "public_eligible": true
+    },
+    {
+      "id": "4390567e79124135517d",
+      "title": "Boyfriend Gets The Absolute BEST Valentines Day Gift",
+      "url": "https://www.dailymotion.com/video/xadpjn6",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-06-07T01:03:57Z",
+      "source_excerpt": "Then things escalated! We talked to Rachel and Connor about the big surprise — and how an even bigger one came a few weeks later when they brought Jupiter’s sister home, too.",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s2.dmcdn.net/v/bQSIo1gIKYAIOFShZ/x720",
+      "source_image_alt": "Boyfriend Gets The Absolute BEST Valentines Day Gift",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xadpjn6",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xadpjn6",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xadpjn6",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xadpjn6",
+        "source_url": "https://www.dailymotion.com/video/xadpjn6",
+        "title": "Boyfriend Gets The Absolute BEST Valentines Day Gift"
+      },
+      "source_fingerprint": "2e837fc7fbc398ea5b05",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "friend",
+        "surprise"
+      ],
+      "public_eligible": true
+    },
+    {
+      "id": "600742420eb388aab0d9",
+      "title": "Utah revokes license of teen treatment center criticized by Paris Hilton",
+      "url": "https://www.goodgoodgood.co/articles/utah-revokes-springville-license-teen-treatment-center-paris-hilton",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-07-08T18:01:00Z",
+      "source_excerpt": "The Provo Canyon School’s Springville campus is closing, but the Provo campus is keeping its license under new conditions.",
+      "agent_summary": "",
+      "source_fingerprint": "46d2e6a868954e7ba815",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a4e90054601fce2bee8d4e1_6a4e900410a49cd25dbfcb98_utah-revokes-springville-license-teen-treatment-center-paris-hilton-featured.webp",
+      "source_image_alt": "Utah revokes license of teen treatment center criticized by Paris Hilton",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/utah-revokes-springville-license-teen-treatment-center-paris-hilton",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/utah-revokes-springville-license-teen-treatment-center-paris-hilton",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "source_tier_bonus": 2,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "treat",
+        "treatment"
+      ],
+      "public_eligible": false
+    },
     {
       "id": "b2a50a7e834fe5a51d69",
       "title": "Firefighters free raccoon trapped under sewer grate in 'jaws of life' rescue mission",
@@ -22,6 +149,14 @@
       "source_excerpt": "After the first responders had completed the job, the masked critter ran back to its natural habitat.",
       "agent_summary": "",
       "source_fingerprint": "685882d51a0346bca596",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a4e8966685874472182ec8f_6a4e896405d564b3050bd37d_firefighters-save-raccoon-jaws-of-life-featured.webp",
+      "source_image_alt": "Firefighters free raccoon trapped under sewer grate in 'jaws of life' rescue mission",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/firefighters-save-raccoon-jaws-of-life",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/firefighters-save-raccoon-jaws-of-life",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
       "source_tier_bonus": 2,
       "positivity_score": 6,
       "positive_signals": [
@@ -30,6 +165,128 @@
         "rescue"
       ],
       "public_eligible": false
+    },
+    {
+      "id": "56c225a54e232fce1fea",
+      "title": "Woman Rescues A Cat She Found At A Car Dealership",
+      "url": "https://www.dailymotion.com/video/xamxvli",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-07-08T15:18:39Z",
+      "source_excerpt": "She got right into the passenger seat like she’s ready to go home! Sam shared what it was like rescuing Adeline outside a car dealership — and gave us an update on where this sweet girl landed just one month later.",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s2.dmcdn.net/v/cLbms1gLNlyGRmBrE/x720",
+      "source_image_alt": "Woman Rescues A Cat She Found At A Car Dealership",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xamxvli",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xamxvli",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xamxvli",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xamxvli",
+        "source_url": "https://www.dailymotion.com/video/xamxvli",
+        "title": "Woman Rescues A Cat She Found At A Car Dealership"
+      },
+      "source_fingerprint": "9fa7b19e1359a8cb018a",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "rescue"
+      ],
+      "public_eligible": true
+    },
+    {
+      "id": "dfb26fd407a2369341ae",
+      "title": "Moment Between Shelter Dog And Girl Is Priceless",
+      "url": "https://www.dailymotion.com/video/xamh2yi",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-07-07T17:03:55Z",
+      "source_excerpt": "Their bond was undeniable from the very first moment! Natalie shared with The Dodo how this sweet shelter dog seemed to know she’d found her person the moment she met her daughter, Piper. All they had to do was convince Dad — and the rest fell right into place.",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s2.dmcdn.net/v/cIcSw1gLgz0iDwIJb/x720",
+      "source_image_alt": "Moment Between Shelter Dog And Girl Is Priceless",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xamh2yi",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xamh2yi",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xamh2yi",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xamh2yi",
+        "source_url": "https://www.dailymotion.com/video/xamh2yi",
+        "title": "Moment Between Shelter Dog And Girl Is Priceless"
+      },
+      "source_fingerprint": "fd638d0c019eba5da1a9",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "priceless"
+      ],
+      "public_eligible": true
+    },
+    {
+      "id": "59d1baf73158830c7c72",
+      "title": "This giant snail is the size of a croissant. Conservationists are banding together to save it from extinction",
+      "url": "https://www.goodgoodgood.co/articles/obo-giant-snail-endangered-species",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-07-02T17:00:00Z",
+      "source_excerpt": "The Obô Giant Snail is just one of many vulnerable species worth protecting in the “Galapagos of Africa.”",
+      "agent_summary": "",
+      "source_fingerprint": "db12fb82eab1700e898f",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a4698bd3aa81b24797c5b04_6a4698bcfa66bfaa7deb8368_obo-giant-snail-featured.webp",
+      "source_image_alt": "This giant snail is the size of a croissant. Conservationists are banding together to save it from extinction",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/obo-giant-snail-endangered-species",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/obo-giant-snail-endangered-species",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "source_tier_bonus": 2,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "conservation",
+        "together"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "e6ab936520421c01f62d",
+      "title": "Volunteers read aloud and play music for shelter pets amid fireworks on July 4th",
+      "url": "https://www.goodgoodgood.co/articles/reading-to-shelter-pets-on-july-4th-fireworks",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-07-01T16:48:00Z",
+      "source_excerpt": "Volunteers are gearing up for their sixth-annual “comfort sessions” at their local animal shelter.",
+      "agent_summary": "",
+      "source_fingerprint": "530f717066e612bd74e8",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a4543909bf39338390fabfa_reading-to-shelter-pets-on-july-4th-fireworks.jpg",
+      "source_image_alt": "Volunteers read aloud and play music for shelter pets amid fireworks on July 4th",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/reading-to-shelter-pets-on-july-4th-fireworks",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/reading-to-shelter-pets-on-july-4th-fireworks",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "source_tier_bonus": 2,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "play",
+        "volunteer"
+      ],
+      "public_eligible": true
     },
     {
       "id": "4dfcf68479bd517dccdb",
@@ -41,6 +298,14 @@
       "source_excerpt": "While enjoying a tour of Magnetic Island off the coast of Australia, the jet ski riders ended their outing early to help a turtle in need.",
       "agent_summary": "",
       "source_fingerprint": "2b9539162a770dbeabc7",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a3ebc6652cc38e78934347e_jetski-riders-save-sea-turtle-australia.jpg",
+      "source_image_alt": "Jet ski riders conduct rescue mission for sea turtle with 'bloody, peeling' infection on her shell",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/jetski-riders-save-sea-turtle-australia",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/jetski-riders-save-sea-turtle-australia",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
       "source_tier_bonus": 2,
       "positivity_score": 6,
       "positive_signals": [
@@ -60,6 +325,14 @@
       "source_excerpt": "The new hatchling, which will be named by the public, is the child of mother and father pancake tortoises Waffle and Maple.",
       "agent_summary": "",
       "source_fingerprint": "84c32865a61a64525826",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a32c0eca74cf5cabc8d2997_baby-pancake-tortoise-endangered.jpg",
+      "source_image_alt": "Conservationists celebrate birth of baby pancake tortoise, hope for one of the world's most endangered reptiles",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/baby-pancake-tortoise-endangered",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/baby-pancake-tortoise-endangered",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
       "source_tier_bonus": 2,
       "positivity_score": 6,
       "positive_signals": [
@@ -67,16 +340,7 @@
         "conservation",
         "hope"
       ],
-      "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/1975208a7e6ad125a4af-84c32865-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-abstract-v1",
-        "source_fingerprint": "84c32865a61a64525826",
-        "width": 1280,
-        "height": 848,
-        "sha256": "04a6d27b029abb0658fc7f1064b936b9992fabf4638c6343d5cd194931804b3a"
-      }
+      "public_eligible": true
     },
     {
       "id": "b634e8c36ed593bd94d7",
@@ -99,6 +363,25 @@
       "public_eligible": false
     },
     {
+      "id": "1b82a78f627942caa9fb",
+      "title": "The marginalised groups finding community through football",
+      "url": "https://www.positive.news/society/the-marginalised-groups-finding-community-through-football",
+      "source": "Positive News",
+      "language": "en",
+      "published_at": "2026-07-15T10:30:46Z",
+      "source_excerpt": "Shut out of the sport for generations, women, disabled players and minority groups are flooding into grassroots clubs The post The marginalised groups finding community through football appeared first on Positive News .",
+      "agent_summary": "",
+      "source_fingerprint": "6bcb3dbd26bb8f03da81",
+      "source_tier_bonus": 2,
+      "positivity_score": 5,
+      "positive_signals": [
+        "curated-positive-source",
+        "community",
+        "play"
+      ],
+      "public_eligible": false
+    },
+    {
       "id": "b633381743991714a6b4",
       "title": "Fishermen save 220-pound loggerhead sea turtle from strangling ropes",
       "url": "https://www.goodgoodgood.co/articles/sea-turtle-rescue-australia-strangled-ropes",
@@ -108,6 +391,14 @@
       "source_excerpt": "A daring sea turtle recovery mission in Australia was just the latest in a long list of sea turtle rescues.",
       "agent_summary": "",
       "source_fingerprint": "086701e752b53a7bf210",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a4e86e948f79324e24a87f6_6a4e86e81ddfaee5d5ebe468_sea-turtle-rescue-featured.webp",
+      "source_image_alt": "Fishermen save 220-pound loggerhead sea turtle from strangling ropes",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/sea-turtle-rescue-australia-strangled-ropes",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/sea-turtle-rescue-australia-strangled-ropes",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
       "source_tier_bonus": 2,
       "positivity_score": 5,
       "positive_signals": [
@@ -128,6 +419,14 @@
       "source_excerpt": "Indigenous lands are crucial for climate mitigation and resilience. Research shows their health is a direct result of Indigenous stewardship.",
       "agent_summary": "",
       "source_fingerprint": "ba75038e3a9563da2075",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a3e64c5f695acc59298f935_6a3e64c3c017d46bed8b175a_report-finds-indigenous-cultural-practices-climate-solution-featured.jpeg",
+      "source_image_alt": "Report finds Indigenous cultural practices are a climate solution",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/report-finds-indigenous-cultural-practices-climate-solution",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/report-finds-indigenous-cultural-practices-climate-solution",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
       "source_tier_bonus": 2,
       "positivity_score": 5,
       "positive_signals": [
@@ -147,6 +446,14 @@
       "source_excerpt": "Bowser, a 172-pound loggerhead sea turtle, was rescued from the Navarre Beach Fishing Pier recently. The operation was one of a growing number of rescues in areas where sea turtles and humans overlap.",
       "agent_summary": "",
       "source_fingerprint": "800968ed974d32314890",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a3260a480d91ed1fb1b5985_a-massive-volunteer-network-in-florida-works-to-save-endangered-sea-turtles-01.jpg",
+      "source_image_alt": "172-pound loggerhead turtle with four fishing hooks in his body given second chance by volunteers",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/loggerhead-turtle-rescue-navarre-beach",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/loggerhead-turtle-rescue-navarre-beach",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
       "source_tier_bonus": 2,
       "positivity_score": 5,
       "positive_signals": [
@@ -166,6 +473,14 @@
       "source_excerpt": "Kraken, a green sea turtle, is in recovery after a harrowing boat strike in Abu Dhabi.",
       "agent_summary": "",
       "source_fingerprint": "5fc057df27cbb0188d46",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a316fcee8a916278bc2baf9_kraken-missing-flipper.jpg",
+      "source_image_alt": "This sea turtle was rescued with a missing flipper and a crushed shell. A special procedure saved his life",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/green-sea-turtle-kraken-boat-propeller-injury",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/green-sea-turtle-kraken-boat-propeller-injury",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
       "source_tier_bonus": 2,
       "positivity_score": 5,
       "positive_signals": [
@@ -185,6 +500,14 @@
       "source_excerpt": "New York City’s $67.5 million investment in preschoolers comes as families and advocates worry federal changes could make special education services even harder to access.",
       "agent_summary": "",
       "source_fingerprint": "394304400a7a59b01149",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a57bf082e1bfa541571b6dd_the-nations-largest-school-system-is-expanding-01.jpg",
+      "source_image_alt": "Mamdani, NYC public schools invest $67.5M in special education amid federal budget cuts",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/new-york-city-special-education-expansion",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/new-york-city-special-education-expansion",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
       "source_tier_bonus": 2,
       "positivity_score": 4,
       "positive_signals": [
@@ -222,24 +545,6 @@
       }
     },
     {
-      "id": "1b82a78f627942caa9fb",
-      "title": "The marginalised groups finding community through football",
-      "url": "https://www.positive.news/society/the-marginalised-groups-finding-community-through-football",
-      "source": "Positive News",
-      "language": "en",
-      "published_at": "2026-07-15T10:30:46Z",
-      "source_excerpt": "Shut out of the sport for generations, women, disabled players and minority groups are flooding into grassroots clubs The post The marginalised groups finding community through football appeared first on Positive News .",
-      "agent_summary": "",
-      "source_fingerprint": "6bcb3dbd26bb8f03da81",
-      "source_tier_bonus": 2,
-      "positivity_score": 4,
-      "positive_signals": [
-        "curated-positive-source",
-        "community"
-      ],
-      "public_eligible": false
-    },
-    {
       "id": "0363d6f192a42626ecc3",
       "title": "Nepal's young birdwatchers are becoming conservationists one sighting at a time",
       "url": "https://www.goodgoodgood.co/articles/nepal-birdwatching-conservation-tourism",
@@ -249,6 +554,14 @@
       "source_excerpt": "Nepal is home to more than 900 bird species, of which 40 are globally threatened and 172 are nationally threatened.",
       "agent_summary": "",
       "source_fingerprint": "77ed3d2e5fcd0de770e6",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a500b3d7b100dfdcbb5a375_6a500b3c11069efd64dc8c78_nepal-birdwatching-conservation-tourism-featured.webp",
+      "source_image_alt": "Nepal's young birdwatchers are becoming conservationists one sighting at a time",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/nepal-birdwatching-conservation-tourism",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/nepal-birdwatching-conservation-tourism",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
       "source_tier_bonus": 2,
       "positivity_score": 4,
       "positive_signals": [
@@ -277,20 +590,29 @@
       "public_eligible": false
     },
     {
-      "id": "600742420eb388aab0d9",
-      "title": "Utah revokes license of teen treatment center criticized by Paris Hilton",
-      "url": "https://www.goodgoodgood.co/articles/utah-revokes-springville-license-teen-treatment-center-paris-hilton",
+      "id": "33a5842289a9fd4ef5e1",
+      "title": "This champion soccer team teaches fans about climate change and DEI. They've sold out every game",
+      "url": "https://www.goodgoodgood.co/articles/vermont-green-fc-eco-friendly-soccer-team",
       "source": "Good Good Good",
       "language": "en",
-      "published_at": "2026-07-08T18:01:00Z",
-      "source_excerpt": "The Provo Canyon School’s Springville campus is closing, but the Provo campus is keeping its license under new conditions.",
+      "published_at": "2026-07-07T19:10:00Z",
+      "source_excerpt": "Vermont Green FC has sold out stadiums and built a devoted fan base around an ambitious goal: becoming a climate-friendly, socially progressive soccer club.",
       "agent_summary": "",
-      "source_fingerprint": "46d2e6a868954e7ba815",
+      "source_fingerprint": "32d2defa5fdc6b12d5bf",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a4bf2040e3f2b5f92acb75c_6a4bf2020e3f2b5f92acb618_vermont-green-fc-eco-friendly-soccer-team-featured.webp",
+      "source_image_alt": "This champion soccer team teaches fans about climate change and DEI. They've sold out every game",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/vermont-green-fc-eco-friendly-soccer-team",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/vermont-green-fc-eco-friendly-soccer-team",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
       "source_tier_bonus": 2,
       "positivity_score": 4,
       "positive_signals": [
         "curated-positive-source",
-        "treatment"
+        "friend",
+        "progress"
       ],
       "public_eligible": false
     },
@@ -304,6 +626,14 @@
       "source_excerpt": "Young people are facing a future shaped by climate anxiety, political extremism, economic instability, and chronic loneliness. But that's only part of the story.",
       "agent_summary": "",
       "source_fingerprint": "29768a1b34927b265661",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a3ee18e1b74294bf3636dae_1455-young-poets-anthology.jpg",
+      "source_image_alt": "I spent 6 months reading hundreds of poems written by teens. I was shocked to discover that they are full of hope",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/1455-young-poets-anthology",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/1455-young-poets-anthology",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
       "source_tier_bonus": 2,
       "positivity_score": 4,
       "positive_signals": [
@@ -313,65 +643,20 @@
       "public_eligible": false
     },
     {
-      "id": "59d1baf73158830c7c72",
-      "title": "This giant snail is the size of a croissant. Conservationists are banding together to save it from extinction",
-      "url": "https://www.goodgoodgood.co/articles/obo-giant-snail-endangered-species",
-      "source": "Good Good Good",
+      "id": "a565cea889b4c1b9f390",
+      "title": "The City That Chose Beauty Over Billboards",
+      "url": "https://reasonstobecheerful.world/grenoble-beauty-over-billboards",
+      "source": "Reasons to be Cheerful",
       "language": "en",
-      "published_at": "2026-07-02T17:00:00Z",
-      "source_excerpt": "The Obô Giant Snail is just one of many vulnerable species worth protecting in the “Galapagos of Africa.”",
+      "published_at": "2026-07-13T08:00:40Z",
+      "source_excerpt": "“There used to be a massive block of concrete here, there was an advertising column, it wasn’t so beautiful,” says Gilles Namur, waving his hand along the length of Cours Lafontaine, a street that runs through the historic center of Grenoble. Today, it’s a different sight altogether. The street has... The post The City That Chose Beauty Over Billboards appeared first on Reasons to be Cheerful .",
       "agent_summary": "",
-      "source_fingerprint": "db12fb82eab1700e898f",
+      "source_fingerprint": "465e0f7a830b5a3031b8",
       "source_tier_bonus": 2,
-      "positivity_score": 4,
+      "positivity_score": 3,
       "positive_signals": [
         "curated-positive-source",
-        "conservation"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "e6ab936520421c01f62d",
-      "title": "Volunteers read aloud and play music for shelter pets amid fireworks on July 4th",
-      "url": "https://www.goodgoodgood.co/articles/reading-to-shelter-pets-on-july-4th-fireworks",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-07-01T16:48:00Z",
-      "source_excerpt": "Volunteers are gearing up for their sixth-annual “comfort sessions” at their local animal shelter.",
-      "agent_summary": "",
-      "source_fingerprint": "530f717066e612bd74e8",
-      "source_tier_bonus": 2,
-      "positivity_score": 4,
-      "positive_signals": [
-        "curated-positive-source",
-        "volunteer"
-      ],
-      "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/e6ab936520421c01f62d-530f7170-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-abstract-v1",
-        "source_fingerprint": "530f717066e612bd74e8",
-        "width": 1280,
-        "height": 848,
-        "sha256": "d8e957f5353182d55049b9d22f028cd3fcae287f2a0c5df162050a152b83bf29"
-      }
-    },
-    {
-      "id": "f9cdb3027dff30cc08c9",
-      "title": "Virginia fishermen fight 20 mph winds to rescue 700-pound leatherback from crab trap: 'I've never seen a turtle in distress like that'",
-      "url": "https://www.goodgoodgood.co/articles/leatherback-sea-turtle-rescue-crab-trap",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-07-01T16:12:00Z",
-      "source_excerpt": "Three fishermen were cruising for fish in the Chesapeake Bay when they came across the biggest sea turtle species in the world.",
-      "agent_summary": "",
-      "source_fingerprint": "60fcb72993c7dc477164",
-      "source_tier_bonus": 2,
-      "positivity_score": 4,
-      "positive_signals": [
-        "curated-positive-source",
-        "rescue"
+        "together"
       ],
       "public_eligible": false
     },
@@ -390,6 +675,42 @@
       "positive_signals": [
         "curated-positive-source",
         "research"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "793f8f03b8f4a4faa4c2",
+      "title": "The national dance company opening doors for young performers",
+      "url": "https://www.positive.news/lifestyle/arts/the-national-dance-company-opening-doors-for-young-performers",
+      "source": "Positive News",
+      "language": "en",
+      "published_at": "2026-07-06T05:00:00Z",
+      "source_excerpt": "A national youth dance programme is bringing together 16–24-year-olds from across England to perform on major stages The post The national dance company opening doors for young performers appeared first on Positive News .",
+      "agent_summary": "",
+      "source_fingerprint": "c79e555e6b904b8cda59",
+      "source_tier_bonus": 2,
+      "positivity_score": 3,
+      "positive_signals": [
+        "curated-positive-source",
+        "together"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "b0a0755793758f53667f",
+      "title": "In It for the Long Haul",
+      "url": "https://reasonstobecheerful.world/americas-250th-birthday-reader-responses",
+      "source": "Reasons to be Cheerful",
+      "language": "en",
+      "published_at": "2026-07-03T08:00:24Z",
+      "source_excerpt": "As the United States celebrates its 250th birthday this weekend, many of its residents can sense the big, ideologically divided elephant in the room. But while the country reckons with its national identity, on a local level, Americans continue to come together in ways that transcend politics, as they have... The post In It for the Long Haul appeared first on Reasons to be Cheerful .",
+      "agent_summary": "",
+      "source_fingerprint": "651d312b985c7a147845",
+      "source_tier_bonus": 2,
+      "positivity_score": 3,
+      "positive_signals": [
+        "curated-positive-source",
+        "together"
       ],
       "public_eligible": false
     },
@@ -482,6 +803,32 @@
         "science"
       ],
       "public_eligible": false
+    },
+    {
+      "id": "3243141d4530035d173c",
+      "title": "New guidance offers hope for reducing the global toll of dementia",
+      "url": "https://news.un.org/feed/view/en/story/2026/07/1167948",
+      "source": "UN News",
+      "language": "en",
+      "published_at": "2026-07-15T12:00:00Z",
+      "source_excerpt": "The World Health Organization (WHO) has issued updated global guidelines aimed at reducing the risk of cognitive decline and dementia, saying that up to 45 per cent of cases may be preventable or delayed by addressing modifiable risk factors throughout life.",
+      "agent_summary": "",
+      "source_fingerprint": "688f76b4f22554ef2cdd",
+      "source_tier_bonus": 0,
+      "positivity_score": 2,
+      "positive_signals": [
+        "hope"
+      ],
+      "public_eligible": true,
+      "generated_image": {
+        "url": "/news-images/generated/3243141d4530035d173c-688f76b4-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-abstract-v1",
+        "source_fingerprint": "688f76b4f22554ef2cdd",
+        "width": 1280,
+        "height": 848,
+        "sha256": "18a131b68fa501e91f971b412a91db2a75e1d330db8e9b04b18ede525a0c3d87"
+      }
     }
   ]
 }

@@ -47,6 +47,19 @@ class FreeArticleVisualTests(unittest.TestCase):
             self.assertEqual(visuals.process(news, root / "images"), (0, 0, 1))
             self.assertFalse(list((root / "images").glob("*.svg")))
 
+    def test_source_backed_article_does_not_get_an_illustration(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            article = self.article()
+            article["source_image_verified"] = True
+            article["generated_image"] = {"stale": True}
+            news = root / "news.json"
+            news.write_text(json.dumps({"items": [article]}), encoding="utf-8")
+            self.assertEqual(visuals.process(news, root / "images"), (0, 0, 1))
+            saved = json.loads(news.read_text(encoding="utf-8"))["items"][0]
+            self.assertNotIn("generated_image", saved)
+            self.assertFalse(list((root / "images").glob("*.svg")))
+
     def test_rejects_invalid_source_identity(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)

@@ -1,4 +1,4 @@
-import type { NewsArticle, NewsImage, RawAiNewsImage, RawFetchedNews, RawGeneratedNewsImage, RawSeedNews } from '../types'
+import type { NewsArticle, NewsImage, NewsVideo, RawAiNewsImage, RawFetchedNews, RawGeneratedNewsImage, RawSeedNews, RawSourceNewsVideo } from '../types'
 
 const aiCategoryImages: Record<string, { url: string; alt: string }> = {
   Hälsa: { url: '/news-images/ai/health.webp', alt: 'Redaktionell AI-illustration om hälsa, omsorg och återhämtning.' },
@@ -28,6 +28,35 @@ function safeHttpsUrl(value = ''): string {
     const parsed = new URL(value)
     return parsed.protocol === 'https:' && !parsed.username && !parsed.password ? parsed.href : ''
   } catch { return '' }
+}
+
+function resolveSourceVideo(video?: RawSourceNewsVideo): NewsVideo | undefined {
+  if (!video || !['youtube', 'dailymotion'].includes(video.provider)) return undefined
+  const embedUrl = safeHttpsUrl(video.embed_url)
+  const sourceUrl = safeHttpsUrl(video.source_url)
+  try {
+    const embed = new URL(embedUrl)
+    const source = new URL(sourceUrl)
+    const validYouTube = video.provider === 'youtube'
+      && /^[A-Za-z0-9_-]{11}$/.test(video.video_id)
+      && embed.hostname === 'www.youtube-nocookie.com'
+      && embed.pathname === `/embed/${video.video_id}`
+      && ['youtube.com', 'www.youtube.com', 'youtu.be'].includes(source.hostname)
+    const validDailymotion = video.provider === 'dailymotion'
+      && /^x[a-z0-9]+$/.test(video.video_id)
+      && embed.hostname === 'geo.dailymotion.com'
+      && embed.pathname === '/player.html'
+      && embed.searchParams.get('video') === video.video_id
+      && source.hostname === 'www.dailymotion.com'
+    if (!validYouTube && !validDailymotion) return undefined
+  } catch { return undefined }
+  return {
+    provider: video.provider,
+    videoId: video.video_id,
+    embedUrl,
+    sourceUrl,
+    title: video.title?.trim() || 'Video från källan',
+  }
 }
 
 export function getAiCategoryImage(category: string): NewsImage {
@@ -129,6 +158,7 @@ export function resolveNewsImage(item: RawImageFields, category: string): NewsIm
 }
 
 const categoryWords: Record<string, string[]> = {
+  Djur: ['animal', 'bird', 'cat', 'dog', 'kitten', 'leopard', 'otter', 'pangolin', 'pet', 'puppy', 'turtle', 'wildlife'],
   Hälsa: ['health', 'medical', 'vaccine', 'malaria', 'care', 'brain', 'stroke', 'hospital', 'dementia'],
   Miljö: ['climate', 'energy', 'solar', 'carbon', 'air', 'water', 'plastic', 'environment'],
   Natur: ['nature', 'wildlife', 'forest', 'ocean', 'bird', 'species', 'restoration', 'biodiversity'],
@@ -165,7 +195,7 @@ export function normalizeFetched(item: RawFetchedNews): NewsArticle {
   const agentSummary = item.agent_summary?.trim() || ''
   const excerpt = agentSummary || item.source_excerpt?.trim() || 'Kort källnotis utan sammanfattning.'
   const language = item.language || 'en'
-  const category = inferCategory(item)
+  const category = item.category?.trim() || inferCategory(item)
   return {
     id: item.id,
     slug: `${slugify(item.title)}-${item.id.slice(0, 6)}`,
@@ -185,6 +215,7 @@ export function normalizeFetched(item: RawFetchedNews): NewsArticle {
     score: item.positivity_score || 0,
     signals: item.positive_signals || [],
     publicEligible: typeof item.public_eligible === 'boolean' ? item.public_eligible : undefined,
+    video: resolveSourceVideo(item.source_video),
     ...resolveNewsImages(item, category),
   }
 }
@@ -213,9 +244,9 @@ export function normalizeSeed(item: RawSeedNews): NewsArticle {
   }
 }
 
-const sensitiveCandidate = /\b(?:abandon(?:ed|ment)?|abuse|anxiety|assault|backlash|blood|bloody|bomb|chronic loneliness|closing|conflict|criticiz(?:e|ed|es|ing)|crush(?:ed|ing)?|death|desperat(?:e|ely)|distress(?:ed|ing)?|earthquake|extinct(?:ion)?|extremism|fraud|harass(?:ment|ed|ing)?|harrowing|hooks? in|injur(?:ed|y|ies)|killed|loathe|mangled|missing flipper|murder|onlyfans|revok(?:e|ed|es|ing)|shooting|shocked|stranded|strangl(?:e|ed|es|ing)|stroke|terror|threaten(?:ed|ing)?|traffick(?:ing|ed)?|trap(?:ped)?|treatment center|unable to move|violence|war)\b/i
+const sensitiveCandidate = /\b(?:abandon(?:ed|ment)?|abuse|anxiety|assault|backlash|blood|bloody|bomb|chronic loneliness|closing|conflict|criticiz(?:e|ed|es|ing)|crush(?:ed|ing)?|death|desperat(?:e|ely)|distress(?:ed|ing)?|earthquake|extinct(?:ion)?|extremism|fraud|gasp(?:ing)?|harass(?:ment|ed|ing)?|harrowing|hooks? in|injur(?:ed|y|ies)|killed|loathe|locked away|lost (?:a |both |back )?legs?|mange|mangled|missing flipper|murder|onlyfans|revok(?:e|ed|es|ing)|scared|shooting|shocked|sick|stranded|strangl(?:e|ed|es|ing)|stroke|stuck in|terror|terrified|threaten(?:ed|ing)?|traffick(?:ing|ed)?|trap(?:ped)?|traumatized|treatment center|unable to move|violence|war)\b/i
 const feedNoise = /\b(?:appeared first on|share the stories)\b/i
-const positiveCandidate = /\b(?:achiev(?:e|ed|ement)|award(?:ed|s)?|birth|breakthrough|celebrat(?:e|ed|es|ing|ion)|conservation(?:ist|ists)?|discov(?:er|ered|ery)|free(?:d|ing)?|help(?:s|ed|ing)?|hope(?:ful)?|improv(?:e|ed|ement)|milestone|protect(?:s|ed|ing|ion)?|recover(?:ed|y)|rescu(?:e|ed|es|ing)|restor(?:e|ed|es|ing|ation)|save(?:d|s|ing)?|second chance|smooth(?:er|est)|solv(?:e|ed|es|ing)|success(?:ful)?|volunteer(?:s|ed|ing)?|win(?:s|ning)?)\b/i
+const positiveCandidate = /\b(?:achiev(?:e|ed|ement)|adopt(?:ed|ion)?|adorable|award(?:ed|s)?|best friend|birth|breakthrough|celebrat(?:e|ed|es|ing|ion)|conservation(?:ist|ists)?|cuddl(?:e|ed|es|ing|y)|discov(?:er|ered|ery)|free(?:d|ing)?|friend(?:s|ship)?|help(?:s|ed|ing)?|hope(?:ful)?|improv(?:e|ed|ement)|kitten(?:s)?|lov(?:e|ed|es|ing)|milestone|play(?:s|ed|ing|ful)?|priceless|protect(?:s|ed|ing|ion)?|pupp(?:y|ies)|recover(?:ed|y)|rescu(?:e|ed|es|ing)|restor(?:e|ed|es|ing|ation)|save(?:d|s|ing)?|second chance|smooth(?:er|est)|solv(?:e|ed|es|ing)|spoil(?:s|ed|ing)?|success(?:ful)?|surpris(?:e|ed|es|ing)|together|treat(?:s|ed|ing)?|volunteer(?:s|ed|ing)?|win(?:s|ning)?)\b/i
 
 export function isSuitableForPublicFeed(article: NewsArticle): boolean {
   if (article.origin === 'demo') return true

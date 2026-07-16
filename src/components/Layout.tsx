@@ -7,6 +7,7 @@ import { NewsletterForm } from './NewsletterForm'
 
 const nav = [
   ['Nyheter', '/'],
+  ['Djur', '/sok?kategori=Djur'],
   ['Sök', '/sok'],
   ['Forum', '/forum'],
   ['Om Ljusglimt', '/om'],
@@ -55,7 +56,7 @@ export function Layout({ children }: { children: ReactNode }) {
       <header className="site-header">
         <div className="header-container">
           <Link to="/" className="brand" aria-label="Ljusglimt startsida"><span className="brand-sun">☀</span><span>Ljusglimt<small>NYHETER SOM GER PERSPEKTIV</small></span></Link>
-          <nav className="desktop-nav" aria-label="Huvudmeny">{nav.map(([label, href]) => <NavLink key={href} to={href} end={href === '/'}>{label}</NavLink>)}</nav>
+          <nav className="desktop-nav" aria-label="Huvudmeny">{nav.map(([label, href]) => label === 'Djur' ? <Link key={href} to={href}>{label}</Link> : <NavLink key={href} to={href} end={href === '/'}>{label}</NavLink>)}</nav>
           <div className="header-actions">
             <GlobeMenu />
             <form className="header-search" onSubmit={(e) => { e.preventDefault(); navigate(`/sok?q=${encodeURIComponent(search)}`) }}><Search size={17} /><input aria-label="Sök" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Sök" /></form>
@@ -63,13 +64,13 @@ export function Layout({ children }: { children: ReactNode }) {
             <button type="button" className="mobile-menu-button" onClick={() => setMenuPath(menuOpen ? null : pathname)} aria-expanded={menuOpen} aria-label={menuOpen ? 'Stäng meny' : 'Öppna meny'}>{menuOpen ? <X /> : <Menu />}</button>
           </div>
         </div>
-        <AnimatePresence>{menuOpen && <motion.nav className="mobile-nav" aria-label="Mobilmeny" initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }}>{nav.map(([label, href]) => <NavLink key={href} to={href} onClick={() => setMenuPath(null)}>{label}</NavLink>)}<Link to="/profil" onClick={() => setMenuPath(null)}>{user?.name || 'Logga in'}</Link></motion.nav>}</AnimatePresence>
+        <AnimatePresence>{menuOpen && <motion.nav className="mobile-nav" aria-label="Mobilmeny" initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }}>{nav.map(([label, href]) => label === 'Djur' ? <Link key={href} to={href} onClick={() => setMenuPath(null)}>{label}</Link> : <NavLink key={href} to={href} onClick={() => setMenuPath(null)}>{label}</NavLink>)}<Link to="/profil" onClick={() => setMenuPath(null)}>{user?.name || 'Logga in'}</Link></motion.nav>}</AnimatePresence>
       </header>
       <main id="main" tabIndex={-1}>{children}</main>
       <footer className="site-footer">
         <div className="footer-main page-wrap">
           <div><Link to="/" className="brand footer-brand"><span className="brand-sun">☀</span><span>Ljusglimt</span></Link><p>En varsamt formgiven samling av positiva nyheter, tydliga källor och konstruktiva samtal.</p></div>
-          <div><h2>Utforska</h2><Link to="/">Nyheter</Link><Link to="/sok">Sök och filtrera</Link><Link to="/forum">Forum</Link></div>
+          <div><h2>Utforska</h2><Link to="/">Nyheter</Link><Link to="/sok?kategori=Djur">Djur</Link><Link to="/sok">Sök och filtrera</Link><Link to="/forum">Forum</Link></div>
           <div><h2>Transparens</h2><Link to="/om">Om och metod</Link><Link to="/om#kallor">Källor och märkning</Link><Link to="/profil">Mitt konto</Link></div>
           <div><h2>Nyhetsbrev · kommer snart</h2><p>Testa formuläret. Adressen sparas inte ännu.</p><NewsletterForm compact /></div>
         </div>

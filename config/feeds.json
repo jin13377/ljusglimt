@@ -22,6 +22,36 @@
       "language": "en",
       "base_score": 2,
       "max_items": 14,
+      "image_policy": {
+        "enabled": true,
+        "mode": "feed-thumbnail",
+        "allowed_article_hosts": ["www.goodgoodgood.co"],
+        "allowed_image_hosts": ["cdn.prod.website-files.com"],
+        "credit": "Good Good Good"
+      },
+      "enabled": true
+    },
+    {
+      "name": "The Dodo",
+      "url": "https://api.dailymotion.com/user/thedodosite/videos?fields=id,title,description,thumbnail_720_url,url,created_time&limit=16&sort=recent",
+      "format": "dailymotion-json",
+      "language": "en",
+      "category": "Djur",
+      "base_score": 4,
+      "max_items": 8,
+      "require_source_image": true,
+      "require_video": true,
+      "image_policy": {
+        "enabled": true,
+        "mode": "feed-thumbnail",
+        "allowed_article_hosts": ["www.dailymotion.com"],
+        "allowed_image_hosts": ["s1.dmcdn.net", "s2.dmcdn.net", "s3.dmcdn.net", "s4.dmcdn.net"],
+        "credit": "The Dodo"
+      },
+      "video_policy": {
+        "enabled": true,
+        "provider": "dailymotion"
+      },
       "enabled": true
     },
     {
@@ -52,12 +82,13 @@
     "education", "hope", "improves", "innovation", "milestone", "progress",
     "recovery", "renewable", "rescue", "solution", "success", "volunteer",
     "research", "science", "mission", "technology", "restoration", "treatment",
+    "adopted", "adorable", "best friend", "cuddle", "friend", "kitten", "love", "play", "priceless", "puppy", "spoiling", "surprise", "together", "treat",
     "återhämtning", "framsteg", "glädje", "hjälper", "innovation", "lösning",
     "räddad", "rekord", "samarbete", "upptäckt"
   ],
   "blocked_keywords": [
     "abuse", "assault", "bomb", "death", "earthquake", "fraud", "killed",
-    "abandoned", "conflict", "harassment", "injured", "mangled", "murder", "onlyfans", "shooting", "stroke", "trafficking",
+    "abandoned", "conflict", "gasping", "harassment", "injured", "locked away", "lost back legs", "mange", "mangled", "murder", "onlyfans", "scared", "shooting", "sick", "stroke", "stuck in", "terrified", "trafficking", "traumatized",
     "terror", "violence", "war", "övergrepp", "bomb", "död",
     "jordbävning", "krig", "mord", "skjutning", "terror"
   ],

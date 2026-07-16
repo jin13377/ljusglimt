@@ -262,3 +262,55 @@ button:disabled { cursor: wait; opacity: .65; transform: none !important; }
   .news-card.search .news-card-body > p { display: none; }
   .news-card.search footer > span { display: none; }
 }
+
+/* Source-backed animal stories and video */
+.animal-section { position: relative; overflow: hidden; border-block: 1px solid #dbe8de; background: radial-gradient(circle at 88% 12%,rgba(244,194,86,.22),transparent 29%),linear-gradient(135deg,#f4f8f2,#e7f1e9); }
+.animal-section::before { content: ''; position: absolute; width: 340px; height: 340px; left: -190px; bottom: -210px; border: 1px solid rgba(23,104,79,.13); border-radius: 50%; }
+.animal-section .page-wrap { position: relative; }
+.animal-showcase { display: grid; grid-template-columns: minmax(0,1.28fr) minmax(330px,.72fr); gap: 22px; align-items: stretch; }
+.animal-feature,.animal-feature > .news-card { height: 100%; }
+.animal-feature .news-card.lead { display: flex; flex-direction: column; }
+.animal-feature .news-card-body { flex: 1; }
+.animal-rail { display: grid; gap: 14px; }
+.animal-rail .news-card.compact { display: grid; grid-template-columns: 158px minmax(0,1fr); min-height: 0; }
+.animal-rail .news-card-art,.animal-rail .news-visual { height: 100%; min-height: 0; }
+.animal-rail .news-visual { aspect-ratio: auto; }
+.animal-rail .news-card-body { padding: 16px; }
+.animal-rail .news-card h3 { margin-block: 8px 6px; font-size: 21px; }
+.animal-rail .news-card-body > p { display: none; }
+.animal-rail .card-image-credit { display: none; }
+.animal-rail .news-card footer { margin-top: 8px; padding-top: 9px; }
+.video-pill { position: absolute; top: 13px; right: 13px; display: inline-flex; align-items: center; gap: 5px; padding: 6px 9px; border: 1px solid rgba(255,255,255,.55); border-radius: 999px; background: rgba(12,43,34,.86); color: white; backdrop-filter: blur(8px); font-size: 9px; font-weight: 850; letter-spacing: .04em; text-transform: uppercase; }
+
+.source-video { margin-block: 45px; }
+.source-video > header { display: flex; align-items: flex-end; justify-content: space-between; gap: 25px; margin-bottom: 16px; }
+.source-video h2 { margin-top: 7px; font-size: clamp(30px,3.2vw,43px); }
+.source-video > header > a { display: inline-flex; align-items: center; gap: 6px; flex: 0 0 auto; color: var(--green); font-size: 12px; font-weight: 800; text-decoration: underline; text-underline-offset: 3px; }
+.source-video-frame { position: relative; aspect-ratio: 16/9; overflow: hidden; border-radius: 24px; background: #0d2b23; box-shadow: var(--shadow); }
+.source-video-frame iframe { width: 100%; height: 100%; border: 0; }
+.source-video-poster { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: #0d2b23; cursor: pointer; }
+.source-video-poster::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg,rgba(9,35,28,.04),rgba(9,35,28,.44)); }
+.source-video-poster img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .35s ease; }
+.source-video-poster:hover img { transform: scale(1.025); }
+.source-video-poster span { position: absolute; z-index: 1; left: 50%; top: 50%; display: inline-flex; align-items: center; gap: 10px; transform: translate(-50%,-50%); padding: 14px 20px; border-radius: 999px; background: rgba(255,253,248,.94); color: var(--ink); box-shadow: 0 12px 38px rgba(8,28,22,.25); font-weight: 850; white-space: nowrap; }
+.source-video-poster span svg { width: 22px; height: 22px; color: var(--green); }
+.source-video > p { margin: 9px 2px 0; color: var(--muted); font-size: 10px; }
+
+@media (max-width: 900px) {
+  .animal-showcase { grid-template-columns: 1fr; }
+  .animal-rail { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .animal-rail .news-card.compact { display: flex; flex-direction: column; }
+  .animal-rail .news-card-art,.animal-rail .news-visual { height: auto; }
+  .animal-rail .news-visual { aspect-ratio: 16/10; }
+}
+
+@media (max-width: 760px) {
+  .animal-rail { grid-template-columns: 1fr; }
+  .animal-rail .news-card.compact { display: grid; grid-template-columns: 112px minmax(0,1fr); }
+  .animal-rail .news-card-art,.animal-rail .news-visual { height: 100%; }
+  .animal-rail .news-visual { aspect-ratio: auto; }
+  .source-video { margin-block: 34px; }
+  .source-video > header { align-items: flex-start; flex-direction: column; gap: 10px; }
+  .source-video-frame { border-radius: 18px; }
+  .source-video-poster span { padding: 12px 16px; }
+}

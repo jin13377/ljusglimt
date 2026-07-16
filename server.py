@@ -521,7 +521,7 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header("X-Frame-Options", "DENY")
         self.send_header("Permissions-Policy", "camera=(), microphone=(), geolocation=()")
         self.send_header("Cross-Origin-Opener-Policy", "same-origin-allow-popups")
-        self.send_header("Content-Security-Policy", "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self' https://accounts.google.com; style-src 'self' 'unsafe-inline' https://accounts.google.com; frame-src https://accounts.google.com; connect-src 'self' https://accounts.google.com https://oauth2.googleapis.com; img-src 'self' data: https:")
+        self.send_header("Content-Security-Policy", "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self' https://accounts.google.com; style-src 'self' 'unsafe-inline' https://accounts.google.com; frame-src https://accounts.google.com https://www.youtube-nocookie.com https://geo.dailymotion.com; connect-src 'self' https://accounts.google.com https://oauth2.googleapis.com; img-src 'self' data: https:")
         self.send_header("Cache-Control", extra.pop(
             "Cache-Control", "no-store" if self.path.startswith("/api/") else "no-cache"
         ))

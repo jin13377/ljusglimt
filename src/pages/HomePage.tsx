@@ -1,4 +1,4 @@
-import { ArrowRight, Atom, Clock3, Database, HeartPulse, Leaf, Lightbulb, Newspaper, Palette, Quote, RefreshCw, ShieldCheck, Sparkles, Trees, Users } from 'lucide-react'
+import { ArrowRight, Atom, Clock3, Database, HeartPulse, Leaf, Lightbulb, Newspaper, Palette, PawPrint, Quote, RefreshCw, ShieldCheck, Sparkles, Trees, Users } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { Link, useNavigate } from 'react-router-dom'
 import { NewsCard, OriginBadge } from '../components/NewsCard'
@@ -17,7 +17,8 @@ export function HomePage() {
   const fetched = data.articles.filter((item) => item.origin === 'fetched')
   const hero = demos.find((item) => item.featured) || demos[0]
   const demoHighlights = demos.filter((item) => item.id !== hero?.id).slice(0, 3)
-  const fetchedHighlights = fetched.slice(0, 6)
+  const animalStories = fetched.filter((item) => item.category === 'Djur' && item.image.kind === 'source').slice(0, 4)
+  const fetchedHighlights = fetched.filter((item) => item.category !== 'Djur').slice(0, 6)
 
   const save = async (article: NewsArticle) => {
     if (await toggle(article) === 'login') navigate(`/profil?next=${encodeURIComponent('/')}`)
@@ -58,6 +59,14 @@ export function HomePage() {
       <div className="news-grid editorial-news-grid">{fetchedHighlights.map((article, index) => <NewsCard key={article.id} article={article} variant={homeCardVariant(index)} onSave={save} saved={isSaved(article.id)} />)}</div>
     </div></section>}
 
+    {animalStories.length > 0 && <section className="section animal-section" id="djur"><div className="page-wrap">
+      <header className="section-header"><div><span className="eyebrow">Djur som gör en glad</span><h2>Söta möten, vänskap och nya hem</h2><p>Här visar vi bara nyheter med en riktig bild från källans eget flöde. När källan erbjuder video kan du spela den direkt på nyhetssidan.</p></div><Link to="/sok?kategori=Djur">Se alla djurnyheter <ArrowRight size={16} /></Link></header>
+      <div className="animal-showcase">
+        <div className="animal-feature"><NewsCard article={animalStories[0]} variant="lead" onSave={save} saved={isSaved(animalStories[0].id)} /></div>
+        {animalStories.length > 1 && <div className="animal-rail">{animalStories.slice(1).map((article) => <NewsCard key={article.id} article={article} variant="compact" onSave={save} saved={isSaved(article.id)} />)}</div>}
+      </div>
+    </div></section>}
+
     <CategoryCompass />
 
     <section className="problem-solution page-wrap"><div><span className="eyebrow">Varför Ljusglimt?</span><h2>När flödet känns tungt behövs inte mindre verklighet – utan mer perspektiv.</h2></div><div><p>Många nyhetsflöden prioriterar konflikt och dramatik. Det kan göra verkliga framsteg svåra att upptäcka.</p><p className="solution"><Sparkles /> Ljusglimt samlar konstruktiva källnotiser på en lugn plats, visar deras ursprung och låter dig öppna källan direkt.</p></div></section>
@@ -83,7 +92,7 @@ function homeCardVariant(index: number): 'lead' | 'standard' | 'compact' | 'text
 }
 
 function CategoryCompass() {
-  const items = [{ name: 'Miljö', icon: Leaf }, { name: 'Natur', icon: Trees }, { name: 'Hälsa', icon: HeartPulse }, { name: 'Vetenskap', icon: Atom }, { name: 'Människor', icon: Users }, { name: 'Kultur', icon: Palette }, { name: 'Framsteg', icon: Lightbulb }]
+  const items = [{ name: 'Djur', icon: PawPrint }, { name: 'Miljö', icon: Leaf }, { name: 'Natur', icon: Trees }, { name: 'Hälsa', icon: HeartPulse }, { name: 'Vetenskap', icon: Atom }, { name: 'Människor', icon: Users }, { name: 'Kultur', icon: Palette }, { name: 'Framsteg', icon: Lightbulb }]
   return <section className="compass-section page-wrap"><header><span className="eyebrow">Kategorikompass</span><h2>Vad vill du bli hoppfull om?</h2></header><div className="compass-grid">{items.map(({ name, icon: Icon }) => <Link key={name} to={`/sok?kategori=${encodeURIComponent(name)}`}><Icon /><span>{name}</span><ArrowRight /></Link>)}</div></section>
 }
 
