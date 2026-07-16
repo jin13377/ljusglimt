@@ -1,4 +1,4 @@
-import { Bookmark, ExternalLink, MapPin, PlayCircle } from 'lucide-react'
+import { Bookmark, ExternalLink, MapPin, Play } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { formatDate, excerpt } from '../lib/news'
@@ -23,7 +23,7 @@ export function NewsCard({ article, onSave, saved = false, variant = 'standard' 
         <Link to={`/nyhet/${encodeURIComponent(article.slug)}`} className="news-card-image-link" aria-label={`${imageLabel}. Läs ${article.title}`}>
           <NewsVisual article={article} variant={variant === 'search' ? 'search' : 'card'} />
           <span className="category-pill">{article.category}</span>
-          {article.video && <span className="video-pill"><PlayCircle size={14} /> Video</span>}
+          {article.video && <span className="video-pill" title="Video från källan"><Play aria-hidden="true" /><span className="sr-only">Video från källan</span></span>}
         </Link>
       </div>}
       <div className="news-card-body">
