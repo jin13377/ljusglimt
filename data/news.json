@@ -1,8 +1,13 @@
 {
-  "generated_at": "2026-07-16T16:04:31.375193Z",
+  "generated_at": "2026-07-16T22:56:43.438267Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "dc3f4cb487d6974e9617",
+    "c8a108bac431dba27ab5",
+    "f7ce5b86cf0efa6b47fe",
+    "adcab428759c6d1c8d1b"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -52,7 +57,7 @@
       "source_excerpt": "Watch how this chill pig on the run finally got rescued! Lancaster Farm Sanctuary shared how Petey spent weeks roaming free before people came together to get him to safety. Now he’s living the good life with a whole crew of potbelly pig friends.",
       "agent_summary": "Grisen Petey strövade fritt i flera veckor innan människor samlades för att föra honom i säkerhet. Nu lever han på Lancaster Farm Sanctuary tillsammans med en grupp andra minigrisar.",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/cLTwQ1gJkcx08TuRo/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/cLTwQ1gJkcx08TuRo/x720",
       "source_image_alt": "This Pig Was On The Run Until Everyone Came Together",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xamx6sa",
@@ -89,7 +94,7 @@
       "source_excerpt": "Then things escalated! We talked to Rachel and Connor about the big surprise — and how an even bigger one came a few weeks later when they brought Jupiter’s sister home, too.",
       "agent_summary": "Rachel överraskade Connor med Jupiter. Några veckor senare växte familjen igen när de också tog hem Jupiters syster.",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/bQSIo1gIKYAIOFShZ/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/bQSIo1gIKYAIOFShZ/x720",
       "source_image_alt": "Boyfriend Gets The Absolute BEST Valentines Day Gift",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xadpjn6",
@@ -160,7 +165,7 @@
       "source_excerpt": "Their bond was undeniable from the very first moment! Natalie shared with The Dodo how this sweet shelter dog seemed to know she’d found her person the moment she met her daughter, Piper. All they had to do was convince Dad — and the rest fell right into place.",
       "agent_summary": "Bandet mellan hunden på djurhemmet och flickan Piper märktes direkt. Natalie berättar hur familjen blev övertygad om att hunden hade hittat sin människa.",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/cIcSw1gLgz0iDwIJb/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/cIcSw1gLgz0iDwIJb/x720",
       "source_image_alt": "Moment Between Shelter Dog And Girl Is Priceless",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xamh2yi",
@@ -479,6 +484,33 @@
       "public_eligible": true
     },
     {
+      "id": "dc3f4cb487d6974e9617",
+      "title": "Recent sightings give conservationists hope for two endangered whale species: 'They may be rebounding'",
+      "url": "https://www.goodgoodgood.co/articles/blue-fin-whale-sightings-conservation",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-07-16T20:53:00Z",
+      "source_excerpt": "A new study found sightings of the species on Southern Africa’s Atlantic coast have increased in recent years.",
+      "agent_summary": "",
+      "source_fingerprint": "a0a631fb22970b37a57e",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a5580b6f675765e7374a887_sightings-off-southern-africa-suggest-blue-and-fin-whales-01.jpg",
+      "source_image_alt": "Recent sightings give conservationists hope for two endangered whale species: 'They may be rebounding'",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/blue-fin-whale-sightings-conservation",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/blue-fin-whale-sightings-conservation",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "source_tier_bonus": 2,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "conservation",
+        "hope"
+      ],
+      "public_eligible": false
+    },
+    {
       "id": "600742420eb388aab0d9",
       "title": "Utah revokes license of teen treatment center criticized by Paris Hilton",
       "url": "https://www.goodgoodgood.co/articles/utah-revokes-springville-license-teen-treatment-center-paris-hilton",
@@ -587,6 +619,33 @@
       "public_eligible": false
     },
     {
+      "id": "c8a108bac431dba27ab5",
+      "title": "A second grader wanted to know if his pet caterpillar would remember him. His experiment shocked scientists",
+      "url": "https://www.goodgoodgood.co/articles/butterfly-catepillar-memory-boy-prodigy",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-07-16T19:02:00Z",
+      "source_excerpt": "Jo Nagai has been raising butterflies since he was in second grade. His curiosity led to an unlikely friendship with a Georgetown professor half a world away.",
+      "agent_summary": "",
+      "source_fingerprint": "e8a2e15b33876402d355",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a592a592b4a07d80d935c1b_6a592a58f637575603fb0e67_second-grader-catepillar-featured.webp",
+      "source_image_alt": "A second grader wanted to know if his pet caterpillar would remember him. His experiment shocked scientists",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/butterfly-catepillar-memory-boy-prodigy",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/butterfly-catepillar-memory-boy-prodigy",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "source_tier_bonus": 2,
+      "positivity_score": 5,
+      "positive_signals": [
+        "curated-positive-source",
+        "experiment",
+        "friend"
+      ],
+      "public_eligible": false
+    },
+    {
       "id": "1b82a78f627942caa9fb",
       "title": "The marginalised groups finding community through football",
       "url": "https://www.positive.news/society/the-marginalised-groups-finding-community-through-football",
@@ -688,33 +747,6 @@
       "public_eligible": false
     },
     {
-      "id": "72f48d316701bacb0439",
-      "title": "This sea turtle was rescued with a missing flipper and a crushed shell. A special procedure saved his life",
-      "url": "https://www.goodgoodgood.co/articles/green-sea-turtle-kraken-boat-propeller-injury",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-06-16T15:49:00Z",
-      "source_excerpt": "Kraken, a green sea turtle, is in recovery after a harrowing boat strike in Abu Dhabi.",
-      "agent_summary": "",
-      "source_fingerprint": "5fc057df27cbb0188d46",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a316fcee8a916278bc2baf9_kraken-missing-flipper.jpg",
-      "source_image_alt": "This sea turtle was rescued with a missing flipper and a crushed shell. A special procedure saved his life",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/green-sea-turtle-kraken-boat-propeller-injury",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/green-sea-turtle-kraken-boat-propeller-injury",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 5,
-      "positive_signals": [
-        "curated-positive-source",
-        "recovery",
-        "rescue"
-      ],
-      "public_eligible": false
-    },
-    {
       "id": "bfd82ff3870062e244f3",
       "title": "Mamdani, NYC public schools invest $67.5M in special education amid federal budget cuts",
       "url": "https://www.goodgoodgood.co/articles/new-york-city-special-education-expansion",
@@ -809,32 +841,6 @@
         "curated-positive-source",
         "friend",
         "progress"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "e2079e78a1f3711c7643",
-      "title": "I spent 6 months reading hundreds of poems written by teens. I was shocked to discover that they are full of hope",
-      "url": "https://www.goodgoodgood.co/articles/1455-young-poets-anthology",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-07-05T20:15:00Z",
-      "source_excerpt": "Young people are facing a future shaped by climate anxiety, political extremism, economic instability, and chronic loneliness. But that's only part of the story.",
-      "agent_summary": "",
-      "source_fingerprint": "29768a1b34927b265661",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a3ee18e1b74294bf3636dae_1455-young-poets-anthology.jpg",
-      "source_image_alt": "I spent 6 months reading hundreds of poems written by teens. I was shocked to discover that they are full of hope",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/1455-young-poets-anthology",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/1455-young-poets-anthology",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 4,
-      "positive_signals": [
-        "curated-positive-source",
-        "hope"
       ],
       "public_eligible": false
     },
@@ -938,6 +944,42 @@
       "public_eligible": false
     },
     {
+      "id": "f7ce5b86cf0efa6b47fe",
+      "title": "NASA Welcomes Serbia as Newest Artemis Accords Signatory",
+      "url": "https://www.nasa.gov/organizations/oiir/artemis-accords/nasa-welcomes-serbia-as-newest-artemis-accords-signatory",
+      "source": "NASA News Releases",
+      "language": "en",
+      "published_at": "2026-07-16T22:37:19Z",
+      "source_excerpt": "The Republic of Serbia signed the Artemis Accords Thursday during a ceremony hosted by NASA at the agency’s Headquarters in Washington, becoming the 69th nation to join a large community of like-minded nations committed to the peaceful, transparent, and responsible exploration of space. “Serbia’s connection to NASA reaches back to the Apollo program, when the […]",
+      "agent_summary": "",
+      "source_fingerprint": "9c434595e69d9329812d",
+      "source_tier_bonus": 1,
+      "positivity_score": 2,
+      "positive_signals": [
+        "curated-positive-source",
+        "community"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "adcab428759c6d1c8d1b",
+      "title": "NASA Study Finds Near-Earth Asteroid Is Actually Comet",
+      "url": "https://www.nasa.gov/solar-system/comets/nasa-study-finds-near-earth-asteroid-is-actually-comet",
+      "source": "NASA News Releases",
+      "language": "en",
+      "published_at": "2026-07-16T18:40:26Z",
+      "source_excerpt": "New research led by scientists at NASA’s Jet Propulsion Laboratory in Southern California has revealed the identity of a puzzling near-Earth object by precisely tracking its motion through space and using powerful observatories that image faint celestial objects. This object has a dual personality: Past images hadn’t revealed obvious cometlike activity, suggesting it might be […]",
+      "agent_summary": "",
+      "source_fingerprint": "06a02ecc099e8e53c057",
+      "source_tier_bonus": 1,
+      "positivity_score": 2,
+      "positive_signals": [
+        "curated-positive-source",
+        "research"
+      ],
+      "public_eligible": false
+    },
+    {
       "id": "94bf54b68e3a343fc6fc",
       "title": "How NASA’s Artemis III Lander Test Will Pave Way for Moon Landings",
       "url": "https://www.nasa.gov/directorates/esdmd/artemis-campaign-development-division/human-landing-system-program/how-nasas-artemis-iii-lander-test-will-pave-way-for-moon-landings",
@@ -995,42 +1037,6 @@
       "positive_signals": [
         "curated-positive-source",
         "mission"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "d7457a5f022d18d4ebc8",
-      "title": "Perseverance’s Trip to ‘Broom Point’",
-      "url": "https://science.nasa.gov/photojournal/perseverances-trip-to-broom-point",
-      "source": "NASA News Releases",
-      "language": "en",
-      "published_at": "2026-07-15T17:27:10Z",
-      "source_excerpt": "Description This orbital map shows the path NASA’s Perseverance Mars rover took to get to a location the science team has dubbed the “Broom Point member,” a sequence of layered bedrock likely more than 3.9 billion years old. As planned, the rover landed inside Jezero Crater on Feb. 18, 2021. It investigated the crater’s western delta […]",
-      "agent_summary": "",
-      "source_fingerprint": "232f41266a994852a214",
-      "source_tier_bonus": 1,
-      "positivity_score": 2,
-      "positive_signals": [
-        "curated-positive-source",
-        "science"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "d533d0cc2b75a49046e2",
-      "title": "NASA’s Perseverance Rover Reads Record of Ancient Mars Impacts",
-      "url": "https://www.nasa.gov/solar-system/planets/mars/nasas-perseverance-rover-reads-record-of-ancient-mars-impacts",
-      "source": "NASA News Releases",
-      "language": "en",
-      "published_at": "2026-07-15T15:30:04Z",
-      "source_excerpt": "NASA’s Perseverance Mars rover has uncovered evidence that a 245-foot-thick (75-meter-thick) stack of ancient rock on the rim of Jezero Crater was built by repeated asteroid impacts. Referred to as the “Broom Point member” by the rover’s science team, this sequence of layered bedrock is likely more than 3.9 billion years old, making it among […]",
-      "agent_summary": "",
-      "source_fingerprint": "a3eeb1eaa2d98acaef79",
-      "source_tier_bonus": 1,
-      "positivity_score": 2,
-      "positive_signals": [
-        "curated-positive-source",
-        "science"
       ],
       "public_eligible": false
     }
