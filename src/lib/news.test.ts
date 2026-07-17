@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { fetchNews, inferCategory, isSuitableForPublicFeed, normalizeFetched, normalizeSeed } from './news'
+import { fetchNews, inferCategory, isSuitableForPublicFeed, normalizeFetched, normalizeSeed, selectDailyHero } from './news'
 
 afterEach(() => { vi.unstubAllGlobals() })
 
@@ -88,6 +88,27 @@ describe('news normalizer', () => {
     const item = normalizeSeed({ id: 'demo', title: 'En ljus nyhet', summary: 'Sammanfattning', source: { name: 'WHO', url: 'https://who.int' } })
     expect(item.origin).toBe('demo')
     expect(item.source).toBe('WHO')
+  })
+
+  it('rotates the daily hero on consecutive Stockholm calendar days', () => {
+    const stories = [
+      normalizeFetched({ id: 'daily-a', title: 'A', display_title_sv: 'Nyhet A', agent_summary: 'Svensk sammanfattning A.', published_at: '2026-07-16T08:00:00Z', url: 'https://example.com/a', source: 'KÃ¤lla', public_eligible: true }),
+      normalizeFetched({ id: 'daily-b', title: 'B', display_title_sv: 'Nyhet B', agent_summary: 'Svensk sammanfattning B.', published_at: '2026-07-15T08:00:00Z', url: 'https://example.com/b', source: 'KÃ¤lla', public_eligible: true }),
+      normalizeFetched({ id: 'daily-c', title: 'C', display_title_sv: 'Nyhet C', agent_summary: 'Svensk sammanfattning C.', published_at: '2026-07-14T08:00:00Z', url: 'https://example.com/c', source: 'KÃ¤lla', public_eligible: true }),
+    ]
+    const first = selectDailyHero(stories, new Date('2026-07-17T08:00:00Z'))
+    const laterSameDay = selectDailyHero(stories, new Date('2026-07-17T20:00:00Z'))
+    const nextDay = selectDailyHero(stories, new Date('2026-07-18T08:00:00Z'))
+
+    expect(laterSameDay?.id).toBe(first?.id)
+    expect(nextDay?.id).not.toBe(first?.id)
+  })
+
+  it('uses the featured source summary when no suitable fetched hero exists', () => {
+    const featured = normalizeSeed({ id: 'fallback', title: 'Reservnyhet', summary: 'Sammanfattning', featured: true, source: { name: 'WHO', url: 'https://who.int' } })
+    const english = normalizeFetched({ id: 'english', title: 'English story', source_excerpt: 'English summary', published_at: '2026-07-16T08:00:00Z', url: 'https://example.com/en', source: 'Feed' })
+
+    expect(selectDailyHero([english, featured], new Date('2026-07-17T08:00:00Z'))?.id).toBe('fallback')
   })
 
   it('marks an agent summary as Swedish without changing the source-title language', () => {

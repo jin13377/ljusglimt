@@ -5,7 +5,7 @@ import { NewsCard, OriginBadge } from '../components/NewsCard'
 import { NewsletterForm } from '../components/NewsletterForm'
 import { NewsVisual } from '../components/NewsVisual'
 import { useSaved } from '../contexts/SavedContext'
-import { formatDate } from '../lib/news'
+import { formatDate, selectDailyHero } from '../lib/news'
 import { useNews } from '../lib/useNews'
 import type { NewsArticle } from '../types'
 
@@ -15,7 +15,7 @@ export function HomePage() {
   const navigate = useNavigate()
   const demos = data.articles.filter((item) => item.origin === 'demo')
   const fetched = data.articles.filter((item) => item.origin === 'fetched')
-  const hero = demos.find((item) => item.featured) || demos[0]
+  const hero = selectDailyHero(data.articles)
   const demoHighlights = demos.filter((item) => item.id !== hero?.id).slice(0, 3)
   const animalStories = fetched.filter((item) => item.category === 'Djur' && item.image.kind === 'source').slice(0, 4)
   const fetchedHighlights = fetched.filter((item) => item.category !== 'Djur').slice(0, 6)

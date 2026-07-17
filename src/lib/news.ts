@@ -279,6 +279,45 @@ export interface NewsCollection {
   warning: string
 }
 
+const DAILY_HERO_WINDOW_DAYS = 45
+const DAILY_HERO_CANDIDATE_LIMIT = 10
+
+function stockholmDateParts(date: Date): { year: number; month: number; day: number } {
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Europe/Stockholm',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).formatToParts(date)
+  const value = (type: Intl.DateTimeFormatPartTypes) => Number(parts.find((part) => part.type === type)?.value)
+  return { year: value('year'), month: value('month'), day: value('day') }
+}
+
+/** Pick one recent Swedish source story per Stockholm calendar day. */
+export function selectDailyHero(articles: NewsArticle[], now = new Date()): NewsArticle | undefined {
+  const fallback = articles.find((article) => article.origin === 'demo' && article.featured)
+    || articles.find((article) => article.origin === 'demo')
+  if (Number.isNaN(now.valueOf())) return fallback
+
+  const { year, month, day } = stockholmDateParts(now)
+  const stockholmDay = Date.UTC(year, month - 1, day)
+  const oldestPreferred = stockholmDay - DAILY_HERO_WINDOW_DAYS * 86_400_000
+  const eligible = articles
+    .filter((article) => article.origin === 'fetched'
+      && article.language === 'sv'
+      && article.excerptLanguage === 'sv'
+      && Number.isFinite(Date.parse(article.publishedAt))
+      && Date.parse(article.publishedAt) < stockholmDay + 86_400_000)
+    .sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt))
+
+  const recent = eligible.filter((article) => Date.parse(article.publishedAt) >= oldestPreferred)
+  const candidates = (recent.length > 0 ? recent : eligible).slice(0, DAILY_HERO_CANDIDATE_LIMIT)
+  if (candidates.length === 0) return fallback
+
+  const dayNumber = Math.floor(stockholmDay / 86_400_000)
+  return candidates[dayNumber % candidates.length]
+}
+
 async function fetchJson<T>(path: string, options?: RequestInit): Promise<T | null> {
   try {
     const response = await fetch(`${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`, options)
