@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-16T22:56:43.438267Z",
+  "updated_at": "2026-07-17T11:21:58.057094Z",
   "last_successful_local_date": "2026-07-17",
-  "last_successful_local_slot": "2026-07-17T00:00",
+  "last_successful_local_slot": "2026-07-17T12:00",
   "seen_ids": [
     "0054236b2eba1f0a4195",
     "00f8db9c6d9c70836f8e",
@@ -92,6 +92,8 @@
     "dc3f4cb487d6974e9617",
     "c8a108bac431dba27ab5",
     "f7ce5b86cf0efa6b47fe",
-    "adcab428759c6d1c8d1b"
+    "adcab428759c6d1c8d1b",
+    "f619409afb38ed011ca9",
+    "74a1fa697af5ca655cc3"
   ]
 }

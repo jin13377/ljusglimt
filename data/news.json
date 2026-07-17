@@ -1,12 +1,10 @@
 {
-  "generated_at": "2026-07-16T22:56:43.438267Z",
+  "generated_at": "2026-07-17T11:21:58.057094Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "dc3f4cb487d6974e9617",
-    "c8a108bac431dba27ab5",
-    "f7ce5b86cf0efa6b47fe",
-    "adcab428759c6d1c8d1b"
+    "f619409afb38ed011ca9",
+    "74a1fa697af5ca655cc3"
   ],
   "fetch_errors": [],
   "items": [
@@ -20,7 +18,7 @@
       "source_excerpt": "When your boyfriend requests foster kittens... you deliver. Our producer Monica shared her first-ever experience fostering kittens from Wallis Annenberg PetSpace and how her dogs unexpectedly became the kittens' biggest fans!",
       "agent_summary": "När hennes pojkvän önskade sig fosterkattungar ordnade Monica det. Hon berättar om sin första tid som jourhem åt kattungar från Wallis Annenberg PetSpace – och hur hennes hundar oväntat blev kattungarnas största fans.",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/cLTto1gJkgKXx3_pz/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/cLTto1gJkgKXx3_pz/x720",
       "source_image_alt": "Boyfriend Has Best Reaction To Surprise Foster Kittens",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xamx6nm",
@@ -130,7 +128,7 @@
       "source_excerpt": "She got right into the passenger seat like she’s ready to go home! Sam shared what it was like rescuing Adeline outside a car dealership — and gave us an update on where this sweet girl landed just one month later.",
       "agent_summary": "Katten Adeline hoppade direkt in på passagerarsätet som om hon var redo att följa med hem. Sam berättar om räddningen utanför bilfirman och hur Adeline hade det en månad senare.",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/cLbms1gLNlyGRmBrE/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/cLbms1gLNlyGRmBrE/x720",
       "source_image_alt": "Woman Rescues A Cat She Found At A Car Dealership",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xamxvli",
@@ -165,7 +163,7 @@
       "source_excerpt": "Their bond was undeniable from the very first moment! Natalie shared with The Dodo how this sweet shelter dog seemed to know she’d found her person the moment she met her daughter, Piper. All they had to do was convince Dad — and the rest fell right into place.",
       "agent_summary": "Bandet mellan hunden på djurhemmet och flickan Piper märktes direkt. Natalie berättar hur familjen blev övertygad om att hunden hade hittat sin människa.",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/cIcSw1gLgz0iDwIJb/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/cIcSw1gLgz0iDwIJb/x720",
       "source_image_alt": "Moment Between Shelter Dog And Girl Is Priceless",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xamh2yi",
@@ -747,6 +745,43 @@
       "public_eligible": false
     },
     {
+      "id": "f619409afb38ed011ca9",
+      "title": "In pictures: How forensic science is helping tackle wildlife poaching",
+      "url": "https://www.positive.news/society/how-forensic-science-is-helping-tackle-poaching",
+      "source": "Positive News",
+      "language": "en",
+      "published_at": "2026-07-17T09:48:22Z",
+      "source_excerpt": "Advances in forensic science are disrupting the illegal wildlife trade – and are documented in a new photo series The post In pictures: How forensic science is helping tackle wildlife poaching appeared first on Positive News .",
+      "agent_summary": "",
+      "source_fingerprint": "1ca4136bc4c9863bf939",
+      "source_tier_bonus": 2,
+      "positivity_score": 4,
+      "positive_signals": [
+        "curated-positive-source",
+        "science"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "74a1fa697af5ca655cc3",
+      "title": "Tampons Are Becoming a Valuable Medical Tool",
+      "url": "https://reasonstobecheerful.world/menstrual-blood-medical-possibilities",
+      "source": "Reasons to be Cheerful",
+      "language": "en",
+      "published_at": "2026-07-17T08:00:26Z",
+      "source_excerpt": "Sometimes the most consequential innovations are fueled by frustration. When she was in her early thirties, Ridhi Tariyal asked her gynecologist for a fertility test. Her doctor dismissed the request, saying such a test wasn’t possible. Tariyal knew otherwise. With an MBA from Harvard and a Master of Science in... The post Tampons Are Becoming a Valuable Medical Tool appeared first on Reasons to b",
+      "agent_summary": "",
+      "source_fingerprint": "064de0b04071ffea2904",
+      "source_tier_bonus": 2,
+      "positivity_score": 4,
+      "positive_signals": [
+        "curated-positive-source",
+        "innovation",
+        "science"
+      ],
+      "public_eligible": false
+    },
+    {
       "id": "bfd82ff3870062e244f3",
       "title": "Mamdani, NYC public schools invest $67.5M in special education amid federal budget cuts",
       "url": "https://www.goodgoodgood.co/articles/new-york-city-special-education-expansion",
@@ -881,24 +916,6 @@
       "public_eligible": false
     },
     {
-      "id": "793f8f03b8f4a4faa4c2",
-      "title": "The national dance company opening doors for young performers",
-      "url": "https://www.positive.news/lifestyle/arts/the-national-dance-company-opening-doors-for-young-performers",
-      "source": "Positive News",
-      "language": "en",
-      "published_at": "2026-07-06T05:00:00Z",
-      "source_excerpt": "A national youth dance programme is bringing together 16–24-year-olds from across England to perform on major stages The post The national dance company opening doors for young performers appeared first on Positive News .",
-      "agent_summary": "",
-      "source_fingerprint": "c79e555e6b904b8cda59",
-      "source_tier_bonus": 2,
-      "positivity_score": 3,
-      "positive_signals": [
-        "curated-positive-source",
-        "together"
-      ],
-      "public_eligible": false
-    },
-    {
       "id": "b0a0755793758f53667f",
       "title": "In It for the Long Haul",
       "url": "https://reasonstobecheerful.world/americas-250th-birthday-reader-responses",
@@ -1014,24 +1031,6 @@
         "source_url": "https://www.youtube.com/watch?v=SwhPXxNtdoc",
         "title": "Anil Menon Launches to Space Station"
       },
-      "source_tier_bonus": 1,
-      "positivity_score": 2,
-      "positive_signals": [
-        "curated-positive-source",
-        "mission"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "d7ac037bee6dd16b981e",
-      "title": "NASA’s Perseverance Rover Provides Sweeping View of Broom Point",
-      "url": "https://science.nasa.gov/photojournal/nasas-perseverance-rover-provides-sweeping-view-of-broom-point",
-      "source": "NASA News Releases",
-      "language": "en",
-      "published_at": "2026-07-15T17:59:50Z",
-      "source_excerpt": "Description This view looking back up at the outside lip of the 490-foot-tall (150-meter-tall) rim of Jezero Crater was taken by the Mastcam-Z instrument aboard NASA’s Perseverance on May 15, 2025, the 1,505th day, or sol, of the rover’s mission to Mars. The bright-colored rocks exposed across the slope, running from middle left to middle right of […]",
-      "agent_summary": "",
-      "source_fingerprint": "1fec690726898ccb7432",
       "source_tier_bonus": 1,
       "positivity_score": 2,
       "positive_signals": [
