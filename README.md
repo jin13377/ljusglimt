@@ -1,5 +1,8 @@
 # Ljusglimt
 
+Projektets samlade nuläge, länkar och driftinformation finns i
+[`LJUSGLIMT-PROJEKT.md`](LJUSGLIMT-PROJEKT.md).
+
 En körbar svensk konceptsajt för positiva, konstruktiva och källnära nyheter.
 Projektet innehåller en responsiv redaktionell startsida, sök/filter,
 originalkällor, ett nyhetsbrevsformulär, ett förhandsmodererat forum och en schemalagd
