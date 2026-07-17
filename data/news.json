@@ -1,10 +1,13 @@
 {
-  "generated_at": "2026-07-17T11:21:58.057094Z",
+  "generated_at": "2026-07-17T22:51:06.498236Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "f619409afb38ed011ca9",
-    "74a1fa697af5ca655cc3"
+    "03a68a315b1cfbc19701",
+    "edeffb61be76b763cff3",
+    "60e40b78747d74dd842a",
+    "cb836b4560a53d10bd08",
+    "d0f9ab2d41b0773433a9"
   ],
   "fetch_errors": [],
   "items": [
@@ -92,7 +95,7 @@
       "source_excerpt": "Then things escalated! We talked to Rachel and Connor about the big surprise — and how an even bigger one came a few weeks later when they brought Jupiter’s sister home, too.",
       "agent_summary": "Rachel överraskade Connor med Jupiter. Några veckor senare växte familjen igen när de också tog hem Jupiters syster.",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/bQSIo1gIKYAIOFShZ/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/bQSIo1gIKYAIOFShZ/x720",
       "source_image_alt": "Boyfriend Gets The Absolute BEST Valentines Day Gift",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xadpjn6",
@@ -163,7 +166,7 @@
       "source_excerpt": "Their bond was undeniable from the very first moment! Natalie shared with The Dodo how this sweet shelter dog seemed to know she’d found her person the moment she met her daughter, Piper. All they had to do was convince Dad — and the rest fell right into place.",
       "agent_summary": "Bandet mellan hunden på djurhemmet och flickan Piper märktes direkt. Natalie berättar hur familjen blev övertygad om att hunden hade hittat sin människa.",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/cIcSw1gLgz0iDwIJb/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/cIcSw1gLgz0iDwIJb/x720",
       "source_image_alt": "Moment Between Shelter Dog And Girl Is Priceless",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xamh2yi",
@@ -745,6 +748,51 @@
       "public_eligible": false
     },
     {
+      "id": "03a68a315b1cfbc19701",
+      "title": "NASA Awards Facilities Support Services Contract for Ames Research Center",
+      "url": "https://www.nasa.gov/centers-and-facilities/ames/nasa-awards-facilities-support-services-contract-for-ames-research-center",
+      "source": "NASA News Releases",
+      "language": "en",
+      "published_at": "2026-07-17T20:34:59Z",
+      "source_excerpt": "CONTRACT RELEASE NASA has selected Chugach Intelligence Solutions LLC to provide comprehensive operations, maintenance, and repair services for NASA’s Ames Research Center in California’s Silicon Valley. The Ames Facilities Support Services II contract ensures that the center’s historic and specialized facilities are properly maintained, fully operational, and capable of supporting the agency’s mi",
+      "agent_summary": "",
+      "source_fingerprint": "d8ff9c8e1f7e56ba0e26",
+      "source_tier_bonus": 1,
+      "positivity_score": 4,
+      "positive_signals": [
+        "curated-positive-source",
+        "research",
+        "solution"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "edeffb61be76b763cff3",
+      "title": "Florida's adorable sea turtle license plates have raised millions to save the endangered species",
+      "url": "https://www.goodgoodgood.co/articles/florida-sea-turtle-license-plates",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-07-17T18:42:00Z",
+      "source_excerpt": "The sea turtle design is the second-most popular specialty license plate in the state.",
+      "agent_summary": "",
+      "source_fingerprint": "76ef3c07649af290ff48",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a5a771a1730ef1041f34e84_6a5a7719bebb333f2dd4c8e0_florida-sea-turtle-license-plates-featured.webp",
+      "source_image_alt": "Florida's adorable sea turtle license plates have raised millions to save the endangered species",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/florida-sea-turtle-license-plates",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/florida-sea-turtle-license-plates",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "source_tier_bonus": 2,
+      "positivity_score": 4,
+      "positive_signals": [
+        "curated-positive-source",
+        "adorable"
+      ],
+      "public_eligible": false
+    },
+    {
       "id": "f619409afb38ed011ca9",
       "title": "In pictures: How forensic science is helping tackle wildlife poaching",
       "url": "https://www.positive.news/society/how-forensic-science-is-helping-tackle-poaching",
@@ -853,29 +901,39 @@
       "public_eligible": false
     },
     {
-      "id": "33a5842289a9fd4ef5e1",
-      "title": "This champion soccer team teaches fans about climate change and DEI. They've sold out every game",
-      "url": "https://www.goodgoodgood.co/articles/vermont-green-fc-eco-friendly-soccer-team",
-      "source": "Good Good Good",
+      "id": "60e40b78747d74dd842a",
+      "title": "Establishing a VTE Risk Score for Astronauts Algorithm",
+      "url": "https://www.nasa.gov/organizations/ochmo/establishing-a-vte-risk-score-for-astronauts-algorithm",
+      "source": "NASA News Releases",
       "language": "en",
-      "published_at": "2026-07-07T19:10:00Z",
-      "source_excerpt": "Vermont Green FC has sold out stadiums and built a devoted fan base around an ambitious goal: becoming a climate-friendly, socially progressive soccer club.",
+      "published_at": "2026-07-17T21:01:38Z",
+      "source_excerpt": "In April 2026, NASA’s Office of the Chief Health and Medical Officer (OCHMO) initiated a working group to review updated VTE case information, additional data gathered revealing altered blood flow status within a cohort of astronauts, and discuss progress of research and clinical activities intended to mitigate the risk of VTE during spaceflight with new […]",
       "agent_summary": "",
-      "source_fingerprint": "32d2defa5fdc6b12d5bf",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a4bf2040e3f2b5f92acb75c_6a4bf2020e3f2b5f92acb618_vermont-green-fc-eco-friendly-soccer-team-featured.webp",
-      "source_image_alt": "This champion soccer team teaches fans about climate change and DEI. They've sold out every game",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/vermont-green-fc-eco-friendly-soccer-team",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/vermont-green-fc-eco-friendly-soccer-team",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 4,
+      "source_fingerprint": "74a0ed9d77a70a81f581",
+      "source_tier_bonus": 1,
+      "positivity_score": 3,
       "positive_signals": [
         "curated-positive-source",
-        "friend",
-        "progress"
+        "progress",
+        "research"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "cb836b4560a53d10bd08",
+      "title": "NASA’s Psyche Mission Images Details of Martian Surface During Flyby",
+      "url": "https://science.nasa.gov/photojournal/nasas-psyche-mission-images-details-of-martian-surface-during-flyby",
+      "source": "NASA News Releases",
+      "language": "en",
+      "published_at": "2026-07-17T17:38:38Z",
+      "source_excerpt": "Description Captured by the multispectral imager instrument on NASA’s Psyche mission, this is an enhanced-color mosaic created from four individual images acquired on May 15, 2026, during the spacecraft’s flyby of Mars. Psyche was traveling from right to left (northeast to southwest on Mars) during the six minutes that it took to acquire the images for […]",
+      "agent_summary": "",
+      "source_fingerprint": "a92a7ffb4da48fc3fe1a",
+      "source_tier_bonus": 1,
+      "positivity_score": 3,
+      "positive_signals": [
+        "curated-positive-source",
+        "mission"
       ],
       "public_eligible": false
     },
@@ -961,6 +1019,24 @@
       "public_eligible": false
     },
     {
+      "id": "d0f9ab2d41b0773433a9",
+      "title": "NASA Invites Media to Roman Space Telescope, Crew-13 Launches",
+      "url": "https://www.nasa.gov/news-release/nasa-invites-media-to-roman-space-telescope-crew-13-launches",
+      "source": "NASA News Releases",
+      "language": "en",
+      "published_at": "2026-07-17T18:00:57Z",
+      "source_excerpt": "Media accreditation now is open for the launch of NASA’s Nancy Grace Roman Space Telescope and the agency’s SpaceX Crew-13 missions, both targeting launch in the coming months. The Roman telescope is slated to launch no earlier than 7:20 a.m. EDT Sunday, Aug. 30, aboard a SpaceX Falcon Heavy rocket from Launch Complex 39A at […]",
+      "agent_summary": "",
+      "source_fingerprint": "01b0fcee6fc55d43ad81",
+      "source_tier_bonus": 1,
+      "positivity_score": 2,
+      "positive_signals": [
+        "curated-positive-source",
+        "mission"
+      ],
+      "public_eligible": false
+    },
+    {
       "id": "f7ce5b86cf0efa6b47fe",
       "title": "NASA Welcomes Serbia as Newest Artemis Accords Signatory",
       "url": "https://www.nasa.gov/organizations/oiir/artemis-accords/nasa-welcomes-serbia-as-newest-artemis-accords-signatory",
@@ -993,49 +1069,6 @@
       "positive_signals": [
         "curated-positive-source",
         "research"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "94bf54b68e3a343fc6fc",
-      "title": "How NASA’s Artemis III Lander Test Will Pave Way for Moon Landings",
-      "url": "https://www.nasa.gov/directorates/esdmd/artemis-campaign-development-division/human-landing-system-program/how-nasas-artemis-iii-lander-test-will-pave-way-for-moon-landings",
-      "source": "NASA News Releases",
-      "language": "en",
-      "published_at": "2026-07-15T18:50:52Z",
-      "source_excerpt": "Before Artemis astronauts land on the Moon’s surface in 2028, NASA will conduct the Artemis III demonstration mission in 2027, allowing teams on Earth and in orbit to practice rendezvous and docking operations between commercial human landing systems and the Orion spacecraft. Data from that mission, along with future uncrewed demonstration missions at the Moon, […]",
-      "agent_summary": "",
-      "source_fingerprint": "1d474ae8584fb5056ad7",
-      "source_tier_bonus": 1,
-      "positivity_score": 2,
-      "positive_signals": [
-        "curated-positive-source",
-        "mission"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "82f817fc1a24248a351d",
-      "title": "Anil Menon Launches to Space Station",
-      "url": "https://www.nasa.gov/image-article/anil-menon-launches-to-space-station",
-      "source": "NASA News Releases",
-      "language": "en",
-      "published_at": "2026-07-15T18:48:36Z",
-      "source_excerpt": "NASA astronaut candidate Anna Menon and her children watch as a Soyuz rocket launches to the International Space Station with NASA astronaut Anil Menon and Roscosmos cosmonauts Pyotr Dubrov and Anna Kikina, Tuesday, July 14, 2026, at the Baikonur Cosmodrome in Kazakhstan. The trio lifted off for the Soyuz MS-29 mission at 7:47 p.m. local […]",
-      "agent_summary": "",
-      "source_fingerprint": "660ac6a25511b3c4d7ae",
-      "source_video": {
-        "provider": "youtube",
-        "video_id": "SwhPXxNtdoc",
-        "embed_url": "https://www.youtube-nocookie.com/embed/SwhPXxNtdoc",
-        "source_url": "https://www.youtube.com/watch?v=SwhPXxNtdoc",
-        "title": "Anil Menon Launches to Space Station"
-      },
-      "source_tier_bonus": 1,
-      "positivity_score": 2,
-      "positive_signals": [
-        "curated-positive-source",
-        "mission"
       ],
       "public_eligible": false
     }
