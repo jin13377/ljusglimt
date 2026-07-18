@@ -54,7 +54,11 @@ FILE_VERSION = "v1"
 WIDTH = 1280
 HEIGHT = 848
 STEPS = 6
-MAX_IMAGES_PER_RUN = 3
+# One image per scheduled run. The Cloudflare Workers AI free tier has a
+# tight per-account rate quota; generating at most one image per night
+# spreads requests across many nights instead of burning the whole quota
+# on a single run (which also starves every other article).
+MAX_IMAGES_PER_RUN = 1
 MAX_ATTEMPTS = 4
 REQUEST_TIMEOUT_SECONDS = 120.0
 TOTAL_DEADLINE_SECONDS = 480.0
@@ -79,14 +83,29 @@ class ApiError(ImageGenerationError):
     def __init__(self, message: str, status: int | None = None):
         super().__init__(message)
         self.status = status
+        # 429 = the provider's free-tier quota is exhausted. We treat
+        # this as fatal for the whole run (see RateLimited) so we do not
+        # burn the rest of the quota or starve other articles.
+        self.rate_limited = status == 429
 
     @property
     def retryable(self) -> bool:
-        return self.status == 429 or (self.status is not None and 500 <= self.status <= 599)
+        # 429 is NOT retried: stop immediately and let later runs retry.
+        return self.status is not None and 500 <= self.status <= 599
 
 
 class AttemptLimitError(ImageGenerationError):
     pass
+
+
+class RateLimited(ImageGenerationError):
+    """The provider's free-tier rate quota is exhausted for now.
+
+    Treated as fatal for the whole run: we stop generating, leave every
+    article on its local SVG fallback, and let tomorrow's scheduled run
+    retry (spreading image creation across many nights instead of
+    burning the entire per-account quota on a single run).
+    """
 
 
 @dataclass
@@ -429,9 +448,14 @@ def _post_image_request(
             status = int(getattr(response, "status", 200))
             payload = _read_response_limited(response)
             if not 200 <= status <= 299:
+                if status == 429:
+                    # Free-tier quota exhausted: fatal for the whole run.
+                    raise RateLimited("Workers AI rate limit (HTTP 429) reached")
                 raise ApiError(f"Workers AI returned HTTP {status}", status)
     except urllib.error.HTTPError as exc:
         exc.read(min(MAX_RESPONSE_BYTES, 64 * 1024))
+        if exc.code == 429:
+            raise RateLimited("Workers AI rate limit (HTTP 429) reached") from exc
         raise ApiError(f"Workers AI returned HTTP {exc.code}", exc.code) from exc
     except urllib.error.URLError as exc:
         raise ApiError(f"Workers AI network error: {clean_context(exc.reason, 160)}") from exc
@@ -575,12 +599,21 @@ def process_news(
                     # try next model in the chain (e.g. Lucid Origin -> Phoenix)
                     continue
             if image is None:
+                # All models failed (e.g. network/non-429). Try next article,
+                # but if the failure was a hard rate limit, stop the whole run.
+                if isinstance(last_error, RateLimited):
+                    raise last_error
                 raise last_error or ImageGenerationError("all models failed")
             atomic_write_bytes(path, image)
             item["ai_image"] = image_metadata(item, image, now(), model_entry)
             report.generated += 1
             report.changed = True
         except (ImageGenerationError, OSError, ValueError) as exc:
+            if isinstance(exc, RateLimited):
+                # Free-tier quota exhausted: stop now, leave every article on
+                # its local SVG fallback, let tomorrow's run retry.
+                report.errors.append(f"{article_id}: {clean_context(exc, 240)}")
+                break
             report.failed += 1
             report.errors.append(f"{article_id}: {clean_context(exc, 240)}")
             if isinstance(exc, AttemptLimitError):
