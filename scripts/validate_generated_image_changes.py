@@ -16,8 +16,14 @@ from pathlib import Path
 MAX_CHANGED_ARTICLES = 3
 EXPECTED_WIDTH = 1280
 EXPECTED_HEIGHT = 848
-EXPECTED_MODEL = "gpt-image-2"
-EXPECTED_PROMPT_VERSION = "editorial-concept-v1"
+# Approved image generators: (model, prompt_version) pairs. Both the paid
+# OpenAI pipeline and the free Cloudflare Workers AI pipeline are accepted so
+# either can populate ai_image metadata.
+APPROVED_GENERATORS = {
+    ("gpt-image-2", "editorial-concept-v1"),
+    ("cf-lucid-origin", "cf-editorial-photo-v1"),
+    ("cf-leonardo-phoenix", "cf-editorial-collage-v1"),
+}
 MAX_IMAGE_BYTES = 2 * 1024 * 1024
 HEX_20_RE = re.compile(r"[0-9a-f]{20}\Z")
 SHA256_RE = re.compile(r"[0-9a-f]{64}\Z")
@@ -172,11 +178,10 @@ def _validate_ai_image(item: dict, images_dir: Path) -> None:
         raise ValueError(f"ai_image.url for {article_id} must be {expected_url}")
     if image["source_fingerprint"] != fingerprint:
         raise ValueError(f"ai_image.source_fingerprint for {article_id} does not match the source")
-    if image["model"] != EXPECTED_MODEL:
-        raise ValueError(f"ai_image.model for {article_id} must be {EXPECTED_MODEL}")
-    if image["prompt_version"] != EXPECTED_PROMPT_VERSION:
+    if (image["model"], image["prompt_version"]) not in APPROVED_GENERATORS:
         raise ValueError(
-            f"ai_image.prompt_version for {article_id} must be {EXPECTED_PROMPT_VERSION}"
+            f"ai_image for {article_id} uses an unsupported generator "
+            f"({image['model']}, {image['prompt_version']})"
         )
     if type(image["width"]) is not int or type(image["height"]) is not int:
         raise ValueError(f"ai_image dimensions for {article_id} must be integers")
