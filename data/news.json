@@ -1,9 +1,14 @@
 {
-  "generated_at": "2026-07-18T20:15:52.551865Z",
+  "generated_at": "2026-07-18T20:35:44.935671Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [],
-  "fetch_errors": [],
+  "fetch_errors": [
+    {
+      "source": "Mötesplats Social Innovation",
+      "error": "not well-formed (invalid token): line 1, column 0"
+    }
+  ],
   "items": [
     {
       "id": "0b87daf79218ce385c31",
@@ -47,7 +52,7 @@
       "source_excerpt": "When your boyfriend requests foster kittens... you deliver. Our producer Monica shared her first-ever experience fostering kittens from Wallis Annenberg PetSpace and how her dogs unexpectedly became the kittens' biggest fans!",
       "agent_summary": "När hennes pojkvän önskade sig fosterkattungar ordnade Monica det. Hon berättar om sin första tid som jourhem åt kattungar från Wallis Annenberg PetSpace – och hur hennes hundar oväntat blev kattungarnas största fans.",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/cLTto1gJkgKXx3_pz/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/cLTto1gJkgKXx3_pz/x720",
       "source_image_alt": "Boyfriend Has Best Reaction To Surprise Foster Kittens",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xamx6nm",
@@ -602,7 +607,7 @@
       "source_excerpt": "Then things escalated! We talked to Rachel and Connor about the big surprise — and how an even bigger one came a few weeks later when they brought Jupiter’s sister home, too.",
       "agent_summary": "Rachel överraskade Connor med Jupiter. Några veckor senare växte familjen igen när de också tog hem Jupiters syster.",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/bQSIo1gIKYAIOFShZ/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/bQSIo1gIKYAIOFShZ/x720",
       "source_image_alt": "Boyfriend Gets The Absolute BEST Valentines Day Gift",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xadpjn6",
@@ -694,7 +699,7 @@
       "source_excerpt": "She got right into the passenger seat like she’s ready to go home! Sam shared what it was like rescuing Adeline outside a car dealership — and gave us an update on where this sweet girl landed just one month later.",
       "agent_summary": "Katten Adeline hoppade direkt in på passagerarsätet som om hon var redo att följa med hem. Sam berättar om räddningen utanför bilfirman och hur Adeline hade det en månad senare.",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/cLbms1gLNlyGRmBrE/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/cLbms1gLNlyGRmBrE/x720",
       "source_image_alt": "Woman Rescues A Cat She Found At A Car Dealership",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xamxvli",
@@ -729,7 +734,7 @@
       "source_excerpt": "Their bond was undeniable from the very first moment! Natalie shared with The Dodo how this sweet shelter dog seemed to know she’d found her person the moment she met her daughter, Piper. All they had to do was convince Dad — and the rest fell right into place.",
       "agent_summary": "Bandet mellan hunden på djurhemmet och flickan Piper märktes direkt. Natalie berättar hur familjen blev övertygad om att hunden hade hittat sin människa.",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/cIcSw1gLgz0iDwIJb/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/cIcSw1gLgz0iDwIJb/x720",
       "source_image_alt": "Moment Between Shelter Dog And Girl Is Priceless",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xamh2yi",
