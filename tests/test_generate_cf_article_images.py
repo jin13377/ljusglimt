@@ -5,6 +5,7 @@ import json
 import sys
 import tempfile
 import unittest
+import urllib.error
 from pathlib import Path
 
 MODULE_PATH = Path(__file__).resolve().parents[1] / "scripts/generate_cf_article_images.py"
@@ -115,6 +116,33 @@ class CfArticleImageTests(unittest.TestCase):
                     news, root / "images", account_id="", api_token="",
                     max_images=1, opener=lambda *a, **k: None,
                 )
+
+
+    @unittest.skipUnless(HAVE_PIL, "Pillow required")
+    def test_stop_whole_run_on_rate_limit(self):
+        # Both models 429 -> the run must stop (0 generated), not
+        # burn attempts on a fallback or starve other articles.
+        class Resp429:
+            status = 429
+
+            def read(self, n=-1):
+                return b'{"success":false,"errors":[{"message":"rate limited"}]}'
+
+        def fake_opener(request, timeout=0):
+            raise urllib.error.HTTPError(str(request.full_url), 429, "rate", {}, Resp429())
+
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            news = root / "news.json"
+            items = [self.article(), self.article(eligible=False)]
+            news.write_text(json.dumps({"items": items}), encoding="utf-8")
+            report = cf.process_news(
+                news, root / "images", account_id="acc", api_token="tok",
+                max_images=1, opener=fake_opener,
+            )
+            self.assertEqual(report.generated, 0)
+            self.assertEqual(report.failed, 0)
+            self.assertTrue(any("rate" in e.lower() for e in report.errors))
 
 
 if __name__ == "__main__":
