@@ -1,14 +1,9 @@
 {
-  "generated_at": "2026-07-18T20:35:44.935671Z",
+  "generated_at": "2026-07-18T22:50:12.079701Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [],
-  "fetch_errors": [
-    {
-      "source": "Mötesplats Social Innovation",
-      "error": "not well-formed (invalid token): line 1, column 0"
-    }
-  ],
+  "fetch_errors": [],
   "items": [
     {
       "id": "0b87daf79218ce385c31",
@@ -607,7 +602,7 @@
       "source_excerpt": "Then things escalated! We talked to Rachel and Connor about the big surprise — and how an even bigger one came a few weeks later when they brought Jupiter’s sister home, too.",
       "agent_summary": "Rachel överraskade Connor med Jupiter. Några veckor senare växte familjen igen när de också tog hem Jupiters syster.",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/bQSIo1gIKYAIOFShZ/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/bQSIo1gIKYAIOFShZ/x720",
       "source_image_alt": "Boyfriend Gets The Absolute BEST Valentines Day Gift",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xadpjn6",
