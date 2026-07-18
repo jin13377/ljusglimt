@@ -60,7 +60,7 @@ export function Layout({ children }: { children: ReactNode }) {
           <div className="header-actions">
             <GlobeMenu />
             <form className="header-search" onSubmit={(e) => { e.preventDefault(); navigate(`/sok?q=${encodeURIComponent(search)}`) }}><Search size={17} /><input aria-label="Sök" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Sök" /></form>
-            <Link className="profile-button" to="/profil"><UserRound size={18} /><span>{user?.name || 'Logga in'}</span></Link>
+            <Link className="profile-button" to="/profil" aria-label={user?.name ? `Öppna profilen för ${user.name}` : 'Logga in'}><UserRound size={18} /><span>{user?.name || 'Logga in'}</span></Link>
             <button type="button" className="mobile-menu-button" onClick={() => setMenuPath(menuOpen ? null : pathname)} aria-expanded={menuOpen} aria-label={menuOpen ? 'Stäng meny' : 'Öppna meny'}>{menuOpen ? <X /> : <Menu />}</button>
           </div>
         </div>

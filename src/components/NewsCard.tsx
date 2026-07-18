@@ -1,5 +1,4 @@
 import { Bookmark, ExternalLink, MapPin, Play } from 'lucide-react'
-import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { formatDate, excerpt } from '../lib/news'
 import type { NewsArticle } from '../types'
@@ -10,7 +9,7 @@ export type NewsCardVariant = 'lead' | 'standard' | 'compact' | 'text' | 'search
 export function OriginBadge({ article }: { article: NewsArticle }) {
   return article.origin === 'demo'
     ? <span className="origin-badge demo">Sammanfattning av källan</span>
-    : <span className="origin-badge fetched">Svensk källsammanfattning</span>
+    : <span className="origin-badge fetched">{article.sourceLanguage.toLocaleLowerCase().startsWith('sv') ? 'Svensk originalkälla' : 'Översatt källsammanfattning'}</span>
 }
 
 export function NewsCard({ article, onSave, saved = false, variant = 'standard' }: { article: NewsArticle; onSave?: (article: NewsArticle) => void; saved?: boolean; variant?: NewsCardVariant }) {
@@ -18,7 +17,7 @@ export function NewsCard({ article, onSave, saved = false, variant = 'standard' 
     ? `Källbild${article.image.credit ? ` av ${article.image.credit}` : ''}`
     : article.image.kind === 'generated' ? 'Redaktionell illustration' : 'AI-illustration'
   return (
-    <motion.article className={`news-card ${variant}`} initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: .15 }}>
+    <article className={`news-card ${variant}`}>
       {variant !== 'text' && <div className="news-card-art">
         <Link to={`/nyhet/${encodeURIComponent(article.slug)}`} className="news-card-image-link" aria-label={`${imageLabel}. Läs ${article.title}`}>
           <NewsVisual article={article} variant={variant === 'search' ? 'search' : 'card'} />
@@ -40,6 +39,6 @@ export function NewsCard({ article, onSave, saved = false, variant = 'standard' 
           </div>
         </footer>
       </div>
-    </motion.article>
+    </article>
   )
 }
