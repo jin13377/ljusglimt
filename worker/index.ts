@@ -826,6 +826,17 @@ export default {
         return env.ASSETS.fetch(new Request(new URL('/data/news.json', request.url), request))
       }
       if (path.startsWith('/api/')) return await handleApi(env, request)
+      if ((request.method === 'GET' || request.method === 'HEAD') && path.startsWith('/nyhet/')) {
+        let slug = ''
+        try {
+          slug = decodeURIComponent(path.slice('/nyhet/'.length))
+        } catch {
+          return env.ASSETS.fetch(request)
+        }
+        if (slug && !slug.includes('/')) {
+          return env.ASSETS.fetch(new Request(new URL(`/seo/articles/${encodeURIComponent(slug)}`, request.url), request))
+        }
+      }
       return env.ASSETS.fetch(request)
     } catch (error) {
       if (error instanceof Response) return error
