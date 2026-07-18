@@ -1,6 +1,7 @@
 import hashlib
 import importlib.util
 import json
+import re
 import tempfile
 import unittest
 from pathlib import Path
@@ -100,6 +101,43 @@ class FreeArticleVisualTests(unittest.TestCase):
             for category, marker in motif_markers.items():
                 self.assertIn(marker, payloads[list(motif_markers).index(category)])
             self.assertNotEqual(payloads[0], payloads[1])
+
+    def test_same_category_yields_distinct_images(self):
+        # Six articles in the SAME category must produce six DIFFERENT
+        # illustrations (varying palette, motif and composition), so the
+        # site does not look like it repeats one image per category.
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            items = []
+            for index in range(6):
+                article = self.article()
+                article["id"] = f"0123456789abcde{index}0123"
+                article["source_fingerprint"] = f"fedcba9876543210abc{index}"
+                article["category"] = "Natur"
+                items.append(article)
+            news = root / "news.json"
+            news.write_text(json.dumps({"items": items}), encoding="utf-8")
+            output = root / "images"
+            visuals.process(news, output)
+            saved = json.loads(news.read_text(encoding="utf-8"))["items"]
+            payloads = []
+            palettes = set()
+            for item in saved:
+                path = output / item["generated_image"]["url"].split("/")[-1]
+                payload = path.read_bytes()
+                self.assertNotIn(b"<text", payload.lower())
+                self.assertNotIn(b"<script", payload.lower())
+                payloads.append(payload)
+                # Capture which palette tint was used (the felt colour is the
+                # most visually distinct per-palette choice).
+                m = re.search(rb'data-palette="([\w-]+)"', payload)
+                if m:
+                    palettes.add(m.group(1).decode())
+            self.assertEqual(len(payloads), 6)
+            self.assertEqual(len(set(payloads)), 6, "same-category images must differ")
+            # With multiple palettes per category the set of palettes used
+            # across six articles should not collapse to a single one.
+            self.assertGreater(len(palettes), 1, "category should use more than one palette")
 
 
 if __name__ == "__main__":
