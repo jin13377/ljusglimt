@@ -16,7 +16,7 @@ function Avatar({ name, url, large = false }: { name: string; url?: string | nul
   return url ? <img className={`avatar ${large ? 'large' : ''}`} src={url} alt="" /> : <span className={`avatar fallback ${large ? 'large' : ''}`}>{initials}</span>
 }
 
-function ForumShell({ children, eyebrow = 'Ljusglimt forum', title = 'Kloka samtal i vänlig ton', description = 'Öppet att läsa. Medlemskap krävs för att skriva, följa och rapportera. AI-startinlägg är tydligt märkta.' }: { children: React.ReactNode; eyebrow?: string; title?: string; description?: string }) {
+function ForumShell({ children, eyebrow = 'Ljusglimt forum', title = 'Kloka samtal i vänlig ton', description = 'Öppet att läsa. Medlemskap krävs för att skriva, följa och rapportera.' }: { children: React.ReactNode; eyebrow?: string; title?: string; description?: string }) {
   return <><section className="forum-mast"><div className="page-wrap"><span className="eyebrow">{eyebrow}</span><h1>{title}</h1><p>{description}</p></div></section><div className="forum-page page-wrap">{children}</div></>
 }
 
@@ -139,8 +139,12 @@ export function ForumThreadPage() {
   </ForumShell>
 }
 
+export function forumRoleLabel(role?: string) {
+  return role === 'admin' ? 'Administratör' : role === 'moderator' ? 'Moderator' : role === 'ai' ? 'Ljusglimt' : 'Medlem'
+}
+
 function ForumPost({ title, body, author, createdAt, status, opening, index }: { title?: string; body: string; author: { name: string; avatarUrl?: string | null; memberSince?: string | null; role?: string }; createdAt: string; status: string; opening?: boolean; index?: number }) {
-  const role = author.role === 'admin' ? 'Administratör' : author.role === 'moderator' ? 'Moderator' : author.role === 'ai' ? 'AI-startinlägg' : 'Medlem'
+  const role = forumRoleLabel(author.role)
   return <article className={`forum-post ${status !== 'published' ? 'pending' : ''}`}><aside><Avatar name={author.name} url={author.avatarUrl} large /><strong>{author.name}</strong><span>{role}</span></aside><div><header><span>{opening ? 'Trådstart' : `Svar #${index}`}</span><time dateTime={createdAt}>{formatDate(createdAt, true)}</time></header>{status !== 'published' && <p className="pending-note">Inlägget väntar på granskning.</p>}{opening && <h2>{title}</h2>}<p>{body}</p></div></article>
 }
 

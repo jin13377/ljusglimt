@@ -230,7 +230,7 @@ const SEED_TOPICS: SeedTopic[] = [
   },
   {
     id: 'topic-forumregler', sectionId: 'sajtsnack', title: 'Välkommen – så håller vi forumet vänligt',
-    body: 'Var vänlig och saklig, skydda personuppgifter och länka källa vid faktapåståenden. Rapportera innehåll som behöver granskas i stället för att gå till personangrepp. Startinläggen är skrivna av Ljusglimt AI för att hjälpa samtalen komma igång.',
+    body: 'Var vänlig och saklig, skydda personuppgifter och länka källa vid faktapåståenden. Rapportera innehåll som behöver granskas i stället för att gå till personangrepp.',
     createdAt: '2026-07-07T08:00:00+02:00', pinned: true, locked: true, views: 88,
   },
 ]
@@ -314,7 +314,7 @@ async function ensureDatabase(env: Env) {
   schemaPromise = (async () => {
     try {
       const marker = await env.DB.prepare("SELECT value FROM app_meta WHERE key = 'schema_version'").first<{ value: string }>()
-      if (Number(marker?.value || 0) >= 2) return
+      if (Number(marker?.value || 0) >= 3) return
     } catch {
       // The first request creates the schema below.
     }
@@ -332,12 +332,12 @@ async function ensureDatabase(env: Env) {
     for (const topic of SEED_TOPICS) {
       await env.DB.prepare(`INSERT OR IGNORE INTO forum_topics
         (id, section_id, user_id, author_name, title, body, status, created_at, last_activity, views, pinned, locked)
-        VALUES (?, ?, NULL, 'Ljusglimt AI', ?, ?, 'published', ?, ?, ?, ?, ?)`)
+        VALUES (?, ?, NULL, 'Ljusglimt', ?, ?, 'published', ?, ?, ?, ?, ?)`)
         .bind(topic.id, topic.sectionId, topic.title, topic.body, topic.createdAt, topic.replies?.at(-1)?.createdAt || topic.createdAt, topic.views || 0, topic.pinned ? 1 : 0, topic.locked ? 1 : 0).run()
       for (const reply of topic.replies || []) {
         await env.DB.prepare(`INSERT OR IGNORE INTO forum_replies
           (id, topic_id, user_id, author_name, body, status, created_at)
-          VALUES (?, ?, NULL, 'Ljusglimt AI', ?, 'published', ?)`)
+          VALUES (?, ?, NULL, 'Ljusglimt', ?, 'published', ?)`)
           .bind(reply.id, topic.id, reply.body, reply.createdAt).run()
       }
     }
@@ -354,6 +354,12 @@ async function ensureDatabase(env: Env) {
     }
     await env.DB.exec('CREATE UNIQUE INDEX IF NOT EXISTS idx_users_google_sub ON users(google_sub);')
     await env.DB.prepare("INSERT OR REPLACE INTO app_meta (key, value) VALUES ('schema_version', '2')").run()
+
+    await env.DB.prepare("UPDATE forum_topics SET author_name = 'Ljusglimt' WHERE user_id IS NULL AND author_name = 'Ljusglimt AI'").run()
+    await env.DB.prepare("UPDATE forum_replies SET author_name = 'Ljusglimt' WHERE user_id IS NULL AND author_name = 'Ljusglimt AI'").run()
+    await env.DB.prepare("UPDATE forum_topics SET body = ? WHERE id = 'topic-forumregler'")
+      .bind(SEED_TOPICS.find((topic) => topic.id === 'topic-forumregler')?.body || '').run()
+    await env.DB.prepare("INSERT OR REPLACE INTO app_meta (key, value) VALUES ('schema_version', '3')").run()
   })().catch((error) => {
     schemaPromise = undefined
     throw error
