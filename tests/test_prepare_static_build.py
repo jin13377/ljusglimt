@@ -60,6 +60,10 @@ class PrepareStaticBuildTests(unittest.TestCase):
             self.assertEqual(result.returncode, 0, result.stderr)
             article_path = output / "seo" / "articles" / f"{SEED_SLUG}.html"
             self.assertTrue(article_path.is_file())
+            manifest_path = output / "seo" / "article-slugs.json"
+            self.assertTrue(manifest_path.is_file())
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            self.assertEqual(manifest, [SEED_SLUG])
             article_html = article_path.read_text(encoding="utf-8")
             self.assertIn("<h1>En säker &lt;nyhet&gt;</h1>", article_html)
             self.assertIn(f'<link rel="canonical" href="{ARTICLE_URL}">', article_html)

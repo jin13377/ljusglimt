@@ -818,6 +818,46 @@ async function handleApi(env: Env, request: Request) {
   return json({ error: 'API-adressen finns inte.' }, 404)
 }
 
+async function knownArticleSlugs(env: Env, request: Request): Promise<Set<string> | null> {
+  try {
+    const response = await env.ASSETS.fetch(new Request(new URL('/seo/article-slugs.json', request.url)))
+    if (!response.ok) return null
+    const value = await response.json()
+    if (!Array.isArray(value) || value.some((slug) => typeof slug !== 'string' || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug))) return null
+    return new Set(value)
+  } catch {
+    return null
+  }
+}
+
+async function articleError(env: Env, request: Request, status: 404 | 503): Promise<Response> {
+  let html = '<!doctype html><html lang="sv"><head><title>Ljusglimt</title><meta name="description" content="Ljusglimt"></head><body><div id="root"></div></body></html>'
+  let headers = new Headers()
+  try {
+    const shellResponse = await env.ASSETS.fetch(new Request(new URL('/', request.url)))
+    headers = new Headers(shellResponse.headers)
+    if (shellResponse.ok) html = await shellResponse.text()
+  } catch {
+    // The minimal shell below keeps error responses HTML-only even if all assets are unavailable.
+  }
+  const unavailable = status === 503
+  html = html.replace(/<title>[\s\S]*?<\/title>/i, `<title>${unavailable ? 'Nyheterna kan inte nås just nu' : 'Nyheten finns inte'} – Ljusglimt</title>`)
+  html = html.replace(/<meta\s+name=["']description["'][^>]*>/i, `<meta name="description" content="${unavailable ? 'Ljusglimts nyheter kan inte nås just nu. Försök igen om en stund.' : 'Den här nyheten finns inte på Ljusglimt.'}">`)
+  html = html.replace(/<link\s+rel=["']canonical["'][^>]*>\s*/i, '')
+  const robots = '<meta name="robots" content="noindex, nofollow">'
+  html = /<meta\s+name=["']robots["'][^>]*>/i.test(html)
+    ? html.replace(/<meta\s+name=["']robots["'][^>]*>/i, robots)
+    : html.replace('</head>', `${robots}\n</head>`)
+
+  headers.set('content-type', 'text/html; charset=UTF-8')
+  headers.set('cache-control', 'no-store')
+  headers.delete('content-encoding')
+  headers.delete('content-length')
+  headers.delete('etag')
+  if (unavailable) headers.set('retry-after', '60')
+  return new Response(request.method === 'HEAD' ? null : html, { status, statusText: unavailable ? 'Service Unavailable' : 'Not Found', headers })
+}
+
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     try {
@@ -833,7 +873,10 @@ export default {
         } catch {
           return env.ASSETS.fetch(request)
         }
-        if (slug && !slug.includes('/')) {
+        if (slug && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) {
+          const knownSlugs = await knownArticleSlugs(env, request)
+          if (!knownSlugs) return articleError(env, request, 503)
+          if (!knownSlugs.has(slug)) return articleError(env, request, 404)
           return env.ASSETS.fetch(new Request(new URL(`/seo/articles/${encodeURIComponent(slug)}`, request.url), request))
         }
       }
