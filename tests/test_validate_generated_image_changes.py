@@ -54,12 +54,12 @@ class GeneratedImageValidationTests(unittest.TestCase):
         self.image_path.write_bytes(payload)
         return payload
 
-    def valid_ai_image(self, payload=VALID_WEBP):
+    def valid_ai_image(self, payload=VALID_WEBP, model="gpt-image-2", prompt_version="editorial-concept-v1"):
         return {
             "url": f"/news-images/ai/articles/{self.filename}",
             "alt": "Redaktionell AI-illustration om en positiv nyhet.",
-            "model": "gpt-image-2",
-            "prompt_version": "editorial-concept-v1",
+            "model": model,
+            "prompt_version": prompt_version,
             "source_fingerprint": self.fingerprint,
             "width": 1280,
             "height": 848,
@@ -141,22 +141,20 @@ class GeneratedImageValidationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "exactly the approved fields"):
             validator.validate_generated_image_changes(before, after, self.article_dir)
 
-    def test_rejects_wrong_fixed_metadata(self):
+    def test_accepts_cloudflare_generator_metadata(self):
         self.write_image()
-        cases = {
-            "model": "gpt-image-1",
-            "prompt_version": "other-v1",
-            "source_fingerprint": "0" * 20,
-            "width": 1024,
-            "height": True,
-            "generated_at": "2026-07-15 00:00:00",
-        }
-        for field, value in cases.items():
-            with self.subTest(field=field):
-                after = self.changed_document()
-                after["items"][0]["ai_image"][field] = value
-                with self.assertRaises(ValueError):
-                    validator.validate_generated_image_changes(self.before, after, self.article_dir)
+        after = deepcopy(self.before)
+        after["items"][0]["ai_image"] = self.valid_ai_image(
+            model="cf-lucid-origin", prompt_version="cf-editorial-photo-v1"
+        )
+        validator.validate_generated_image_changes(self.before, after, self.article_dir)
+
+    def test_rejects_unknown_generator_model(self):
+        self.write_image()
+        after = self.changed_document()
+        after["items"][0]["ai_image"]["model"] = "unknown-model"
+        with self.assertRaises(ValueError):
+            validator.validate_generated_image_changes(self.before, after, self.article_dir)
 
     def test_rejects_image_for_non_public_article(self):
         self.write_image()

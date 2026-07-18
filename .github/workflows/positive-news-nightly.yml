@@ -32,6 +32,12 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install image-generation dependencies
+        shell: bash
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
       - name: Fetch and rank allowlisted RSS news
         shell: bash
         run: |
@@ -91,6 +97,39 @@ jobs:
             echo "Manual image generation was not enabled."
           fi
 
+      - name: Check optional Cloudflare Workers AI secret
+        id: cloudflare
+        shell: bash
+        env:
+          CF_TOKEN: ${{ secrets.CF_IMAGE_API_TOKEN }}
+          CF_ACCOUNT: ${{ secrets.CF_ACCOUNT_ID }}
+        run: |
+          if [ -n "$CF_TOKEN" ]; then
+            echo "cf_available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "cf_available=false" >> "$GITHUB_OUTPUT"
+            echo "CF_IMAGE_API_TOKEN is missing; Cloudflare image generation is skipped."
+          fi
+
+      - name: Generate article illustrations via Cloudflare Workers AI
+        if: steps.cloudflare.outputs.cf_available == 'true'
+        shell: bash
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_IMAGE_API_TOKEN: ${{ secrets.CF_IMAGE_API_TOKEN }}
+        run: |
+          cp data/news.json "$RUNNER_TEMP/news-before-cf.json"
+          set +e
+          python scripts/generate_cf_article_images.py \
+            --news data/news.json \
+            --output-dir public/news-images/ai/articles \
+            --max-images 3
+          generator_status=$?
+          set -e
+          if [ "$generator_status" -ne 0 ]; then
+            echo "No Cloudflare article image was generated; the site keeps its local category fallback."
+          fi
+
       - name: Generate source-bound article illustrations
         if: steps.openai.outputs.images_available == 'true' && steps.openai.outputs.images_enabled == 'true'
         shell: bash
@@ -114,7 +153,7 @@ jobs:
           fi
 
       - name: Validate and commit article illustrations only
-        if: steps.openai.outputs.images_available == 'true' && steps.openai.outputs.images_enabled == 'true'
+        if: (steps.openai.outputs.images_available == 'true' && steps.openai.outputs.images_enabled == 'true') || steps.cloudflare.outputs.cf_available == 'true'
         shell: bash
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -135,13 +174,20 @@ jobs:
             exit 1
           fi
 
+          # Pick the right pre-generation snapshot: OpenAI or Cloudflare.
+          if [ -f "$RUNNER_TEMP/news-before-images.json" ]; then
+            BEFORE="$RUNNER_TEMP/news-before-images.json"
+          else
+            BEFORE="$RUNNER_TEMP/news-before-cf.json"
+          fi
+
           python scripts/validate_generated_image_changes.py \
-            --before "$RUNNER_TEMP/news-before-images.json" \
+            --before "$BEFORE" \
             --after data/news.json \
             --images-dir public/news-images/ai/articles \
             --max-changes 3
 
-          python - "$RUNNER_TEMP/news-before-images.json" data/news.json > "$RUNNER_TEMP/expected-image-paths.txt" <<'PY'
+          python - "$BEFORE" data/news.json > "$RUNNER_TEMP/expected-image-paths.txt" <<'PY'
           import json
           import sys
           from pathlib import Path
