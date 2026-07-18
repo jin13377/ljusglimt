@@ -220,6 +220,7 @@ export function normalizeFetched(item: RawFetchedNews): NewsArticle {
     url: item.url,
     origin: 'fetched',
     language,
+    sourceLanguage: item.language || 'und',
     excerptLanguage: agentSummary ? 'sv' : language,
     hasAgentSummary: Boolean(agentSummary),
     score: item.positivity_score || 0,
@@ -246,6 +247,7 @@ export function normalizeSeed(item: RawSeedNews): NewsArticle {
     url: item.source.url,
     origin: 'demo',
     language: 'sv',
+    sourceLanguage: 'und',
     excerptLanguage: 'sv',
     hasAgentSummary: false,
     score: 0,
@@ -279,8 +281,8 @@ export interface NewsCollection {
   warning: string
 }
 
-const DAILY_HERO_WINDOW_DAYS = 45
-const DAILY_HERO_CANDIDATE_LIMIT = 10
+const DAILY_HERO_FRESH_DAYS = 7
+const DAILY_HERO_CANDIDATE_LIMIT = 3
 
 function stockholmDateParts(date: Date): { year: number; month: number; day: number } {
   const parts = new Intl.DateTimeFormat('en-CA', {
@@ -301,7 +303,7 @@ export function selectDailyHero(articles: NewsArticle[], now = new Date()): News
 
   const { year, month, day } = stockholmDateParts(now)
   const stockholmDay = Date.UTC(year, month - 1, day)
-  const oldestPreferred = stockholmDay - DAILY_HERO_WINDOW_DAYS * 86_400_000
+  const oldestFresh = stockholmDay - DAILY_HERO_FRESH_DAYS * 86_400_000
   const eligible = articles
     .filter((article) => article.origin === 'fetched'
       && article.language === 'sv'
@@ -310,12 +312,32 @@ export function selectDailyHero(articles: NewsArticle[], now = new Date()): News
       && Date.parse(article.publishedAt) < stockholmDay + 86_400_000)
     .sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt))
 
-  const recent = eligible.filter((article) => Date.parse(article.publishedAt) >= oldestPreferred)
-  const candidates = (recent.length > 0 ? recent : eligible).slice(0, DAILY_HERO_CANDIDATE_LIMIT)
+  const fresh = eligible.filter((article) => Date.parse(article.publishedAt) >= oldestFresh)
+  const candidates = (fresh.length > 0 ? fresh : eligible).slice(0, DAILY_HERO_CANDIDATE_LIMIT)
   if (candidates.length === 0) return fallback
 
+  const swedishCandidates = candidates.filter((article) => article.sourceLanguage.toLocaleLowerCase().startsWith('sv'))
+  const dailyPool = swedishCandidates.length > 0 ? swedishCandidates : candidates
   const dayNumber = Math.floor(stockholmDay / 86_400_000)
-  return candidates[dayNumber % candidates.length]
+  return dailyPool[dayNumber % dailyPool.length]
+}
+
+export function selectFetchedHighlights(articles: NewsArticle[], heroId?: string): NewsArticle[] {
+  return articles
+    .filter((article) => article.origin === 'fetched'
+      && article.category !== 'Djur'
+      && article.id !== heroId
+      && article.sourceLanguage.toLocaleLowerCase().startsWith('sv'))
+    .slice(0, 6)
+}
+
+export function selectWorldHighlights(articles: NewsArticle[], heroId?: string): NewsArticle[] {
+  return articles
+    .filter((article) => article.origin === 'fetched'
+      && article.category !== 'Djur'
+      && article.id !== heroId
+      && !article.sourceLanguage.toLocaleLowerCase().startsWith('sv'))
+    .slice(0, 3)
 }
 
 async function fetchJson<T>(path: string, options?: RequestInit): Promise<T | null> {

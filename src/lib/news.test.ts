@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { fetchNews, inferCategory, isSuitableForPublicFeed, normalizeFetched, normalizeSeed, selectDailyHero } from './news'
+import { fetchNews, inferCategory, isSuitableForPublicFeed, normalizeFetched, normalizeSeed, selectDailyHero, selectFetchedHighlights, selectWorldHighlights } from './news'
 
 afterEach(() => { vi.unstubAllGlobals() })
 
@@ -102,6 +102,50 @@ describe('news normalizer', () => {
 
     expect(laterSameDay?.id).toBe(first?.id)
     expect(nextDay?.id).not.toBe(first?.id)
+  })
+
+  it('chooses the daily hero only from the three newest approved stories', () => {
+    const stories = [
+      normalizeFetched({ id: 'fresh-a', title: 'A', display_title_sv: 'Nyhet A', agent_summary: 'Svensk sammanfattning A.', published_at: '2026-07-16T08:00:00Z', url: 'https://example.com/a', source: 'Källa', public_eligible: true }),
+      normalizeFetched({ id: 'fresh-b', title: 'B', display_title_sv: 'Nyhet B', agent_summary: 'Svensk sammanfattning B.', published_at: '2026-07-15T08:00:00Z', url: 'https://example.com/b', source: 'Källa', public_eligible: true }),
+      normalizeFetched({ id: 'fresh-c', title: 'C', display_title_sv: 'Nyhet C', agent_summary: 'Svensk sammanfattning C.', published_at: '2026-07-14T08:00:00Z', url: 'https://example.com/c', source: 'Källa', public_eligible: true }),
+      normalizeFetched({ id: 'older-d', title: 'D', display_title_sv: 'Nyhet D', agent_summary: 'Svensk sammanfattning D.', published_at: '2026-07-13T08:00:00Z', url: 'https://example.com/d', source: 'Källa', public_eligible: true }),
+    ]
+
+    const hero = selectDailyHero(stories, new Date('2026-07-17T08:00:00Z'))
+
+    expect(['fresh-a', 'fresh-b', 'fresh-c']).toContain(hero?.id)
+  })
+
+  it('prefers approved stories published within the last seven days', () => {
+    const stories = [
+      normalizeFetched({ id: 'within-week', title: 'Fresh', display_title_sv: 'Färsk nyhet', agent_summary: 'En färsk svensk sammanfattning.', published_at: '2026-07-18T08:00:00Z', url: 'https://example.com/fresh', source: 'Källa', public_eligible: true }),
+      normalizeFetched({ id: 'stale-a', title: 'Stale A', display_title_sv: 'Äldre nyhet A', agent_summary: 'En äldre svensk sammanfattning.', published_at: '2026-07-05T08:00:00Z', url: 'https://example.com/stale-a', source: 'Källa', public_eligible: true }),
+      normalizeFetched({ id: 'stale-b', title: 'Stale B', display_title_sv: 'Äldre nyhet B', agent_summary: 'En äldre svensk sammanfattning.', published_at: '2026-07-04T08:00:00Z', url: 'https://example.com/stale-b', source: 'Källa', public_eligible: true }),
+    ]
+
+    expect(selectDailyHero(stories, new Date('2026-07-19T08:00:00Z'))?.id).toBe('within-week')
+  })
+
+  it('prefers a fresh Swedish original source for the daily hero', () => {
+    const swedish = normalizeFetched({ id: 'swedish', title: 'Svensk originalnyhet', source_excerpt: 'Ett svenskt forskningsframsteg.', language: 'sv', published_at: '2026-07-16T08:00:00Z', url: 'https://example.se/svensk', source: 'Svensk källa', public_eligible: true })
+    const international = normalizeFetched({ id: 'international', title: 'International progress', display_title_sv: 'Internationellt framsteg', agent_summary: 'En svensk sammanfattning.', language: 'en', published_at: '2026-07-15T08:00:00Z', url: 'https://example.com/world', source: 'International source', public_eligible: true })
+
+    expect(selectDailyHero([swedish, international], new Date('2026-07-17T08:00:00Z'))?.id).toBe('swedish')
+  })
+
+  it('keeps the daily hero out of the fresh-news section', () => {
+    const hero = normalizeFetched({ id: 'hero', title: 'Hero', display_title_sv: 'Huvudnyhet', agent_summary: 'Svensk sammanfattning.', language: 'sv', published_at: '2026-07-18T08:00:00Z', url: 'https://example.com/hero', source: 'Källa', public_eligible: true })
+    const next = normalizeFetched({ id: 'next', title: 'Next', display_title_sv: 'Nästa nyhet', agent_summary: 'Svensk sammanfattning.', language: 'sv', published_at: '2026-07-17T08:00:00Z', url: 'https://example.com/next', source: 'Källa', public_eligible: true })
+
+    expect(selectFetchedHighlights([hero, next], hero.id).map((article) => article.id)).toEqual(['next'])
+  })
+
+  it('collects only international original sources in the world section', () => {
+    const swedish = normalizeFetched({ id: 'swedish', title: 'Svensk nyhet', source_excerpt: 'Ett svenskt framsteg.', language: 'sv', published_at: '2026-07-18T08:00:00Z', url: 'https://example.se/svensk', source: 'Svensk källa', public_eligible: true })
+    const world = normalizeFetched({ id: 'world', title: 'World progress', display_title_sv: 'Framsteg i världen', agent_summary: 'En svensk sammanfattning.', language: 'en', published_at: '2026-07-17T08:00:00Z', url: 'https://example.com/world', source: 'International source', public_eligible: true })
+
+    expect(selectWorldHighlights([swedish, world]).map((article) => article.id)).toEqual(['world'])
   })
 
   it('uses the featured source summary when no suitable fetched hero exists', () => {

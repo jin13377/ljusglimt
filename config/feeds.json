@@ -59,7 +59,7 @@
       "url": "https://forskning.se/feed/",
       "language": "sv",
       "category": "Vetenskap",
-      "base_score": 2,
+      "base_score": 5,
       "max_items": 10,
       "max_age_days": 180,
       "image_policy": {
@@ -76,9 +76,79 @@
       "url": "https://www.esa.int/rssfeed/Sweden",
       "language": "sv",
       "category": "Rymden",
-      "base_score": 2,
+      "base_score": 5,
       "max_items": 8,
       "max_age_days": 180,
+      "enabled": true
+    },
+    {
+      "name": "Natursidan",
+      "url": "https://www.natursidan.se/feed/",
+      "language": "sv",
+      "category": "Natur",
+      "base_score": 5,
+      "max_items": 8,
+      "max_age_days": 90,
+      "enabled": true
+    },
+    {
+      "name": "Extrakt",
+      "url": "https://www.extrakt.se/feed/",
+      "language": "sv",
+      "category": "Miljö",
+      "base_score": 5,
+      "max_items": 8,
+      "max_age_days": 90,
+      "enabled": true
+    },
+    {
+      "name": "Forskning & Framsteg",
+      "url": "https://fof.se/feed/",
+      "language": "sv",
+      "category": "Vetenskap",
+      "base_score": 5,
+      "max_items": 8,
+      "max_age_days": 90,
+      "enabled": true
+    },
+    {
+      "name": "Karolinska Institutet",
+      "url": "https://nyheter.ki.se/latest-news/rss.xml",
+      "language": "sv",
+      "category": "Hälsa",
+      "base_score": 5,
+      "max_items": 8,
+      "max_age_days": 90,
+      "enabled": true
+    },
+    {
+      "name": "Vetenskap & hälsa",
+      "url": "https://www.vetenskaphalsa.se/feed/",
+      "language": "sv",
+      "category": "Hälsa",
+      "base_score": 5,
+      "max_items": 8,
+      "max_age_days": 90,
+      "enabled": true
+    },
+    {
+      "name": "Viable Cities",
+      "url": "https://viablecities.se/feed/",
+      "language": "sv",
+      "category": "Samhälle",
+      "base_score": 5,
+      "max_items": 8,
+      "max_age_days": 90,
+      "enabled": true
+    },
+    {
+      "name": "Mötesplats Social Innovation",
+      "url": "https://socialinnovation.se/feed/",
+      "language": "sv",
+      "category": "Innovation",
+      "base_score": 5,
+      "max_items": 8,
+      "max_age_days": 90,
       "enabled": true
     },
     {
@@ -118,14 +188,20 @@
     "återhämtning", "bevara", "elever", "experiment", "firar", "forskning",
     "framsteg", "förbättrar", "förebygga", "glädje", "hjälper", "hopp",
     "innovation", "lägre risk", "lösning", "lovande", "ny metod", "ny teknik",
-    "räddad", "rekord", "samarbete", "skydda", "stärker", "upptäckt"
+    "räddad", "rekord", "samarbete", "skydda", "stärker", "upptäckt",
+    "anslag", "beviljats", "hållbar", "omställning", "delaktighet", "initiativ", "satsning"
   ],
   "blocked_keywords": [
     "abuse", "assault", "bomb", "death", "earthquake", "fraud", "killed",
     "abandoned", "conflict", "gasping", "harassment", "injured", "locked away", "lost back legs", "mange", "mangled", "murder", "onlyfans", "scared", "shooting", "sick", "stroke", "stuck in", "terrified", "trafficking", "traumatized",
     "terror", "violence", "war", "övergrepp", "bomb", "död",
-    "jordbävning", "krig", "mord", "skjutning", "terror"
+    "jordbävning", "krig", "mord", "skjutning", "terror", "katastrof", "hotar", "försvagade"
   ],
+  "language_mix": {
+    "enabled": true,
+    "primary_language": "sv",
+    "primary_share": 0.7
+  },
   "minimum_score": 2,
   "max_items": 48,
   "retain_localized_per_source": 6,

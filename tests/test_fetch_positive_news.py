@@ -53,6 +53,17 @@ class PositiveNewsTests(unittest.TestCase):
         self.assertEqual(items[0]["url"], "https://example.com/story?keep=1")
         self.assertEqual(items[0]["source"], "Example")
 
+    def test_rss_parse_supports_nested_titles_and_swedish_dates(self):
+        xml = """<rss><channel><item><title><a>Ny behandling ger hopp</a></title>
+        <link>https://example.se/ny-behandling</link>
+        <description>Forskningen visar en lovande förbättring.</description>
+        <pubDate>15 jul 2026</pubDate></item></channel></rss>""".encode()
+
+        item = news.parse_feed(xml, "Svensk forskningskälla", "sv")[0]
+
+        self.assertEqual(item["title"], "Ny behandling ger hopp")
+        self.assertEqual(item["published_at"], "2026-07-15T00:00:00Z")
+
     def test_rss_source_image_requires_explicit_policy_host_credit_and_license(self):
         xml = b"""<rss xmlns:media="http://search.yahoo.com/mrss/">
         <channel><item><title>Community rescue success</title>
@@ -227,6 +238,19 @@ class PositiveNewsTests(unittest.TestCase):
         item = {"title": "Magazine subscription update", "source_excerpt": "Read our latest issue", "source_tier_bonus": 2}
         score, _ = news.score_item(item, ["community", "progress"], [])
         self.assertEqual(score, 0)
+
+    def test_language_mix_targets_seventy_percent_swedish_sources(self):
+        ranked = [
+            {"id": f"sv-{index}", "language": "sv"} for index in range(8)
+        ] + [
+            {"id": f"en-{index}", "language": "en"} for index in range(4)
+        ]
+
+        selected = news.apply_language_mix(ranked, 10, "sv", 0.70)
+
+        self.assertEqual(len(selected), 10)
+        self.assertEqual(sum(item["language"] == "sv" for item in selected), 7)
+        self.assertEqual(sum(item["language"] == "en" for item in selected), 3)
 
     def test_public_eligible_matches_frontend_rules(self):
         cases = (

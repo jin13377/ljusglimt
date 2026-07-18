@@ -42,12 +42,12 @@ ALLOWED_IMAGE_LICENSES = {
     "https://creativecommons.org/licenses/by/4.0/": "CC-BY-4.0",
 }
 SENSITIVE_CANDIDATE_RE = re.compile(
-    r"\b(?:abandon(?:ed|ment)?|abuse|anxiety|assault|backlash|blood|bloody|bomb|chronic loneliness|closing|conflict|criticiz(?:e|ed|es|ing)|crush(?:ed|ing)?|death|desperat(?:e|ely)|distress(?:ed|ing)?|earthquake|extinct(?:ion)?|extremism|fraud|gasp(?:ing)?|harass(?:ment|ed|ing)?|harrowing|hooks? in|injur(?:ed|y|ies)|killed|loathe|locked away|lost (?:a |both |back )?legs?|mange|mangled|missing flipper|murder|onlyfans|revok(?:e|ed|es|ing)|scared|shooting|shocked|sick|stranded|strangl(?:e|ed|es|ing)|stroke|stuck in|terror|terrified|threaten(?:ed|ing)?|traffick(?:ing|ed)?|trap(?:ped)?|traumatized|treatment center|unable to move|violence|war|bomb|död(?:a|ade)?|jordbävning|krig|mord|skjutning|terror|övergrepp)\b",
+    r"\b(?:abandon(?:ed|ment)?|abuse|anxiety|assault|backlash|blood|bloody|bomb|chronic loneliness|closing|conflict|criticiz(?:e|ed|es|ing)|crush(?:ed|ing)?|death|desperat(?:e|ely)|distress(?:ed|ing)?|earthquake|extinct(?:ion)?|extremism|fraud|gasp(?:ing)?|harass(?:ment|ed|ing)?|harrowing|hooks? in|injur(?:ed|y|ies)|killed|loathe|locked away|lost (?:a |both |back )?legs?|mange|mangled|missing flipper|murder|onlyfans|revok(?:e|ed|es|ing)|scared|shooting|shocked|sick|stranded|strangl(?:e|ed|es|ing)|stroke|stuck in|terror|terrified|threaten(?:ed|ing)?|traffick(?:ing|ed)?|trap(?:ped)?|traumatized|treatment center|unable to move|violence|war|bomb|död(?:a|ade)?|jordbävning|katastrof|krig|mord|skjutning|terror|hotar|försvagade|övergrepp)\b",
     re.IGNORECASE,
 )
 FEED_NOISE_RE = re.compile(r"\b(?:appeared first on|share the stories)\b", re.IGNORECASE)
 POSITIVE_CANDIDATE_RE = re.compile(
-    r"\b(?:achiev(?:e|ed|ement)|adopt(?:ed|ion)?|adorable|award(?:ed|s)?|best friend|birth|breakthrough|celebrat(?:e|ed|es|ing|ion)|conservation(?:ist|ists)?|cuddl(?:e|ed|es|ing|y)|discov(?:er|ered|ery)|free(?:d|ing)?|friend(?:s|ship)?|help(?:s|ed|ing)?|hope(?:ful)?|improv(?:e|ed|ement)|innovation|kitten(?:s)?|lov(?:e|ed|es|ing)|milestone|play(?:s|ed|ing|ful)?|priceless|protect(?:s|ed|ing|ion)?|pupp(?:y|ies)|recover(?:ed|y)|rescu(?:e|ed|es|ing)|restor(?:e|ed|es|ing|ation)|save(?:d|s|ing)?|second chance|smooth(?:er|est)|solv(?:e|ed|es|ing)|spoil(?:s|ed|ing)?|success(?:ful)?|surpris(?:e|ed|es|ing)|together|treat(?:s|ed|ing)?|volunteer(?:s|ed|ing)?|win(?:s|ning)?|bevara|elev(?:er)?|firar|framsteg|förbättr(?:a|ar|ad|ats)|förebygg(?:a|er|ande)|glädje|hjälp(?:a|er|te)|hopp|innovation|lägre risk|lösning(?:ar)?|lovande|ny metod|ny teknik|rekord|räddad|samarbete|skydda|stärk(?:a|er|t)|upptäckt|utbildning)\b",
+    r"\b(?:achiev(?:e|ed|ement)|adopt(?:ed|ion)?|adorable|award(?:ed|s)?|best friend|birth|breakthrough|celebrat(?:e|ed|es|ing|ion)|conservation(?:ist|ists)?|cuddl(?:e|ed|es|ing|y)|discov(?:er|ered|ery)|free(?:d|ing)?|friend(?:s|ship)?|help(?:s|ed|ing)?|hope(?:ful)?|improv(?:e|ed|ement)|innovation|kitten(?:s)?|lov(?:e|ed|es|ing)|milestone|play(?:s|ed|ing|ful)?|priceless|protect(?:s|ed|ing|ion)?|pupp(?:y|ies)|recover(?:ed|y)|rescu(?:e|ed|es|ing)|restor(?:e|ed|es|ing|ation)|save(?:d|s|ing)?|second chance|smooth(?:er|est)|solv(?:e|ed|es|ing)|spoil(?:s|ed|ing)?|success(?:ful)?|surpris(?:e|ed|es|ing)|together|treat(?:s|ed|ing)?|volunteer(?:s|ed|ing)?|win(?:s|ning)?|bevara|elev(?:er)?|firar|framsteg|förbättr(?:a|ar|ad|ats)|förebygg(?:a|er|ande)|glädje|hjälp(?:a|er|te)|hopp|innovation|lägre risk|lösning(?:ar)?|lovande|ny metod|ny teknik|rekord|räddad|samarbete|skydda|stärk(?:a|er|t)|anslag|beviljats|delaktighet|hållbar|initiativ|omställning|satsning|upptäckt|utbildning)\b",
     re.IGNORECASE,
 )
 AI_IMAGE_KEYS = {
@@ -499,6 +499,16 @@ def parse_date(value: str | None) -> str | None:
     if not value:
         return None
     value = value.strip()
+    swedish_months = {
+        "jan": 1, "feb": 2, "mar": 3, "apr": 4, "maj": 5, "jun": 6,
+        "jul": 7, "aug": 8, "sep": 9, "okt": 10, "nov": 11, "dec": 12,
+    }
+    swedish_date = re.fullmatch(r"(\d{1,2})\s+([a-zåäö]{3})\s+(\d{4})", value.casefold())
+    if swedish_date and swedish_date.group(2) in swedish_months:
+        return datetime(
+            int(swedish_date.group(3)), swedish_months[swedish_date.group(2)],
+            int(swedish_date.group(1)), tzinfo=timezone.utc,
+        ).isoformat().replace("+00:00", "Z")
     try:
         dt = parsedate_to_datetime(value)
     except (TypeError, ValueError, OverflowError):
@@ -514,8 +524,10 @@ def parse_date(value: str | None) -> str | None:
 def first_text(node: ET.Element, names: tuple[str, ...]) -> str:
     for child in node.iter():
         local = child.tag.rsplit("}", 1)[-1].casefold()
-        if local in names and child.text:
-            return child.text
+        if local in names:
+            text = "".join(child.itertext()).strip()
+            if text:
+                return text
     return ""
 
 
@@ -651,6 +663,23 @@ def score_item(item: dict, positive: list[str], blocked: list[str]) -> tuple[int
     score = (source_bonus if hits else 0) + len(hits) + sum(1 for word in hits if word.casefold() in title)
     reasons = (["curated-positive-source"] if source_bonus else []) + hits
     return score, reasons
+
+
+def apply_language_mix(ranked: list[dict], limit: int, primary_language: str,
+                       primary_share: float) -> list[dict]:
+    """Keep a ranked feed near the configured original-source language mix."""
+    if limit < 1:
+        return []
+    target_primary = min(limit, max(0, int(limit * primary_share + 0.5)))
+    language = primary_language.casefold()
+    primary = [item for item in ranked if str(item.get("language") or "und").casefold().startswith(language)]
+    secondary = [item for item in ranked if item not in primary]
+    selected = primary[:target_primary] + secondary[:limit - target_primary]
+    if len(selected) < limit:
+        selected_ids = {id(item) for item in selected}
+        selected.extend(item for item in ranked if id(item) not in selected_ids)
+    selected_ids = {id(item) for item in selected[:limit]}
+    return [item for item in ranked if id(item) in selected_ids][:limit]
 
 
 def atomic_json_write(path: Path, data: object) -> None:
@@ -845,7 +874,7 @@ def main(argv: list[str] | None = None) -> int:
     ranked = sorted(unique.values(), key=lambda x: (
         bool(x.get("public_eligible")), x["positivity_score"], x.get("published_at") or ""
     ), reverse=True)
-    items = []
+    source_capped = []
     source_counts: dict[str, int] = {}
     for item in ranked:
         source = item["source"]
@@ -853,9 +882,19 @@ def main(argv: list[str] | None = None) -> int:
         if source_counts.get(source, 0) >= limit:
             continue
         source_counts[source] = source_counts.get(source, 0) + 1
-        items.append(item)
-        if len(items) >= int(config.get("max_items", 48)):
-            break
+        source_capped.append(item)
+
+    max_items = int(config.get("max_items", 48))
+    language_mix = config.get("language_mix")
+    if isinstance(language_mix, dict) and language_mix.get("enabled") is True:
+        items = apply_language_mix(
+            source_capped,
+            max_items,
+            str(language_mix.get("primary_language", "sv")),
+            float(language_mix.get("primary_share", 0.70)),
+        )
+    else:
+        items = source_capped[:max_items]
     new_ids = [item["id"] for item in items if item["id"] not in seen_ids]
     for item in items:
         if item["id"] not in seen_ids:

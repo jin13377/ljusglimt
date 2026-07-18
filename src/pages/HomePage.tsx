@@ -1,11 +1,10 @@
 import { ArrowRight, Atom, Clock3, Database, HeartPulse, Leaf, Lightbulb, Newspaper, Palette, PawPrint, Quote, RefreshCw, ShieldCheck, Sparkles, Trees, Users } from 'lucide-react'
-import { motion } from 'framer-motion'
 import { Link, useNavigate } from 'react-router-dom'
 import { NewsCard, OriginBadge } from '../components/NewsCard'
 import { NewsletterForm } from '../components/NewsletterForm'
 import { NewsVisual } from '../components/NewsVisual'
 import { useSaved } from '../contexts/SavedContext'
-import { formatDate, selectDailyHero } from '../lib/news'
+import { formatDate, selectDailyHero, selectFetchedHighlights, selectWorldHighlights } from '../lib/news'
 import { useNews } from '../lib/useNews'
 import type { NewsArticle } from '../types'
 
@@ -18,7 +17,8 @@ export function HomePage() {
   const hero = selectDailyHero(data.articles)
   const demoHighlights = demos.filter((item) => item.id !== hero?.id).slice(0, 3)
   const animalStories = fetched.filter((item) => item.category === 'Djur' && item.image.kind === 'source').slice(0, 4)
-  const fetchedHighlights = fetched.filter((item) => item.category !== 'Djur').slice(0, 6)
+  const fetchedHighlights = selectFetchedHighlights(data.articles, hero?.id)
+  const worldHighlights = selectWorldHighlights(data.articles, hero?.id)
 
   const save = async (article: NewsArticle) => {
     if (await toggle(article) === 'login') navigate(`/profil?next=${encodeURIComponent('/')}`)
@@ -31,14 +31,19 @@ export function HomePage() {
     {data.warning && <div className="data-warning" role="status"><div className="page-wrap">{data.warning}</div></div>}
     <section className="hero page-wrap">
       <div className="hero-copy">
-        <motion.span className="eyebrow" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>Dagens ljusglimt</motion.span>
-        <motion.h1 initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }}>{hero?.title || 'Nyheter som gör världen lite större'}</motion.h1>
+        <span className="eyebrow">Dagens ljusglimt</span>
+        <h1>{hero?.title || 'Nyheter som gör världen lite större'}</h1>
         <p>{hero?.excerpt || 'Vi samlar framsteg och initiativ från tydligt märkta källor.'}</p>
         {hero && <><OriginBadge article={hero} /><div className="hero-meta"><span>{hero.category}</span>{hero.location && <span>{hero.location}</span>}<time dateTime={hero.publishedAt}>{formatDate(hero.publishedAt)}</time></div>
         <div className="hero-buttons"><Link className="button primary" to={`/nyhet/${encodeURIComponent(hero.slug)}`}>Läs sammanfattningen <ArrowRight size={18} /></Link><a className="button ghost" href={hero.url} target="_blank" rel="noreferrer">Öppna källsidan</a></div></>}
       </div>
       <div className="hero-art-wrap">{hero && <NewsVisual article={hero} variant="hero" priority showCaption />}</div>
     </section>
+
+    {fetchedHighlights.length > 0 && <section className="section fetched-news-section"><div className="page-wrap">
+      <header className="section-header"><div><span className="eyebrow">Färskt först</span><h2>Senast källhämtat</h2><p>De senaste godkända nyheterna visas först. Rubrik och sammanfattning måste finnas på svenska, och källsidan är alltid facit.</p></div><Link to="/sok?typ=fetched">Se alla källnotiser <ArrowRight size={16} /></Link></header>
+      <div className="news-grid editorial-news-grid">{fetchedHighlights.map((article, index) => <NewsCard key={article.id} article={article} variant={homeCardVariant(index)} onSave={save} saved={isSaved(article.id)} />)}</div>
+    </div></section>}
 
     <section className="trust-strip">
       <div className="page-wrap trust-grid">
@@ -49,16 +54,6 @@ export function HomePage() {
       </div>
     </section>
 
-    <section className="section page-wrap">
-      <header className="section-header"><div><span className="eyebrow">Källbelagda nyheter</span><h2>Svenska källsammanfattningar</h2><p>Korta svenska sammanfattningar med tydlig länk till originalkällan.</p></div><Link to="/sok?typ=sammanfattning">Visa alla sammanfattningar <ArrowRight size={16} /></Link></header>
-      <div className="news-grid editorial-news-grid">{demoHighlights.map((article, index) => <NewsCard key={article.id} article={article} variant={homeCardVariant(index)} onSave={save} saved={isSaved(article.id)} />)}</div>
-    </section>
-
-    {fetchedHighlights.length > 0 && <section className="section fetched-news-section"><div className="page-wrap">
-      <header className="section-header"><div><span className="eyebrow">Automatiskt flöde</span><h2>Senast källhämtat</h2><p>Nyheter från offentliga flöden visas först när rubrik och sammanfattning finns på svenska. Källsidan är alltid facit.</p></div><Link to="/sok?typ=fetched">Se alla källnotiser <ArrowRight size={16} /></Link></header>
-      <div className="news-grid editorial-news-grid">{fetchedHighlights.map((article, index) => <NewsCard key={article.id} article={article} variant={homeCardVariant(index)} onSave={save} saved={isSaved(article.id)} />)}</div>
-    </div></section>}
-
     {animalStories.length > 0 && <section className="section animal-section" id="djur"><div className="page-wrap">
       <header className="section-header"><div><span className="eyebrow">Djur som gör en glad</span><h2>Söta möten, vänskap och nya hem</h2><p>Här visar vi bara nyheter med en riktig bild från källans eget flöde. När källan erbjuder video kan du spela den direkt på nyhetssidan.</p></div><Link to="/sok?kategori=Djur">Se alla djurnyheter <ArrowRight size={16} /></Link></header>
       <div className="animal-showcase">
@@ -66,6 +61,16 @@ export function HomePage() {
         {animalStories.length > 1 && <div className="animal-rail">{animalStories.slice(1).map((article) => <NewsCard key={article.id} article={article} variant="compact" onSave={save} saved={isSaved(article.id)} />)}</div>}
       </div>
     </div></section>}
+
+    {worldHighlights.length > 0 && <section className="section world-news-section"><div className="page-wrap">
+      <header className="section-header"><div><span className="eyebrow">Internationellt komplement</span><h2>Ljusglimtar från världen</h2><p>Starka konstruktiva nyheter från internationella originalkällor, presenterade på svenska och alltid med länk till källan.</p></div><Link to="/sok?typ=fetched">Se alla källnotiser <ArrowRight size={16} /></Link></header>
+      <div className="news-grid editorial-news-grid">{worldHighlights.map((article, index) => <NewsCard key={article.id} article={article} variant={homeCardVariant(index)} onSave={save} saved={isSaved(article.id)} />)}</div>
+    </div></section>}
+
+    <section className="section page-wrap">
+      <header className="section-header"><div><span className="eyebrow">Ur arkivet</span><h2>Utvalda framsteg</h2><p>Äldre källbelagda sammanfattningar som fortfarande ger värdefullt perspektiv.</p></div><Link to="/sok?typ=sammanfattning">Visa alla utvalda framsteg <ArrowRight size={16} /></Link></header>
+      <div className="news-grid editorial-news-grid">{demoHighlights.map((article, index) => <NewsCard key={article.id} article={article} variant={homeCardVariant(index)} onSave={save} saved={isSaved(article.id)} />)}</div>
+    </section>
 
     <CategoryCompass />
 
