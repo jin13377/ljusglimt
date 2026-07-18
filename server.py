@@ -61,6 +61,7 @@ FORUM_STRUCTURE = (
         "sections": (
             ("lokalt-engagemang", "Lokalt engagemang", "Initiativ, föreningar och eldsjälar där du bor.", "⌂"),
             ("vardagsgladje", "Vardagsglädje", "Små segrar, vänlighet och sådant som gjorde dagen bättre.", "☺"),
+            ("djur-djurvanner", "Djur & djurvänner", "Glada djurnyheter, egna djur och människor som hjälper djur.", "🐾"),
             ("kultur-kreativitet", "Kultur & kreativitet", "Musik, film, spel, konst och skapande som inspirerar.", "✦"),
         ),
     },
@@ -76,7 +77,7 @@ FORUM_STRUCTURE = (
 )
 FORUM_CATEGORY_TO_SECTION = {
     "Vardagsglädje": "vardagsgladje", "Lokalt": "lokalt-engagemang",
-    "Goda idéer": "goda-ideer", "Nyheter": "dagens-nyheter",
+    "Djur": "djur-djurvanner", "Goda idéer": "goda-ideer", "Nyheter": "dagens-nyheter",
     "Miljö": "miljo-klimat", "Vetenskap": "vetenskap-teknik",
 }
 _rate_state: OrderedDict[tuple[str, str], float] = OrderedDict()

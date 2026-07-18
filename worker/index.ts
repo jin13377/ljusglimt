@@ -173,7 +173,8 @@ const SECTIONS = [
   ['halsa-liv', 'nyheter-framsteg', 'Hälsa & liv', 'Framsteg inom vård, folkhälsa och livskvalitet.', '❤️', 4],
   ['lokalt-engagemang', 'samhalle-vardag', 'Lokalt engagemang', 'Människor och föreningar som gör orten lite bättre.', '🏘️', 1],
   ['vardagsgladje', 'samhalle-vardag', 'Vardagsglädje', 'Små och stora händelser som gav dig energi.', '✨', 2],
-  ['kultur-kreativitet', 'samhalle-vardag', 'Kultur & kreativitet', 'Böcker, musik, spel, konst och egna projekt.', '🎨', 3],
+  ['djur-djurvanner', 'samhalle-vardag', 'Djur & djurvänner', 'Glada djurnyheter, egna djur och människor som hjälper djur.', '🐾', 3],
+  ['kultur-kreativitet', 'samhalle-vardag', 'Kultur & kreativitet', 'Böcker, musik, spel, konst och egna projekt.', '🎨', 4],
   ['presentationer', 'gemenskap', 'Presentationer', 'Ny här? Säg hej och berätta vad du gärna läser om.', '👋', 1],
   ['goda-ideer', 'gemenskap', 'Goda idéer', 'Idéer och samarbeten som kan skapa fler ljusglimtar.', '💡', 2],
   ['sajtsnack', 'gemenskap', 'Om Ljusglimt', 'Frågor, förslag och information om sajten och forumet.', '🧭', 3],
@@ -314,7 +315,7 @@ async function ensureDatabase(env: Env) {
   schemaPromise = (async () => {
     try {
       const marker = await env.DB.prepare("SELECT value FROM app_meta WHERE key = 'schema_version'").first<{ value: string }>()
-      if (Number(marker?.value || 0) >= 3) return
+      if (Number(marker?.value || 0) >= 4) return
     } catch {
       // The first request creates the schema below.
     }
@@ -360,6 +361,7 @@ async function ensureDatabase(env: Env) {
     await env.DB.prepare("UPDATE forum_topics SET body = ? WHERE id = 'topic-forumregler'")
       .bind(SEED_TOPICS.find((topic) => topic.id === 'topic-forumregler')?.body || '').run()
     await env.DB.prepare("INSERT OR REPLACE INTO app_meta (key, value) VALUES ('schema_version', '3')").run()
+    await env.DB.prepare("INSERT OR REPLACE INTO app_meta (key, value) VALUES ('schema_version', '4')").run()
   })().catch((error) => {
     schemaPromise = undefined
     throw error

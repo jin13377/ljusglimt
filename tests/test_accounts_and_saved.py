@@ -81,7 +81,9 @@ class AccountApiTests(unittest.TestCase):
         status, index, _ = self.request("GET", "/api/forum/index")
         self.assertEqual(status, 200)
         self.assertEqual(len(index["groups"]), 3)
-        self.assertEqual(sum(len(group["sections"]) for group in index["groups"]), 10)
+        sections = [section for group in index["groups"] for section in group["sections"]]
+        self.assertEqual(len(sections), 11)
+        self.assertIn("djur-djurvanner", {section["id"] for section in sections})
 
         status, section, _ = self.request("GET", "/api/forum/topics?section=lokalt-engagemang", cookie=cookie)
         self.assertEqual(status, 200)
