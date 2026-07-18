@@ -70,7 +70,7 @@ CATEGORY_PALETTE = {
     "Halsa": ("#9c2f4a", "#e07a94", "#fbd9e1", "#5e132b"),
     "Manniskor": ("#b5651e", "#e0a35b", "#f6e0c8", "#6e3a12"),
     "Djur": ("#2f5d3a", "#6aa55f", "#dff0cf", "#163a20"),
-    "Samhalle": ("#3a3f7a", "#6f74c2", "#d9defr", "#1f2456"),
+    "Samhalle": ("#3a3f7a", "#6f74c2", "#d9def0", "#1f2456"),
 }
 DEFAULT_PALETTE = ("#43506b", "#7a8aa0", "#e3e9f0", "#232b3f")
 
