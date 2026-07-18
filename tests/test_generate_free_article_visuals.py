@@ -70,6 +70,37 @@ class FreeArticleVisualTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "20 lowercase hex"):
                 visuals.process(news, root / "images")
 
+    def test_paper_collage_style_has_category_motifs(self):
+        motif_markers = {
+            "Natur": b'data-collage-motif="natur"',
+            "Teknik": b'data-collage-motif="teknik"',
+        }
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            items = []
+            for index, (category, _) in enumerate(motif_markers.items()):
+                article = self.article()
+                article["id"] = ["0123456789abcdef0123", "0123456789abcdef4567"][index]
+                article["category"] = category
+                items.append(article)
+            news = root / "news.json"
+            news.write_text(json.dumps({"items": items}), encoding="utf-8")
+            output = root / "images"
+            visuals.process(news, output)
+            saved = json.loads(news.read_text(encoding="utf-8"))["items"]
+            payloads = []
+            for item in saved:
+                path = output / item["generated_image"]["url"].split("/")[-1]
+                payload = path.read_bytes()
+                self.assertIn(b'data-collage-motif', payload)
+                self.assertIn(b"polygon", payload)
+                self.assertNotIn(b"<text", payload.lower())
+                self.assertNotIn(b"<script", payload.lower())
+                payloads.append(payload)
+            for category, marker in motif_markers.items():
+                self.assertIn(marker, payloads[list(motif_markers).index(category)])
+            self.assertNotEqual(payloads[0], payloads[1])
+
 
 if __name__ == "__main__":
     unittest.main()
