@@ -102,3 +102,20 @@ describe('article asset routing', () => {
     expect(requestedPaths).toEqual([path])
   })
 })
+
+describe('security headers', () => {
+  it.each([
+    '/',
+    '/nyhet/en-saker-slug',
+    '/nyhet/finns-inte',
+  ])('protects responses for %s', async (path) => {
+    const response = await worker.fetch(
+      new Request(`https://example.com${path}`),
+      createEnvironment([]) as never,
+    )
+
+    expect(response.headers.get('x-content-type-options')).toBe('nosniff')
+    expect(response.headers.get('referrer-policy')).toBe('strict-origin-when-cross-origin')
+    expect(response.headers.get('x-frame-options')).toBe('DENY')
+  })
+})

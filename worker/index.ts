@@ -858,7 +858,7 @@ async function articleError(env: Env, request: Request, status: 404 | 503): Prom
   return new Response(request.method === 'HEAD' ? null : html, { status, statusText: unavailable ? 'Service Unavailable' : 'Not Found', headers })
 }
 
-export default {
+const app = {
   async fetch(request: Request, env: Env): Promise<Response> {
     try {
       const path = new URL(request.url).pathname
@@ -886,5 +886,19 @@ export default {
       console.error('Ljusglimt Worker error', error)
       return json({ error: 'Något gick fel på servern. Försök igen om en stund.' }, 500)
     }
+  },
+}
+
+function withSecurityHeaders(response: Response): Response {
+  const secured = new Response(response.body, response)
+  secured.headers.set('x-content-type-options', 'nosniff')
+  secured.headers.set('referrer-policy', 'strict-origin-when-cross-origin')
+  secured.headers.set('x-frame-options', 'DENY')
+  return secured
+}
+
+export default {
+  async fetch(request: Request, env: Env): Promise<Response> {
+    return withSecurityHeaders(await app.fetch(request, env))
   },
 }
