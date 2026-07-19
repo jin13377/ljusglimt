@@ -194,6 +194,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "0d4a6aaa24295dc3742c74edbdd2b9257fa48a112d6b16e9b91710e6a0fbdf18"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/69b567f89e3aadd6d06c-3f16aae2-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Saida Hadjab får sitt andra anslag från Novo Nordisk-fonden för forskning om kronisk smärta",
+        "model": "comfyui-flux",
+        "prompt_version": "comfy-editorial-photo-v2",
+        "source_fingerprint": "69b567f89e3aadd6d06c3f16aae2",
+        "width": 1280,
+        "height": 848,
+        "sha256": "d1fcf73e1dd66383c3f75887a3cba81060551dec1aee942c097a0c44a0dff7ef",
+        "generated_at": "2026-07-19T12:30:00Z"
       }
     },
     {
@@ -224,6 +235,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "e7cb2b36e302fc6fdfcd657d4337f0d9e7bb6f9454dfd0a6e252b8ba15bd8617"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/8654f363eefda1bb5a59-c59008e0-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Björn Gysell donerar till forskning om framtidens behandlingar mot prostatacancer",
+        "model": "comfyui-flux",
+        "prompt_version": "comfy-editorial-photo-v2",
+        "source_fingerprint": "8654f363eefda1bb5a59c59008e0",
+        "width": 1280,
+        "height": 848,
+        "sha256": "9bcee216974d4ae2413555744fa9d4dc8cd197d7b9fdd8c2e3baf6fcbb45c79b",
+        "generated_at": "2026-07-19T12:30:00Z"
       }
     },
     {
@@ -254,6 +276,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "b0cd20dbb2c19d0f72547b8bccd12db07c3c05aee6fa271e90effe161bd5ad25"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/0581c7633c440d8b7c2e-87e71d6b-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: 20 år med ESERO: att föra rymden till miljontals elever",
+        "model": "comfyui-flux",
+        "prompt_version": "comfy-editorial-photo-v2",
+        "source_fingerprint": "0581c7633c440d8b7c2e87e71d6b",
+        "width": 1280,
+        "height": 848,
+        "sha256": "fdb47bbd44cd9803423955fdcae47b83d0ee73f02a6e839ef9e211386faee49b",
+        "generated_at": "2026-07-19T12:30:00Z"
       }
     },
     {
