@@ -64,6 +64,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "dc4a9fc3f4cdac3864d0ace3b962bb8638abd031697fd277a930ac538c46821f"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/0b87daf79218ce385c31-0b87daf79218ce385c31-v1.webp",
+        "alt": "Hållbar samhällsbyggnad behöver få plats i EUs nästa forskningsprogram",
+        "model": "comfyui-flux",
+        "prompt_version": "comfyui-flux-v1",
+        "source_fingerprint": "0b87daf79218ce385c31",
+        "width": 1280,
+        "height": 848,
+        "sha256": "11ae9e7a614ed3491fde7d304cdf39e9382d042efc64feee72174a1a6989e1f7",
+        "generated_at": "2026-07-19T16:47:46Z"
       }
     },
     {
