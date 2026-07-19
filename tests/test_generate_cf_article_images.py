@@ -141,7 +141,10 @@ class CfArticleImageTests(unittest.TestCase):
                 max_images=1, opener=fake_opener,
             )
             self.assertEqual(report.generated, 0)
+            # Rate limit on the single attempt -> 0 failed (not a real failure),
+            # 1 attempt used, rate error logged, whole run stopped
             self.assertEqual(report.failed, 0)
+            self.assertEqual(report.attempts, 1)
             self.assertTrue(any("rate" in e.lower() for e in report.errors))
 
 

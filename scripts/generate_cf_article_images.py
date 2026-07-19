@@ -55,11 +55,15 @@ WIDTH = 1280
 HEIGHT = 848
 STEPS = 6
 # One image per scheduled run. The Cloudflare Workers AI free tier has a
-# tight per-account rate quota; generating at most one image per night
-# spreads requests across many nights instead of burning the whole quota
-# on a single run (which also starves every other article).
+# tight per-account rate quota on text-to-image; generating at most one
+# image per night spreads requests across many nights instead of
+# burning the quota on a single run. We also make only ONE
+# API attempt per run: on the first 429 we stop immediately
+# (leaving every article on its local SVG fallback) and let tomorrow's
+# scheduled run retry. This keeps the quota free for the next night
+# instead of burning all attempts on a rate-limited account.
 MAX_IMAGES_PER_RUN = 1
-MAX_ATTEMPTS = 4
+MAX_ATTEMPTS = 1
 REQUEST_TIMEOUT_SECONDS = 120.0
 TOTAL_DEADLINE_SECONDS = 480.0
 MAX_RESPONSE_BYTES = 24 * 1024 * 1024
@@ -594,6 +598,10 @@ def process_news(
                         opener=opener, clock=clock, sleeper=sleeper,
                     )
                     break
+                except RateLimited:
+                    # Hard rate limit: stop the entire run immediately.
+                    # Do not try fallback models — they share the same quota.
+                    raise
                 except (ImageGenerationError, OSError, ValueError) as exc:
                     last_error = exc
                     # try next model in the chain (e.g. Lucid Origin -> Phoenix)
