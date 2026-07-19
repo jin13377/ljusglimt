@@ -355,6 +355,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "f88a3ae8e41db3efa74997bb6765f7186469861b26185851852cb47d1d225c95"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/6d39b13679ff7bb52ec1-5f39680c-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Glapp mellan policy och praktik för akademiskt samhällsengagemang",
+        "model": "comfyui-flux",
+        "prompt_version": "comfy-editorial-photo-v2",
+        "source_fingerprint": "5f39680c626caee72eca",
+        "width": 1280,
+        "height": 848,
+        "sha256": "9b26bc9cf9c9f7b306a807926167d5ed026b25f787f73a23f4dedf124bc639e4",
+        "generated_at": "2026-07-19T10:01:16Z"
       }
     },
     {
@@ -478,6 +489,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "2fd2514004f97836fd2922354a8d97640bbca3c463d7e3ad841f6c3c926a8254"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/e851322717ee40aea0bf-2e97fc9f-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Doktorand får stipendium för forskning om hur eksem påverkar skola och yrkesliv",
+        "model": "comfyui-flux",
+        "prompt_version": "comfy-editorial-photo-v2",
+        "source_fingerprint": "2e97fc9fbaa5a7bcbe78",
+        "width": 1280,
+        "height": 848,
+        "sha256": "849fc33bd64992fafbe8d1f7a557e8fa0dcdcf013950f403f25b49e560cd030d",
+        "generated_at": "2026-07-19T10:01:57Z"
       }
     },
     {
@@ -507,6 +529,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "36106207af61164122da041b3cb3e45d5333936cd6feb98c0851e0b5cca229b1"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/cd34fbfa5bab10217e66-f64a59b3-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: StratNeuro studentkåren",
+        "model": "comfyui-flux",
+        "prompt_version": "comfy-editorial-photo-v2",
+        "source_fingerprint": "f64a59b35be826c0653f",
+        "width": 1280,
+        "height": 848,
+        "sha256": "38b897fe608ba938f9758e8725ee0148fa23950a18e39f3fe5f55ef90ec728c6",
+        "generated_at": "2026-07-19T10:02:29Z"
       }
     },
     {

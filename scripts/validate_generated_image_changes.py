@@ -23,6 +23,8 @@ APPROVED_GENERATORS = {
     ("gpt-image-2", "editorial-concept-v1"),
     ("cf-lucid-origin", "cf-editorial-photo-v1"),
     ("cf-leonardo-phoenix", "cf-editorial-collage-v1"),
+    ("comfyui-sdxl", "comfy-editorial-photo-v1"),
+    ("comfyui-flux", "comfy-editorial-photo-v2"),
 }
 MAX_IMAGE_BYTES = 2 * 1024 * 1024
 HEX_20_RE = re.compile(r"[0-9a-f]{20}\Z")

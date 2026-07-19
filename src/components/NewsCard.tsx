@@ -27,6 +27,7 @@ export function NewsCard({ article, onSave, saved = false, variant = 'standard' 
       </div>}
       <div className="news-card-body">
         <OriginBadge article={article} />
+        <div className="news-card-source">Källa: {article.source}</div>
         {article.image.kind === 'source' && article.image.credit && article.image.rightsUrl && <div className="card-image-credit">Källbild: {article.image.credit} · <a href={article.image.rightsUrl} target="_blank" rel="noreferrer">bildkälla</a></div>}
         <h3 lang={article.language}><Link to={`/nyhet/${encodeURIComponent(article.slug)}`}>{article.title}</Link></h3>
         <p lang={article.excerptLanguage}>{excerpt(article.excerpt)}</p>

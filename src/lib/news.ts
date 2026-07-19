@@ -98,10 +98,12 @@ function resolveAiImage(item: RawImageFields): NewsImage | undefined {
   if (!image || !/^[a-f0-9]{20}$/.test(id) || !/^[a-f0-9]{20}$/.test(fingerprint)) return undefined
   const expectedUrl = `/news-images/ai/articles/${id}-${fingerprint.slice(0, 8)}-v1.webp`
   const validGeneratedAt = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,6})?Z$/.test(image.generated_at)
+  const approvedModels = ['gpt-image-2', 'cf-lucid-origin', 'cf-leonardo-phoenix', 'comfyui-sdxl', 'comfyui-flux']
+  const approvedVersions = ['editorial-concept-v1', 'cf-editorial-photo-v1', 'cf-editorial-collage-v1', 'comfy-editorial-photo-v1', 'comfy-editorial-photo-v2']
   if (image.url !== expectedUrl
       || image.source_fingerprint !== fingerprint
-      || image.model !== 'gpt-image-2'
-      || image.prompt_version !== 'editorial-concept-v1'
+      || !approvedModels.includes(image.model)
+      || !approvedVersions.includes(image.prompt_version)
       || image.width !== 1280
       || image.height !== 848
       || !/^[a-f0-9]{64}$/.test(image.sha256)
