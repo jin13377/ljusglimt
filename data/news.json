@@ -568,6 +568,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "5c78d9275751e5afca642ce661210a5de80103878979c977390cac3040ffeec5"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/6698c053939f372dce7e-0f7d798f-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Parkinsonläkemedel visar lovande effekt mot svårbehandlad depression",
+        "model": "comfyui-flux",
+        "prompt_version": "comfy-editorial-photo-v2",
+        "source_fingerprint": "6698c053939f372dce7e0f7d798f",
+        "width": 1280,
+        "height": 848,
+        "sha256": "909f0dd7e4520ac87ff421d351c6b9db78ed14777b11f0918fe2cf6ae5ca8554",
+        "generated_at": "2026-07-19T11:00:00Z"
       }
     },
     {
@@ -623,6 +634,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "504bdd57a0693b03ab6d7a0fd1696ef2a4d9a1a72542916235315cc7d5d67bc0"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/0392e2d504ad7c9d74eb-3ef9a281-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: AI upptäckte missade blodproppar i hjärnan",
+        "model": "comfyui-flux",
+        "prompt_version": "comfy-editorial-photo-v2",
+        "source_fingerprint": "0392e2d504ad7c9d74eb3ef9a281",
+        "width": 1280,
+        "height": 848,
+        "sha256": "0740c6d5c2f7a4dc1f291d5bc09e87bcab0bb6d0d8d52bc266807e11a9306179",
+        "generated_at": "2026-07-19T11:00:00Z"
       }
     },
     {
@@ -652,6 +674,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "0a1c95b16e1ceee0e993977a9ee3f9e858e4624dbe3118c9fdd75a90499eafc5"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/ac9388eca9809535d9d3-f3b52be8-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Lev längre med mindre mat på tallriken",
+        "model": "comfyui-flux",
+        "prompt_version": "comfy-editorial-photo-v2",
+        "source_fingerprint": "ac9388eca9809535d9d3f3b52be8",
+        "width": 1280,
+        "height": 848,
+        "sha256": "c44132bc07a5a1ef3bc3b4d1f1b63c2c9acb6bd45c5d7e0ce3b6d3fc81225d64",
+        "generated_at": "2026-07-19T11:00:00Z"
       }
     },
     {
