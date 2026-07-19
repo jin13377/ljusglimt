@@ -97,6 +97,38 @@ jobs:
             echo "Manual image generation was not enabled."
           fi
 
+      - name: Check ComfyUI availability
+        id: comfyui
+        shell: bash
+        env:
+          COMFYUI_URL: ${{ secrets.COMFYUI_URL }}
+        run: |
+          if [ -n "$COMFYUI_URL" ]; then
+            echo "comfyui_available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "comfyui_available=false" >> "$GITHUB_OUTPUT"
+            echo "COMFYUI_URL not set; ComfyUI generation skipped (run locally)."
+          fi
+
+      - name: Generate article illustrations via local ComfyUI
+        if: steps.comfyui.outputs.comfyui_available == 'true'
+        shell: bash
+        env:
+          COMFYUI_URL: ${{ secrets.COMFYUI_URL }}
+        run: |
+          cp data/news.json "$RUNNER_TEMP/news-before-comfy.json"
+          set +e
+          python scripts/generate_comfyui_article_images.py \
+            --news data/news.json \
+            --output-dir public/news-images/ai/articles \
+            --max-images 1 \
+            --comfyui-url "$COMFYUI_URL"
+          generator_status=$?
+          set -e
+          if [ "$generator_status" -ne 0 ]; then
+            echo "No ComfyUI article image was generated; the site keeps its local category fallback."
+          fi
+
       - name: Check optional Cloudflare Workers AI secret
         id: cloudflare
         shell: bash
@@ -112,7 +144,7 @@ jobs:
           fi
 
       - name: Generate article illustrations via Cloudflare Workers AI
-        if: steps.cloudflare.outputs.cf_available == 'true'
+        if: steps.cloudflare.outputs.cf_available == 'true' && steps.comfyui.outputs.comfyui_available != 'true'
         shell: bash
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
@@ -123,7 +155,7 @@ jobs:
           python scripts/generate_cf_article_images.py \
             --news data/news.json \
             --output-dir public/news-images/ai/articles \
-            --max-images 3
+            --max-images 1
           generator_status=$?
           set -e
           if [ "$generator_status" -ne 0 ]; then
@@ -153,12 +185,12 @@ jobs:
           fi
 
       - name: Validate and commit article illustrations only
-        if: (steps.openai.outputs.images_available == 'true' && steps.openai.outputs.images_enabled == 'true') || steps.cloudflare.outputs.cf_available == 'true'
+        if: (steps.openai.outputs.images_available == 'true' && steps.openai.outputs.images_enabled == 'true') || steps.cloudflare.outputs.cf_available == 'true' || steps.comfyui.outputs.comfyui_available == 'true'
         shell: bash
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          remote="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          remote="https://x-access-token:${GITH...git"
           git fetch --force "$remote" "refs/heads/${GITHUB_REF_NAME}:refs/remotes/origin/${GITHUB_REF_NAME}"
           trusted_head="$(git rev-parse "refs/remotes/origin/${GITHUB_REF_NAME}")"
           if [ "$(git rev-parse HEAD)" != "$trusted_head" ]; then
@@ -167,16 +199,18 @@ jobs:
           fi
 
           changed_paths="$(git status --porcelain --untracked-files=all | sed 's/^...//')"
-          unexpected="$(printf '%s\n' "$changed_paths" | grep -Ev '^(data/news.json|public/news-images/ai/articles/[0-9a-f]{20}-[0-9a-f]{8}-v1\.webp)$' || true)"
+          unexpected="$(printf '%s\n' "$changed_paths" | grep -Ev '^(data/news.json|public/news-images/ai/articles/[0-9a-f]{20}-[0-9a-f]{20}-v1\.webp)$' || true)"
           if [ -n "$unexpected" ]; then
             echo "The image generator changed disallowed files:"
             echo "$unexpected"
             exit 1
           fi
 
-          # Pick the right pre-generation snapshot: OpenAI or Cloudflare.
+          # Pick the right pre-generation snapshot: OpenAI, ComfyUI, or Cloudflare.
           if [ -f "$RUNNER_TEMP/news-before-images.json" ]; then
             BEFORE="$RUNNER_TEMP/news-before-images.json"
+          elif [ -f "$RUNNER_TEMP/news-before-comfy.json" ]; then
+            BEFORE="$RUNNER_TEMP/news-before-comfy.json"
           else
             BEFORE="$RUNNER_TEMP/news-before-cf.json"
           fi

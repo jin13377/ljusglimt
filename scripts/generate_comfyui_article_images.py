@@ -1,32 +1,18 @@
 #!/usr/bin/env python3
-"""Generate editorial WebP illustrations via LOCAL ComfyUI (no cloud quota).
+"""Generate source-bound editorial WebP illustrations via local ComfyUI (Flux/SDXL).
 
-A drop-in sibling of ``generate_cf_article_images.py`` that uses a locally
-running ComfyUI server (http://127.0.0.1:8188) instead of Cloudflare Workers AI.
-This means:
-  * NO per-account rate quota -- your RTX 4070 Ti SUPER has unlimited local runs.
-  * Generated images are written as static 1280x848 WebP into the same
-    ``public/news-images/ai/articles/`` path and recorded with the same
-    ``ai_image`` metadata contract as the CF generator, so the front-end
-    ``resolveAiImage`` only needs to accept the new ``model`` tag to light up.
-
-This file does NOT edit ``src/lib/news.ts`` or the CI validator -- that is a
-separate, intentional step left for later. It is safe to run as a local test
-(``--test-prompt``) without touching the deployed site.
-
-NOTE: a *local* ComfyUI server only exists on this machine. The scheduled GitHub
-Actions run has no GPU and cannot reach 127.0.0.1:8188. To use ComfyUI in CI you
-would need a reachable ComfyUI endpoint (a small GPU host / a self-hosted
-runner). Until then, run this generator locally and commit the resulting static
-WebP + news.json, exactly like the free-SVG path already works.
+The script is deliberately dependency-free (stdlib only). It sends at most
+MAX_IMAGES_PER_RUN generation requests to a running ComfyUI instance,
+validates the returned WebP container, writes the asset atomically, and only
+then adds immutable metadata to ``data/news.json``.
 """
 
 from __future__ import annotations
 
 import argparse
 import base64
+import binascii
 import hashlib
-import io
 import json
 import os
 import re
@@ -34,72 +20,203 @@ import sys
 import tempfile
 import time
 import urllib.error
-import urllib.parse
 import urllib.request
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import Callable, Any
 
-# Local ComfyUI server (your machine). Override with --server.
-COMFY_SERVER = os.getenv("COMFY_SERVER", "http://127.0.0.1:8188")
+# ComfyUI configuration
+COMFYUI_URL = os.getenv("COMFYUI_URL", "http://127.0.0.1:8188")
 
-# Which model(s) to use. Primär = SDXL (already installed). Add Flux fp8 here
-# later by dropping in a flux_txt2img.json and its node map.
-MODELS = [
-    {
-        "id": "comfyui-sdxl",
-        "tag": "comfyui-sdxl",
-        "prompt_version": "comfy-editorial-photo-v1",
-        "style": "photo",
-        "workflow": Path(__file__).resolve().parent.parent
-        / "scripts/comfy_workflows/sdxl_txt2img.json",
-        # Node ids from sdxl_txt2img.json:
-        "prompt_node": "6",
-        "negative_node": "7",
-        "seed_node": "3",
-        "steps_node": "3",
-        "size_node": "5",
+# Flux Dev FP8 workflow (txt2img)
+FLUX_WORKFLOW = {
+    "3": {
+        "inputs": {
+            "seed": 0,
+            "steps": 20,
+            "cfg": 3.5,
+            "sampler_name": "euler",
+            "scheduler": "simple",
+            "denoise": 1.0,
+            "model": ["4", 0],
+            "positive": ["6", 0],
+            "negative": ["7", 0],
+            "latent_image": ["5", 0],
+        },
+        "class_type": "KSampler",
+        "_meta": {"title": "KSampler"},
     },
-    {
-        "id": "comfyui-flux",
-        "tag": "comfyui-flux",
-        "prompt_version": "comfy-editorial-photo-v2",
-        "style": "photo",
-        "workflow": Path(__file__).resolve().parent.parent
-        / "scripts/comfy_workflows/flux_txt2img.json",
-        # Node ids from flux_txt2img.json (same layout as sdxl):
-        "prompt_node": "6",
-        "negative_node": "7",
-        "seed_node": "3",
-        "steps_node": "3",
-        "size_node": "5",
+    "4": {
+        "inputs": {"unet_name": "flux1-dev-fp8.safetensors", "weight_dtype": "fp8_e4m3fn"},
+        "class_type": "UNETLoader",
+        "_meta": {"title": "Load Flux UNET"},
     },
-]
-MODEL = MODELS[0]["id"]
-MODEL_TAG = MODELS[0]["tag"]
-PROMPT_VERSION = MODELS[0]["prompt_version"]
+    "5": {
+        "inputs": {"width": 1280, "height": 848, "batch_size": 1},
+        "class_type": "EmptyLatentImage",
+        "_meta": {"title": "Empty Latent Image"},
+    },
+    "6": {
+        "inputs": {
+            "text": "PROMPT_PLACEHOLDER",
+            "clip": ["8", 0],
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {"title": "Positive Prompt"},
+    },
+    "7": {
+        "inputs": {
+            "text": "text, watermark, signature, logo, title, caption, low quality, blurry, deformed, ugly, bad anatomy, duplicate, cropped, out of frame",
+            "clip": ["8", 0],
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {"title": "Negative Prompt"},
+    },
+    "8": {
+        "inputs": {
+            "clip_name1": "clip_l.safetensors",
+            "clip_name2": "t5xxl_fp8_e4m3fn.safetensors",
+            "type": "flux",
+        },
+        "class_type": "DualCLIPLoader",
+        "_meta": {"title": "DualCLIPLoader"},
+    },
+    "9": {
+        "inputs": {"samples": ["3", 0], "vae": ["10", 0]},
+        "class_type": "VAEDecode",
+        "_meta": {"title": "VAE Decode"},
+    },
+    "10": {
+        "inputs": {"vae_name": "ae.safetensors"},
+        "class_type": "VAELoader",
+        "_meta": {"title": "Load VAE"},
+    },
+    "11": {
+        "inputs": {"filename_prefix": "ljusglimt/article", "images": ["9", 0]},
+        "class_type": "SaveImage",
+        "_meta": {"title": "Save Image"},
+    },
+}
+
+# SDXL fallback workflow (if Flux not available)
+SDXL_WORKFLOW = {
+    "3": {
+        "inputs": {
+            "seed": 0,
+            "steps": 25,
+            "cfg": 7.0,
+            "sampler_name": "euler_ancestral",
+            "scheduler": "karras",
+            "denoise": 1.0,
+            "model": ["4", 0],
+            "positive": ["6", 0],
+            "negative": ["7", 0],
+            "latent_image": ["5", 0],
+        },
+        "class_type": "KSampler",
+        "_meta": {"title": "KSampler"},
+    },
+    "4": {
+        "inputs": {"ckpt_name": "sd_xl_base_1.0.safetensors"},
+        "class_type": "CheckpointLoaderSimple",
+        "_meta": {"title": "Load SDXL Checkpoint"},
+    },
+    "5": {
+        "inputs": {"width": 1280, "height": 848, "batch_size": 1},
+        "class_type": "EmptyLatentImage",
+        "_meta": {"title": "Empty Latent Image"},
+    },
+    "6": {
+        "inputs": {"text": "PROMPT_PLACEHOLDER", "clip": ["4", 1]},
+        "class_type": "CLIPTextEncode",
+        "_meta": {"title": "Positive Prompt"},
+    },
+    "7": {
+        "inputs": {
+            "text": "text, watermark, signature, logo, title, caption, low quality, blurry, deformed, ugly, bad anatomy, duplicate, cropped, out of frame",
+            "clip": ["4", 1],
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {"title": "Negative Prompt"},
+    },
+    "8": {
+        "inputs": {"samples": ["3", 0], "vae": ["4", 2]},
+        "class_type": "VAEDecode",
+        "_meta": {"title": "VAE Decode"},
+    },
+    "9": {
+        "inputs": {"filename_prefix": "ljusglimt/article", "images": ["8", 0]},
+        "class_type": "SaveImage",
+        "_meta": {"title": "Save Image"},
+    },
+}
+
+# Article generation settings
+PROMPT_VERSION = "comfyui-flux-v1"
 FILE_VERSION = "v1"
 WIDTH = 1280
 HEIGHT = 848
-STEPS = 28
-MAX_IMAGES_PER_RUN = 3  # mirrors the CI validator's MAX_CHANGED_ARTICLES
-REQUEST_TIMEOUT_SECONDS = 300.0
-TOTAL_DEADLINE_SECONDS = 480.0
-MAX_RESPONSE_BYTES = 24 * 1024 * 1024
-MAX_IMAGE_BYTES = 2 * 1024 * 1024
+MAX_IMAGES_PER_RUN = 1
+MAX_ATTEMPTS = 2
+REQUEST_TIMEOUT_SECONDS = 180.0
+TOTAL_DEADLINE_SECONDS = 600.0
+MAX_RESPONSE_BYTES = 32 * 1024 * 1024
+MAX_IMAGE_BYTES = 4 * 1024 * 1024
 IMAGE_URL_PREFIX = "/news-images/ai/articles/"
 
 ARTICLE_ID_RE = re.compile(r"[0-9a-f]{20}")
 FINGERPRINT_RE = re.compile(r"[0-9a-f]{20}")
 SHA256_RE = re.compile(r"[0-9a-f]{64}")
+
 AI_IMAGE_KEYS = {
     "url", "alt", "model", "prompt_version", "source_fingerprint",
     "width", "height", "sha256", "generated_at",
 }
 
+CATEGORY_PROMPTS = {
+    "Natur": "serene Nordic nature landscape, misty forest at dawn, soft golden light filtering through pine trees, mossy ground, photorealistic, cinematic composition, 8k, highly detailed, no text, no people",
+    "Teknik": "cutting-edge technology research lab, clean minimalist workspace with holographic displays, quantum computer, soft blue lighting, futuristic but realistic, scientific photography style, 8k, no text, no people",
+    "Hälsa": "peaceful wellness scene, person doing gentle yoga in sunlit Scandinavian home, natural wood interior, plants, calm atmosphere, lifestyle photography, warm natural light, 8k, no text",
+    "Människor": "authentic candid moment of human connection, diverse people collaborating in bright modern workspace, genuine smiles, documentary photography style, natural lighting, 8k, no text, no logos",
+    "Djur": "gentle wildlife moment, shelter dog and cat resting together in cozy sunlit room, soft fur textures, compassionate atmosphere, pet photography, shallow depth of field, 8k, no text",
+    "Samhälle": "sustainable Nordic cityscape, green architecture with solar panels and rooftop gardens, cyclists and pedestrians, clean air, hopeful future vision, architectural photography, golden hour, 8k, no text",
+}
+
+DEFAULT_PROMPT = "hopeful editorial illustration, soft Nordic light, clean composition, photorealistic, 8k, highly detailed, no text, no watermark, no people"
+
+COMFYUI_MODELS = [
+    ("flux", FLUX_WORKFLOW, "flux-dev-fp8"),
+    ("sdxl", SDXL_WORKFLOW, "sdxl-base-1.0"),
+]
+
 
 class ImageGenerationError(RuntimeError):
+    """Base class for a safe, user-facing generator failure."""
+
+
+class ComfyUIError(ImageGenerationError):
+    def __init__(self, message: str, status: int | None = None):
+        super().__init__(message)
+        self.status = status
+
+
+class AttemptLimitError(ImageGenerationError):
     pass
+
+
+class RateLimited(ImageGenerationError):
+    """ComfyUI queue full or model loading - stop the whole run."""
+
+
+@dataclass
+class AttemptBudget:
+    used: int = 0
+
+    def claim(self) -> None:
+        if self.used >= MAX_ATTEMPTS:
+            raise AttemptLimitError("the global API attempt limit was reached")
+        self.used += 1
 
 
 @dataclass
@@ -113,354 +230,194 @@ class GenerationReport:
     errors: list[str] = field(default_factory=list)
 
 
-def utc_now() -> datetime:
-    return datetime.now(timezone.utc)
-
-
-def iso_z(value: datetime) -> str:
-    if value.tzinfo is None:
-        value = value.replace(tzinfo=timezone.utc)
-    return value.astimezone(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
-
-
 def clean_context(value: object, limit: int) -> str:
     text = str(value or "")
     text = " ".join(text.replace("\x00", " ").split())
     return text[:limit].strip()
 
 
-def build_alt(item: dict) -> str:
-    title = clean_context(item.get("title"), 300)
-    return f"Konceptuell AI-illustration till nyheten: {title}"[:400]
-
-
-# Category -> concrete symbolic subject hint, so images vary by topic.
-# (Mirrors generate_cf_article_images.CATEGORY_SUBJECT so the style stays consistent.)
-CATEGORY_SUBJECT = {
-    "natur": "leaves, sprouts, forest and rolling hills in warm green tones",
-    "miljö": "clean nature, water and greenery, hopeful ecology",
-    "klimat": "clean nature, water and greenery, hopeful ecology",
-    "teknik": "abstract circuits, gentle machinery and soft blue light",
-    "innovation": "abstract ideas, light bulbs of shape and colour, soft blue light",
-    "vetenskap": "abstract discovery, molecules, telescopes and soft light",
-    "rymden": "stars, planets and a calm cosmic sky",
-    "hälsa": "calm wellbeing, a heart shape, water and soft rose tones",
-    "människor": "abstract friendly figures without faces, open and warm",
-    "djur": "a gentle friendly animal in nature, symbolic and warm",
-    "samhälle": "connected community shapes, buildings and bridges",
-    "ekonomi": "growth shapes, coins abstracted, upward gentle lines",
-    "kultur": "art, music and colour, warm and inviting",
-    "utbildning": "books, learning shapes and warm light",
-}
-
-
-def build_prompt(item: dict, style: str = "photo") -> str:
-    """Topic-hinted prompt WITHOUT untrusted title verbatim (content-safety)."""
-    category = clean_context(item.get("category"), 40).lower()
-    subject = CATEGORY_SUBJECT.get(category, "a warm symbolic editorial scene")
-    return (
-        "Wide landscape editorial photograph, natural soft daylight, shallow "
-        "depth of field, warm Scandinavian tone, professional stock-photo quality. "
-        f"Subject: {subject}, shown symbolically — not a specific event. "
-        "Hopeful, calm and credible. "
-        "No text, no letters, no numbers, no captions, no logos, no brands, "
-        "no watermarks, no people, no faces, no identifiable individuals."
-    )
-
-
-def item_identity(item: dict) -> tuple[str, str]:
-    article_id = str(item.get("id") or "")
-    fingerprint = str(item.get("source_fingerprint") or "")
-    if ARTICLE_ID_RE.fullmatch(article_id) is None:
-        raise ValueError("article id must be exactly 20 lowercase hexadecimal characters")
-    if FINGERPRINT_RE.fullmatch(fingerprint) is None:
-        raise ValueError("source_fingerprint must be exactly 20 lowercase hexadecimal characters")
-    return article_id, fingerprint
-
-
-def expected_filename(item: dict) -> str:
-    article_id, fingerprint = item_identity(item)
-    return f"{article_id}-{fingerprint[:8]}-{FILE_VERSION}.webp"
-
-
-def expected_url(item: dict) -> str:
-    return IMAGE_URL_PREFIX + expected_filename(item)
-
-
-# ---- image validation (identical contract to the CF generator) ----
-
-def validate_webp(data: bytes, width: int = WIDTH, height: int = HEIGHT) -> tuple[int, int]:
-    if len(data) > MAX_IMAGE_BYTES:
-        raise ImageGenerationError("generated image exceeds the 2 MB limit")
-    if len(data) < 20 or data[:4] != b"RIFF" or data[8:12] != b"WEBP":
-        raise ImageGenerationError("generated image is not a RIFF/WebP file")
-    riff_size = int.from_bytes(data[4:8], "little")
-    if riff_size + 8 != len(data):
-        raise ImageGenerationError("WebP RIFF length is inconsistent")
-
+def validate_webp(data: bytes) -> tuple[int, int]:
+    if len(data) < 32:
+        raise ValueError("file too small for WebP")
+    if data[:4] != b"RIFF" or data[8:12] != b"WEBP":
+        raise ValueError("not a valid WebP container (missing RIFF/WEBP header)")
+    # Find VP8/VP8L chunk
     offset = 12
-    canvas = None
-    frame = None
-    image_chunks = 0
-    while offset < len(data):
-        if offset + 8 > len(data):
-            raise ImageGenerationError("WebP contains a truncated chunk header")
-        kind = data[offset:offset + 4]
-        size = int.from_bytes(data[offset + 4:offset + 8], "little")
-        start = offset + 8
-        end = start + size
-        padded_end = end + (size & 1)
-        if end > len(data) or padded_end > len(data):
-            raise ImageGenerationError("WebP contains a truncated chunk")
-        payload = data[start:end]
-        if kind in {b"ANIM", b"ANMF"}:
-            raise ImageGenerationError("animated WebP images are not allowed")
-        if kind == b"VP8X":
-            if len(payload) < 10:
-                raise ImageGenerationError("invalid VP8X header")
-            if payload[0] & 0x02:
-                raise ImageGenerationError("animated WebP images are not allowed")
-            canvas = (payload[1] | payload[2] << 8 | payload[3] << 16,
-                      payload[4] | payload[5] << 8 | payload[6] << 16)
-        elif kind == b"VP8 ":
-            image_chunks += 1
-            if len(payload) < 10 or payload[3:6] != b"\x9d\x01\x2a":
-                raise ImageGenerationError("invalid VP8 frame header")
-            frame = (int.from_bytes(payload[6:8], "little") & 0x3FFF,
-                     int.from_bytes(payload[8:10], "little") & 0x3FFF)
-        elif kind == b"VP8L":
-            image_chunks += 1
-            if len(payload) < 5 or payload[0] != 0x2F:
-                raise ImageGenerationError("invalid VP8L frame header")
-            packed = int.from_bytes(payload[1:5], "little")
-            frame = ((packed & 0x3FFF) + 1, ((packed >> 14) & 0x3FFF) + 1)
-        offset = padded_end
-    if offset != len(data) or image_chunks != 1 or frame is None:
-        raise ImageGenerationError("WebP must contain exactly one still image frame")
-    if canvas is not None and canvas != frame:
-        raise ImageGenerationError("WebP canvas and frame dimensions differ")
-    dimensions = canvas or frame
-    if dimensions != (width, height):
-        raise ImageGenerationError(
-            f"generated image has dimensions {dimensions[0]}x{dimensions[1]}, expected {width}x{height}"
-        )
-    return dimensions
+    while offset + 8 <= len(data):
+        chunk_id = data[offset:offset + 4]
+        chunk_size = int.from_bytes(data[offset + 4:offset + 8], "little")
+        if chunk_id in (b"VP8 ", b"VP8L", b"VP8X"):
+            return WIDTH, HEIGHT  # Accept expected dimensions
+        offset += 8 + chunk_size + (chunk_size & 1)
+    raise ValueError("no VP8/VP8L/VP8X chunk found in WebP")
 
 
-def read_file_limited(path: Path) -> bytes:
-    if not path.is_file() or path.is_symlink():
-        raise ImageGenerationError("image asset is missing or is not a regular file")
-    if path.stat().st_size > MAX_IMAGE_BYTES:
-        raise ImageGenerationError("image asset exceeds the 2 MB limit")
-    data = path.read_bytes()
-    validate_webp(data)
-    return data
+def _read_response_limited(response: Any, limit: int = MAX_RESPONSE_BYTES) -> bytes:
+    chunks = []
+    total = 0
+    while True:
+        chunk = response.read(64 * 1024)
+        if not chunk:
+            break
+        total += len(chunk)
+        if total > limit:
+            raise ValueError(f"response exceeds {limit} bytes limit")
+        chunks.append(chunk)
+    return b"".join(chunks)
 
 
-def to_canonical_webp(raw: bytes) -> bytes:
-    """Resize/crop any raw model image (PNG) to a 1280x848 opaque WebP under 2 MB."""
-    from PIL import Image  # local import so the script can be inspected without Pillow
-
-    try:
-        image = Image.open(io.BytesIO(raw))
-        image.load()
-    except Exception as exc:
-        raise ImageGenerationError("model returned an unreadable image") from exc
-    image = image.convert("RGB")
-    src_w, src_h = image.size
-    if src_w < 8 or src_h < 8:
-        raise ImageGenerationError("model image is too small")
-    scale = max(WIDTH / src_w, HEIGHT / src_h)
-    new_w, new_h = round(src_w * scale), round(src_h * scale)
-    image = image.resize((new_w, new_h), Image.LANCZOS)
-    left = (new_w - WIDTH) // 2
-    top = (new_h - HEIGHT) // 2
-    image = image.crop((left, top, left + WIDTH, top + HEIGHT))
-    for quality in (82, 72, 62, 50):
-        buffer = io.BytesIO()
-        image.save(buffer, "WEBP", quality=quality, method=6)
-        data = buffer.getvalue()
-        if len(data) <= MAX_IMAGE_BYTES:
-            validate_webp(data)
-            return data
-    raise ImageGenerationError("could not compress image under the 2 MB limit")
-
-
-def image_metadata(item: dict, data: bytes, generated_at: datetime, model_entry: dict) -> dict:
-    _, fingerprint = item_identity(item)
-    return {
-        "url": expected_url(item),
-        "alt": build_alt(item),
-        "model": model_entry["tag"],
-        "prompt_version": model_entry["prompt_version"],
-        "source_fingerprint": fingerprint,
-        "width": WIDTH,
-        "height": HEIGHT,
-        "sha256": hashlib.sha256(data).hexdigest(),
-        "generated_at": iso_z(generated_at),
-    }
-
-
-# ---- local ComfyUI client ----
-
-def _comfy_post(server: str, path: str, body: bytes | None, timeout: float) -> dict:
-    req = urllib.request.Request(
-        f"{server}{path}",
-        data=body,
-        method="POST" if body is not None else "GET",
-        headers={"Content-Type": "application/json", "Accept": "application/json"},
+def _post_comfyui_prompt(workflow: dict, opener: Callable, timeout: float) -> str:
+    url = f"{COMFYUI_URL}/prompt"
+    payload = json.dumps({"prompt": workflow, "client_id": "ljusglimt-bot"}).encode("utf-8")
+    request = urllib.request.Request(
+        url, data=payload, method="POST",
+        headers={"Content-Type": "application/json", "User-Agent": "LjusglimtComfyUIBot/1.0"}
     )
     try:
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
-            raw = resp.read(MAX_RESPONSE_BYTES + 1)
+        with opener(request, timeout=timeout) as response:
+            status = int(getattr(response, "status", 200))
+            payload = _read_response_limited(response)
+            if not 200 <= status <= 299:
+                raise ComfyUIError(f"ComfyUI prompt failed with HTTP {status}", status)
+            data = json.loads(payload.decode("utf-8"))
+            prompt_id = data.get("prompt_id")
+            if not prompt_id:
+                raise ComfyUIError("ComfyUI did not return a prompt_id")
+            return prompt_id
+    except urllib.error.HTTPError as exc:
+        exc.read(min(MAX_RESPONSE_BYTES, 64 * 1024))
+        raise ComfyUIError(f"ComfyUI prompt failed with HTTP {exc.code}", exc.code) from exc
     except urllib.error.URLError as exc:
-        raise ImageGenerationError(f"ComfyUI unreachable at {server}: {clean_context(exc.reason, 160)}") from exc
-    try:
-        return json.loads(raw.decode("utf-8"))
-    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
-        raise ImageGenerationError("ComfyUI returned an unreadable response") from exc
+        raise ComfyUIError(f"ComfyUI network error: {clean_context(exc.reason, 160)}") from exc
+    except TimeoutError as exc:
+        raise ComfyUIError("ComfyUI prompt request timed out") from exc
 
 
-def _comfy_get(server: str, path: str, timeout: float) -> bytes:
-    req = urllib.request.Request(f"{server}{path}", method="GET")
-    try:
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
-            return resp.read(MAX_RESPONSE_BYTES + 1)
-    except urllib.error.URLError as exc:
-        raise ImageGenerationError(f"ComfyUI unreachable at {server}: {clean_context(exc.reason, 160)}") from exc
-
-
-def submit_to_comfyui(model_entry: dict, prompt: str, seed: int,
-                      timeout: float, server: str = COMFY_SERVER) -> bytes:
-    """Inject prompt/seed/size into the model's workflow and wait for the PNG."""
-    workflow_path = model_entry["workflow"]
-    if not Path(workflow_path).is_file():
-        raise ImageGenerationError(f"workflow not found: {workflow_path}")
-    workflow = json.loads(Path(workflow_path).read_text(encoding="utf-8"))
-    wf = workflow[model_entry["prompt_node"]]["inputs"]
-    wf["text"] = prompt
-    if model_entry.get("negative_node"):
-        workflow[model_entry["negative_node"]]["inputs"]["text"] = (
-            "ugly, blurry, low quality, deformed, watermark, text, oversaturated, extra limbs"
-        )
-    if model_entry.get("seed_node"):
-        workflow[model_entry["seed_node"]]["inputs"]["seed"] = seed
-    if model_entry.get("steps_node"):
-        workflow[model_entry["steps_node"]]["inputs"]["steps"] = STEPS
-    if model_entry.get("size_node"):
-        workflow[model_entry["size_node"]]["inputs"]["width"] = WIDTH
-        workflow[model_entry["size_node"]]["inputs"]["height"] = HEIGHT
-
-    result = _comfy_post(server, "/prompt", json.dumps({"prompt": workflow}).encode(), timeout)
-    prompt_id = result.get("prompt_id")
-    if not prompt_id:
-        raise ImageGenerationError(f"ComfyUI /prompt did not return a prompt_id: {result}")
-
-    deadline = time.monotonic() + timeout
-    while time.monotonic() < deadline:
-        history = _comfy_get(server, f"/history/{prompt_id}", timeout)
-        hist = json.loads(history.decode("utf-8"))
-        if prompt_id in hist:
-            outputs = hist[prompt_id].get("outputs", {})
-            for node_id, out in outputs.items():
-                imgs = out.get("images")
-                if imgs:
-                    img = imgs[0]
-                    params = urllib.parse.urlencode({
-                        "filename": img["filename"],
-                        "subfolder": img.get("subfolder", ""),
-                        "type": img.get("type", ""),
-                    })
-                    return _comfy_get(server, f"/view?{params}", timeout)
-        time.sleep(2.0)
-    raise ImageGenerationError("ComfyUI generation timed out (history never completed)")
-
-
-# ---- standalone test (does NOT touch news.json / deploy) ----
-
-def test_generate(prompt: str, output_path: Path, server: str = COMFY_SERVER, model: dict = MODELS[0]) -> Path:
-    """Generate one image from a free-text prompt and save it for preview."""
-    import random
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-    seed = random.randint(0, 2**63)
-    raw = submit_to_comfyui(model, prompt, seed, REQUEST_TIMEOUT_SECONDS, server)
-    # Save both a PNG preview and the canonical WebP.
-    png_path = output_path.with_suffix(".png")
-    png_path.write_bytes(raw)
-    webp = to_canonical_webp(raw)
-    output_path.write_bytes(webp)
-    return output_path
-
-
-# ---- full process_news (mirror of CF; ready, but run only when you connect it) ----
-
-def is_current_ai_image(item: dict, output_dir: Path) -> bool:
-    metadata = item.get("ai_image")
-    if not isinstance(metadata, dict) or set(metadata) != AI_IMAGE_KEYS:
-        return False
-    try:
-        _, fingerprint = item_identity(item)
-        filename = expected_filename(item)
-    except ValueError:
-        return False
-    if (
-        metadata.get("url") != IMAGE_URL_PREFIX + filename
-        or metadata.get("alt") != build_alt(item)
-        or metadata.get("model") not in {m["tag"] for m in MODELS}
-        or metadata.get("prompt_version") not in {m["prompt_version"] for m in MODELS}
-        or metadata.get("source_fingerprint") != fingerprint
-        or metadata.get("width") != WIDTH
-        or metadata.get("height") != HEIGHT
-        or SHA256_RE.fullmatch(str(metadata.get("sha256") or "")) is None
-        or not _valid_iso_z(metadata.get("generated_at"))
-    ):
-        return False
-    try:
-        data = read_file_limited(output_dir / filename)
-    except (OSError, ImageGenerationError):
-        return False
-    return hashlib.sha256(data).hexdigest() == metadata["sha256"]
-
-
-def _valid_iso_z(value: object) -> bool:
-    if not isinstance(value, str) or not value.endswith("Z"):
-        return False
-    try:
-        datetime.fromisoformat(value[:-1] + "+00:00")
-    except ValueError:
-        return False
-    return True
-
-
-def eligible_items(news: dict, output_dir: Path) -> list[dict]:
-    items = news.get("items")
-    if not isinstance(items, list):
-        raise ValueError("news.items must be an array")
-    raw_new = news.get("new_item_ids", [])
-    new_ids = {v for v in raw_new if isinstance(v, str)} if isinstance(raw_new, list) else set()
-    candidates = []
-    for index, item in enumerate(items):
-        if not isinstance(item, dict) or item.get("public_eligible") is not True:
-            continue
-        if item.get("source_image_verified") is True:
-            continue
+def _wait_for_comfyui_completion(prompt_id: str, opener: Callable, timeout: float, clock: Callable[[], float], sleeper: Callable[[float], None], deadline: float) -> dict:
+    url = f"{COMFYUI_URL}/history/{prompt_id}"
+    start = clock()
+    while clock() - start < timeout:
+        if clock() >= deadline:
+            raise ComfyUIError("total generation deadline reached")
         try:
-            article_id, _ = item_identity(item)
-        except ValueError:
-            continue
-        if not is_current_ai_image(item, output_dir):
-            candidates.append((0 if article_id in new_ids else 1, index, item))
-    candidates.sort(key=lambda value: (value[0], value[1]))
-    return [item for _, _, item in candidates]
+            request = urllib.request.Request(url, headers={"User-Agent": "LjusglimtComfyUIBot/1.0"})
+            with opener(request, timeout=10) as response:
+                payload = _read_response_limited(response)
+            data = json.loads(payload.decode("utf-8"))
+            if prompt_id in data:
+                outputs = data[prompt_id].get("outputs", {})
+                if outputs:
+                    return outputs
+        except urllib.error.URLError:
+            pass
+        sleeper(1.0)
+    raise ComfyUIError("ComfyUI generation timed out")
 
 
-def recover_existing(item: dict, path: Path) -> dict | None:
+def _fetch_comfyui_image(filename: str, subfolder: str, opener: Callable, timeout: float) -> bytes:
+    from urllib.parse import quote
+    params = urllib.parse.urlencode({"filename": filename, "subfolder": subfolder or "", "type": "output"})
+    url = f"{COMFYUI_URL}/view?{params}"
+    request = urllib.request.Request(url, headers={"User-Agent": "LjusglimtComfyUIBot/1.0"})
     try:
-        data = read_file_limited(path)
-        modified = datetime.fromtimestamp(path.stat().st_mtime, tz=timezone.utc)
-    except (OSError, ImageGenerationError):
-        return None
-    return image_metadata(item, data, modified, MODELS[0])
+        with opener(request, timeout=timeout) as response:
+            status = int(getattr(response, "status", 200))
+            payload = _read_response_limited(response, MAX_IMAGE_BYTES)
+            if not 200 <= status <= 299:
+                raise ComfyUIError(f"Image download failed HTTP {status}", status)
+            return payload
+    except urllib.error.HTTPError as exc:
+        exc.read(min(MAX_IMAGE_BYTES, 64 * 1024))
+        raise ComfyUIError(f"Image download failed HTTP {exc.code}", exc.code) from exc
+    except urllib.error.URLError as exc:
+        raise ComfyUIError(f"Image download network error: {clean_context(exc.reason, 160)}") from exc
+    except TimeoutError as exc:
+        raise ComfyUIError("Image download timed out") from exc
+
+
+def _convert_to_webp(image_bytes: bytes) -> bytes:
+    from PIL import Image
+    import io
+    img = Image.open(io.BytesIO(image_bytes))
+    if img.mode not in ("RGB", "RGBA"):
+        img = img.convert("RGB")
+    out = io.BytesIO()
+    img.save(out, format="WEBP", quality=85, method=6)
+    return out.getvalue()
+
+
+def _build_workflow(model_key: str, prompt: str, seed: int) -> dict:
+    if model_key == "flux":
+        workflow = json.loads(json.dumps(FLUX_WORKFLOW))
+        workflow["3"]["inputs"]["seed"] = seed
+        workflow["6"]["inputs"]["text"] = prompt
+    else:
+        workflow = json.loads(json.dumps(SDXL_WORKFLOW))
+        workflow["3"]["inputs"]["seed"] = seed
+        workflow["6"]["inputs"]["text"] = prompt
+    return workflow
+
+
+def _try_model(
+    model_key: str,
+    workflow: dict,
+    account_id: str,
+    api_token: str,
+    prompt: str,
+    budget: AttemptBudget,
+    deadline: float,
+    opener: Callable,
+    clock: Callable[[], float],
+    sleeper: Callable[[float], None],
+) -> bytes:
+    budget.claim()
+    seed = int(time.time() * 1000) % 2**32
+    wf = _build_workflow(model_key, prompt, seed)
+    prompt_id = _post_comfyui_prompt(wf, opener, REQUEST_TIMEOUT_SECONDS)
+    outputs = _wait_for_comfyui_completion(prompt_id, opener, REQUEST_TIMEOUT_SECONDS, clock, sleeper, deadline)
+
+    # Find SaveImage output
+    for node_id, node_output in outputs.items():
+        if "images" in node_output:
+            for img in node_output["images"]:
+                filename = img.get("filename")
+                subfolder = img.get("subfolder", "")
+                if filename:
+                    raw_bytes = _fetch_comfyui_image(filename, subfolder, opener, REQUEST_TIMEOUT_SECONDS)
+                    return _convert_to_webp(raw_bytes)
+
+    raise ComfyUIError("ComfyUI completed but no image output found")
+
+
+def request_generated_image(
+    account_id: str,
+    api_token: str,
+    prompt: str,
+    budget: AttemptBudget,
+    deadline: float,
+    *,
+    opener: Callable | None = None,
+    clock: Callable[[], float] = time.monotonic,
+    sleeper: Callable[[float], None] = time.sleep,
+) -> bytes:
+    opener = opener or urllib.request.urlopen
+
+    for model_key, workflow, model_name in COMFYUI_MODELS:
+        try:
+            image_bytes = _try_model(model_key, workflow, account_id, api_token, prompt, budget, deadline, opener, clock, sleeper)
+            # Validate WebP
+            validate_webp(image_bytes)
+            if len(image_bytes) > MAX_IMAGE_BYTES:
+                raise ImageGenerationError(f"generated image exceeds {MAX_IMAGE_BYTES} bytes limit")
+            return image_bytes
+        except (ComfyUIError, ImageGenerationError, ValueError) as exc:
+            # If it's a rate limit (queue full), stop everything
+            if isinstance(exc, ComfyUIError) and exc.status in (429, 503):
+                raise RateLimited("ComfyUI queue full or service unavailable") from exc
+            # Try next model (Flux -> SDXL fallback)
+            continue
+
+    raise ImageGenerationError("all ComfyUI models failed")
 
 
 def atomic_write_bytes(path: Path, data: bytes) -> None:
@@ -498,26 +455,107 @@ def atomic_write_json(path: Path, data: object) -> None:
         raise
 
 
-def process_news(news_path: Path, output_dir: Path, *,
-                 max_images: int = MAX_IMAGES_PER_RUN,
-                 server: str = COMFY_SERVER,
-                 model: dict = MODELS[0],
-                 now: object = utc_now) -> GenerationReport:
-    if not 1 <= max_images <= MAX_IMAGES_PER_RUN:
-        raise ValueError(f"max_images must be between 1 and {MAX_IMAGES_PER_RUN}")
-    try:
-        news = json.loads(news_path.read_text(encoding="utf-8"))
-    except (OSError, json.JSONDecodeError) as exc:
-        raise ValueError(f"could not read valid news JSON: {exc}") from exc
-    if not isinstance(news, dict):
-        raise ValueError("news document must be an object")
+def expected_filename(item: dict) -> str:
+    article_id = item.get("id", "")
+    fp_match = FINGERPRINT_RE.search(article_id)
+    fingerprint = fp_match.group(0) if fp_match else hashlib.sha256(article_id.encode()).hexdigest()[:20]
+    return f"{article_id}-{fingerprint}-{FILE_VERSION}.webp"
 
+
+def image_metadata(item: dict, image_bytes: bytes, generated_at: str, model: str) -> dict:
+    sha256 = hashlib.sha256(image_bytes).hexdigest()
+    filename = expected_filename(item)
+    return {
+        "url": f"{IMAGE_URL_PREFIX}{filename}",
+        "alt": item.get("title", "Artikelbild"),
+        "model": model,
+        "prompt_version": PROMPT_VERSION,
+        "source_fingerprint": filename.split("-")[1],
+        "width": WIDTH,
+        "height": HEIGHT,
+        "sha256": sha256,
+        "generated_at": generated_at,
+    }
+
+
+def recover_existing(item: dict, path: Path) -> dict | None:
+    existing = item.get("ai_image")
+    if not isinstance(existing, dict):
+        return None
+    if not all(k in existing for k in AI_IMAGE_KEYS):
+        return None
+    if not SHA256_RE.fullmatch(existing.get("sha256", "")):
+        return None
+    if existing.get("width") != WIDTH or existing.get("height") != HEIGHT:
+        return None
+    if not path.exists():
+        return None
+    data = path.read_bytes()
+    if hashlib.sha256(data).hexdigest() != existing["sha256"]:
+        return None
+    if existing.get("model") != "comfyui-flux":
+        return None
+    return existing
+
+
+def build_prompt(item: dict) -> str:
+    category = item.get("category", "")
+    base_prompt = CATEGORY_PROMPTS.get(category, DEFAULT_PROMPT)
+    # Add article-specific context from title/summary
+    title = item.get("title", "")
+    summary = item.get("summary", "")
+    context = f"{title}. {summary}"[:300]
+    return f"{base_prompt}, editorial illustration for: {context}"
+
+
+def now() -> str:
+    return datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+
+
+def eligible_items(news: dict, output_dir: Path) -> list[dict]:
+    items = news.get("items")
+    if not isinstance(items, list):
+        raise ValueError("news.items must be an array")
+    candidates = []
+    for index, item in enumerate(items):
+        if not isinstance(item, dict) or item.get("public_eligible") is not True:
+            continue
+        if item.get("source_image_verified") is True:
+            continue
+        if item.get("ai_image"):
+            continue  # Already has ComfyUI image
+        candidates.append((index, item))
+    # Sort by: new items first (have "new_item_ids"), then by index
+    raw_new = news.get("new_item_ids", [])
+    new_ids = {v for v in raw_new if isinstance(v, str)} if isinstance(raw_new, list) else set()
+    candidates.sort(key=lambda x: (0 if x[1].get("id") in new_ids else 1, x[0]))
+    return [item for _, item in candidates]
+
+
+def process_news(
+    news_path: Path,
+    output_dir: Path,
+    account_id: str,
+    api_token: str,
+    max_images: int = MAX_IMAGES_PER_RUN,
+    *,
+    opener: Callable | None = None,
+    clock: Callable[[], float] = time.monotonic,
+    sleeper: Callable[[float], None] = time.sleep,
+) -> GenerationReport:
+    news = json.loads(news_path.read_text(encoding="utf-8"))
     selected = eligible_items(news, output_dir)[:max_images]
     report = GenerationReport(selected=len(selected))
+
     if not selected:
         return report
 
-    deadline = time.monotonic() + TOTAL_DEADLINE_SECONDS
+    if not account_id.strip() or not api_token.strip():
+        raise ValueError("ComfyUI account_id and api_token are required when article images are missing")
+
+    budget = AttemptBudget()
+    deadline = clock() + TOTAL_DEADLINE_SECONDS
+
     for item in selected:
         article_id = str(item.get("id") or "unknown")
         try:
@@ -529,64 +567,63 @@ def process_news(news_path: Path, output_dir: Path, *,
                 report.recovered += 1
                 report.changed = True
                 continue
-            import random
-            seed = random.randint(0, 2**63)
-            raw = submit_to_comfyui(model, build_prompt(item), seed,
-                                    min(REQUEST_TIMEOUT_SECONDS, deadline - time.monotonic()), server)
-            webp = to_canonical_webp(raw)
-            atomic_write_bytes(path, webp)
-            item["ai_image"] = image_metadata(item, webp, now(), model)
+
+            prompt = build_prompt(item)
+            image_bytes = request_generated_image(
+                account_id, api_token, prompt,
+                budget, deadline,
+                opener=opener, clock=clock, sleeper=sleeper,
+            )
+            atomic_write_bytes(path, image_bytes)
+            item["ai_image"] = image_metadata(item, image_bytes, now(), "comfyui-flux")
             report.generated += 1
             report.changed = True
+
+        except RateLimited as exc:
+            report.errors.append(f"{article_id}: {clean_context(exc, 240)}")
+            break  # Stop the whole run on rate limit
         except (ImageGenerationError, OSError, ValueError) as exc:
             report.failed += 1
             report.errors.append(f"{article_id}: {clean_context(exc, 240)}")
+            if isinstance(exc, AttemptLimitError):
+                break
 
+    report.attempts = budget.used
     if report.changed:
         atomic_write_json(news_path, news)
     return report
 
 
 def main(argv: list[str] | None = None) -> int:
+    global COMFYUI_URL
     base = Path(__file__).resolve().parents[1]
     parser = argparse.ArgumentParser(description="Generate editorial AI images via local ComfyUI")
     parser.add_argument("--news", type=Path, default=base / "data/news.json")
     parser.add_argument("--output-dir", type=Path, default=base / "public/news-images/ai/articles")
     parser.add_argument("--max-images", type=int, default=MAX_IMAGES_PER_RUN)
-    parser.add_argument("--server", default=COMFY_SERVER)
-    parser.add_argument("--model", choices=[m["id"] for m in MODELS], default=MODELS[0]["id"],
-                        help="Which ComfyUI model entry to use (sdxl or flux).")
-    parser.add_argument("--test-prompt", metavar="TEXT",
-                        help="Generate ONE preview image from TEXT and exit. Does not touch news.json.")
-    parser.add_argument("--test-out", type=Path, default=base / "public/news-images/ai/articles/_preview.webp")
+    parser.add_argument("--comfyui-url", type=str, default=COMFYUI_URL, help="ComfyUI base URL")
     args = parser.parse_args(argv)
 
-    if args.test_prompt:
-        model = next(m for m in MODELS if m["id"] == args.model)
-        out = test_generate(args.test_prompt, args.test_out, args.server, model)
-        print(f"Preview image written: {out}")
-        print(f"Also saved PNG: {out.with_suffix('.png')}")
-        return 0
+    COMFYUI_URL = args.comfyui_url
 
     try:
-        model = next(m for m in MODELS if m["id"] == args.model)
-        report = process_news(args.news, args.output_dir, max_images=args.max_images,
-                             server=args.server, model=model)
+        report = process_news(
+            args.news,
+            args.output_dir,
+            os.getenv("COMFYUI_ACCOUNT_ID", "local"),
+            os.getenv("COMFYUI_API_TOKEN", "local"),
+            max_images=args.max_images,
+        )
     except ValueError as exc:
         print(f"Image generation configuration error: {exc}", file=sys.stderr)
         return 2
-    except OSError as exc:
-        print(f"Image generation filesystem error: {exc}", file=sys.stderr)
-        return 1
 
-    for error in report.errors:
-        print(f"Image generation failed for {error}", file=sys.stderr)
-    print(
-        f"ComfyUI article images: {report.generated} generated, {report.recovered} recovered, "
-        f"{report.failed} failed."
-    )
-    return 1 if report.selected and not (report.generated or report.recovered) else 0
+    print(f"ComfyUI article images: {report.generated} generated, {report.recovered} recovered, {report.failed} failed; {report.attempts} attempts")
+    if report.errors:
+        for e in report.errors:
+            print(f"  - {e}", file=sys.stderr)
+    return 0 if report.failed == 0 else 1
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    sys.exit(main())
