@@ -118,7 +118,7 @@ SDXL_WORKFLOW = {
         "_meta": {"title": "KSampler"},
     },
     "4": {
-        "inputs": {"ckpt_name": "sd_xl_base_1.0.safetensors"},
+        "inputs": {"ckpt_name": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors"},
         "class_type": "CheckpointLoaderSimple",
         "_meta": {"title": "Load SDXL Checkpoint"},
     },
@@ -153,7 +153,7 @@ SDXL_WORKFLOW = {
 }
 
 # Article generation settings
-PROMPT_VERSION = "comfyui-flux-v1"
+PROMPT_VERSION = "comfyui-sdxl-v1"
 FILE_VERSION = "v1"
 WIDTH = 1280
 HEIGHT = 848
@@ -161,6 +161,10 @@ MAX_IMAGES_PER_RUN = 1
 MAX_ATTEMPTS = 2
 REQUEST_TIMEOUT_SECONDS = 180.0
 TOTAL_DEADLINE_SECONDS = 600.0
+# Gap between successive generations so ComfyUI can release VRAM and drain its
+# prompt queue. Local GPUs (RTX 4070 Ti) exhaust after 2-3 back-to-back runs
+# without this, which surfaces as "all ComfyUI models failed".
+INTER_IMAGE_COOLDOWN_SECONDS = 8.0
 MAX_RESPONSE_BYTES = 32 * 1024 * 1024
 MAX_IMAGE_BYTES = 4 * 1024 * 1024
 IMAGE_URL_PREFIX = "/news-images/ai/articles/"
@@ -186,8 +190,7 @@ CATEGORY_PROMPTS = {
 DEFAULT_PROMPT = "hopeful editorial illustration, soft Nordic light, clean composition, photorealistic, 8k, highly detailed, no text, no watermark, no people"
 
 COMFYUI_MODELS = [
-    ("flux", FLUX_WORKFLOW, "flux-dev-fp8"),
-    ("sdxl", SDXL_WORKFLOW, "sdxl-base-1.0"),
+    ("sdxl", SDXL_WORKFLOW, "Juggernaut-XL-v9"),
 ]
 
 
@@ -553,10 +556,9 @@ def process_news(
     if not account_id.strip() or not api_token.strip():
         raise ValueError("ComfyUI account_id and api_token are required when article images are missing")
 
-    budget = AttemptBudget()
     deadline = clock() + TOTAL_DEADLINE_SECONDS
 
-    for item in selected:
+    for index, item in enumerate(selected):
         article_id = str(item.get("id") or "unknown")
         try:
             filename = expected_filename(item)
@@ -568,6 +570,10 @@ def process_news(
                 report.changed = True
                 continue
 
+            # Fresh budget per article: MAX_ATTEMPTS retries apply to THIS image,
+            # not the whole run. A global budget would cap the entire batch at
+            # MAX_ATTEMPTS images and fail the rest with "all ComfyUI models failed".
+            budget = AttemptBudget()
             prompt = build_prompt(item)
             image_bytes = request_generated_image(
                 account_id, api_token, prompt,
@@ -575,7 +581,7 @@ def process_news(
                 opener=opener, clock=clock, sleeper=sleeper,
             )
             atomic_write_bytes(path, image_bytes)
-            item["ai_image"] = image_metadata(item, image_bytes, now(), "comfyui-flux")
+            item["ai_image"] = image_metadata(item, image_bytes, now(), "comfyui-juggernaut-xl")
             report.generated += 1
             report.changed = True
 
@@ -588,7 +594,12 @@ def process_news(
             if isinstance(exc, AttemptLimitError):
                 break
 
-    report.attempts = budget.used
+        # Cooldown between generations so ComfyUI can free VRAM / drain its queue.
+        # Without this, batches of 3+ exhaust the GPU and every later image fails.
+        if index < len(selected) - 1:
+            sleeper(INTER_IMAGE_COOLDOWN_SECONDS)
+
+    report.attempts = report.generated + report.failed + report.recovered
     if report.changed:
         atomic_write_json(news_path, news)
     return report
