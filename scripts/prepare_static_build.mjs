@@ -45,12 +45,12 @@ const resolveAiImage = (article) => {
   const id = article.id || ''
   const fingerprint = article.source_fingerprint || ''
   if (!image || !/^[a-f0-9]{20}$/.test(id) || !/^[a-f0-9]{20}$/.test(fingerprint)) return ''
-  const expectedUrl = `/news-images/ai/articles/${id}-${fingerprint.slice(0, 8)}-v1.webp`
+  const expectedUrl = `/news-images/ai/articles/${id}-${fingerprint}-v1.webp`
   const validGeneratedAt = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,6})?Z$/.test(image.generated_at)
   return image.url === expectedUrl
     && image.source_fingerprint === fingerprint
-    && image.model === 'gpt-image-2'
-    && image.prompt_version === 'editorial-concept-v1'
+    && ['gpt-image-2', 'comfyui-sdxl', 'comfyui-flux', 'comfyui-juggernaut-xl'].includes(image.model)
+    && /^comfyui-(sdxl|flux|juggernaut-xl)-v1$/.test(image.prompt_version)
     && image.width === 1280
     && image.height === 848
     && /^[a-f0-9]{64}$/.test(image.sha256)

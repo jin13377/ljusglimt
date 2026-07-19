@@ -745,7 +745,7 @@ function safeUrl(value: string) {
 }
 
 function safeSavedImage(value: string) {
-  return /^\/news-images\/(?:ai\/[a-z0-9-]+\.webp|ai\/articles\/[a-f0-9]{20}-[a-f0-9]{8}-v1\.webp|generated\/[a-f0-9]{20}-[a-f0-9]{8}-v1\.svg)$/.test(value) ? value : ''
+  return /^\/news-images\/(?:ai\/[a-z0-9-]+\.webp|ai\/articles\/[a-f0-9]{20}-[a-f0-9]{20}-v1\.webp|generated\/[a-f0-9]{20}-[a-f0-9]{20}-v1\.svg)$/.test(value) ? value : ''
 }
 
 async function saveArticle(env: Env, request: Request) {
