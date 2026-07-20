@@ -1376,7 +1376,18 @@
         "forskning",
         "framsteg"
       ],
-      "public_eligible": false
+      "public_eligible": false,
+      "ai_image": {
+        "url": "/news-images/ai/articles/ddf4ec9bc8eefa108799-a23d272334c94e4a377a-v1.webp",
+        "alt": "3 gånger när forskare haft helt fel",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
+        "source_fingerprint": "a23d272334c94e4a377a",
+        "width": 1280,
+        "height": 848,
+        "sha256": "7a0e52a2629ce05e866a9b30091ebb1e665264b2a157d75399fac0d962dafa8f",
+        "generated_at": "2026-07-20T04:51:43.123268+00:00"
+      }
     },
     {
       "id": "bc3b83b6e54eb8d65a1c",
@@ -1396,7 +1407,18 @@
         "forskning",
         "framsteg"
       ],
-      "public_eligible": false
+      "public_eligible": false,
+      "ai_image": {
+        "url": "/news-images/ai/articles/bc3b83b6e54eb8d65a1c-5dafa29727650a6b9ba4-v1.webp",
+        "alt": "Colemans rapport om skolan biter ännu efter 60 år",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
+        "source_fingerprint": "5dafa29727650a6b9ba4",
+        "width": 1280,
+        "height": 848,
+        "sha256": "f16c8ad101957ad71590d27489fc4659194c1ff37f555062b5171e75b52aadf6",
+        "generated_at": "2026-07-20T04:51:51.273119+00:00"
+      }
     },
     {
       "id": "6dfc2033f9e6ae3936d0",
@@ -1416,7 +1438,18 @@
         "forskning",
         "framsteg"
       ],
-      "public_eligible": false
+      "public_eligible": false,
+      "ai_image": {
+        "url": "/news-images/ai/articles/6dfc2033f9e6ae3936d0-859d0521684f88d5f8cc-v1.webp",
+        "alt": "Formgivning och allmänbildning",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
+        "source_fingerprint": "859d0521684f88d5f8cc",
+        "width": 1280,
+        "height": 848,
+        "sha256": "5f84ae4790510d04f1937103864d756cd6ca4621eb7cc5afc81d5a22bca45a70",
+        "generated_at": "2026-07-20T04:51:59.444949+00:00"
+      }
     },
     {
       "id": "024f67c256501fcd947d",
