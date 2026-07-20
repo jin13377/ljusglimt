@@ -464,14 +464,16 @@
         "science"
       ],
       "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/883aa62a7813099dd8b2-e6b980ff-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
+      "ai_image": {
+        "url": "/news-images/ai/articles/883aa62a7813099dd8b2-e6b980ff34b6c73c2089-v1.webp",
+        "alt": "ESA och DON’T NOD ger sig ut på en resa till planeten Persephone i Aphelion",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
         "source_fingerprint": "e6b980ff34b6c73c2089",
         "width": 1280,
         "height": 848,
-        "sha256": "da35e92250c0515d62aedd5149cdcfa9db32493eb90f22ded0138d83d4348efb"
+        "sha256": "4ea3317cc3960863c592e36426d2c489a59b4b80a5f0070911147301b5e72ef5",
+        "generated_at": "2026-07-20T04:46:08.406582+00:00"
       }
     },
     {
@@ -492,14 +494,16 @@
         "forskning"
       ],
       "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/e851322717ee40aea0bf-2e97fc9f-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
+      "ai_image": {
+        "url": "/news-images/ai/articles/e851322717ee40aea0bf-2e97fc9fbaa5a7bcbe78-v1.webp",
+        "alt": "Doktorand får stipendium för forskning om hur eksem påverkar skola och yrkesliv",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
         "source_fingerprint": "2e97fc9fbaa5a7bcbe78",
         "width": 1280,
         "height": 848,
-        "sha256": "2fd2514004f97836fd2922354a8d97640bbca3c463d7e3ad841f6c3c926a8254"
+        "sha256": "07b72734c54d97943381fd9c5cb37b1b06a518594c65daca8addc5d22478633a",
+        "generated_at": "2026-07-20T04:46:22.583499+00:00"
       }
     },
     {
@@ -521,14 +525,16 @@
         "treat"
       ],
       "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/cd34fbfa5bab10217e66-f64a59b3-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
+      "ai_image": {
+        "url": "/news-images/ai/articles/cd34fbfa5bab10217e66-f64a59b35be826c0653f-v1.webp",
+        "alt": "StratNeuro studentkåren",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
         "source_fingerprint": "f64a59b35be826c0653f",
         "width": 1280,
         "height": 848,
-        "sha256": "36106207af61164122da041b3cb3e45d5333936cd6feb98c0851e0b5cca229b1"
+        "sha256": "70d5532d3a48b9ee8ad3319ccb134507828ebd64ae825143a513b31872ef943c",
+        "generated_at": "2026-07-20T04:46:30.797151+00:00"
       }
     },
     {
