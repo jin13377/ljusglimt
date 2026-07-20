@@ -555,14 +555,16 @@
         "lovande"
       ],
       "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/6698c053939f372dce7e-0f7d798f-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
+      "ai_image": {
+        "url": "/news-images/ai/articles/6698c053939f372dce7e-0f7d798fb82c16503b2c-v1.webp",
+        "alt": "Parkinsonläkemedel visar lovande effekt mot svårbehandlad depression",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
         "source_fingerprint": "0f7d798fb82c16503b2c",
         "width": 1280,
         "height": 848,
-        "sha256": "5c78d9275751e5afca642ce661210a5de80103878979c977390cac3040ffeec5"
+        "sha256": "0281a1020be81b89a39ffbfbbd12505f309f733b6051188f87d942acaa66289b",
+        "generated_at": "2026-07-20T04:46:38.982775+00:00"
       }
     },
     {
@@ -590,7 +592,18 @@
         "curated-positive-source",
         "lovande"
       ],
-      "public_eligible": true
+      "public_eligible": true,
+      "ai_image": {
+        "url": "/news-images/ai/articles/a0402e58d294e2932d3d-3563df0caa0369e1f520-v1.webp",
+        "alt": "Bakterier vid infektion kan snabbt spåras med lovande metod",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
+        "source_fingerprint": "3563df0caa0369e1f520",
+        "width": 1280,
+        "height": 848,
+        "sha256": "51fb9190a8eef6c8a8a4b1631dfdb6bdf6ebae84a7086695c7b543f03833bac8",
+        "generated_at": "2026-07-20T04:46:57.166430+00:00"
+      }
     },
     {
       "id": "0392e2d504ad7c9d74eb",
@@ -610,14 +623,16 @@
         "upptäckt"
       ],
       "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/0392e2d504ad7c9d74eb-3ef9a281-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
+      "ai_image": {
+        "url": "/news-images/ai/articles/0392e2d504ad7c9d74eb-3ef9a281afd0264fbd0d-v1.webp",
+        "alt": "AI upptäckte missade blodproppar i hjärnan",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
         "source_fingerprint": "3ef9a281afd0264fbd0d",
         "width": 1280,
         "height": 848,
-        "sha256": "504bdd57a0693b03ab6d7a0fd1696ef2a4d9a1a72542916235315cc7d5d67bc0"
+        "sha256": "940c0a8a30f8b192684b5b55f425040e9983719680a1ef5d5d29de27c4a89d03",
+        "generated_at": "2026-07-20T04:47:11.314281+00:00"
       }
     },
     {
