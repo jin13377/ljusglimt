@@ -761,14 +761,16 @@
         "skydda"
       ],
       "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/0be141613abc499ac0f4-bca1708a-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
+      "ai_image": {
+        "url": "/news-images/ai/articles/0be141613abc499ac0f4-bca1708adc33c10d87d1-v1.webp",
+        "alt": "Sjögräsängar lika viktiga som korallrev för fisk",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
         "source_fingerprint": "bca1708adc33c10d87d1",
         "width": 1280,
         "height": 848,
-        "sha256": "1f3cf70bdf8a8b811b2e4c4de825cc9a72ad29a18697ea09fd418edac9d90235"
+        "sha256": "1c6afaa1c8d25879016c9879d0415fa9e9201e6237c25e48a776c83375f2a8b0",
+        "generated_at": "2026-07-20T04:54:47.554709+00:00"
       }
     },
     {
@@ -804,7 +806,18 @@
         "rescue"
       ],
       "display_title_sv": "Kvinna räddade en katt vid en bilfirma",
-      "public_eligible": true
+      "public_eligible": true,
+      "ai_image": {
+        "url": "/news-images/ai/articles/56c225a54e232fce1fea-9fa7b19e1359a8cb018a-v1.webp",
+        "alt": "Woman Rescues A Cat She Found At A Car Dealership",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
+        "source_fingerprint": "9fa7b19e1359a8cb018a",
+        "width": 1280,
+        "height": 848,
+        "sha256": "4614a619217ac554b1797a2edbd38fdb0c4ad8df43b84b3ce6c90791ae940c9d",
+        "generated_at": "2026-07-20T04:48:10.203057+00:00"
+      }
     },
     {
       "id": "dfb26fd407a2369341ae",
@@ -839,7 +852,18 @@
         "priceless"
       ],
       "display_title_sv": "Mötet mellan hunden och flickan blev början på en vänskap",
-      "public_eligible": true
+      "public_eligible": true,
+      "ai_image": {
+        "url": "/news-images/ai/articles/dfb26fd407a2369341ae-fd638d0c019eba5da1a9-v1.webp",
+        "alt": "Moment Between Shelter Dog And Girl Is Priceless",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
+        "source_fingerprint": "fd638d0c019eba5da1a9",
+        "width": 1280,
+        "height": 848,
+        "sha256": "85c6720550ea748cb84606b2299bf410e5e343e72596b51d0a89da5b77154f05",
+        "generated_at": "2026-07-20T04:48:18.352694+00:00"
+      }
     },
     {
       "id": "5dd429f89dcf7aaf4228",
