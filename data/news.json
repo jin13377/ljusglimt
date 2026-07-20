@@ -139,25 +139,16 @@
         "samarbete"
       ],
       "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/24a653aab5fa5a83a4b1-caa9bd4b-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "caa9bd4b3bc9484f092f",
-        "width": 1280,
-        "height": 848,
-        "sha256": "fdec9bb1ea361a5abc2e629a8ddb4a3dd9d7e0d2b52ba2a6399a0b93f96de3d6"
-      },
       "ai_image": {
-        "url": "/news-images/ai/articles/24a653aab5fa5a83a4b1-caa9bd4b-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: Novo Nordisk-anslag till KI-forskare för nydanande tester av läkemedel",
-        "model": "comfyui-flux",
-        "prompt_version": "comfy-editorial-photo-v2",
+        "url": "/news-images/ai/articles/24a653aab5fa5a83a4b1-caa9bd4b3bc9484f092f-v1.webp",
+        "alt": "Novo Nordisk-anslag till KI-forskare för nydanande tester av läkemedel",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
         "source_fingerprint": "caa9bd4b3bc9484f092f",
         "width": 1280,
         "height": 848,
-        "sha256": "bd2497605f1cffbbdf185f4b7f76a3b03c15a613d7eb8d9d196c8e5c5e43c7e3",
-        "generated_at": "2026-07-19T12:50:29Z"
+        "sha256": "d024848d1c816e1dcc65ff3a02c58134b4c3762c31f2d95dfa9d21a2f7585e82",
+        "generated_at": "2026-07-20T04:44:36.899371+00:00"
       }
     },
     {
@@ -179,25 +170,16 @@
         "forskning"
       ],
       "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/69b567f89e3aadd6d06c-3f16aae2-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
+      "ai_image": {
+        "url": "/news-images/ai/articles/69b567f89e3aadd6d06c-3f16aae2c4c77b6c36d2-v1.webp",
+        "alt": "Saida Hadjab får sitt andra anslag från Novo Nordisk-fonden för forskning om kronisk smärta",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
         "source_fingerprint": "3f16aae2c4c77b6c36d2",
         "width": 1280,
         "height": 848,
-        "sha256": "0d4a6aaa24295dc3742c74edbdd2b9257fa48a112d6b16e9b91710e6a0fbdf18"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/69b567f89e3aadd6d06c-3f16aae2-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: Saida Hadjab får sitt andra anslag från Novo Nordisk-fonden för forskning om kronisk smärta",
-        "model": "comfyui-flux",
-        "prompt_version": "comfy-editorial-photo-v2",
-        "source_fingerprint": "69b567f89e3aadd6d06c3f16aae2",
-        "width": 1280,
-        "height": 848,
-        "sha256": "d1fcf73e1dd66383c3f75887a3cba81060551dec1aee942c097a0c44a0dff7ef",
-        "generated_at": "2026-07-19T12:30:00Z"
+        "sha256": "dd020683023fdda337a3a6616aadc29916beb6aab22a4bc1128a05019090c9a9",
+        "generated_at": "2026-07-20T04:44:45.122822+00:00"
       }
     },
     {
@@ -220,25 +202,16 @@
         "satsning"
       ],
       "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/8654f363eefda1bb5a59-c59008e0-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
+      "ai_image": {
+        "url": "/news-images/ai/articles/8654f363eefda1bb5a59-c59008e05d8d4dbceb77-v1.webp",
+        "alt": "Björn Gysell donerar till forskning om framtidens behandlingar mot prostatacancer",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
         "source_fingerprint": "c59008e05d8d4dbceb77",
         "width": 1280,
         "height": 848,
-        "sha256": "e7cb2b36e302fc6fdfcd657d4337f0d9e7bb6f9454dfd0a6e252b8ba15bd8617"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/8654f363eefda1bb5a59-c59008e0-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: Björn Gysell donerar till forskning om framtidens behandlingar mot prostatacancer",
-        "model": "comfyui-flux",
-        "prompt_version": "comfy-editorial-photo-v2",
-        "source_fingerprint": "8654f363eefda1bb5a59c59008e0",
-        "width": 1280,
-        "height": 848,
-        "sha256": "9bcee216974d4ae2413555744fa9d4dc8cd197d7b9fdd8c2e3baf6fcbb45c79b",
-        "generated_at": "2026-07-19T12:30:00Z"
+        "sha256": "e79b65508f9b4ce5c9e98e5e1537ea1fa443d23683d3affd6fc12f6d5158342d",
+        "generated_at": "2026-07-20T04:44:53.325178+00:00"
       }
     },
     {
