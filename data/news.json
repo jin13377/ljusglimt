@@ -1583,7 +1583,18 @@
         "mission",
         "rescue"
       ],
-      "public_eligible": false
+      "public_eligible": false,
+      "ai_image": {
+        "url": "/news-images/ai/articles/b2a50a7e834fe5a51d69-685882d51a0346bca596-v1.webp",
+        "alt": "Firefighters free raccoon trapped under sewer grate in 'jaws of life' rescue mission",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
+        "source_fingerprint": "685882d51a0346bca596",
+        "width": 1280,
+        "height": 848,
+        "sha256": "c2b769852ce827b663a3a18cc64ae4f27704c469f2b289653fcc5ac8b50f8bda",
+        "generated_at": "2026-07-20T04:52:38.229576+00:00"
+      }
     },
     {
       "id": "59d1baf73158830c7c72",
@@ -1610,7 +1621,18 @@
         "conservation",
         "together"
       ],
-      "public_eligible": false
+      "public_eligible": false,
+      "ai_image": {
+        "url": "/news-images/ai/articles/59d1baf73158830c7c72-db12fb82eab1700e898f-v1.webp",
+        "alt": "This giant snail is the size of a croissant. Conservationists are banding together to save it from extinction",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
+        "source_fingerprint": "db12fb82eab1700e898f",
+        "width": 1280,
+        "height": 848,
+        "sha256": "b9b57effdefd28878aeefcfe1dac196bc8f07a3a6360d101add5cdbaeafc256e",
+        "generated_at": "2026-07-20T04:52:46.404595+00:00"
+      }
     },
     {
       "id": "4dfcf68479bd517dccdb",
@@ -1637,7 +1659,18 @@
         "mission",
         "rescue"
       ],
-      "public_eligible": false
+      "public_eligible": false,
+      "ai_image": {
+        "url": "/news-images/ai/articles/4dfcf68479bd517dccdb-2b9539162a770dbeabc7-v1.webp",
+        "alt": "Jet ski riders conduct rescue mission for sea turtle with 'bloody, peeling' infection on her shell",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
+        "source_fingerprint": "2b9539162a770dbeabc7",
+        "width": 1280,
+        "height": 848,
+        "sha256": "647fe1ee78a99fa55437bd6df45ddd727a13638b1d956184862da656e996d656",
+        "generated_at": "2026-07-20T04:52:54.578760+00:00"
+      }
     }
   ]
 }
