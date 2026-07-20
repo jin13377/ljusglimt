@@ -43,7 +43,7 @@ CATEGORY_THEMES = {
 WORKFLOW = {
     "3": {
         "inputs": {
-            "seed": 0, "steps": 8, "cfg": 1.0,
+            "seed": 0, "steps": 8, "cfg": 3.5,
             "sampler_name": "euler", "scheduler": "simple", "denoise": 1.0,
             "model": ["4", 0], "positive": ["6", 0], "negative": ["7", 0],
             "latent_image": ["5", 0],
@@ -64,7 +64,7 @@ WORKFLOW = {
     },
     "7": {
         "inputs": {
-            "text": "flat, blank, empty, plain, low contrast, low detail, blurry, deformed, ugly, text, words, letters, writing, caption, signature, watermark, logo, title, people, person, human, child, children, hands, hand, face, portrait, praying, offering, reaching, holding, cradling, silhouette, palm, sun, moon, glow, light source, rays, spotlight, sunrise, sunset",
+            "text": "text, words, letters, writing, caption, signature, watermark, logo, brand, label, sign, title, name, commercial, advertisement, overlay, low quality, blurry, deformed, ugly, distorted, extra limbs",
             "clip": ["8", 0],
         },
         "class_type": "CLIPTextEncode", "_meta": {"title": "Negative Prompt"},
@@ -87,23 +87,34 @@ WORKFLOW = {
     },
 }
 
-def build_prompt(category: str) -> str:
-    """English-only RICH abstract prompt. No Swedish, no article title.
+def load_subjects(path: str = "scripts/image_subjects_en.json") -> dict:
+    """English subject phrases per article id (pre-translated so Z-Image-Turbo
+    never sees Swedish text, which it would render as image text)."""
+    p = Path(path)
+    if not p.exists():
+        return {}
+    try:
+        return json.loads(p.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
 
-    Z-Image-Turbo at cfg=1.0 follows the prompt literally, so the prompt must be
-    detailed and filled (NOT 'minimalist / clean negative space', which yields a
-    near-empty flat image). Still non-figurative: no people, no text, no hands,
-    no light-source/hands-reaching motifs.
+SUBJECTS = load_subjects()
+
+def build_prompt_for_article(item: dict) -> str:
+    """Realistic, photo-style prompt derived from the individual article's
+    subject. English only (Z-Image-Turbo renders literal Swedish text as image
+    text). No 'abstract/non-figurative' forcing — we want a real, varied scene
+    per article so images are distinct and on-topic.
     """
-    theme = CATEGORY_THEMES.get(category, CATEGORY_THEMES["default"])
+    aid = item.get("id", "")
+    subject = SUBJECTS.get(aid) or item.get("agent_summary") or item.get("title") or ""
+    subject = subject.strip()
+    if not subject:
+        subject = CATEGORY_THEMES.get(item.get("category", ""), CATEGORY_THEMES["default"])
     return (
-        "Abstract editorial magazine illustration, bold geometric shapes, overlapping circles and "
-        "flowing organic curves, rich gradients, layered translucent forms, strong visual rhythm, "
-        "intricate detailed texture, vibrant harmonious palette, deep teal, warm coral, golden ochre, "
-        "slate blue, cream. "
-        f"Visual metaphor for: {theme}. "
-        "High-end editorial cover art, paper grain texture, balanced composition. "
-        "No living beings, no anatomy, no people, no hands, no text, no words, no letters, no numbers."
+        f"Realistic photography, highly detailed, {subject}, "
+        "natural lighting, professional editorial photograph, "
+        "sharp focus, clear details, cinematic composition, crisp quality."
     )
 
 def submit_workflow(prompt: str, seed: int, width=1280, height=848) -> str:
@@ -156,6 +167,8 @@ def main():
     ap.add_argument("--output-dir", default="public/news-images/ai/articles")
     ap.add_argument("--max-images", type=int, default=3)
     ap.add_argument("--force", action="store_true", help="Regenerate even if ai_image exists")
+    ap.add_argument("--regenerate-all", action="store_true",
+                    help="Clear all ai_image blocks first, then regenerate every article")
     args = ap.parse_args()
 
     news_path = Path(args.news)
@@ -163,6 +176,10 @@ def main():
     items = data.get("items", [])
     out_dir = Path(args.output_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
+
+    if args.regenerate_all:
+        for it in items:
+            it.pop("ai_image", None)
 
     n = 0
     for item in items:
@@ -175,8 +192,8 @@ def main():
         if not category and not alt:
             continue
         seed = abs(hash(item["id"])) % (2**32)
-        print(f"[{n+1}] Genererar för kategori '{category}': {alt[:50]}...")
-        pid = submit_workflow(build_prompt(category), seed)
+        print(f"[{n+1}] Genererar för '{alt[:50]}'...")
+        pid = submit_workflow(build_prompt_for_article(item), seed)
         png = fetch_result(pid)
         webp = convert_png_to_webp(png)
         # Site expects filename: <article_id>-<source_fingerprint>-v1.webp
