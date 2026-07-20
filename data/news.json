@@ -654,14 +654,16 @@
         "förebygga"
       ],
       "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/ac9388eca9809535d9d3-f3b52be8-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
+      "ai_image": {
+        "url": "/news-images/ai/articles/ac9388eca9809535d9d3-f3b52be8f7d6b87ace5b-v1.webp",
+        "alt": "Lev längre med mindre mat på tallriken",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
         "source_fingerprint": "f3b52be8f7d6b87ace5b",
         "width": 1280,
         "height": 848,
-        "sha256": "0a1c95b16e1ceee0e993977a9ee3f9e858e4624dbe3118c9fdd75a90499eafc5"
+        "sha256": "70ddb8c7b19ab28024f259892d02a822ed737331d5f5dae22036f7b7b579a1b3",
+        "generated_at": "2026-07-20T04:47:19.475934+00:00"
       }
     },
     {
@@ -698,7 +700,18 @@
         "surprise"
       ],
       "display_title_sv": "Pojkvännen fick den bästa alla hjärtans dag-presenten",
-      "public_eligible": true
+      "public_eligible": true,
+      "ai_image": {
+        "url": "/news-images/ai/articles/4390567e79124135517d-2e837fc7fbc398ea5b05-v1.webp",
+        "alt": "Boyfriend Gets The Absolute BEST Valentines Day Gift",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
+        "source_fingerprint": "2e837fc7fbc398ea5b05",
+        "width": 1280,
+        "height": 848,
+        "sha256": "d5c6f63ecf64ade5c0075bebb833177b58396b925942d1a2c181e42426a6abae",
+        "generated_at": "2026-07-20T04:47:33.655160+00:00"
+      }
     },
     {
       "id": "1a72dc074b1fffbdf6ef",
@@ -718,14 +731,16 @@
         "omställning"
       ],
       "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/1a72dc074b1fffbdf6ef-4611834f-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
+      "ai_image": {
+        "url": "/news-images/ai/articles/1a72dc074b1fffbdf6ef-4611834f14abc3edddee-v1.webp",
+        "alt": "Trafikverket: Klimatkrav och bonus verktyg för snabbare omställning",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
         "source_fingerprint": "4611834f14abc3edddee",
         "width": 1280,
         "height": 848,
-        "sha256": "14bb3533693bc25173d6b7e8d69a6862e943f933d2527773fd4d50d044d5d79d"
+        "sha256": "87a0b4c5cbb31e83bb4b73c3fb30df563c17644900632444bad32203793a84b8",
+        "generated_at": "2026-07-20T04:59:53.763863+00:00"
       }
     },
     {
