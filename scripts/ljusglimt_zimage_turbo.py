@@ -43,46 +43,47 @@ CATEGORY_THEMES = {
 WORKFLOW = {
     "3": {
         "inputs": {
-            "seed": 0, "steps": 8, "cfg": 3.5,
-            "sampler_name": "euler", "scheduler": "simple", "denoise": 1.0,
-            "model": ["4", 0], "positive": ["6", 0], "negative": ["7", 0],
-            "latent_image": ["5", 0],
+            "seed": 0, "steps": 8, "cfg": 1.0,
+            "sampler_name": "res_multistep", "scheduler": "simple", "denoise": 1.0,
+            "model": ["11", 0], "positive": ["27", 0], "negative": ["33", 0],
+            "latent_image": ["13", 0],
         },
-        "class_type": "KSampler", "_meta": {"title": "KSampler"},
+        "class_type": "KSampler", "_meta": {"title": "Kampler"},
     },
-    "4": {
+    "11": {
+        "inputs": {"model": ["28", 0], "beta_schedule": "aura_flow", "sigma_max": 3.0, "shift": 3.0},
+        "class_type": "ModelSamplingAuraFlow", "_meta": {"title": "Model Sampling (AuraFlow)"},
+    },
+    "13": {
+        "inputs": {"width": 1024, "height": 1024, "batch_size": 1},
+        "class_type": "EmptySD3LatentImage", "_meta": {"title": "Empty SD3 Latent Image"},
+    },
+    "27": {
+        "inputs": {"text": "PROMPT_PLACEHOLDER", "clip": ["30", 0]},
+        "class_type": "CLIPTextEncode", "_meta": {"title": "Positive Prompt"},
+    },
+    "28": {
         "inputs": {"unet_name": "z_image_turbo_bf16.safetensors", "weight_dtype": "default"},
         "class_type": "UNETLoader", "_meta": {"title": "Load Z-Image-Turbo UNET"},
     },
-    "5": {
-        "inputs": {"width": 1280, "height": 848, "batch_size": 1},
-        "class_type": "EmptyLatentImage", "_meta": {"title": "Empty Latent Image"},
-    },
-    "6": {
-        "inputs": {"text": "PROMPT_PLACEHOLDER", "clip": ["8", 0]},
-        "class_type": "CLIPTextEncode", "_meta": {"title": "Positive Prompt"},
-    },
-    "7": {
-        "inputs": {
-            "text": "text, words, letters, writing, caption, signature, watermark, logo, brand, label, sign, title, name, commercial, advertisement, overlay, low quality, blurry, deformed, ugly, distorted, extra limbs",
-            "clip": ["8", 0],
-        },
-        "class_type": "CLIPTextEncode", "_meta": {"title": "Negative Prompt"},
-    },
-    "8": {
-        "inputs": {"clip_name": "qwen_3_4b.safetensors", "type": "lumina2", "device": "default"},
-        "class_type": "CLIPLoader", "_meta": {"title": "Load CLIP"},
-    },
-    "9": {
-        "inputs": {"samples": ["3", 0], "vae": ["10", 0]},
-        "class_type": "VAEDecode", "_meta": {"title": "VAE Decode"},
-    },
-    "10": {
+    "29": {
         "inputs": {"vae_name": "ae.safetensors"},
         "class_type": "VAELoader", "_meta": {"title": "Load VAE"},
     },
-    "11": {
-        "inputs": {"images": ["9", 0], "filename_prefix": "ljusglimt_zturbo"},
+    "30": {
+        "inputs": {"clip_name": "qwen_3_4b.safetensors", "type": "lumina2", "device": "default"},
+        "class_type": "CLIPLoader", "_meta": {"title": "Load CLIP"},
+    },
+    "33": {
+        "inputs": {"conditioning": ["27", 0]},
+        "class_type": "ConditioningZeroOut", "_meta": {"title": "ConditioningZeroOut (negative)"},
+    },
+    "8": {
+        "inputs": {"samples": ["3", 0], "vae": ["29", 0]},
+        "class_type": "VAEDecode", "_meta": {"title": "VAE Decode"},
+    },
+    "9": {
+        "inputs": {"images": ["8", 0], "filename_prefix": "ljusglimt_zturbo"},
         "class_type": "SaveImage", "_meta": {"title": "Save Image"},
     },
 }
@@ -112,17 +113,18 @@ def build_prompt_for_article(item: dict) -> str:
     if not subject:
         subject = CATEGORY_THEMES.get(item.get("category", ""), CATEGORY_THEMES["default"])
     return (
-        f"Realistic photography, highly detailed, {subject}, "
+        f"Realistic photography, ultra detailed, {subject}, "
         "natural lighting, professional editorial photograph, "
-        "sharp focus, clear details, cinematic composition, crisp quality."
+        "tack sharp, fully sharp, maximum detail, crisp quality, "
+        "high resolution, crystal clear, no blur."
     )
 
-def submit_workflow(prompt: str, seed: int, width=1280, height=848) -> str:
+def submit_workflow(prompt: str, seed: int, width=1024, height=1024) -> str:
     wf = json.loads(json.dumps(WORKFLOW))  # deep copy
-    wf["6"]["inputs"]["text"] = prompt
+    wf["27"]["inputs"]["text"] = prompt
     wf["3"]["inputs"]["seed"] = seed
-    wf["5"]["inputs"]["width"] = width
-    wf["5"]["inputs"]["height"] = height
+    wf["13"]["inputs"]["width"] = width
+    wf["13"]["inputs"]["height"] = height
     payload = json.dumps({"prompt": wf}).encode("utf-8")
     req = urllib.request.Request(
         f"{COMFYUI_URL}/prompt", data=payload,
@@ -149,12 +151,14 @@ def fetch_result(prompt_id: str, timeout=120) -> bytes:
             continue
     raise TimeoutError(f"No result for {prompt_id} in {timeout}s")
 
-def convert_png_to_webp(png_bytes: bytes, quality=85) -> bytes:
-    """Convert PNG bytes to WebP using Pillow if available, else passthrough."""
+def convert_png_to_webp(png_bytes: bytes, quality=88) -> bytes:
+    """Convert PNG bytes to WebP using Pillow if available, else passthrough.
+    Resizes to 1280x848 to match the site's expected image dimensions."""
     try:
         from io import BytesIO
         from PIL import Image
-        img = Image.open(BytesIO(png_bytes))
+        img = Image.open(BytesIO(png_bytes)).convert("RGB")
+        img = img.resize((1280, 848), Image.LANCZOS)
         buf = BytesIO()
         img.save(buf, format="WEBP", quality=quality)
         return buf.getvalue()
