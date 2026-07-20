@@ -27,25 +27,16 @@
         "satsning"
       ],
       "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/0b87daf79218ce385c31-c2f7120f-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
+      "ai_image": {
+        "url": "/news-images/ai/articles/0b87daf79218ce385c31-c2f7120f791abf639846-v1.webp",
+        "alt": "Hållbar samhällsbyggnad behöver få plats i EUs nästa forskningsprogram",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
         "source_fingerprint": "c2f7120f791abf639846",
         "width": 1280,
         "height": 848,
-        "sha256": "dc4a9fc3f4cdac3864d0ace3b962bb8638abd031697fd277a930ac538c46821f"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/0b87daf79218ce385c31-0b87daf79218ce385c31-v1.webp",
-        "alt": "Hållbar samhällsbyggnad behöver få plats i EUs nästa forskningsprogram",
-        "model": "comfyui-flux",
-        "prompt_version": "comfyui-flux-v1",
-        "source_fingerprint": "0b87daf79218ce385c31",
-        "width": 1280,
-        "height": 848,
-        "sha256": "11ae9e7a614ed3491fde7d304cdf39e9382d042efc64feee72174a1a6989e1f7",
-        "generated_at": "2026-07-19T16:47:46Z"
+        "sha256": "0c29fd0006bfa4ab0b6afcfc31865c515877a82e9b299f93b927322d3c59ddee",
+        "generated_at": "2026-07-20T04:59:45.750508+00:00"
       }
     },
     {
@@ -83,7 +74,18 @@
         "surprise"
       ],
       "display_title_sv": "Överraskningen med fosterkattungar gav pojkvännen bästa reaktionen",
-      "public_eligible": true
+      "public_eligible": true,
+      "ai_image": {
+        "url": "/news-images/ai/articles/772deb64d5f80c5b5454-39f8615568f17582de75-v1.webp",
+        "alt": "Boyfriend Has Best Reaction To Surprise Foster Kittens",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
+        "source_fingerprint": "39f8615568f17582de75",
+        "width": 1280,
+        "height": 848,
+        "sha256": "e20688601eb4e9e0ffec5aa5e41e669233a35d7a470f64e1d471efc2d4e2dc59",
+        "generated_at": "2026-07-20T04:44:14.559864+00:00"
+      }
     },
     {
       "id": "24b88eddb5c3131c3d69",
@@ -105,25 +107,16 @@
         "skydda"
       ],
       "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/24b88eddb5c3131c3d69-85e7e461-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "85e7e46112e29a92a38e",
-        "width": 1280,
-        "height": 848,
-        "sha256": "ec7e64f095f6f42d68d3129f8ebcd819db7d11896aea9c8708a651a53369a6fa"
-      },
       "ai_image": {
-        "url": "/news-images/ai/articles/24b88eddb5c3131c3d69-85e7e461-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: Hopp om att skydda och återställa fertiliteten hos personer som överlevt barncancer",
-        "model": "comfyui-flux",
-        "prompt_version": "comfy-editorial-photo-v2",
+        "url": "/news-images/ai/articles/24b88eddb5c3131c3d69-85e7e46112e29a92a38e-v1.webp",
+        "alt": "Hopp om att skydda och återställa fertiliteten hos personer som överlevt barncancer",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
         "source_fingerprint": "85e7e46112e29a92a38e",
         "width": 1280,
         "height": 848,
-        "sha256": "75382167231a0901f258588e0cfac60b8f90bd0720fa83f032e271650637d2c7",
-        "generated_at": "2026-07-19T12:49:57Z"
+        "sha256": "2fdb6d480f528b52b585a91e67f47e30c67bc381589e5122977d3cdcd5416471",
+        "generated_at": "2026-07-20T04:44:28.718396+00:00"
       }
     },
     {
