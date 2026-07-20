@@ -98,8 +98,8 @@ function resolveAiImage(item: RawImageFields): NewsImage | undefined {
   if (!image || !/^[a-f0-9]{20}$/.test(id) || !/^[a-f0-9]{20}$/.test(fingerprint)) return undefined
   const expectedUrl = `/news-images/ai/articles/${id}-${fingerprint}-v1.webp`
   const validGeneratedAt = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,6})?Z$/.test(image.generated_at)
-  const approvedModels = ['gpt-image-2', 'cf-lucid-origin', 'cf-leonardo-phoenix', 'comfyui-sdxl', 'comfyui-flux', 'comfyui-juggernaut-xl']
-  const approvedVersions = ['editorial-concept-v1', 'cf-editorial-photo-v1', 'cf-editorial-collage-v1', 'comfy-editorial-photo-v1', 'comfy-editorial-photo-v2']
+  const approvedModels = ['gpt-image-2', 'cf-lucid-origin', 'cf-leonardo-phoenix', 'comfyui-sdxl', 'comfyui-flux', 'comfyui-juggernaut-xl', 'comfyui-z-image-turbo']
+  const approvedVersions = ['editorial-concept-v1', 'cf-editorial-photo-v1', 'cf-editorial-collage-v1', 'comfy-editorial-photo-v1', 'comfy-editorial-photo-v2', 'z-image-turbo-v1']
   if (image.url !== expectedUrl
       || image.source_fingerprint !== fingerprint
       || !approvedModels.includes(image.model)
