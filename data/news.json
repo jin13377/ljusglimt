@@ -234,25 +234,16 @@
         "initiativ"
       ],
       "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/0581c7633c440d8b7c2e-87e71d6b-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
+      "ai_image": {
+        "url": "/news-images/ai/articles/0581c7633c440d8b7c2e-87e71d6b054c43e457a8-v1.webp",
+        "alt": "20 år med ESERO: att föra rymden till miljontals elever",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
         "source_fingerprint": "87e71d6b054c43e457a8",
         "width": 1280,
         "height": 848,
-        "sha256": "b0cd20dbb2c19d0f72547b8bccd12db07c3c05aee6fa271e90effe161bd5ad25"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/0581c7633c440d8b7c2e-87e71d6b-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: 20 år med ESERO: att föra rymden till miljontals elever",
-        "model": "comfyui-flux",
-        "prompt_version": "comfy-editorial-photo-v2",
-        "source_fingerprint": "0581c7633c440d8b7c2e87e71d6b",
-        "width": 1280,
-        "height": 848,
-        "sha256": "fdb47bbd44cd9803423955fdcae47b83d0ee73f02a6e839ef9e211386faee49b",
-        "generated_at": "2026-07-19T12:30:00Z"
+        "sha256": "b44f4b101aa39c9df4d115c3f0729c5d87d6497fba8fb2f14e634eb6433e2ab8",
+        "generated_at": "2026-07-20T04:57:57.875186+00:00"
       }
     },
     {
@@ -282,14 +273,16 @@
         "lösning"
       ],
       "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/ccc544ab470c29cb6d35-d2ef8f24-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
+      "ai_image": {
+        "url": "/news-images/ai/articles/ccc544ab470c29cb6d35-d2ef8f247f22fa680026-v1.webp",
+        "alt": "Impact labs breddar innovationsstödet vid svenska lärosäten",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
         "source_fingerprint": "d2ef8f247f22fa680026",
         "width": 1280,
         "height": 848,
-        "sha256": "4af3b777ff818c65e952804219e0f05a1088bdc4cd130e82a9162e4e5646a688"
+        "sha256": "156c008961055a1a172059f3a4c62a48279dddc855f01ce6b4c14e7224fed787",
+        "generated_at": "2026-07-20T04:58:11.914558+00:00"
       }
     },
     {
@@ -312,14 +305,16 @@
         "framsteg"
       ],
       "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/a1ff56772fa1e76a2f23-b05d127f-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
+      "ai_image": {
+        "url": "/news-images/ai/articles/a1ff56772fa1e76a2f23-b05d127f20f87ce8080d-v1.webp",
+        "alt": "SubOrbital Express-5 skickar upp tolv experiment till mikrogravitation",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
         "source_fingerprint": "b05d127f20f87ce8080d",
         "width": 1280,
         "height": 848,
-        "sha256": "273484e6265bcfb32ad63f2d1ada4c34b8bdadcd88dd46c95261cc760fae40d5"
+        "sha256": "428c82a775822fc171d052ec0ceeda02e7b0ffb49c625023eee5a1d88abbea4e",
+        "generated_at": "2026-07-20T04:45:23.779563+00:00"
       }
     },
     {
