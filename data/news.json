@@ -1190,7 +1190,18 @@
         "forskning",
         "framsteg"
       ],
-      "public_eligible": false
+      "public_eligible": false,
+      "ai_image": {
+        "url": "/news-images/ai/articles/92c6c8c12d98c0ead6ee-002076b5b973aadf8a52-v1.webp",
+        "alt": "Så stöttas ultratätt väte av forskningssystemet",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
+        "source_fingerprint": "002076b5b973aadf8a52",
+        "width": 1280,
+        "height": 848,
+        "sha256": "7f5080db923ac37abc19da4d3cc76e552c96164bed164f43d17fe847b2852076",
+        "generated_at": "2026-07-20T04:50:30.083785+00:00"
+      }
     },
     {
       "id": "511514f3f8d883139491",
@@ -1211,7 +1222,18 @@
         "framsteg",
         "rekord"
       ],
-      "public_eligible": false
+      "public_eligible": false,
+      "ai_image": {
+        "url": "/news-images/ai/articles/511514f3f8d883139491-5dc0b9b69025976abb26-v1.webp",
+        "alt": "Rekord i fusion",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
+        "source_fingerprint": "5dc0b9b69025976abb26",
+        "width": 1280,
+        "height": 848,
+        "sha256": "ef82026f75e759acbd0ab87b06b71498ab0791ac31c29e5068da25cac468d1d7",
+        "generated_at": "2026-07-20T04:50:38.231052+00:00"
+      }
     },
     {
       "id": "8eae2bb1e83e6ad77fe5",
@@ -1231,7 +1253,18 @@
         "hållbar",
         "omställning"
       ],
-      "public_eligible": false
+      "public_eligible": false,
+      "ai_image": {
+        "url": "/news-images/ai/articles/8eae2bb1e83e6ad77fe5-52454a1a997381c69977-v1.webp",
+        "alt": "”Klimatomställningen behöver bindande klimatkrav”",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
+        "source_fingerprint": "52454a1a997381c69977",
+        "width": 1280,
+        "height": 848,
+        "sha256": "9cb983ea6c975262d0184825b5a479eef8c84f8bfcd3ff55f8b0550ea08311ae",
+        "generated_at": "2026-07-20T05:00:01.791094+00:00"
+      }
     },
     {
       "id": "d54ec4a4e22279413cfc",
