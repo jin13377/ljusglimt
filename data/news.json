@@ -1089,14 +1089,16 @@
         "lösning"
       ],
       "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/f8f5460a8a7aacbf0eba-29ab7ad3-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
+      "ai_image": {
+        "url": "/news-images/ai/articles/f8f5460a8a7aacbf0eba-29ab7ad32b22fbb5e40b-v1.webp",
+        "alt": "Välfärdsteknik ger trygghet – men inte alltid ett aktivt och delaktigt liv",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
         "source_fingerprint": "29ab7ad32b22fbb5e40b",
         "width": 1280,
         "height": 848,
-        "sha256": "557d62a9deeecfe11b03cba0e6616a5442c140e0f8ff9bd52aa56c872b0b97f1"
+        "sha256": "627908ed29d9f677ef2bd263d5da968155bb76785b31974050874e593130a1aa",
+        "generated_at": "2026-07-20T04:49:51.549773+00:00"
       }
     },
     {
@@ -1126,14 +1128,16 @@
       ],
       "display_title_sv": "NASA testar små flygplan för snabbare innovation",
       "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/b634e8c36ed593bd94d7-699c1ffd-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
+      "ai_image": {
+        "url": "/news-images/ai/articles/b634e8c36ed593bd94d7-699c1ffd1b6471221e44-v1.webp",
+        "alt": "NASA Uses Subscale Aircraft to Accelerate Flight Innovation",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
         "source_fingerprint": "699c1ffd1b6471221e44",
         "width": 1280,
         "height": 848,
-        "sha256": "c2bf84f6c6dc3af8734f2c5673cb58219b5ad6ccbbd1cd4838fb3007654c6c5a"
+        "sha256": "cd6884b8fc8b81642df68e13b80208b2311c28d3222eaa140743f3233f1a2947",
+        "generated_at": "2026-07-20T04:50:05.711811+00:00"
       }
     },
     {
@@ -1155,14 +1159,16 @@
       ],
       "display_title_sv": "Volontärers mätningar dokumenterar Louisianas regn",
       "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/9a227c3910aa2c6a2a31-a36669d8-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
+      "ai_image": {
+        "url": "/news-images/ai/articles/9a227c3910aa2c6a2a31-a36669d8220bf7056b69-v1.webp",
+        "alt": "Volunteer Measures Record Louisiana Rainfall",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
         "source_fingerprint": "a36669d8220bf7056b69",
         "width": 1280,
         "height": 848,
-        "sha256": "c02560296b843217aa7846f0c3608084bcee459e1b980bb6e89882850565fb68"
+        "sha256": "5cf5f249f56389410653a8c8b5a6e621aa178786dc678a12748d14d84ba28298",
+        "generated_at": "2026-07-20T04:50:13.914951+00:00"
       }
     },
     {
