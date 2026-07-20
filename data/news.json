@@ -982,14 +982,16 @@
         "satsning"
       ],
       "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/9e2ab5cc1a6a4aa08cb4-0a7c3e98-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
+      "ai_image": {
+        "url": "/news-images/ai/articles/9e2ab5cc1a6a4aa08cb4-0a7c3e986b09d3dfa103-v1.webp",
+        "alt": "Malmö först med rådgivning om klimatanpassning",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
         "source_fingerprint": "0a7c3e986b09d3dfa103",
         "width": 1280,
         "height": 848,
-        "sha256": "122bb67499ff32db2d3a5a3e92dafc5eb79ca9d8875724523a5b1f33c3057075"
+        "sha256": "de406df145c6e8e9c8c6bb6b55c30e770fa14256428f8196a83cbb0b9a22e0ca",
+        "generated_at": "2026-07-20T04:49:09.018566+00:00"
       }
     },
     {
@@ -1017,7 +1019,18 @@
         "curated-positive-source",
         "upptäckt"
       ],
-      "public_eligible": true
+      "public_eligible": true,
+      "ai_image": {
+        "url": "/news-images/ai/articles/e3e7e57180a3977ae24b-ef89be3c0431b294fa39-v1.webp",
+        "alt": "Gammalt skinn var Sveriges äldsta sko",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
+        "source_fingerprint": "ef89be3c0431b294fa39",
+        "width": 1280,
+        "height": 848,
+        "sha256": "0b37f56302020a33fefb64037067d48b03b899285d6cc778fe5b16fa48774f95",
+        "generated_at": "2026-07-20T04:49:23.184639+00:00"
+      }
     },
     {
       "id": "1975208a7e6ad125a4af",
@@ -1045,7 +1058,18 @@
         "hope"
       ],
       "display_title_sv": "Nyfödd pannkakssköldpadda ger hopp åt hotad art",
-      "public_eligible": true
+      "public_eligible": true,
+      "ai_image": {
+        "url": "/news-images/ai/articles/1975208a7e6ad125a4af-84c32865a61a64525826-v1.webp",
+        "alt": "Conservationists celebrate birth of baby pancake tortoise, hope for one of the world's most endangered reptiles",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
+        "source_fingerprint": "84c32865a61a64525826",
+        "width": 1280,
+        "height": 848,
+        "sha256": "64bd04cff1affc6a6f50e20dcab3c6485163404292b4b3228eb6c5387153c62f",
+        "generated_at": "2026-07-20T04:49:37.373862+00:00"
+      }
     },
     {
       "id": "f8f5460a8a7aacbf0eba",
