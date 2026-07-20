@@ -345,14 +345,16 @@
         "omställning"
       ],
       "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/6d39b13679ff7bb52ec1-5f39680c-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
+      "ai_image": {
+        "url": "/news-images/ai/articles/6d39b13679ff7bb52ec1-5f39680c626caee72eca-v1.webp",
+        "alt": "Glapp mellan policy och praktik för akademiskt samhällsengagemang",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
         "source_fingerprint": "5f39680c626caee72eca",
         "width": 1280,
         "height": 848,
-        "sha256": "f88a3ae8e41db3efa74997bb6765f7186469861b26185851852cb47d1d225c95"
+        "sha256": "0b0b5517a171038041957b1f54825285405c6c8523debb9d55730d7be9868575",
+        "generated_at": "2026-07-20T04:45:31.929902+00:00"
       }
     },
     {
@@ -390,7 +392,18 @@
         "together"
       ],
       "display_title_sv": "Alla hjälptes åt för att rädda grisen Petey",
-      "public_eligible": true
+      "public_eligible": true,
+      "ai_image": {
+        "url": "/news-images/ai/articles/33e4d91318071bc1b90a-b166770818c3b8024529-v1.webp",
+        "alt": "This Pig Was On The Run Until Everyone Came Together",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
+        "source_fingerprint": "b166770818c3b8024529",
+        "width": 1280,
+        "height": 848,
+        "sha256": "c68bd14d7d9f4d84329e89539832f7e94265affabbf46b61e891899c3bef971e",
+        "generated_at": "2026-07-20T04:45:40.071454+00:00"
+      }
     },
     {
       "id": "057865da8dd0eb6e51f3",
@@ -418,7 +431,18 @@
         "forskning",
         "lägre risk"
       ],
-      "public_eligible": true
+      "public_eligible": true,
+      "ai_image": {
+        "url": "/news-images/ai/articles/057865da8dd0eb6e51f3-fdba70adc681d7c1b16d-v1.webp",
+        "alt": "Längre pappaledighet kopplas till lägre risk för depression",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
+        "source_fingerprint": "fdba70adc681d7c1b16d",
+        "width": 1280,
+        "height": 848,
+        "sha256": "cd2817df579ae50295bdb3869babdc496c4ac115bb83afdeb03f06065b7d7340",
+        "generated_at": "2026-07-20T04:45:54.246882+00:00"
+      }
     },
     {
       "id": "883aa62a7813099dd8b2",
