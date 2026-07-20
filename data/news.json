@@ -1469,7 +1469,18 @@
         "forskning",
         "framsteg"
       ],
-      "public_eligible": false
+      "public_eligible": false,
+      "ai_image": {
+        "url": "/news-images/ai/articles/024f67c256501fcd947d-4d663dc7c7175e389b77-v1.webp",
+        "alt": "Gallup utmanade bilden av den folkliga opinionen",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
+        "source_fingerprint": "4d663dc7c7175e389b77",
+        "width": 1280,
+        "height": 848,
+        "sha256": "dc7e0865cdacb67b7a0c696ec2077be148bd5114f38c1c975229231be2bf2537",
+        "generated_at": "2026-07-20T04:52:07.602354+00:00"
+      }
     },
     {
       "id": "dc3f4cb487d6974e9617",
@@ -1496,7 +1507,18 @@
         "conservation",
         "hope"
       ],
-      "public_eligible": false
+      "public_eligible": false,
+      "ai_image": {
+        "url": "/news-images/ai/articles/dc3f4cb487d6974e9617-a0a631fb22970b37a57e-v1.webp",
+        "alt": "Recent sightings give conservationists hope for two endangered whale species: 'They may be rebounding'",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
+        "source_fingerprint": "a0a631fb22970b37a57e",
+        "width": 1280,
+        "height": 848,
+        "sha256": "983f571ed47a324f45932d0c1e4100519eb52cfa2fa40a4c45729e2f1a4e06bf",
+        "generated_at": "2026-07-20T04:52:21.883146+00:00"
+      }
     },
     {
       "id": "600742420eb388aab0d9",
@@ -1523,7 +1545,18 @@
         "treat",
         "treatment"
       ],
-      "public_eligible": false
+      "public_eligible": false,
+      "ai_image": {
+        "url": "/news-images/ai/articles/600742420eb388aab0d9-46d2e6a868954e7ba815-v1.webp",
+        "alt": "Utah revokes license of teen treatment center criticized by Paris Hilton",
+        "model": "comfyui-z-image-turbo",
+        "prompt_version": "z-image-turbo-v1",
+        "source_fingerprint": "46d2e6a868954e7ba815",
+        "width": 1280,
+        "height": 848,
+        "sha256": "f1dfa212c26f8303a123e101d8ac2a6935f3eb0dede56f95785bd255592fd6c9",
+        "generated_at": "2026-07-20T04:52:30.049961+00:00"
+      }
     },
     {
       "id": "b2a50a7e834fe5a51d69",
