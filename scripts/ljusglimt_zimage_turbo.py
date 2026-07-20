@@ -214,7 +214,7 @@ def main():
             "source_fingerprint": fp,
             "width": 1280, "height": 848,
             "sha256": sha,
-            "generated_at": datetime.now(timezone.utc).isoformat(),
+            "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         }
         n += 1
 
