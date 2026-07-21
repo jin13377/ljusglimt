@@ -1,8 +1,12 @@
 {
-  "generated_at": "2026-07-19T11:08:52.550902Z",
+  "generated_at": "2026-07-21T18:57:34.979559Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "0281807bb069aebd3f54",
+    "f5e90d370c4747b90edb",
+    "9d15243bd9e6a4e7eb01"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -27,16 +31,14 @@
         "satsning"
       ],
       "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/0b87daf79218ce385c31-c2f7120f791abf639846-v1.webp",
-        "alt": "Hållbar samhällsbyggnad behöver få plats i EUs nästa forskningsprogram",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
+      "generated_image": {
+        "url": "/news-images/generated/0b87daf79218ce385c31-c2f7120f-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
         "source_fingerprint": "c2f7120f791abf639846",
         "width": 1280,
         "height": 848,
-        "sha256": "7ff5d96c0a3af52ecfd81a5754fc98ee6b95cde20d86c078ba8cb7e89e083400",
-        "generated_at": "2026-07-20T06:28:52Z"
+        "sha256": "dc4a9fc3f4cdac3864d0ace3b962bb8638abd031697fd277a930ac538c46821f"
       }
     },
     {
@@ -49,7 +51,7 @@
       "source_excerpt": "When your boyfriend requests foster kittens... you deliver. Our producer Monica shared her first-ever experience fostering kittens from Wallis Annenberg PetSpace and how her dogs unexpectedly became the kittens' biggest fans!",
       "agent_summary": "När hennes pojkvän önskade sig fosterkattungar ordnade Monica det. Hon berättar om sin första tid som jourhem åt kattungar från Wallis Annenberg PetSpace – och hur hennes hundar oväntat blev kattungarnas största fans.",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/cLTto1gJkgKXx3_pz/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/cLTto1gJkgKXx3_pz/x720",
       "source_image_alt": "Boyfriend Has Best Reaction To Surprise Foster Kittens",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xamx6nm",
@@ -74,18 +76,7 @@
         "surprise"
       ],
       "display_title_sv": "Överraskningen med fosterkattungar gav pojkvännen bästa reaktionen",
-      "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/772deb64d5f80c5b5454-39f8615568f17582de75-v1.webp",
-        "alt": "Boyfriend Has Best Reaction To Surprise Foster Kittens",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
-        "source_fingerprint": "39f8615568f17582de75",
-        "width": 1280,
-        "height": 848,
-        "sha256": "98033f8df62e68fa08efc41ae1667087f5b35a7dc3409154e9bad89371f76c24",
-        "generated_at": "2026-07-20T06:29:06Z"
-      }
+      "public_eligible": true
     },
     {
       "id": "24b88eddb5c3131c3d69",
@@ -107,16 +98,14 @@
         "skydda"
       ],
       "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/24b88eddb5c3131c3d69-85e7e46112e29a92a38e-v1.webp",
-        "alt": "Hopp om att skydda och återställa fertiliteten hos personer som överlevt barncancer",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
+      "generated_image": {
+        "url": "/news-images/generated/24b88eddb5c3131c3d69-85e7e461-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
         "source_fingerprint": "85e7e46112e29a92a38e",
         "width": 1280,
         "height": 848,
-        "sha256": "dc73f645b9725341f3a68117e6ef42791e51a2978290ece81f1b2db859fd35b0",
-        "generated_at": "2026-07-20T06:29:22Z"
+        "sha256": "ec7e64f095f6f42d68d3129f8ebcd819db7d11896aea9c8708a651a53369a6fa"
       }
     },
     {
@@ -139,16 +128,14 @@
         "samarbete"
       ],
       "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/24a653aab5fa5a83a4b1-caa9bd4b3bc9484f092f-v1.webp",
-        "alt": "Novo Nordisk-anslag till KI-forskare för nydanande tester av läkemedel",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
+      "generated_image": {
+        "url": "/news-images/generated/24a653aab5fa5a83a4b1-caa9bd4b-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
         "source_fingerprint": "caa9bd4b3bc9484f092f",
         "width": 1280,
         "height": 848,
-        "sha256": "d024848d1c816e1dcc65ff3a02c58134b4c3762c31f2d95dfa9d21a2f7585e82",
-        "generated_at": "2026-07-20T04:44:36Z"
+        "sha256": "fdec9bb1ea361a5abc2e629a8ddb4a3dd9d7e0d2b52ba2a6399a0b93f96de3d6"
       }
     },
     {
@@ -170,16 +157,14 @@
         "forskning"
       ],
       "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/69b567f89e3aadd6d06c-3f16aae2c4c77b6c36d2-v1.webp",
-        "alt": "Saida Hadjab får sitt andra anslag från Novo Nordisk-fonden för forskning om kronisk smärta",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
+      "generated_image": {
+        "url": "/news-images/generated/69b567f89e3aadd6d06c-3f16aae2-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
         "source_fingerprint": "3f16aae2c4c77b6c36d2",
         "width": 1280,
         "height": 848,
-        "sha256": "dd020683023fdda337a3a6616aadc29916beb6aab22a4bc1128a05019090c9a9",
-        "generated_at": "2026-07-20T04:44:45Z"
+        "sha256": "0d4a6aaa24295dc3742c74edbdd2b9257fa48a112d6b16e9b91710e6a0fbdf18"
       }
     },
     {
@@ -202,16 +187,14 @@
         "satsning"
       ],
       "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/8654f363eefda1bb5a59-c59008e05d8d4dbceb77-v1.webp",
-        "alt": "Björn Gysell donerar till forskning om framtidens behandlingar mot prostatacancer",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
+      "generated_image": {
+        "url": "/news-images/generated/8654f363eefda1bb5a59-c59008e0-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
         "source_fingerprint": "c59008e05d8d4dbceb77",
         "width": 1280,
         "height": 848,
-        "sha256": "e79b65508f9b4ce5c9e98e5e1537ea1fa443d23683d3affd6fc12f6d5158342d",
-        "generated_at": "2026-07-20T04:44:53Z"
+        "sha256": "e7cb2b36e302fc6fdfcd657d4337f0d9e7bb6f9454dfd0a6e252b8ba15bd8617"
       }
     },
     {
@@ -234,16 +217,14 @@
         "initiativ"
       ],
       "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/0581c7633c440d8b7c2e-87e71d6b054c43e457a8-v1.webp",
-        "alt": "20 år med ESERO: att föra rymden till miljontals elever",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
+      "generated_image": {
+        "url": "/news-images/generated/0581c7633c440d8b7c2e-87e71d6b-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
         "source_fingerprint": "87e71d6b054c43e457a8",
         "width": 1280,
         "height": 848,
-        "sha256": "b44f4b101aa39c9df4d115c3f0729c5d87d6497fba8fb2f14e634eb6433e2ab8",
-        "generated_at": "2026-07-20T04:57:57Z"
+        "sha256": "b0cd20dbb2c19d0f72547b8bccd12db07c3c05aee6fa271e90effe161bd5ad25"
       }
     },
     {
@@ -273,16 +254,14 @@
         "lösning"
       ],
       "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/ccc544ab470c29cb6d35-d2ef8f247f22fa680026-v1.webp",
-        "alt": "Impact labs breddar innovationsstödet vid svenska lärosäten",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
+      "generated_image": {
+        "url": "/news-images/generated/ccc544ab470c29cb6d35-d2ef8f24-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
         "source_fingerprint": "d2ef8f247f22fa680026",
         "width": 1280,
         "height": 848,
-        "sha256": "156c008961055a1a172059f3a4c62a48279dddc855f01ce6b4c14e7224fed787",
-        "generated_at": "2026-07-20T04:58:11Z"
+        "sha256": "4af3b777ff818c65e952804219e0f05a1088bdc4cd130e82a9162e4e5646a688"
       }
     },
     {
@@ -305,16 +284,14 @@
         "framsteg"
       ],
       "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/a1ff56772fa1e76a2f23-b05d127f20f87ce8080d-v1.webp",
-        "alt": "SubOrbital Express-5 skickar upp tolv experiment till mikrogravitation",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
+      "generated_image": {
+        "url": "/news-images/generated/a1ff56772fa1e76a2f23-b05d127f-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
         "source_fingerprint": "b05d127f20f87ce8080d",
         "width": 1280,
         "height": 848,
-        "sha256": "428c82a775822fc171d052ec0ceeda02e7b0ffb49c625023eee5a1d88abbea4e",
-        "generated_at": "2026-07-20T04:45:23Z"
+        "sha256": "273484e6265bcfb32ad63f2d1ada4c34b8bdadcd88dd46c95261cc760fae40d5"
       }
     },
     {
@@ -345,16 +322,14 @@
         "omställning"
       ],
       "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/6d39b13679ff7bb52ec1-5f39680c626caee72eca-v1.webp",
-        "alt": "Glapp mellan policy och praktik för akademiskt samhällsengagemang",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
+      "generated_image": {
+        "url": "/news-images/generated/6d39b13679ff7bb52ec1-5f39680c-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
         "source_fingerprint": "5f39680c626caee72eca",
         "width": 1280,
         "height": 848,
-        "sha256": "0b0b5517a171038041957b1f54825285405c6c8523debb9d55730d7be9868575",
-        "generated_at": "2026-07-20T04:45:31Z"
+        "sha256": "f88a3ae8e41db3efa74997bb6765f7186469861b26185851852cb47d1d225c95"
       }
     },
     {
@@ -367,7 +342,7 @@
       "source_excerpt": "Watch how this chill pig on the run finally got rescued! Lancaster Farm Sanctuary shared how Petey spent weeks roaming free before people came together to get him to safety. Now he’s living the good life with a whole crew of potbelly pig friends.",
       "agent_summary": "Grisen Petey strövade fritt i flera veckor innan människor samlades för att föra honom i säkerhet. Nu lever han på Lancaster Farm Sanctuary tillsammans med en grupp andra minigrisar.",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/cLTwQ1gJkcx08TuRo/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/cLTwQ1gJkcx08TuRo/x720",
       "source_image_alt": "This Pig Was On The Run Until Everyone Came Together",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xamx6sa",
@@ -392,18 +367,7 @@
         "together"
       ],
       "display_title_sv": "Alla hjälptes åt för att rädda grisen Petey",
-      "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/33e4d91318071bc1b90a-b166770818c3b8024529-v1.webp",
-        "alt": "This Pig Was On The Run Until Everyone Came Together",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
-        "source_fingerprint": "b166770818c3b8024529",
-        "width": 1280,
-        "height": 848,
-        "sha256": "c68bd14d7d9f4d84329e89539832f7e94265affabbf46b61e891899c3bef971e",
-        "generated_at": "2026-07-20T04:45:40Z"
-      }
+      "public_eligible": true
     },
     {
       "id": "057865da8dd0eb6e51f3",
@@ -431,18 +395,7 @@
         "forskning",
         "lägre risk"
       ],
-      "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/057865da8dd0eb6e51f3-fdba70adc681d7c1b16d-v1.webp",
-        "alt": "Längre pappaledighet kopplas till lägre risk för depression",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
-        "source_fingerprint": "fdba70adc681d7c1b16d",
-        "width": 1280,
-        "height": 848,
-        "sha256": "cd2817df579ae50295bdb3869babdc496c4ac115bb83afdeb03f06065b7d7340",
-        "generated_at": "2026-07-20T04:45:54Z"
-      }
+      "public_eligible": true
     },
     {
       "id": "883aa62a7813099dd8b2",
@@ -464,16 +417,14 @@
         "science"
       ],
       "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/883aa62a7813099dd8b2-e6b980ff34b6c73c2089-v1.webp",
-        "alt": "ESA och DON’T NOD ger sig ut på en resa till planeten Persephone i Aphelion",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
+      "generated_image": {
+        "url": "/news-images/generated/883aa62a7813099dd8b2-e6b980ff-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
         "source_fingerprint": "e6b980ff34b6c73c2089",
         "width": 1280,
         "height": 848,
-        "sha256": "4ea3317cc3960863c592e36426d2c489a59b4b80a5f0070911147301b5e72ef5",
-        "generated_at": "2026-07-20T04:46:08Z"
+        "sha256": "da35e92250c0515d62aedd5149cdcfa9db32493eb90f22ded0138d83d4348efb"
       }
     },
     {
@@ -494,16 +445,14 @@
         "forskning"
       ],
       "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/e851322717ee40aea0bf-2e97fc9fbaa5a7bcbe78-v1.webp",
-        "alt": "Doktorand får stipendium för forskning om hur eksem påverkar skola och yrkesliv",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
+      "generated_image": {
+        "url": "/news-images/generated/e851322717ee40aea0bf-2e97fc9f-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
         "source_fingerprint": "2e97fc9fbaa5a7bcbe78",
         "width": 1280,
         "height": 848,
-        "sha256": "07b72734c54d97943381fd9c5cb37b1b06a518594c65daca8addc5d22478633a",
-        "generated_at": "2026-07-20T04:46:22Z"
+        "sha256": "2fd2514004f97836fd2922354a8d97640bbca3c463d7e3ad841f6c3c926a8254"
       }
     },
     {
@@ -525,16 +474,14 @@
         "treat"
       ],
       "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/cd34fbfa5bab10217e66-f64a59b35be826c0653f-v1.webp",
-        "alt": "StratNeuro studentkåren",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
+      "generated_image": {
+        "url": "/news-images/generated/cd34fbfa5bab10217e66-f64a59b3-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
         "source_fingerprint": "f64a59b35be826c0653f",
         "width": 1280,
         "height": 848,
-        "sha256": "70d5532d3a48b9ee8ad3319ccb134507828ebd64ae825143a513b31872ef943c",
-        "generated_at": "2026-07-20T04:46:30Z"
+        "sha256": "36106207af61164122da041b3cb3e45d5333936cd6feb98c0851e0b5cca229b1"
       }
     },
     {
@@ -555,16 +502,14 @@
         "lovande"
       ],
       "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/6698c053939f372dce7e-0f7d798fb82c16503b2c-v1.webp",
-        "alt": "Parkinsonläkemedel visar lovande effekt mot svårbehandlad depression",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
+      "generated_image": {
+        "url": "/news-images/generated/6698c053939f372dce7e-0f7d798f-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
         "source_fingerprint": "0f7d798fb82c16503b2c",
         "width": 1280,
         "height": 848,
-        "sha256": "0281a1020be81b89a39ffbfbbd12505f309f733b6051188f87d942acaa66289b",
-        "generated_at": "2026-07-20T04:46:38Z"
+        "sha256": "5c78d9275751e5afca642ce661210a5de80103878979c977390cac3040ffeec5"
       }
     },
     {
@@ -592,18 +537,7 @@
         "curated-positive-source",
         "lovande"
       ],
-      "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/a0402e58d294e2932d3d-3563df0caa0369e1f520-v1.webp",
-        "alt": "Bakterier vid infektion kan snabbt spåras med lovande metod",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
-        "source_fingerprint": "3563df0caa0369e1f520",
-        "width": 1280,
-        "height": 848,
-        "sha256": "51fb9190a8eef6c8a8a4b1631dfdb6bdf6ebae84a7086695c7b543f03833bac8",
-        "generated_at": "2026-07-20T04:46:57Z"
-      }
+      "public_eligible": true
     },
     {
       "id": "0392e2d504ad7c9d74eb",
@@ -623,16 +557,14 @@
         "upptäckt"
       ],
       "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/0392e2d504ad7c9d74eb-3ef9a281afd0264fbd0d-v1.webp",
-        "alt": "AI upptäckte missade blodproppar i hjärnan",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
+      "generated_image": {
+        "url": "/news-images/generated/0392e2d504ad7c9d74eb-3ef9a281-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
         "source_fingerprint": "3ef9a281afd0264fbd0d",
         "width": 1280,
         "height": 848,
-        "sha256": "940c0a8a30f8b192684b5b55f425040e9983719680a1ef5d5d29de27c4a89d03",
-        "generated_at": "2026-07-20T04:47:11Z"
+        "sha256": "504bdd57a0693b03ab6d7a0fd1696ef2a4d9a1a72542916235315cc7d5d67bc0"
       }
     },
     {
@@ -654,16 +586,14 @@
         "förebygga"
       ],
       "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/ac9388eca9809535d9d3-f3b52be8f7d6b87ace5b-v1.webp",
-        "alt": "Lev längre med mindre mat på tallriken",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
+      "generated_image": {
+        "url": "/news-images/generated/ac9388eca9809535d9d3-f3b52be8-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
         "source_fingerprint": "f3b52be8f7d6b87ace5b",
         "width": 1280,
         "height": 848,
-        "sha256": "70ddb8c7b19ab28024f259892d02a822ed737331d5f5dae22036f7b7b579a1b3",
-        "generated_at": "2026-07-20T04:47:19Z"
+        "sha256": "0a1c95b16e1ceee0e993977a9ee3f9e858e4624dbe3118c9fdd75a90499eafc5"
       }
     },
     {
@@ -700,48 +630,7 @@
         "surprise"
       ],
       "display_title_sv": "Pojkvännen fick den bästa alla hjärtans dag-presenten",
-      "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/4390567e79124135517d-2e837fc7fbc398ea5b05-v1.webp",
-        "alt": "Boyfriend Gets The Absolute BEST Valentines Day Gift",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
-        "source_fingerprint": "2e837fc7fbc398ea5b05",
-        "width": 1280,
-        "height": 848,
-        "sha256": "d5c6f63ecf64ade5c0075bebb833177b58396b925942d1a2c181e42426a6abae",
-        "generated_at": "2026-07-20T04:47:33Z"
-      }
-    },
-    {
-      "id": "1a72dc074b1fffbdf6ef",
-      "title": "Trafikverket: Klimatkrav och bonus verktyg för snabbare omställning",
-      "url": "https://www.linkedin.com/pulse/trafikverket-klimatkrav-och-bonus-verktyg-f%C3%B6r-snabbare-omst%C3%A4llning-87uuf?trackingId=yfgKF%2BHbRj2l33rpXP38GQ%3D%3D",
-      "source": "Viable Cities",
-      "language": "sv",
-      "published_at": "2026-04-22T09:16:00Z",
-      "source_excerpt": "Sex myndigheter gör en kraftsamling med Viable Cities och \"våra\" 48 städer för en snabbare klimatomställning. Hur ser myndigheternas arbete ut? Läs Trafikverkets lägesrapport på vår blogg. Inlägget Trafikverket: Klimatkrav och bonus verktyg för snabbare omställning dök först upp på Viable Cities .",
-      "agent_summary": "",
-      "source_fingerprint": "4611834f14abc3edddee",
-      "category": "Samhälle",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "omställning"
-      ],
-      "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/1a72dc074b1fffbdf6ef-4611834f14abc3edddee-v1.webp",
-        "alt": "Trafikverket: Klimatkrav och bonus verktyg för snabbare omställning",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
-        "source_fingerprint": "4611834f14abc3edddee",
-        "width": 1280,
-        "height": 848,
-        "sha256": "87a0b4c5cbb31e83bb4b73c3fb30df563c17644900632444bad32203793a84b8",
-        "generated_at": "2026-07-20T04:59:53Z"
-      }
+      "public_eligible": true
     },
     {
       "id": "0be141613abc499ac0f4",
@@ -761,16 +650,14 @@
         "skydda"
       ],
       "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/0be141613abc499ac0f4-bca1708adc33c10d87d1-v1.webp",
-        "alt": "Sjögräsängar lika viktiga som korallrev för fisk",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
+      "generated_image": {
+        "url": "/news-images/generated/0be141613abc499ac0f4-bca1708a-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
         "source_fingerprint": "bca1708adc33c10d87d1",
         "width": 1280,
         "height": 848,
-        "sha256": "1c6afaa1c8d25879016c9879d0415fa9e9201e6237c25e48a776c83375f2a8b0",
-        "generated_at": "2026-07-20T04:54:47Z"
+        "sha256": "1f3cf70bdf8a8b811b2e4c4de825cc9a72ad29a18697ea09fd418edac9d90235"
       }
     },
     {
@@ -783,7 +670,7 @@
       "source_excerpt": "She got right into the passenger seat like she’s ready to go home! Sam shared what it was like rescuing Adeline outside a car dealership — and gave us an update on where this sweet girl landed just one month later.",
       "agent_summary": "Katten Adeline hoppade direkt in på passagerarsätet som om hon var redo att följa med hem. Sam berättar om räddningen utanför bilfirman och hur Adeline hade det en månad senare.",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/cLbms1gLNlyGRmBrE/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/cLbms1gLNlyGRmBrE/x720",
       "source_image_alt": "Woman Rescues A Cat She Found At A Car Dealership",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xamxvli",
@@ -806,18 +693,7 @@
         "rescue"
       ],
       "display_title_sv": "Kvinna räddade en katt vid en bilfirma",
-      "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/56c225a54e232fce1fea-9fa7b19e1359a8cb018a-v1.webp",
-        "alt": "Woman Rescues A Cat She Found At A Car Dealership",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
-        "source_fingerprint": "9fa7b19e1359a8cb018a",
-        "width": 1280,
-        "height": 848,
-        "sha256": "4614a619217ac554b1797a2edbd38fdb0c4ad8df43b84b3ce6c90791ae940c9d",
-        "generated_at": "2026-07-20T04:48:10Z"
-      }
+      "public_eligible": true
     },
     {
       "id": "dfb26fd407a2369341ae",
@@ -852,18 +728,7 @@
         "priceless"
       ],
       "display_title_sv": "Mötet mellan hunden och flickan blev början på en vänskap",
-      "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/dfb26fd407a2369341ae-fd638d0c019eba5da1a9-v1.webp",
-        "alt": "Moment Between Shelter Dog And Girl Is Priceless",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
-        "source_fingerprint": "fd638d0c019eba5da1a9",
-        "width": 1280,
-        "height": 848,
-        "sha256": "85c6720550ea748cb84606b2299bf410e5e343e72596b51d0a89da5b77154f05",
-        "generated_at": "2026-07-20T04:48:18Z"
-      }
+      "public_eligible": true
     },
     {
       "id": "5dd429f89dcf7aaf4228",
@@ -883,16 +748,14 @@
         "forskning"
       ],
       "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/5dd429f89dcf7aaf4228-08c3903f99092f477a5b-v1.webp",
-        "alt": "CLINTEC-professor tilldelas internationellt hederspris",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
+      "generated_image": {
+        "url": "/news-images/generated/5dd429f89dcf7aaf4228-08c3903f-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
         "source_fingerprint": "08c3903f99092f477a5b",
         "width": 1280,
         "height": 848,
-        "sha256": "9fea953489a87116ccb8d34f4cd88aa92ad0b9858d979403a1619a25bc98b22b",
-        "generated_at": "2026-07-20T04:48:32Z"
+        "sha256": "e6132d53cfd8edc697170207547ba3eaec4f73a6f1093acf324c071f7624b1c2"
       }
     },
     {
@@ -913,16 +776,14 @@
         "upptäckt"
       ],
       "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/686c64ab544322bcc218-e6d7cd791b7411ef79c0-v1.webp",
-        "alt": "Nya insikter om hur serotonin påverkar allergirelaterade immunceller",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
+      "generated_image": {
+        "url": "/news-images/generated/686c64ab544322bcc218-e6d7cd79-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
         "source_fingerprint": "e6d7cd791b7411ef79c0",
         "width": 1280,
         "height": 848,
-        "sha256": "a71154a632e1c4a289785fdd9939fe6fb52de2f2b7ed09c06184bf8d77ac55d4",
-        "generated_at": "2026-07-20T04:48:40Z"
+        "sha256": "6c5f2b0aa9f8d99f4fecdced0db81da740b938bc70a081f0558563c89d4037b6"
       }
     },
     {
@@ -951,18 +812,7 @@
         "volunteer"
       ],
       "display_title_sv": "Volontärer läser och spelar musik för djur under fyrverkerier",
-      "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/e6ab936520421c01f62d-530f717066e612bd74e8-v1.webp",
-        "alt": "Volunteers read aloud and play music for shelter pets amid fireworks on July 4th",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
-        "source_fingerprint": "530f717066e612bd74e8",
-        "width": 1280,
-        "height": 848,
-        "sha256": "4c21a29217951ef840e323586a1356ab8712a77a37ceebe85ecaf884670df2ff",
-        "generated_at": "2026-07-20T04:48:54Z"
-      }
+      "public_eligible": true
     },
     {
       "id": "9e2ab5cc1a6a4aa08cb4",
@@ -982,16 +832,14 @@
         "satsning"
       ],
       "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/9e2ab5cc1a6a4aa08cb4-0a7c3e986b09d3dfa103-v1.webp",
-        "alt": "Malmö först med rådgivning om klimatanpassning",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
+      "generated_image": {
+        "url": "/news-images/generated/9e2ab5cc1a6a4aa08cb4-0a7c3e98-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
         "source_fingerprint": "0a7c3e986b09d3dfa103",
         "width": 1280,
         "height": 848,
-        "sha256": "de406df145c6e8e9c8c6bb6b55c30e770fa14256428f8196a83cbb0b9a22e0ca",
-        "generated_at": "2026-07-20T04:49:09Z"
+        "sha256": "122bb67499ff32db2d3a5a3e92dafc5eb79ca9d8875724523a5b1f33c3057075"
       }
     },
     {
@@ -1019,18 +867,7 @@
         "curated-positive-source",
         "upptäckt"
       ],
-      "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/e3e7e57180a3977ae24b-ef89be3c0431b294fa39-v1.webp",
-        "alt": "Gammalt skinn var Sveriges äldsta sko",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
-        "source_fingerprint": "ef89be3c0431b294fa39",
-        "width": 1280,
-        "height": 848,
-        "sha256": "0b37f56302020a33fefb64037067d48b03b899285d6cc778fe5b16fa48774f95",
-        "generated_at": "2026-07-20T04:49:23Z"
-      }
+      "public_eligible": true
     },
     {
       "id": "1975208a7e6ad125a4af",
@@ -1089,16 +926,14 @@
         "lösning"
       ],
       "public_eligible": true,
-      "ai_image": {
-        "url": "/news-images/ai/articles/f8f5460a8a7aacbf0eba-29ab7ad32b22fbb5e40b-v1.webp",
-        "alt": "Välfärdsteknik ger trygghet – men inte alltid ett aktivt och delaktigt liv",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
+      "generated_image": {
+        "url": "/news-images/generated/f8f5460a8a7aacbf0eba-29ab7ad3-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
         "source_fingerprint": "29ab7ad32b22fbb5e40b",
         "width": 1280,
         "height": 848,
-        "sha256": "627908ed29d9f677ef2bd263d5da968155bb76785b31974050874e593130a1aa",
-        "generated_at": "2026-07-20T04:49:51Z"
+        "sha256": "557d62a9deeecfe11b03cba0e6616a5442c140e0f8ff9bd52aa56c872b0b97f1"
       }
     },
     {
@@ -1138,6 +973,15 @@
         "height": 848,
         "sha256": "cd6884b8fc8b81642df68e13b80208b2311c28d3222eaa140743f3233f1a2947",
         "generated_at": "2026-07-20T04:50:05Z"
+      },
+      "generated_image": {
+        "url": "/news-images/generated/b634e8c36ed593bd94d7-699c1ffd-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "699c1ffd1b6471221e44",
+        "width": 1280,
+        "height": 848,
+        "sha256": "c2bf84f6c6dc3af8734f2c5673cb58219b5ad6ccbbd1cd4838fb3007654c6c5a"
       }
     },
     {
@@ -1169,6 +1013,15 @@
         "height": 848,
         "sha256": "5cf5f249f56389410653a8c8b5a6e621aa178786dc678a12748d14d84ba28298",
         "generated_at": "2026-07-20T04:50:13Z"
+      },
+      "generated_image": {
+        "url": "/news-images/generated/9a227c3910aa2c6a2a31-a36669d8-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "a36669d8220bf7056b69",
+        "width": 1280,
+        "height": 848,
+        "sha256": "c02560296b843217aa7846f0c3608084bcee459e1b980bb6e89882850565fb68"
       }
     },
     {
@@ -1190,18 +1043,7 @@
         "forskning",
         "framsteg"
       ],
-      "public_eligible": false,
-      "ai_image": {
-        "url": "/news-images/ai/articles/92c6c8c12d98c0ead6ee-002076b5b973aadf8a52-v1.webp",
-        "alt": "Så stöttas ultratätt väte av forskningssystemet",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
-        "source_fingerprint": "002076b5b973aadf8a52",
-        "width": 1280,
-        "height": 848,
-        "sha256": "7f5080db923ac37abc19da4d3cc76e552c96164bed164f43d17fe847b2852076",
-        "generated_at": "2026-07-20T04:50:30Z"
-      }
+      "public_eligible": false
     },
     {
       "id": "511514f3f8d883139491",
@@ -1222,49 +1064,7 @@
         "framsteg",
         "rekord"
       ],
-      "public_eligible": false,
-      "ai_image": {
-        "url": "/news-images/ai/articles/511514f3f8d883139491-5dc0b9b69025976abb26-v1.webp",
-        "alt": "Rekord i fusion",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
-        "source_fingerprint": "5dc0b9b69025976abb26",
-        "width": 1280,
-        "height": 848,
-        "sha256": "ef82026f75e759acbd0ab87b06b71498ab0791ac31c29e5068da25cac468d1d7",
-        "generated_at": "2026-07-20T04:50:38Z"
-      }
-    },
-    {
-      "id": "8eae2bb1e83e6ad77fe5",
-      "title": "”Klimatomställningen behöver bindande klimatkrav”",
-      "url": "https://www.aktuellhallbarhet.se/miljo-och-klimat/klimatpolitik/olga-kordas-infor-bindande-klimatkrav-i-plan-och-bygglagen",
-      "source": "Viable Cities",
-      "language": "sv",
-      "published_at": "2026-04-22T12:03:20Z",
-      "source_excerpt": "Kommunerna har bara direkt rådighet över 7–20 procent av utsläppen trots det kan de genom upphandling, planering och markanvisning ändå styra utvecklingen i rätt riktning. Det säger \"stadsutvecklingsminister\" Olga Kordas i Aktuell Hållbarhet idag. Inlägget ”Klimatomställningen behöver bindande klimatkrav” dök först upp på Viable Cities .",
-      "agent_summary": "",
-      "source_fingerprint": "52454a1a997381c69977",
-      "category": "Samhälle",
-      "source_tier_bonus": 5,
-      "positivity_score": 8,
-      "positive_signals": [
-        "curated-positive-source",
-        "hållbar",
-        "omställning"
-      ],
-      "public_eligible": false,
-      "ai_image": {
-        "url": "/news-images/ai/articles/8eae2bb1e83e6ad77fe5-52454a1a997381c69977-v1.webp",
-        "alt": "”Klimatomställningen behöver bindande klimatkrav”",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
-        "source_fingerprint": "52454a1a997381c69977",
-        "width": 1280,
-        "height": 848,
-        "sha256": "9cb983ea6c975262d0184825b5a479eef8c84f8bfcd3ff55f8b0550ea08311ae",
-        "generated_at": "2026-07-20T05:00:01Z"
-      }
+      "public_eligible": false
     },
     {
       "id": "d54ec4a4e22279413cfc",
@@ -1284,18 +1084,7 @@
         "forskning",
         "framsteg"
       ],
-      "public_eligible": false,
-      "ai_image": {
-        "url": "/news-images/ai/articles/d54ec4a4e22279413cfc-18c750bbdaf638d79546-v1.webp",
-        "alt": "Svenskt guld i internationella fysikolympiaden",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
-        "source_fingerprint": "18c750bbdaf638d79546",
-        "width": 1280,
-        "height": 848,
-        "sha256": "bb736d60d59ae9c65eaeaf28df6f3385f2190dbb3b25711bf7c6c7fea0d2f77d",
-        "generated_at": "2026-07-20T04:51:06Z"
-      }
+      "public_eligible": false
     },
     {
       "id": "a659456cbc658977395d",
@@ -1314,18 +1103,7 @@
         "curated-positive-source",
         "rekord"
       ],
-      "public_eligible": false,
-      "ai_image": {
-        "url": "/news-images/ai/articles/a659456cbc658977395d-bcabf4a061a68701f9c6-v1.webp",
-        "alt": "Nytt åldersrekord för svenska fåglar",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
-        "source_fingerprint": "bcabf4a061a68701f9c6",
-        "width": 1280,
-        "height": 848,
-        "sha256": "f606c4db21e0575d2c88157a09521205c72a64ec15876dbbb7b9cf5002166bdb",
-        "generated_at": "2026-07-20T04:51:20Z"
-      }
+      "public_eligible": false
     },
     {
       "id": "4a4dc885bf850aa78fd2",
@@ -1345,18 +1123,7 @@
         "forskning",
         "framsteg"
       ],
-      "public_eligible": false,
-      "ai_image": {
-        "url": "/news-images/ai/articles/4a4dc885bf850aa78fd2-1b8104c19a9d8e62ef77-v1.webp",
-        "alt": "Hur vet man att en art är utrotad?",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
-        "source_fingerprint": "1b8104c19a9d8e62ef77",
-        "width": 1280,
-        "height": 848,
-        "sha256": "2bfc06098b11d491d2af1fb9c7d31948c4b1538f4060b0d829223d40fb61b24e",
-        "generated_at": "2026-07-20T04:51:34Z"
-      }
+      "public_eligible": false
     },
     {
       "id": "ddf4ec9bc8eefa108799",
@@ -1376,18 +1143,7 @@
         "forskning",
         "framsteg"
       ],
-      "public_eligible": false,
-      "ai_image": {
-        "url": "/news-images/ai/articles/ddf4ec9bc8eefa108799-a23d272334c94e4a377a-v1.webp",
-        "alt": "3 gånger när forskare haft helt fel",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
-        "source_fingerprint": "a23d272334c94e4a377a",
-        "width": 1280,
-        "height": 848,
-        "sha256": "7a0e52a2629ce05e866a9b30091ebb1e665264b2a157d75399fac0d962dafa8f",
-        "generated_at": "2026-07-20T04:51:43Z"
-      }
+      "public_eligible": false
     },
     {
       "id": "bc3b83b6e54eb8d65a1c",
@@ -1407,18 +1163,7 @@
         "forskning",
         "framsteg"
       ],
-      "public_eligible": false,
-      "ai_image": {
-        "url": "/news-images/ai/articles/bc3b83b6e54eb8d65a1c-5dafa29727650a6b9ba4-v1.webp",
-        "alt": "Colemans rapport om skolan biter ännu efter 60 år",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
-        "source_fingerprint": "5dafa29727650a6b9ba4",
-        "width": 1280,
-        "height": 848,
-        "sha256": "f16c8ad101957ad71590d27489fc4659194c1ff37f555062b5171e75b52aadf6",
-        "generated_at": "2026-07-20T04:51:51Z"
-      }
+      "public_eligible": false
     },
     {
       "id": "6dfc2033f9e6ae3936d0",
@@ -1438,18 +1183,7 @@
         "forskning",
         "framsteg"
       ],
-      "public_eligible": false,
-      "ai_image": {
-        "url": "/news-images/ai/articles/6dfc2033f9e6ae3936d0-859d0521684f88d5f8cc-v1.webp",
-        "alt": "Formgivning och allmänbildning",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
-        "source_fingerprint": "859d0521684f88d5f8cc",
-        "width": 1280,
-        "height": 848,
-        "sha256": "5f84ae4790510d04f1937103864d756cd6ca4621eb7cc5afc81d5a22bca45a70",
-        "generated_at": "2026-07-20T04:51:59Z"
-      }
+      "public_eligible": false
     },
     {
       "id": "024f67c256501fcd947d",
@@ -1469,18 +1203,65 @@
         "forskning",
         "framsteg"
       ],
-      "public_eligible": false,
-      "ai_image": {
-        "url": "/news-images/ai/articles/024f67c256501fcd947d-4d663dc7c7175e389b77-v1.webp",
-        "alt": "Gallup utmanade bilden av den folkliga opinionen",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
-        "source_fingerprint": "4d663dc7c7175e389b77",
-        "width": 1280,
-        "height": 848,
-        "sha256": "dc7e0865cdacb67b7a0c696ec2077be148bd5114f38c1c975229231be2bf2537",
-        "generated_at": "2026-07-20T04:52:07Z"
-      }
+      "public_eligible": false
+    },
+    {
+      "id": "0281807bb069aebd3f54",
+      "title": "Almedalen 2026 – en kick för klimatomställning på bred front",
+      "url": "https://viablecities.se/almedalen-2026-en-kick-for-klimatomstallning-pa-bred-front",
+      "source": "Viable Cities",
+      "language": "sv",
+      "published_at": "2026-06-26T17:16:01Z",
+      "source_excerpt": "Almedalsveckan 2026 i Visby- Inspiration, valår, vimmel, morgondopp och ny energi för handling. Så sammanfattar vi Almedalsveckan 2026 i Visby. Inlägget Almedalen 2026 – en kick för klimatomställning på bred front dök först upp på Viable Cities .",
+      "agent_summary": "",
+      "source_fingerprint": "ada8f762780c27327d32",
+      "category": "Samhälle",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "omställning"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "f5e90d370c4747b90edb",
+      "title": "Synliggör symtom vid Parkinsons sjukdom",
+      "url": "https://www.vetenskaphalsa.se/synliggor-symtom-vid-parkinsons-sjukdom",
+      "source": "Vetenskap & hälsa",
+      "language": "sv",
+      "published_at": "2026-06-23T06:01:00Z",
+      "source_excerpt": "Gent Ymeri har varit med att utveckla en digital teknik för smartphones och andra bärbara enheter för att kvantifiera Parkinsons symtom i hemmiljö. Forskningsresultat han nu redovisar i sin doktorsavhandling. Parkinsons sjukdom är en progressiv, neurodegenerativ hjärnsjukdom som ökar snabbt i omfattning och drabbar miljontals människor världen över. En effektiv hantering av sjukdomen bygger på […]",
+      "agent_summary": "",
+      "source_fingerprint": "a84f54f11e70d7b80a72",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "progress"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "9d15243bd9e6a4e7eb01",
+      "title": "‘A place of hope and solutions’: the building promising a better future",
+      "url": "https://www.positive.news/society/the-rotterdam-building-promising-a-better-future",
+      "source": "Positive News",
+      "language": "en",
+      "published_at": "2026-07-21T06:00:51Z",
+      "source_excerpt": "A bold new building in the Netherlands promises to showcase solutions to global problems – and encourage positive action The post ‘A place of hope and solutions’: the building promising a better future appeared first on Positive News .",
+      "agent_summary": "",
+      "source_fingerprint": "5a3b24cd7a016762c41e",
+      "source_tier_bonus": 2,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "hope",
+        "solution"
+      ],
+      "public_eligible": false
     },
     {
       "id": "dc3f4cb487d6974e9617",
@@ -1507,18 +1288,7 @@
         "conservation",
         "hope"
       ],
-      "public_eligible": false,
-      "ai_image": {
-        "url": "/news-images/ai/articles/dc3f4cb487d6974e9617-a0a631fb22970b37a57e-v1.webp",
-        "alt": "Recent sightings give conservationists hope for two endangered whale species: 'They may be rebounding'",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
-        "source_fingerprint": "a0a631fb22970b37a57e",
-        "width": 1280,
-        "height": 848,
-        "sha256": "983f571ed47a324f45932d0c1e4100519eb52cfa2fa40a4c45729e2f1a4e06bf",
-        "generated_at": "2026-07-20T04:52:21Z"
-      }
+      "public_eligible": false
     },
     {
       "id": "600742420eb388aab0d9",
@@ -1545,18 +1315,7 @@
         "treat",
         "treatment"
       ],
-      "public_eligible": false,
-      "ai_image": {
-        "url": "/news-images/ai/articles/600742420eb388aab0d9-46d2e6a868954e7ba815-v1.webp",
-        "alt": "Utah revokes license of teen treatment center criticized by Paris Hilton",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
-        "source_fingerprint": "46d2e6a868954e7ba815",
-        "width": 1280,
-        "height": 848,
-        "sha256": "f1dfa212c26f8303a123e101d8ac2a6935f3eb0dede56f95785bd255592fd6c9",
-        "generated_at": "2026-07-20T04:52:30Z"
-      }
+      "public_eligible": false
     },
     {
       "id": "b2a50a7e834fe5a51d69",
@@ -1583,18 +1342,7 @@
         "mission",
         "rescue"
       ],
-      "public_eligible": false,
-      "ai_image": {
-        "url": "/news-images/ai/articles/b2a50a7e834fe5a51d69-685882d51a0346bca596-v1.webp",
-        "alt": "Firefighters free raccoon trapped under sewer grate in 'jaws of life' rescue mission",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
-        "source_fingerprint": "685882d51a0346bca596",
-        "width": 1280,
-        "height": 848,
-        "sha256": "c2b769852ce827b663a3a18cc64ae4f27704c469f2b289653fcc5ac8b50f8bda",
-        "generated_at": "2026-07-20T04:52:38Z"
-      }
+      "public_eligible": false
     },
     {
       "id": "59d1baf73158830c7c72",
@@ -1621,56 +1369,7 @@
         "conservation",
         "together"
       ],
-      "public_eligible": false,
-      "ai_image": {
-        "url": "/news-images/ai/articles/59d1baf73158830c7c72-db12fb82eab1700e898f-v1.webp",
-        "alt": "This giant snail is the size of a croissant. Conservationists are banding together to save it from extinction",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
-        "source_fingerprint": "db12fb82eab1700e898f",
-        "width": 1280,
-        "height": 848,
-        "sha256": "b9b57effdefd28878aeefcfe1dac196bc8f07a3a6360d101add5cdbaeafc256e",
-        "generated_at": "2026-07-20T04:52:46Z"
-      }
-    },
-    {
-      "id": "4dfcf68479bd517dccdb",
-      "title": "Jet ski riders conduct rescue mission for sea turtle with 'bloody, peeling' infection on her shell",
-      "url": "https://www.goodgoodgood.co/articles/jetski-riders-save-sea-turtle-australia",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-06-26T18:02:00Z",
-      "source_excerpt": "While enjoying a tour of Magnetic Island off the coast of Australia, the jet ski riders ended their outing early to help a turtle in need.",
-      "agent_summary": "",
-      "source_fingerprint": "2b9539162a770dbeabc7",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a3ebc6652cc38e78934347e_jetski-riders-save-sea-turtle-australia.jpg",
-      "source_image_alt": "Jet ski riders conduct rescue mission for sea turtle with 'bloody, peeling' infection on her shell",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/jetski-riders-save-sea-turtle-australia",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/jetski-riders-save-sea-turtle-australia",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "mission",
-        "rescue"
-      ],
-      "public_eligible": false,
-      "ai_image": {
-        "url": "/news-images/ai/articles/4dfcf68479bd517dccdb-2b9539162a770dbeabc7-v1.webp",
-        "alt": "Jet ski riders conduct rescue mission for sea turtle with 'bloody, peeling' infection on her shell",
-        "model": "comfyui-z-image-turbo",
-        "prompt_version": "z-image-turbo-v1",
-        "source_fingerprint": "2b9539162a770dbeabc7",
-        "width": 1280,
-        "height": 848,
-        "sha256": "647fe1ee78a99fa55437bd6df45ddd727a13638b1d956184862da656e996d656",
-        "generated_at": "2026-07-20T04:52:54Z"
-      }
+      "public_eligible": false
     }
   ]
 }
