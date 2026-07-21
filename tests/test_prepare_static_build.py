@@ -99,7 +99,7 @@ class PrepareStaticBuildTests(unittest.TestCase):
     def test_fetched_image_selection_matches_frontend_priority(self):
         article_id = "a" * 20
         fingerprint = "b" * 20
-        ai_url = f"/news-images/ai/articles/{article_id}-{fingerprint[:8]}-v1.webp"
+        ai_url = f"/news-images/ai/articles/{article_id}-{fingerprint}-v1.webp"
         generated_url = f"/news-images/generated/{article_id}-{fingerprint[:8]}-v1.svg"
         fetched = {
             "id": article_id,

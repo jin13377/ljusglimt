@@ -47,10 +47,18 @@ const resolveAiImage = (article) => {
   if (!image || !/^[a-f0-9]{20}$/.test(id) || !/^[a-f0-9]{20}$/.test(fingerprint)) return ''
   const expectedUrl = `/news-images/ai/articles/${id}-${fingerprint}-v1.webp`
   const validGeneratedAt = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,6})?Z$/.test(image.generated_at)
+  const approvedGenerators = new Set([
+    'gpt-image-2:editorial-concept-v1',
+    'cf-lucid-origin:cf-editorial-photo-v1',
+    'cf-leonardo-phoenix:cf-editorial-collage-v1',
+    'comfyui-sdxl:comfy-editorial-photo-v1',
+    'comfyui-flux:comfy-editorial-photo-v2',
+    'comfyui-juggernaut-xl:comfy-editorial-photo-v2',
+    'comfyui-z-image-turbo:z-image-turbo-v1',
+  ])
   return image.url === expectedUrl
     && image.source_fingerprint === fingerprint
-    && ['gpt-image-2', 'comfyui-sdxl', 'comfyui-flux', 'comfyui-juggernaut-xl'].includes(image.model)
-    && /^comfyui-(sdxl|flux|juggernaut-xl)-v1$/.test(image.prompt_version)
+    && approvedGenerators.has(`${image.model}:${image.prompt_version}`)
     && image.width === 1280
     && image.height === 848
     && /^[a-f0-9]{64}$/.test(image.sha256)

@@ -153,7 +153,8 @@ SDXL_WORKFLOW = {
 }
 
 # Article generation settings
-PROMPT_VERSION = "comfyui-sdxl-v1"
+MODEL_TAG = "comfyui-juggernaut-xl"
+PROMPT_VERSION = "comfy-editorial-photo-v2"
 FILE_VERSION = "v1"
 WIDTH = 1280
 HEIGHT = 848
@@ -459,9 +460,12 @@ def atomic_write_json(path: Path, data: object) -> None:
 
 
 def expected_filename(item: dict) -> str:
-    article_id = item.get("id", "")
-    fp_match = FINGERPRINT_RE.search(article_id)
-    fingerprint = fp_match.group(0) if fp_match else hashlib.sha256(article_id.encode()).hexdigest()[:20]
+    article_id = str(item.get("id", ""))
+    fingerprint = str(item.get("source_fingerprint", ""))
+    if not ARTICLE_ID_RE.fullmatch(article_id):
+        raise ValueError("article id must be exactly 20 lowercase hex characters")
+    if not FINGERPRINT_RE.fullmatch(fingerprint):
+        raise ValueError("source fingerprint must be exactly 20 lowercase hex characters")
     return f"{article_id}-{fingerprint}-{FILE_VERSION}.webp"
 
 
@@ -473,7 +477,7 @@ def image_metadata(item: dict, image_bytes: bytes, generated_at: str, model: str
         "alt": item.get("title", "Artikelbild"),
         "model": model,
         "prompt_version": PROMPT_VERSION,
-        "source_fingerprint": filename.split("-")[1],
+        "source_fingerprint": item["source_fingerprint"],
         "width": WIDTH,
         "height": HEIGHT,
         "sha256": sha256,
@@ -496,7 +500,7 @@ def recover_existing(item: dict, path: Path) -> dict | None:
     data = path.read_bytes()
     if hashlib.sha256(data).hexdigest() != existing["sha256"]:
         return None
-    if existing.get("model") != "comfyui-flux":
+    if existing.get("model") != MODEL_TAG:
         return None
     return existing
 
@@ -581,7 +585,7 @@ def process_news(
                 opener=opener, clock=clock, sleeper=sleeper,
             )
             atomic_write_bytes(path, image_bytes)
-            item["ai_image"] = image_metadata(item, image_bytes, now(), "comfyui-juggernaut-xl")
+            item["ai_image"] = image_metadata(item, image_bytes, now(), MODEL_TAG)
             report.generated += 1
             report.changed = True
 

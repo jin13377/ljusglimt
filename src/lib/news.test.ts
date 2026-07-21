@@ -5,7 +5,7 @@ afterEach(() => { vi.unstubAllGlobals() })
 
 describe('news normalizer', () => {
   const generatedImage = {
-    url: '/news-images/ai/articles/0123456789abcdefabcd-aabbccdd-v1.webp',
+    url: '/news-images/ai/articles/0123456789abcdefabcd-aabbccddeeff00112233-v1.webp',
     alt: 'Redaktionell AI-illustration av ett lokalt naturprojekt.',
     model: 'gpt-image-2',
     prompt_version: 'editorial-concept-v1',

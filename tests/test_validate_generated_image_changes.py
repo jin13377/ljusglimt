@@ -44,7 +44,7 @@ class GeneratedImageValidationTests(unittest.TestCase):
 
     @property
     def filename(self):
-        return f"{self.article_id}-{self.fingerprint[:8]}-v1.webp"
+        return f"{self.article_id}-{self.fingerprint}-v1.webp"
 
     @property
     def image_path(self):
@@ -114,7 +114,7 @@ class GeneratedImageValidationTests(unittest.TestCase):
             item = {"id": article_id, "source_fingerprint": fingerprint, "title": f"Story {number}"}
             before["items"].append(deepcopy(item))
             item["ai_image"] = {
-                "url": f"/news-images/ai/articles/{article_id}-{fingerprint[:8]}-v1.webp",
+                "url": f"/news-images/ai/articles/{article_id}-{fingerprint}-v1.webp",
                 "alt": "AI illustration",
                 "model": "gpt-image-2",
                 "prompt_version": "editorial-concept-v1",
@@ -148,6 +148,19 @@ class GeneratedImageValidationTests(unittest.TestCase):
             model="cf-lucid-origin", prompt_version="cf-editorial-photo-v1"
         )
         validator.validate_generated_image_changes(self.before, after, self.article_dir)
+
+    def test_accepts_current_local_generator_metadata(self):
+        self.write_image()
+        for model, prompt_version in (
+            ("comfyui-juggernaut-xl", "comfy-editorial-photo-v2"),
+            ("comfyui-z-image-turbo", "z-image-turbo-v1"),
+        ):
+            with self.subTest(model=model):
+                after = deepcopy(self.before)
+                after["items"][0]["ai_image"] = self.valid_ai_image(
+                    model=model, prompt_version=prompt_version
+                )
+                validator.validate_generated_image_changes(self.before, after, self.article_dir)
 
     def test_rejects_unknown_generator_model(self):
         self.write_image()

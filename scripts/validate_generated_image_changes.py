@@ -25,6 +25,8 @@ APPROVED_GENERATORS = {
     ("cf-leonardo-phoenix", "cf-editorial-collage-v1"),
     ("comfyui-sdxl", "comfy-editorial-photo-v1"),
     ("comfyui-flux", "comfy-editorial-photo-v2"),
+    ("comfyui-juggernaut-xl", "comfy-editorial-photo-v2"),
+    ("comfyui-z-image-turbo", "z-image-turbo-v1"),
 }
 MAX_IMAGE_BYTES = 2 * 1024 * 1024
 HEX_20_RE = re.compile(r"[0-9a-f]{20}\Z")
@@ -174,7 +176,7 @@ def _validate_ai_image(item: dict, images_dir: Path) -> None:
     if not isinstance(image, dict) or set(image) != AI_IMAGE_KEYS:
         raise ValueError(f"ai_image for {article_id} must contain exactly the approved fields")
 
-    expected_filename = f"{article_id}-{fingerprint[:8]}-v1.webp"
+    expected_filename = f"{article_id}-{fingerprint}-v1.webp"
     expected_url = f"/news-images/ai/articles/{expected_filename}"
     if image["url"] != expected_url:
         raise ValueError(f"ai_image.url for {article_id} must be {expected_url}")

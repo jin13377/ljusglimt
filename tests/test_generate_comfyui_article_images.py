@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Tests for generate_comfyui_article_images.py"""
 
-import base64
 import hashlib
 import io
 import json
@@ -10,7 +9,6 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
-from unittest.mock import MagicMock, patch
 
 MODULE_PATH = Path(__file__).resolve().parents[1] / "scripts/generate_comfyui_article_images.py"
 import importlib.util
@@ -62,33 +60,57 @@ class ComfyUIImageTests(unittest.TestCase):
             "category": category,
             "public_eligible": eligible,
             "source_image_verified": False,
+            "source_fingerprint": "abcdef1234567890abcd",
         }
 
     @unittest.skipUnless(HAVE_PIL, "Pillow required")
     def test_generates_webp_and_metadata_from_comfyui(self):
         webp = _webp_1280x848()
-        b64 = base64.b64encode(webp).decode()
 
-        # Mock ComfyUI responses
+        # Mock ComfyUI responses with a real context-manager/read contract.
+        # MagicMock.__enter__ returns a different mock by default, which made
+        # _read_response_limited() receive an endless stream of truthy mocks
+        # and caused the whole CI job to time out.
         call_count = {"prompt": 0, "history": 0, "view": 0}
+
+        class FakeResponse:
+            def __init__(self, payload: bytes, status: int = 200):
+                self.payload = payload
+                self.status = status
+                self.offset = 0
+
+            def __enter__(self):
+                return self
+
+            def __exit__(self, exc_type, exc, traceback):
+                return False
+
+            def read(self, size=-1):
+                if self.offset >= len(self.payload):
+                    return b""
+                if size is None or size < 0:
+                    size = len(self.payload) - self.offset
+                chunk = self.payload[self.offset:self.offset + size]
+                self.offset += len(chunk)
+                return chunk
 
         def fake_opener(request, timeout=0):
             url = request.full_url if hasattr(request, "full_url") else request.get_full_url()
             call_count["total"] = call_count.get("total", 0) + 1
             if "/prompt" in url:
                 call_count["prompt"] += 1
-                return MagicMock(read=lambda n=-1: json.dumps({"prompt_id": "test-123"}).encode())
+                return FakeResponse(json.dumps({"prompt_id": "test-123"}).encode())
             if "/history/test-123" in url:
                 call_count["history"] += 1
                 if call_count["history"] < 2:
-                    return MagicMock(read=lambda n=-1: json.dumps({}).encode())
-                return MagicMock(read=lambda n=-1: json.dumps({
+                    return FakeResponse(json.dumps({}).encode())
+                return FakeResponse(json.dumps({
                     "test-123": {"outputs": {"11": {"images": [{"filename": "ljusglimt/article_test.webp", "subfolder": ""}]}}}
                 }).encode())
             if "/view" in url:
                 call_count["view"] += 1
-                return MagicMock(read=lambda n=-1: webp)
-            return MagicMock(read=lambda n=-1: b"{}")
+                return FakeResponse(webp)
+            return FakeResponse(b"{}")
 
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
@@ -108,7 +130,7 @@ class ComfyUIImageTests(unittest.TestCase):
             self.assertEqual(meta["width"], cf.WIDTH)
             self.assertEqual(meta["height"], cf.HEIGHT)
             self.assertEqual(meta["sha256"], hashlib.sha256(data).hexdigest())
-            self.assertEqual(meta["model"], "comfyui-flux")
+            self.assertEqual(meta["model"], cf.MODEL_TAG)
             self.assertEqual(meta["prompt_version"], cf.PROMPT_VERSION)
 
     @unittest.skipUnless(HAVE_PIL, "Pillow required")
@@ -125,7 +147,7 @@ class ComfyUIImageTests(unittest.TestCase):
             self.assertEqual(report.generated, 0)
 
     @unittest.skipUnless(HAVE_PIL, "Pillow required")
-    def test_reuses_existing_valid_webp(self):
+    def test_skips_existing_valid_webp(self):
         webp = _webp_1280x848()
         sha = hashlib.sha256(webp).hexdigest()
         with tempfile.TemporaryDirectory() as folder:
@@ -137,7 +159,7 @@ class ComfyUIImageTests(unittest.TestCase):
                 "sha256": sha,
                 "width": cf.WIDTH,
                 "height": cf.HEIGHT,
-                "model": "comfyui-flux",
+                "model": cf.MODEL_TAG,
                 "prompt_version": cf.PROMPT_VERSION,
             }
             news.write_text(json.dumps({"items": [item]}), encoding="utf-8")
@@ -149,8 +171,9 @@ class ComfyUIImageTests(unittest.TestCase):
                 news, output, account_id="acc", api_token="tok",
                 max_images=1, opener=lambda *a, **k: None,
             )
+            self.assertEqual(report.selected, 0)
             self.assertEqual(report.generated, 0)
-            self.assertEqual(report.recovered, 1)
+            self.assertEqual(report.recovered, 0)
 
 
 if __name__ == "__main__":
