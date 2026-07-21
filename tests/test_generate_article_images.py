@@ -213,7 +213,7 @@ class ArticleImageTests(unittest.TestCase):
             self.assertEqual(len(requests), 3)
             for item in saved["items"][:3]:
                 metadata = item["ai_image"]
-                expected = f"/news-images/ai/articles/{item['id']}-{item['source_fingerprint'][:8]}-v1.webp"
+                expected = f"/news-images/ai/articles/{item['id']}-{item['source_fingerprint']}-v1.webp"
                 self.assertEqual(set(metadata), images.AI_IMAGE_KEYS)
                 self.assertEqual(metadata["url"], expected)
                 self.assertEqual(metadata["model"], "gpt-image-2")

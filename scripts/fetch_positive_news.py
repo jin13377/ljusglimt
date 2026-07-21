@@ -162,7 +162,7 @@ def reusable_ai_image(item: dict, previous: dict | None) -> dict:
     image = previous.get("ai_image")
     if not isinstance(image, dict) or set(image) != AI_IMAGE_KEYS:
         return {}
-    expected_url = f"/news-images/ai/articles/{article_id}-{fingerprint[:8]}-v1.webp"
+    expected_url = f"/news-images/ai/articles/{article_id}-{fingerprint}-v1.webp"
     alt = image.get("alt")
     generated_at = image.get("generated_at")
     if (image.get("url") != expected_url

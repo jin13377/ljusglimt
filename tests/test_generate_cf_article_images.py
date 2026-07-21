@@ -79,7 +79,10 @@ class CfArticleImageTests(unittest.TestCase):
             meta = saved["ai_image"]
             path = output / meta["url"].split("/")[-1]
             data = path.read_bytes()
-            self.assertTrue(meta["url"].startswith("/news-images/ai/articles/"))
+            self.assertEqual(
+                meta["url"],
+                "/news-images/ai/articles/0123456789abcdefabcd-fedcba9876543210abcd-v1.webp",
+            )
             self.assertEqual(meta["width"], cf.WIDTH)
             self.assertEqual(meta["height"], cf.HEIGHT)
             self.assertEqual(meta["sha256"], hashlib.sha256(data).hexdigest())

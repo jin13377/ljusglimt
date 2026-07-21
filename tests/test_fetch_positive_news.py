@@ -315,7 +315,7 @@ class PositiveNewsTests(unittest.TestCase):
     def test_ai_image_is_reused_only_when_nested_schema_and_fingerprint_are_valid(self):
         item = {"id": "a" * 20, "source_fingerprint": "b" * 20}
         image = {
-            "url": f"/news-images/ai/articles/{'a' * 20}-{'b' * 8}-v1.webp",
+            "url": f"/news-images/ai/articles/{'a' * 20}-{'b' * 20}-v1.webp",
             "alt": "Redaktionell AI-illustration om lokalt samarbete.",
             "model": "gpt-image-2",
             "prompt_version": "editorial-concept-v1",

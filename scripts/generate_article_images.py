@@ -150,7 +150,7 @@ def item_identity(item: dict) -> tuple[str, str]:
 
 def expected_filename(item: dict) -> str:
     article_id, fingerprint = item_identity(item)
-    return f"{article_id}-{fingerprint[:8]}-{FILE_VERSION}.webp"
+    return f"{article_id}-{fingerprint}-{FILE_VERSION}.webp"
 
 
 def expected_url(item: dict) -> str:
