@@ -190,7 +190,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          remote="https://x-access-token:${GITH...git"
+          remote="origin"
           git fetch --force "$remote" "refs/heads/${GITHUB_REF_NAME}:refs/remotes/origin/${GITHUB_REF_NAME}"
           trusted_head="$(git rev-parse "refs/remotes/origin/${GITHUB_REF_NAME}")"
           if [ "$(git rev-parse HEAD)" != "$trusted_head" ]; then
