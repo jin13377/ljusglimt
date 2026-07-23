@@ -1,9 +1,21 @@
 {
-  "generated_at": "2026-07-23T11:50:34.557714Z",
+  "generated_at": "2026-07-23T22:56:54.688388Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
-  "fetch_errors": [],
+  "new_item_ids": [
+    "d3d0384eb9cf10ff61dd",
+    "c467c1e14a1353343c4a"
+  ],
+  "fetch_errors": [
+    {
+      "source": "Forskning.se",
+      "error": "HTTP Error 500: Internal Server Error"
+    },
+    {
+      "source": "Mötesplats Social Innovation",
+      "error": "not well-formed (invalid token): line 1, column 0"
+    }
+  ],
   "items": [
     {
       "id": "0b87daf79218ce385c31",
@@ -424,6 +436,34 @@
       }
     },
     {
+      "id": "d3d0384eb9cf10ff61dd",
+      "title": "KI-forskare bidrar till nya WHO-riktlinjer för att förebygga demens",
+      "url": "https://nyheter.ki.se/ki-forskare-bidrar-till-nya-who-riktlinjer-for-att-forebygga-demens",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-07-23T00:00:00Z",
+      "source_excerpt": "Professor Miia Kivipelto och flera forskare vid Karolinska Institutet har medverkat i arbetet med WHO:s nya riktlinjer för att förebygga kognitiv svikt och demens. Riktlinjerna sammanfattar det senaste vetenskapliga underlaget och ska hjälpa beslutsfattare, vårdgivare och andra aktörer att minska risken för demens genom förebyggande insatser. Enligt WHO kan upp till 45 procent av alla demensfall k",
+      "agent_summary": "",
+      "source_fingerprint": "d2d8e94a917d58a1e189",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "förebygga"
+      ],
+      "public_eligible": true,
+      "generated_image": {
+        "url": "/news-images/generated/d3d0384eb9cf10ff61dd-d2d8e94a-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "d2d8e94a917d58a1e189",
+        "width": 1280,
+        "height": 848,
+        "sha256": "90568fbfc8d4487520faca16220266b970a288c26aa20f66d18ad0e62960859f"
+      }
+    },
+    {
       "id": "e851322717ee40aea0bf",
       "title": "Doktorand får stipendium för forskning om hur eksem påverkar skola och yrkesliv",
       "url": "https://nyheter.ki.se/doktorand-far-stipendium-for-forskning-om-hur-eksem-paverkar-skola-och-yrkesliv",
@@ -666,7 +706,7 @@
       "source_excerpt": "She got right into the passenger seat like she’s ready to go home! Sam shared what it was like rescuing Adeline outside a car dealership — and gave us an update on where this sweet girl landed just one month later.",
       "agent_summary": "Katten Adeline hoppade direkt in på passagerarsätet som om hon var redo att följa med hem. Sam berättar om räddningen utanför bilfirman och hur Adeline hade det en månad senare.",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/cLbms1gLNlyGRmBrE/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/cLbms1gLNlyGRmBrE/x720",
       "source_image_alt": "Woman Rescues A Cat She Found At A Car Dealership",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xamxvli",
@@ -701,7 +741,7 @@
       "source_excerpt": "Their bond was undeniable from the very first moment! Natalie shared with The Dodo how this sweet shelter dog seemed to know she’d found her person the moment she met her daughter, Piper. All they had to do was convince Dad — and the rest fell right into place.",
       "agent_summary": "Bandet mellan hunden på djurhemmet och flickan Piper märktes direkt. Natalie berättar hur familjen blev övertygad om att hunden hade hittat sin människa.",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/cIcSw1gLgz0iDwIJb/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/cIcSw1gLgz0iDwIJb/x720",
       "source_image_alt": "Moment Between Shelter Dog And Girl Is Priceless",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xamh2yi",
@@ -752,34 +792,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "e6132d53cfd8edc697170207547ba3eaec4f73a6f1093acf324c071f7624b1c2"
-      }
-    },
-    {
-      "id": "686c64ab544322bcc218",
-      "title": "Nya insikter om hur serotonin påverkar allergirelaterade immunceller",
-      "url": "https://nyheter.ki.se/nya-insikter-om-hur-serotonin-paverkar-allergirelaterade-immunceller",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-07-02T00:00:00Z",
-      "source_excerpt": "Forskare vid Karolinska Institutet har upptäckt hur serotoninkopplad metabolism bidrar till att reglera en underutforskad immuncell som är involverad i allergisk inflammation. Studien, som publicerats i tidskriften Allergy, tillför ny kunskap om hur allergiska immunsvar kan upprätthållas över tid.",
-      "agent_summary": "",
-      "source_fingerprint": "e6d7cd791b7411ef79c0",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "upptäckt"
-      ],
-      "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/686c64ab544322bcc218-e6d7cd79-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "e6d7cd791b7411ef79c0",
-        "width": 1280,
-        "height": 848,
-        "sha256": "6c5f2b0aa9f8d99f4fecdced0db81da740b938bc70a081f0558563c89d4037b6"
       }
     },
     {
@@ -1241,6 +1253,34 @@
       "public_eligible": false
     },
     {
+      "id": "c467c1e14a1353343c4a",
+      "title": "NASA Astronaut Chris Williams Closes Out Space Station Mission",
+      "url": "https://www.nasa.gov/missions/station/iss-research/nasa-astronaut-chris-williams-closes-out-space-station-mission",
+      "source": "NASA News Releases",
+      "language": "en",
+      "published_at": "2026-07-23T14:00:00Z",
+      "source_excerpt": "After eight months aboard the International Space Station for his first mission, NASA astronaut Chris Williams is preparing to return to Earth. During his assignment, Williams contributed to research for new cancer treatments, advanced the production of materials to improve computers and electronics, ventured into the vacuum of space to complete two spacewalks, and much […]",
+      "agent_summary": "",
+      "source_fingerprint": "c3af8014b146272ca862",
+      "source_video": {
+        "provider": "youtube",
+        "video_id": "HncCaFHwkEY",
+        "embed_url": "https://www.youtube-nocookie.com/embed/HncCaFHwkEY",
+        "source_url": "https://www.youtube.com/watch?v=HncCaFHwkEY",
+        "title": "NASA Astronaut Chris Williams Closes Out Space Station Mission"
+      },
+      "source_tier_bonus": 1,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "mission",
+        "research",
+        "treat",
+        "treatment"
+      ],
+      "public_eligible": false
+    },
+    {
       "id": "9d15243bd9e6a4e7eb01",
       "title": "‘A place of hope and solutions’: the building promising a better future",
       "url": "https://www.positive.news/society/the-rotterdam-building-promising-a-better-future",
@@ -1337,33 +1377,6 @@
         "curated-positive-source",
         "mission",
         "rescue"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "59d1baf73158830c7c72",
-      "title": "This giant snail is the size of a croissant. Conservationists are banding together to save it from extinction",
-      "url": "https://www.goodgoodgood.co/articles/obo-giant-snail-endangered-species",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-07-02T17:00:00Z",
-      "source_excerpt": "The Obô Giant Snail is just one of many vulnerable species worth protecting in the “Galapagos of Africa.”",
-      "agent_summary": "",
-      "source_fingerprint": "db12fb82eab1700e898f",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a4698bd3aa81b24797c5b04_6a4698bcfa66bfaa7deb8368_obo-giant-snail-featured.webp",
-      "source_image_alt": "This giant snail is the size of a croissant. Conservationists are banding together to save it from extinction",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/obo-giant-snail-endangered-species",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/obo-giant-snail-endangered-species",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "conservation",
-        "together"
       ],
       "public_eligible": false
     }
