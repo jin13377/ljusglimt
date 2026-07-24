@@ -1,11 +1,8 @@
 {
-  "generated_at": "2026-07-24T11:42:19.014737Z",
+  "generated_at": "2026-07-24T23:01:33.458352Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [
-    "f10fc9398ccb39326e3a",
-    "2ab3e5d597e8e7474149"
-  ],
+  "new_item_ids": [],
   "fetch_errors": [],
   "items": [
     {
@@ -81,7 +78,7 @@
       "source_excerpt": "When your boyfriend requests foster kittens... you deliver. Our producer Monica shared her first-ever experience fostering kittens from Wallis Annenberg PetSpace and how her dogs unexpectedly became the kittens' biggest fans!",
       "agent_summary": "När hennes pojkvän önskade sig fosterkattungar ordnade Monica det. Hon berättar om sin första tid som jourhem åt kattungar från Wallis Annenberg PetSpace – och hur hennes hundar oväntat blev kattungarnas största fans.",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/cLTto1gJkgKXx3_pz/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/cLTto1gJkgKXx3_pz/x720",
       "source_image_alt": "Boyfriend Has Best Reaction To Surprise Foster Kittens",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xamx6nm",
@@ -1266,34 +1263,6 @@
       "public_eligible": false
     },
     {
-      "id": "c467c1e14a1353343c4a",
-      "title": "NASA Astronaut Chris Williams Closes Out Space Station Mission",
-      "url": "https://www.nasa.gov/missions/station/iss-research/nasa-astronaut-chris-williams-closes-out-space-station-mission",
-      "source": "NASA News Releases",
-      "language": "en",
-      "published_at": "2026-07-23T14:00:00Z",
-      "source_excerpt": "After eight months aboard the International Space Station for his first mission, NASA astronaut Chris Williams is preparing to return to Earth. During his assignment, Williams contributed to research for new cancer treatments, advanced the production of materials to improve computers and electronics, ventured into the vacuum of space to complete two spacewalks, and much […]",
-      "agent_summary": "",
-      "source_fingerprint": "c3af8014b146272ca862",
-      "source_video": {
-        "provider": "youtube",
-        "video_id": "HncCaFHwkEY",
-        "embed_url": "https://www.youtube-nocookie.com/embed/HncCaFHwkEY",
-        "source_url": "https://www.youtube.com/watch?v=HncCaFHwkEY",
-        "title": "NASA Astronaut Chris Williams Closes Out Space Station Mission"
-      },
-      "source_tier_bonus": 1,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "mission",
-        "research",
-        "treat",
-        "treatment"
-      ],
-      "public_eligible": false
-    },
-    {
       "id": "9d15243bd9e6a4e7eb01",
       "title": "‘A place of hope and solutions’: the building promising a better future",
       "url": "https://www.positive.news/society/the-rotterdam-building-promising-a-better-future",
@@ -1363,6 +1332,33 @@
         "curated-positive-source",
         "treat",
         "treatment"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "b2a50a7e834fe5a51d69",
+      "title": "Firefighters free raccoon trapped under sewer grate in 'jaws of life' rescue mission",
+      "url": "https://www.goodgoodgood.co/articles/firefighters-save-raccoon-jaws-of-life",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-07-08T17:33:00Z",
+      "source_excerpt": "After the first responders had completed the job, the masked critter ran back to its natural habitat.",
+      "agent_summary": "",
+      "source_fingerprint": "685882d51a0346bca596",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a4e8966685874472182ec8f_6a4e896405d564b3050bd37d_firefighters-save-raccoon-jaws-of-life-featured.webp",
+      "source_image_alt": "Firefighters free raccoon trapped under sewer grate in 'jaws of life' rescue mission",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/firefighters-save-raccoon-jaws-of-life",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/firefighters-save-raccoon-jaws-of-life",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "source_tier_bonus": 2,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "mission",
+        "rescue"
       ],
       "public_eligible": false
     }
