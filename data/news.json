@@ -1,21 +1,12 @@
 {
-  "generated_at": "2026-07-23T22:56:54.688388Z",
+  "generated_at": "2026-07-24T11:42:19.014737Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "d3d0384eb9cf10ff61dd",
-    "c467c1e14a1353343c4a"
+    "f10fc9398ccb39326e3a",
+    "2ab3e5d597e8e7474149"
   ],
-  "fetch_errors": [
-    {
-      "source": "Forskning.se",
-      "error": "HTTP Error 500: Internal Server Error"
-    },
-    {
-      "source": "Mötesplats Social Innovation",
-      "error": "not well-formed (invalid token): line 1, column 0"
-    }
-  ],
+  "fetch_errors": [],
   "items": [
     {
       "id": "0b87daf79218ce385c31",
@@ -50,6 +41,37 @@
       }
     },
     {
+      "id": "f10fc9398ccb39326e3a",
+      "title": "Två KI-forskare får innovationsfinansiering från Knut och Alice Wallenbergs Stiftelse",
+      "url": "https://nyheter.ki.se/tva-ki-forskare-far-innovationsfinansiering-fran-knut-och-alice-wallenbergs-stiftelse",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-07-24T00:00:00Z",
+      "source_excerpt": "Professor Gonçalo Castelo-Branco och professor Janne Lehtiö vid KI får anslag inom Knut och Alice Wallenbergs Stiftelses och SciLifeLabs program Proof of Concept. Målet med programmet är att stärka vägen från akademisk forskning till innovation och kommersiell tillämpning inom livsvetenskap, life science.",
+      "agent_summary": "",
+      "source_fingerprint": "4a1c4a8137c50ea786d3",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 10,
+      "positive_signals": [
+        "curated-positive-source",
+        "anslag",
+        "forskning",
+        "innovation",
+        "science"
+      ],
+      "public_eligible": true,
+      "generated_image": {
+        "url": "/news-images/generated/f10fc9398ccb39326e3a-4a1c4a81-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "4a1c4a8137c50ea786d3",
+        "width": 1280,
+        "height": 848,
+        "sha256": "1f6d2b6dc79086146d1435c3b5a8fff53d822cddb7900615fed8fb547a719aac"
+      }
+    },
+    {
       "id": "772deb64d5f80c5b5454",
       "title": "Boyfriend Has Best Reaction To Surprise Foster Kittens",
       "url": "https://www.dailymotion.com/video/xamx6nm",
@@ -59,7 +81,7 @@
       "source_excerpt": "When your boyfriend requests foster kittens... you deliver. Our producer Monica shared her first-ever experience fostering kittens from Wallis Annenberg PetSpace and how her dogs unexpectedly became the kittens' biggest fans!",
       "agent_summary": "När hennes pojkvän önskade sig fosterkattungar ordnade Monica det. Hon berättar om sin första tid som jourhem åt kattungar från Wallis Annenberg PetSpace – och hur hennes hundar oväntat blev kattungarnas största fans.",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/cLTto1gJkgKXx3_pz/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/cLTto1gJkgKXx3_pz/x720",
       "source_image_alt": "Boyfriend Has Best Reaction To Surprise Foster Kittens",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xamx6nm",
@@ -350,7 +372,7 @@
       "source_excerpt": "Watch how this chill pig on the run finally got rescued! Lancaster Farm Sanctuary shared how Petey spent weeks roaming free before people came together to get him to safety. Now he’s living the good life with a whole crew of potbelly pig friends.",
       "agent_summary": "Grisen Petey strövade fritt i flera veckor innan människor samlades för att föra honom i säkerhet. Nu lever han på Lancaster Farm Sanctuary tillsammans med en grupp andra minigrisar.",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/cLTwQ1gJkcx08TuRo/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/cLTwQ1gJkcx08TuRo/x720",
       "source_image_alt": "This Pig Was On The Run Until Everyone Came Together",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xamx6sa",
@@ -642,7 +664,7 @@
       "source_excerpt": "Then things escalated! We talked to Rachel and Connor about the big surprise — and how an even bigger one came a few weeks later when they brought Jupiter’s sister home, too.",
       "agent_summary": "Rachel överraskade Connor med Jupiter. Några veckor senare växte familjen igen när de också tog hem Jupiters syster.",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/bQSIo1gIKYAIOFShZ/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/bQSIo1gIKYAIOFShZ/x720",
       "source_image_alt": "Boyfriend Gets The Absolute BEST Valentines Day Gift",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xadpjn6",
@@ -765,34 +787,6 @@
       ],
       "display_title_sv": "Mötet mellan hunden och flickan blev början på en vänskap",
       "public_eligible": true
-    },
-    {
-      "id": "5dd429f89dcf7aaf4228",
-      "title": "CLINTEC-professor tilldelas internationellt hederspris",
-      "url": "https://nyheter.ki.se/clintec-professor-tilldelas-internationellt-hederspris",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-07-03T00:00:00Z",
-      "source_excerpt": "Matthias Löhr, professor i gastroenterologi och hepatologi vid institutionen för klinisk vetenskap, intervention och teknik - CLINTEC, har tilldelats International Association of Pancreatologys (IAP) prestigefyllda Lifetime Achievement Award för sina långvariga och betydande insatser inom pankreasforskning och klinisk utveckling.",
-      "agent_summary": "",
-      "source_fingerprint": "08c3903f99092f477a5b",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning"
-      ],
-      "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/5dd429f89dcf7aaf4228-08c3903f-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "08c3903f99092f477a5b",
-        "width": 1280,
-        "height": 848,
-        "sha256": "e6132d53cfd8edc697170207547ba3eaec4f73a6f1093acf324c071f7624b1c2"
-      }
     },
     {
       "id": "e6ab936520421c01f62d",
@@ -1253,6 +1247,25 @@
       "public_eligible": false
     },
     {
+      "id": "2ab3e5d597e8e7474149",
+      "title": "When It Comes to Addiction Treatment, ‘Any Door Should Be the Right Door’",
+      "url": "https://reasonstobecheerful.world/hub-and-spoke-addiction-treatment",
+      "source": "Reasons to be Cheerful",
+      "language": "en",
+      "published_at": "2026-07-24T08:00:24Z",
+      "source_excerpt": "This article was originally published by the Daily Yonder, which is dedicated to uplifting the stories of rural people. Holly Warren was recently leafing through one of her old medical school textbooks, trying to recall how much instruction she’d received in addiction medicine — trying to recall, “Did we even talk about this? Was... The post When It Comes to Addiction Treatment, ‘Any Door Should B",
+      "agent_summary": "",
+      "source_fingerprint": "34d0df1a815d055b2e64",
+      "source_tier_bonus": 2,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "treat",
+        "treatment"
+      ],
+      "public_eligible": false
+    },
+    {
       "id": "c467c1e14a1353343c4a",
       "title": "NASA Astronaut Chris Williams Closes Out Space Station Mission",
       "url": "https://www.nasa.gov/missions/station/iss-research/nasa-astronaut-chris-williams-closes-out-space-station-mission",
@@ -1350,33 +1363,6 @@
         "curated-positive-source",
         "treat",
         "treatment"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "b2a50a7e834fe5a51d69",
-      "title": "Firefighters free raccoon trapped under sewer grate in 'jaws of life' rescue mission",
-      "url": "https://www.goodgoodgood.co/articles/firefighters-save-raccoon-jaws-of-life",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-07-08T17:33:00Z",
-      "source_excerpt": "After the first responders had completed the job, the masked critter ran back to its natural habitat.",
-      "agent_summary": "",
-      "source_fingerprint": "685882d51a0346bca596",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a4e8966685874472182ec8f_6a4e896405d564b3050bd37d_firefighters-save-raccoon-jaws-of-life-featured.webp",
-      "source_image_alt": "Firefighters free raccoon trapped under sewer grate in 'jaws of life' rescue mission",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/firefighters-save-raccoon-jaws-of-life",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/firefighters-save-raccoon-jaws-of-life",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "mission",
-        "rescue"
       ],
       "public_eligible": false
     }
