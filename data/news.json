@@ -1,8 +1,12 @@
 {
-  "generated_at": "2026-07-26T11:19:16.504736Z",
+  "generated_at": "2026-07-26T22:58:57.211820Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "72d95a0a0306f0fe7cba",
+    "4abe0c088f38987e7a23",
+    "1172420ecab4a39780f7"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -1066,6 +1070,112 @@
       "public_eligible": false
     },
     {
+      "id": "72d95a0a0306f0fe7cba",
+      "title": "Puppy Left For Dead Finds A New Life In Germany",
+      "url": "https://www.dailymotion.com/video/xaseqb6",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-07-26T22:18:53Z",
+      "source_excerpt": "All it took was one person to stop! Our senior producer Tarang caught up with Eyleen, founder of Beldi Refuge Morocco, months after she rescued a puppy everyone had given up on. Together they look back on the incredible journey that eventually led her to her forever family in Germany.",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s1.dmcdn.net/v/cue2o1gPeVgopdt4K/x720",
+      "source_image_alt": "Puppy Left For Dead Finds A New Life In Germany",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xaseqb6",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xaseqb6",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xaseqb6",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xaseqb6",
+        "source_url": "https://www.dailymotion.com/video/xaseqb6",
+        "title": "Puppy Left For Dead Finds A New Life In Germany"
+      },
+      "source_fingerprint": "cb673503e187b98f5f72",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "puppy",
+        "rescue",
+        "together"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "4abe0c088f38987e7a23",
+      "title": "Woman So Happy When Best Friend Adopts This Pitbull",
+      "url": "https://www.dailymotion.com/video/xaseqai",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-07-26T22:18:52Z",
+      "source_excerpt": "Every adoption announcement deserves a reaction like this! Jewels and Reeya shared Bunny's story with Dodo producer Monica and the adoption that left his biggest cheerleader in tears..",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s1.dmcdn.net/v/cue2Q1gPeVg9UpgW-/x720",
+      "source_image_alt": "Woman So Happy When Best Friend Adopts This Pitbull",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xaseqai",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xaseqai",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xaseqai",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xaseqai",
+        "source_url": "https://www.dailymotion.com/video/xaseqai",
+        "title": "Woman So Happy When Best Friend Adopts This Pitbull"
+      },
+      "source_fingerprint": "1c4d3acf976c7cbb908b",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "best friend",
+        "friend"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "1172420ecab4a39780f7",
+      "title": "Puppy Found Shaking In The Road Is Unrecognizable 9 Months Later",
+      "url": "https://www.dailymotion.com/video/xasebee",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-07-26T20:18:58Z",
+      "source_excerpt": "You won't believe this is the same puppy. At The Dodo, we wanted to find out what had happened after Milky's rescue. Nine months later, she's living her best life with her family in Paris.",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s1.dmcdn.net/v/cuZKs1gPclO8JNYK3/x720",
+      "source_image_alt": "Puppy Found Shaking In The Road Is Unrecognizable 9 Months Later",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xasebee",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xasebee",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xasebee",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xasebee",
+        "source_url": "https://www.dailymotion.com/video/xasebee",
+        "title": "Puppy Found Shaking In The Road Is Unrecognizable 9 Months Later"
+      },
+      "source_fingerprint": "339717243b455a1629d3",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "puppy",
+        "rescue"
+      ],
+      "public_eligible": false
+    },
+    {
       "id": "d54ec4a4e22279413cfc",
       "title": "Svenskt guld i internationella fysikolympiaden",
       "url": "https://fof.se/artikel/svenskt-guld-i-internationella-fysikolympiaden",
@@ -1278,87 +1388,6 @@
         "curated-positive-source",
         "hope",
         "solution"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "dc3f4cb487d6974e9617",
-      "title": "Recent sightings give conservationists hope for two endangered whale species: 'They may be rebounding'",
-      "url": "https://www.goodgoodgood.co/articles/blue-fin-whale-sightings-conservation",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-07-16T20:53:00Z",
-      "source_excerpt": "A new study found sightings of the species on Southern Africa’s Atlantic coast have increased in recent years.",
-      "agent_summary": "",
-      "source_fingerprint": "a0a631fb22970b37a57e",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a5580b6f675765e7374a887_sightings-off-southern-africa-suggest-blue-and-fin-whales-01.jpg",
-      "source_image_alt": "Recent sightings give conservationists hope for two endangered whale species: 'They may be rebounding'",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/blue-fin-whale-sightings-conservation",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/blue-fin-whale-sightings-conservation",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "conservation",
-        "hope"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "600742420eb388aab0d9",
-      "title": "Utah revokes license of teen treatment center criticized by Paris Hilton",
-      "url": "https://www.goodgoodgood.co/articles/utah-revokes-springville-license-teen-treatment-center-paris-hilton",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-07-08T18:01:00Z",
-      "source_excerpt": "The Provo Canyon School’s Springville campus is closing, but the Provo campus is keeping its license under new conditions.",
-      "agent_summary": "",
-      "source_fingerprint": "46d2e6a868954e7ba815",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a4e90054601fce2bee8d4e1_6a4e900410a49cd25dbfcb98_utah-revokes-springville-license-teen-treatment-center-paris-hilton-featured.webp",
-      "source_image_alt": "Utah revokes license of teen treatment center criticized by Paris Hilton",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/utah-revokes-springville-license-teen-treatment-center-paris-hilton",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/utah-revokes-springville-license-teen-treatment-center-paris-hilton",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "treat",
-        "treatment"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "b2a50a7e834fe5a51d69",
-      "title": "Firefighters free raccoon trapped under sewer grate in 'jaws of life' rescue mission",
-      "url": "https://www.goodgoodgood.co/articles/firefighters-save-raccoon-jaws-of-life",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-07-08T17:33:00Z",
-      "source_excerpt": "After the first responders had completed the job, the masked critter ran back to its natural habitat.",
-      "agent_summary": "",
-      "source_fingerprint": "685882d51a0346bca596",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a4e8966685874472182ec8f_6a4e896405d564b3050bd37d_firefighters-save-raccoon-jaws-of-life-featured.webp",
-      "source_image_alt": "Firefighters free raccoon trapped under sewer grate in 'jaws of life' rescue mission",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/firefighters-save-raccoon-jaws-of-life",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/firefighters-save-raccoon-jaws-of-life",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "mission",
-        "rescue"
       ],
       "public_eligible": false
     }
