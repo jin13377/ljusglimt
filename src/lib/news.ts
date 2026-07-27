@@ -1,13 +1,57 @@
-import type { NewsArticle, NewsImage, NewsVideo, RawAiNewsImage, RawFetchedNews, RawGeneratedNewsImage, RawSeedNews, RawSourceNewsVideo } from '../types'
+import type { NewsArticle, NewsImage, NewsVideo, RawAiNewsImage, RawFetchedNews, RawGeneratedNewsImage, RawSeedNews, RawSourceNewsVideo, RawUserNewsImage } from '../types'
 
-const aiCategoryImages: Record<string, { url: string; alt: string }> = {
-  Hälsa: { url: '/news-images/ai/health.webp', alt: 'Redaktionell AI-illustration om hälsa, omsorg och återhämtning.' },
-  Miljö: { url: '/news-images/ai/environment.webp', alt: 'Redaktionell AI-illustration om ren energi och miljöframsteg.' },
-  Natur: { url: '/news-images/ai/nature.webp', alt: 'Redaktionell AI-illustration om natur, biologisk mångfald och återhämtning.' },
-  Vetenskap: { url: '/news-images/ai/science.webp', alt: 'Redaktionell AI-illustration om vetenskap, upptäckter och delad kunskap.' },
-  Kultur: { url: '/news-images/ai/culture.webp', alt: 'Redaktionell AI-illustration om kultur, kreativitet och restaurerat kulturarv.' },
-  Människor: { url: '/news-images/ai/community.webp', alt: 'Redaktionell AI-illustration om lokalt samarbete och gemensamma idéer.' },
-  Framsteg: { url: '/news-images/ai/progress.webp', alt: 'Redaktionell AI-illustration om praktiska lösningar och framsteg.' },
+const editorialImageLibrary: Record<string, Array<{ file: string; alt: string }>> = {
+  Hälsa: [
+    { file: '01-health-recovery.webp', alt: 'Papperscollage om hälsa, omsorg och återhämtning.' },
+    { file: '12-clean-water.webp', alt: 'Papperscollage om rent vatten och hälsa.' },
+    { file: '14-mental-wellbeing.webp', alt: 'Papperscollage om psykiskt välbefinnande och lugn.' },
+    { file: '15-medical-breakthrough.webp', alt: 'Papperscollage om medicinsk forskning och framsteg.' },
+  ],
+  Miljö: [
+    { file: '03-clean-energy.webp', alt: 'Papperscollage om ren energi.' },
+    { file: '04-ocean-restoration.webp', alt: 'Papperscollage om havens återhämtning.' },
+    { file: '11-sustainable-agriculture.webp', alt: 'Papperscollage om hållbart jordbruk.' },
+    { file: '12-clean-water.webp', alt: 'Papperscollage om rent vatten.' },
+    { file: '16-green-transport.webp', alt: 'Papperscollage om hållbara transporter.' },
+    { file: '17-circular-economy.webp', alt: 'Papperscollage om återbruk och cirkulär ekonomi.' },
+  ],
+  Natur: [
+    { file: '04-ocean-restoration.webp', alt: 'Papperscollage om hav och sjögräs.' },
+    { file: '05-forest-biodiversity.webp', alt: 'Papperscollage om skog och biologisk mångfald.' },
+    { file: '11-sustainable-agriculture.webp', alt: 'Papperscollage om odling och natur.' },
+    { file: '19-wildlife-protection.webp', alt: 'Papperscollage om djur och skyddade livsmiljöer.' },
+  ],
+  Vetenskap: [
+    { file: '02-science-discovery.webp', alt: 'Papperscollage om vetenskaplig upptäckt.' },
+    { file: '09-technology-for-good.webp', alt: 'Papperscollage om teknik och innovation.' },
+    { file: '10-space-exploration.webp', alt: 'Papperscollage om rymdforskning.' },
+    { file: '15-medical-breakthrough.webp', alt: 'Papperscollage om medicinsk forskning.' },
+  ],
+  Kultur: [
+    { file: '08-culture-creativity.webp', alt: 'Papperscollage om kultur, musik och kreativitet.' },
+    { file: '07-education-learning.webp', alt: 'Papperscollage om böcker och lärande.' },
+    { file: '18-peace-cooperation.webp', alt: 'Papperscollage om möten och samarbete.' },
+  ],
+  Människor: [
+    { file: '06-community-cooperation.webp', alt: 'Papperscollage om gemenskap och samarbete.' },
+    { file: '07-education-learning.webp', alt: 'Papperscollage om utbildning.' },
+    { file: '13-safe-homes.webp', alt: 'Papperscollage om trygga hem.' },
+    { file: '18-peace-cooperation.webp', alt: 'Papperscollage om fred och samarbete.' },
+    { file: '20-entrepreneurship-solutions.webp', alt: 'Papperscollage om lokala lösningar och företagande.' },
+  ],
+  Framsteg: [
+    { file: '03-clean-energy.webp', alt: 'Papperscollage om energiframsteg.' },
+    { file: '07-education-learning.webp', alt: 'Papperscollage om kunskap och möjligheter.' },
+    { file: '09-technology-for-good.webp', alt: 'Papperscollage om teknik för nytta.' },
+    { file: '16-green-transport.webp', alt: 'Papperscollage om hållbara transporter.' },
+    { file: '17-circular-economy.webp', alt: 'Papperscollage om reparation och återbruk.' },
+    { file: '20-entrepreneurship-solutions.webp', alt: 'Papperscollage om entreprenörskap och lösningar.' },
+  ],
+  Djur: [
+    { file: '19-wildlife-protection.webp', alt: 'Papperscollage om djur och skyddade livsmiljöer.' },
+    { file: '05-forest-biodiversity.webp', alt: 'Papperscollage om skogens livsmiljöer.' },
+    { file: '04-ocean-restoration.webp', alt: 'Papperscollage om livet i havet.' },
+  ],
 }
 
 interface RawImageFields {
@@ -21,6 +65,7 @@ interface RawImageFields {
   source_image_alt?: string
   source_image_credit?: string
   source_image_rights_url?: string
+  user_image?: RawUserNewsImage
 }
 
 function safeHttpsUrl(value = ''): string {
@@ -59,12 +104,14 @@ function resolveSourceVideo(video?: RawSourceNewsVideo): NewsVideo | undefined {
   }
 }
 
-export function getAiCategoryImage(category: string): NewsImage {
-  const fallback = aiCategoryImages[category] || aiCategoryImages.Framsteg
+export function getAiCategoryImage(category: string, seed = ''): NewsImage {
+  const choices = editorialImageLibrary[category] || editorialImageLibrary.Framsteg
+  const hash = Array.from(seed).reduce((value, character) => ((value * 31) + character.charCodeAt(0)) >>> 0, 0)
+  const fallback = choices[hash % choices.length]
   return {
     kind: 'ai',
     aiOrigin: 'category',
-    url: fallback.url,
+    url: `/news-images/library/${fallback.file}`,
     alt: fallback.alt,
     caption: 'AI-illustration – redaktionellt motiv, inte en dokumentation av händelsen.',
     width: 1280,
@@ -98,12 +145,15 @@ function resolveAiImage(item: RawImageFields): NewsImage | undefined {
   if (!image || !/^[a-f0-9]{20}$/.test(id) || !/^[a-f0-9]{20}$/.test(fingerprint)) return undefined
   const expectedUrl = `/news-images/ai/articles/${id}-${fingerprint}-v1.webp`
   const validGeneratedAt = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,6})?Z$/.test(image.generated_at)
-  const approvedModels = ['gpt-image-2', 'cf-lucid-origin', 'cf-leonardo-phoenix', 'comfyui-sdxl', 'comfyui-flux', 'comfyui-juggernaut-xl', 'comfyui-z-image-turbo']
-  const approvedVersions = ['editorial-concept-v1', 'cf-editorial-photo-v1', 'cf-editorial-collage-v1', 'comfy-editorial-photo-v1', 'comfy-editorial-photo-v2', 'z-image-turbo-v1']
+  const approvedGenerators = new Set([
+    'gpt-image-2:editorial-concept-v1',
+    'cf-leonardo-phoenix:cf-editorial-collage-v1',
+    'comfyui-juggernaut-xl:comfy-paper-collage-v3',
+    'comfyui-z-image-turbo:z-image-paper-collage-v2',
+  ])
   if (image.url !== expectedUrl
       || image.source_fingerprint !== fingerprint
-      || !approvedModels.includes(image.model)
-      || !approvedVersions.includes(image.prompt_version)
+      || !approvedGenerators.has(`${image.model}:${image.prompt_version}`)
       || image.width !== 1280
       || image.height !== 848
       || !/^[a-f0-9]{64}$/.test(image.sha256)
@@ -121,37 +171,28 @@ function resolveAiImage(item: RawImageFields): NewsImage | undefined {
   }
 }
 
-function resolveAutomaticIllustration(item: RawImageFields): NewsImage | undefined {
-  const image = item.generated_image
-  const id = item.id || ''
-  const fingerprint = item.source_fingerprint || ''
-  if (!image || !/^[a-f0-9]{20}$/.test(id) || !/^[a-f0-9]{20}$/.test(fingerprint)) return undefined
-  const expectedUrl = `/news-images/generated/${id}-${fingerprint.slice(0, 8)}-v1.svg`
-  if (image.url !== expectedUrl
-      || image.source_fingerprint !== fingerprint
-      || image.style_version !== 'glimt-abstract-v1'
-      || image.width !== 1280
-      || image.height !== 848
-      || !/^[a-f0-9]{64}$/.test(image.sha256)
-      || !image.alt?.trim()) return undefined
+function resolveUserImage(item: RawImageFields): NewsImage | undefined {
+  const user = item.user_image
+  if (!user || !user.url || !user.user_image_id) return undefined
+  const alt = user.alt?.trim() || 'Bild från Ljusglimts bildbank'
   return {
-    kind: 'generated',
-    url: image.url,
-    alt: image.alt.trim(),
-    caption: 'Automatiskt skapad redaktionell illustration.',
-    width: image.width,
-    height: image.height,
+    kind: 'user',
+    url: user.url,
+    alt,
+    caption: 'Bild från Ljusglimts bildbank.',
+    width: user.width || 1280,
+    height: user.height || 848,
   }
 }
 
 function resolveNewsImages(item: RawImageFields, category: string): Pick<NewsArticle, 'image' | 'fallbackImage'> {
-  const categoryImage = getAiCategoryImage(category)
+  const categoryImage = getAiCategoryImage(category, item.id || item.title)
   const aiImage = resolveAiImage(item)
-  const automaticIllustration = resolveAutomaticIllustration(item)
   const sourceImage = resolveSourceImage(item)
-  if (sourceImage) return { image: sourceImage, fallbackImage: aiImage || automaticIllustration || categoryImage }
-  if (aiImage) return { image: aiImage, fallbackImage: automaticIllustration || categoryImage }
-  if (automaticIllustration) return { image: automaticIllustration, fallbackImage: categoryImage }
+  const userImage = resolveUserImage(item)
+  if (sourceImage) return { image: sourceImage, fallbackImage: aiImage || userImage || categoryImage }
+  if (aiImage) return { image: aiImage, fallbackImage: userImage || categoryImage }
+  if (userImage) return { image: userImage, fallbackImage: categoryImage }
   return { image: categoryImage }
 }
 

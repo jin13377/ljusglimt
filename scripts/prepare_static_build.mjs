@@ -22,16 +22,22 @@ const safeHttpsUrl = (value = '') => {
 const absoluteImageUrl = (value = '') => {
   const httpsUrl = safeHttpsUrl(value)
   if (httpsUrl) return httpsUrl
-  return /^\/news-images\/(?:ai|generated)\/[A-Za-z0-9._/-]+$/.test(value) && !value.includes('..') ? `${siteUrl}${value}` : ''
+  return /^\/news-images\/(?:ai|generated|library|user)\/[A-Za-z0-9._/-]+$/.test(value) && !value.includes('..') ? `${siteUrl}${value}` : ''
 }
 const categoryImages = {
-  Hälsa: '/news-images/ai/health.webp',
-  Miljö: '/news-images/ai/environment.webp',
-  Natur: '/news-images/ai/nature.webp',
-  Vetenskap: '/news-images/ai/science.webp',
-  Kultur: '/news-images/ai/culture.webp',
-  Människor: '/news-images/ai/community.webp',
-  Framsteg: '/news-images/ai/progress.webp',
+  Hälsa: ['01-health-recovery.webp', '12-clean-water.webp', '14-mental-wellbeing.webp', '15-medical-breakthrough.webp'],
+  Miljö: ['03-clean-energy.webp', '04-ocean-restoration.webp', '11-sustainable-agriculture.webp', '12-clean-water.webp', '16-green-transport.webp', '17-circular-economy.webp'],
+  Natur: ['04-ocean-restoration.webp', '05-forest-biodiversity.webp', '11-sustainable-agriculture.webp', '19-wildlife-protection.webp'],
+  Vetenskap: ['02-science-discovery.webp', '09-technology-for-good.webp', '10-space-exploration.webp', '15-medical-breakthrough.webp'],
+  Kultur: ['08-culture-creativity.webp', '07-education-learning.webp', '18-peace-cooperation.webp'],
+  Människor: ['06-community-cooperation.webp', '07-education-learning.webp', '13-safe-homes.webp', '18-peace-cooperation.webp', '20-entrepreneurship-solutions.webp'],
+  Framsteg: ['03-clean-energy.webp', '07-education-learning.webp', '09-technology-for-good.webp', '16-green-transport.webp', '17-circular-economy.webp', '20-entrepreneurship-solutions.webp'],
+  Djur: ['19-wildlife-protection.webp', '05-forest-biodiversity.webp', '04-ocean-restoration.webp'],
+}
+const resolveCategoryImage = (category, seed = '') => {
+  const choices = categoryImages[category] || categoryImages.Framsteg
+  const hash = Array.from(seed).reduce((value, character) => ((value * 31) + character.charCodeAt(0)) >>> 0, 0)
+  return `/news-images/library/${choices[hash % choices.length]}`
 }
 
 const resolveSourceImage = (article) => article.source_image_verified === true
@@ -49,12 +55,9 @@ const resolveAiImage = (article) => {
   const validGeneratedAt = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,6})?Z$/.test(image.generated_at)
   const approvedGenerators = new Set([
     'gpt-image-2:editorial-concept-v1',
-    'cf-lucid-origin:cf-editorial-photo-v1',
     'cf-leonardo-phoenix:cf-editorial-collage-v1',
-    'comfyui-sdxl:comfy-editorial-photo-v1',
-    'comfyui-flux:comfy-editorial-photo-v2',
-    'comfyui-juggernaut-xl:comfy-editorial-photo-v2',
-    'comfyui-z-image-turbo:z-image-turbo-v1',
+    'comfyui-juggernaut-xl:comfy-paper-collage-v3',
+    'comfyui-z-image-turbo:z-image-paper-collage-v2',
   ])
   return image.url === expectedUrl
     && image.source_fingerprint === fingerprint
@@ -69,29 +72,10 @@ const resolveAiImage = (article) => {
     : ''
 }
 
-const resolveGeneratedImage = (article) => {
-  const image = article.generated_image
-  const id = article.id || ''
-  const fingerprint = article.source_fingerprint || ''
-  if (!image || !/^[a-f0-9]{20}$/.test(id) || !/^[a-f0-9]{20}$/.test(fingerprint)) return ''
-  const expectedUrl = `/news-images/generated/${id}-${fingerprint.slice(0, 8)}-v1.svg`
-  return image.url === expectedUrl
-    && image.source_fingerprint === fingerprint
-    && image.style_version === 'glimt-abstract-v1'
-    && image.width === 1280
-    && image.height === 848
-    && /^[a-f0-9]{64}$/.test(image.sha256)
-    && isText(image.alt)
-    ? expectedUrl
-    : ''
-}
-
 const resolveArticleImage = (article, category) => absoluteImageUrl(
   resolveSourceImage(article)
   || resolveAiImage(article)
-  || resolveGeneratedImage(article)
-  || categoryImages[category]
-  || categoryImages.Framsteg,
+  || resolveCategoryImage(category, article.id || article.title),
 )
 
 const requireArticleFields = (article, kind) => {

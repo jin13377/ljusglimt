@@ -21,12 +21,9 @@ EXPECTED_HEIGHT = 848
 # either can populate ai_image metadata.
 APPROVED_GENERATORS = {
     ("gpt-image-2", "editorial-concept-v1"),
-    ("cf-lucid-origin", "cf-editorial-photo-v1"),
     ("cf-leonardo-phoenix", "cf-editorial-collage-v1"),
-    ("comfyui-sdxl", "comfy-editorial-photo-v1"),
-    ("comfyui-flux", "comfy-editorial-photo-v2"),
-    ("comfyui-juggernaut-xl", "comfy-editorial-photo-v2"),
-    ("comfyui-z-image-turbo", "z-image-turbo-v1"),
+    ("comfyui-juggernaut-xl", "comfy-paper-collage-v3"),
+    ("comfyui-z-image-turbo", "z-image-paper-collage-v2"),
 }
 MAX_IMAGE_BYTES = 2 * 1024 * 1024
 HEX_20_RE = re.compile(r"[0-9a-f]{20}\Z")
@@ -124,7 +121,11 @@ def validate_webp(payload: bytes, width: int = EXPECTED_WIDTH, height: int = EXP
 
 
 def _without_ai_image(item: dict) -> dict:
-    return {key: value for key, value in item.items() if key != "ai_image"}
+    return {
+        key: value
+        for key, value in item.items()
+        if key not in ("ai_image", "user_image")
+    }
 
 
 def _validate_generated_at(value: object, article_id: str) -> None:
