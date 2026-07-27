@@ -88,6 +88,7 @@ def main() -> int:
     ap.add_argument("--user-dir", default="public/news-images/user")
     ap.add_argument("--write", action="store_true", help="Write changes to news.json")
     ap.add_argument("--limit", type=int, default=0, help="Max articles to assign (0=all)")
+    ap.add_argument("--max-per-image", type=int, default=1, help="Max times one user image may be reused (default 1 = no repeats)")
     args = ap.parse_args()
 
     news_path = Path(args.news)
@@ -121,11 +122,37 @@ def main() -> int:
     texts = [article_text(it) or it.get("title", "") for it in targets]
     text_embs = embed_texts(model, processor, texts)
 
+    # Greedy capacity-limited assignment: avoid reusing the same user image on
+    # multiple articles (which would show one image repeated across the feed).
+    # Each image may be used at most max_per_image times; if we run out we
+    # relax the cap so every imageless article still gets a fallback.
+    n_images = len(user_embs)
+    max_per_image = max(1, args.max_per_image)
+    usage: dict[int, int] = {i: 0 for i in range(n_images)}
+    pairs = []
+    for a_idx, emb in enumerate(text_embs):
+        for u_idx in range(n_images):
+            pairs.append((cosine(emb, user_embs[u_idx]), a_idx, u_idx))
+    pairs.sort(reverse=True)
+
+    assigned_to: dict[int, int] = {}
+    order = sorted(range(len(targets)), key=lambda a: -max(score for score, b, _ in pairs if b == a))
+    for a_idx in order:
+        for _, b, u in pairs:
+            if b != a_idx:
+                continue
+            if usage[u] < max_per_image:
+                assigned_to[a_idx] = u
+                usage[u] += 1
+                break
+
     assigned = 0
-    for item, emb in zip(targets, text_embs):
-        best_idx = max(range(len(user_embs)), key=lambda i: cosine(emb, user_embs[i]))
-        name = user_names[best_idx]
-        score = cosine(emb, user_embs[best_idx])
+    for a_idx, item in enumerate(targets):
+        if a_idx not in assigned_to:
+            continue
+        u = assigned_to[a_idx]
+        name = user_names[u]
+        score = cosine(text_embs[a_idx], user_embs[u])
         item["user_image"] = {
             "url": f"{USER_URL_PREFIX}{name}.webp",
             "alt": item.get("display_title_sv") or item.get("title") or "Bild från Ljusglimts bildbank",
