@@ -15,6 +15,7 @@ export function OriginBadge({ article }: { article: NewsArticle }) {
 export function NewsCard({ article, onSave, saved = false, variant = 'standard' }: { article: NewsArticle; onSave?: (article: NewsArticle) => void; saved?: boolean; variant?: NewsCardVariant }) {
   const imageLabel = article.image.kind === 'source'
     ? `Källbild${article.image.credit ? ` av ${article.image.credit}` : ''}`
+    : article.image.kind === 'user' ? 'Bild från bildbanken'
     : article.image.kind === 'generated' ? 'Redaktionell illustration' : 'AI-illustration'
   return (
     <article className={`news-card ${variant}`}>

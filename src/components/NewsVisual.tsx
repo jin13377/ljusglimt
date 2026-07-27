@@ -32,11 +32,11 @@ export function NewsVisual({ article, variant = 'card', priority = false, showCa
       referrerPolicy={image.kind === 'source' ? 'no-referrer' : undefined}
       onError={() => setFailedUrls((urls) => urls.includes(image.url) ? urls : [...urls, image.url])}
     />
-    {image.kind === 'ai'
-      ? <AiImageBadge />
+    {image.kind === 'source'
+      ? <span className="visual-disclosure source"><ImageIcon size={13} />Källbild</span>
       : image.kind === 'generated'
         ? <span className="visual-disclosure generated"><ImageIcon size={13} />Illustration</span>
-        : <span className="visual-disclosure source"><ImageIcon size={13} />Källbild</span>}
+        : <AiImageBadge />}
   </div>
 
   if (!showCaption) return media
