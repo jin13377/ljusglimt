@@ -1,9 +1,16 @@
 {
-  "generated_at": "2026-07-28T11:58:17.335460Z",
+  "generated_at": "2026-07-28T13:37:14.876470Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
-  "fetch_errors": [],
+  "new_item_ids": [
+    "3c37c57a305af716d01f"
+  ],
+  "fetch_errors": [
+    {
+      "source": "Mötesplats Social Innovation",
+      "error": "not well-formed (invalid token): line 1, column 0"
+    }
+  ],
   "items": [
     {
       "id": "0b87daf79218ce385c31",
@@ -485,6 +492,35 @@
       }
     },
     {
+      "id": "3c37c57a305af716d01f",
+      "title": "KI-forskare bakom modekreation som lyfter utmaningar med hiv",
+      "url": "https://nyheter.ki.se/ki-forskare-bakom-modekreation-som-lyfter-utmaningar-med-hiv",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-07-28T00:00:00Z",
+      "source_excerpt": "När den 26:e internationella aidskonferensen (AIDS 2026) öppnar i Rio de Janeiro medverkar Karolinska Institutet i ett innovativt internationellt initiativ som förenar vetenskap, konst och samhällsengagemang. Genom utställningen ”HIV Unwrapped” samverkar ledande hiv-forskare med nya modedesigners för att omvandla komplexa vetenskapliga koncept till hållbara konstverk.",
+      "agent_summary": "",
+      "source_fingerprint": "770cc6de33db83d57e10",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "hållbar",
+        "initiativ"
+      ],
+      "public_eligible": true,
+      "generated_image": {
+        "url": "/news-images/generated/3c37c57a305af716d01f-770cc6de-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "770cc6de33db83d57e10",
+        "width": 1280,
+        "height": 848,
+        "sha256": "645b23a7294ff8445225b53c3e6945a5859a7d922702e8214d14a10d4e09a8e2"
+      }
+    },
+    {
       "id": "d3d0384eb9cf10ff61dd",
       "title": "KI-forskare bidrar till nya WHO-riktlinjer för att förebygga demens",
       "url": "https://nyheter.ki.se/ki-forskare-bidrar-till-nya-who-riktlinjer-for-att-forebygga-demens",
@@ -510,34 +546,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "90568fbfc8d4487520faca16220266b970a288c26aa20f66d18ad0e62960859f"
-      }
-    },
-    {
-      "id": "e851322717ee40aea0bf",
-      "title": "Doktorand får stipendium för forskning om hur eksem påverkar skola och yrkesliv",
-      "url": "https://nyheter.ki.se/doktorand-far-stipendium-for-forskning-om-hur-eksem-paverkar-skola-och-yrkesliv",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-07-06T00:00:00Z",
-      "source_excerpt": "Anna Winther är en av tre KI-doktorander som har tilldelats årets Kerstin Hejdenbergs stipendium från Astma- och Allergiförbundets Forskningsfond. Hon får stipendiet för ett forskningsprojekt om hur eksem kan påverka skolresultat, högre utbildning, yrkesval och sjukfrånvaro.",
-      "agent_summary": "",
-      "source_fingerprint": "2e97fc9fbaa5a7bcbe78",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning"
-      ],
-      "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/e851322717ee40aea0bf-2e97fc9f-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "2e97fc9fbaa5a7bcbe78",
-        "width": 1280,
-        "height": 848,
-        "sha256": "2fd2514004f97836fd2922354a8d97640bbca3c463d7e3ad841f6c3c926a8254"
       }
     },
     {
@@ -1112,7 +1120,7 @@
       "source_excerpt": "Every adoption announcement deserves a reaction like this! Jewels and Reeya shared Bunny's story with Dodo producer Monica and the adoption that left his biggest cheerleader in tears..",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/cue2Q1gPwSzgd6Hhs/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/cue2Q1gPwSzgd6Hhs/x720",
       "source_image_alt": "Woman So Happy When Best Friend Adopts This Pitbull",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xaseqai",
@@ -1147,7 +1155,7 @@
       "source_excerpt": "From puppy mill survivor to the biggest cuddle bug! Dodo producer Monica shares Lacy's remarkable transformation, as Jack talks about how this retired puppy mill mom finally got the second chance she deserved.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/cufRs1gPgG0yuxLYy/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/cufRs1gPgG0yuxLYy/x720",
       "source_image_alt": "Puppy Mill Lab Labeled \"Morbidly Obese\" Gets A Chance",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xaseupi",
