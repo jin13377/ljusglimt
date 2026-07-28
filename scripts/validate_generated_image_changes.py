@@ -21,9 +21,12 @@ EXPECTED_HEIGHT = 848
 # either can populate ai_image metadata.
 APPROVED_GENERATORS = {
     ("gpt-image-2", "editorial-concept-v1"),
+    ("cf-lucid-origin", "cf-editorial-photo-v1"),
     ("cf-leonardo-phoenix", "cf-editorial-collage-v1"),
-    ("comfyui-juggernaut-xl", "comfy-paper-collage-v3"),
-    ("comfyui-z-image-turbo", "z-image-paper-collage-v2"),
+    ("comfyui-sdxl", "comfy-editorial-photo-v1"),
+    ("comfyui-flux", "comfy-editorial-photo-v2"),
+    ("comfyui-juggernaut-xl", "comfy-editorial-photo-v2"),
+    ("comfyui-z-image-turbo", "z-image-turbo-v1"),
 }
 MAX_IMAGE_BYTES = 2 * 1024 * 1024
 HEX_20_RE = re.compile(r"[0-9a-f]{20}\Z")
