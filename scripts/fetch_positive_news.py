@@ -58,6 +58,8 @@ GENERATED_IMAGE_KEYS = {
     "url", "alt", "style_version", "source_fingerprint",
     "width", "height", "sha256",
 }
+USER_IMAGE_REQUIRED_KEYS = {"url", "alt", "user_image_id", "width", "height"}
+USER_IMAGE_OPTIONAL_KEYS = {"match_score"}
 HEX_20_RE = re.compile(r"^[0-9a-f]{20}$")
 SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
 ISO_UTC_RE = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,6})?Z$")
@@ -202,6 +204,30 @@ def reusable_generated_image(item: dict, previous: dict | None) -> dict:
             or not SHA256_RE.fullmatch(image["sha256"])):
         return {}
     return {"generated_image": dict(image)}
+
+
+def reusable_user_image(item: dict, previous: dict | None) -> dict:
+    """Keep Daniel's matched image while the article source is unchanged."""
+    if not previous or previous.get("source_fingerprint") != item.get("source_fingerprint"):
+        return {}
+    image = previous.get("user_image")
+    if not isinstance(image, dict):
+        return {}
+    keys = set(image)
+    if not USER_IMAGE_REQUIRED_KEYS.issubset(keys) or not keys.issubset(
+            USER_IMAGE_REQUIRED_KEYS | USER_IMAGE_OPTIONAL_KEYS):
+        return {}
+    image_id = image.get("user_image_id")
+    expected_url = f"/news-images/user/{image_id}.webp"
+    alt = image.get("alt")
+    score = image.get("match_score")
+    if (not isinstance(image_id, str) or not re.fullmatch(r"[a-z0-9][a-z0-9-]{0,99}", image_id)
+            or image.get("url") != expected_url
+            or not isinstance(alt, str) or not alt.strip() or len(alt) > 400
+            or image.get("width") != 1280 or image.get("height") != 848
+            or (score is not None and (not isinstance(score, (int, float)) or not -1 <= score <= 1))):
+        return {}
+    return {"user_image": dict(image)}
 
 
 def _safe_https_url(value: object, allowed_hosts: set[str] | None = None) -> str:
@@ -863,6 +889,7 @@ def main(argv: list[str] | None = None) -> int:
         item["public_eligible"] = public_eligible(item)
         item.update(reusable_ai_image(item, previous))
         item.update(reusable_generated_image(item, previous))
+        item.update(reusable_user_image(item, previous))
         if not isinstance(item.get("source_video"), dict):
             item.update(reusable_source_video(item, previous))
         # Fresh, fully licensed feed metadata wins over any previous image.

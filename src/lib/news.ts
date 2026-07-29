@@ -171,6 +171,29 @@ function resolveAiImage(item: RawImageFields): NewsImage | undefined {
   }
 }
 
+function resolveGeneratedImage(item: RawImageFields): NewsImage | undefined {
+  const image = item.generated_image
+  const id = item.id || ''
+  const fingerprint = item.source_fingerprint || ''
+  if (!image || !/^[a-f0-9]{20}$/.test(id) || !/^[a-f0-9]{20}$/.test(fingerprint)) return undefined
+  const expectedUrl = `/news-images/generated/${id}-${fingerprint.slice(0, 8)}-v1.svg`
+  if (image.url !== expectedUrl
+      || image.source_fingerprint !== fingerprint
+      || image.style_version !== 'glimt-abstract-v1'
+      || image.width !== 1280
+      || image.height !== 848
+      || !/^[a-f0-9]{64}$/.test(image.sha256)
+      || !image.alt?.trim()) return undefined
+  return {
+    kind: 'generated',
+    url: image.url,
+    alt: image.alt.trim(),
+    caption: 'Automatiskt skapad redaktionell illustration.',
+    width: image.width,
+    height: image.height,
+  }
+}
+
 function resolveUserImage(item: RawImageFields): NewsImage | undefined {
   const user = item.user_image
   if (!user || !user.url || !user.user_image_id) return undefined
@@ -190,9 +213,11 @@ function resolveNewsImages(item: RawImageFields, category: string): Pick<NewsArt
   const aiImage = resolveAiImage(item)
   const sourceImage = resolveSourceImage(item)
   const userImage = resolveUserImage(item)
-  if (sourceImage) return { image: sourceImage, fallbackImage: aiImage || userImage || categoryImage }
-  if (aiImage) return { image: aiImage, fallbackImage: userImage || categoryImage }
-  if (userImage) return { image: userImage, fallbackImage: categoryImage }
+  const generatedImage = resolveGeneratedImage(item)
+  if (sourceImage) return { image: sourceImage, fallbackImage: aiImage || userImage || generatedImage || categoryImage }
+  if (aiImage) return { image: aiImage, fallbackImage: userImage || generatedImage || categoryImage }
+  if (userImage) return { image: userImage, fallbackImage: generatedImage || categoryImage }
+  if (generatedImage) return { image: generatedImage, fallbackImage: categoryImage }
   return { image: categoryImage }
 }
 

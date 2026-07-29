@@ -358,6 +358,23 @@ class PositiveNewsTests(unittest.TestCase):
         self.assertEqual(news.reusable_generated_image(
             item, {**previous, "generated_image": {**image, "style_version": "wrong"}}), {})
 
+    def test_user_image_is_reused_only_for_unchanged_source(self):
+        item = {"id": "a" * 20, "source_fingerprint": "b" * 20}
+        image = {
+            "url": "/news-images/user/hopeful-forest.webp",
+            "alt": "En hoppfull skogsmiljö.",
+            "user_image_id": "hopeful-forest",
+            "match_score": 0.24,
+            "width": 1280,
+            "height": 848,
+        }
+        previous = {"source_fingerprint": "b" * 20, "user_image": image}
+        self.assertEqual(news.reusable_user_image(item, previous), {"user_image": image})
+        self.assertEqual(news.reusable_user_image(
+            {**item, "source_fingerprint": "d" * 20}, previous), {})
+        self.assertEqual(news.reusable_user_image(
+            item, {**previous, "user_image": {**image, "url": "/news-images/user/wrong.webp"}}), {})
+
     def test_fresh_licensed_rss_image_wins_over_previous_image(self):
         xml = b"""<rss xmlns:media="http://search.yahoo.com/mrss/"><channel><item>
         <title>Community rescue success</title><link>https://example.com/story</link>
