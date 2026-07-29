@@ -47,6 +47,14 @@ jobs:
             python scripts/fetch_positive_news.py --scheduled
           fi
 
+      - name: Assign Daniel's paper-collage images offline
+        shell: bash
+        run: |
+          python scripts/assign_user_images_offline.py \
+            --news data/news.json \
+            --manifest public/news-images/user/category-manifest.json \
+            --write
+
       - name: Create free local article illustrations
         run: |
           python scripts/generate_free_article_visuals.py \

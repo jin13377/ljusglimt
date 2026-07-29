@@ -1,0 +1,591 @@
+{
+  "version": 1,
+  "model": "openai/clip-vit-base-patch32",
+  "images": [
+    {
+      "id": "01922f32-cc3d-4bd0-a9e6-1b02c964d8e6",
+      "category_scores": {
+        "Djur": 0.213356,
+        "Hälsa": 0.198823,
+        "Miljö": 0.213111,
+        "Natur": 0.22015,
+        "Vetenskap": 0.213221,
+        "Kultur": 0.221135,
+        "Människor": 0.208029,
+        "Framsteg": 0.228896
+      }
+    },
+    {
+      "id": "0b61cd71-ad74-4954-8fd7-7b465069b960",
+      "category_scores": {
+        "Djur": 0.207958,
+        "Hälsa": 0.198943,
+        "Miljö": 0.196018,
+        "Natur": 0.209578,
+        "Vetenskap": 0.209851,
+        "Kultur": 0.190018,
+        "Människor": 0.185167,
+        "Framsteg": 0.21023
+      }
+    },
+    {
+      "id": "0f5ccfaa-edae-4005-b1c3-08ba4dabda69",
+      "category_scores": {
+        "Djur": 0.223328,
+        "Hälsa": 0.252301,
+        "Miljö": 0.2121,
+        "Natur": 0.212632,
+        "Vetenskap": 0.220846,
+        "Kultur": 0.226669,
+        "Människor": 0.247389,
+        "Framsteg": 0.228598
+      }
+    },
+    {
+      "id": "18822875-9e15-465f-badf-58e212edec8a",
+      "category_scores": {
+        "Djur": 0.200894,
+        "Hälsa": 0.21104,
+        "Miljö": 0.206566,
+        "Natur": 0.217538,
+        "Vetenskap": 0.203983,
+        "Kultur": 0.192518,
+        "Människor": 0.195152,
+        "Framsteg": 0.21339
+      }
+    },
+    {
+      "id": "1d15a8a1-5494-4ae7-87ef-41921a20b43f",
+      "category_scores": {
+        "Djur": 0.193835,
+        "Hälsa": 0.163344,
+        "Miljö": 0.152828,
+        "Natur": 0.150257,
+        "Vetenskap": 0.149216,
+        "Kultur": 0.152874,
+        "Människor": 0.150922,
+        "Framsteg": 0.16237
+      }
+    },
+    {
+      "id": "2091a644-1eb7-45ff-afae-1a9300f1c839",
+      "category_scores": {
+        "Djur": 0.246214,
+        "Hälsa": 0.229393,
+        "Miljö": 0.219265,
+        "Natur": 0.265484,
+        "Vetenskap": 0.209468,
+        "Kultur": 0.218806,
+        "Människor": 0.207699,
+        "Framsteg": 0.216091
+      }
+    },
+    {
+      "id": "27a110a7-8c7f-436c-8734-1da378791869",
+      "category_scores": {
+        "Djur": 0.210976,
+        "Hälsa": 0.222536,
+        "Miljö": 0.233647,
+        "Natur": 0.230625,
+        "Vetenskap": 0.225801,
+        "Kultur": 0.21316,
+        "Människor": 0.21512,
+        "Framsteg": 0.243273
+      }
+    },
+    {
+      "id": "290629d1-eec3-4f31-9644-49e96e973112-1",
+      "category_scores": {
+        "Djur": 0.263371,
+        "Hälsa": 0.243166,
+        "Miljö": 0.263635,
+        "Natur": 0.287003,
+        "Vetenskap": 0.236867,
+        "Kultur": 0.230054,
+        "Människor": 0.225703,
+        "Framsteg": 0.250872
+      }
+    },
+    {
+      "id": "290629d1-eec3-4f31-9644-49e96e973112",
+      "category_scores": {
+        "Djur": 0.263371,
+        "Hälsa": 0.243166,
+        "Miljö": 0.263635,
+        "Natur": 0.287003,
+        "Vetenskap": 0.236867,
+        "Kultur": 0.230054,
+        "Människor": 0.225703,
+        "Framsteg": 0.250872
+      }
+    },
+    {
+      "id": "29e91d28-a2d9-4cc6-967f-dc3a88a35fb1",
+      "category_scores": {
+        "Djur": 0.236098,
+        "Hälsa": 0.213246,
+        "Miljö": 0.216195,
+        "Natur": 0.224094,
+        "Vetenskap": 0.21313,
+        "Kultur": 0.193648,
+        "Människor": 0.193379,
+        "Framsteg": 0.211609
+      }
+    },
+    {
+      "id": "3559646e-9dfb-4236-b91b-7fad3fce7837-1",
+      "category_scores": {
+        "Djur": 0.234295,
+        "Hälsa": 0.27388,
+        "Miljö": 0.231452,
+        "Natur": 0.22997,
+        "Vetenskap": 0.242793,
+        "Kultur": 0.233101,
+        "Människor": 0.241816,
+        "Framsteg": 0.252939
+      }
+    },
+    {
+      "id": "3559646e-9dfb-4236-b91b-7fad3fce7837",
+      "category_scores": {
+        "Djur": 0.234295,
+        "Hälsa": 0.27388,
+        "Miljö": 0.231452,
+        "Natur": 0.22997,
+        "Vetenskap": 0.242793,
+        "Kultur": 0.233101,
+        "Människor": 0.241816,
+        "Framsteg": 0.252939
+      }
+    },
+    {
+      "id": "36955f17-9925-4fe9-96a1-07205801c578",
+      "category_scores": {
+        "Djur": 0.223458,
+        "Hälsa": 0.207213,
+        "Miljö": 0.217604,
+        "Natur": 0.23391,
+        "Vetenskap": 0.217831,
+        "Kultur": 0.226841,
+        "Människor": 0.208203,
+        "Framsteg": 0.230244
+      }
+    },
+    {
+      "id": "378d7d6e-9868-45d5-8604-345fe46b402c",
+      "category_scores": {
+        "Djur": 0.241109,
+        "Hälsa": 0.235618,
+        "Miljö": 0.245942,
+        "Natur": 0.264841,
+        "Vetenskap": 0.233578,
+        "Kultur": 0.231378,
+        "Människor": 0.221609,
+        "Framsteg": 0.240829
+      }
+    },
+    {
+      "id": "41b44212-70c7-43df-9365-483ed4b08c49",
+      "category_scores": {
+        "Djur": 0.227371,
+        "Hälsa": 0.236129,
+        "Miljö": 0.232713,
+        "Natur": 0.233639,
+        "Vetenskap": 0.216762,
+        "Kultur": 0.236875,
+        "Människor": 0.229043,
+        "Framsteg": 0.242128
+      }
+    },
+    {
+      "id": "431c3154-4dd0-42c6-ab09-d5e8191643ee",
+      "category_scores": {
+        "Djur": 0.237825,
+        "Hälsa": 0.274547,
+        "Miljö": 0.221699,
+        "Natur": 0.226973,
+        "Vetenskap": 0.216948,
+        "Kultur": 0.22021,
+        "Människor": 0.224988,
+        "Framsteg": 0.235648
+      }
+    },
+    {
+      "id": "4412043e-894c-4672-8414-e2bae48bf2da-1",
+      "category_scores": {
+        "Djur": 0.270585,
+        "Hälsa": 0.229434,
+        "Miljö": 0.226774,
+        "Natur": 0.289428,
+        "Vetenskap": 0.215116,
+        "Kultur": 0.234937,
+        "Människor": 0.222019,
+        "Framsteg": 0.234043
+      }
+    },
+    {
+      "id": "4412043e-894c-4672-8414-e2bae48bf2da",
+      "category_scores": {
+        "Djur": 0.270585,
+        "Hälsa": 0.229434,
+        "Miljö": 0.226774,
+        "Natur": 0.289428,
+        "Vetenskap": 0.215116,
+        "Kultur": 0.234937,
+        "Människor": 0.222019,
+        "Framsteg": 0.234043
+      }
+    },
+    {
+      "id": "491483e7-00f4-4581-9c4d-ba3853e16f74-1",
+      "category_scores": {
+        "Djur": 0.2284,
+        "Hälsa": 0.230882,
+        "Miljö": 0.239694,
+        "Natur": 0.23055,
+        "Vetenskap": 0.222693,
+        "Kultur": 0.221803,
+        "Människor": 0.229798,
+        "Framsteg": 0.250178
+      }
+    },
+    {
+      "id": "491483e7-00f4-4581-9c4d-ba3853e16f74",
+      "category_scores": {
+        "Djur": 0.2284,
+        "Hälsa": 0.230882,
+        "Miljö": 0.239694,
+        "Natur": 0.23055,
+        "Vetenskap": 0.222693,
+        "Kultur": 0.221803,
+        "Människor": 0.229798,
+        "Framsteg": 0.250178
+      }
+    },
+    {
+      "id": "546589f1-5bfe-4634-b6a2-752258c5713a",
+      "category_scores": {
+        "Djur": 0.199034,
+        "Hälsa": 0.177515,
+        "Miljö": 0.158849,
+        "Natur": 0.139849,
+        "Vetenskap": 0.151235,
+        "Kultur": 0.147475,
+        "Människor": 0.152776,
+        "Framsteg": 0.162497
+      }
+    },
+    {
+      "id": "5494fcb3-c7bf-4552-a084-22103a580955",
+      "category_scores": {
+        "Djur": 0.240549,
+        "Hälsa": 0.234182,
+        "Miljö": 0.234958,
+        "Natur": 0.242952,
+        "Vetenskap": 0.227369,
+        "Kultur": 0.223727,
+        "Människor": 0.245104,
+        "Framsteg": 0.239788
+      }
+    },
+    {
+      "id": "55aea559-2882-4bcb-8ee7-f67a7e181486",
+      "category_scores": {
+        "Djur": 0.230751,
+        "Hälsa": 0.244103,
+        "Miljö": 0.252823,
+        "Natur": 0.261681,
+        "Vetenskap": 0.283981,
+        "Kultur": 0.225079,
+        "Människor": 0.214182,
+        "Framsteg": 0.261083
+      }
+    },
+    {
+      "id": "586669d7-e165-482e-859f-d434c3bef9c5",
+      "category_scores": {
+        "Djur": 0.238891,
+        "Hälsa": 0.238984,
+        "Miljö": 0.266857,
+        "Natur": 0.261381,
+        "Vetenskap": 0.235086,
+        "Kultur": 0.237734,
+        "Människor": 0.224028,
+        "Framsteg": 0.252434
+      }
+    },
+    {
+      "id": "58f74baf-f82d-4add-af88-80b637a356f5",
+      "category_scores": {
+        "Djur": 0.171018,
+        "Hälsa": 0.197104,
+        "Miljö": 0.230289,
+        "Natur": 0.199397,
+        "Vetenskap": 0.198684,
+        "Kultur": 0.187799,
+        "Människor": 0.204041,
+        "Framsteg": 0.227069
+      }
+    },
+    {
+      "id": "6c8c7eb1-698f-4124-b28e-e36c60416fca",
+      "category_scores": {
+        "Djur": 0.260701,
+        "Hälsa": 0.238125,
+        "Miljö": 0.243247,
+        "Natur": 0.252069,
+        "Vetenskap": 0.240723,
+        "Kultur": 0.238778,
+        "Människor": 0.218384,
+        "Framsteg": 0.2477
+      }
+    },
+    {
+      "id": "7419fff6-d243-4d01-a198-1ebe750bf0f6",
+      "category_scores": {
+        "Djur": 0.26826,
+        "Hälsa": 0.236659,
+        "Miljö": 0.227707,
+        "Natur": 0.284124,
+        "Vetenskap": 0.213846,
+        "Kultur": 0.234406,
+        "Människor": 0.21373,
+        "Framsteg": 0.23157
+      }
+    },
+    {
+      "id": "76a0af41-8a96-456d-8903-4dade9ceebdc",
+      "category_scores": {
+        "Djur": 0.204976,
+        "Hälsa": 0.188516,
+        "Miljö": 0.188433,
+        "Natur": 0.182191,
+        "Vetenskap": 0.1581,
+        "Kultur": 0.159902,
+        "Människor": 0.174796,
+        "Framsteg": 0.187631
+      }
+    },
+    {
+      "id": "85548527-df08-4140-9c8b-92075a6971a9",
+      "category_scores": {
+        "Djur": 0.294522,
+        "Hälsa": 0.252362,
+        "Miljö": 0.245079,
+        "Natur": 0.246482,
+        "Vetenskap": 0.218708,
+        "Kultur": 0.229711,
+        "Människor": 0.245452,
+        "Framsteg": 0.246994
+      }
+    },
+    {
+      "id": "868bab25-bbad-423f-871d-cba0ddc6a2f3-1",
+      "category_scores": {
+        "Djur": 0.236711,
+        "Hälsa": 0.23352,
+        "Miljö": 0.252324,
+        "Natur": 0.23876,
+        "Vetenskap": 0.225803,
+        "Kultur": 0.236281,
+        "Människor": 0.225621,
+        "Framsteg": 0.252958
+      }
+    },
+    {
+      "id": "868bab25-bbad-423f-871d-cba0ddc6a2f3",
+      "category_scores": {
+        "Djur": 0.236711,
+        "Hälsa": 0.23352,
+        "Miljö": 0.252324,
+        "Natur": 0.23876,
+        "Vetenskap": 0.225803,
+        "Kultur": 0.236281,
+        "Människor": 0.225621,
+        "Framsteg": 0.252958
+      }
+    },
+    {
+      "id": "875acd2e-97c1-4178-853f-484bf04ff226",
+      "category_scores": {
+        "Djur": 0.255745,
+        "Hälsa": 0.260149,
+        "Miljö": 0.270859,
+        "Natur": 0.260656,
+        "Vetenskap": 0.253163,
+        "Kultur": 0.247494,
+        "Människor": 0.245121,
+        "Framsteg": 0.265367
+      }
+    },
+    {
+      "id": "89080721-b3d1-4322-a704-fc9ca7e0c3fc",
+      "category_scores": {
+        "Djur": 0.248984,
+        "Hälsa": 0.235033,
+        "Miljö": 0.250817,
+        "Natur": 0.281223,
+        "Vetenskap": 0.222976,
+        "Kultur": 0.224789,
+        "Människor": 0.217165,
+        "Framsteg": 0.232389
+      }
+    },
+    {
+      "id": "9c4f3e46-0f94-45e9-9ab8-7fe2ecb6998f-1",
+      "category_scores": {
+        "Djur": 0.243381,
+        "Hälsa": 0.233521,
+        "Miljö": 0.242005,
+        "Natur": 0.247814,
+        "Vetenskap": 0.219062,
+        "Kultur": 0.230041,
+        "Människor": 0.213067,
+        "Framsteg": 0.239293
+      }
+    },
+    {
+      "id": "9c4f3e46-0f94-45e9-9ab8-7fe2ecb6998f",
+      "category_scores": {
+        "Djur": 0.243381,
+        "Hälsa": 0.233521,
+        "Miljö": 0.242005,
+        "Natur": 0.247814,
+        "Vetenskap": 0.219062,
+        "Kultur": 0.230041,
+        "Människor": 0.213067,
+        "Framsteg": 0.239293
+      }
+    },
+    {
+      "id": "9d2d5fa4-a804-4fc4-982e-03b147d2b634",
+      "category_scores": {
+        "Djur": 0.224307,
+        "Hälsa": 0.224929,
+        "Miljö": 0.224564,
+        "Natur": 0.237258,
+        "Vetenskap": 0.240048,
+        "Kultur": 0.251467,
+        "Människor": 0.217348,
+        "Framsteg": 0.230937
+      }
+    },
+    {
+      "id": "a41b5c39-0a3a-4fe0-b02c-7ab72c5a292a",
+      "category_scores": {
+        "Djur": 0.258973,
+        "Hälsa": 0.238244,
+        "Miljö": 0.247994,
+        "Natur": 0.257503,
+        "Vetenskap": 0.232897,
+        "Kultur": 0.231065,
+        "Människor": 0.220854,
+        "Framsteg": 0.246422
+      }
+    },
+    {
+      "id": "b137f4a8-9cbd-412a-a30d-3d0c32ef08ad",
+      "category_scores": {
+        "Djur": 0.243383,
+        "Hälsa": 0.198751,
+        "Miljö": 0.17819,
+        "Natur": 0.197235,
+        "Vetenskap": 0.181317,
+        "Kultur": 0.190712,
+        "Människor": 0.18829,
+        "Framsteg": 0.18405
+      }
+    },
+    {
+      "id": "c17a6275-7192-431b-a468-a375743e3913-1",
+      "category_scores": {
+        "Djur": 0.232952,
+        "Hälsa": 0.216539,
+        "Miljö": 0.22846,
+        "Natur": 0.243453,
+        "Vetenskap": 0.224588,
+        "Kultur": 0.237744,
+        "Människor": 0.222136,
+        "Framsteg": 0.242463
+      }
+    },
+    {
+      "id": "c17a6275-7192-431b-a468-a375743e3913",
+      "category_scores": {
+        "Djur": 0.232952,
+        "Hälsa": 0.216539,
+        "Miljö": 0.22846,
+        "Natur": 0.243453,
+        "Vetenskap": 0.224588,
+        "Kultur": 0.237744,
+        "Människor": 0.222136,
+        "Framsteg": 0.242463
+      }
+    },
+    {
+      "id": "ca17e92f-ec53-4cd1-b11c-3f69f0912247",
+      "category_scores": {
+        "Djur": 0.232828,
+        "Hälsa": 0.247921,
+        "Miljö": 0.246039,
+        "Natur": 0.240501,
+        "Vetenskap": 0.245316,
+        "Kultur": 0.232395,
+        "Människor": 0.231229,
+        "Framsteg": 0.251157
+      }
+    },
+    {
+      "id": "df172a32-b0d0-4403-be55-3af7e11dd200",
+      "category_scores": {
+        "Djur": 0.220695,
+        "Hälsa": 0.222265,
+        "Miljö": 0.24489,
+        "Natur": 0.240631,
+        "Vetenskap": 0.240276,
+        "Kultur": 0.222501,
+        "Människor": 0.206639,
+        "Framsteg": 0.239822
+      }
+    },
+    {
+      "id": "efb22cf6-5e7f-475d-9ed6-f6d0f7b940b6",
+      "category_scores": {
+        "Djur": 0.266153,
+        "Hälsa": 0.258246,
+        "Miljö": 0.29491,
+        "Natur": 0.28445,
+        "Vetenskap": 0.256177,
+        "Kultur": 0.24142,
+        "Människor": 0.242424,
+        "Framsteg": 0.270879
+      }
+    },
+    {
+      "id": "f8d9eeb1-5f03-48f3-b48c-2dda9e298a1b",
+      "category_scores": {
+        "Djur": 0.257962,
+        "Hälsa": 0.213571,
+        "Miljö": 0.190448,
+        "Natur": 0.18794,
+        "Vetenskap": 0.18214,
+        "Kultur": 0.207696,
+        "Människor": 0.201447,
+        "Framsteg": 0.201092
+      }
+    },
+    {
+      "id": "fb601de5-40fb-41e6-ad59-02bed671c043",
+      "category_scores": {
+        "Djur": 0.258002,
+        "Hälsa": 0.234064,
+        "Miljö": 0.246052,
+        "Natur": 0.263161,
+        "Vetenskap": 0.231998,
+        "Kultur": 0.236993,
+        "Människor": 0.227731,
+        "Framsteg": 0.246362
+      }
+    }
+  ]
+}
