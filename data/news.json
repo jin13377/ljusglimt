@@ -1,12 +1,16 @@
 {
-  "generated_at": "2026-07-28T22:59:02.854089Z",
+  "generated_at": "2026-07-29T06:04:53.789172Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [],
   "fetch_errors": [
     {
-      "source": "Forskning.se",
-      "error": "HTTP Error 500: Internal Server Error"
+      "source": "Viable Cities",
+      "error": "<urlopen error [Errno 101] Network is unreachable>"
+    },
+    {
+      "source": "Mötesplats Social Innovation",
+      "error": "not well-formed (invalid token): line 1, column 0"
     }
   ],
   "items": [
@@ -1126,7 +1130,7 @@
       "source_excerpt": "Every adoption announcement deserves a reaction like this! Jewels and Reeya shared Bunny's story with Dodo producer Monica and the adoption that left his biggest cheerleader in tears..",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/cue2Q1gPwSzgd6Hhs/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/cue2Q1gPwSzgd6Hhs/x720",
       "source_image_alt": "Woman So Happy When Best Friend Adopts This Pitbull",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xaseqai",
