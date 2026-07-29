@@ -1,18 +1,9 @@
 {
-  "generated_at": "2026-07-29T06:04:53.789172Z",
+  "generated_at": "2026-07-29T06:22:34.907419Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [],
-  "fetch_errors": [
-    {
-      "source": "Viable Cities",
-      "error": "<urlopen error [Errno 101] Network is unreachable>"
-    },
-    {
-      "source": "Mötesplats Social Innovation",
-      "error": "not well-formed (invalid token): line 1, column 0"
-    }
-  ],
+  "fetch_errors": [],
   "items": [
     {
       "id": "0b87daf79218ce385c31",
@@ -36,6 +27,14 @@
         "satsning"
       ],
       "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/55aea559-2882-4bcb-8ee7-f67a7e181486.webp",
+        "alt": "Hållbar samhällsbyggnad behöver få plats i EUs nästa forskningsprogram",
+        "user_image_id": "55aea559-2882-4bcb-8ee7-f67a7e181486",
+        "match_score": 0.2029,
+        "width": 1280,
+        "height": 848
+      },
       "generated_image": {
         "url": "/news-images/generated/0b87daf79218ce385c31-c2f7120f-v1.svg",
         "alt": "Automatiskt skapad redaktionell illustration.",
@@ -44,14 +43,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "dc4a9fc3f4cdac3864d0ace3b962bb8638abd031697fd277a930ac538c46821f"
-      },
-      "user_image": {
-        "url": "/news-images/user/55aea559-2882-4bcb-8ee7-f67a7e181486.webp",
-        "alt": "Hållbar samhällsbyggnad behöver få plats i EUs nästa forskningsprogram",
-        "user_image_id": "55aea559-2882-4bcb-8ee7-f67a7e181486",
-        "match_score": 0.2029,
-        "width": 1280,
-        "height": 848
       }
     },
     {
@@ -75,6 +66,14 @@
         "science"
       ],
       "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/9c4f3e46-0f94-45e9-9ab8-7fe2ecb6998f.webp",
+        "alt": "Två KI-forskare får innovationsfinansiering från Knut och Alice Wallenbergs Stiftelse",
+        "user_image_id": "9c4f3e46-0f94-45e9-9ab8-7fe2ecb6998f",
+        "match_score": 0.2082,
+        "width": 1280,
+        "height": 848
+      },
       "generated_image": {
         "url": "/news-images/generated/f10fc9398ccb39326e3a-4a1c4a81-v1.svg",
         "alt": "Automatiskt skapad redaktionell illustration.",
@@ -83,14 +82,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "1f6d2b6dc79086146d1435c3b5a8fff53d822cddb7900615fed8fb547a719aac"
-      },
-      "user_image": {
-        "url": "/news-images/user/9c4f3e46-0f94-45e9-9ab8-7fe2ecb6998f.webp",
-        "alt": "Två KI-forskare får innovationsfinansiering från Knut och Alice Wallenbergs Stiftelse",
-        "user_image_id": "9c4f3e46-0f94-45e9-9ab8-7fe2ecb6998f",
-        "match_score": 0.2082,
-        "width": 1280,
-        "height": 848
       }
     },
     {
@@ -188,6 +179,14 @@
         "lovande"
       ],
       "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/0f5ccfaa-edae-4005-b1c3-08ba4dabda69.webp",
+        "alt": "Juliette Foucher tilldelas prestigefyllt internationellt ALS-anslag",
+        "user_image_id": "0f5ccfaa-edae-4005-b1c3-08ba4dabda69",
+        "match_score": 0.1879,
+        "width": 1280,
+        "height": 848
+      },
       "generated_image": {
         "url": "/news-images/generated/faa0328e5cb4c62fad8e-a5644a9d-v1.svg",
         "alt": "Automatiskt skapad redaktionell illustration.",
@@ -196,14 +195,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "c8b40e87082cc78f02013a039317f1c8e1a57cc23dc71efe4a8f6dfd68452fc0"
-      },
-      "user_image": {
-        "url": "/news-images/user/0f5ccfaa-edae-4005-b1c3-08ba4dabda69.webp",
-        "alt": "Juliette Foucher tilldelas prestigefyllt internationellt ALS-anslag",
-        "user_image_id": "0f5ccfaa-edae-4005-b1c3-08ba4dabda69",
-        "match_score": 0.1879,
-        "width": 1280,
-        "height": 848
       }
     },
     {
@@ -226,6 +217,14 @@
         "samarbete"
       ],
       "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/efb22cf6-5e7f-475d-9ed6-f6d0f7b940b6.webp",
+        "alt": "Novo Nordisk-anslag till KI-forskare för nydanande tester av läkemedel",
+        "user_image_id": "efb22cf6-5e7f-475d-9ed6-f6d0f7b940b6",
+        "match_score": 0.1881,
+        "width": 1280,
+        "height": 848
+      },
       "generated_image": {
         "url": "/news-images/generated/24a653aab5fa5a83a4b1-caa9bd4b-v1.svg",
         "alt": "Automatiskt skapad redaktionell illustration.",
@@ -234,14 +233,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "fdec9bb1ea361a5abc2e629a8ddb4a3dd9d7e0d2b52ba2a6399a0b93f96de3d6"
-      },
-      "user_image": {
-        "url": "/news-images/user/efb22cf6-5e7f-475d-9ed6-f6d0f7b940b6.webp",
-        "alt": "Novo Nordisk-anslag till KI-forskare för nydanande tester av läkemedel",
-        "user_image_id": "efb22cf6-5e7f-475d-9ed6-f6d0f7b940b6",
-        "match_score": 0.1881,
-        "width": 1280,
-        "height": 848
       }
     },
     {
@@ -263,6 +254,14 @@
         "forskning"
       ],
       "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/df172a32-b0d0-4403-be55-3af7e11dd200.webp",
+        "alt": "Saida Hadjab får sitt andra anslag från Novo Nordisk-fonden för forskning om kronisk smärta",
+        "user_image_id": "df172a32-b0d0-4403-be55-3af7e11dd200",
+        "match_score": 0.1816,
+        "width": 1280,
+        "height": 848
+      },
       "generated_image": {
         "url": "/news-images/generated/69b567f89e3aadd6d06c-3f16aae2-v1.svg",
         "alt": "Automatiskt skapad redaktionell illustration.",
@@ -271,14 +270,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "0d4a6aaa24295dc3742c74edbdd2b9257fa48a112d6b16e9b91710e6a0fbdf18"
-      },
-      "user_image": {
-        "url": "/news-images/user/df172a32-b0d0-4403-be55-3af7e11dd200.webp",
-        "alt": "Saida Hadjab får sitt andra anslag från Novo Nordisk-fonden för forskning om kronisk smärta",
-        "user_image_id": "df172a32-b0d0-4403-be55-3af7e11dd200",
-        "match_score": 0.1816,
-        "width": 1280,
-        "height": 848
       }
     },
     {
@@ -301,6 +292,14 @@
         "satsning"
       ],
       "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/3559646e-9dfb-4236-b91b-7fad3fce7837-1.webp",
+        "alt": "Björn Gysell donerar till forskning om framtidens behandlingar mot prostatacancer",
+        "user_image_id": "3559646e-9dfb-4236-b91b-7fad3fce7837-1",
+        "match_score": 0.2087,
+        "width": 1280,
+        "height": 848
+      },
       "generated_image": {
         "url": "/news-images/generated/8654f363eefda1bb5a59-c59008e0-v1.svg",
         "alt": "Automatiskt skapad redaktionell illustration.",
@@ -309,14 +308,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "e7cb2b36e302fc6fdfcd657d4337f0d9e7bb6f9454dfd0a6e252b8ba15bd8617"
-      },
-      "user_image": {
-        "url": "/news-images/user/3559646e-9dfb-4236-b91b-7fad3fce7837-1.webp",
-        "alt": "Björn Gysell donerar till forskning om framtidens behandlingar mot prostatacancer",
-        "user_image_id": "3559646e-9dfb-4236-b91b-7fad3fce7837-1",
-        "match_score": 0.2087,
-        "width": 1280,
-        "height": 848
       }
     },
     {
@@ -339,6 +330,14 @@
         "initiativ"
       ],
       "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/6c8c7eb1-698f-4124-b28e-e36c60416fca.webp",
+        "alt": "20 år med ESERO: att föra rymden till miljontals elever",
+        "user_image_id": "6c8c7eb1-698f-4124-b28e-e36c60416fca",
+        "match_score": 0.1912,
+        "width": 1280,
+        "height": 848
+      },
       "generated_image": {
         "url": "/news-images/generated/0581c7633c440d8b7c2e-87e71d6b-v1.svg",
         "alt": "Automatiskt skapad redaktionell illustration.",
@@ -347,14 +346,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "b0cd20dbb2c19d0f72547b8bccd12db07c3c05aee6fa271e90effe161bd5ad25"
-      },
-      "user_image": {
-        "url": "/news-images/user/6c8c7eb1-698f-4124-b28e-e36c60416fca.webp",
-        "alt": "20 år med ESERO: att föra rymden till miljontals elever",
-        "user_image_id": "6c8c7eb1-698f-4124-b28e-e36c60416fca",
-        "match_score": 0.1912,
-        "width": 1280,
-        "height": 848
       }
     },
     {
@@ -384,6 +375,14 @@
         "lösning"
       ],
       "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/85548527-df08-4140-9c8b-92075a6971a9.webp",
+        "alt": "Impact labs breddar innovationsstödet vid svenska lärosäten",
+        "user_image_id": "85548527-df08-4140-9c8b-92075a6971a9",
+        "match_score": 0.2577,
+        "width": 1280,
+        "height": 848
+      },
       "generated_image": {
         "url": "/news-images/generated/ccc544ab470c29cb6d35-d2ef8f24-v1.svg",
         "alt": "Automatiskt skapad redaktionell illustration.",
@@ -392,14 +391,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "4af3b777ff818c65e952804219e0f05a1088bdc4cd130e82a9162e4e5646a688"
-      },
-      "user_image": {
-        "url": "/news-images/user/85548527-df08-4140-9c8b-92075a6971a9.webp",
-        "alt": "Impact labs breddar innovationsstödet vid svenska lärosäten",
-        "user_image_id": "85548527-df08-4140-9c8b-92075a6971a9",
-        "match_score": 0.2577,
-        "width": 1280,
-        "height": 848
       }
     },
     {
@@ -422,6 +413,14 @@
         "framsteg"
       ],
       "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/01922f32-cc3d-4bd0-a9e6-1b02c964d8e6.webp",
+        "alt": "SubOrbital Express-5 skickar upp tolv experiment till mikrogravitation",
+        "user_image_id": "01922f32-cc3d-4bd0-a9e6-1b02c964d8e6",
+        "match_score": 0.1569,
+        "width": 1280,
+        "height": 848
+      },
       "generated_image": {
         "url": "/news-images/generated/a1ff56772fa1e76a2f23-b05d127f-v1.svg",
         "alt": "Automatiskt skapad redaktionell illustration.",
@@ -430,14 +429,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "273484e6265bcfb32ad63f2d1ada4c34b8bdadcd88dd46c95261cc760fae40d5"
-      },
-      "user_image": {
-        "url": "/news-images/user/01922f32-cc3d-4bd0-a9e6-1b02c964d8e6.webp",
-        "alt": "SubOrbital Express-5 skickar upp tolv experiment till mikrogravitation",
-        "user_image_id": "01922f32-cc3d-4bd0-a9e6-1b02c964d8e6",
-        "match_score": 0.1569,
-        "width": 1280,
-        "height": 848
       }
     },
     {
@@ -468,6 +459,14 @@
         "omställning"
       ],
       "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/875acd2e-97c1-4178-853f-484bf04ff226.webp",
+        "alt": "Glapp mellan policy och praktik för akademiskt samhällsengagemang",
+        "user_image_id": "875acd2e-97c1-4178-853f-484bf04ff226",
+        "match_score": 0.2206,
+        "width": 1280,
+        "height": 848
+      },
       "generated_image": {
         "url": "/news-images/generated/6d39b13679ff7bb52ec1-5f39680c-v1.svg",
         "alt": "Automatiskt skapad redaktionell illustration.",
@@ -476,14 +475,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "f88a3ae8e41db3efa74997bb6765f7186469861b26185851852cb47d1d225c95"
-      },
-      "user_image": {
-        "url": "/news-images/user/875acd2e-97c1-4178-853f-484bf04ff226.webp",
-        "alt": "Glapp mellan policy och praktik för akademiskt samhällsengagemang",
-        "user_image_id": "875acd2e-97c1-4178-853f-484bf04ff226",
-        "match_score": 0.2206,
-        "width": 1280,
-        "height": 848
       }
     },
     {
@@ -571,6 +562,14 @@
         "science"
       ],
       "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/29e91d28-a2d9-4cc6-967f-dc3a88a35fb1.webp",
+        "alt": "ESA och DON’T NOD ger sig ut på en resa till planeten Persephone i Aphelion",
+        "user_image_id": "29e91d28-a2d9-4cc6-967f-dc3a88a35fb1",
+        "match_score": 0.2254,
+        "width": 1280,
+        "height": 848
+      },
       "generated_image": {
         "url": "/news-images/generated/883aa62a7813099dd8b2-e6b980ff-v1.svg",
         "alt": "Automatiskt skapad redaktionell illustration.",
@@ -579,14 +578,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "da35e92250c0515d62aedd5149cdcfa9db32493eb90f22ded0138d83d4348efb"
-      },
-      "user_image": {
-        "url": "/news-images/user/29e91d28-a2d9-4cc6-967f-dc3a88a35fb1.webp",
-        "alt": "ESA och DON’T NOD ger sig ut på en resa till planeten Persephone i Aphelion",
-        "user_image_id": "29e91d28-a2d9-4cc6-967f-dc3a88a35fb1",
-        "match_score": 0.2254,
-        "width": 1280,
-        "height": 848
       }
     },
     {
@@ -608,6 +599,14 @@
         "initiativ"
       ],
       "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/3559646e-9dfb-4236-b91b-7fad3fce7837.webp",
+        "alt": "KI-forskare bakom modekreation som lyfter utmaningar med hiv",
+        "user_image_id": "3559646e-9dfb-4236-b91b-7fad3fce7837",
+        "match_score": 0.2573,
+        "width": 1280,
+        "height": 848
+      },
       "generated_image": {
         "url": "/news-images/generated/3c37c57a305af716d01f-770cc6de-v1.svg",
         "alt": "Automatiskt skapad redaktionell illustration.",
@@ -616,14 +615,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "645b23a7294ff8445225b53c3e6945a5859a7d922702e8214d14a10d4e09a8e2"
-      },
-      "user_image": {
-        "url": "/news-images/user/3559646e-9dfb-4236-b91b-7fad3fce7837.webp",
-        "alt": "KI-forskare bakom modekreation som lyfter utmaningar med hiv",
-        "user_image_id": "3559646e-9dfb-4236-b91b-7fad3fce7837",
-        "match_score": 0.2573,
-        "width": 1280,
-        "height": 848
       }
     },
     {
@@ -644,6 +635,14 @@
         "förebygga"
       ],
       "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/ca17e92f-ec53-4cd1-b11c-3f69f0912247.webp",
+        "alt": "KI-forskare bidrar till nya WHO-riktlinjer för att förebygga demens",
+        "user_image_id": "ca17e92f-ec53-4cd1-b11c-3f69f0912247",
+        "match_score": 0.1683,
+        "width": 1280,
+        "height": 848
+      },
       "generated_image": {
         "url": "/news-images/generated/d3d0384eb9cf10ff61dd-d2d8e94a-v1.svg",
         "alt": "Automatiskt skapad redaktionell illustration.",
@@ -652,14 +651,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "90568fbfc8d4487520faca16220266b970a288c26aa20f66d18ad0e62960859f"
-      },
-      "user_image": {
-        "url": "/news-images/user/ca17e92f-ec53-4cd1-b11c-3f69f0912247.webp",
-        "alt": "KI-forskare bidrar till nya WHO-riktlinjer för att förebygga demens",
-        "user_image_id": "ca17e92f-ec53-4cd1-b11c-3f69f0912247",
-        "match_score": 0.1683,
-        "width": 1280,
-        "height": 848
       }
     },
     {
@@ -680,6 +671,14 @@
         "lovande"
       ],
       "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/491483e7-00f4-4581-9c4d-ba3853e16f74.webp",
+        "alt": "Parkinsonläkemedel visar lovande effekt mot svårbehandlad depression",
+        "user_image_id": "491483e7-00f4-4581-9c4d-ba3853e16f74",
+        "match_score": 0.1728,
+        "width": 1280,
+        "height": 848
+      },
       "generated_image": {
         "url": "/news-images/generated/6698c053939f372dce7e-0f7d798f-v1.svg",
         "alt": "Automatiskt skapad redaktionell illustration.",
@@ -688,14 +687,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "5c78d9275751e5afca642ce661210a5de80103878979c977390cac3040ffeec5"
-      },
-      "user_image": {
-        "url": "/news-images/user/491483e7-00f4-4581-9c4d-ba3853e16f74.webp",
-        "alt": "Parkinsonläkemedel visar lovande effekt mot svårbehandlad depression",
-        "user_image_id": "491483e7-00f4-4581-9c4d-ba3853e16f74",
-        "match_score": 0.1728,
-        "width": 1280,
-        "height": 848
       }
     },
     {
@@ -743,6 +734,14 @@
         "upptäckt"
       ],
       "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/f8d9eeb1-5f03-48f3-b48c-2dda9e298a1b.webp",
+        "alt": "AI upptäckte missade blodproppar i hjärnan",
+        "user_image_id": "f8d9eeb1-5f03-48f3-b48c-2dda9e298a1b",
+        "match_score": 0.162,
+        "width": 1280,
+        "height": 848
+      },
       "generated_image": {
         "url": "/news-images/generated/0392e2d504ad7c9d74eb-3ef9a281-v1.svg",
         "alt": "Automatiskt skapad redaktionell illustration.",
@@ -751,14 +750,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "504bdd57a0693b03ab6d7a0fd1696ef2a4d9a1a72542916235315cc7d5d67bc0"
-      },
-      "user_image": {
-        "url": "/news-images/user/f8d9eeb1-5f03-48f3-b48c-2dda9e298a1b.webp",
-        "alt": "AI upptäckte missade blodproppar i hjärnan",
-        "user_image_id": "f8d9eeb1-5f03-48f3-b48c-2dda9e298a1b",
-        "match_score": 0.162,
-        "width": 1280,
-        "height": 848
       }
     },
     {
@@ -780,6 +771,14 @@
         "förebygga"
       ],
       "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/9c4f3e46-0f94-45e9-9ab8-7fe2ecb6998f-1.webp",
+        "alt": "Lev längre med mindre mat på tallriken",
+        "user_image_id": "9c4f3e46-0f94-45e9-9ab8-7fe2ecb6998f-1",
+        "match_score": 0.1884,
+        "width": 1280,
+        "height": 848
+      },
       "generated_image": {
         "url": "/news-images/generated/ac9388eca9809535d9d3-f3b52be8-v1.svg",
         "alt": "Automatiskt skapad redaktionell illustration.",
@@ -788,14 +787,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "0a1c95b16e1ceee0e993977a9ee3f9e858e4624dbe3118c9fdd75a90499eafc5"
-      },
-      "user_image": {
-        "url": "/news-images/user/9c4f3e46-0f94-45e9-9ab8-7fe2ecb6998f-1.webp",
-        "alt": "Lev längre med mindre mat på tallriken",
-        "user_image_id": "9c4f3e46-0f94-45e9-9ab8-7fe2ecb6998f-1",
-        "match_score": 0.1884,
-        "width": 1280,
-        "height": 848
       }
     },
     {
@@ -852,6 +843,14 @@
         "skydda"
       ],
       "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/76a0af41-8a96-456d-8903-4dade9ceebdc.webp",
+        "alt": "Sjögräsängar lika viktiga som korallrev för fisk",
+        "user_image_id": "76a0af41-8a96-456d-8903-4dade9ceebdc",
+        "match_score": 0.2473,
+        "width": 1280,
+        "height": 848
+      },
       "generated_image": {
         "url": "/news-images/generated/0be141613abc499ac0f4-bca1708a-v1.svg",
         "alt": "Automatiskt skapad redaktionell illustration.",
@@ -860,14 +859,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "1f3cf70bdf8a8b811b2e4c4de825cc9a72ad29a18697ea09fd418edac9d90235"
-      },
-      "user_image": {
-        "url": "/news-images/user/76a0af41-8a96-456d-8903-4dade9ceebdc.webp",
-        "alt": "Sjögräsängar lika viktiga som korallrev för fisk",
-        "user_image_id": "76a0af41-8a96-456d-8903-4dade9ceebdc",
-        "match_score": 0.2473,
-        "width": 1280,
-        "height": 848
       }
     },
     {
@@ -986,6 +977,14 @@
         "satsning"
       ],
       "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/58f74baf-f82d-4add-af88-80b637a356f5.webp",
+        "alt": "Malmö först med rådgivning om klimatanpassning",
+        "user_image_id": "58f74baf-f82d-4add-af88-80b637a356f5",
+        "match_score": 0.2692,
+        "width": 1280,
+        "height": 848
+      },
       "generated_image": {
         "url": "/news-images/generated/9e2ab5cc1a6a4aa08cb4-0a7c3e98-v1.svg",
         "alt": "Automatiskt skapad redaktionell illustration.",
@@ -994,14 +993,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "122bb67499ff32db2d3a5a3e92dafc5eb79ca9d8875724523a5b1f33c3057075"
-      },
-      "user_image": {
-        "url": "/news-images/user/58f74baf-f82d-4add-af88-80b637a356f5.webp",
-        "alt": "Malmö först med rådgivning om klimatanpassning",
-        "user_image_id": "58f74baf-f82d-4add-af88-80b637a356f5",
-        "match_score": 0.2692,
-        "width": 1280,
-        "height": 848
       }
     },
     {
@@ -1088,6 +1079,14 @@
         "lösning"
       ],
       "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/fb601de5-40fb-41e6-ad59-02bed671c043.webp",
+        "alt": "Välfärdsteknik ger trygghet – men inte alltid ett aktivt och delaktigt liv",
+        "user_image_id": "fb601de5-40fb-41e6-ad59-02bed671c043",
+        "match_score": 0.1839,
+        "width": 1280,
+        "height": 848
+      },
       "generated_image": {
         "url": "/news-images/generated/f8f5460a8a7aacbf0eba-29ab7ad3-v1.svg",
         "alt": "Automatiskt skapad redaktionell illustration.",
@@ -1096,14 +1095,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "557d62a9deeecfe11b03cba0e6616a5442c140e0f8ff9bd52aa56c872b0b97f1"
-      },
-      "user_image": {
-        "url": "/news-images/user/fb601de5-40fb-41e6-ad59-02bed671c043.webp",
-        "alt": "Välfärdsteknik ger trygghet – men inte alltid ett aktivt och delaktigt liv",
-        "user_image_id": "fb601de5-40fb-41e6-ad59-02bed671c043",
-        "match_score": 0.1839,
-        "width": 1280,
-        "height": 848
       }
     },
     {
@@ -1298,7 +1289,7 @@
       "source_excerpt": "Every adoption announcement deserves a reaction like this! Jewels and Reeya shared Bunny's story with Dodo producer Monica and the adoption that left his biggest cheerleader in tears..",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/cue2Q1gPwSzgd6Hhs/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/cue2Q1gPwSzgd6Hhs/x720",
       "source_image_alt": "Woman So Happy When Best Friend Adopts This Pitbull",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xaseqai",
@@ -1333,7 +1324,7 @@
       "source_excerpt": "From puppy mill survivor to the biggest cuddle bug! Dodo producer Monica shares Lacy's remarkable transformation, as Jack talks about how this retired puppy mill mom finally got the second chance she deserved.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/cufRs1gPgG0yuxLYy/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/cufRs1gPgG0yuxLYy/x720",
       "source_image_alt": "Puppy Mill Lab Labeled \"Morbidly Obese\" Gets A Chance",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xaseupi",
