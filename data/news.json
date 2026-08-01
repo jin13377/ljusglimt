@@ -1,14 +1,11 @@
 {
-  "generated_at": "2026-08-01T11:16:28.704175Z",
+  "generated_at": "2026-08-01T22:56:02.468819Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
-  "fetch_errors": [
-    {
-      "source": "Mötesplats Social Innovation",
-      "error": "not well-formed (invalid token): line 1, column 0"
-    }
+  "new_item_ids": [
+    "e929a6e66a9b55c3f9ac"
   ],
+  "fetch_errors": [],
   "items": [
     {
       "id": "0b87daf79218ce385c31",
@@ -1191,6 +1188,42 @@
       }
     },
     {
+      "id": "e929a6e66a9b55c3f9ac",
+      "title": "Pit Bull's Best Friend Is Tiny Mouse",
+      "url": "https://www.dailymotion.com/video/xau1aki",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-08-01T22:19:53Z",
+      "source_excerpt": "The most unlikely brother and sister ever. When Jill rescued a tiny mouse named Carolyn, she never expected her best friend would be Cowboy, her rescue pit bull. At The Dodo, we couldn't get enough of their unlikely sibling bond.",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s1.dmcdn.net/v/d33721gRd4mGNQo-M/x720",
+      "source_image_alt": "Pit Bull's Best Friend Is Tiny Mouse",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xau1aki",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xau1aki",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xau1aki",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xau1aki",
+        "source_url": "https://www.dailymotion.com/video/xau1aki",
+        "title": "Pit Bull's Best Friend Is Tiny Mouse"
+      },
+      "source_fingerprint": "34e475c49dd8cb6804e9",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 9,
+      "positive_signals": [
+        "curated-positive-source",
+        "best friend",
+        "friend",
+        "rescue"
+      ],
+      "public_eligible": false
+    },
+    {
       "id": "92c6c8c12d98c0ead6ee",
       "title": "Så stöttas ultratätt väte av forskningssystemet",
       "url": "https://fof.se/artikel/sa-stottas-ultratatt-vate-av-forskningssystemet",
@@ -1258,7 +1291,7 @@
       "source_excerpt": "All it took was one person to stop! Our senior producer Tarang caught up with Eyleen, founder of Beldi Refuge Morocco, months after she rescued a puppy everyone had given up on. Together they look back on the incredible journey that eventually led her to her forever family in Germany.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/cue2o1gQ_q_2jkZ78/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/cue2o1gQ_q_2jkZ78/x720",
       "source_image_alt": "Puppy Left For Dead Finds A New Life In Germany",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xaseqb6",
@@ -1294,7 +1327,7 @@
       "source_excerpt": "Every adoption announcement deserves a reaction like this! Jewels and Reeya shared Bunny's story with Dodo producer Monica and the adoption that left his biggest cheerleader in tears..",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/cue2Q1gPwSzgd6Hhs/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/cue2Q1gPwSzgd6Hhs/x720",
       "source_image_alt": "Woman So Happy When Best Friend Adopts This Pitbull",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xaseqai",
@@ -1316,41 +1349,6 @@
         "curated-positive-source",
         "best friend",
         "friend"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "8ed99cbf2c1ef022d8fc",
-      "title": "Puppy Mill Lab Labeled \"Morbidly Obese\" Gets A Chance",
-      "url": "https://www.dailymotion.com/video/xaseupi",
-      "source": "The Dodo",
-      "language": "en",
-      "published_at": "2026-07-26T23:03:33Z",
-      "source_excerpt": "From puppy mill survivor to the biggest cuddle bug! Dodo producer Monica shares Lacy's remarkable transformation, as Jack talks about how this retired puppy mill mom finally got the second chance she deserved.",
-      "agent_summary": "",
-      "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/cufRs1gPgG0yuxLYy/x720",
-      "source_image_alt": "Puppy Mill Lab Labeled \"Morbidly Obese\" Gets A Chance",
-      "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xaseupi",
-      "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xaseupi",
-      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
-      "source_video": {
-        "provider": "dailymotion",
-        "video_id": "xaseupi",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xaseupi",
-        "source_url": "https://www.dailymotion.com/video/xaseupi",
-        "title": "Puppy Mill Lab Labeled \"Morbidly Obese\" Gets A Chance"
-      },
-      "source_fingerprint": "8ae97ab8878c66e4b72a",
-      "category": "Djur",
-      "source_tier_bonus": 4,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "cuddle",
-        "puppy"
       ],
       "public_eligible": false
     },
