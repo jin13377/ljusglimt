@@ -1,11 +1,13 @@
 {
-  "generated_at": "2026-08-02T22:56:52.901480Z",
+  "generated_at": "2026-08-03T12:55:02.657234Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "2c365306020063c6b082",
-    "2727df5717ee34f960d7",
-    "e06440e05ffd0f8d07b4"
+    "bd393591640fd8334597",
+    "fa5812328c1e9759d092",
+    "d219a9b38ed1b950891b",
+    "80f238b675b652b7ec88",
+    "3f089379fc2b1ac52060"
   ],
   "fetch_errors": [],
   "items": [
@@ -585,6 +587,42 @@
       }
     },
     {
+      "id": "bd393591640fd8334597",
+      "title": "Afrikansk svinpest upptäckt i Finland",
+      "url": "https://www.natursidan.se/nyheter/afrikansk-svinpest-upptackt-i-finland",
+      "source": "Natursidan",
+      "language": "sv",
+      "published_at": "2026-08-03T12:27:53Z",
+      "source_excerpt": "Knappt tre år efter utbrottet i Sverige har den fruktade sjukdomen upptäckts i Finland.",
+      "agent_summary": "",
+      "source_fingerprint": "f7ea784321648e2260c5",
+      "category": "Natur",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "upptäckt"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/4412043e-894c-4672-8414-e2bae48bf2da-1.webp",
+        "alt": "Afrikansk svinpest upptäckt i Finland",
+        "user_image_id": "4412043e-894c-4672-8414-e2bae48bf2da-1",
+        "match_score": 0.2894,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/bd393591640fd8334597-f7ea7843-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "f7ea784321648e2260c5",
+        "width": 1280,
+        "height": 848,
+        "sha256": "1bf49d398d50ad68297a4944999e20ac22741356c912ed7db46d7bd7b27761ee"
+      }
+    },
+    {
       "id": "3c37c57a305af716d01f",
       "title": "KI-forskare bakom modekreation som lyfter utmaningar med hiv",
       "url": "https://nyheter.ki.se/ki-forskare-bakom-modekreation-som-lyfter-utmaningar-med-hiv",
@@ -828,6 +866,42 @@
       ],
       "display_title_sv": "Pojkvännen fick den bästa alla hjärtans dag-presenten",
       "public_eligible": true
+    },
+    {
+      "id": "fa5812328c1e9759d092",
+      "title": "Röd ek vittnar om träd som dör och stressas i hettan",
+      "url": "https://www.natursidan.se/nyheter/rod-ek-vittnar-om-trad-som-dor-och-stressas-i-hettan",
+      "source": "Natursidan",
+      "language": "sv",
+      "published_at": "2026-08-03T05:16:12Z",
+      "source_excerpt": "Studier och rapporter från olika håll i Europa tecknar en liknande bild; träden får det allt svårare i en snabbt uppvärmd värld med allt fler extremväder. En lösning kan dock vara att plantera fler träd i städerna.",
+      "agent_summary": "",
+      "source_fingerprint": "273a7f035976e6514363",
+      "category": "Natur",
+      "source_tier_bonus": 5,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "lösning"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/4412043e-894c-4672-8414-e2bae48bf2da.webp",
+        "alt": "Röd ek vittnar om träd som dör och stressas i hettan",
+        "user_image_id": "4412043e-894c-4672-8414-e2bae48bf2da",
+        "match_score": 0.2894,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/fa5812328c1e9759d092-273a7f03-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "273a7f035976e6514363",
+        "width": 1280,
+        "height": 848,
+        "sha256": "a4106be89c5e6015654e2cc65a129bb5e55b2484d7e7a9ed5b2046f1c7e7510d"
+      }
     },
     {
       "id": "0be141613abc499ac0f4",
@@ -1190,78 +1264,6 @@
       }
     },
     {
-      "id": "2c365306020063c6b082",
-      "title": "Elephant Swims Every Day For Her Blind Best Friend",
-      "url": "https://www.dailymotion.com/video/xaub4fu",
-      "source": "The Dodo",
-      "language": "en",
-      "published_at": "2026-08-02T22:04:10Z",
-      "source_excerpt": "From surviving trekking camps to finally getting the retirement they deserve! Dodo producer Brielle shares the remarkable friendship between two rescued senior elephants: one blind, one who hates water, yet still takes her best friend swimming every single day.",
-      "agent_summary": "",
-      "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/d4p4w1gRyHBmJQ2yZ/x720",
-      "source_image_alt": "Elephant Swims Every Day For Her Blind Best Friend",
-      "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xaub4fu",
-      "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xaub4fu",
-      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
-      "source_video": {
-        "provider": "dailymotion",
-        "video_id": "xaub4fu",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xaub4fu",
-        "source_url": "https://www.dailymotion.com/video/xaub4fu",
-        "title": "Elephant Swims Every Day For Her Blind Best Friend"
-      },
-      "source_fingerprint": "408d4dafbac825e6ca98",
-      "category": "Djur",
-      "source_tier_bonus": 4,
-      "positivity_score": 9,
-      "positive_signals": [
-        "curated-positive-source",
-        "best friend",
-        "friend",
-        "rescue"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "2727df5717ee34f960d7",
-      "title": "Man Drops Everything To Rescue Kitten Crying Outside",
-      "url": "https://www.dailymotion.com/video/xauar4m",
-      "source": "The Dodo",
-      "language": "en",
-      "published_at": "2026-08-02T21:19:54Z",
-      "source_excerpt": "She went from tiny and trembling to the wrestling champ of the house! At this point, we know Yassine all too well and weren't surprised to see him drop everything the moment he heard a crying kitten outside his window.",
-      "agent_summary": "",
-      "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/d4ktM1gRxfUdMEned/x720",
-      "source_image_alt": "Man Drops Everything To Rescue Kitten Crying Outside",
-      "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xauar4m",
-      "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xauar4m",
-      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
-      "source_video": {
-        "provider": "dailymotion",
-        "video_id": "xauar4m",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xauar4m",
-        "source_url": "https://www.dailymotion.com/video/xauar4m",
-        "title": "Man Drops Everything To Rescue Kitten Crying Outside"
-      },
-      "source_fingerprint": "3c1d7529e4990038904e",
-      "category": "Djur",
-      "source_tier_bonus": 4,
-      "positivity_score": 9,
-      "positive_signals": [
-        "curated-positive-source",
-        "kitten",
-        "rescue",
-        "surprise"
-      ],
-      "public_eligible": false
-    },
-    {
       "id": "92c6c8c12d98c0ead6ee",
       "title": "Så stöttas ultratätt väte av forskningssystemet",
       "url": "https://fof.se/artikel/sa-stottas-ultratatt-vate-av-forskningssystemet",
@@ -1320,37 +1322,38 @@
       }
     },
     {
-      "id": "e06440e05ffd0f8d07b4",
-      "title": "Newly Rescued Bear From Bile Farm Can't Stop Playing",
-      "url": "https://www.dailymotion.com/video/xaub4t2",
+      "id": "d219a9b38ed1b950891b",
+      "title": "Police Search for 30 Minutes For Kitten In Car Engine",
+      "url": "https://www.dailymotion.com/video/xauc93a",
       "source": "The Dodo",
       "language": "en",
-      "published_at": "2026-08-02T22:04:51Z",
-      "source_excerpt": "He's basically discovering childhood for the first time! After years trapped on a bile farm, Berserk is finally getting to experience what being a bear is supposed to look like. Dodo editor Monica shares how Animals Asia helped him discover play, sunshine and a second chance. While bear bile extraction is now banned in Vietnam, 150 bears are still waiting to be freed from tiny metal cages. Animals",
+      "published_at": "2026-08-02T23:34:40Z",
+      "source_excerpt": "Rescuer shows up to find eight police cars searching for one tiny kitten. Dodo producer Brielle shares how one tiny kitten trapped inside a parked car engine brought together police officers, firefighters, and Long Island animal rescuer John DeBacker for an unforgettable rescue.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/d4pCM1gRyH4Z5jBdD/x720",
-      "source_image_alt": "Newly Rescued Bear From Bile Farm Can't Stop Playing",
+      "source_image_url": "https://s2.dmcdn.net/v/d4_y61gR_WWd93iB7/x720",
+      "source_image_alt": "Police Search for 30 Minutes For Kitten In Car Engine",
       "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xaub4t2",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xauc93a",
       "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xaub4t2",
+      "source_image_source_url": "https://www.dailymotion.com/video/xauc93a",
       "source_image_verification_method": "dailymotion-api-thumbnail-v1",
       "source_video": {
         "provider": "dailymotion",
-        "video_id": "xaub4t2",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xaub4t2",
-        "source_url": "https://www.dailymotion.com/video/xaub4t2",
-        "title": "Newly Rescued Bear From Bile Farm Can't Stop Playing"
+        "video_id": "xauc93a",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xauc93a",
+        "source_url": "https://www.dailymotion.com/video/xauc93a",
+        "title": "Police Search for 30 Minutes For Kitten In Car Engine"
       },
-      "source_fingerprint": "efcacc1c4d6b97ba79fc",
+      "source_fingerprint": "60f6ae24605cf15f62b6",
       "category": "Djur",
       "source_tier_bonus": 4,
       "positivity_score": 8,
       "positive_signals": [
         "curated-positive-source",
-        "play",
-        "rescue"
+        "kitten",
+        "rescue",
+        "together"
       ],
       "public_eligible": false
     },
@@ -1550,59 +1553,73 @@
       }
     },
     {
-      "id": "0281807bb069aebd3f54",
-      "title": "Almedalen 2026 – en kick för klimatomställning på bred front",
-      "url": "https://viablecities.se/almedalen-2026-en-kick-for-klimatomstallning-pa-bred-front",
-      "source": "Viable Cities",
-      "language": "sv",
-      "published_at": "2026-06-26T17:16:01Z",
-      "source_excerpt": "Almedalsveckan 2026 i Visby- Inspiration, valår, vimmel, morgondopp och ny energi för handling. Så sammanfattar vi Almedalsveckan 2026 i Visby. Inlägget Almedalen 2026 – en kick för klimatomställning på bred front dök först upp på Viable Cities .",
+      "id": "80f238b675b652b7ec88",
+      "title": "Missing Kitten Survives Weeks Alone After Car Crash",
+      "url": "https://www.dailymotion.com/video/xauc94q",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-08-02T23:34:35Z",
+      "source_excerpt": "Another foster cat knew exactly how to help her feel safe again. When Sera disappeared after a shelter van crash, nobody knew if she'd make it home. Dodo producer Tarang shares how she survived four weeks alone and how one remarkable foster cat named Dunder helped her finally feel safe enough to be herself again!",
       "agent_summary": "",
-      "source_fingerprint": "ada8f762780c27327d32",
-      "category": "Samhälle",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
+      "source_image_verified": true,
+      "source_image_url": "https://s1.dmcdn.net/v/d4_yw1gR-IRLspIFU/x720",
+      "source_image_alt": "Missing Kitten Survives Weeks Alone After Car Crash",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xauc94q",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xauc94q",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xauc94q",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xauc94q",
+        "source_url": "https://www.dailymotion.com/video/xauc94q",
+        "title": "Missing Kitten Survives Weeks Alone After Car Crash"
+      },
+      "source_fingerprint": "81b3e58ad4baaf1cd28f",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 6,
       "positive_signals": [
         "curated-positive-source",
-        "omställning"
+        "kitten"
       ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/586669d7-e165-482e-859f-d434c3bef9c5.webp",
-        "alt": "Almedalen 2026 – en kick för klimatomställning på bred front",
-        "user_image_id": "586669d7-e165-482e-859f-d434c3bef9c5",
-        "match_score": 0.2379,
-        "width": 1280,
-        "height": 848
-      }
+      "public_eligible": false
     },
     {
-      "id": "f5e90d370c4747b90edb",
-      "title": "Synliggör symtom vid Parkinsons sjukdom",
-      "url": "https://www.vetenskaphalsa.se/synliggor-symtom-vid-parkinsons-sjukdom",
-      "source": "Vetenskap & hälsa",
-      "language": "sv",
-      "published_at": "2026-06-23T06:01:00Z",
-      "source_excerpt": "Gent Ymeri har varit med att utveckla en digital teknik för smartphones och andra bärbara enheter för att kvantifiera Parkinsons symtom i hemmiljö. Forskningsresultat han nu redovisar i sin doktorsavhandling. Parkinsons sjukdom är en progressiv, neurodegenerativ hjärnsjukdom som ökar snabbt i omfattning och drabbar miljontals människor världen över. En effektiv hantering av sjukdomen bygger på […]",
+      "id": "3f089379fc2b1ac52060",
+      "title": "Skinny Dogs Chained To Cages Get The Ultimate Glow-Up",
+      "url": "https://www.dailymotion.com/video/xauc912",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-08-02T23:34:07Z",
+      "source_excerpt": "Wait till you see their fur grow back! Prue from Mission Paws'ible told us how these brothers survived everything together, and how one helped the other finally come out of his shell — now they're both ready for the forever homes they deserve.",
       "agent_summary": "",
-      "source_fingerprint": "a84f54f11e70d7b80a72",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
+      "source_image_verified": true,
+      "source_image_url": "https://s2.dmcdn.net/v/d4_ws1gR_5_5zLdDF/x720",
+      "source_image_alt": "Skinny Dogs Chained To Cages Get The Ultimate Glow-Up",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xauc912",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xauc912",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xauc912",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xauc912",
+        "source_url": "https://www.dailymotion.com/video/xauc912",
+        "title": "Skinny Dogs Chained To Cages Get The Ultimate Glow-Up"
+      },
+      "source_fingerprint": "c77f7240bc8908c4eae4",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 6,
       "positive_signals": [
         "curated-positive-source",
-        "forskning",
-        "progress"
+        "mission",
+        "together"
       ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/0b61cd71-ad74-4954-8fd7-7b465069b960.webp",
-        "alt": "Synliggör symtom vid Parkinsons sjukdom",
-        "user_image_id": "0b61cd71-ad74-4954-8fd7-7b465069b960",
-        "match_score": 0.1843,
-        "width": 1280,
-        "height": 848
-      }
+      "public_eligible": false
     },
     {
       "id": "2ab3e5d597e8e7474149",
