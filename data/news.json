@@ -1,14 +1,9 @@
 {
-  "generated_at": "2026-08-04T12:02:03.602303Z",
+  "generated_at": "2026-08-04T23:03:28.049199Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [],
-  "fetch_errors": [
-    {
-      "source": "Mötesplats Social Innovation",
-      "error": "not well-formed (invalid token): line 1, column 0"
-    }
-  ],
+  "fetch_errors": [],
   "items": [
     {
       "id": "0b87daf79218ce385c31",
@@ -1595,7 +1590,7 @@
       "source_excerpt": "Wait till you see their fur grow back! Prue from Mission Paws'ible told us how these brothers survived everything together, and how one helped the other finally come out of his shell — now they're both ready for the forever homes they deserve.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/d4_ws1gR_5_5zLdDF/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/d4_ws1gR_5_5zLdDF/x720",
       "source_image_alt": "Skinny Dogs Chained To Cages Get The Ultimate Glow-Up",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xauc912",
