@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T23:00:45.141043Z",
+  "generated_at": "2026-08-04T12:02:03.602303Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [],
@@ -1330,7 +1330,7 @@
       "source_excerpt": "Rescuer shows up to find eight police cars searching for one tiny kitten. Dodo producer Brielle shares how one tiny kitten trapped inside a parked car engine brought together police officers, firefighters, and Long Island animal rescuer John DeBacker for an unforgettable rescue.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/d4_y61gR_WWd93iB7/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/d4_y61gR_WWd93iB7/x720",
       "source_image_alt": "Police Search for 30 Minutes For Kitten In Car Engine",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xauc93a",
@@ -1561,7 +1561,7 @@
       "source_excerpt": "Another foster cat knew exactly how to help her feel safe again. When Sera disappeared after a shelter van crash, nobody knew if she'd make it home. Dodo producer Tarang shares how she survived four weeks alone and how one remarkable foster cat named Dunder helped her finally feel safe enough to be herself again!",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/d4_yw1gR-IRLspIFU/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/d4_yw1gR-IRLspIFU/x720",
       "source_image_alt": "Missing Kitten Survives Weeks Alone After Car Crash",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xauc94q",
@@ -1595,7 +1595,7 @@
       "source_excerpt": "Wait till you see their fur grow back! Prue from Mission Paws'ible told us how these brothers survived everything together, and how one helped the other finally come out of his shell — now they're both ready for the forever homes they deserve.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/d4_ws1gR_5_5zLdDF/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/d4_ws1gR_5_5zLdDF/x720",
       "source_image_alt": "Skinny Dogs Chained To Cages Get The Ultimate Glow-Up",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xauc912",
@@ -1648,31 +1648,31 @@
       }
     },
     {
-      "id": "9d15243bd9e6a4e7eb01",
-      "title": "‘A place of hope and solutions’: the building promising a better future",
-      "url": "https://www.positive.news/society/the-rotterdam-building-promising-a-better-future",
-      "source": "Positive News",
+      "id": "dc3f4cb487d6974e9617",
+      "title": "Recent sightings give conservationists hope for two endangered whale species: 'They may be rebounding'",
+      "url": "https://www.goodgoodgood.co/articles/blue-fin-whale-sightings-conservation",
+      "source": "Good Good Good",
       "language": "en",
-      "published_at": "2026-07-21T06:00:51Z",
-      "source_excerpt": "A bold new building in the Netherlands promises to showcase solutions to global problems – and encourage positive action The post ‘A place of hope and solutions’: the building promising a better future appeared first on Positive News .",
+      "published_at": "2026-07-16T20:53:00Z",
+      "source_excerpt": "A new study found sightings of the species on Southern Africa’s Atlantic coast have increased in recent years.",
       "agent_summary": "",
-      "source_fingerprint": "5a3b24cd7a016762c41e",
+      "source_fingerprint": "a0a631fb22970b37a57e",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a5580b6f675765e7374a887_sightings-off-southern-africa-suggest-blue-and-fin-whales-01.jpg",
+      "source_image_alt": "Recent sightings give conservationists hope for two endangered whale species: 'They may be rebounding'",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/blue-fin-whale-sightings-conservation",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/blue-fin-whale-sightings-conservation",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
       "source_tier_bonus": 2,
       "positivity_score": 6,
       "positive_signals": [
         "curated-positive-source",
-        "hope",
-        "solution"
+        "conservation",
+        "hope"
       ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/868bab25-bbad-423f-871d-cba0ddc6a2f3-1.webp",
-        "alt": "‘A place of hope and solutions’: the building promising a better future",
-        "user_image_id": "868bab25-bbad-423f-871d-cba0ddc6a2f3-1",
-        "match_score": 0.222,
-        "width": 1280,
-        "height": 848
-      }
+      "public_eligible": false
     }
   ]
 }
