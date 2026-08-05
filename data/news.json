@@ -1,8 +1,10 @@
 {
-  "generated_at": "2026-08-04T23:03:28.049199Z",
+  "generated_at": "2026-08-05T11:59:35.804555Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "deb41ec6a28380a6bc2c"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -581,6 +583,42 @@
       }
     },
     {
+      "id": "deb41ec6a28380a6bc2c",
+      "title": "RNA-teknik förbättrar resultaten vid transplantation av insulinproducerande celler",
+      "url": "https://nyheter.ki.se/rna-teknik-forbattrar-resultaten-vid-transplantation-av-insulinproducerande-celler",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-08-05T00:00:00Z",
+      "source_excerpt": "En ny RNA-baserad metod kan hjälpa insulinproducerande celler att klara transplantation bättre. I en studie från Karolinska Institutet, publicerad i tidskriften Signal Transduction and Targeted Therapy, återfick behandlade celler sin blodförsörjning snabbare och färre donatoröar behövdes för att återställa normal blodsockerkontroll.",
+      "agent_summary": "",
+      "source_fingerprint": "082ef4a282c94804f3dd",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "förbättrar"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/ca17e92f-ec53-4cd1-b11c-3f69f0912247.webp",
+        "alt": "RNA-teknik förbättrar resultaten vid transplantation av insulinproducerande celler",
+        "user_image_id": "ca17e92f-ec53-4cd1-b11c-3f69f0912247",
+        "match_score": 0.2479,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/deb41ec6a28380a6bc2c-082ef4a2-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "082ef4a282c94804f3dd",
+        "width": 1280,
+        "height": 848,
+        "sha256": "baf440c2a9c761ebf151ccf1fc5f5b7955c33116b518b3d9b8564347664ad80a"
+      }
+    },
+    {
       "id": "bd393591640fd8334597",
       "title": "Afrikansk svinpest upptäckt i Finland",
       "url": "https://www.natursidan.se/nyheter/afrikansk-svinpest-upptackt-i-finland",
@@ -651,42 +689,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "645b23a7294ff8445225b53c3e6945a5859a7d922702e8214d14a10d4e09a8e2"
-      }
-    },
-    {
-      "id": "d3d0384eb9cf10ff61dd",
-      "title": "KI-forskare bidrar till nya WHO-riktlinjer för att förebygga demens",
-      "url": "https://nyheter.ki.se/ki-forskare-bidrar-till-nya-who-riktlinjer-for-att-forebygga-demens",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-07-23T00:00:00Z",
-      "source_excerpt": "Professor Miia Kivipelto och flera forskare vid Karolinska Institutet har medverkat i arbetet med WHO:s nya riktlinjer för att förebygga kognitiv svikt och demens. Riktlinjerna sammanfattar det senaste vetenskapliga underlaget och ska hjälpa beslutsfattare, vårdgivare och andra aktörer att minska risken för demens genom förebyggande insatser. Enligt WHO kan upp till 45 procent av alla demensfall k",
-      "agent_summary": "",
-      "source_fingerprint": "d2d8e94a917d58a1e189",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "förebygga"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/ca17e92f-ec53-4cd1-b11c-3f69f0912247.webp",
-        "alt": "KI-forskare bidrar till nya WHO-riktlinjer för att förebygga demens",
-        "user_image_id": "ca17e92f-ec53-4cd1-b11c-3f69f0912247",
-        "match_score": 0.1683,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/d3d0384eb9cf10ff61dd-d2d8e94a-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "d2d8e94a917d58a1e189",
-        "width": 1280,
-        "height": 848,
-        "sha256": "90568fbfc8d4487520faca16220266b970a288c26aa20f66d18ad0e62960859f"
       }
     },
     {
@@ -1590,7 +1592,7 @@
       "source_excerpt": "Wait till you see their fur grow back! Prue from Mission Paws'ible told us how these brothers survived everything together, and how one helped the other finally come out of his shell — now they're both ready for the forever homes they deserve.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/d4_ws1gR_5_5zLdDF/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/d4_ws1gR_5_5zLdDF/x720",
       "source_image_alt": "Skinny Dogs Chained To Cages Get The Ultimate Glow-Up",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xauc912",
