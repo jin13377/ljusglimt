@@ -1,8 +1,10 @@
 {
-  "generated_at": "2026-08-05T22:58:54.173809Z",
+  "generated_at": "2026-08-06T12:02:34.675266Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "c4583c4d93cbe3326359"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -478,6 +480,43 @@
       }
     },
     {
+      "id": "c4583c4d93cbe3326359",
+      "title": "Ny metod skiljer mellan friska och sjuka immunceller i blodprov",
+      "url": "https://nyheter.ki.se/ny-metod-skiljer-mellan-friska-och-sjuka-immunceller-i-blodprov",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-08-06T00:00:00Z",
+      "source_excerpt": "Forskare vid Karolinska Institutet och SciLifeLab har utvecklat en ny metod för att analysera hur immunceller i blodet mår. Metoden har testats på patienter med åderförkalkning och kan skilja deras immunceller från friska individers. Studien publiceras i tidskriften Nature Nanotechnology.",
+      "agent_summary": "",
+      "source_fingerprint": "d9990db7dcfd9b889b28",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "ny metod",
+        "technology"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/3559646e-9dfb-4236-b91b-7fad3fce7837.webp",
+        "alt": "Ny metod skiljer mellan friska och sjuka immunceller i blodprov",
+        "user_image_id": "3559646e-9dfb-4236-b91b-7fad3fce7837",
+        "match_score": 0.2739,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/c4583c4d93cbe3326359-d9990db7-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "d9990db7dcfd9b889b28",
+        "width": 1280,
+        "height": 848,
+        "sha256": "79031c3896af3a642cbb5ee02210543a5b4ac1784f1afc3cd169d5a3f8a21ee3"
+      }
+    },
+    {
       "id": "33e4d91318071bc1b90a",
       "title": "This Pig Was On The Run Until Everyone Came Together",
       "url": "https://www.dailymotion.com/video/xamx6sa",
@@ -650,43 +689,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "1bf49d398d50ad68297a4944999e20ac22741356c912ed7db46d7bd7b27761ee"
-      }
-    },
-    {
-      "id": "3c37c57a305af716d01f",
-      "title": "KI-forskare bakom modekreation som lyfter utmaningar med hiv",
-      "url": "https://nyheter.ki.se/ki-forskare-bakom-modekreation-som-lyfter-utmaningar-med-hiv",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-07-28T00:00:00Z",
-      "source_excerpt": "När den 26:e internationella aidskonferensen (AIDS 2026) öppnar i Rio de Janeiro medverkar Karolinska Institutet i ett innovativt internationellt initiativ som förenar vetenskap, konst och samhällsengagemang. Genom utställningen ”HIV Unwrapped” samverkar ledande hiv-forskare med nya modedesigners för att omvandla komplexa vetenskapliga koncept till hållbara konstverk.",
-      "agent_summary": "",
-      "source_fingerprint": "770cc6de33db83d57e10",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "hållbar",
-        "initiativ"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/3559646e-9dfb-4236-b91b-7fad3fce7837.webp",
-        "alt": "KI-forskare bakom modekreation som lyfter utmaningar med hiv",
-        "user_image_id": "3559646e-9dfb-4236-b91b-7fad3fce7837",
-        "match_score": 0.2573,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/3c37c57a305af716d01f-770cc6de-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "770cc6de33db83d57e10",
-        "width": 1280,
-        "height": 848,
-        "sha256": "645b23a7294ff8445225b53c3e6945a5859a7d922702e8214d14a10d4e09a8e2"
       }
     },
     {
@@ -1325,7 +1327,7 @@
       "source_excerpt": "Rescuer shows up to find eight police cars searching for one tiny kitten. Dodo producer Brielle shares how one tiny kitten trapped inside a parked car engine brought together police officers, firefighters, and Long Island animal rescuer John DeBacker for an unforgettable rescue.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/d4_y61gR_WWd93iB7/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/d4_y61gR_WWd93iB7/x720",
       "source_image_alt": "Police Search for 30 Minutes For Kitten In Car Engine",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xauc93a",
@@ -1556,7 +1558,7 @@
       "source_excerpt": "Another foster cat knew exactly how to help her feel safe again. When Sera disappeared after a shelter van crash, nobody knew if she'd make it home. Dodo producer Tarang shares how she survived four weeks alone and how one remarkable foster cat named Dunder helped her finally feel safe enough to be herself again!",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/d4_yw1gR-IRLspIFU/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/d4_yw1gR-IRLspIFU/x720",
       "source_image_alt": "Missing Kitten Survives Weeks Alone After Car Crash",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xauc94q",
@@ -1590,7 +1592,7 @@
       "source_excerpt": "Wait till you see their fur grow back! Prue from Mission Paws'ible told us how these brothers survived everything together, and how one helped the other finally come out of his shell — now they're both ready for the forever homes they deserve.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/d4_ws1gR_5_5zLdDF/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/d4_ws1gR_5_5zLdDF/x720",
       "source_image_alt": "Skinny Dogs Chained To Cages Get The Ultimate Glow-Up",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xauc912",
