@@ -1,9 +1,11 @@
 {
-  "generated_at": "2026-08-06T12:02:34.675266Z",
+  "generated_at": "2026-08-07T01:29:54.997092Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "c4583c4d93cbe3326359"
+    "9afb77183f965ba7068c",
+    "3961af03187dc9c9e7db",
+    "01126e4d8442871a8adc"
   ],
   "fetch_errors": [],
   "items": [
@@ -1354,6 +1356,62 @@
       "public_eligible": false
     },
     {
+      "id": "9afb77183f965ba7068c",
+      "title": "Nobelpristagaren satsar på intelligens",
+      "url": "https://fof.se/artikel/nobelpristagaren-satsar-pa-intelligens",
+      "source": "Forskning & Framsteg",
+      "language": "sv",
+      "published_at": "2026-08-06T12:06:53Z",
+      "source_excerpt": "Som fyraåring var Demis Hassabis tillräckligt bra på schack för att vinna mot vuxna. Ett år senare deltog han i turneringar sittande på telefonkataloger för … The post Nobelpristagaren satsar på intelligens appeared first on Forskning & Framsteg .",
+      "agent_summary": "",
+      "source_fingerprint": "d7780be7800937073544",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "framsteg"
+      ],
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/586669d7-e165-482e-859f-d434c3bef9c5.webp",
+        "alt": "Nobelpristagaren satsar på intelligens",
+        "user_image_id": "586669d7-e165-482e-859f-d434c3bef9c5",
+        "match_score": 0.2351,
+        "width": 1280,
+        "height": 848
+      }
+    },
+    {
+      "id": "3961af03187dc9c9e7db",
+      "title": "Johan Eklöf: ”Vi ska vara rädda om månskenet”",
+      "url": "https://fof.se/artikel/johan-eklof-vi-ska-vara-radda-om-manskenet",
+      "source": "Forskning & Framsteg",
+      "language": "sv",
+      "published_at": "2026-08-06T12:06:51Z",
+      "source_excerpt": "1 | Du är i grunden expert på fladdermöss, och de har med natten att göra, men det här med månen är ju lite utanför … The post Johan Eklöf: ”Vi ska vara rädda om månskenet” appeared first on Forskning & Framsteg .",
+      "agent_summary": "",
+      "source_fingerprint": "9aec87258cfc995c5e37",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "framsteg"
+      ],
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/378d7d6e-9868-45d5-8604-345fe46b402c.webp",
+        "alt": "Johan Eklöf: ”Vi ska vara rädda om månskenet”",
+        "user_image_id": "378d7d6e-9868-45d5-8604-345fe46b402c",
+        "match_score": 0.2336,
+        "width": 1280,
+        "height": 848
+      }
+    },
+    {
       "id": "d54ec4a4e22279413cfc",
       "title": "Svenskt guld i internationella fysikolympiaden",
       "url": "https://fof.se/artikel/svenskt-guld-i-internationella-fysikolympiaden",
@@ -1493,60 +1551,32 @@
       }
     },
     {
-      "id": "6dfc2033f9e6ae3936d0",
-      "title": "Formgivning och allmänbildning",
-      "url": "https://fof.se/artikel/formgivning-och-allmanbildning",
-      "source": "Forskning & Framsteg",
-      "language": "sv",
-      "published_at": "2026-07-01T13:46:58Z",
-      "source_excerpt": "Hej Erik Westin, du är Forskning & Framstegs art director. Vad innebär det? – Det betyder att jag ansvarar för den tryckta tidningens form. Jag … The post Formgivning och allmänbildning appeared first on Forskning & Framsteg .",
+      "id": "01126e4d8442871a8adc",
+      "title": "Rescued as poaching victims, 6 rhinos defy all odds by giving birth to calves in the wild",
+      "url": "https://www.goodgoodgood.co/articles/rescue-rhinos-give-birth-in-the-wild",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-08-06T17:48:00Z",
+      "source_excerpt": "Six orphaned rhinos spent years being rehabilitated. Now back in the wild, they are shocking conservationists with even more progress.",
       "agent_summary": "",
-      "source_fingerprint": "859d0521684f88d5f8cc",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
+      "source_fingerprint": "1fe71d93a99e4bd90fd8",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a74c8a809a3067859a51430_6a74c8a743f0eaebe1110d5a_rescue-rhinos-give-birth-in-the-wild-featured.webp",
+      "source_image_alt": "Rescued as poaching victims, 6 rhinos defy all odds by giving birth to calves in the wild",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/rescue-rhinos-give-birth-in-the-wild",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/rescue-rhinos-give-birth-in-the-wild",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "source_tier_bonus": 2,
+      "positivity_score": 6,
       "positive_signals": [
         "curated-positive-source",
-        "forskning",
-        "framsteg"
+        "conservation",
+        "progress",
+        "rescue"
       ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/a41b5c39-0a3a-4fe0-b02c-7ab72c5a292a.webp",
-        "alt": "Formgivning och allmänbildning",
-        "user_image_id": "a41b5c39-0a3a-4fe0-b02c-7ab72c5a292a",
-        "match_score": 0.2369,
-        "width": 1280,
-        "height": 848
-      }
-    },
-    {
-      "id": "024f67c256501fcd947d",
-      "title": "Gallup utmanade bilden av den folkliga opinionen",
-      "url": "https://fof.se/artikel/gallup-utmanade-bilden-av-den-folkliga-opinionen",
-      "source": "Forskning & Framsteg",
-      "language": "sv",
-      "published_at": "2026-07-01T07:38:34Z",
-      "source_excerpt": "”Nytt institut svarar på alla stora frågor”, löd en av rubrikerna på Dagens Nyheters förstasida den 11 december 1941. Detta nya institut var Svenska Gallupinstitutet … The post Gallup utmanade bilden av den folkliga opinionen appeared first on Forskning & Framsteg .",
-      "agent_summary": "",
-      "source_fingerprint": "4d663dc7c7175e389b77",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "framsteg"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/5494fcb3-c7bf-4552-a084-22103a580955.webp",
-        "alt": "Gallup utmanade bilden av den folkliga opinionen",
-        "user_image_id": "5494fcb3-c7bf-4552-a084-22103a580955",
-        "match_score": 0.2097,
-        "width": 1280,
-        "height": 848
-      }
+      "public_eligible": false
     },
     {
       "id": "80f238b675b652b7ec88",
@@ -1558,7 +1588,7 @@
       "source_excerpt": "Another foster cat knew exactly how to help her feel safe again. When Sera disappeared after a shelter van crash, nobody knew if she'd make it home. Dodo producer Tarang shares how she survived four weeks alone and how one remarkable foster cat named Dunder helped her finally feel safe enough to be herself again!",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/d4_yw1gR-IRLspIFU/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/d4_yw1gR-IRLspIFU/x720",
       "source_image_alt": "Missing Kitten Survives Weeks Alone After Car Crash",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xauc94q",
@@ -1643,33 +1673,6 @@
         "width": 1280,
         "height": 848
       }
-    },
-    {
-      "id": "dc3f4cb487d6974e9617",
-      "title": "Recent sightings give conservationists hope for two endangered whale species: 'They may be rebounding'",
-      "url": "https://www.goodgoodgood.co/articles/blue-fin-whale-sightings-conservation",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-07-16T20:53:00Z",
-      "source_excerpt": "A new study found sightings of the species on Southern Africa’s Atlantic coast have increased in recent years.",
-      "agent_summary": "",
-      "source_fingerprint": "a0a631fb22970b37a57e",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a5580b6f675765e7374a887_sightings-off-southern-africa-suggest-blue-and-fin-whales-01.jpg",
-      "source_image_alt": "Recent sightings give conservationists hope for two endangered whale species: 'They may be rebounding'",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/blue-fin-whale-sightings-conservation",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/blue-fin-whale-sightings-conservation",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "conservation",
-        "hope"
-      ],
-      "public_eligible": false
     }
   ]
 }
