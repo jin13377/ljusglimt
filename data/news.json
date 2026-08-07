@@ -1,12 +1,8 @@
 {
-  "generated_at": "2026-08-07T01:29:54.997092Z",
+  "generated_at": "2026-08-07T10:52:24.852383Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [
-    "9afb77183f965ba7068c",
-    "3961af03187dc9c9e7db",
-    "01126e4d8442871a8adc"
-  ],
+  "new_item_ids": [],
   "fetch_errors": [],
   "items": [
     {
@@ -1329,7 +1325,7 @@
       "source_excerpt": "Rescuer shows up to find eight police cars searching for one tiny kitten. Dodo producer Brielle shares how one tiny kitten trapped inside a parked car engine brought together police officers, firefighters, and Long Island animal rescuer John DeBacker for an unforgettable rescue.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/d4_y61gR_WWd93iB7/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/d4_y61gR_WWd93iB7/x720",
       "source_image_alt": "Police Search for 30 Minutes For Kitten In Car Engine",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xauc93a",
@@ -1357,14 +1353,14 @@
     },
     {
       "id": "9afb77183f965ba7068c",
-      "title": "Nobelpristagaren satsar på intelligens",
+      "title": "Nobelpristagaren Demis Hassabis, Deepmind och jakten på superintelligens",
       "url": "https://fof.se/artikel/nobelpristagaren-satsar-pa-intelligens",
       "source": "Forskning & Framsteg",
       "language": "sv",
       "published_at": "2026-08-06T12:06:53Z",
-      "source_excerpt": "Som fyraåring var Demis Hassabis tillräckligt bra på schack för att vinna mot vuxna. Ett år senare deltog han i turneringar sittande på telefonkataloger för … The post Nobelpristagaren satsar på intelligens appeared first on Forskning & Framsteg .",
+      "source_excerpt": "Som fyraåring var Demis Hassabis tillräckligt bra på schack för att vinna mot vuxna. Ett år senare deltog han i turneringar sittande på telefonkataloger för … The post Nobelpristagaren Demis Hassabis, Deepmind och jakten på superintelligens appeared first on Forskning & Framsteg .",
       "agent_summary": "",
-      "source_fingerprint": "d7780be7800937073544",
+      "source_fingerprint": "8912a64e428ddb86eed5",
       "category": "Vetenskap",
       "source_tier_bonus": 5,
       "positivity_score": 7,
@@ -1376,7 +1372,7 @@
       "public_eligible": false,
       "user_image": {
         "url": "/news-images/user/586669d7-e165-482e-859f-d434c3bef9c5.webp",
-        "alt": "Nobelpristagaren satsar på intelligens",
+        "alt": "Nobelpristagaren Demis Hassabis, Deepmind och jakten på superintelligens",
         "user_image_id": "586669d7-e165-482e-859f-d434c3bef9c5",
         "match_score": 0.2351,
         "width": 1280,
@@ -1622,7 +1618,7 @@
       "source_excerpt": "Wait till you see their fur grow back! Prue from Mission Paws'ible told us how these brothers survived everything together, and how one helped the other finally come out of his shell — now they're both ready for the forever homes they deserve.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/d4_ws1gR_5_5zLdDF/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/d4_ws1gR_5_5zLdDF/x720",
       "source_image_alt": "Skinny Dogs Chained To Cages Get The Ultimate Glow-Up",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xauc912",
