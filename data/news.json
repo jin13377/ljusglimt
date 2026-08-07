@@ -1,8 +1,10 @@
 {
-  "generated_at": "2026-08-07T10:52:24.852383Z",
+  "generated_at": "2026-08-07T22:35:10.189018Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "6fbc902ed3b153dfafab"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -1325,7 +1327,7 @@
       "source_excerpt": "Rescuer shows up to find eight police cars searching for one tiny kitten. Dodo producer Brielle shares how one tiny kitten trapped inside a parked car engine brought together police officers, firefighters, and Long Island animal rescuer John DeBacker for an unforgettable rescue.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/d4_y61gR_WWd93iB7/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/d4_y61gR_WWd93iB7/x720",
       "source_image_alt": "Police Search for 30 Minutes For Kitten In Car Engine",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xauc93a",
@@ -1547,6 +1549,36 @@
       }
     },
     {
+      "id": "6fbc902ed3b153dfafab",
+      "title": "2026 IGARSS Hyperwall Schedule",
+      "url": "https://science.nasa.gov/earth/2026-igarss-hyperwall-schedule",
+      "source": "NASA News Releases",
+      "language": "en",
+      "published_at": "2026-08-07T18:57:34Z",
+      "source_excerpt": "IGARSS 2026 Join NASA in the Exhibit Hall (Booth #100) for Hyperwall Storytelling by NASA experts. Full Hyperwall Agenda below. MONDAY, AUGUST 10 3:00 PM Technology Enabling the Future of Earth ScienceMike Seablom3:15 PM Discovery Earth: New Missions & Technical Innovation Advancing Earth System InsightsKaren St. Germain TUESDAY, AUGUST 11 10:00 AMSTELLA: Open-Source Multisenor Platforms For Real-",
+      "agent_summary": "",
+      "source_fingerprint": "7db1b604682d13c0a3bc",
+      "source_tier_bonus": 1,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "discovery",
+        "innovation",
+        "mission",
+        "science",
+        "technology"
+      ],
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/868bab25-bbad-423f-871d-cba0ddc6a2f3-1.webp",
+        "alt": "2026 IGARSS Hyperwall Schedule",
+        "user_image_id": "868bab25-bbad-423f-871d-cba0ddc6a2f3-1",
+        "match_score": 0.253,
+        "width": 1280,
+        "height": 848
+      }
+    },
+    {
       "id": "01126e4d8442871a8adc",
       "title": "Rescued as poaching victims, 6 rhinos defy all odds by giving birth to calves in the wild",
       "url": "https://www.goodgoodgood.co/articles/rescue-rhinos-give-birth-in-the-wild",
@@ -1618,7 +1650,7 @@
       "source_excerpt": "Wait till you see their fur grow back! Prue from Mission Paws'ible told us how these brothers survived everything together, and how one helped the other finally come out of his shell — now they're both ready for the forever homes they deserve.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/d4_ws1gR_5_5zLdDF/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/d4_ws1gR_5_5zLdDF/x720",
       "source_image_alt": "Skinny Dogs Chained To Cages Get The Ultimate Glow-Up",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xauc912",
@@ -1642,33 +1674,6 @@
         "together"
       ],
       "public_eligible": false
-    },
-    {
-      "id": "2ab3e5d597e8e7474149",
-      "title": "When It Comes to Addiction Treatment, ‘Any Door Should Be the Right Door’",
-      "url": "https://reasonstobecheerful.world/hub-and-spoke-addiction-treatment",
-      "source": "Reasons to be Cheerful",
-      "language": "en",
-      "published_at": "2026-07-24T08:00:24Z",
-      "source_excerpt": "This article was originally published by the Daily Yonder, which is dedicated to uplifting the stories of rural people. Holly Warren was recently leafing through one of her old medical school textbooks, trying to recall how much instruction she’d received in addiction medicine — trying to recall, “Did we even talk about this? Was... The post When It Comes to Addiction Treatment, ‘Any Door Should B",
-      "agent_summary": "",
-      "source_fingerprint": "34d0df1a815d055b2e64",
-      "source_tier_bonus": 2,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "treat",
-        "treatment"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/431c3154-4dd0-42c6-ab09-d5e8191643ee.webp",
-        "alt": "When It Comes to Addiction Treatment, ‘Any Door Should Be the Right Door’",
-        "user_image_id": "431c3154-4dd0-42c6-ab09-d5e8191643ee",
-        "match_score": 0.2319,
-        "width": 1280,
-        "height": 848
-      }
     }
   ]
 }
