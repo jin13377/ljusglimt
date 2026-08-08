@@ -1,16 +1,9 @@
 {
-  "generated_at": "2026-08-08T10:33:21.357563Z",
+  "generated_at": "2026-08-08T11:27:49.192914Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [
-    "32b1714f350cc741a7c9"
-  ],
-  "fetch_errors": [
-    {
-      "source": "Mötesplats Social Innovation",
-      "error": "HTTP Error 403: Forbidden"
-    }
-  ],
+  "new_item_ids": [],
+  "fetch_errors": [],
   "items": [
     {
       "id": "0b87daf79218ce385c31",
@@ -1629,7 +1622,7 @@
       "source_excerpt": "Another foster cat knew exactly how to help her feel safe again. When Sera disappeared after a shelter van crash, nobody knew if she'd make it home. Dodo producer Tarang shares how she survived four weeks alone and how one remarkable foster cat named Dunder helped her finally feel safe enough to be herself again!",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/d4_yw1gR-IRLspIFU/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/d4_yw1gR-IRLspIFU/x720",
       "source_image_alt": "Missing Kitten Survives Weeks Alone After Car Crash",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xauc94q",
