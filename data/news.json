@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-08T22:28:50.923253Z",
+  "generated_at": "2026-08-09T10:34:47.394571Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [],
@@ -429,52 +429,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "273484e6265bcfb32ad63f2d1ada4c34b8bdadcd88dd46c95261cc760fae40d5"
-      }
-    },
-    {
-      "id": "6d39b13679ff7bb52ec1",
-      "title": "Glapp mellan policy och praktik för akademiskt samhällsengagemang",
-      "url": "https://socialinnovation.se/nyheter/glapp-mellan-policy-och-praktik-for-akademiskt-samhallsengagemang",
-      "source": "Mötesplats Social Innovation",
-      "language": "sv",
-      "published_at": "2026-05-11T06:38:36Z",
-      "source_excerpt": "Hur kan svenska lärosäten bättre stötta akademiskt engagemang i social innovation som bidrar till omställningen till hållbara samhällen? Enligt ny forskning behövs tydligare beskrivningar av hur ambitionerna i styrdokument ska genomföras i praktiken. Ett Vinnova-finansierat forskningsprojekt som genomförts av Mötesplats Social Innovation (MSI) visar att svenska lärosäten har höga ambitioner i sina",
-      "agent_summary": "",
-      "source_fingerprint": "5f39680c626caee72eca",
-      "source_video": {
-        "provider": "youtube",
-        "video_id": "fySjujD-kEs",
-        "embed_url": "https://www.youtube-nocookie.com/embed/fySjujD-kEs",
-        "source_url": "https://www.youtube.com/watch?v=fySjujD-kEs",
-        "title": "Glapp mellan policy och praktik för akademiskt samhällsengagemang"
-      },
-      "category": "Innovation",
-      "source_tier_bonus": 5,
-      "positivity_score": 9,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "hållbar",
-        "innovation",
-        "omställning"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/875acd2e-97c1-4178-853f-484bf04ff226.webp",
-        "alt": "Glapp mellan policy och praktik för akademiskt samhällsengagemang",
-        "user_image_id": "875acd2e-97c1-4178-853f-484bf04ff226",
-        "match_score": 0.2206,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/6d39b13679ff7bb52ec1-5f39680c-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "5f39680c626caee72eca",
-        "width": 1280,
-        "height": 848,
-        "sha256": "f88a3ae8e41db3efa74997bb6765f7186469861b26185851852cb47d1d225c95"
       }
     },
     {
@@ -1361,7 +1315,7 @@
       "source_excerpt": "Rescuer shows up to find eight police cars searching for one tiny kitten. Dodo producer Brielle shares how one tiny kitten trapped inside a parked car engine brought together police officers, firefighters, and Long Island animal rescuer John DeBacker for an unforgettable rescue.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/d4_y61gR_WWd93iB7/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/d4_y61gR_WWd93iB7/x720",
       "source_image_alt": "Police Search for 30 Minutes For Kitten In Car Engine",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xauc93a",
@@ -1555,6 +1509,34 @@
       }
     },
     {
+      "id": "bc3b83b6e54eb8d65a1c",
+      "title": "Colemans rapport om skolan biter ännu efter 60 år",
+      "url": "https://fof.se/artikel/colemans-legendariska-rapport-om-skolan-biter-annu-efter-60-ar",
+      "source": "Forskning & Framsteg",
+      "language": "sv",
+      "published_at": "2026-07-02T05:03:10Z",
+      "source_excerpt": "En tryckande varm sommardag i Washington DC 1966 publicerade den amerikanske sociologen James S. Coleman en rapport som präglat den internationella skoldebatten sedan dess. Studien … The post Colemans rapport om skolan biter ännu efter 60 år appeared first on Forskning & Framsteg .",
+      "agent_summary": "",
+      "source_fingerprint": "5dafa29727650a6b9ba4",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "framsteg"
+      ],
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/875acd2e-97c1-4178-853f-484bf04ff226.webp",
+        "alt": "Colemans rapport om skolan biter ännu efter 60 år",
+        "user_image_id": "875acd2e-97c1-4178-853f-484bf04ff226",
+        "match_score": 0.2532,
+        "width": 1280,
+        "height": 848
+      }
+    },
+    {
       "id": "6fbc902ed3b153dfafab",
       "title": "2026 IGARSS Hyperwall Schedule",
       "url": "https://science.nasa.gov/earth/2026-igarss-hyperwall-schedule",
@@ -1622,7 +1604,7 @@
       "source_excerpt": "Another foster cat knew exactly how to help her feel safe again. When Sera disappeared after a shelter van crash, nobody knew if she'd make it home. Dodo producer Tarang shares how she survived four weeks alone and how one remarkable foster cat named Dunder helped her finally feel safe enough to be herself again!",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/d4_yw1gR-IRLspIFU/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/d4_yw1gR-IRLspIFU/x720",
       "source_image_alt": "Missing Kitten Survives Weeks Alone After Car Crash",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xauc94q",
