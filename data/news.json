@@ -1,8 +1,11 @@
 {
-  "generated_at": "2026-08-09T22:30:55.656322Z",
+  "generated_at": "2026-08-10T11:08:16.838026Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "6a43092366a937451f8c",
+    "bb444b4e90edfd94807f"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -570,6 +573,33 @@
         "height": 848,
         "sha256": "da35e92250c0515d62aedd5149cdcfa9db32493eb90f22ded0138d83d4348efb"
       }
+    },
+    {
+      "id": "6a43092366a937451f8c",
+      "title": "Ny spindel upptäckt i Saudiarabiens berg",
+      "url": "https://forskning.se/2026/08/10/ny-spindelart-upptackt-i-saudiarabiens-berg-2",
+      "source": "Forskning.se",
+      "language": "sv",
+      "published_at": "2026-08-10T09:57:24Z",
+      "source_excerpt": "Bergsområdena i södra Saudiarabien är bland de minst utforskade delarna av Arabiska halvön när det gäller spindlar. Nu har forskare upptäckt en tidigare okänd art i regionen Asir. Området skiljer sig från de ökenlandskap som ofta förknippas med landet. Här finns höga berg, skogar och en rik biologisk mångfald. Arten har fått namnet Oecobius asirensis, […] The post Ny spindel upptäckt i Saudiarabie",
+      "agent_summary": "",
+      "source_fingerprint": "a551e7078417dab841a0",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/08/Oecobiusasirensis-spindel-1024x576.jpg",
+      "source_image_alt": "Ny spindel upptäckt i Saudiarabiens berg",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/08/10/ny-spindelart-upptackt-i-saudiarabiens-berg-2",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/08/10/ny-spindelart-upptackt-i-saudiarabiens-berg-2",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "upptäckt"
+      ],
+      "public_eligible": true
     },
     {
       "id": "deb41ec6a28380a6bc2c",
@@ -1248,6 +1278,35 @@
       }
     },
     {
+      "id": "bb444b4e90edfd94807f",
+      "title": "Ben från stenålderskvinna med foster upptäckt på Lilla Karlsö",
+      "url": "https://fof.se/artikel/ben-fran-kvinna-med-foster-upptackt-pa-lilla-karlso",
+      "source": "Forskning & Framsteg",
+      "language": "sv",
+      "published_at": "2026-08-10T10:11:18Z",
+      "source_excerpt": "Det är början av augusti och arkeoosteologerna Alexander Sjöstrand och Olivia Bartholdson befinner sig fem meter ner i grottan Suder Vagnhus på Lilla Karlsö. De … The post Ben från stenålderskvinna med foster upptäckt på Lilla Karlsö appeared first on Forskning & Framsteg .",
+      "agent_summary": "",
+      "source_fingerprint": "e62ea957ecd75e4431aa",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 9,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "framsteg",
+        "upptäckt"
+      ],
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/875acd2e-97c1-4178-853f-484bf04ff226.webp",
+        "alt": "Ben från stenålderskvinna med foster upptäckt på Lilla Karlsö",
+        "user_image_id": "875acd2e-97c1-4178-853f-484bf04ff226",
+        "match_score": 0.2532,
+        "width": 1280,
+        "height": 848
+      }
+    },
+    {
       "id": "92c6c8c12d98c0ead6ee",
       "title": "Så stöttas ultratätt väte av forskningssystemet",
       "url": "https://fof.se/artikel/sa-stottas-ultratatt-vate-av-forskningssystemet",
@@ -1476,62 +1535,6 @@
         "alt": "Hur vet man att en art är utrotad?",
         "user_image_id": "290629d1-eec3-4f31-9644-49e96e973112",
         "match_score": 0.2279,
-        "width": 1280,
-        "height": 848
-      }
-    },
-    {
-      "id": "ddf4ec9bc8eefa108799",
-      "title": "3 gånger när forskare haft helt fel",
-      "url": "https://fof.se/artikel/3-ganger-nar-forskare-haft-helt-fel",
-      "source": "Forskning & Framsteg",
-      "language": "sv",
-      "published_at": "2026-07-02T12:25:02Z",
-      "source_excerpt": "Alla vetenskapliga resultat är i viss mån provisoriska. Det kan komma nya rön som ställer saker i ett nytt ljus, även när det gäller studier … The post 3 gånger när forskare haft helt fel appeared first on Forskning & Framsteg .",
-      "agent_summary": "",
-      "source_fingerprint": "a23d272334c94e4a377a",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "framsteg"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/1d15a8a1-5494-4ae7-87ef-41921a20b43f.webp",
-        "alt": "3 gånger när forskare haft helt fel",
-        "user_image_id": "1d15a8a1-5494-4ae7-87ef-41921a20b43f",
-        "match_score": 0.2103,
-        "width": 1280,
-        "height": 848
-      }
-    },
-    {
-      "id": "bc3b83b6e54eb8d65a1c",
-      "title": "Colemans rapport om skolan biter ännu efter 60 år",
-      "url": "https://fof.se/artikel/colemans-legendariska-rapport-om-skolan-biter-annu-efter-60-ar",
-      "source": "Forskning & Framsteg",
-      "language": "sv",
-      "published_at": "2026-07-02T05:03:10Z",
-      "source_excerpt": "En tryckande varm sommardag i Washington DC 1966 publicerade den amerikanske sociologen James S. Coleman en rapport som präglat den internationella skoldebatten sedan dess. Studien … The post Colemans rapport om skolan biter ännu efter 60 år appeared first on Forskning & Framsteg .",
-      "agent_summary": "",
-      "source_fingerprint": "5dafa29727650a6b9ba4",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "framsteg"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/875acd2e-97c1-4178-853f-484bf04ff226.webp",
-        "alt": "Colemans rapport om skolan biter ännu efter 60 år",
-        "user_image_id": "875acd2e-97c1-4178-853f-484bf04ff226",
-        "match_score": 0.2532,
         "width": 1280,
         "height": 848
       }
