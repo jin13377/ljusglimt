@@ -1,9 +1,16 @@
 {
-  "generated_at": "2026-08-10T22:37:06.775397Z",
+  "generated_at": "2026-08-11T10:50:31.956429Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
-  "fetch_errors": [],
+  "new_item_ids": [
+    "2827bcccc42c5a6dc464"
+  ],
+  "fetch_errors": [
+    {
+      "source": "Mötesplats Social Innovation",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
   "items": [
     {
       "id": "0b87daf79218ce385c31",
@@ -1371,7 +1378,7 @@
       "source_excerpt": "Rescuer shows up to find eight police cars searching for one tiny kitten. Dodo producer Brielle shares how one tiny kitten trapped inside a parked car engine brought together police officers, firefighters, and Long Island animal rescuer John DeBacker for an unforgettable rescue.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/d4_y61gR_WWd93iB7/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/d4_y61gR_WWd93iB7/x720",
       "source_image_alt": "Police Search for 30 Minutes For Kitten In Car Engine",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xauc93a",
@@ -1396,6 +1403,34 @@
         "together"
       ],
       "public_eligible": false
+    },
+    {
+      "id": "2827bcccc42c5a6dc464",
+      "title": "Så ser du solförmörkelsen utan att titta på solen",
+      "url": "https://fof.se/artikel/sa-ser-du-solformorkelsen-utan-att-titta-pa-solen",
+      "source": "Forskning & Framsteg",
+      "language": "sv",
+      "published_at": "2026-08-11T09:53:46Z",
+      "source_excerpt": "Framåt kvällen på onsdag den 12 augusti inträffar en solförmörkelse, då månens skugga sveper fram över jorden. Sverige befinner sig i utkanten av skuggan, men … The post Så ser du solförmörkelsen utan att titta på solen appeared first on Forskning & Framsteg .",
+      "agent_summary": "",
+      "source_fingerprint": "eb56ef60d3331f5bd90f",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "framsteg"
+      ],
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/9d2d5fa4-a804-4fc4-982e-03b147d2b634.webp",
+        "alt": "Så ser du solförmörkelsen utan att titta på solen",
+        "user_image_id": "9d2d5fa4-a804-4fc4-982e-03b147d2b634",
+        "match_score": 0.24,
+        "width": 1280,
+        "height": 848
+      }
     },
     {
       "id": "9afb77183f965ba7068c",
@@ -1509,34 +1544,6 @@
       }
     },
     {
-      "id": "4a4dc885bf850aa78fd2",
-      "title": "Hur vet man att en art är utrotad?",
-      "url": "https://fof.se/artikel/hur-vet-man-att-en-art-ar-utrotad",
-      "source": "Forskning & Framsteg",
-      "language": "sv",
-      "published_at": "2026-07-02T15:35:05Z",
-      "source_excerpt": "Mer än 29 748 växtarter och 411 svamparter är internationellt rödlistade. Jordbruk och vattenbruk bedöms som de största hoten mot den biologiska mångfalden, följt av skogsavverkning … The post Hur vet man att en art är utrotad? appeared first on Forskning & Framsteg .",
-      "agent_summary": "",
-      "source_fingerprint": "1b8104c19a9d8e62ef77",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "framsteg"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/290629d1-eec3-4f31-9644-49e96e973112.webp",
-        "alt": "Hur vet man att en art är utrotad?",
-        "user_image_id": "290629d1-eec3-4f31-9644-49e96e973112",
-        "match_score": 0.2279,
-        "width": 1280,
-        "height": 848
-      }
-    },
-    {
       "id": "01126e4d8442871a8adc",
       "title": "Rescued as poaching victims, 6 rhinos defy all odds by giving birth to calves in the wild",
       "url": "https://www.goodgoodgood.co/articles/rescue-rhinos-give-birth-in-the-wild",
@@ -1608,7 +1615,7 @@
       "source_excerpt": "Wait till you see their fur grow back! Prue from Mission Paws'ible told us how these brothers survived everything together, and how one helped the other finally come out of his shell — now they're both ready for the forever homes they deserve.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/d4_ws1gR_5_5zLdDF/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/d4_ws1gR_5_5zLdDF/x720",
       "source_image_alt": "Skinny Dogs Chained To Cages Get The Ultimate Glow-Up",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xauc912",
