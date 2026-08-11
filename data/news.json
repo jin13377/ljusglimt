@@ -1,16 +1,13 @@
 {
-  "generated_at": "2026-08-11T10:50:31.956429Z",
+  "generated_at": "2026-08-11T22:41:36.455479Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "2827bcccc42c5a6dc464"
+    "4946a3c6985f1fc12bfb",
+    "530f063e34b49ac0389f",
+    "402e9f00ad15043cc24a"
   ],
-  "fetch_errors": [
-    {
-      "source": "Mötesplats Social Innovation",
-      "error": "HTTP Error 403: Forbidden"
-    }
-  ],
+  "fetch_errors": [],
   "items": [
     {
       "id": "0b87daf79218ce385c31",
@@ -1282,6 +1279,35 @@
       }
     },
     {
+      "id": "4946a3c6985f1fc12bfb",
+      "title": "Mänsklighetens samarbete i fokus på Nobelprismuseet",
+      "url": "https://fof.se/artikel/mansklighetens-samarbete-i-fokus-pa-nobelprismuseet",
+      "source": "Forskning & Framsteg",
+      "language": "sv",
+      "published_at": "2026-08-11T14:02:01Z",
+      "source_excerpt": "Det första jag såg på utställningen Celler, nerver, gener var ett vitt hörn med uppradade textplattor och några bruna montrar. Men saknaden av skenet bedrar! … The post Mänsklighetens samarbete i fokus på Nobelprismuseet appeared first on Forskning & Framsteg .",
+      "agent_summary": "",
+      "source_fingerprint": "9bd6a162f12e439bd285",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 9,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "framsteg",
+        "samarbete"
+      ],
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/290629d1-eec3-4f31-9644-49e96e973112-1.webp",
+        "alt": "Mänsklighetens samarbete i fokus på Nobelprismuseet",
+        "user_image_id": "290629d1-eec3-4f31-9644-49e96e973112-1",
+        "match_score": 0.2369,
+        "width": 1280,
+        "height": 848
+      }
+    },
+    {
       "id": "bb444b4e90edfd94807f",
       "title": "Ben från stenålderskvinna med foster upptäckt på Lilla Karlsö",
       "url": "https://fof.se/artikel/ben-fran-kvinna-med-foster-upptackt-pa-lilla-karlso",
@@ -1369,6 +1395,41 @@
       }
     },
     {
+      "id": "530f063e34b49ac0389f",
+      "title": "Bride Uses Her Wedding To Get Stray Kitten Adopted",
+      "url": "https://www.dailymotion.com/video/xawyvse",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-08-11T20:33:53Z",
+      "source_excerpt": "The kitten left the wedding with her forever family! When Gabrielle found a stray kitten just before her wedding, she came up with the sweetest way to help her find a forever home. Dodo producer Monica shares how one wedding celebration changed the kitten's life.",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s1.dmcdn.net/v/dLrrk1gUuTFDo7hwv/x720",
+      "source_image_alt": "Bride Uses Her Wedding To Get Stray Kitten Adopted",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xawyvse",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xawyvse",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xawyvse",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xawyvse",
+        "source_url": "https://www.dailymotion.com/video/xawyvse",
+        "title": "Bride Uses Her Wedding To Get Stray Kitten Adopted"
+      },
+      "source_fingerprint": "92733942f482c9917b1f",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "adopted",
+        "kitten"
+      ],
+      "public_eligible": false
+    },
+    {
       "id": "d219a9b38ed1b950891b",
       "title": "Police Search for 30 Minutes For Kitten In Car Engine",
       "url": "https://www.dailymotion.com/video/xauc93a",
@@ -1401,6 +1462,41 @@
         "kitten",
         "rescue",
         "together"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "402e9f00ad15043cc24a",
+      "title": "Rescuers Knew This 12-Pound Dog Deserved So Much More",
+      "url": "https://www.dailymotion.com/video/xawz81a",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-08-11T21:48:58Z",
+      "source_excerpt": "Wait until you see how spoiled she is! When One Tail At A Time rescued Poppy Seed, they focused on one thing: making sure she never had to struggle again. Dodo editor Monica shares how one tiny dog went from simply surviving to living a life full of comfort, warmth, and love.",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s1.dmcdn.net/v/dLvjk1gUvZmAeH6hY/x720",
+      "source_image_alt": "Rescuers Knew This 12-Pound Dog Deserved So Much More",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xawz81a",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xawz81a",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xawz81a",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xawz81a",
+        "source_url": "https://www.dailymotion.com/video/xawz81a",
+        "title": "Rescuers Knew This 12-Pound Dog Deserved So Much More"
+      },
+      "source_fingerprint": "5e824960baa390205588",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "love",
+        "rescue"
       ],
       "public_eligible": false
     },
@@ -1517,33 +1613,6 @@
       }
     },
     {
-      "id": "a659456cbc658977395d",
-      "title": "Nytt åldersrekord för svenska fåglar",
-      "url": "https://www.natursidan.se/nyheter/nytt-aldersrekord-for-svenska-faglar",
-      "source": "Natursidan",
-      "language": "sv",
-      "published_at": "2026-07-10T11:40:30Z",
-      "source_excerpt": "Den 49-åriga sillgrisslan slog inte bara rekordet, den är även förälder under sitt rekordår.",
-      "agent_summary": "",
-      "source_fingerprint": "bcabf4a061a68701f9c6",
-      "category": "Natur",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "rekord"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/290629d1-eec3-4f31-9644-49e96e973112-1.webp",
-        "alt": "Nytt åldersrekord för svenska fåglar",
-        "user_image_id": "290629d1-eec3-4f31-9644-49e96e973112-1",
-        "match_score": 0.1984,
-        "width": 1280,
-        "height": 848
-      }
-    },
-    {
       "id": "01126e4d8442871a8adc",
       "title": "Rescued as poaching victims, 6 rhinos defy all odds by giving birth to calves in the wild",
       "url": "https://www.goodgoodgood.co/articles/rescue-rhinos-give-birth-in-the-wild",
@@ -1568,75 +1637,6 @@
         "conservation",
         "progress",
         "rescue"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "80f238b675b652b7ec88",
-      "title": "Missing Kitten Survives Weeks Alone After Car Crash",
-      "url": "https://www.dailymotion.com/video/xauc94q",
-      "source": "The Dodo",
-      "language": "en",
-      "published_at": "2026-08-02T23:34:35Z",
-      "source_excerpt": "Another foster cat knew exactly how to help her feel safe again. When Sera disappeared after a shelter van crash, nobody knew if she'd make it home. Dodo producer Tarang shares how she survived four weeks alone and how one remarkable foster cat named Dunder helped her finally feel safe enough to be herself again!",
-      "agent_summary": "",
-      "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/d4_yw1gR-IRLspIFU/x720",
-      "source_image_alt": "Missing Kitten Survives Weeks Alone After Car Crash",
-      "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xauc94q",
-      "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xauc94q",
-      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
-      "source_video": {
-        "provider": "dailymotion",
-        "video_id": "xauc94q",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xauc94q",
-        "source_url": "https://www.dailymotion.com/video/xauc94q",
-        "title": "Missing Kitten Survives Weeks Alone After Car Crash"
-      },
-      "source_fingerprint": "81b3e58ad4baaf1cd28f",
-      "category": "Djur",
-      "source_tier_bonus": 4,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "kitten"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "3f089379fc2b1ac52060",
-      "title": "Skinny Dogs Chained To Cages Get The Ultimate Glow-Up",
-      "url": "https://www.dailymotion.com/video/xauc912",
-      "source": "The Dodo",
-      "language": "en",
-      "published_at": "2026-08-02T23:34:07Z",
-      "source_excerpt": "Wait till you see their fur grow back! Prue from Mission Paws'ible told us how these brothers survived everything together, and how one helped the other finally come out of his shell — now they're both ready for the forever homes they deserve.",
-      "agent_summary": "",
-      "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/d4_ws1gR_5_5zLdDF/x720",
-      "source_image_alt": "Skinny Dogs Chained To Cages Get The Ultimate Glow-Up",
-      "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xauc912",
-      "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xauc912",
-      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
-      "source_video": {
-        "provider": "dailymotion",
-        "video_id": "xauc912",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xauc912",
-        "source_url": "https://www.dailymotion.com/video/xauc912",
-        "title": "Skinny Dogs Chained To Cages Get The Ultimate Glow-Up"
-      },
-      "source_fingerprint": "c77f7240bc8908c4eae4",
-      "category": "Djur",
-      "source_tier_bonus": 4,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "mission",
-        "together"
       ],
       "public_eligible": false
     },
