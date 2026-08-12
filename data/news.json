@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-12T10:59:53.612987Z",
+  "generated_at": "2026-08-12T22:40:42.284367Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "4b85e321cb8f14fe61b4",
-    "e79fd1f733ee9c10f3eb",
-    "2e39358c433140c0fff4"
+    "5060f80c681d50e712e5",
+    "5d46e27331497bcd48b2",
+    "9c4b5670f5c0e943f2dd"
   ],
   "fetch_errors": [
     {
@@ -614,17 +614,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "fa19906b9f4abb9036cecdfffe92ccd69f7d4891d7e72f0ee1d3e0848bc917ba"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/4b85e321cb8f14fe61b4-096cb972d7586aa6f7dd-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: Ny metod kan lösa gåtan med dåligt badvatten",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "096cb972d7586aa6f7dd",
-        "width": 1280,
-        "height": 848,
-        "sha256": "3de632ea06c7a5499ea5b20b5d61730418a61c02b570d9f3dcc6f44c20a15af9",
-        "generated_at": "2026-08-12T11:00:14Z"
       }
     },
     {
@@ -1511,40 +1500,32 @@
       "public_eligible": false
     },
     {
-      "id": "d219a9b38ed1b950891b",
-      "title": "Police Search for 30 Minutes For Kitten In Car Engine",
-      "url": "https://www.dailymotion.com/video/xauc93a",
-      "source": "The Dodo",
-      "language": "en",
-      "published_at": "2026-08-02T23:34:40Z",
-      "source_excerpt": "Rescuer shows up to find eight police cars searching for one tiny kitten. Dodo producer Brielle shares how one tiny kitten trapped inside a parked car engine brought together police officers, firefighters, and Long Island animal rescuer John DeBacker for an unforgettable rescue.",
+      "id": "5060f80c681d50e712e5",
+      "title": "Möt människorna som berörs",
+      "url": "https://fof.se/artikel/mot-manniskorna-som-berors",
+      "source": "Forskning & Framsteg",
+      "language": "sv",
+      "published_at": "2026-08-12T13:34:35Z",
+      "source_excerpt": "Blackbirding är ett ord som fastnat i mitt medvetande, sedan jag läste Nobelpristagaren Jean-Marie Gustave Le Clézios berättelse Raga under försommaren. Ordet har dessvärre inget … The post Möt människorna som berörs appeared first on Forskning & Framsteg .",
       "agent_summary": "",
-      "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/d4_y61gR_WWd93iB7/x720",
-      "source_image_alt": "Police Search for 30 Minutes For Kitten In Car Engine",
-      "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xauc93a",
-      "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xauc93a",
-      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
-      "source_video": {
-        "provider": "dailymotion",
-        "video_id": "xauc93a",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xauc93a",
-        "source_url": "https://www.dailymotion.com/video/xauc93a",
-        "title": "Police Search for 30 Minutes For Kitten In Car Engine"
-      },
-      "source_fingerprint": "60f6ae24605cf15f62b6",
-      "category": "Djur",
-      "source_tier_bonus": 4,
-      "positivity_score": 8,
+      "source_fingerprint": "564024e7ffafb28c0de0",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
       "positive_signals": [
         "curated-positive-source",
-        "kitten",
-        "rescue",
-        "together"
+        "forskning",
+        "framsteg"
       ],
-      "public_eligible": false
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/9d2d5fa4-a804-4fc4-982e-03b147d2b634.webp",
+        "alt": "Möt människorna som berörs",
+        "user_image_id": "9d2d5fa4-a804-4fc4-982e-03b147d2b634",
+        "match_score": 0.24,
+        "width": 1280,
+        "height": 848
+      }
     },
     {
       "id": "2e39358c433140c0fff4",
@@ -1610,34 +1591,6 @@
       "public_eligible": false
     },
     {
-      "id": "2827bcccc42c5a6dc464",
-      "title": "Så ser du solförmörkelsen utan att titta på solen",
-      "url": "https://fof.se/artikel/sa-ser-du-solformorkelsen-utan-att-titta-pa-solen",
-      "source": "Forskning & Framsteg",
-      "language": "sv",
-      "published_at": "2026-08-11T09:53:46Z",
-      "source_excerpt": "Framåt kvällen på onsdag den 12 augusti inträffar en solförmörkelse, då månens skugga sveper fram över jorden. Sverige befinner sig i utkanten av skuggan, men … The post Så ser du solförmörkelsen utan att titta på solen appeared first on Forskning & Framsteg .",
-      "agent_summary": "",
-      "source_fingerprint": "eb56ef60d3331f5bd90f",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "framsteg"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/9d2d5fa4-a804-4fc4-982e-03b147d2b634.webp",
-        "alt": "Så ser du solförmörkelsen utan att titta på solen",
-        "user_image_id": "9d2d5fa4-a804-4fc4-982e-03b147d2b634",
-        "match_score": 0.24,
-        "width": 1280,
-        "height": 848
-      }
-    },
-    {
       "id": "01126e4d8442871a8adc",
       "title": "Rescued as poaching victims, 6 rhinos defy all odds by giving birth to calves in the wild",
       "url": "https://www.goodgoodgood.co/articles/rescue-rhinos-give-birth-in-the-wild",
@@ -1666,29 +1619,63 @@
       "public_eligible": false
     },
     {
-      "id": "dc3f4cb487d6974e9617",
-      "title": "Recent sightings give conservationists hope for two endangered whale species: 'They may be rebounding'",
-      "url": "https://www.goodgoodgood.co/articles/blue-fin-whale-sightings-conservation",
+      "id": "5d46e27331497bcd48b2",
+      "title": "Cat Refuses To Give Up Her Cone 13 Years After Surgery",
+      "url": "https://www.dailymotion.com/video/xax5tre",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-08-12T14:03:52Z",
+      "source_excerpt": "She decided the cone was a permanent accessory! Taylor treated her post-surgery cone less like medical equipment and more like her favorite toy. Dodo editor Valentina shares the hilarious habit that stuck around for the next 13 years.",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s2.dmcdn.net/v/dN4xg1gV8iyu3tyKX/x720",
+      "source_image_alt": "Cat Refuses To Give Up Her Cone 13 Years After Surgery",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xax5tre",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xax5tre",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xax5tre",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xax5tre",
+        "source_url": "https://www.dailymotion.com/video/xax5tre",
+        "title": "Cat Refuses To Give Up Her Cone 13 Years After Surgery"
+      },
+      "source_fingerprint": "0e8ff46c8a54b9155ee0",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 5,
+      "positive_signals": [
+        "curated-positive-source",
+        "treat"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "9c4b5670f5c0e943f2dd",
+      "title": "Researchers use drones with suction cups to tag whales, allowing them to study the species from the sky",
+      "url": "https://www.goodgoodgood.co/articles/hawaii-suction-cup-drone-tagging-whales",
       "source": "Good Good Good",
       "language": "en",
-      "published_at": "2026-07-16T20:53:00Z",
-      "source_excerpt": "A new study found sightings of the species on Southern Africa’s Atlantic coast have increased in recent years.",
+      "published_at": "2026-08-11T17:43:00Z",
+      "source_excerpt": "The approach is being called a “revolutionary” non-invasive conservation method.",
       "agent_summary": "",
-      "source_fingerprint": "a0a631fb22970b37a57e",
+      "source_fingerprint": "2f410df5b678339182b6",
       "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a5580b6f675765e7374a887_sightings-off-southern-africa-suggest-blue-and-fin-whales-01.jpg",
-      "source_image_alt": "Recent sightings give conservationists hope for two endangered whale species: 'They may be rebounding'",
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a7b5ebead08b4a6c9f8c8ae_6a7b5ebdf4adb636ca1ab10f_hawaii-suction-cup-drone-tagging-whales-featured.webp",
+      "source_image_alt": "Researchers use drones with suction cups to tag whales, allowing them to study the species from the sky",
       "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/blue-fin-whale-sightings-conservation",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/hawaii-suction-cup-drone-tagging-whales",
       "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/blue-fin-whale-sightings-conservation",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/hawaii-suction-cup-drone-tagging-whales",
       "source_image_verification_method": "rss-syndicated-thumbnail-v1",
       "source_tier_bonus": 2,
-      "positivity_score": 6,
+      "positivity_score": 5,
       "positive_signals": [
         "curated-positive-source",
         "conservation",
-        "hope"
+        "research"
       ],
       "public_eligible": false
     }
