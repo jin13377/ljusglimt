@@ -614,6 +614,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "fa19906b9f4abb9036cecdfffe92ccd69f7d4891d7e72f0ee1d3e0848bc917ba"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/4b85e321cb8f14fe61b4-096cb972d7586aa6f7dd-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Ny metod kan lösa gåtan med dåligt badvatten",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "096cb972d7586aa6f7dd",
+        "width": 1280,
+        "height": 848,
+        "sha256": "3de632ea06c7a5499ea5b20b5d61730418a61c02b570d9f3dcc6f44c20a15af9",
+        "generated_at": "2026-08-12T11:00:14Z"
       }
     },
     {
