@@ -1,13 +1,18 @@
 {
-  "generated_at": "2026-08-11T22:41:36.455479Z",
+  "generated_at": "2026-08-12T10:59:53.612987Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "4946a3c6985f1fc12bfb",
-    "530f063e34b49ac0389f",
-    "402e9f00ad15043cc24a"
+    "4b85e321cb8f14fe61b4",
+    "e79fd1f733ee9c10f3eb",
+    "2e39358c433140c0fff4"
   ],
-  "fetch_errors": [],
+  "fetch_errors": [
+    {
+      "source": "Mötesplats Social Innovation",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
   "items": [
     {
       "id": "0b87daf79218ce385c31",
@@ -573,6 +578,42 @@
         "width": 1280,
         "height": 848,
         "sha256": "da35e92250c0515d62aedd5149cdcfa9db32493eb90f22ded0138d83d4348efb"
+      }
+    },
+    {
+      "id": "4b85e321cb8f14fe61b4",
+      "title": "Ny metod kan lösa gåtan med dåligt badvatten",
+      "url": "https://www.extrakt.se/ny-metod-kan-losa-gatan-med-daligt-badvatten",
+      "source": "Extrakt",
+      "language": "sv",
+      "published_at": "2026-08-12T07:26:29Z",
+      "source_excerpt": "När badvattnet blir otjänligt är det inte alltid lätt att veta vad som orsakar problemet. En ny metod kan hjälpa kommuner att hitta källan till föroreningarna, så att badvattnet kan bli rent igen.",
+      "agent_summary": "",
+      "source_fingerprint": "096cb972d7586aa6f7dd",
+      "category": "Miljö",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "ny metod"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/586669d7-e165-482e-859f-d434c3bef9c5.webp",
+        "alt": "Ny metod kan lösa gåtan med dåligt badvatten",
+        "user_image_id": "586669d7-e165-482e-859f-d434c3bef9c5",
+        "match_score": 0.2669,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/4b85e321cb8f14fe61b4-096cb972-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "096cb972d7586aa6f7dd",
+        "width": 1280,
+        "height": 848,
+        "sha256": "fa19906b9f4abb9036cecdfffe92ccd69f7d4891d7e72f0ee1d3e0848bc917ba"
       }
     },
     {
@@ -1279,6 +1320,35 @@
       }
     },
     {
+      "id": "e79fd1f733ee9c10f3eb",
+      "title": "”Så kan författarskapet stärkas inom forskningen”",
+      "url": "https://fof.se/artikel/sa-kan-forfattarskapet-starkas-inom-forskningen",
+      "source": "Forskning & Framsteg",
+      "language": "sv",
+      "published_at": "2026-08-12T05:24:53Z",
+      "source_excerpt": "När forskningsfusk diskuteras i medierna handlar det ofta om oetiska experiment, fabricerade data eller plagiat. Men en vanlig form av regelbrott går ofta under radarn: … The post ”Så kan författarskapet stärkas inom forskningen” appeared first on Forskning & Framsteg .",
+      "agent_summary": "",
+      "source_fingerprint": "dfdccf6ac7c366373845",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 9,
+      "positive_signals": [
+        "curated-positive-source",
+        "experiment",
+        "forskning",
+        "framsteg"
+      ],
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/290629d1-eec3-4f31-9644-49e96e973112.webp",
+        "alt": "”Så kan författarskapet stärkas inom forskningen”",
+        "user_image_id": "290629d1-eec3-4f31-9644-49e96e973112",
+        "match_score": 0.2369,
+        "width": 1280,
+        "height": 848
+      }
+    },
+    {
       "id": "4946a3c6985f1fc12bfb",
       "title": "Mänsklighetens samarbete i fokus på Nobelprismuseet",
       "url": "https://fof.se/artikel/mansklighetens-samarbete-i-fokus-pa-nobelprismuseet",
@@ -1404,7 +1474,7 @@
       "source_excerpt": "The kitten left the wedding with her forever family! When Gabrielle found a stray kitten just before her wedding, she came up with the sweetest way to help her find a forever home. Dodo producer Monica shares how one wedding celebration changed the kitten's life.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/dLrrk1gUuTFDo7hwv/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/dLrrk1gUyGDZP7xDp/x720",
       "source_image_alt": "Bride Uses Her Wedding To Get Stray Kitten Adopted",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xawyvse",
@@ -1466,6 +1536,34 @@
       "public_eligible": false
     },
     {
+      "id": "2e39358c433140c0fff4",
+      "title": "Möjligt läkemedel mot alzheimer minskar skadligt proteintrassel",
+      "url": "https://fof.se/artikel/mojligt-lakemedel-mot-alzheimer-minskar-skadligt-proteintrassel",
+      "source": "Forskning & Framsteg",
+      "language": "sv",
+      "published_at": "2026-08-12T10:28:45Z",
+      "source_excerpt": "Vid Alzheimers sjukdom sker framför allt två förändringar i hjärnan. Mellan nervcellerna ansamlas plack som består av beta-amyloidproteiner. Det verkar i sin tur bidra till … The post Möjligt läkemedel mot alzheimer minskar skadligt proteintrassel appeared first on Forskning & Framsteg .",
+      "agent_summary": "",
+      "source_fingerprint": "7b0a378e067728ae3b11",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "framsteg"
+      ],
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/378d7d6e-9868-45d5-8604-345fe46b402c.webp",
+        "alt": "Möjligt läkemedel mot alzheimer minskar skadligt proteintrassel",
+        "user_image_id": "378d7d6e-9868-45d5-8604-345fe46b402c",
+        "match_score": 0.2336,
+        "width": 1280,
+        "height": 848
+      }
+    },
+    {
       "id": "402e9f00ad15043cc24a",
       "title": "Rescuers Knew This 12-Pound Dog Deserved So Much More",
       "url": "https://www.dailymotion.com/video/xawz81a",
@@ -1475,7 +1573,7 @@
       "source_excerpt": "Wait until you see how spoiled she is! When One Tail At A Time rescued Poppy Seed, they focused on one thing: making sure she never had to struggle again. Dodo editor Monica shares how one tiny dog went from simply surviving to living a life full of comfort, warmth, and love.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/dLvjk1gUvZmAeH6hY/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/dLvjk1gUxw4ZDGZkL/x720",
       "source_image_alt": "Rescuers Knew This 12-Pound Dog Deserved So Much More",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xawz81a",
@@ -1524,90 +1622,6 @@
         "alt": "Så ser du solförmörkelsen utan att titta på solen",
         "user_image_id": "9d2d5fa4-a804-4fc4-982e-03b147d2b634",
         "match_score": 0.24,
-        "width": 1280,
-        "height": 848
-      }
-    },
-    {
-      "id": "9afb77183f965ba7068c",
-      "title": "Nobelpristagaren Demis Hassabis, Deepmind och jakten på superintelligens",
-      "url": "https://fof.se/artikel/nobelpristagaren-satsar-pa-intelligens",
-      "source": "Forskning & Framsteg",
-      "language": "sv",
-      "published_at": "2026-08-06T12:06:53Z",
-      "source_excerpt": "Som fyraåring var Demis Hassabis tillräckligt bra på schack för att vinna mot vuxna. Ett år senare deltog han i turneringar sittande på telefonkataloger för … The post Nobelpristagaren Demis Hassabis, Deepmind och jakten på superintelligens appeared first on Forskning & Framsteg .",
-      "agent_summary": "",
-      "source_fingerprint": "8912a64e428ddb86eed5",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "framsteg"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/586669d7-e165-482e-859f-d434c3bef9c5.webp",
-        "alt": "Nobelpristagaren Demis Hassabis, Deepmind och jakten på superintelligens",
-        "user_image_id": "586669d7-e165-482e-859f-d434c3bef9c5",
-        "match_score": 0.2351,
-        "width": 1280,
-        "height": 848
-      }
-    },
-    {
-      "id": "3961af03187dc9c9e7db",
-      "title": "Johan Eklöf: ”Vi ska vara rädda om månskenet”",
-      "url": "https://fof.se/artikel/johan-eklof-vi-ska-vara-radda-om-manskenet",
-      "source": "Forskning & Framsteg",
-      "language": "sv",
-      "published_at": "2026-08-06T12:06:51Z",
-      "source_excerpt": "1 | Du är i grunden expert på fladdermöss, och de har med natten att göra, men det här med månen är ju lite utanför … The post Johan Eklöf: ”Vi ska vara rädda om månskenet” appeared first on Forskning & Framsteg .",
-      "agent_summary": "",
-      "source_fingerprint": "9aec87258cfc995c5e37",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "framsteg"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/378d7d6e-9868-45d5-8604-345fe46b402c.webp",
-        "alt": "Johan Eklöf: ”Vi ska vara rädda om månskenet”",
-        "user_image_id": "378d7d6e-9868-45d5-8604-345fe46b402c",
-        "match_score": 0.2336,
-        "width": 1280,
-        "height": 848
-      }
-    },
-    {
-      "id": "d54ec4a4e22279413cfc",
-      "title": "Svenskt guld i internationella fysikolympiaden",
-      "url": "https://fof.se/artikel/svenskt-guld-i-internationella-fysikolympiaden",
-      "source": "Forskning & Framsteg",
-      "language": "sv",
-      "published_at": "2026-07-17T17:38:05Z",
-      "source_excerpt": "17-åriga Leshi Zhang har tagit hem guldmedalj i internationella fysikolympiaden (IPhO). Det är Sveriges första guldmedalj sedan 1982. – Jag känner mig jätteglad men samtidigt … The post Svenskt guld i internationella fysikolympiaden appeared first on Forskning & Framsteg .",
-      "agent_summary": "",
-      "source_fingerprint": "18c750bbdaf638d79546",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "framsteg"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/c17a6275-7192-431b-a468-a375743e3913.webp",
-        "alt": "Svenskt guld i internationella fysikolympiaden",
-        "user_image_id": "c17a6275-7192-431b-a468-a375743e3913",
-        "match_score": 0.1815,
         "width": 1280,
         "height": 848
       }
