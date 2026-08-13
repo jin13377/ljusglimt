@@ -1,18 +1,11 @@
 {
-  "generated_at": "2026-08-12T22:40:42.284367Z",
+  "generated_at": "2026-08-13T11:00:36.154461Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "5060f80c681d50e712e5",
-    "5d46e27331497bcd48b2",
-    "9c4b5670f5c0e943f2dd"
+    "5b6153c6015de28addb4"
   ],
-  "fetch_errors": [
-    {
-      "source": "Mötesplats Social Innovation",
-      "error": "HTTP Error 403: Forbidden"
-    }
-  ],
+  "fetch_errors": [],
   "items": [
     {
       "id": "0b87daf79218ce385c31",
@@ -438,6 +431,43 @@
         "width": 1280,
         "height": 848,
         "sha256": "273484e6265bcfb32ad63f2d1ada4c34b8bdadcd88dd46c95261cc760fae40d5"
+      }
+    },
+    {
+      "id": "5b6153c6015de28addb4",
+      "title": "Miljarder i ”hållbara” lån till palmolje­företag",
+      "url": "https://www.natursidan.se/nyheter/miljarder-i-hallbara-lan-till-palmoljeforetag",
+      "source": "Natursidan",
+      "language": "sv",
+      "published_at": "2026-08-13T04:24:42Z",
+      "source_excerpt": "Palmoljebolag som kopplas till korruptionsanklagelser och avskogning i Indonesien har beviljats lån på 31 miljarder dollar från stora internationella banker.",
+      "agent_summary": "",
+      "source_fingerprint": "f34082dee1cb729b8043",
+      "category": "Natur",
+      "source_tier_bonus": 5,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "beviljats",
+        "hållbar"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/89080721-b3d1-4322-a704-fc9ca7e0c3fc.webp",
+        "alt": "Miljarder i ”hållbara” lån till palmolje­företag",
+        "user_image_id": "89080721-b3d1-4322-a704-fc9ca7e0c3fc",
+        "match_score": 0.2812,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/5b6153c6015de28addb4-f34082de-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "f34082dee1cb729b8043",
+        "width": 1280,
+        "height": 848,
+        "sha256": "a4a4255cb848cfe7931db7432fc2d2fa428311cacb97388015103160e4689f59"
       }
     },
     {
@@ -1528,34 +1558,6 @@
       }
     },
     {
-      "id": "2e39358c433140c0fff4",
-      "title": "Möjligt läkemedel mot alzheimer minskar skadligt proteintrassel",
-      "url": "https://fof.se/artikel/mojligt-lakemedel-mot-alzheimer-minskar-skadligt-proteintrassel",
-      "source": "Forskning & Framsteg",
-      "language": "sv",
-      "published_at": "2026-08-12T10:28:45Z",
-      "source_excerpt": "Vid Alzheimers sjukdom sker framför allt två förändringar i hjärnan. Mellan nervcellerna ansamlas plack som består av beta-amyloidproteiner. Det verkar i sin tur bidra till … The post Möjligt läkemedel mot alzheimer minskar skadligt proteintrassel appeared first on Forskning & Framsteg .",
-      "agent_summary": "",
-      "source_fingerprint": "7b0a378e067728ae3b11",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "framsteg"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/378d7d6e-9868-45d5-8604-345fe46b402c.webp",
-        "alt": "Möjligt läkemedel mot alzheimer minskar skadligt proteintrassel",
-        "user_image_id": "378d7d6e-9868-45d5-8604-345fe46b402c",
-        "match_score": 0.2336,
-        "width": 1280,
-        "height": 848
-      }
-    },
-    {
       "id": "402e9f00ad15043cc24a",
       "title": "Rescuers Knew This 12-Pound Dog Deserved So Much More",
       "url": "https://www.dailymotion.com/video/xawz81a",
@@ -1628,7 +1630,7 @@
       "source_excerpt": "She decided the cone was a permanent accessory! Taylor treated her post-surgery cone less like medical equipment and more like her favorite toy. Dodo editor Valentina shares the hilarious habit that stuck around for the next 13 years.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/dN4xg1gV8iyu3tyKX/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/dN4xg1gVH1ujws15R/x720",
       "source_image_alt": "Cat Refuses To Give Up Her Cone 13 Years After Surgery",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xax5tre",
