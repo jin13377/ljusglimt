@@ -468,6 +468,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "a4a4255cb848cfe7931db7432fc2d2fa428311cacb97388015103160e4689f59"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/5b6153c6015de28addb4-f34082dee1cb729b8043-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Miljarder i ”hållbara” lån till palmolje­företag",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "f34082dee1cb729b8043",
+        "width": 1280,
+        "height": 848,
+        "sha256": "f826a18e8bf041d2bdb664df93409f63f454dbc482adaa9b067417bd0660ff18",
+        "generated_at": "2026-08-13T11:01:03Z"
       }
     },
     {
