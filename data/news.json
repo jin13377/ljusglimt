@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-13T22:41:13.391780Z",
+  "generated_at": "2026-08-14T10:57:42.106584Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "6930abb2a14628820211"
+    "475cd3c0702e2ed49ed1"
   ],
   "fetch_errors": [],
   "items": [
@@ -1378,6 +1378,35 @@
       }
     },
     {
+      "id": "475cd3c0702e2ed49ed1",
+      "title": "Från upptäckt till namn – så namnges asteroider",
+      "url": "https://fof.se/artikel/fran-upptackt-till-namn-sa-namnges-asteroider",
+      "source": "Forskning & Framsteg",
+      "language": "sv",
+      "published_at": "2026-08-14T07:34:19Z",
+      "source_excerpt": "­ När en asteroid upptäcks får den ett nummer. Det är först senare som ett namnförslag kan skickas in – och då till Internationella astronomiska … The post Från upptäckt till namn – så namnges asteroider appeared first on Forskning & Framsteg .",
+      "agent_summary": "",
+      "source_fingerprint": "df76402684f1a22559f3",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 9,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "framsteg",
+        "upptäckt"
+      ],
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/9d2d5fa4-a804-4fc4-982e-03b147d2b634.webp",
+        "alt": "Från upptäckt till namn – så namnges asteroider",
+        "user_image_id": "9d2d5fa4-a804-4fc4-982e-03b147d2b634",
+        "match_score": 0.24,
+        "width": 1280,
+        "height": 848
+      }
+    },
+    {
       "id": "e79fd1f733ee9c10f3eb",
       "title": "”Så kan författarskapet stärkas inom forskningen”",
       "url": "https://fof.se/artikel/sa-kan-forfattarskapet-starkas-inom-forskningen",
@@ -1494,35 +1523,6 @@
       }
     },
     {
-      "id": "511514f3f8d883139491",
-      "title": "Rekord i fusion",
-      "url": "https://fof.se/artikel/rekord-i-fusion",
-      "source": "Forskning & Framsteg",
-      "language": "sv",
-      "published_at": "2026-06-30T12:33:54Z",
-      "source_excerpt": "Det här är en artikel från 2022. Testreaktorn Jet (Joint European torus) utanför Oxford har satt ett nytt rekord för fusion på jorden: 59 megajoule … The post Rekord i fusion appeared first on Forskning & Framsteg .",
-      "agent_summary": "",
-      "source_fingerprint": "5dc0b9b69025976abb26",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 9,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "framsteg",
-        "rekord"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/868bab25-bbad-423f-871d-cba0ddc6a2f3.webp",
-        "alt": "Rekord i fusion",
-        "user_image_id": "868bab25-bbad-423f-871d-cba0ddc6a2f3",
-        "match_score": 0.1845,
-        "width": 1280,
-        "height": 848
-      }
-    },
-    {
       "id": "530f063e34b49ac0389f",
       "title": "Bride Uses Her Wedding To Get Stray Kitten Adopted",
       "url": "https://www.dailymotion.com/video/xawyvse",
@@ -1567,7 +1567,7 @@
       "source_excerpt": "Wait until you see how spoiled she is! When One Tail At A Time rescued Poppy Seed, they focused on one thing: making sure she never had to struggle again. Dodo editor Monica shares how one tiny dog went from simply surviving to living a life full of comfort, warmth, and love.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/dLvjk1gUxw4ZDGZkL/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/dLvjk1gUxw4ZDGZkL/x720",
       "source_image_alt": "Rescuers Knew This 12-Pound Dog Deserved So Much More",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xawz81a",
