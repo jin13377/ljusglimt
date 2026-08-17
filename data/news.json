@@ -1,11 +1,20 @@
 {
-  "generated_at": "2026-08-17T10:31:55.790087Z",
+  "generated_at": "2026-08-17T22:23:53.760738Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "67ae5c61fa3f2f86d547"
+    "ff62a77c0fe7dadbc297",
+    "df9d172f56fa102e7240",
+    "f66be952c6e578471ba1",
+    "a7514f34d92f158947bc",
+    "43e38e64e01957bececd"
   ],
-  "fetch_errors": [],
+  "fetch_errors": [
+    {
+      "source": "Karolinska Institutet",
+      "error": "<urlopen error timed out>"
+    }
+  ],
   "items": [
     {
       "id": "0b87daf79218ce385c31",
@@ -1494,50 +1503,85 @@
       }
     },
     {
-      "id": "530f063e34b49ac0389f",
-      "title": "Bride Uses Her Wedding To Get Stray Kitten Adopted",
-      "url": "https://www.dailymotion.com/video/xawyvse",
+      "id": "ff62a77c0fe7dadbc297",
+      "title": "Neighbor’s Dog Basically Adopted This Family",
+      "url": "https://www.dailymotion.com/video/xayj7rm",
       "source": "The Dodo",
       "language": "en",
-      "published_at": "2026-08-11T20:33:53Z",
-      "source_excerpt": "The kitten left the wedding with her forever family! When Gabrielle found a stray kitten just before her wedding, she came up with the sweetest way to help her find a forever home. Dodo producer Monica shares how one wedding celebration changed the kitten's life.",
+      "published_at": "2026-08-17T15:48:44Z",
+      "source_excerpt": "At this point, he’s basically their part-time dog! Duncan technically belongs to the neighbors, but for the past three years, he’s been showing up at the Fritts’ house to stare through the windows, play with the kids and make himself completely at home. Dodo editor Brielle shares how their honorary family member even convinced them it was time to get a dog of their own.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/dLrrk1gUyGDZP7xDp/x720",
-      "source_image_alt": "Bride Uses Her Wedding To Get Stray Kitten Adopted",
+      "source_image_url": "https://s2.dmcdn.net/v/dVtWI1gWqdW4gksPe/x720",
+      "source_image_alt": "Neighbor’s Dog Basically Adopted This Family",
       "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xawyvse",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xayj7rm",
       "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xawyvse",
+      "source_image_source_url": "https://www.dailymotion.com/video/xayj7rm",
       "source_image_verification_method": "dailymotion-api-thumbnail-v1",
       "source_video": {
         "provider": "dailymotion",
-        "video_id": "xawyvse",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xawyvse",
-        "source_url": "https://www.dailymotion.com/video/xawyvse",
-        "title": "Bride Uses Her Wedding To Get Stray Kitten Adopted"
+        "video_id": "xayj7rm",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xayj7rm",
+        "source_url": "https://www.dailymotion.com/video/xayj7rm",
+        "title": "Neighbor’s Dog Basically Adopted This Family"
       },
-      "source_fingerprint": "92733942f482c9917b1f",
+      "source_fingerprint": "021b7b03a11472e1456e",
       "category": "Djur",
       "source_tier_bonus": 4,
-      "positivity_score": 8,
+      "positivity_score": 7,
       "positive_signals": [
         "curated-positive-source",
         "adopted",
-        "kitten"
+        "play"
       ],
       "public_eligible": false
     },
     {
-      "id": "67ae5c61fa3f2f86d547",
-      "title": "Hur säker är öppen källkod?",
-      "url": "https://fof.se/artikel/hur-saker-ar-oppen-kallkod",
+      "id": "df9d172f56fa102e7240",
+      "title": "Entire Neighborhood Rallies To Rescue Missing Cat",
+      "url": "https://www.dailymotion.com/video/xayi73q",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-08-17T13:48:48Z",
+      "source_excerpt": "The whole neighborhood came to watch. When Bruno disappeared into the trees, neighbors from all over the block came together to help bring him home. Dodo editor Brielle shares how local rescuer Steve Murrow's daring climb turned into a rescue the entire neighborhood was cheering for.",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s1.dmcdn.net/v/dVhvs1gWodmsGCrP-/x720",
+      "source_image_alt": "Entire Neighborhood Rallies To Rescue Missing Cat",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xayi73q",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xayi73q",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xayi73q",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xayi73q",
+        "source_url": "https://www.dailymotion.com/video/xayi73q",
+        "title": "Entire Neighborhood Rallies To Rescue Missing Cat"
+      },
+      "source_fingerprint": "fbdd6fb0d8e8d59cf72b",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "rescue",
+        "together"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "f66be952c6e578471ba1",
+      "title": "Flera klimatförändringar bidrog till bronsålderskollaps",
+      "url": "https://fof.se/artikel/flera-klimatforandringar-bidrog-till-bronsalderskollaps",
       "source": "Forskning & Framsteg",
       "language": "sv",
-      "published_at": "2026-08-17T06:54:35Z",
-      "source_excerpt": "Svar av Musard Balliu, forskare i cyber-säkerhet vid KTH Det låter logiskt att kod som alla kan läsa borde bli lättare att hacka. Men inom … The post Hur säker är öppen källkod? appeared first on Forskning & Framsteg .",
+      "published_at": "2026-08-17T12:14:22Z",
+      "source_excerpt": "Inte nog med torkan och missväxten, som skördade tusentals liv år efter år. Till råga på allt skakades östra Medelhavsområdet gång på gång av jordbävningar. … The post Flera klimatförändringar bidrog till bronsålderskollaps appeared first on Forskning & Framsteg .",
       "agent_summary": "",
-      "source_fingerprint": "890cbe89dcb5db50f6cf",
+      "source_fingerprint": "1de89317ead98f9f34cd",
       "category": "Vetenskap",
       "source_tier_bonus": 5,
       "positivity_score": 7,
@@ -1549,7 +1593,7 @@
       "public_eligible": false,
       "user_image": {
         "url": "/news-images/user/9d2d5fa4-a804-4fc4-982e-03b147d2b634.webp",
-        "alt": "Hur säker är öppen källkod?",
+        "alt": "Flera klimatförändringar bidrog till bronsålderskollaps",
         "user_image_id": "9d2d5fa4-a804-4fc4-982e-03b147d2b634",
         "match_score": 0.24,
         "width": 1280,
@@ -1557,36 +1601,62 @@
       }
     },
     {
-      "id": "402e9f00ad15043cc24a",
-      "title": "Rescuers Knew This 12-Pound Dog Deserved So Much More",
-      "url": "https://www.dailymotion.com/video/xawz81a",
+      "id": "a7514f34d92f158947bc",
+      "title": "Researchers discover groundbreaking details about sea turtle migration patterns: 'Crucial to conservation'",
+      "url": "https://www.goodgoodgood.co/articles/sea-turtle-migration-patterns-florida-state-university",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-08-17T17:34:00Z",
+      "source_excerpt": "The new research followed male sea turtles, which often do not get the same attention as female nesting turtles.",
+      "agent_summary": "",
+      "source_fingerprint": "bb9e1e64a6ea6279b883",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a8345ac088a8e661f5d3748_6a8345abdd404ceb89a4764a_sea-turtle-migration-patterns-florida-state-university-featured.webp",
+      "source_image_alt": "Researchers discover groundbreaking details about sea turtle migration patterns: 'Crucial to conservation'",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/sea-turtle-migration-patterns-florida-state-university",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/sea-turtle-migration-patterns-florida-state-university",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "source_tier_bonus": 2,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "conservation",
+        "research"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "43e38e64e01957bececd",
+      "title": "Couple Learns 20+ Rescue Animals Are Harder Than Kids",
+      "url": "https://www.dailymotion.com/video/xayhpcy",
       "source": "The Dodo",
       "language": "en",
-      "published_at": "2026-08-11T21:48:58Z",
-      "source_excerpt": "Wait until you see how spoiled she is! When One Tail At A Time rescued Poppy Seed, they focused on one thing: making sure she never had to struggle again. Dodo editor Monica shares how one tiny dog went from simply surviving to living a life full of comfort, warmth, and love.",
+      "published_at": "2026-08-17T12:34:43Z",
+      "source_excerpt": "They lost count after 20... and that includes a very sassy house pig. One rescue turned into more than 20 animals, a very sassy house pig, and a cage-free sanctuary. Dodo editor Brielle talks to Dina about how saying yes to one animal after another completely changed their lives.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/dLvjk1gUxw4ZDGZkL/x720",
-      "source_image_alt": "Rescuers Knew This 12-Pound Dog Deserved So Much More",
+      "source_image_url": "https://s1.dmcdn.net/v/dVcIY1gWnYMnFwPeE/x720",
+      "source_image_alt": "Couple Learns 20+ Rescue Animals Are Harder Than Kids",
       "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xawz81a",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xayhpcy",
       "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xawz81a",
+      "source_image_source_url": "https://www.dailymotion.com/video/xayhpcy",
       "source_image_verification_method": "dailymotion-api-thumbnail-v1",
       "source_video": {
         "provider": "dailymotion",
-        "video_id": "xawz81a",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xawz81a",
-        "source_url": "https://www.dailymotion.com/video/xawz81a",
-        "title": "Rescuers Knew This 12-Pound Dog Deserved So Much More"
+        "video_id": "xayhpcy",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xayhpcy",
+        "source_url": "https://www.dailymotion.com/video/xayhpcy",
+        "title": "Couple Learns 20+ Rescue Animals Are Harder Than Kids"
       },
-      "source_fingerprint": "5e824960baa390205588",
+      "source_fingerprint": "66976e4ede0817186e14",
       "category": "Djur",
       "source_tier_bonus": 4,
-      "positivity_score": 7,
+      "positivity_score": 6,
       "positive_signals": [
         "curated-positive-source",
-        "love",
         "rescue"
       ],
       "public_eligible": false
@@ -1616,67 +1686,6 @@
         "conservation",
         "progress",
         "rescue"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "5d46e27331497bcd48b2",
-      "title": "Cat Refuses To Give Up Her Cone 13 Years After Surgery",
-      "url": "https://www.dailymotion.com/video/xax5tre",
-      "source": "The Dodo",
-      "language": "en",
-      "published_at": "2026-08-12T14:03:52Z",
-      "source_excerpt": "She decided the cone was a permanent accessory! Taylor treated her post-surgery cone less like medical equipment and more like her favorite toy. Dodo editor Valentina shares the hilarious habit that stuck around for the next 13 years.",
-      "agent_summary": "",
-      "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/dN4xg1gVzZDUy4D92/x720",
-      "source_image_alt": "Cat Refuses To Give Up Her Cone 13 Years After Surgery",
-      "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xax5tre",
-      "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xax5tre",
-      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
-      "source_video": {
-        "provider": "dailymotion",
-        "video_id": "xax5tre",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xax5tre",
-        "source_url": "https://www.dailymotion.com/video/xax5tre",
-        "title": "Cat Refuses To Give Up Her Cone 13 Years After Surgery"
-      },
-      "source_fingerprint": "0e8ff46c8a54b9155ee0",
-      "category": "Djur",
-      "source_tier_bonus": 4,
-      "positivity_score": 5,
-      "positive_signals": [
-        "curated-positive-source",
-        "treat"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "9c4b5670f5c0e943f2dd",
-      "title": "Researchers use drones with suction cups to tag whales, allowing them to study the species from the sky",
-      "url": "https://www.goodgoodgood.co/articles/hawaii-suction-cup-drone-tagging-whales",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-08-11T17:43:00Z",
-      "source_excerpt": "The approach is being called a “revolutionary” non-invasive conservation method.",
-      "agent_summary": "",
-      "source_fingerprint": "2f410df5b678339182b6",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a7b5ebead08b4a6c9f8c8ae_6a7b5ebdf4adb636ca1ab10f_hawaii-suction-cup-drone-tagging-whales-featured.webp",
-      "source_image_alt": "Researchers use drones with suction cups to tag whales, allowing them to study the species from the sky",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/hawaii-suction-cup-drone-tagging-whales",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/hawaii-suction-cup-drone-tagging-whales",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 5,
-      "positive_signals": [
-        "curated-positive-source",
-        "conservation",
-        "research"
       ],
       "public_eligible": false
     }
