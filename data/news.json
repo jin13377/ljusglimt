@@ -1,14 +1,11 @@
 {
-  "generated_at": "2026-08-16T22:20:32.536321Z",
+  "generated_at": "2026-08-17T10:31:55.790087Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
-  "fetch_errors": [
-    {
-      "source": "Viable Cities",
-      "error": "<urlopen error [Errno 101] Network is unreachable>"
-    }
+  "new_item_ids": [
+    "67ae5c61fa3f2f86d547"
   ],
+  "fetch_errors": [],
   "items": [
     {
       "id": "0b87daf79218ce385c31",
@@ -1381,35 +1378,6 @@
       }
     },
     {
-      "id": "475cd3c0702e2ed49ed1",
-      "title": "Från upptäckt till namn – så namnges asteroider",
-      "url": "https://fof.se/artikel/fran-upptackt-till-namn-sa-namnges-asteroider",
-      "source": "Forskning & Framsteg",
-      "language": "sv",
-      "published_at": "2026-08-14T07:34:19Z",
-      "source_excerpt": "­ När en asteroid upptäcks får den ett nummer. Det är först senare som ett namnförslag kan skickas in – och då till Internationella astronomiska … The post Från upptäckt till namn – så namnges asteroider appeared first on Forskning & Framsteg .",
-      "agent_summary": "",
-      "source_fingerprint": "df76402684f1a22559f3",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 9,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "framsteg",
-        "upptäckt"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/9d2d5fa4-a804-4fc4-982e-03b147d2b634.webp",
-        "alt": "Från upptäckt till namn – så namnges asteroider",
-        "user_image_id": "9d2d5fa4-a804-4fc4-982e-03b147d2b634",
-        "match_score": 0.24,
-        "width": 1280,
-        "height": 848
-      }
-    },
-    {
       "id": "e79fd1f733ee9c10f3eb",
       "title": "”Så kan författarskapet stärkas inom forskningen”",
       "url": "https://fof.se/artikel/sa-kan-forfattarskapet-starkas-inom-forskningen",
@@ -1559,6 +1527,34 @@
         "kitten"
       ],
       "public_eligible": false
+    },
+    {
+      "id": "67ae5c61fa3f2f86d547",
+      "title": "Hur säker är öppen källkod?",
+      "url": "https://fof.se/artikel/hur-saker-ar-oppen-kallkod",
+      "source": "Forskning & Framsteg",
+      "language": "sv",
+      "published_at": "2026-08-17T06:54:35Z",
+      "source_excerpt": "Svar av Musard Balliu, forskare i cyber-säkerhet vid KTH Det låter logiskt att kod som alla kan läsa borde bli lättare att hacka. Men inom … The post Hur säker är öppen källkod? appeared first on Forskning & Framsteg .",
+      "agent_summary": "",
+      "source_fingerprint": "890cbe89dcb5db50f6cf",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "framsteg"
+      ],
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/9d2d5fa4-a804-4fc4-982e-03b147d2b634.webp",
+        "alt": "Hur säker är öppen källkod?",
+        "user_image_id": "9d2d5fa4-a804-4fc4-982e-03b147d2b634",
+        "match_score": 0.24,
+        "width": 1280,
+        "height": 848
+      }
     },
     {
       "id": "402e9f00ad15043cc24a",
