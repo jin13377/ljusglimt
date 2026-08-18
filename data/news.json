@@ -1,20 +1,12 @@
 {
-  "generated_at": "2026-08-17T22:23:53.760738Z",
+  "generated_at": "2026-08-18T10:28:00.375065Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "ff62a77c0fe7dadbc297",
-    "df9d172f56fa102e7240",
-    "f66be952c6e578471ba1",
-    "a7514f34d92f158947bc",
-    "43e38e64e01957bececd"
+    "72142c125346a8f6a55e",
+    "5bdd0f7e95a8bdcfc217"
   ],
-  "fetch_errors": [
-    {
-      "source": "Karolinska Institutet",
-      "error": "<urlopen error timed out>"
-    }
-  ],
+  "fetch_errors": [],
   "items": [
     {
       "id": "0b87daf79218ce385c31",
@@ -648,6 +640,43 @@
       }
     },
     {
+      "id": "72142c125346a8f6a55e",
+      "title": "Förbättrad diagnostik av primär aldosteronism",
+      "url": "https://nyheter.ki.se/forbattrad-diagnostik-av-primar-aldosteronism",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-08-18T00:00:00Z",
+      "source_excerpt": "En enkel ny metod, baserad på resultaten från två studier från Christofer Juhlins forskargrupp, kan göra det lättare att identifiera den bakomliggande orsaken till en vanlig form av högt blodtryck och bidra till att förutsäga vilka patienter som har störst nytta av kirurgi. Metoden har nu gått från forskning till rutinmässig patientvård vid Karolinska Universitetssjukhuset.",
+      "agent_summary": "",
+      "source_fingerprint": "c8301de8f711ab62ff9d",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "ny metod"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/431c3154-4dd0-42c6-ab09-d5e8191643ee.webp",
+        "alt": "Förbättrad diagnostik av primär aldosteronism",
+        "user_image_id": "431c3154-4dd0-42c6-ab09-d5e8191643ee",
+        "match_score": 0.2745,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/72142c125346a8f6a55e-c8301de8-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "c8301de8f711ab62ff9d",
+        "width": 1280,
+        "height": 848,
+        "sha256": "6c87914d40a6d0e16fe00cf1c2ef5d82cd7fdc3f2da4f6986b3cd35d6441e24e"
+      }
+    },
+    {
       "id": "4b85e321cb8f14fe61b4",
       "title": "Ny metod kan lösa gåtan med dåligt badvatten",
       "url": "https://www.extrakt.se/ny-metod-kan-losa-gatan-med-daligt-badvatten",
@@ -709,42 +738,6 @@
         "upptäckt"
       ],
       "public_eligible": true
-    },
-    {
-      "id": "deb41ec6a28380a6bc2c",
-      "title": "RNA-teknik förbättrar resultaten vid transplantation av insulinproducerande celler",
-      "url": "https://nyheter.ki.se/rna-teknik-forbattrar-resultaten-vid-transplantation-av-insulinproducerande-celler",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-08-05T00:00:00Z",
-      "source_excerpt": "En ny RNA-baserad metod kan hjälpa insulinproducerande celler att klara transplantation bättre. I en studie från Karolinska Institutet, publicerad i tidskriften Signal Transduction and Targeted Therapy, återfick behandlade celler sin blodförsörjning snabbare och färre donatoröar behövdes för att återställa normal blodsockerkontroll.",
-      "agent_summary": "",
-      "source_fingerprint": "082ef4a282c94804f3dd",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "förbättrar"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/ca17e92f-ec53-4cd1-b11c-3f69f0912247.webp",
-        "alt": "RNA-teknik förbättrar resultaten vid transplantation av insulinproducerande celler",
-        "user_image_id": "ca17e92f-ec53-4cd1-b11c-3f69f0912247",
-        "match_score": 0.2479,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/deb41ec6a28380a6bc2c-082ef4a2-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "082ef4a282c94804f3dd",
-        "width": 1280,
-        "height": 848,
-        "sha256": "baf440c2a9c761ebf151ccf1fc5f5b7955c33116b518b3d9b8564347664ad80a"
-      }
     },
     {
       "id": "bd393591640fd8334597",
@@ -1503,6 +1496,34 @@
       }
     },
     {
+      "id": "5bdd0f7e95a8bdcfc217",
+      "title": "Forskare utvecklar nya virusvarianter med AI",
+      "url": "https://fof.se/artikel/forskare-utvecklar-nya-virusvarianter-med-ai",
+      "source": "Forskning & Framsteg",
+      "language": "sv",
+      "published_at": "2026-08-18T09:34:23Z",
+      "source_excerpt": "Forskare vid Stanford university i USA har skapat nya varianter av virus med hjälp av artificiell intelligens. De använde en AI-modell för att skapa hela … The post Forskare utvecklar nya virusvarianter med AI appeared first on Forskning & Framsteg .",
+      "agent_summary": "",
+      "source_fingerprint": "7990d0fd6fbe30149dff",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "framsteg"
+      ],
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/ca17e92f-ec53-4cd1-b11c-3f69f0912247.webp",
+        "alt": "Forskare utvecklar nya virusvarianter med AI",
+        "user_image_id": "ca17e92f-ec53-4cd1-b11c-3f69f0912247",
+        "match_score": 0.2453,
+        "width": 1280,
+        "height": 848
+      }
+    },
+    {
       "id": "ff62a77c0fe7dadbc297",
       "title": "Neighbor’s Dog Basically Adopted This Family",
       "url": "https://www.dailymotion.com/video/xayj7rm",
@@ -1512,7 +1533,7 @@
       "source_excerpt": "At this point, he’s basically their part-time dog! Duncan technically belongs to the neighbors, but for the past three years, he’s been showing up at the Fritts’ house to stare through the windows, play with the kids and make himself completely at home. Dodo editor Brielle shares how their honorary family member even convinced them it was time to get a dog of their own.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/dVtWI1gWqdW4gksPe/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/dVtWI1gWwotftE4OJ/x720",
       "source_image_alt": "Neighbor’s Dog Basically Adopted This Family",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xayj7rm",
@@ -1547,7 +1568,7 @@
       "source_excerpt": "The whole neighborhood came to watch. When Bruno disappeared into the trees, neighbors from all over the block came together to help bring him home. Dodo editor Brielle shares how local rescuer Steve Murrow's daring climb turned into a rescue the entire neighborhood was cheering for.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/dVhvs1gWodmsGCrP-/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/dVhvs1gWwhw2Y9HI8/x720",
       "source_image_alt": "Entire Neighborhood Rallies To Rescue Missing Cat",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xayi73q",
@@ -1571,34 +1592,6 @@
         "together"
       ],
       "public_eligible": false
-    },
-    {
-      "id": "f66be952c6e578471ba1",
-      "title": "Flera klimatförändringar bidrog till bronsålderskollaps",
-      "url": "https://fof.se/artikel/flera-klimatforandringar-bidrog-till-bronsalderskollaps",
-      "source": "Forskning & Framsteg",
-      "language": "sv",
-      "published_at": "2026-08-17T12:14:22Z",
-      "source_excerpt": "Inte nog med torkan och missväxten, som skördade tusentals liv år efter år. Till råga på allt skakades östra Medelhavsområdet gång på gång av jordbävningar. … The post Flera klimatförändringar bidrog till bronsålderskollaps appeared first on Forskning & Framsteg .",
-      "agent_summary": "",
-      "source_fingerprint": "1de89317ead98f9f34cd",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "framsteg"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/9d2d5fa4-a804-4fc4-982e-03b147d2b634.webp",
-        "alt": "Flera klimatförändringar bidrog till bronsålderskollaps",
-        "user_image_id": "9d2d5fa4-a804-4fc4-982e-03b147d2b634",
-        "match_score": 0.24,
-        "width": 1280,
-        "height": 848
-      }
     },
     {
       "id": "a7514f34d92f158947bc",
@@ -1637,7 +1630,7 @@
       "source_excerpt": "They lost count after 20... and that includes a very sassy house pig. One rescue turned into more than 20 animals, a very sassy house pig, and a cage-free sanctuary. Dodo editor Brielle talks to Dina about how saying yes to one animal after another completely changed their lives.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/dVcIY1gWnYMnFwPeE/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/dVcIY1gWwZ1dpcgoz/x720",
       "source_image_alt": "Couple Learns 20+ Rescue Animals Are Harder Than Kids",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xayhpcy",
