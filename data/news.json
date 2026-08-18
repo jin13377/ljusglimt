@@ -674,6 +674,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "6c87914d40a6d0e16fe00cf1c2ef5d82cd7fdc3f2da4f6986b3cd35d6441e24e"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/72142c125346a8f6a55e-c8301de8f711ab62ff9d-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Förbättrad diagnostik av primär aldosteronism",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "c8301de8f711ab62ff9d",
+        "width": 1280,
+        "height": 848,
+        "sha256": "895f0532ddc48a76a2088ba1e6b8a6b6bc297c769fd19bf6f982c9d1d2eb4f74",
+        "generated_at": "2026-08-18T10:28:21Z"
       }
     },
     {
