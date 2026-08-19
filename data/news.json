@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-08-19T10:28:24.036607Z",
+  "generated_at": "2026-08-19T22:24:04.195621Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "eff4f65bcc4227be422a"
+    "68c986bccbaf4d2645f6",
+    "ffa6fd5a4cf536bd012b"
   ],
   "fetch_errors": [],
   "items": [
@@ -434,6 +435,43 @@
       }
     },
     {
+      "id": "68c986bccbaf4d2645f6",
+      "title": "Tarmbakterier omvandlar nitrat och järn i kosten till skyddande molekyler",
+      "url": "https://nyheter.ki.se/tarmbakterier-omvandlar-nitrat-och-jarn-i-kosten-till-skyddande-molekyler",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-08-19T00:00:00Z",
+      "source_excerpt": "Forskare vid Karolinska Institutet har upptäckt att tarmbakterier kan omvandla nitrat och järn från kosten till skyddande molekyler som kan minska risken för hjärt-kärlsjukdomar och metabola sjukdomar. Studien, som publiceras i Cell, avslöjar en ny mekanism genom vilken tarmfloran bidrar till att skydda viktiga kroppsfunktioner.",
+      "agent_summary": "",
+      "source_fingerprint": "cabad1657b13ebe8660f",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "skydda",
+        "upptäckt"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/431c3154-4dd0-42c6-ab09-d5e8191643ee.webp",
+        "alt": "Tarmbakterier omvandlar nitrat och järn i kosten till skyddande molekyler",
+        "user_image_id": "431c3154-4dd0-42c6-ab09-d5e8191643ee",
+        "match_score": 0.2745,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/68c986bccbaf4d2645f6-cabad165-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "cabad1657b13ebe8660f",
+        "width": 1280,
+        "height": 848,
+        "sha256": "78253003d70e0e177280b12fe98d7a7f47bfc289ee6af2559b1a903455ea78d1"
+      }
+    },
+    {
       "id": "6930abb2a14628820211",
       "title": "Stamcellsbehandling mot parkinson visar lovande resultat",
       "url": "https://forskning.se/2026/08/13/stamcellsbehandling-mot-parkinson-visar-lovande-resultat",
@@ -639,41 +677,31 @@
       }
     },
     {
-      "id": "72142c125346a8f6a55e",
-      "title": "Förbättrad diagnostik av primär aldosteronism",
-      "url": "https://nyheter.ki.se/forbattrad-diagnostik-av-primar-aldosteronism",
-      "source": "Karolinska Institutet",
+      "id": "ffa6fd5a4cf536bd012b",
+      "title": "Hopp om att på sikt kunna återställa fertiliteten hos barncanceröverlevare",
+      "url": "https://forskning.se/2026/08/19/fertilitet-barncanceroverlevare",
+      "source": "Forskning.se",
       "language": "sv",
-      "published_at": "2026-08-18T00:00:00Z",
-      "source_excerpt": "En enkel ny metod, baserad på resultaten från två studier från Christofer Juhlins forskargrupp, kan göra det lättare att identifiera den bakomliggande orsaken till en vanlig form av högt blodtryck och bidra till att förutsäga vilka patienter som har störst nytta av kirurgi. Metoden har nu gått från forskning till rutinmässig patientvård vid Karolinska Universitetssjukhuset.",
+      "published_at": "2026-08-19T11:17:00Z",
+      "source_excerpt": "Vissa barn som genomgår intensiv cancerbehandling riskerar att bli infertila eftersom behandlingarna kan skada de celler som senare ska bilda spermier. I en studie från Karolinska institutet har forskare undersökt om andra kvarvarande celler i testikeln kan användas för att återskapa de cellerna. Forskarna använde frusen testikelvävnad från två pojkar före puberteten, som hade behandlats […] The p",
       "agent_summary": "",
-      "source_fingerprint": "c8301de8f711ab62ff9d",
-      "category": "Hälsa",
+      "source_fingerprint": "446ff57dbff866bd6cf9",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/08/forskning-fertilitet-barncancer-1024x576.jpg",
+      "source_image_alt": "Hopp om att på sikt kunna återställa fertiliteten hos barncanceröverlevare",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/08/19/fertilitet-barncanceroverlevare",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/08/19/fertilitet-barncanceroverlevare",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
       "source_tier_bonus": 5,
       "positivity_score": 7,
       "positive_signals": [
         "curated-positive-source",
-        "forskning",
-        "ny metod"
+        "hopp"
       ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/431c3154-4dd0-42c6-ab09-d5e8191643ee.webp",
-        "alt": "Förbättrad diagnostik av primär aldosteronism",
-        "user_image_id": "431c3154-4dd0-42c6-ab09-d5e8191643ee",
-        "match_score": 0.2745,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/72142c125346a8f6a55e-c8301de8-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "c8301de8f711ab62ff9d",
-        "width": 1280,
-        "height": 848,
-        "sha256": "6c87914d40a6d0e16fe00cf1c2ef5d82cd7fdc3f2da4f6986b3cd35d6441e24e"
-      }
+      "public_eligible": true
     },
     {
       "id": "4b85e321cb8f14fe61b4",
@@ -1495,34 +1523,6 @@
       }
     },
     {
-      "id": "eff4f65bcc4227be422a",
-      "title": "Lovande fynd i jakten på nytt läkemedel mot spridd prostatacancer",
-      "url": "https://forskning.se/2026/08/19/studie-fran-umea-banar-vag-for-nytt-lakemedel-mot-spridd-prostatacancer",
-      "source": "Forskning.se",
-      "language": "sv",
-      "published_at": "2026-08-19T08:36:05Z",
-      "source_excerpt": "Ett nytt cancerläkemedel kan bromsa både tumörtillväxt och spridning av aggressiv prostatacancer. Det visar en studie från Umeå universitet och internationella forskare som publiceras i den vetenskapliga tidskriften Signal Transduction and Targeted Therapy. The post Lovande fynd i jakten på nytt läkemedel mot spridd prostatacancer appeared first on forskning.se .",
-      "agent_summary": "",
-      "source_fingerprint": "dbb0d1b12d8564662bdf",
-      "source_image_verified": true,
-      "source_image_url": "https://forskning.se/app/uploads/2026/08/prostatacancer-lakemedel-behandling-1024x576.jpg",
-      "source_image_alt": "Lovande fynd i jakten på nytt läkemedel mot spridd prostatacancer",
-      "source_image_credit": "Forskning.se",
-      "source_image_rights_url": "https://forskning.se/2026/08/19/studie-fran-umea-banar-vag-for-nytt-lakemedel-mot-spridd-prostatacancer",
-      "source_image_creator": "Forskning.se",
-      "source_image_source_url": "https://forskning.se/2026/08/19/studie-fran-umea-banar-vag-for-nytt-lakemedel-mot-spridd-prostatacancer",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 8,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "lovande"
-      ],
-      "public_eligible": false
-    },
-    {
       "id": "ff62a77c0fe7dadbc297",
       "title": "Neighbor’s Dog Basically Adopted This Family",
       "url": "https://www.dailymotion.com/video/xayj7rm",
@@ -1532,7 +1532,7 @@
       "source_excerpt": "At this point, he’s basically their part-time dog! Duncan technically belongs to the neighbors, but for the past three years, he’s been showing up at the Fritts’ house to stare through the windows, play with the kids and make himself completely at home. Dodo editor Brielle shares how their honorary family member even convinced them it was time to get a dog of their own.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/dVtWI1gWwotftE4OJ/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/dVtWI1gWwotftE4OJ/x720",
       "source_image_alt": "Neighbor’s Dog Basically Adopted This Family",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xayj7rm",
@@ -1629,7 +1629,7 @@
       "source_excerpt": "They lost count after 20... and that includes a very sassy house pig. One rescue turned into more than 20 animals, a very sassy house pig, and a cage-free sanctuary. Dodo editor Brielle talks to Dina about how saying yes to one animal after another completely changed their lives.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/dVcIY1gWwZ1dpcgoz/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/dVcIY1gWwZ1dpcgoz/x720",
       "source_image_alt": "Couple Learns 20+ Rescue Animals Are Harder Than Kids",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xayhpcy",

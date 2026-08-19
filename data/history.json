@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-19T10:28:24.036607Z",
-  "last_successful_local_date": "2026-08-19",
-  "last_successful_local_slot": "2026-08-19T12:00",
+  "updated_at": "2026-08-19T22:24:04.195621Z",
+  "last_successful_local_date": "2026-08-20",
+  "last_successful_local_slot": "2026-08-20T00:00",
   "seen_ids": [
     "0054236b2eba1f0a4195",
     "00f8db9c6d9c70836f8e",
@@ -180,6 +180,8 @@
     "43e38e64e01957bececd",
     "72142c125346a8f6a55e",
     "5bdd0f7e95a8bdcfc217",
-    "eff4f65bcc4227be422a"
+    "eff4f65bcc4227be422a",
+    "68c986bccbaf4d2645f6",
+    "ffa6fd5a4cf536bd012b"
   ]
 }
