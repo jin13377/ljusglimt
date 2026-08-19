@@ -469,6 +469,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "78253003d70e0e177280b12fe98d7a7f47bfc289ee6af2559b1a903455ea78d1"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/68c986bccbaf4d2645f6-cabad1657b13ebe8660f-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Tarmbakterier omvandlar nitrat och järn i kosten till skyddande molekyler",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "cabad1657b13ebe8660f",
+        "width": 1280,
+        "height": 848,
+        "sha256": "790351472b54c358313d60c84628c0dd156028438e9e7fcda4404b554c7c09e5",
+        "generated_at": "2026-08-19T22:24:25Z"
       }
     },
     {
