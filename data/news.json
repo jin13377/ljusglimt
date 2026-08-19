@@ -1,8 +1,10 @@
 {
-  "generated_at": "2026-08-18T22:23:41.859608Z",
+  "generated_at": "2026-08-19T10:28:24.036607Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "eff4f65bcc4227be422a"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -1493,32 +1495,32 @@
       }
     },
     {
-      "id": "5bdd0f7e95a8bdcfc217",
-      "title": "Forskare utvecklar nya virusvarianter med AI",
-      "url": "https://fof.se/artikel/forskare-utvecklar-nya-virusvarianter-med-ai",
-      "source": "Forskning & Framsteg",
+      "id": "eff4f65bcc4227be422a",
+      "title": "Lovande fynd i jakten på nytt läkemedel mot spridd prostatacancer",
+      "url": "https://forskning.se/2026/08/19/studie-fran-umea-banar-vag-for-nytt-lakemedel-mot-spridd-prostatacancer",
+      "source": "Forskning.se",
       "language": "sv",
-      "published_at": "2026-08-18T09:34:23Z",
-      "source_excerpt": "Forskare vid Stanford university i USA har skapat nya varianter av virus med hjälp av artificiell intelligens. De använde en AI-modell för att skapa hela … The post Forskare utvecklar nya virusvarianter med AI appeared first on Forskning & Framsteg .",
+      "published_at": "2026-08-19T08:36:05Z",
+      "source_excerpt": "Ett nytt cancerläkemedel kan bromsa både tumörtillväxt och spridning av aggressiv prostatacancer. Det visar en studie från Umeå universitet och internationella forskare som publiceras i den vetenskapliga tidskriften Signal Transduction and Targeted Therapy. The post Lovande fynd i jakten på nytt läkemedel mot spridd prostatacancer appeared first on forskning.se .",
       "agent_summary": "",
-      "source_fingerprint": "7990d0fd6fbe30149dff",
+      "source_fingerprint": "dbb0d1b12d8564662bdf",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/08/prostatacancer-lakemedel-behandling-1024x576.jpg",
+      "source_image_alt": "Lovande fynd i jakten på nytt läkemedel mot spridd prostatacancer",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/08/19/studie-fran-umea-banar-vag-for-nytt-lakemedel-mot-spridd-prostatacancer",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/08/19/studie-fran-umea-banar-vag-for-nytt-lakemedel-mot-spridd-prostatacancer",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
       "category": "Vetenskap",
       "source_tier_bonus": 5,
-      "positivity_score": 7,
+      "positivity_score": 8,
       "positive_signals": [
         "curated-positive-source",
         "forskning",
-        "framsteg"
+        "lovande"
       ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/ca17e92f-ec53-4cd1-b11c-3f69f0912247.webp",
-        "alt": "Forskare utvecklar nya virusvarianter med AI",
-        "user_image_id": "ca17e92f-ec53-4cd1-b11c-3f69f0912247",
-        "match_score": 0.2453,
-        "width": 1280,
-        "height": 848
-      }
+      "public_eligible": false
     },
     {
       "id": "ff62a77c0fe7dadbc297",
