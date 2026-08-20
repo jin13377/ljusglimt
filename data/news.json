@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-19T22:24:04.195621Z",
+  "generated_at": "2026-08-20T10:30:15.779819Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "68c986bccbaf4d2645f6",
-    "ffa6fd5a4cf536bd012b"
+    "f98c13cb10adf947f6af",
+    "22d76a3981325c98786e"
   ],
   "fetch_errors": [],
   "items": [
@@ -469,17 +469,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "78253003d70e0e177280b12fe98d7a7f47bfc289ee6af2559b1a903455ea78d1"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/68c986bccbaf4d2645f6-cabad1657b13ebe8660f-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: Tarmbakterier omvandlar nitrat och järn i kosten till skyddande molekyler",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "cabad1657b13ebe8660f",
-        "width": 1280,
-        "height": 848,
-        "sha256": "790351472b54c358313d60c84628c0dd156028438e9e7fcda4404b554c7c09e5",
-        "generated_at": "2026-08-19T22:24:25Z"
       }
     },
     {
@@ -545,43 +534,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "a4a4255cb848cfe7931db7432fc2d2fa428311cacb97388015103160e4689f59"
-      }
-    },
-    {
-      "id": "c4583c4d93cbe3326359",
-      "title": "Ny metod skiljer mellan friska och sjuka immunceller i blodprov",
-      "url": "https://nyheter.ki.se/ny-metod-skiljer-mellan-friska-och-sjuka-immunceller-i-blodprov",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-08-06T00:00:00Z",
-      "source_excerpt": "Forskare vid Karolinska Institutet och SciLifeLab har utvecklat en ny metod för att analysera hur immunceller i blodet mår. Metoden har testats på patienter med åderförkalkning och kan skilja deras immunceller från friska individers. Studien publiceras i tidskriften Nature Nanotechnology.",
-      "agent_summary": "",
-      "source_fingerprint": "d9990db7dcfd9b889b28",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 8,
-      "positive_signals": [
-        "curated-positive-source",
-        "ny metod",
-        "technology"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/3559646e-9dfb-4236-b91b-7fad3fce7837.webp",
-        "alt": "Ny metod skiljer mellan friska och sjuka immunceller i blodprov",
-        "user_image_id": "3559646e-9dfb-4236-b91b-7fad3fce7837",
-        "match_score": 0.2739,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/c4583c4d93cbe3326359-d9990db7-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "d9990db7dcfd9b889b28",
-        "width": 1280,
-        "height": 848,
-        "sha256": "79031c3896af3a642cbb5ee02210543a5b4ac1784f1afc3cd169d5a3f8a21ee3"
       }
     },
     {
@@ -685,6 +637,42 @@
         "width": 1280,
         "height": 848,
         "sha256": "da35e92250c0515d62aedd5149cdcfa9db32493eb90f22ded0138d83d4348efb"
+      }
+    },
+    {
+      "id": "f98c13cb10adf947f6af",
+      "title": "Internetbehandling lovande som behandling för ungdomar med depression",
+      "url": "https://nyheter.ki.se/internetbehandling-lovande-som-behandling-for-ungdomar-med-depression",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-08-20T00:00:00Z",
+      "source_excerpt": "En internetbaserad behandling med stöd av behandlare gav en större minskning av depressionssymtom hos ungdomar med depression än sedvanlig vård, till lägre behandlingskostnad. Det visar en ny studie från Karolinska Institutet som publiceras i tidskriften BMJ Mental Health. Resultaten pekar samtidigt på att en självledd internetbehandling kan vara ett kostnadseffektivt alternativ där tillgången til",
+      "agent_summary": "",
+      "source_fingerprint": "825c516aafa99871f2f6",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "lovande"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/3559646e-9dfb-4236-b91b-7fad3fce7837.webp",
+        "alt": "Internetbehandling lovande som behandling för ungdomar med depression",
+        "user_image_id": "3559646e-9dfb-4236-b91b-7fad3fce7837",
+        "match_score": 0.2739,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/f98c13cb10adf947f6af-825c516a-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "825c516aafa99871f2f6",
+        "width": 1280,
+        "height": 848,
+        "sha256": "21305922bfafdd2bff0265d9a7b3f2287c2e62e47e813b6c1e73b474c7a2221a"
       }
     },
     {
@@ -1418,6 +1406,35 @@
       }
     },
     {
+      "id": "22d76a3981325c98786e",
+      "title": "Så skyddar byråkratin demokratin",
+      "url": "https://fof.se/artikel/sa-skyddar-byrakratin-demokratin",
+      "source": "Forskning & Framsteg",
+      "language": "sv",
+      "published_at": "2026-08-20T06:25:01Z",
+      "source_excerpt": "Byråkratiskt krångel kritiseras ofta. Men byrå­kratins idealt sett tydliga spelregler utgör ett värn för demokratin. I början av 2025 attackerade techmiljardären Elon Musk, på uppdrag … The post Så skyddar byråkratin demokratin appeared first on Forskning & Framsteg .",
+      "agent_summary": "",
+      "source_fingerprint": "c2583aa7392606343c59",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 9,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "framsteg",
+        "skydda"
+      ],
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/ca17e92f-ec53-4cd1-b11c-3f69f0912247.webp",
+        "alt": "Så skyddar byråkratin demokratin",
+        "user_image_id": "ca17e92f-ec53-4cd1-b11c-3f69f0912247",
+        "match_score": 0.2453,
+        "width": 1280,
+        "height": 848
+      }
+    },
+    {
       "id": "e79fd1f733ee9c10f3eb",
       "title": "”Så kan författarskapet stärkas inom forskningen”",
       "url": "https://fof.se/artikel/sa-kan-forfattarskapet-starkas-inom-forskningen",
@@ -1505,35 +1522,6 @@
       }
     },
     {
-      "id": "92c6c8c12d98c0ead6ee",
-      "title": "Så stöttas ultratätt väte av forskningssystemet",
-      "url": "https://fof.se/artikel/sa-stottas-ultratatt-vate-av-forskningssystemet",
-      "source": "Forskning & Framsteg",
-      "language": "sv",
-      "published_at": "2026-07-02T10:16:36Z",
-      "source_excerpt": "Det här är del 4 i F&F:s granskning av ultratätt väte. Många forskare säger att de experiment Leif Holmlid beskriver inte är tillräckliga för att … The post Så stöttas ultratätt väte av forskningssystemet appeared first on Forskning & Framsteg .",
-      "agent_summary": "",
-      "source_fingerprint": "002076b5b973aadf8a52",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 9,
-      "positive_signals": [
-        "curated-positive-source",
-        "experiment",
-        "forskning",
-        "framsteg"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/546589f1-5bfe-4634-b6a2-752258c5713a.webp",
-        "alt": "Så stöttas ultratätt väte av forskningssystemet",
-        "user_image_id": "546589f1-5bfe-4634-b6a2-752258c5713a",
-        "match_score": 0.2071,
-        "width": 1280,
-        "height": 848
-      }
-    },
-    {
       "id": "ff62a77c0fe7dadbc297",
       "title": "Neighbor’s Dog Basically Adopted This Family",
       "url": "https://www.dailymotion.com/video/xayj7rm",
@@ -1543,7 +1531,7 @@
       "source_excerpt": "At this point, he’s basically their part-time dog! Duncan technically belongs to the neighbors, but for the past three years, he’s been showing up at the Fritts’ house to stare through the windows, play with the kids and make himself completely at home. Dodo editor Brielle shares how their honorary family member even convinced them it was time to get a dog of their own.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/dVtWI1gWwotftE4OJ/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/dVtWI1gWwotftE4OJ/x720",
       "source_image_alt": "Neighbor’s Dog Basically Adopted This Family",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xayj7rm",
@@ -1578,7 +1566,7 @@
       "source_excerpt": "The whole neighborhood came to watch. When Bruno disappeared into the trees, neighbors from all over the block came together to help bring him home. Dodo editor Brielle shares how local rescuer Steve Murrow's daring climb turned into a rescue the entire neighborhood was cheering for.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/dVhvs1gWwhw2Y9HI8/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/dVhvs1gWwhw2Y9HI8/x720",
       "source_image_alt": "Entire Neighborhood Rallies To Rescue Missing Cat",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xayi73q",
