@@ -673,6 +673,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "21305922bfafdd2bff0265d9a7b3f2287c2e62e47e813b6c1e73b474c7a2221a"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/f98c13cb10adf947f6af-825c516aafa99871f2f6-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Internetbehandling lovande som behandling för ungdomar med depression",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "825c516aafa99871f2f6",
+        "width": 1280,
+        "height": 848,
+        "sha256": "0b09d5af7331eb7e93f49c792ceff755348d7680640c6fa60299bdce0b2bef4f",
+        "generated_at": "2026-08-20T10:30:44Z"
       }
     },
     {
