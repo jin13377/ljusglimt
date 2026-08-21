@@ -469,6 +469,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "42b84cd5626ab87ee27e2ad2fae16ae93f4c36d5b663d1454c9cbb907ebbf2c0"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/51d28cce40d80ab3b581-939f54e207c2ca0e059f-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Anslag för att förbättra riskbedömningen av demens",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "939f54e207c2ca0e059f",
+        "width": 1280,
+        "height": 848,
+        "sha256": "7325958f46ee55b24fb44726afde68b570efaca0cf3b16ef1f8152e26863392e",
+        "generated_at": "2026-08-21T10:30:24Z"
       }
     },
     {
