@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-21T10:29:59.721600Z",
+  "generated_at": "2026-08-21T22:24:15.209007Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "51d28cce40d80ab3b581",
-    "87bceb58985940cc7724"
+    "dccfb9a922b87ef5037b",
+    "01cbce0039d328542daa"
   ],
   "fetch_errors": [],
   "items": [
@@ -469,17 +469,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "42b84cd5626ab87ee27e2ad2fae16ae93f4c36d5b663d1454c9cbb907ebbf2c0"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/51d28cce40d80ab3b581-939f54e207c2ca0e059f-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: Anslag för att förbättra riskbedömningen av demens",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "939f54e207c2ca0e059f",
-        "width": 1280,
-        "height": 848,
-        "sha256": "7325958f46ee55b24fb44726afde68b570efaca0cf3b16ef1f8152e26863392e",
-        "generated_at": "2026-08-21T10:30:24Z"
       }
     },
     {
@@ -1611,6 +1600,61 @@
       "public_eligible": false
     },
     {
+      "id": "dccfb9a922b87ef5037b",
+      "title": "After being rescued from traffickers, this orangutan has become a mother in the wild: 'A glimmer of hope'",
+      "url": "https://www.goodgoodgood.co/articles/orangutan-rescue-becomes-a-mother",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-08-21T18:11:00Z",
+      "source_excerpt": "Indonesia’s forestry minister named the baby Badar, a Malay word with Arabic origin meaning “full moon.” The mother’s name, Bulan, also means “moon” in Indonesian.",
+      "agent_summary": "",
+      "source_fingerprint": "fefee6b3dee870c1d89c",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a884bd333d31c51886a9cd9_rescued-from-traffickers-reintroduced-orangutan-01.jpg",
+      "source_image_alt": "After being rescued from traffickers, this orangutan has become a mother in the wild: 'A glimmer of hope'",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/orangutan-rescue-becomes-a-mother",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/orangutan-rescue-becomes-a-mother",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "source_tier_bonus": 2,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "hope",
+        "rescue"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "01cbce0039d328542daa",
+      "title": "Trail cameras capture rare footage of elusive African serval kittens, a cat that looks like a 'stretched out cheetah'",
+      "url": "https://www.goodgoodgood.co/articles/african-serval-kitten-trail-cameras-tanzania",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-08-21T17:35:00Z",
+      "source_excerpt": "The rare sighting came as a result of lion and leopard research carried out by conservation nonprofit Panthera.",
+      "agent_summary": "",
+      "source_fingerprint": "3928202449271ac5e76b",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a8889661d8d833091d5a892_6a888965172b026be33fed00_african-serval-kitten-trail-cameras-tanzania-featured-2.webp",
+      "source_image_alt": "Trail cameras capture rare footage of elusive African serval kittens, a cat that looks like a 'stretched out cheetah'",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/african-serval-kitten-trail-cameras-tanzania",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/african-serval-kitten-trail-cameras-tanzania",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "source_tier_bonus": 2,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "conservation",
+        "kitten",
+        "research"
+      ],
+      "public_eligible": false
+    },
+    {
       "id": "a7514f34d92f158947bc",
       "title": "Researchers discover groundbreaking details about sea turtle migration patterns: 'Crucial to conservation'",
       "url": "https://www.goodgoodgood.co/articles/sea-turtle-migration-patterns-florida-state-university",
@@ -1634,68 +1678,6 @@
         "curated-positive-source",
         "conservation",
         "research"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "43e38e64e01957bececd",
-      "title": "Couple Learns 20+ Rescue Animals Are Harder Than Kids",
-      "url": "https://www.dailymotion.com/video/xayhpcy",
-      "source": "The Dodo",
-      "language": "en",
-      "published_at": "2026-08-17T12:34:43Z",
-      "source_excerpt": "They lost count after 20... and that includes a very sassy house pig. One rescue turned into more than 20 animals, a very sassy house pig, and a cage-free sanctuary. Dodo editor Brielle talks to Dina about how saying yes to one animal after another completely changed their lives.",
-      "agent_summary": "",
-      "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/dVcIY1gWwZ1dpcgoz/x720",
-      "source_image_alt": "Couple Learns 20+ Rescue Animals Are Harder Than Kids",
-      "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xayhpcy",
-      "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xayhpcy",
-      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
-      "source_video": {
-        "provider": "dailymotion",
-        "video_id": "xayhpcy",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xayhpcy",
-        "source_url": "https://www.dailymotion.com/video/xayhpcy",
-        "title": "Couple Learns 20+ Rescue Animals Are Harder Than Kids"
-      },
-      "source_fingerprint": "66976e4ede0817186e14",
-      "category": "Djur",
-      "source_tier_bonus": 4,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "rescue"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "01126e4d8442871a8adc",
-      "title": "Rescued as poaching victims, 6 rhinos defy all odds by giving birth to calves in the wild",
-      "url": "https://www.goodgoodgood.co/articles/rescue-rhinos-give-birth-in-the-wild",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-08-06T17:48:00Z",
-      "source_excerpt": "Six orphaned rhinos spent years being rehabilitated. Now back in the wild, they are shocking conservationists with even more progress.",
-      "agent_summary": "",
-      "source_fingerprint": "1fe71d93a99e4bd90fd8",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a74c8a809a3067859a51430_6a74c8a743f0eaebe1110d5a_rescue-rhinos-give-birth-in-the-wild-featured.webp",
-      "source_image_alt": "Rescued as poaching victims, 6 rhinos defy all odds by giving birth to calves in the wild",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/rescue-rhinos-give-birth-in-the-wild",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/rescue-rhinos-give-birth-in-the-wild",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "conservation",
-        "progress",
-        "rescue"
       ],
       "public_eligible": false
     }
