@@ -1,8 +1,11 @@
 {
-  "generated_at": "2026-08-20T22:27:38.076023Z",
+  "generated_at": "2026-08-21T10:29:59.721600Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "51d28cce40d80ab3b581",
+    "87bceb58985940cc7724"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -432,6 +435,43 @@
       }
     },
     {
+      "id": "51d28cce40d80ab3b581",
+      "title": "Anslag för att förbättra riskbedömningen av demens",
+      "url": "https://nyheter.ki.se/anslag-for-att-forbattra-riskbedomningen-av-demens",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-08-21T00:00:00Z",
+      "source_excerpt": "Personer med subjektiv kognitiv svikt upplever minnet eller tankeförmågan har försämrats, även om de fortfarande presterar normalt på kognitiva tester. Vissa kommer senare att utveckla demenssjukdom, medan många inte gör det, vilket gör det svårt att avgöra vem som kan ha nytta av ytterligare utredning eller tätare uppföljning. Nu har KI-forskaren Ingrid Ekström beviljats ett nytt anslag för under",
+      "agent_summary": "",
+      "source_fingerprint": "939f54e207c2ca0e059f",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "anslag",
+        "beviljats"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/3559646e-9dfb-4236-b91b-7fad3fce7837.webp",
+        "alt": "Anslag för att förbättra riskbedömningen av demens",
+        "user_image_id": "3559646e-9dfb-4236-b91b-7fad3fce7837",
+        "match_score": 0.2739,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/51d28cce40d80ab3b581-939f54e2-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "939f54e207c2ca0e059f",
+        "width": 1280,
+        "height": 848,
+        "sha256": "42b84cd5626ab87ee27e2ad2fae16ae93f4c36d5b663d1454c9cbb907ebbf2c0"
+      }
+    },
+    {
       "id": "68c986bccbaf4d2645f6",
       "title": "Tarmbakterier omvandlar nitrat och järn i kosten till skyddande molekyler",
       "url": "https://nyheter.ki.se/tarmbakterier-omvandlar-nitrat-och-jarn-i-kosten-till-skyddande-molekyler",
@@ -634,42 +674,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "da35e92250c0515d62aedd5149cdcfa9db32493eb90f22ded0138d83d4348efb"
-      }
-    },
-    {
-      "id": "f98c13cb10adf947f6af",
-      "title": "Internetbehandling lovande som behandling för ungdomar med depression",
-      "url": "https://nyheter.ki.se/internetbehandling-lovande-som-behandling-for-ungdomar-med-depression",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-08-20T00:00:00Z",
-      "source_excerpt": "En internetbaserad behandling med stöd av behandlare gav en större minskning av depressionssymtom hos ungdomar med depression än sedvanlig vård, till lägre behandlingskostnad. Det visar en ny studie från Karolinska Institutet som publiceras i tidskriften BMJ Mental Health. Resultaten pekar samtidigt på att en självledd internetbehandling kan vara ett kostnadseffektivt alternativ där tillgången til",
-      "agent_summary": "",
-      "source_fingerprint": "825c516aafa99871f2f6",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "lovande"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/3559646e-9dfb-4236-b91b-7fad3fce7837.webp",
-        "alt": "Internetbehandling lovande som behandling för ungdomar med depression",
-        "user_image_id": "3559646e-9dfb-4236-b91b-7fad3fce7837",
-        "match_score": 0.2739,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/f98c13cb10adf947f6af-825c516a-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "825c516aafa99871f2f6",
-        "width": 1280,
-        "height": 848,
-        "sha256": "21305922bfafdd2bff0265d9a7b3f2287c2e62e47e813b6c1e73b474c7a2221a"
       }
     },
     {
@@ -969,6 +973,42 @@
       ],
       "display_title_sv": "Pojkvännen fick den bästa alla hjärtans dag-presenten",
       "public_eligible": true
+    },
+    {
+      "id": "87bceb58985940cc7724",
+      "title": "Nytt ljus på svinnet i byggbranschen",
+      "url": "https://www.extrakt.se/nytt-ljus-pa-svinnet-i-byggbranschen",
+      "source": "Extrakt",
+      "language": "sv",
+      "published_at": "2026-08-21T10:08:57Z",
+      "source_excerpt": "Byggbranschen står för 40 procent av allt avfall i Sverige, liksom en betydande del av klimatutsläppen. En orsak är att stora mängder nytt byggmaterial slängs. I en ny satsning ska svinnet i byggbranschen kartläggas.",
+      "agent_summary": "",
+      "source_fingerprint": "ed2cf8618fdbc5df265e",
+      "category": "Miljö",
+      "source_tier_bonus": 5,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "satsning"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/875acd2e-97c1-4178-853f-484bf04ff226.webp",
+        "alt": "Nytt ljus på svinnet i byggbranschen",
+        "user_image_id": "875acd2e-97c1-4178-853f-484bf04ff226",
+        "match_score": 0.2709,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/87bceb58985940cc7724-ed2cf861-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "ed2cf8618fdbc5df265e",
+        "width": 1280,
+        "height": 848,
+        "sha256": "0f797f78745896be8844346a2210df76260c006274bdf95bd567e4b6f323f65e"
+      }
     },
     {
       "id": "32b1714f350cc741a7c9",
@@ -1490,35 +1530,6 @@
       }
     },
     {
-      "id": "bb444b4e90edfd94807f",
-      "title": "Ben från stenålderskvinna med foster upptäckt på Lilla Karlsö",
-      "url": "https://fof.se/artikel/ben-fran-kvinna-med-foster-upptackt-pa-lilla-karlso",
-      "source": "Forskning & Framsteg",
-      "language": "sv",
-      "published_at": "2026-08-10T10:11:18Z",
-      "source_excerpt": "Det är början av augusti och arkeoosteologerna Alexander Sjöstrand och Olivia Bartholdson befinner sig fem meter ner i grottan Suder Vagnhus på Lilla Karlsö. De … The post Ben från stenålderskvinna med foster upptäckt på Lilla Karlsö appeared first on Forskning & Framsteg .",
-      "agent_summary": "",
-      "source_fingerprint": "e62ea957ecd75e4431aa",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 9,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "framsteg",
-        "upptäckt"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/875acd2e-97c1-4178-853f-484bf04ff226.webp",
-        "alt": "Ben från stenålderskvinna med foster upptäckt på Lilla Karlsö",
-        "user_image_id": "875acd2e-97c1-4178-853f-484bf04ff226",
-        "match_score": 0.2532,
-        "width": 1280,
-        "height": 848
-      }
-    },
-    {
       "id": "ff62a77c0fe7dadbc297",
       "title": "Neighbor’s Dog Basically Adopted This Family",
       "url": "https://www.dailymotion.com/video/xayj7rm",
@@ -1625,7 +1636,7 @@
       "source_excerpt": "They lost count after 20... and that includes a very sassy house pig. One rescue turned into more than 20 animals, a very sassy house pig, and a cage-free sanctuary. Dodo editor Brielle talks to Dina about how saying yes to one animal after another completely changed their lives.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/dVcIY1gWwZ1dpcgoz/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/dVcIY1gWwZ1dpcgoz/x720",
       "source_image_alt": "Couple Learns 20+ Rescue Animals Are Harder Than Kids",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xayhpcy",
