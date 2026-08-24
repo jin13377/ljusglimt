@@ -198,6 +198,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "547f394c7085239da2ecc44ff60ac4d2ccb6319ef1133249a5ad78295b8660bf"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/95af818f13efd4ce9c01-98b17a084bb7253abfca-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Nature Medicine lyfter två av Karolinska Institutets AI-initiativ",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "98b17a084bb7253abfca",
+        "width": 1280,
+        "height": 848,
+        "sha256": "1e021fa8043fb62027cd1e2223d90da8662485f7eb684ee6b38fdec54721add1",
+        "generated_at": "2026-08-24T22:27:01Z"
       }
     },
     {
