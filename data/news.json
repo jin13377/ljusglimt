@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-08-24T10:36:46.043414Z",
+  "generated_at": "2026-08-24T22:26:35.111433Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "5c8ef82a4400d149508e"
+    "95af818f13efd4ce9c01",
+    "7fdd307d65b71b1561bd"
   ],
   "fetch_errors": [],
   "items": [
@@ -159,6 +160,44 @@
         "match_score": 0.1947,
         "width": 1280,
         "height": 848
+      }
+    },
+    {
+      "id": "95af818f13efd4ce9c01",
+      "title": "Nature Medicine lyfter två av Karolinska Institutets AI-initiativ",
+      "url": "https://nyheter.ki.se/nature-medicine-lyfter-tva-av-karolinska-institutets-ai-initiativ",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-08-24T00:00:00Z",
+      "source_excerpt": "I en ny artikel i Nature Medicine lyfts två Karolinska Institutet-initiativ som nordiska nyckelresurser – KI:s Centrum för AI-innovation och TEF-Health, EU:s test- och försöksanläggning för AI och robotik inom hälso- och sjukvården (Testing and Experimentation Facility for Health AI and Robotics), vars svenska nod drivs av KI.",
+      "agent_summary": "",
+      "source_fingerprint": "98b17a084bb7253abfca",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 9,
+      "positive_signals": [
+        "curated-positive-source",
+        "experiment",
+        "initiativ",
+        "innovation"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/431c3154-4dd0-42c6-ab09-d5e8191643ee.webp",
+        "alt": "Nature Medicine lyfter två av Karolinska Institutets AI-initiativ",
+        "user_image_id": "431c3154-4dd0-42c6-ab09-d5e8191643ee",
+        "match_score": 0.2745,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/95af818f13efd4ce9c01-98b17a08-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "98b17a084bb7253abfca",
+        "width": 1280,
+        "height": 848,
+        "sha256": "547f394c7085239da2ecc44ff60ac4d2ccb6319ef1133249a5ad78295b8660bf"
       }
     },
     {
@@ -468,43 +507,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "42b84cd5626ab87ee27e2ad2fae16ae93f4c36d5b663d1454c9cbb907ebbf2c0"
-      }
-    },
-    {
-      "id": "68c986bccbaf4d2645f6",
-      "title": "Tarmbakterier omvandlar nitrat och järn i kosten till skyddande molekyler",
-      "url": "https://nyheter.ki.se/tarmbakterier-omvandlar-nitrat-och-jarn-i-kosten-till-skyddande-molekyler",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-08-19T00:00:00Z",
-      "source_excerpt": "Forskare vid Karolinska Institutet har upptäckt att tarmbakterier kan omvandla nitrat och järn från kosten till skyddande molekyler som kan minska risken för hjärt-kärlsjukdomar och metabola sjukdomar. Studien, som publiceras i Cell, avslöjar en ny mekanism genom vilken tarmfloran bidrar till att skydda viktiga kroppsfunktioner.",
-      "agent_summary": "",
-      "source_fingerprint": "cabad1657b13ebe8660f",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 8,
-      "positive_signals": [
-        "curated-positive-source",
-        "skydda",
-        "upptäckt"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/431c3154-4dd0-42c6-ab09-d5e8191643ee.webp",
-        "alt": "Tarmbakterier omvandlar nitrat och järn i kosten till skyddande molekyler",
-        "user_image_id": "431c3154-4dd0-42c6-ab09-d5e8191643ee",
-        "match_score": 0.2745,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/68c986bccbaf4d2645f6-cabad165-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "cabad1657b13ebe8660f",
-        "width": 1280,
-        "height": 848,
-        "sha256": "78253003d70e0e177280b12fe98d7a7f47bfc289ee6af2559b1a903455ea78d1"
       }
     },
     {
@@ -1573,7 +1575,7 @@
       "source_excerpt": "At this point, he’s basically their part-time dog! Duncan technically belongs to the neighbors, but for the past three years, he’s been showing up at the Fritts’ house to stare through the windows, play with the kids and make himself completely at home. Dodo editor Brielle shares how their honorary family member even convinced them it was time to get a dog of their own.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/dVtWI1gWwotftE4OJ/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/dVtWI1gWwotftE4OJ/x720",
       "source_image_alt": "Neighbor’s Dog Basically Adopted This Family",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xayj7rm",
@@ -1608,7 +1610,7 @@
       "source_excerpt": "The whole neighborhood came to watch. When Bruno disappeared into the trees, neighbors from all over the block came together to help bring him home. Dodo editor Brielle shares how local rescuer Steve Murrow's daring climb turned into a rescue the entire neighborhood was cheering for.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/dVhvs1gWwhw2Y9HI8/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/dVhvs1gWwhw2Y9HI8/x720",
       "source_image_alt": "Entire Neighborhood Rallies To Rescue Missing Cat",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xayi73q",
@@ -1630,6 +1632,33 @@
         "curated-positive-source",
         "rescue",
         "together"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "7fdd307d65b71b1561bd",
+      "title": "Gary, Indiana has been without power for 12 days. A food influencer and NBA player are coming to the rescue",
+      "url": "https://www.goodgoodgood.co/articles/keith-lee-gary-indiana-fundraiser",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-08-24T17:48:00Z",
+      "source_excerpt": "Keith Lee and Tyrese Haliburton are hosting a supply drive for Gary, Indiana residents on Monday.",
+      "agent_summary": "",
+      "source_fingerprint": "997004b9e7f57245f930",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a8c83c5538d5c2a78cc7569_6a8c83c4d6540cca671bfae9_keith-lee-gary-indiana-fundraiser-featured.webp",
+      "source_image_alt": "Gary, Indiana has been without power for 12 days. A food influencer and NBA player are coming to the rescue",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/keith-lee-gary-indiana-fundraiser",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/keith-lee-gary-indiana-fundraiser",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "source_tier_bonus": 2,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "play",
+        "rescue"
       ],
       "public_eligible": false
     },
@@ -1657,34 +1686,6 @@
         "curated-positive-source",
         "hope",
         "rescue"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "01cbce0039d328542daa",
-      "title": "Trail cameras capture rare footage of elusive African serval kittens, a cat that looks like a 'stretched out cheetah'",
-      "url": "https://www.goodgoodgood.co/articles/african-serval-kitten-trail-cameras-tanzania",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-08-21T17:35:00Z",
-      "source_excerpt": "The rare sighting came as a result of lion and leopard research carried out by conservation nonprofit Panthera.",
-      "agent_summary": "",
-      "source_fingerprint": "3928202449271ac5e76b",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a8889661d8d833091d5a892_6a888965172b026be33fed00_african-serval-kitten-trail-cameras-tanzania-featured-2.webp",
-      "source_image_alt": "Trail cameras capture rare footage of elusive African serval kittens, a cat that looks like a 'stretched out cheetah'",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/african-serval-kitten-trail-cameras-tanzania",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/african-serval-kitten-trail-cameras-tanzania",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "conservation",
-        "kitten",
-        "research"
       ],
       "public_eligible": false
     }
