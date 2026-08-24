@@ -1,8 +1,10 @@
 {
-  "generated_at": "2026-08-23T22:20:47.850430Z",
+  "generated_at": "2026-08-24T10:36:46.043414Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "5c8ef82a4400d149508e"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -1527,6 +1529,41 @@
       }
     },
     {
+      "id": "5c8ef82a4400d149508e",
+      "title": "Woman Finds Newborn Kittens At The Dump",
+      "url": "https://www.dailymotion.com/video/xb06pd6",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-08-24T04:33:45Z",
+      "source_excerpt": "She had no idea THIS was what she'd find on her trip to the dump... A trip to the dump turned into a race to save a litter of newborn kittens, but the hardest part was making sure they didn't lose their mom. Dodo editor Monica talks about local rescuer Audray's split-second decision, which ultimately saved the whole family.",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s1.dmcdn.net/v/dgT7g1gYydEQkrHu6/x720",
+      "source_image_alt": "Woman Finds Newborn Kittens At The Dump",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xb06pd6",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xb06pd6",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xb06pd6",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xb06pd6",
+        "source_url": "https://www.dailymotion.com/video/xb06pd6",
+        "title": "Woman Finds Newborn Kittens At The Dump"
+      },
+      "source_fingerprint": "6b91f16220b0d3dca248",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "kitten",
+        "rescue"
+      ],
+      "public_eligible": false
+    },
+    {
       "id": "ff62a77c0fe7dadbc297",
       "title": "Neighbor’s Dog Basically Adopted This Family",
       "url": "https://www.dailymotion.com/video/xayj7rm",
@@ -1536,7 +1573,7 @@
       "source_excerpt": "At this point, he’s basically their part-time dog! Duncan technically belongs to the neighbors, but for the past three years, he’s been showing up at the Fritts’ house to stare through the windows, play with the kids and make himself completely at home. Dodo editor Brielle shares how their honorary family member even convinced them it was time to get a dog of their own.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/dVtWI1gWwotftE4OJ/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/dVtWI1gWwotftE4OJ/x720",
       "source_image_alt": "Neighbor’s Dog Basically Adopted This Family",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xayj7rm",
@@ -1571,7 +1608,7 @@
       "source_excerpt": "The whole neighborhood came to watch. When Bruno disappeared into the trees, neighbors from all over the block came together to help bring him home. Dodo editor Brielle shares how local rescuer Steve Murrow's daring climb turned into a rescue the entire neighborhood was cheering for.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/dVhvs1gWwhw2Y9HI8/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/dVhvs1gWwhw2Y9HI8/x720",
       "source_image_alt": "Entire Neighborhood Rallies To Rescue Missing Cat",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xayi73q",
@@ -1647,33 +1684,6 @@
         "curated-positive-source",
         "conservation",
         "kitten",
-        "research"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "a7514f34d92f158947bc",
-      "title": "Researchers discover groundbreaking details about sea turtle migration patterns: 'Crucial to conservation'",
-      "url": "https://www.goodgoodgood.co/articles/sea-turtle-migration-patterns-florida-state-university",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-08-17T17:34:00Z",
-      "source_excerpt": "The new research followed male sea turtles, which often do not get the same attention as female nesting turtles.",
-      "agent_summary": "",
-      "source_fingerprint": "bb9e1e64a6ea6279b883",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a8345ac088a8e661f5d3748_6a8345abdd404ceb89a4764a_sea-turtle-migration-patterns-florida-state-university-featured.webp",
-      "source_image_alt": "Researchers discover groundbreaking details about sea turtle migration patterns: 'Crucial to conservation'",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/sea-turtle-migration-patterns-florida-state-university",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/sea-turtle-migration-patterns-florida-state-university",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "conservation",
         "research"
       ],
       "public_eligible": false
