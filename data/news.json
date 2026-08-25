@@ -1009,6 +1009,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "77b18b8166d6d38173d53d09136060c6e9edb0a3f45e1f85b3117c56666c64d2"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/8212c6f20904a943c6d1-fb671124a310e88f3025-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Att skörda vass kan ge dubbla vinster",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "fb671124a310e88f3025",
+        "width": 1280,
+        "height": 848,
+        "sha256": "0818885cd53d669fc418c132a00a7a2a1fc94707b9b44bb502be6da0994db38d",
+        "generated_at": "2026-08-25T22:27:26Z"
       }
     },
     {
