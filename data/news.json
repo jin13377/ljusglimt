@@ -1,8 +1,11 @@
 {
-  "generated_at": "2026-08-25T10:32:32.851538Z",
+  "generated_at": "2026-08-25T22:27:01.245035Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "8212c6f20904a943c6d1",
+    "d385886f2f4ff59ad1d7"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -973,6 +976,42 @@
       "public_eligible": true
     },
     {
+      "id": "8212c6f20904a943c6d1",
+      "title": "Att skörda vass kan ge dubbla vinster",
+      "url": "https://www.extrakt.se/att-skorda-vass-kan-ge-dubbla-vinster",
+      "source": "Extrakt",
+      "language": "sv",
+      "published_at": "2026-08-25T10:48:03Z",
+      "source_excerpt": "Skörd av vass längs Östersjöns kust kan gynna både hav och lantbruk. Metoden kan förbättra den biologiska mångfalden och skapa ett hållbart alternativ till traditionellt djurfoder.",
+      "agent_summary": "",
+      "source_fingerprint": "fb671124a310e88f3025",
+      "category": "Miljö",
+      "source_tier_bonus": 5,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "hållbar"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/290629d1-eec3-4f31-9644-49e96e973112-1.webp",
+        "alt": "Att skörda vass kan ge dubbla vinster",
+        "user_image_id": "290629d1-eec3-4f31-9644-49e96e973112-1",
+        "match_score": 0.2636,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/8212c6f20904a943c6d1-fb671124-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "fb671124a310e88f3025",
+        "width": 1280,
+        "height": 848,
+        "sha256": "77b18b8166d6d38173d53d09136060c6e9edb0a3f45e1f85b3117c56666c64d2"
+      }
+    },
+    {
       "id": "87bceb58985940cc7724",
       "title": "Nytt ljus på svinnet i byggbranschen",
       "url": "https://www.extrakt.se/nytt-ljus-pa-svinnet-i-byggbranschen",
@@ -1499,35 +1538,6 @@
       }
     },
     {
-      "id": "4946a3c6985f1fc12bfb",
-      "title": "Mänsklighetens samarbete i fokus på Nobelprismuseet",
-      "url": "https://fof.se/artikel/mansklighetens-samarbete-i-fokus-pa-nobelprismuseet",
-      "source": "Forskning & Framsteg",
-      "language": "sv",
-      "published_at": "2026-08-11T14:02:01Z",
-      "source_excerpt": "Det första jag såg på utställningen Celler, nerver, gener var ett vitt hörn med uppradade textplattor och några bruna montrar. Men saknaden av skenet bedrar! … The post Mänsklighetens samarbete i fokus på Nobelprismuseet appeared first on Forskning & Framsteg .",
-      "agent_summary": "",
-      "source_fingerprint": "9bd6a162f12e439bd285",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 9,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "framsteg",
-        "samarbete"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/290629d1-eec3-4f31-9644-49e96e973112-1.webp",
-        "alt": "Mänsklighetens samarbete i fokus på Nobelprismuseet",
-        "user_image_id": "290629d1-eec3-4f31-9644-49e96e973112-1",
-        "match_score": 0.2369,
-        "width": 1280,
-        "height": 848
-      }
-    },
-    {
       "id": "5c8ef82a4400d149508e",
       "title": "Woman Finds Newborn Kittens At The Dump",
       "url": "https://www.dailymotion.com/video/xb06pd6",
@@ -1572,7 +1582,7 @@
       "source_excerpt": "At this point, he’s basically their part-time dog! Duncan technically belongs to the neighbors, but for the past three years, he’s been showing up at the Fritts’ house to stare through the windows, play with the kids and make himself completely at home. Dodo editor Brielle shares how their honorary family member even convinced them it was time to get a dog of their own.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/dVtWI1gWwotftE4OJ/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/dVtWI1gWwotftE4OJ/x720",
       "source_image_alt": "Neighbor’s Dog Basically Adopted This Family",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xayj7rm",
@@ -1633,6 +1643,33 @@
       "public_eligible": false
     },
     {
+      "id": "d385886f2f4ff59ad1d7",
+      "title": "Right before they graduated, these service dogs reunited with the volunteers who raised them: 'They can be a puppy one last time'",
+      "url": "https://www.goodgoodgood.co/articles/service-dogs-graduation-volunteers-reunion-emotional",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-08-25T19:26:00Z",
+      "source_excerpt": "The Instagram Reel was called “the best thing you’ll see on the internet today.”",
+      "agent_summary": "",
+      "source_fingerprint": "8773c226485a64532aa6",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a8deb8d12e7d463ad2488b8_6a8deb8cb311833caaadbd99_service-dogs-graduation-volunteers-reunion-emotional-featured.webp",
+      "source_image_alt": "Right before they graduated, these service dogs reunited with the volunteers who raised them: 'They can be a puppy one last time'",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/service-dogs-graduation-volunteers-reunion-emotional",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/service-dogs-graduation-volunteers-reunion-emotional",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "source_tier_bonus": 2,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "puppy",
+        "volunteer"
+      ],
+      "public_eligible": false
+    },
+    {
       "id": "7fdd307d65b71b1561bd",
       "title": "Gary, Indiana has been without power for 12 days. A food influencer and NBA player are coming to the rescue",
       "url": "https://www.goodgoodgood.co/articles/keith-lee-gary-indiana-fundraiser",
@@ -1655,33 +1692,6 @@
       "positive_signals": [
         "curated-positive-source",
         "play",
-        "rescue"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "dccfb9a922b87ef5037b",
-      "title": "After being rescued from traffickers, this orangutan has become a mother in the wild: 'A glimmer of hope'",
-      "url": "https://www.goodgoodgood.co/articles/orangutan-rescue-becomes-a-mother",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-08-21T18:11:00Z",
-      "source_excerpt": "Indonesia’s forestry minister named the baby Badar, a Malay word with Arabic origin meaning “full moon.” The mother’s name, Bulan, also means “moon” in Indonesian.",
-      "agent_summary": "",
-      "source_fingerprint": "fefee6b3dee870c1d89c",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a884bd333d31c51886a9cd9_rescued-from-traffickers-reintroduced-orangutan-01.jpg",
-      "source_image_alt": "After being rescued from traffickers, this orangutan has become a mother in the wild: 'A glimmer of hope'",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/orangutan-rescue-becomes-a-mother",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/orangutan-rescue-becomes-a-mother",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "hope",
         "rescue"
       ],
       "public_eligible": false
