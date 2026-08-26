@@ -1,10 +1,11 @@
 {
-  "generated_at": "2026-08-25T22:27:01.245035Z",
+  "generated_at": "2026-08-26T10:34:52.547035Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "8212c6f20904a943c6d1",
-    "d385886f2f4ff59ad1d7"
+    "a9e61b1e31f05eeb0e00",
+    "eee273320a0b6a0b5608",
+    "a57c75873d6f3109d02c"
   ],
   "fetch_errors": [],
   "items": [
@@ -1009,17 +1010,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "77b18b8166d6d38173d53d09136060c6e9edb0a3f45e1f85b3117c56666c64d2"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/8212c6f20904a943c6d1-fb671124a310e88f3025-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: Att skörda vass kan ge dubbla vinster",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "fb671124a310e88f3025",
-        "width": 1280,
-        "height": 848,
-        "sha256": "0818885cd53d669fc418c132a00a7a2a1fc94707b9b44bb502be6da0994db38d",
-        "generated_at": "2026-08-25T22:27:26Z"
       }
     },
     {
@@ -1491,6 +1481,81 @@
       }
     },
     {
+      "id": "a9e61b1e31f05eeb0e00",
+      "title": "Kitten Helps Dog Heal After Losing His Best Friend",
+      "url": "https://www.dailymotion.com/video/xb0rffy",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-08-25T23:49:26Z",
+      "source_excerpt": "He finally found a reason to play again. After losing his lifelong canine companion, Sam wasn't himself anymore. Then a rescued kitten named Gigi came into his life. Dodo editor Valentina shares how an unlikely friendship helped bring Sam's personality back.",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s2.dmcdn.net/v/dk9Bk1gZYepD3QbPo/x720",
+      "source_image_alt": "Kitten Helps Dog Heal After Losing His Best Friend",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xb0rffy",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xb0rffy",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xb0rffy",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xb0rffy",
+        "source_url": "https://www.dailymotion.com/video/xb0rffy",
+        "title": "Kitten Helps Dog Heal After Losing His Best Friend"
+      },
+      "source_fingerprint": "4e7eeebb16ec79fc9b00",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 12,
+      "positive_signals": [
+        "curated-positive-source",
+        "best friend",
+        "friend",
+        "kitten",
+        "play",
+        "rescue"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "eee273320a0b6a0b5608",
+      "title": "Neighbor's Dog Comes Over To Play With Their Dog",
+      "url": "https://www.dailymotion.com/video/xb0s3cq",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-08-26T00:36:35Z",
+      "source_excerpt": "Can we all agree this is the dream neighborhood? When Nicole and her husband moved into a new neighborhood, the very first friend they made was their neighbor's dog, Pita. Dodo producer Tarang sat down with the family to learn how one pup's daily playdates ended up bringing an entire community together!",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s2.dmcdn.net/v/dkGlw1gZZKxYPGFPv/x720",
+      "source_image_alt": "Neighbor's Dog Comes Over To Play With Their Dog",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xb0s3cq",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xb0s3cq",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xb0s3cq",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xb0s3cq",
+        "source_url": "https://www.dailymotion.com/video/xb0s3cq",
+        "title": "Neighbor's Dog Comes Over To Play With Their Dog"
+      },
+      "source_fingerprint": "738cbf804e6c13cd7f9f",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 9,
+      "positive_signals": [
+        "curated-positive-source",
+        "community",
+        "friend",
+        "play",
+        "together"
+      ],
+      "public_eligible": false
+    },
+    {
       "id": "22d76a3981325c98786e",
       "title": "Så skyddar byråkratin demokratin",
       "url": "https://fof.se/artikel/sa-skyddar-byrakratin-demokratin",
@@ -1549,107 +1614,37 @@
       }
     },
     {
-      "id": "5c8ef82a4400d149508e",
-      "title": "Woman Finds Newborn Kittens At The Dump",
-      "url": "https://www.dailymotion.com/video/xb06pd6",
+      "id": "a57c75873d6f3109d02c",
+      "title": "Rescuer Swings Between Trees To Reach Stranded Kitten",
+      "url": "https://www.dailymotion.com/video/xb0rj3y",
       "source": "The Dodo",
       "language": "en",
-      "published_at": "2026-08-24T04:33:45Z",
-      "source_excerpt": "She had no idea THIS was what she'd find on her trip to the dump... A trip to the dump turned into a race to save a litter of newborn kittens, but the hardest part was making sure they didn't lose their mom. Dodo editor Monica talks about local rescuer Audray's split-second decision, which ultimately saved the whole family.",
+      "published_at": "2026-08-25T23:56:30Z",
+      "source_excerpt": "Getting up there was apparently the easy part. After spending days stuck high in a tree, this tiny kitten wasn’t exactly making Steve Murrow’s job easy. Dodo editor Brielle takes us through how Steve had to get creative, moving between two trees to finally bring her back down safely.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/dgT7g1gYydEQkrHu6/x720",
-      "source_image_alt": "Woman Finds Newborn Kittens At The Dump",
+      "source_image_url": "https://s2.dmcdn.net/v/dkAL-1gZYvI3eqs4O/x720",
+      "source_image_alt": "Rescuer Swings Between Trees To Reach Stranded Kitten",
       "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xb06pd6",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xb0rj3y",
       "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xb06pd6",
+      "source_image_source_url": "https://www.dailymotion.com/video/xb0rj3y",
       "source_image_verification_method": "dailymotion-api-thumbnail-v1",
       "source_video": {
         "provider": "dailymotion",
-        "video_id": "xb06pd6",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xb06pd6",
-        "source_url": "https://www.dailymotion.com/video/xb06pd6",
-        "title": "Woman Finds Newborn Kittens At The Dump"
+        "video_id": "xb0rj3y",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xb0rj3y",
+        "source_url": "https://www.dailymotion.com/video/xb0rj3y",
+        "title": "Rescuer Swings Between Trees To Reach Stranded Kitten"
       },
-      "source_fingerprint": "6b91f16220b0d3dca248",
+      "source_fingerprint": "b68acb29df0ecc7335af",
       "category": "Djur",
       "source_tier_bonus": 4,
-      "positivity_score": 7,
+      "positivity_score": 8,
       "positive_signals": [
         "curated-positive-source",
         "kitten",
         "rescue"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "ff62a77c0fe7dadbc297",
-      "title": "Neighbor’s Dog Basically Adopted This Family",
-      "url": "https://www.dailymotion.com/video/xayj7rm",
-      "source": "The Dodo",
-      "language": "en",
-      "published_at": "2026-08-17T15:48:44Z",
-      "source_excerpt": "At this point, he’s basically their part-time dog! Duncan technically belongs to the neighbors, but for the past three years, he’s been showing up at the Fritts’ house to stare through the windows, play with the kids and make himself completely at home. Dodo editor Brielle shares how their honorary family member even convinced them it was time to get a dog of their own.",
-      "agent_summary": "",
-      "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/dVtWI1gWwotftE4OJ/x720",
-      "source_image_alt": "Neighbor’s Dog Basically Adopted This Family",
-      "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xayj7rm",
-      "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xayj7rm",
-      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
-      "source_video": {
-        "provider": "dailymotion",
-        "video_id": "xayj7rm",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xayj7rm",
-        "source_url": "https://www.dailymotion.com/video/xayj7rm",
-        "title": "Neighbor’s Dog Basically Adopted This Family"
-      },
-      "source_fingerprint": "021b7b03a11472e1456e",
-      "category": "Djur",
-      "source_tier_bonus": 4,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "adopted",
-        "play"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "df9d172f56fa102e7240",
-      "title": "Entire Neighborhood Rallies To Rescue Missing Cat",
-      "url": "https://www.dailymotion.com/video/xayi73q",
-      "source": "The Dodo",
-      "language": "en",
-      "published_at": "2026-08-17T13:48:48Z",
-      "source_excerpt": "The whole neighborhood came to watch. When Bruno disappeared into the trees, neighbors from all over the block came together to help bring him home. Dodo editor Brielle shares how local rescuer Steve Murrow's daring climb turned into a rescue the entire neighborhood was cheering for.",
-      "agent_summary": "",
-      "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/dVhvs1gWwhw2Y9HI8/x720",
-      "source_image_alt": "Entire Neighborhood Rallies To Rescue Missing Cat",
-      "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xayi73q",
-      "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xayi73q",
-      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
-      "source_video": {
-        "provider": "dailymotion",
-        "video_id": "xayi73q",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xayi73q",
-        "source_url": "https://www.dailymotion.com/video/xayi73q",
-        "title": "Entire Neighborhood Rallies To Rescue Missing Cat"
-      },
-      "source_fingerprint": "fbdd6fb0d8e8d59cf72b",
-      "category": "Djur",
-      "source_tier_bonus": 4,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "rescue",
-        "together"
       ],
       "public_eligible": false
     },
