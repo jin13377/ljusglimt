@@ -1,11 +1,17 @@
 {
-  "generated_at": "2026-08-27T02:57:58.816290Z",
+  "generated_at": "2026-08-27T20:10:32.433284Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "d527588764b355660cc8"
+    "07b5b8ec5086fbca3fdf",
+    "fa43ca898b378ca27f39"
   ],
-  "fetch_errors": [],
+  "fetch_errors": [
+    {
+      "source": "Karolinska Institutet",
+      "error": "not well-formed (invalid token): line 4, column 17"
+    }
+  ],
   "items": [
     {
       "id": "0b87daf79218ce385c31",
@@ -677,6 +683,43 @@
       }
     },
     {
+      "id": "07b5b8ec5086fbca3fdf",
+      "title": "Bidrottningar dumpar gifter på sin avkomma",
+      "url": "https://www.natursidan.se/nyheter/bidrottningar-dumpar-gifter-pa-sin-avkomma",
+      "source": "Natursidan",
+      "language": "sv",
+      "published_at": "2026-08-27T04:34:48Z",
+      "source_excerpt": "För att skydda sig själv överför honungsbins drottningar bekämpningsmedel till sina ägg. Det visar ny forskning.",
+      "agent_summary": "",
+      "source_fingerprint": "d334d2ac0a71900e67c2",
+      "category": "Natur",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "skydda"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/290629d1-eec3-4f31-9644-49e96e973112.webp",
+        "alt": "Bidrottningar dumpar gifter på sin avkomma",
+        "user_image_id": "290629d1-eec3-4f31-9644-49e96e973112",
+        "match_score": 0.287,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/07b5b8ec5086fbca3fdf-d334d2ac-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "d334d2ac0a71900e67c2",
+        "width": 1280,
+        "height": 848,
+        "sha256": "cebe89e0ec7ef7c721aaaf286d84efe7551e26880758e8c87160cd3a25febdb7"
+      }
+    },
+    {
       "id": "ffa6fd5a4cf536bd012b",
       "title": "Hopp om att på sikt kunna återställa fertiliteten hos barncanceröverlevare",
       "url": "https://forskning.se/2026/08/19/fertilitet-barncanceroverlevare",
@@ -972,6 +1015,33 @@
         "surprise"
       ],
       "display_title_sv": "Pojkvännen fick den bästa alla hjärtans dag-presenten",
+      "public_eligible": true
+    },
+    {
+      "id": "fa43ca898b378ca27f39",
+      "title": "Fler barn överlever med bättre förlossningsvård i Afrika",
+      "url": "https://forskning.se/2026/08/27/fler-barn-overlever-med-battre-forlossningsvard-i-afrika",
+      "source": "Forskning.se",
+      "language": "sv",
+      "published_at": "2026-08-27T15:10:14Z",
+      "source_excerpt": "Risken är fortfarande hög att barn dör under eller strax efter förlossningen i flera länder i Afrika söder om Sahara, trots framsteg inom mödra- och barnhälsovården. För att förbättra vården under förlossningar utvecklade forskare inom projektet ALERT* en insats med flera delar. Kvinnor, familjer och vårdpersonal fick vara med och beskriva problem och behov i […] The post Fler barn överlever med b",
+      "agent_summary": "",
+      "source_fingerprint": "a8288411150841b94f3d",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/08/Bebis-nappflaska-1024x576.jpg",
+      "source_image_alt": "Fler barn överlever med bättre förlossningsvård i Afrika",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/08/27/fler-barn-overlever-med-battre-forlossningsvard-i-afrika",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/08/27/fler-barn-overlever-med-battre-forlossningsvard-i-afrika",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "framsteg"
+      ],
       "public_eligible": true
     },
     {
@@ -1583,64 +1653,6 @@
       "public_eligible": false
     },
     {
-      "id": "22d76a3981325c98786e",
-      "title": "Så skyddar byråkratin demokratin",
-      "url": "https://fof.se/artikel/sa-skyddar-byrakratin-demokratin",
-      "source": "Forskning & Framsteg",
-      "language": "sv",
-      "published_at": "2026-08-20T06:25:01Z",
-      "source_excerpt": "Byråkratiskt krångel kritiseras ofta. Men byrå­kratins idealt sett tydliga spelregler utgör ett värn för demokratin. I början av 2025 attackerade techmiljardären Elon Musk, på uppdrag … The post Så skyddar byråkratin demokratin appeared first on Forskning & Framsteg .",
-      "agent_summary": "",
-      "source_fingerprint": "c2583aa7392606343c59",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 9,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "framsteg",
-        "skydda"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/ca17e92f-ec53-4cd1-b11c-3f69f0912247.webp",
-        "alt": "Så skyddar byråkratin demokratin",
-        "user_image_id": "ca17e92f-ec53-4cd1-b11c-3f69f0912247",
-        "match_score": 0.2453,
-        "width": 1280,
-        "height": 848
-      }
-    },
-    {
-      "id": "e79fd1f733ee9c10f3eb",
-      "title": "”Så kan författarskapet stärkas inom forskningen”",
-      "url": "https://fof.se/artikel/sa-kan-forfattarskapet-starkas-inom-forskningen",
-      "source": "Forskning & Framsteg",
-      "language": "sv",
-      "published_at": "2026-08-12T05:24:53Z",
-      "source_excerpt": "När forskningsfusk diskuteras i medierna handlar det ofta om oetiska experiment, fabricerade data eller plagiat. Men en vanlig form av regelbrott går ofta under radarn: … The post ”Så kan författarskapet stärkas inom forskningen” appeared first on Forskning & Framsteg .",
-      "agent_summary": "",
-      "source_fingerprint": "dfdccf6ac7c366373845",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 9,
-      "positive_signals": [
-        "curated-positive-source",
-        "experiment",
-        "forskning",
-        "framsteg"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/290629d1-eec3-4f31-9644-49e96e973112.webp",
-        "alt": "”Så kan författarskapet stärkas inom forskningen”",
-        "user_image_id": "290629d1-eec3-4f31-9644-49e96e973112",
-        "match_score": 0.2369,
-        "width": 1280,
-        "height": 848
-      }
-    },
-    {
       "id": "a57c75873d6f3109d02c",
       "title": "Rescuer Swings Between Trees To Reach Stranded Kitten",
       "url": "https://www.dailymotion.com/video/xb0rj3y",
@@ -1650,7 +1662,7 @@
       "source_excerpt": "Getting up there was apparently the easy part. After spending days stuck high in a tree, this tiny kitten wasn’t exactly making Steve Murrow’s job easy. Dodo editor Brielle takes us through how Steve had to get creative, moving between two trees to finally bring her back down safely.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/dkAL-1gZYvI3eqs4O/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/dkAL-1gZYvI3eqs4O/x720",
       "source_image_alt": "Rescuer Swings Between Trees To Reach Stranded Kitten",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xb0rj3y",
