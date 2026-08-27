@@ -1,11 +1,9 @@
 {
-  "generated_at": "2026-08-26T10:34:52.547035Z",
+  "generated_at": "2026-08-27T02:57:58.816290Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "a9e61b1e31f05eeb0e00",
-    "eee273320a0b6a0b5608",
-    "a57c75873d6f3109d02c"
+    "d527588764b355660cc8"
   ],
   "fetch_errors": [],
   "items": [
@@ -1490,7 +1488,7 @@
       "source_excerpt": "He finally found a reason to play again. After losing his lifelong canine companion, Sam wasn't himself anymore. Then a rescued kitten named Gigi came into his life. Dodo editor Valentina shares how an unlikely friendship helped bring Sam's personality back.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/dk9Bk1gZYepD3QbPo/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/dk9Bk1gZYepD3QbPo/x720",
       "source_image_alt": "Kitten Helps Dog Heal After Losing His Best Friend",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xb0rffy",
@@ -1519,6 +1517,35 @@
       "public_eligible": false
     },
     {
+      "id": "d527588764b355660cc8",
+      "title": "This frog has been 'invisible' to the science community for over a century. Researchers are finally setting the record straight",
+      "url": "https://www.goodgoodgood.co/articles/new-species-discovery-milpe-robber-rain-frog",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-08-26T17:26:00Z",
+      "source_excerpt": "The adorable frog can be found across 16 million acres in the Chocó forests of Colombia.",
+      "agent_summary": "",
+      "source_fingerprint": "f3f836ae7f74abe4031d",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a8f20d458f26c75132def4f_6a8f20d35cf4a15ca0449699_new-species-discovery-milpe-robber-rain-frog-featured.webp",
+      "source_image_alt": "This frog has been 'invisible' to the science community for over a century. Researchers are finally setting the record straight",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/new-species-discovery-milpe-robber-rain-frog",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/new-species-discovery-milpe-robber-rain-frog",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "source_tier_bonus": 2,
+      "positivity_score": 9,
+      "positive_signals": [
+        "curated-positive-source",
+        "adorable",
+        "community",
+        "research",
+        "science"
+      ],
+      "public_eligible": false
+    },
+    {
       "id": "eee273320a0b6a0b5608",
       "title": "Neighbor's Dog Comes Over To Play With Their Dog",
       "url": "https://www.dailymotion.com/video/xb0s3cq",
@@ -1528,7 +1555,7 @@
       "source_excerpt": "Can we all agree this is the dream neighborhood? When Nicole and her husband moved into a new neighborhood, the very first friend they made was their neighbor's dog, Pita. Dodo producer Tarang sat down with the family to learn how one pup's daily playdates ended up bringing an entire community together!",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/dkGlw1gZZKxYPGFPv/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/dkGlw1gZZKxYPGFPv/x720",
       "source_image_alt": "Neighbor's Dog Comes Over To Play With Their Dog",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xb0s3cq",
@@ -1672,33 +1699,6 @@
         "curated-positive-source",
         "puppy",
         "volunteer"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "7fdd307d65b71b1561bd",
-      "title": "Gary, Indiana has been without power for 12 days. A food influencer and NBA player are coming to the rescue",
-      "url": "https://www.goodgoodgood.co/articles/keith-lee-gary-indiana-fundraiser",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-08-24T17:48:00Z",
-      "source_excerpt": "Keith Lee and Tyrese Haliburton are hosting a supply drive for Gary, Indiana residents on Monday.",
-      "agent_summary": "",
-      "source_fingerprint": "997004b9e7f57245f930",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a8c83c5538d5c2a78cc7569_6a8c83c4d6540cca671bfae9_keith-lee-gary-indiana-fundraiser-featured.webp",
-      "source_image_alt": "Gary, Indiana has been without power for 12 days. A food influencer and NBA player are coming to the rescue",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/keith-lee-gary-indiana-fundraiser",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/keith-lee-gary-indiana-fundraiser",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "play",
-        "rescue"
       ],
       "public_eligible": false
     }
