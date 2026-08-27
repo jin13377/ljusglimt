@@ -717,6 +717,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "cebe89e0ec7ef7c721aaaf286d84efe7551e26880758e8c87160cd3a25febdb7"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/07b5b8ec5086fbca3fdf-d334d2ac0a71900e67c2-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Bidrottningar dumpar gifter på sin avkomma",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "d334d2ac0a71900e67c2",
+        "width": 1280,
+        "height": 848,
+        "sha256": "d4694541193f422a23c02344aa852d3c396d28fbc844f0b28584b0099af99d42",
+        "generated_at": "2026-08-27T20:11:03Z"
       }
     },
     {
