@@ -1,8 +1,10 @@
 {
-  "generated_at": "2026-08-28T05:58:32.908314Z",
+  "generated_at": "2026-08-28T21:07:12.699705Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "ea5d76d9016bc34b3626"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -1550,7 +1552,7 @@
       "source_excerpt": "He finally found a reason to play again. After losing his lifelong canine companion, Sam wasn't himself anymore. Then a rescued kitten named Gigi came into his life. Dodo editor Valentina shares how an unlikely friendship helped bring Sam's personality back.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/dk9Bk1gZYepD3QbPo/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/dk9Bk1gZYepD3QbPo/x720",
       "source_image_alt": "Kitten Helps Dog Heal After Losing His Best Friend",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xb0rffy",
@@ -1645,6 +1647,34 @@
       "public_eligible": false
     },
     {
+      "id": "ea5d76d9016bc34b3626",
+      "title": "An environmental restoration company rescued a kitten from an excavator. Now she's their newest 'coworker'",
+      "url": "https://www.goodgoodgood.co/articles/kitten-rescue-excavator-construction-crew",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-08-28T17:11:00Z",
+      "source_excerpt": "Sue was barely a week old when she tumbled into a construction excavator.",
+      "agent_summary": "",
+      "source_fingerprint": "f85943eae3aaa310f9f9",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a91c088de28887e6bf39642_6a91c08631150a509ccd6674_kitten-rescue-excavator-construction-crew-featured.webp",
+      "source_image_alt": "An environmental restoration company rescued a kitten from an excavator. Now she's their newest 'coworker'",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/kitten-rescue-excavator-construction-crew",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/kitten-rescue-excavator-construction-crew",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "source_tier_bonus": 2,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "kitten",
+        "rescue",
+        "restoration"
+      ],
+      "public_eligible": false
+    },
+    {
       "id": "a57c75873d6f3109d02c",
       "title": "Rescuer Swings Between Trees To Reach Stranded Kitten",
       "url": "https://www.dailymotion.com/video/xb0rj3y",
@@ -1654,7 +1684,7 @@
       "source_excerpt": "Getting up there was apparently the easy part. After spending days stuck high in a tree, this tiny kitten wasn’t exactly making Steve Murrow’s job easy. Dodo editor Brielle takes us through how Steve had to get creative, moving between two trees to finally bring her back down safely.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/dkAL-1gZYvI3eqs4O/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/dkAL-1gZYvI3eqs4O/x720",
       "source_image_alt": "Rescuer Swings Between Trees To Reach Stranded Kitten",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xb0rj3y",
@@ -1676,33 +1706,6 @@
         "curated-positive-source",
         "kitten",
         "rescue"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "d385886f2f4ff59ad1d7",
-      "title": "Right before they graduated, these service dogs reunited with the volunteers who raised them: 'They can be a puppy one last time'",
-      "url": "https://www.goodgoodgood.co/articles/service-dogs-graduation-volunteers-reunion-emotional",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-08-25T19:26:00Z",
-      "source_excerpt": "The Instagram Reel was called “the best thing you’ll see on the internet today.”",
-      "agent_summary": "",
-      "source_fingerprint": "8773c226485a64532aa6",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a8deb8d12e7d463ad2488b8_6a8deb8cb311833caaadbd99_service-dogs-graduation-volunteers-reunion-emotional-featured.webp",
-      "source_image_alt": "Right before they graduated, these service dogs reunited with the volunteers who raised them: 'They can be a puppy one last time'",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/service-dogs-graduation-volunteers-reunion-emotional",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/service-dogs-graduation-volunteers-reunion-emotional",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "puppy",
-        "volunteer"
       ],
       "public_eligible": false
     }
