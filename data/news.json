@@ -1,9 +1,14 @@
 {
-  "generated_at": "2026-08-29T23:55:09.022364Z",
+  "generated_at": "2026-08-30T14:42:18.059116Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [],
-  "fetch_errors": [],
+  "fetch_errors": [
+    {
+      "source": "Mötesplats Social Innovation",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
   "items": [
     {
       "id": "0b87daf79218ce385c31",
