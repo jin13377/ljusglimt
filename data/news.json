@@ -1,8 +1,11 @@
 {
-  "generated_at": "2026-08-31T00:13:38.423812Z",
+  "generated_at": "2026-08-31T17:24:57.134216Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "25ce37d2378d24789027",
+    "8a7950f0d2eb130214ab"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -43,6 +46,44 @@
         "width": 1280,
         "height": 848,
         "sha256": "dc4a9fc3f4cdac3864d0ace3b962bb8638abd031697fd277a930ac538c46821f"
+      }
+    },
+    {
+      "id": "25ce37d2378d24789027",
+      "title": "NeurotechEU:s höstskola om framsteg inom experimentell mikrokirurgi",
+      "url": "https://nyheter.ki.se/neurotecheus-hostskola-om-framsteg-inom-experimentell-mikrokirurgi",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-08-31T00:00:00Z",
+      "source_excerpt": "Organiserad av ”Iuliu Hatieganu” University of Medicine and Pharmacy, i samarbete med Karolinska Institutet och Boğaziçi Üniversitesi, erbjuder denna höstskola vetenskaplig och teknisk utbildning i mikrokirurgiska tekniker.",
+      "agent_summary": "",
+      "source_fingerprint": "cc3ebd93703528b85a14",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 10,
+      "positive_signals": [
+        "curated-positive-source",
+        "experiment",
+        "framsteg",
+        "samarbete"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/3559646e-9dfb-4236-b91b-7fad3fce7837.webp",
+        "alt": "NeurotechEU:s höstskola om framsteg inom experimentell mikrokirurgi",
+        "user_image_id": "3559646e-9dfb-4236-b91b-7fad3fce7837",
+        "match_score": 0.2739,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/25ce37d2378d24789027-cc3ebd93-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "cc3ebd93703528b85a14",
+        "width": 1280,
+        "height": 848,
+        "sha256": "0f92b7653fc3a8cf549d43368f200bd0e9f2ff132e0c7ecab9bc9e8590880647"
       }
     },
     {
@@ -467,43 +508,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "273484e6265bcfb32ad63f2d1ada4c34b8bdadcd88dd46c95261cc760fae40d5"
-      }
-    },
-    {
-      "id": "51d28cce40d80ab3b581",
-      "title": "Anslag för att förbättra riskbedömningen av demens",
-      "url": "https://nyheter.ki.se/anslag-for-att-forbattra-riskbedomningen-av-demens",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-08-21T00:00:00Z",
-      "source_excerpt": "Personer med subjektiv kognitiv svikt upplever minnet eller tankeförmågan har försämrats, även om de fortfarande presterar normalt på kognitiva tester. Vissa kommer senare att utveckla demenssjukdom, medan många inte gör det, vilket gör det svårt att avgöra vem som kan ha nytta av ytterligare utredning eller tätare uppföljning. Nu har KI-forskaren Ingrid Ekström beviljats ett nytt anslag för under",
-      "agent_summary": "",
-      "source_fingerprint": "939f54e207c2ca0e059f",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 8,
-      "positive_signals": [
-        "curated-positive-source",
-        "anslag",
-        "beviljats"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/3559646e-9dfb-4236-b91b-7fad3fce7837.webp",
-        "alt": "Anslag för att förbättra riskbedömningen av demens",
-        "user_image_id": "3559646e-9dfb-4236-b91b-7fad3fce7837",
-        "match_score": 0.2739,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/51d28cce40d80ab3b581-939f54e2-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "939f54e207c2ca0e059f",
-        "width": 1280,
-        "height": 848,
-        "sha256": "42b84cd5626ab87ee27e2ad2fae16ae93f4c36d5b663d1454c9cbb907ebbf2c0"
       }
     },
     {
@@ -1617,7 +1621,7 @@
       "source_excerpt": "Can we all agree this is the dream neighborhood? When Nicole and her husband moved into a new neighborhood, the very first friend they made was their neighbor's dog, Pita. Dodo producer Tarang sat down with the family to learn how one pup's daily playdates ended up bringing an entire community together!",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/dkGlw1gZZKxYPGFPv/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/dkGlw1gZZKxYPGFPv/x720",
       "source_image_alt": "Neighbor's Dog Comes Over To Play With Their Dog",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xb0s3cq",
@@ -1641,6 +1645,41 @@
         "friend",
         "play",
         "together"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "8a7950f0d2eb130214ab",
+      "title": "Rescuers Use Giant Grabbers To Save 6 Newborn Kittens",
+      "url": "https://www.dailymotion.com/video/xb2pt86",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-08-31T12:49:16Z",
+      "source_excerpt": "Their mom watched from nearby as every baby was pulled to safety! Rescuer Heidi found six newborn kittens trapped in a narrow gap between two houses after their nest had been disturbed. Dodo editor Monica shows us how her team carefully reached each baby while their mom watched from nearby, then used the kittens’ cries to coax her to safety too.",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s2.dmcdn.net/v/dwgus1gbNc35aK6-F/x720",
+      "source_image_alt": "Rescuers Use Giant Grabbers To Save 6 Newborn Kittens",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xb2pt86",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xb2pt86",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xb2pt86",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xb2pt86",
+        "source_url": "https://www.dailymotion.com/video/xb2pt86",
+        "title": "Rescuers Use Giant Grabbers To Save 6 Newborn Kittens"
+      },
+      "source_fingerprint": "66e4f3db036bb8bcff61",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "kitten",
+        "rescue"
       ],
       "public_eligible": false
     },
@@ -1669,41 +1708,6 @@
         "kitten",
         "rescue",
         "restoration"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "a57c75873d6f3109d02c",
-      "title": "Rescuer Swings Between Trees To Reach Stranded Kitten",
-      "url": "https://www.dailymotion.com/video/xb0rj3y",
-      "source": "The Dodo",
-      "language": "en",
-      "published_at": "2026-08-25T23:56:30Z",
-      "source_excerpt": "Getting up there was apparently the easy part. After spending days stuck high in a tree, this tiny kitten wasn’t exactly making Steve Murrow’s job easy. Dodo editor Brielle takes us through how Steve had to get creative, moving between two trees to finally bring her back down safely.",
-      "agent_summary": "",
-      "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/dkAL-1gZYvI3eqs4O/x720",
-      "source_image_alt": "Rescuer Swings Between Trees To Reach Stranded Kitten",
-      "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xb0rj3y",
-      "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xb0rj3y",
-      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
-      "source_video": {
-        "provider": "dailymotion",
-        "video_id": "xb0rj3y",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xb0rj3y",
-        "source_url": "https://www.dailymotion.com/video/xb0rj3y",
-        "title": "Rescuer Swings Between Trees To Reach Stranded Kitten"
-      },
-      "source_fingerprint": "b68acb29df0ecc7335af",
-      "category": "Djur",
-      "source_tier_bonus": 4,
-      "positivity_score": 8,
-      "positive_signals": [
-        "curated-positive-source",
-        "kitten",
-        "rescue"
       ],
       "public_eligible": false
     }
