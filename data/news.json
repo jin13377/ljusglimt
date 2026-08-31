@@ -84,6 +84,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "0f92b7653fc3a8cf549d43368f200bd0e9f2ff132e0c7ecab9bc9e8590880647"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/25ce37d2378d24789027-cc3ebd93703528b85a14-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: NeurotechEU:s höstskola om framsteg inom experimentell mikrokirurgi",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "cc3ebd93703528b85a14",
+        "width": 1280,
+        "height": 848,
+        "sha256": "658602b7698bc442e4467c4485b85cb6e620ddb76db5caae17c4ca38cd581057",
+        "generated_at": "2026-08-31T17:25:20Z"
       }
     },
     {
