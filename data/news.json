@@ -1,11 +1,14 @@
 {
-  "generated_at": "2026-09-01T14:33:51.126664Z",
+  "generated_at": "2026-09-01T23:49:29.641910Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [
-    "58060c27f2d106ce7105"
+  "new_item_ids": [],
+  "fetch_errors": [
+    {
+      "source": "Mötesplats Social Innovation",
+      "error": "HTTP Error 403: Forbidden"
+    }
   ],
-  "fetch_errors": [],
   "items": [
     {
       "id": "25ce37d2378d24789027",
@@ -504,17 +507,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "b054f6a51864574143b8a1a726dc788f31df82f9febcbb730df928cb97e95b47"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/58060c27f2d106ce7105-4e0af97ad581d0f99489-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: ”Städernas omställning behöver prioriteras”",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "4e0af97ad581d0f99489",
-        "width": 1280,
-        "height": 848,
-        "sha256": "bba296c663932524d49bf258e5beff1ad8c93dfb4f9983f8ec8dd2f5ca849d86",
-        "generated_at": "2026-09-01T14:34:17Z"
       }
     },
     {
