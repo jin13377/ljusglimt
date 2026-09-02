@@ -1005,6 +1005,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "99655f88c0f04bf55614cb07a2ca8f636342a76714628e13117f7b1c436b0c55"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/6e955b45fd2ba1510764-e67e50b702641a2098bb-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Ny behandling för MS testad i fas 1-studie",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "e67e50b702641a2098bb",
+        "width": 1280,
+        "height": 848,
+        "sha256": "9f24bb19f1af06eb247dae5b5e553ccf019a24d1a2a677d37252bba9cb7ff265",
+        "generated_at": "2026-09-02T14:08:33Z"
       }
     },
     {
