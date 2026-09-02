@@ -1,14 +1,11 @@
 {
-  "generated_at": "2026-09-01T23:49:29.641910Z",
+  "generated_at": "2026-09-02T14:08:02.626423Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
-  "fetch_errors": [
-    {
-      "source": "Mötesplats Social Innovation",
-      "error": "HTTP Error 403: Forbidden"
-    }
+  "new_item_ids": [
+    "6e955b45fd2ba1510764"
   ],
+  "fetch_errors": [],
   "items": [
     {
       "id": "25ce37d2378d24789027",
@@ -311,44 +308,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "0d4a6aaa24295dc3742c74edbdd2b9257fa48a112d6b16e9b91710e6a0fbdf18"
-      }
-    },
-    {
-      "id": "8654f363eefda1bb5a59",
-      "title": "Björn Gysell donerar till forskning om framtidens behandlingar mot prostatacancer",
-      "url": "https://nyheter.ki.se/bjorn-gysell-donerar-till-forskning-om-framtidens-behandlingar-mot-prostatacancer",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-07-02T00:00:00Z",
-      "source_excerpt": "En satsning prostatacancerforskning i Sverige möjliggörs genom en donation från entreprenören och uppfinnaren Björn Gysell. Satsningen ska ge Karolinska Institutets ledande forskningsmiljö inom prostatacancer möjlighet att utveckla nästa generations diagnostik och behandlingar med hjälp av AI, genomik och precisionsmedicin.",
-      "agent_summary": "",
-      "source_fingerprint": "c59008e05d8d4dbceb77",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 9,
-      "positive_signals": [
-        "curated-positive-source",
-        "donation",
-        "forskning",
-        "satsning"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/3559646e-9dfb-4236-b91b-7fad3fce7837-1.webp",
-        "alt": "Björn Gysell donerar till forskning om framtidens behandlingar mot prostatacancer",
-        "user_image_id": "3559646e-9dfb-4236-b91b-7fad3fce7837-1",
-        "match_score": 0.2087,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/8654f363eefda1bb5a59-c59008e0-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "c59008e05d8d4dbceb77",
-        "width": 1280,
-        "height": 848,
-        "sha256": "e7cb2b36e302fc6fdfcd657d4337f0d9e7bb6f9454dfd0a6e252b8ba15bd8617"
       }
     },
     {
@@ -1013,6 +972,42 @@
       "public_eligible": true
     },
     {
+      "id": "6e955b45fd2ba1510764",
+      "title": "Ny behandling för MS testad i fas 1-studie",
+      "url": "https://nyheter.ki.se/ny-behandling-for-ms-testad-i-fas-1-studie",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-09-02T00:00:00Z",
+      "source_excerpt": "En ny behandling för multipel skleros (MS) har visat god säkerhet och tolerabilitet i en fas 1b-studie som publiceras i tidskriften PNAS. Behandlingen bygger på patienternas egna röda blodkroppar, som används för att träna immunsystemet att tolerera ämnen som felaktigt angrips vid sjukdomen. Studien har genomförts vid University Hospital Zurich i samarbete med forskare vid Karolinska Institutet.",
+      "agent_summary": "",
+      "source_fingerprint": "e67e50b702641a2098bb",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "samarbete"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/3559646e-9dfb-4236-b91b-7fad3fce7837-1.webp",
+        "alt": "Ny behandling för MS testad i fas 1-studie",
+        "user_image_id": "3559646e-9dfb-4236-b91b-7fad3fce7837-1",
+        "match_score": 0.2739,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/6e955b45fd2ba1510764-e67e50b7-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "e67e50b702641a2098bb",
+        "width": 1280,
+        "height": 848,
+        "sha256": "99655f88c0f04bf55614cb07a2ca8f636342a76714628e13117f7b1c436b0c55"
+      }
+    },
+    {
       "id": "fa43ca898b378ca27f39",
       "title": "Fler barn överlever med bättre förlossningsvård i Afrika",
       "url": "https://forskning.se/2026/08/27/fler-barn-overlever-med-battre-forlossningsvard-i-afrika",
@@ -1622,7 +1617,7 @@
       "source_excerpt": "Can we all agree this is the dream neighborhood? When Nicole and her husband moved into a new neighborhood, the very first friend they made was their neighbor's dog, Pita. Dodo producer Tarang sat down with the family to learn how one pup's daily playdates ended up bringing an entire community together!",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/dkGlw1gZZKxYPGFPv/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/dkGlw1gZZKxYPGFPv/x720",
       "source_image_alt": "Neighbor's Dog Comes Over To Play With Their Dog",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xb0s3cq",
@@ -1659,7 +1654,7 @@
       "source_excerpt": "Their mom watched from nearby as every baby was pulled to safety! Rescuer Heidi found six newborn kittens trapped in a narrow gap between two houses after their nest had been disturbed. Dodo editor Monica shows us how her team carefully reached each baby while their mom watched from nearby, then used the kittens’ cries to coax her to safety too.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/dwgus1gbNc35aK6-F/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/dwgus1gbNc35aK6-F/x720",
       "source_image_alt": "Rescuers Use Giant Grabbers To Save 6 Newborn Kittens",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xb2pt86",
