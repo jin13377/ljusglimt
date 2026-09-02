@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-02T14:08:02.626423Z",
+  "generated_at": "2026-09-02T23:53:09.218109Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "6e955b45fd2ba1510764"
+    "e0c2ab101693d604de71"
   ],
   "fetch_errors": [],
   "items": [
@@ -1005,17 +1005,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "99655f88c0f04bf55614cb07a2ca8f636342a76714628e13117f7b1c436b0c55"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/6e955b45fd2ba1510764-e67e50b702641a2098bb-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: Ny behandling för MS testad i fas 1-studie",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "e67e50b702641a2098bb",
-        "width": 1280,
-        "height": 848,
-        "sha256": "9f24bb19f1af06eb247dae5b5e553ccf019a24d1a2a677d37252bba9cb7ff265",
-        "generated_at": "2026-09-02T14:08:33Z"
       }
     },
     {
@@ -1656,6 +1645,34 @@
       "public_eligible": false
     },
     {
+      "id": "e0c2ab101693d604de71",
+      "title": "Researchers bid farewell to rescued sea turtle after 200-day recovery: 'We were all bawling on the boat afterwards'",
+      "url": "https://www.goodgoodgood.co/articles/rare-sea-turtle-crush-release",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-09-02T17:41:00Z",
+      "source_excerpt": "Crush the loggerhead spent over six months in recovery after a cyclone washed her ashore in January.",
+      "agent_summary": "",
+      "source_fingerprint": "bdf9aff95ef1e084b4d2",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a985f69a4c16a457f3ac7a7_6a985f66ca5e05ce1519c95a_rare-sea-turtle-crush-release-featured.webp",
+      "source_image_alt": "Researchers bid farewell to rescued sea turtle after 200-day recovery: 'We were all bawling on the boat afterwards'",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/rare-sea-turtle-crush-release",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/rare-sea-turtle-crush-release",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "source_tier_bonus": 2,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "recovery",
+        "rescue",
+        "research"
+      ],
+      "public_eligible": false
+    },
+    {
       "id": "8a7950f0d2eb130214ab",
       "title": "Rescuers Use Giant Grabbers To Save 6 Newborn Kittens",
       "url": "https://www.dailymotion.com/video/xb2pt86",
@@ -1687,34 +1704,6 @@
         "curated-positive-source",
         "kitten",
         "rescue"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "ea5d76d9016bc34b3626",
-      "title": "An environmental restoration company rescued a kitten from an excavator. Now she's their newest 'coworker'",
-      "url": "https://www.goodgoodgood.co/articles/kitten-rescue-excavator-construction-crew",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-08-28T17:11:00Z",
-      "source_excerpt": "Sue was barely a week old when she tumbled into a construction excavator.",
-      "agent_summary": "",
-      "source_fingerprint": "f85943eae3aaa310f9f9",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a91c088de28887e6bf39642_6a91c08631150a509ccd6674_kitten-rescue-excavator-construction-crew-featured.webp",
-      "source_image_alt": "An environmental restoration company rescued a kitten from an excavator. Now she's their newest 'coworker'",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/kitten-rescue-excavator-construction-crew",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/kitten-rescue-excavator-construction-crew",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 8,
-      "positive_signals": [
-        "curated-positive-source",
-        "kitten",
-        "rescue",
-        "restoration"
       ],
       "public_eligible": false
     }
