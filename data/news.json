@@ -1,10 +1,8 @@
 {
-  "generated_at": "2026-09-03T14:10:38.975926Z",
+  "generated_at": "2026-09-03T23:48:29.175513Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [
-    "df0b41c0b56d86428a0f"
-  ],
+  "new_item_ids": [],
   "fetch_errors": [],
   "items": [
     {
@@ -44,17 +42,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "8e9c9f13c2685d3ab371253a032932f2a7e0b11b9b82ab0e2da04b13d82019bc"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/df0b41c0b56d86428a0f-1216df8bbbac41998442-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: Fem KI-forskare får ERC:s startanslag 2026",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "1216df8bbbac41998442",
-        "width": 1280,
-        "height": 848,
-        "sha256": "4abf6c9f3e3025c4f8846a1b417d7e0730a7e4b664c7d38c16700307207eccdc",
-        "generated_at": "2026-09-03T14:11:02Z"
       }
     },
     {
@@ -1658,7 +1645,7 @@
       "source_excerpt": "Their mom watched from nearby as every baby was pulled to safety! Rescuer Heidi found six newborn kittens trapped in a narrow gap between two houses after their nest had been disturbed. Dodo editor Monica shows us how her team carefully reached each baby while their mom watched from nearby, then used the kittens’ cries to coax her to safety too.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/dwgus1gbNc35aK6-F/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/dwgus1gbNc35aK6-F/x720",
       "source_image_alt": "Rescuers Use Giant Grabbers To Save 6 Newborn Kittens",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xb2pt86",
