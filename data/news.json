@@ -1,12 +1,51 @@
 {
-  "generated_at": "2026-09-02T23:53:09.218109Z",
+  "generated_at": "2026-09-03T14:10:38.975926Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "e0c2ab101693d604de71"
+    "df0b41c0b56d86428a0f"
   ],
   "fetch_errors": [],
   "items": [
+    {
+      "id": "df0b41c0b56d86428a0f",
+      "title": "Fem KI-forskare får ERC:s startanslag 2026",
+      "url": "https://nyheter.ki.se/fem-ki-forskare-far-ercs-startanslag-2026",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-09-03T00:00:00Z",
+      "source_excerpt": "Fem forskare vid Karolinska Institutet har tilldelats European Research Council (ERC) Starting Grant, ERC:s startanslag, som är ett av Europas viktigaste forskningsanslag för forskare i början av sin karriär. Anslaget ses internationellt som ett kvitto på vetenskaplig excellens, originalitet och en lovande framtid som forskargruppsledare.",
+      "agent_summary": "",
+      "source_fingerprint": "1216df8bbbac41998442",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 10,
+      "positive_signals": [
+        "curated-positive-source",
+        "anslag",
+        "forskning",
+        "lovande",
+        "research"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/3559646e-9dfb-4236-b91b-7fad3fce7837-1.webp",
+        "alt": "Fem KI-forskare får ERC:s startanslag 2026",
+        "user_image_id": "3559646e-9dfb-4236-b91b-7fad3fce7837-1",
+        "match_score": 0.2739,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/df0b41c0b56d86428a0f-1216df8b-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "1216df8bbbac41998442",
+        "width": 1280,
+        "height": 848,
+        "sha256": "8e9c9f13c2685d3ab371253a032932f2a7e0b11b9b82ab0e2da04b13d82019bc"
+      }
+    },
     {
       "id": "25ce37d2378d24789027",
       "title": "NeurotechEU:s höstskola om framsteg inom experimentell mikrokirurgi",
@@ -972,42 +1011,6 @@
       "public_eligible": true
     },
     {
-      "id": "6e955b45fd2ba1510764",
-      "title": "Ny behandling för MS testad i fas 1-studie",
-      "url": "https://nyheter.ki.se/ny-behandling-for-ms-testad-i-fas-1-studie",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-09-02T00:00:00Z",
-      "source_excerpt": "En ny behandling för multipel skleros (MS) har visat god säkerhet och tolerabilitet i en fas 1b-studie som publiceras i tidskriften PNAS. Behandlingen bygger på patienternas egna röda blodkroppar, som används för att träna immunsystemet att tolerera ämnen som felaktigt angrips vid sjukdomen. Studien har genomförts vid University Hospital Zurich i samarbete med forskare vid Karolinska Institutet.",
-      "agent_summary": "",
-      "source_fingerprint": "e67e50b702641a2098bb",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "samarbete"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/3559646e-9dfb-4236-b91b-7fad3fce7837-1.webp",
-        "alt": "Ny behandling för MS testad i fas 1-studie",
-        "user_image_id": "3559646e-9dfb-4236-b91b-7fad3fce7837-1",
-        "match_score": 0.2739,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/6e955b45fd2ba1510764-e67e50b7-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "e67e50b702641a2098bb",
-        "width": 1280,
-        "height": 848,
-        "sha256": "99655f88c0f04bf55614cb07a2ca8f636342a76714628e13117f7b1c436b0c55"
-      }
-    },
-    {
       "id": "fa43ca898b378ca27f39",
       "title": "Fler barn överlever med bättre förlossningsvård i Afrika",
       "url": "https://forskning.se/2026/08/27/fler-barn-overlever-med-battre-forlossningsvard-i-afrika",
@@ -1512,44 +1515,6 @@
       }
     },
     {
-      "id": "a9e61b1e31f05eeb0e00",
-      "title": "Kitten Helps Dog Heal After Losing His Best Friend",
-      "url": "https://www.dailymotion.com/video/xb0rffy",
-      "source": "The Dodo",
-      "language": "en",
-      "published_at": "2026-08-25T23:49:26Z",
-      "source_excerpt": "He finally found a reason to play again. After losing his lifelong canine companion, Sam wasn't himself anymore. Then a rescued kitten named Gigi came into his life. Dodo editor Valentina shares how an unlikely friendship helped bring Sam's personality back.",
-      "agent_summary": "",
-      "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/dk9Bk1gZYepD3QbPo/x720",
-      "source_image_alt": "Kitten Helps Dog Heal After Losing His Best Friend",
-      "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xb0rffy",
-      "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xb0rffy",
-      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
-      "source_video": {
-        "provider": "dailymotion",
-        "video_id": "xb0rffy",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xb0rffy",
-        "source_url": "https://www.dailymotion.com/video/xb0rffy",
-        "title": "Kitten Helps Dog Heal After Losing His Best Friend"
-      },
-      "source_fingerprint": "4e7eeebb16ec79fc9b00",
-      "category": "Djur",
-      "source_tier_bonus": 4,
-      "positivity_score": 12,
-      "positive_signals": [
-        "curated-positive-source",
-        "best friend",
-        "friend",
-        "kitten",
-        "play",
-        "rescue"
-      ],
-      "public_eligible": false
-    },
-    {
       "id": "c19627bc8382e6423f94",
       "title": "Honungsvisaren guidar oss till mer samarbete",
       "url": "https://fof.se/artikel/honungsvisaren-guidar-oss-till-mer-samarbete",
@@ -1704,6 +1669,34 @@
         "curated-positive-source",
         "kitten",
         "rescue"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "ea5d76d9016bc34b3626",
+      "title": "An environmental restoration company rescued a kitten from an excavator. Now she's their newest 'coworker'",
+      "url": "https://www.goodgoodgood.co/articles/kitten-rescue-excavator-construction-crew",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-08-28T17:11:00Z",
+      "source_excerpt": "Sue was barely a week old when she tumbled into a construction excavator.",
+      "agent_summary": "",
+      "source_fingerprint": "f85943eae3aaa310f9f9",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a91c088de28887e6bf39642_6a91c08631150a509ccd6674_kitten-rescue-excavator-construction-crew-featured.webp",
+      "source_image_alt": "An environmental restoration company rescued a kitten from an excavator. Now she's their newest 'coworker'",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/kitten-rescue-excavator-construction-crew",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/kitten-rescue-excavator-construction-crew",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "source_tier_bonus": 2,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "kitten",
+        "rescue",
+        "restoration"
       ],
       "public_eligible": false
     }
