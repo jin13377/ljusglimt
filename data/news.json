@@ -44,6 +44,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "8e9c9f13c2685d3ab371253a032932f2a7e0b11b9b82ab0e2da04b13d82019bc"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/df0b41c0b56d86428a0f-1216df8bbbac41998442-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Fem KI-forskare får ERC:s startanslag 2026",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "1216df8bbbac41998442",
+        "width": 1280,
+        "height": 848,
+        "sha256": "4abf6c9f3e3025c4f8846a1b417d7e0730a7e4b664c7d38c16700307207eccdc",
+        "generated_at": "2026-09-03T14:11:02Z"
       }
     },
     {
