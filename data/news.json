@@ -43,6 +43,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "1a4e2ecac6444edd95515a1b7450e55723fde7d33284b5d31a5a4fc474da4494"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/3fe2e7d37ce31017f6dd-58c99a0320c8070282a4-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: KI och IVI stärker samarbetet inom global hälsa",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "58c99a0320c8070282a4",
+        "width": 1280,
+        "height": 848,
+        "sha256": "e6c949c0a36a33e649ddd5d75f66df831ec8baaaeaea348f6efb27c92d6e719b",
+        "generated_at": "2026-09-04T14:02:30Z"
       }
     },
     {
