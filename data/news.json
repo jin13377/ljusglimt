@@ -1,8 +1,10 @@
 {
-  "generated_at": "2026-09-04T23:45:43.450325Z",
+  "generated_at": "2026-09-05T13:16:23.473796Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "df0761fcb323588344ef"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -1010,6 +1012,42 @@
       "public_eligible": true
     },
     {
+      "id": "df0761fcb323588344ef",
+      "title": "Naturpodden: Jon Andersson vill pausa avverkningar och inventera skogen",
+      "url": "https://www.natursidan.se/nyheter/naturpodden-jon-andersson-vill-pausa-avverkningar-och-inventera-skogen",
+      "source": "Natursidan",
+      "language": "sv",
+      "published_at": "2026-09-05T07:07:26Z",
+      "source_excerpt": "Vi lever i den riktiga svenska skogens sista dagar. Skogsbruket har fördärvat vårt land så till den milda grad att det bästa vore att bara låta den vara, menar Jon Andersson. Han jobbar för Skydda Skogen och pratade med Emil vid Fjällsjöälvens strand i somras.",
+      "agent_summary": "",
+      "source_fingerprint": "29f7c43e097299fbbf7a",
+      "category": "Natur",
+      "source_tier_bonus": 5,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "skydda"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/2091a644-1eb7-45ff-afae-1a9300f1c839.webp",
+        "alt": "Naturpodden: Jon Andersson vill pausa avverkningar och inventera skogen",
+        "user_image_id": "2091a644-1eb7-45ff-afae-1a9300f1c839",
+        "match_score": 0.2655,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/df0761fcb323588344ef-29f7c43e-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "29f7c43e097299fbbf7a",
+        "width": 1280,
+        "height": 848,
+        "sha256": "de4c69260b884f4d1826c10f5cbf0b76a6c3504b26824ca5ab72d8e61d20678e"
+      }
+    },
+    {
       "id": "fa43ca898b378ca27f39",
       "title": "Fler barn överlever med bättre förlossningsvård i Afrika",
       "url": "https://forskning.se/2026/08/27/fler-barn-overlever-med-battre-forlossningsvard-i-afrika",
@@ -1511,35 +1549,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "c02560296b843217aa7846f0c3608084bcee459e1b980bb6e89882850565fb68"
-      }
-    },
-    {
-      "id": "c19627bc8382e6423f94",
-      "title": "Honungsvisaren guidar oss till mer samarbete",
-      "url": "https://fof.se/artikel/honungsvisaren-guidar-oss-till-mer-samarbete",
-      "source": "Forskning & Framsteg",
-      "language": "sv",
-      "published_at": "2026-08-27T07:53:22Z",
-      "source_excerpt": "För en tid sedan blev jag kontaktad av en bekant som hävdade att vi människor inte längre är en del av naturen. Vi har brutit … The post Honungsvisaren guidar oss till mer samarbete appeared first on Forskning & Framsteg .",
-      "agent_summary": "",
-      "source_fingerprint": "755d0aac94ee194f0d64",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 9,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "framsteg",
-        "samarbete"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/ca17e92f-ec53-4cd1-b11c-3f69f0912247.webp",
-        "alt": "Honungsvisaren guidar oss till mer samarbete",
-        "user_image_id": "ca17e92f-ec53-4cd1-b11c-3f69f0912247",
-        "match_score": 0.2453,
-        "width": 1280,
-        "height": 848
       }
     },
     {
