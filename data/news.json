@@ -1045,6 +1045,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "de4c69260b884f4d1826c10f5cbf0b76a6c3504b26824ca5ab72d8e61d20678e"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/df0761fcb323588344ef-29f7c43e097299fbbf7a-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Naturpodden: Jon Andersson vill pausa avverkningar och inventera skogen",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "29f7c43e097299fbbf7a",
+        "width": 1280,
+        "height": 848,
+        "sha256": "7ef72d5109824eb0403731eeb984d2200033ede5df5d04617ccf8d15c994db55",
+        "generated_at": "2026-09-05T13:16:51Z"
       }
     },
     {
