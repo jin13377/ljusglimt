@@ -1,8 +1,10 @@
 {
-  "generated_at": "2026-09-05T23:35:00.629580Z",
+  "generated_at": "2026-09-06T13:25:29.312404Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "cd295ebfeeb6d746ffdd"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -1579,43 +1581,6 @@
       "public_eligible": false
     },
     {
-      "id": "eee273320a0b6a0b5608",
-      "title": "Neighbor's Dog Comes Over To Play With Their Dog",
-      "url": "https://www.dailymotion.com/video/xb0s3cq",
-      "source": "The Dodo",
-      "language": "en",
-      "published_at": "2026-08-26T00:36:35Z",
-      "source_excerpt": "Can we all agree this is the dream neighborhood? When Nicole and her husband moved into a new neighborhood, the very first friend they made was their neighbor's dog, Pita. Dodo producer Tarang sat down with the family to learn how one pup's daily playdates ended up bringing an entire community together!",
-      "agent_summary": "",
-      "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/dkGlw1gZZKxYPGFPv/x720",
-      "source_image_alt": "Neighbor's Dog Comes Over To Play With Their Dog",
-      "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xb0s3cq",
-      "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xb0s3cq",
-      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
-      "source_video": {
-        "provider": "dailymotion",
-        "video_id": "xb0s3cq",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xb0s3cq",
-        "source_url": "https://www.dailymotion.com/video/xb0s3cq",
-        "title": "Neighbor's Dog Comes Over To Play With Their Dog"
-      },
-      "source_fingerprint": "738cbf804e6c13cd7f9f",
-      "category": "Djur",
-      "source_tier_bonus": 4,
-      "positivity_score": 9,
-      "positive_signals": [
-        "curated-positive-source",
-        "community",
-        "friend",
-        "play",
-        "together"
-      ],
-      "public_eligible": false
-    },
-    {
       "id": "e0c2ab101693d604de71",
       "title": "Researchers bid farewell to rescued sea turtle after 200-day recovery: 'We were all bawling on the boat afterwards'",
       "url": "https://www.goodgoodgood.co/articles/rare-sea-turtle-crush-release",
@@ -1653,7 +1618,7 @@
       "source_excerpt": "Their mom watched from nearby as every baby was pulled to safety! Rescuer Heidi found six newborn kittens trapped in a narrow gap between two houses after their nest had been disturbed. Dodo editor Monica shows us how her team carefully reached each baby while their mom watched from nearby, then used the kittens’ cries to coax her to safety too.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/dwgus1gbNc35aK6-F/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/dwgus1gbNc35aK6-F/x720",
       "source_image_alt": "Rescuers Use Giant Grabbers To Save 6 Newborn Kittens",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xb2pt86",
@@ -1703,6 +1668,41 @@
         "kitten",
         "rescue",
         "restoration"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "cd295ebfeeb6d746ffdd",
+      "title": "Woman Goes On Vacation And Comes Home With A Puppy",
+      "url": "https://www.dailymotion.com/video/xb2v9f2",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-09-01T04:19:05Z",
+      "source_excerpt": "She started by protecting the tiny stray from the bigger dogs. Then she realized she couldn’t leave her behind. Jess met tiny stray puppy Roo while vacationing in Barbados and quickly realized she couldn’t leave her behind. Dodo editor Monica follows their story as a little food and protection turns into a much bigger mission to get Roo home, with some unexpected help along the way.",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s1.dmcdn.net/v/dxezk1gbbAJ6OuNCH/x720",
+      "source_image_alt": "Woman Goes On Vacation And Comes Home With A Puppy",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xb2v9f2",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xb2v9f2",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xb2v9f2",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xb2v9f2",
+        "source_url": "https://www.dailymotion.com/video/xb2v9f2",
+        "title": "Woman Goes On Vacation And Comes Home With A Puppy"
+      },
+      "source_fingerprint": "5a128dff08c85a4ff712",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "mission",
+        "puppy"
       ],
       "public_eligible": false
     }
