@@ -1,8 +1,10 @@
 {
-  "generated_at": "2026-09-06T23:31:54.114850Z",
+  "generated_at": "2026-09-07T15:31:50.146434Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "fbe465ee07ca5740f848"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -1010,6 +1012,33 @@
       "public_eligible": true
     },
     {
+      "id": "fbe465ee07ca5740f848",
+      "title": "LCHF kan kombineras med god hjärt-kärlhälsa",
+      "url": "https://forskning.se/2026/09/07/nyanserar-bilden-av-lchf-och-hjarthalsa",
+      "source": "Forskning.se",
+      "language": "sv",
+      "published_at": "2026-09-07T13:41:21Z",
+      "source_excerpt": "Det går att äta en strikt LCHF-kost och samtidigt vara mån om sin hjärt-kärlhälsa, visar en ny Vetenskapligt arbete som doktorander gör under sin utbildning för att bli doktor.&lt;br/&gt;Avhandlingen visar doktorandens egen ... Läs mer \" href=\"https://forskning.se/ordlista/avhandling/\" data-mobile-support=\"0\" data-gt-translate-attributes='[{\"attribute\":\"data-cmtooltip\", \"format\":\"html\"}]' tabindex",
+      "agent_summary": "",
+      "source_fingerprint": "a3624403f4f6df050db0",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/09/anirudh-djo3iNJpaOE-unsplash-2-1024x576.jpg",
+      "source_image_alt": "LCHF kan kombineras med god hjärt-kärlhälsa",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/09/07/nyanserar-bilden-av-lchf-och-hjarthalsa",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/09/07/nyanserar-bilden-av-lchf-och-hjarthalsa",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning"
+      ],
+      "public_eligible": true
+    },
+    {
       "id": "df0761fcb323588344ef",
       "title": "Naturpodden: Jon Andersson vill pausa avverkningar och inventera skogen",
       "url": "https://www.natursidan.se/nyheter/naturpodden-jon-andersson-vill-pausa-avverkningar-och-inventera-skogen",
@@ -1426,42 +1455,6 @@
       }
     },
     {
-      "id": "f8f5460a8a7aacbf0eba",
-      "title": "Välfärdsteknik ger trygghet – men inte alltid ett aktivt och delaktigt liv",
-      "url": "https://www.vetenskaphalsa.se/valfardsteknik-ger-trygghet-men-inte-alltid-ett-aktivt-och-delaktigt-liv",
-      "source": "Vetenskap & hälsa",
-      "language": "sv",
-      "published_at": "2026-06-16T05:51:00Z",
-      "source_excerpt": "Digitala trygghetslarm, medicinrobotar och digitala lås är vanliga lösningar på äldreomsorgens växande resursutmaningar. Men hur upplever användarna själva tekniken de får i sina hem? En ny avhandling från Samantha Svärdh, doktorand i forskargruppen Tillämpad Gerontologi vid Lunds universitet, visar att välfärdsteknik framför allt bidrar till deras trygghet. I en enkätstudie med drygt 400 hemtjäns",
-      "agent_summary": "",
-      "source_fingerprint": "29ab7ad32b22fbb5e40b",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "lösning"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/fb601de5-40fb-41e6-ad59-02bed671c043.webp",
-        "alt": "Välfärdsteknik ger trygghet – men inte alltid ett aktivt och delaktigt liv",
-        "user_image_id": "fb601de5-40fb-41e6-ad59-02bed671c043",
-        "match_score": 0.1839,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/f8f5460a8a7aacbf0eba-29ab7ad3-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "29ab7ad32b22fbb5e40b",
-        "width": 1280,
-        "height": 848,
-        "sha256": "557d62a9deeecfe11b03cba0e6616a5442c140e0f8ff9bd52aa56c872b0b97f1"
-      }
-    },
-    {
       "id": "b634e8c36ed593bd94d7",
       "title": "NASA Uses Subscale Aircraft to Accelerate Flight Innovation",
       "url": "https://www.nasa.gov/centers-and-facilities/armstrong/nasa-uses-subscale-aircraft-to-accelerate-flight-innovation",
@@ -1616,7 +1609,7 @@
       "source_excerpt": "Their mom watched from nearby as every baby was pulled to safety! Rescuer Heidi found six newborn kittens trapped in a narrow gap between two houses after their nest had been disturbed. Dodo editor Monica shows us how her team carefully reached each baby while their mom watched from nearby, then used the kittens’ cries to coax her to safety too.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/dwgus1gbNc35aK6-F/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/dwgus1gbNc35aK6-F/x720",
       "source_image_alt": "Rescuers Use Giant Grabbers To Save 6 Newborn Kittens",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xb2pt86",
