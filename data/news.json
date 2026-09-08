@@ -1,8 +1,10 @@
 {
-  "generated_at": "2026-09-08T00:00:48.853901Z",
+  "generated_at": "2026-09-08T14:11:05.049881Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "39d35a286238acbaeb7a"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -672,6 +674,42 @@
         "width": 1280,
         "height": 848,
         "sha256": "da35e92250c0515d62aedd5149cdcfa9db32493eb90f22ded0138d83d4348efb"
+      }
+    },
+    {
+      "id": "39d35a286238acbaeb7a",
+      "title": "Oväntad upptäckt avslöjar mekanism bakom hjärntumörutveckling",
+      "url": "https://www.vetenskaphalsa.se/ovantad-upptackt-avslojar-mekanism-bakom-hjarntumorutveckling",
+      "source": "Vetenskap & hälsa",
+      "language": "sv",
+      "published_at": "2026-09-08T05:31:00Z",
+      "source_excerpt": "När forskare vid Lunds universitet undersökte hur molekylen UM171 fungerar, en molekyl som används för att få blodstamceller att föröka sig, gjorde de en oväntad koppling. Resultaten ger nya insikter i hur en av de vanligaste elakartade hjärntumörerna hos barn i framtiden skulle kunna behandlas. UM171 är en syntetisk molekyl som utvecklats av forskare vid […]",
+      "agent_summary": "",
+      "source_fingerprint": "81f8dae589d8a080992d",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "upptäckt"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/ca17e92f-ec53-4cd1-b11c-3f69f0912247.webp",
+        "alt": "Oväntad upptäckt avslöjar mekanism bakom hjärntumörutveckling",
+        "user_image_id": "ca17e92f-ec53-4cd1-b11c-3f69f0912247",
+        "match_score": 0.2479,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/39d35a286238acbaeb7a-81f8dae5-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "81f8dae589d8a080992d",
+        "width": 1280,
+        "height": 848,
+        "sha256": "6187493030d84b0a4929cba452c4d7ae2c8c058e9bfbd3198876fe92f9aa1e3d"
       }
     },
     {
@@ -1378,42 +1416,6 @@
       "public_eligible": true
     },
     {
-      "id": "9e2ab5cc1a6a4aa08cb4",
-      "title": "Malmö först med rådgivning om klimatanpassning",
-      "url": "https://www.extrakt.se/malmo-forst-med-radgivning-om-klimatanpassning",
-      "source": "Extrakt",
-      "language": "sv",
-      "published_at": "2026-06-30T06:18:00Z",
-      "source_excerpt": "En kommunal rådgivningstjänst ska hjälpa fastighetsägare och bostadsrättsföreningar i Malmö att klimatanpassa. Satsningen ska vägleda om allt från översvämningsrisker till hur gårdar kan göras svalare under värmeböljor.",
-      "agent_summary": "",
-      "source_fingerprint": "0a7c3e986b09d3dfa103",
-      "category": "Miljö",
-      "source_tier_bonus": 5,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "satsning"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/58f74baf-f82d-4add-af88-80b637a356f5.webp",
-        "alt": "Malmö först med rådgivning om klimatanpassning",
-        "user_image_id": "58f74baf-f82d-4add-af88-80b637a356f5",
-        "match_score": 0.2692,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/9e2ab5cc1a6a4aa08cb4-0a7c3e98-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "0a7c3e986b09d3dfa103",
-        "width": 1280,
-        "height": 848,
-        "sha256": "122bb67499ff32db2d3a5a3e92dafc5eb79ca9d8875724523a5b1f33c3057075"
-      }
-    },
-    {
       "id": "1975208a7e6ad125a4af",
       "title": "Conservationists celebrate birth of baby pancake tortoise, hope for one of the world's most endangered reptiles",
       "url": "https://www.goodgoodgood.co/articles/baby-pancake-tortoise-endangered",
@@ -1607,7 +1609,7 @@
       "source_excerpt": "Their mom watched from nearby as every baby was pulled to safety! Rescuer Heidi found six newborn kittens trapped in a narrow gap between two houses after their nest had been disturbed. Dodo editor Monica shows us how her team carefully reached each baby while their mom watched from nearby, then used the kittens’ cries to coax her to safety too.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/dwgus1gbNc35aK6-F/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/dwgus1gbNc35aK6-F/x720",
       "source_image_alt": "Rescuers Use Giant Grabbers To Save 6 Newborn Kittens",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xb2pt86",
@@ -1670,7 +1672,7 @@
       "source_excerpt": "She started by protecting the tiny stray from the bigger dogs. Then she realized she couldn’t leave her behind. Jess met tiny stray puppy Roo while vacationing in Barbados and quickly realized she couldn’t leave her behind. Dodo editor Monica follows their story as a little food and protection turns into a much bigger mission to get Roo home, with some unexpected help along the way.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/dxezk1gbbAJ6OuNCH/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/dxezk1gbbAJ6OuNCH/x720",
       "source_image_alt": "Woman Goes On Vacation And Comes Home With A Puppy",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xb2v9f2",
