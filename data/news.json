@@ -710,6 +710,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "6187493030d84b0a4929cba452c4d7ae2c8c058e9bfbd3198876fe92f9aa1e3d"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/39d35a286238acbaeb7a-81f8dae589d8a080992d-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Oväntad upptäckt avslöjar mekanism bakom hjärntumörutveckling",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "81f8dae589d8a080992d",
+        "width": 1280,
+        "height": 848,
+        "sha256": "96b76f0d826b397e5588a89959201f654812e01095140ce15c52e75fb8518844",
+        "generated_at": "2026-09-08T14:11:35Z"
       }
     },
     {
