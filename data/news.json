@@ -507,6 +507,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "1fe1b5c13d209a71033b2aca813da23e1874ff97240490cc64284a163d5de322"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/fd5961abce3292280c5f-4fc28e8bd1c3be2b3377-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: MSI startar ny publikationsserie om social innovation",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "4fc28e8bd1c3be2b3377",
+        "width": 1280,
+        "height": 848,
+        "sha256": "941bf077e25d9a28bc824f5a076412b256e844e373013227ee4fa2c3bd57195a",
+        "generated_at": "2026-09-09T23:51:32Z"
       }
     },
     {
