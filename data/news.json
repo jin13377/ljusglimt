@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-10T14:05:55.234848Z",
+  "generated_at": "2026-09-10T23:46:10.175771Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "d21a481852939a1b20df",
-    "a93de2ecf0ca2e5f4dce"
+    "f29013ab5922c6f55c9a",
+    "f38ae9faff02e83483b1"
   ],
   "fetch_errors": [],
   "items": [
@@ -506,17 +506,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "d3d7abead1780f42fd42649cd35887b245c60617aa71703127e98b797ed96c27"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/d21a481852939a1b20df-6c802acb439077268e3c-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: Jakob Rostøl rekryteras till KI i VR:s nya strategiska satsning",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "6c802acb439077268e3c",
-        "width": 1280,
-        "height": 848,
-        "sha256": "8349428a5fff1280b900dd057312a081d35a94697247571c36220c6e2da37a39",
-        "generated_at": "2026-09-10T14:06:17Z"
       }
     },
     {
@@ -1152,33 +1141,6 @@
       "public_eligible": true
     },
     {
-      "id": "fbe465ee07ca5740f848",
-      "title": "LCHF kan kombineras med god hjärt-kärlhälsa",
-      "url": "https://forskning.se/2026/09/07/nyanserar-bilden-av-lchf-och-hjarthalsa",
-      "source": "Forskning.se",
-      "language": "sv",
-      "published_at": "2026-09-07T13:41:21Z",
-      "source_excerpt": "Det går att äta en strikt LCHF-kost och samtidigt vara mån om sin hjärt-kärlhälsa, visar en ny Vetenskapligt arbete som doktorander gör under sin utbildning för att bli doktor.&lt;br/&gt;Avhandlingen visar doktorandens egen ... Läs mer \" href=\"https://forskning.se/ordlista/avhandling/\" data-mobile-support=\"0\" data-gt-translate-attributes='[{\"attribute\":\"data-cmtooltip\", \"format\":\"html\"}]' tabindex",
-      "agent_summary": "",
-      "source_fingerprint": "a3624403f4f6df050db0",
-      "source_image_verified": true,
-      "source_image_url": "https://forskning.se/app/uploads/2026/09/anirudh-djo3iNJpaOE-unsplash-2-1024x576.jpg",
-      "source_image_alt": "LCHF kan kombineras med god hjärt-kärlhälsa",
-      "source_image_credit": "Forskning.se",
-      "source_image_rights_url": "https://forskning.se/2026/09/07/nyanserar-bilden-av-lchf-och-hjarthalsa",
-      "source_image_creator": "Forskning.se",
-      "source_image_source_url": "https://forskning.se/2026/09/07/nyanserar-bilden-av-lchf-och-hjarthalsa",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning"
-      ],
-      "public_eligible": true
-    },
-    {
       "id": "df0761fcb323588344ef",
       "title": "Naturpodden: Jon Andersson vill pausa avverkningar och inventera skogen",
       "url": "https://www.natursidan.se/nyheter/naturpodden-jon-andersson-vill-pausa-avverkningar-och-inventera-skogen",
@@ -1548,6 +1510,72 @@
       }
     },
     {
+      "id": "f29013ab5922c6f55c9a",
+      "title": "Rekordstor vikingatida skatt hittad i Finland",
+      "url": "https://fof.se/artikel/rekordstor-vikingatida-skatt-hittad-i-finland",
+      "source": "Forskning & Framsteg",
+      "language": "sv",
+      "published_at": "2026-09-08T14:52:36Z",
+      "source_excerpt": "Den rutinerade fornfyndsletaren Kalle Lappinen var förra veckan ute med sin metallsökare i hopp om att hitta spår av ett gravfält från järnåldern i orten … The post Rekordstor vikingatida skatt hittad i Finland appeared first on Forskning & Framsteg .",
+      "agent_summary": "",
+      "source_fingerprint": "91c0ac3c05aff50c1e79",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 10,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "framsteg",
+        "hopp",
+        "rekord"
+      ],
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/df172a32-b0d0-4403-be55-3af7e11dd200.webp",
+        "alt": "Rekordstor vikingatida skatt hittad i Finland",
+        "user_image_id": "df172a32-b0d0-4403-be55-3af7e11dd200",
+        "match_score": 0.2403,
+        "width": 1280,
+        "height": 848
+      }
+    },
+    {
+      "id": "f38ae9faff02e83483b1",
+      "title": "Hairless Puppies Grow Up With Their Tiny Best Friend",
+      "url": "https://www.dailymotion.com/video/xb6mgl6",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-09-10T23:19:26Z",
+      "source_excerpt": "They look like two little old men! Kathryn was raising her daughter while fostering two tiny hairless puppies, and the three quickly became inseparable. Dodo editor Tarang shares what it was like watching them hit their milestones side by side.",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s1.dmcdn.net/v/eJizw1gepvNF3GOk1/x720",
+      "source_image_alt": "Hairless Puppies Grow Up With Their Tiny Best Friend",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xb6mgl6",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xb6mgl6",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xb6mgl6",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xb6mgl6",
+        "source_url": "https://www.dailymotion.com/video/xb6mgl6",
+        "title": "Hairless Puppies Grow Up With Their Tiny Best Friend"
+      },
+      "source_fingerprint": "c245b61a3d66bdf886a4",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 9,
+      "positive_signals": [
+        "curated-positive-source",
+        "best friend",
+        "friend",
+        "milestone"
+      ],
+      "public_eligible": false
+    },
+    {
       "id": "d527588764b355660cc8",
       "title": "This frog has been 'invisible' to the science community for over a century. Researchers are finally setting the record straight",
       "url": "https://www.goodgoodgood.co/articles/new-species-discovery-milpe-robber-rain-frog",
@@ -1605,41 +1633,6 @@
       "public_eligible": false
     },
     {
-      "id": "8a7950f0d2eb130214ab",
-      "title": "Rescuers Use Giant Grabbers To Save 6 Newborn Kittens",
-      "url": "https://www.dailymotion.com/video/xb2pt86",
-      "source": "The Dodo",
-      "language": "en",
-      "published_at": "2026-08-31T12:49:16Z",
-      "source_excerpt": "Their mom watched from nearby as every baby was pulled to safety! Rescuer Heidi found six newborn kittens trapped in a narrow gap between two houses after their nest had been disturbed. Dodo editor Monica shows us how her team carefully reached each baby while their mom watched from nearby, then used the kittens’ cries to coax her to safety too.",
-      "agent_summary": "",
-      "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/dwgus1gbNc35aK6-F/x720",
-      "source_image_alt": "Rescuers Use Giant Grabbers To Save 6 Newborn Kittens",
-      "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xb2pt86",
-      "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xb2pt86",
-      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
-      "source_video": {
-        "provider": "dailymotion",
-        "video_id": "xb2pt86",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xb2pt86",
-        "source_url": "https://www.dailymotion.com/video/xb2pt86",
-        "title": "Rescuers Use Giant Grabbers To Save 6 Newborn Kittens"
-      },
-      "source_fingerprint": "66e4f3db036bb8bcff61",
-      "category": "Djur",
-      "source_tier_bonus": 4,
-      "positivity_score": 8,
-      "positive_signals": [
-        "curated-positive-source",
-        "kitten",
-        "rescue"
-      ],
-      "public_eligible": false
-    },
-    {
       "id": "ea5d76d9016bc34b3626",
       "title": "An environmental restoration company rescued a kitten from an excavator. Now she's their newest 'coworker'",
       "url": "https://www.goodgoodgood.co/articles/kitten-rescue-excavator-construction-crew",
@@ -1677,7 +1670,7 @@
       "source_excerpt": "One wrong move and he could have disappeared into traffic. A tiny kitten stranded in the middle of a Long Island highway needed someone who knew exactly how to approach him without sending him running into traffic. Dodo editor Monica follows rescuer John as he carefully makes his way over and gets him to safety.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/eDutM1gefZF3D37fc/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/eDutM1gefZF3D37fc/x720",
       "source_image_alt": "Tiny Kitten Stranded In The Middle Of A Highway",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xb5psk6",
