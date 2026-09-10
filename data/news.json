@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-09T23:51:07.512751Z",
+  "generated_at": "2026-09-10T14:05:55.234848Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "fd5961abce3292280c5f",
-    "84efea89c7f4985286fc"
+    "d21a481852939a1b20df",
+    "a93de2ecf0ca2e5f4dce"
   ],
   "fetch_errors": [],
   "items": [
@@ -314,44 +314,6 @@
       }
     },
     {
-      "id": "24a653aab5fa5a83a4b1",
-      "title": "Novo Nordisk-anslag till KI-forskare för nydanande tester av läkemedel",
-      "url": "https://nyheter.ki.se/novo-nordisk-anslag-till-ki-forskare-for-nydanande-tester-av-lakemedel",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-07-10T00:00:00Z",
-      "source_excerpt": "Vid kardiometabola sjukdomar som typ-2 diabetes och åderförkalkning påverkas både hjärt-kärlsystemet och ämnesomsättningen. KI-forskarna Stephen Malin och Carolina Hagberg har fått ett rekordanslag från Novo Nordisk-fonden för att i ett internationellt samarbete skapa en modell där de kan testa läkemedel i flera organ samtidigt.",
-      "agent_summary": "",
-      "source_fingerprint": "caa9bd4b3bc9484f092f",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 9,
-      "positive_signals": [
-        "curated-positive-source",
-        "anslag",
-        "rekord",
-        "samarbete"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/efb22cf6-5e7f-475d-9ed6-f6d0f7b940b6.webp",
-        "alt": "Novo Nordisk-anslag till KI-forskare för nydanande tester av läkemedel",
-        "user_image_id": "efb22cf6-5e7f-475d-9ed6-f6d0f7b940b6",
-        "match_score": 0.1881,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/24a653aab5fa5a83a4b1-caa9bd4b-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "caa9bd4b3bc9484f092f",
-        "width": 1280,
-        "height": 848,
-        "sha256": "fdec9bb1ea361a5abc2e629a8ddb4a3dd9d7e0d2b52ba2a6399a0b93f96de3d6"
-      }
-    },
-    {
       "id": "0581c7633c440d8b7c2e",
       "title": "20 år med ESERO: att föra rymden till miljontals elever",
       "url": "https://www.esa.int/Space_in_Member_States/Sweden/20_aar_med_ESERO_att_foera_rymden_till_miljontals_elever",
@@ -507,17 +469,43 @@
         "width": 1280,
         "height": 848,
         "sha256": "1fe1b5c13d209a71033b2aca813da23e1874ff97240490cc64284a163d5de322"
+      }
+    },
+    {
+      "id": "d21a481852939a1b20df",
+      "title": "Jakob Rostøl rekryteras till KI i VR:s nya strategiska satsning",
+      "url": "https://nyheter.ki.se/jakob-rostol-rekryteras-till-ki-i-vrs-nya-strategiska-satsning",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-09-09T00:00:00Z",
+      "source_excerpt": "Med stöd från Vetenskapsrådet etablerar biträdande lektor Jakob Rostøl sin forskning vid KI och institutionen för laboratoriemedicin, där han ska utforska hur bakteriofager påverkar bakterier, sjukdomsutveckling och framtida biotekniska verktyg.",
+      "agent_summary": "",
+      "source_fingerprint": "6c802acb439077268e3c",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "satsning"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/efb22cf6-5e7f-475d-9ed6-f6d0f7b940b6.webp",
+        "alt": "Jakob Rostøl rekryteras till KI i VR:s nya strategiska satsning",
+        "user_image_id": "efb22cf6-5e7f-475d-9ed6-f6d0f7b940b6",
+        "match_score": 0.2582,
+        "width": 1280,
+        "height": 848
       },
-      "ai_image": {
-        "url": "/news-images/ai/articles/fd5961abce3292280c5f-4fc28e8bd1c3be2b3377-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: MSI startar ny publikationsserie om social innovation",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "4fc28e8bd1c3be2b3377",
+      "generated_image": {
+        "url": "/news-images/generated/d21a481852939a1b20df-6c802acb-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "6c802acb439077268e3c",
         "width": 1280,
         "height": 848,
-        "sha256": "941bf077e25d9a28bc824f5a076412b256e844e373013227ee4fa2c3bd57195a",
-        "generated_at": "2026-09-09T23:51:32Z"
+        "sha256": "d3d7abead1780f42fd42649cd35887b245c60617aa71703127e98b797ed96c27"
       }
     },
     {
@@ -724,6 +712,34 @@
         "height": 848,
         "sha256": "da35e92250c0515d62aedd5149cdcfa9db32493eb90f22ded0138d83d4348efb"
       }
+    },
+    {
+      "id": "a93de2ecf0ca2e5f4dce",
+      "title": "Svagt stöd för att värnplikten fostrar goda medborgare",
+      "url": "https://forskning.se/2026/09/09/svagt-stod-for-att-varnplikten-fostrar-goda-medborgare",
+      "source": "Forskning.se",
+      "language": "sv",
+      "published_at": "2026-09-09T14:40:18Z",
+      "source_excerpt": "Värnplikten förknippas ofta med föreställningar om att den inte bara stärker försvaret, utan även fostrar goda samhällsmedborgare. Nu visar en rapport från Totalförsvarets forskningsinstitut, FOI, att det vetenskapliga stödet för att värnplikten skulle ha sådana effekter är svagt. Rapporten bygger på en genomgång av nordiska studier om hur värnplikt påverkar ungas attityder och beteenden på […] Th",
+      "agent_summary": "",
+      "source_fingerprint": "55c89a17fb85e7182031",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2025/03/Militar-Sverige-1024x576.jpg",
+      "source_image_alt": "Svagt stöd för att värnplikten fostrar goda medborgare",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/09/09/svagt-stod-for-att-varnplikten-fostrar-goda-medborgare",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/09/09/svagt-stod-for-att-varnplikten-fostrar-goda-medborgare",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "stärker"
+      ],
+      "public_eligible": true
     },
     {
       "id": "84efea89c7f4985286fc",
@@ -1188,33 +1204,6 @@
       }
     },
     {
-      "id": "fa43ca898b378ca27f39",
-      "title": "Fler barn överlever med bättre förlossningsvård i Afrika",
-      "url": "https://forskning.se/2026/08/27/fler-barn-overlever-med-battre-forlossningsvard-i-afrika",
-      "source": "Forskning.se",
-      "language": "sv",
-      "published_at": "2026-08-27T15:10:14Z",
-      "source_excerpt": "Risken är fortfarande hög att barn dör under eller strax efter förlossningen i flera länder i Afrika söder om Sahara, trots framsteg inom mödra- och barnhälsovården. För att förbättra vården under förlossningar utvecklade forskare inom projektet ALERT* en insats med flera delar. Kvinnor, familjer och vårdpersonal fick vara med och beskriva problem och behov i […] The post Fler barn överlever med b",
-      "agent_summary": "",
-      "source_fingerprint": "a8288411150841b94f3d",
-      "source_image_verified": true,
-      "source_image_url": "https://forskning.se/app/uploads/2026/08/Bebis-nappflaska-1024x576.jpg",
-      "source_image_alt": "Fler barn överlever med bättre förlossningsvård i Afrika",
-      "source_image_credit": "Forskning.se",
-      "source_image_rights_url": "https://forskning.se/2026/08/27/fler-barn-overlever-med-battre-forlossningsvard-i-afrika",
-      "source_image_creator": "Forskning.se",
-      "source_image_source_url": "https://forskning.se/2026/08/27/fler-barn-overlever-med-battre-forlossningsvard-i-afrika",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "framsteg"
-      ],
-      "public_eligible": true
-    },
-    {
       "id": "8212c6f20904a943c6d1",
       "title": "Att skörda vass kan ge dubbla vinster",
       "url": "https://www.extrakt.se/att-skorda-vass-kan-ge-dubbla-vinster",
@@ -1677,7 +1666,7 @@
       "source_excerpt": "One wrong move and he could have disappeared into traffic. A tiny kitten stranded in the middle of a Long Island highway needed someone who knew exactly how to approach him without sending him running into traffic. Dodo editor Monica follows rescuer John as he carefully makes his way over and gets him to safety.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/eDutM1geET2MCy4Ed/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/eDutM1gefZF3D37fc/x720",
       "source_image_alt": "Tiny Kitten Stranded In The Middle Of A Highway",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xb5psk6",
