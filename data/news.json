@@ -506,6 +506,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "d3d7abead1780f42fd42649cd35887b245c60617aa71703127e98b797ed96c27"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/d21a481852939a1b20df-6c802acb439077268e3c-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Jakob Rostøl rekryteras till KI i VR:s nya strategiska satsning",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "6c802acb439077268e3c",
+        "width": 1280,
+        "height": 848,
+        "sha256": "8349428a5fff1280b900dd057312a081d35a94697247571c36220c6e2da37a39",
+        "generated_at": "2026-09-10T14:06:17Z"
       }
     },
     {
