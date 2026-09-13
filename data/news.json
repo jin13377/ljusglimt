@@ -1,8 +1,10 @@
 {
-  "generated_at": "2026-09-12T23:47:17.496443Z",
+  "generated_at": "2026-09-13T14:06:09.182482Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "86a1752732a41ecaf66a"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -1066,43 +1068,6 @@
       }
     },
     {
-      "id": "ac9388eca9809535d9d3",
-      "title": "Lev längre med mindre mat på tallriken",
-      "url": "https://www.vetenskaphalsa.se/lev-langre-med-mindre-mat-pa-tallriken",
-      "source": "Vetenskap & hälsa",
-      "language": "sv",
-      "published_at": "2026-06-15T07:25:00Z",
-      "source_excerpt": "Olle Melanders forskning kombinerar analyser av blodmarkörer med förändrade vanor som kost och motion för att förebygga sjukdom. För ett friskare, längre liv följer han själv 80-procentsregeln vid måltider och tar dagliga löpturer – ett exempel på hur forskning omsätts i praktik. Med genetiska tester kan man av­slöja vem som har hög risk för diabetes […]",
-      "agent_summary": "",
-      "source_fingerprint": "f3b52be8f7d6b87ace5b",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "förebygga"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/9c4f3e46-0f94-45e9-9ab8-7fe2ecb6998f-1.webp",
-        "alt": "Lev längre med mindre mat på tallriken",
-        "user_image_id": "9c4f3e46-0f94-45e9-9ab8-7fe2ecb6998f-1",
-        "match_score": 0.1884,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/ac9388eca9809535d9d3-f3b52be8-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "f3b52be8f7d6b87ace5b",
-        "width": 1280,
-        "height": 848,
-        "sha256": "0a1c95b16e1ceee0e993977a9ee3f9e858e4624dbe3118c9fdd75a90499eafc5"
-      }
-    },
-    {
       "id": "4390567e79124135517d",
       "title": "Boyfriend Gets The Absolute BEST Valentines Day Gift",
       "url": "https://www.dailymotion.com/video/xadpjn6",
@@ -1547,7 +1512,7 @@
       "source_excerpt": "They look like two little old men! Kathryn was raising her daughter while fostering two tiny hairless puppies, and the three quickly became inseparable. Dodo editor Tarang shares what it was like watching them hit their milestones side by side.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/eJizw1gepvNF3GOk1/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/eJizw1gepvNF3GOk1/x720",
       "source_image_alt": "Hairless Puppies Grow Up With Their Tiny Best Friend",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xb6mgl6",
@@ -1601,6 +1566,35 @@
         "science"
       ],
       "public_eligible": false
+    },
+    {
+      "id": "86a1752732a41ecaf66a",
+      "title": "Liten spindelart kan rita om släktträdet",
+      "url": "https://fof.se/artikel/liten-spindelart-kan-rita-om-slakttradet",
+      "source": "Forskning & Framsteg",
+      "language": "sv",
+      "published_at": "2026-09-10T12:56:13Z",
+      "source_excerpt": "Spindeln Oecobius asirensis var tidigare okänd för vetenskapen, men hittades under ett fältarbete i Asirregionen i sydvästra Saudiarabien. Den nyupptäckta spindeln är bara cirka tre … The post Liten spindelart kan rita om släktträdet appeared first on Forskning & Framsteg .",
+      "agent_summary": "",
+      "source_fingerprint": "1bb6a22025364c74ae4e",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "framsteg",
+        "upptäckt"
+      ],
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/9d2d5fa4-a804-4fc4-982e-03b147d2b634.webp",
+        "alt": "Liten spindelart kan rita om släktträdet",
+        "user_image_id": "9d2d5fa4-a804-4fc4-982e-03b147d2b634",
+        "match_score": 0.24,
+        "width": 1280,
+        "height": 848
+      }
     },
     {
       "id": "e0c2ab101693d604de71",
@@ -1668,7 +1662,7 @@
       "source_excerpt": "One wrong move and he could have disappeared into traffic. A tiny kitten stranded in the middle of a Long Island highway needed someone who knew exactly how to approach him without sending him running into traffic. Dodo editor Monica follows rescuer John as he carefully makes his way over and gets him to safety.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/eDutM1gefZF3D37fc/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/eDutM1gefZF3D37fc/x720",
       "source_image_alt": "Tiny Kitten Stranded In The Middle Of A Highway",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xb5psk6",
