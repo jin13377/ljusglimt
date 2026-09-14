@@ -433,6 +433,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "cbfdebbf666720842ac33fc36918ac933ba09d17f7b44c0f826fb85dd937605a"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/5225fa14c2fcffd96074-c7d433aca49c0a3cd0e7-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Ny metod testad mot bakteriellt toxin i hjärnan",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "c7d433aca49c0a3cd0e7",
+        "width": 1280,
+        "height": 848,
+        "sha256": "c6e38f4d58cf37ca205cc0f7057cfd9dc96e3bd8b83243754c4aa4e32b4835cd",
+        "generated_at": "2026-09-14T16:11:25Z"
       }
     },
     {
