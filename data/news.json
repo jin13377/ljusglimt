@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-09-15T00:21:11.794537Z",
+  "generated_at": "2026-09-15T14:39:41.013204Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "5c7043f987448bbdb27d"
+    "29aeca6225334b64820b",
+    "d732c5c9b5dfb0010418"
   ],
   "fetch_errors": [],
   "items": [
@@ -310,51 +311,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "b0cd20dbb2c19d0f72547b8bccd12db07c3c05aee6fa271e90effe161bd5ad25"
-      }
-    },
-    {
-      "id": "ccc544ab470c29cb6d35",
-      "title": "Impact labs breddar innovationsstödet vid svenska lärosäten",
-      "url": "https://socialinnovation.se/nyheter/impact-labs-breddar-innovationsstodet-vid-svenska-larosaten",
-      "source": "Mötesplats Social Innovation",
-      "language": "sv",
-      "published_at": "2026-06-17T10:36:35Z",
-      "source_excerpt": "En ny rapport från Mötesplats Social Innovation visar hur impact labs hjälper forskare och anställda vid svenska lärosäten att omsätta kunskap i lösningar på samhällsutmaningar. Rapporten samlar erfarenheter från både etablerade och framväxande labb och pekar på ett behov av innovationsstöd där samhällsnytta står i centrum. Svenska lärosäten har länge arbetat med att nyttiggöra akademisk...",
-      "agent_summary": "",
-      "source_fingerprint": "d2ef8f247f22fa680026",
-      "source_video": {
-        "provider": "youtube",
-        "video_id": "s2eI4xC5z2o",
-        "embed_url": "https://www.youtube-nocookie.com/embed/s2eI4xC5z2o",
-        "source_url": "https://www.youtube.com/watch?v=s2eI4xC5z2o",
-        "title": "Impact labs breddar innovationsstödet vid svenska lärosäten"
-      },
-      "category": "Innovation",
-      "source_tier_bonus": 5,
-      "positivity_score": 9,
-      "positive_signals": [
-        "curated-positive-source",
-        "hjälper",
-        "innovation",
-        "lösning"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/85548527-df08-4140-9c8b-92075a6971a9.webp",
-        "alt": "Impact labs breddar innovationsstödet vid svenska lärosäten",
-        "user_image_id": "85548527-df08-4140-9c8b-92075a6971a9",
-        "match_score": 0.2577,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/ccc544ab470c29cb6d35-d2ef8f24-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "d2ef8f247f22fa680026",
-        "width": 1280,
-        "height": 848,
-        "sha256": "4af3b777ff818c65e952804219e0f05a1088bdc4cd130e82a9162e4e5646a688"
       }
     },
     {
@@ -1040,42 +996,6 @@
       }
     },
     {
-      "id": "0392e2d504ad7c9d74eb",
-      "title": "AI upptäckte missade blodproppar i hjärnan",
-      "url": "https://www.vetenskaphalsa.se/ai-upptackte-missade-blodproppar-i-hjarnan",
-      "source": "Vetenskap & hälsa",
-      "language": "sv",
-      "published_at": "2026-06-17T07:35:18Z",
-      "source_excerpt": "En studie från Skånes universitetssjukhus visar att en AI-applikation kan hjälpa röntgenläkare att upptäcka blodproppar i hjärnans kärl. Nu testas tekniken i rutinsjukvården under ett år. Studien har publicerats i tidskriften Radiology: Artificial Intelligence och omfattade drygt 3 000 röntgenundersökningar från samtliga sjukhus i Skåne. Forskarna utvärderade ett AI-verktyg som analyserar bilder f",
-      "agent_summary": "",
-      "source_fingerprint": "3ef9a281afd0264fbd0d",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "upptäckt"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/f8d9eeb1-5f03-48f3-b48c-2dda9e298a1b.webp",
-        "alt": "AI upptäckte missade blodproppar i hjärnan",
-        "user_image_id": "f8d9eeb1-5f03-48f3-b48c-2dda9e298a1b",
-        "match_score": 0.162,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/0392e2d504ad7c9d74eb-3ef9a281-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "3ef9a281afd0264fbd0d",
-        "width": 1280,
-        "height": 848,
-        "sha256": "504bdd57a0693b03ab6d7a0fd1696ef2a4d9a1a72542916235315cc7d5d67bc0"
-      }
-    },
-    {
       "id": "4390567e79124135517d",
       "title": "Boyfriend Gets The Absolute BEST Valentines Day Gift",
       "url": "https://www.dailymotion.com/video/xadpjn6",
@@ -1110,6 +1030,42 @@
       ],
       "display_title_sv": "Pojkvännen fick den bästa alla hjärtans dag-presenten",
       "public_eligible": true
+    },
+    {
+      "id": "29aeca6225334b64820b",
+      "title": "Låt servicen komma till landsbygden",
+      "url": "https://www.extrakt.se/lat-servicen-komma-till-landsbygden",
+      "source": "Extrakt",
+      "language": "sv",
+      "published_at": "2026-09-15T14:19:14Z",
+      "source_excerpt": "För många landsbygdsbor har avståndet ökat till mataffären, vården och annan service. I en ny rapport pekar forskare på lösningar som gör att olika verksamheter blir mer tillgängliga, så att behovet av resor minskar.",
+      "agent_summary": "",
+      "source_fingerprint": "c5e183d06b923e2c4a07",
+      "category": "Miljö",
+      "source_tier_bonus": 5,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "lösning"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/868bab25-bbad-423f-871d-cba0ddc6a2f3.webp",
+        "alt": "Låt servicen komma till landsbygden",
+        "user_image_id": "868bab25-bbad-423f-871d-cba0ddc6a2f3",
+        "match_score": 0.2523,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/29aeca6225334b64820b-c5e183d0-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "c5e183d06b923e2c4a07",
+        "width": 1280,
+        "height": 848,
+        "sha256": "8b25b54d7a9f79e75c3f91572826a8733dc5c532b3213760f5d127b72b20f9a4"
+      }
     },
     {
       "id": "5c7043f987448bbdb27d",
@@ -1535,6 +1491,36 @@
       }
     },
     {
+      "id": "d732c5c9b5dfb0010418",
+      "title": "Svenska elever tog medalj i olympiad i geovetenskap",
+      "url": "https://fof.se/artikel/svenska-elever-tog-medalj-i-olympiad-i-geovetenskap",
+      "source": "Forskning & Framsteg",
+      "language": "sv",
+      "published_at": "2026-09-15T11:29:28Z",
+      "source_excerpt": "Sverige har för första gången deltagit i International earth science olympiad (IESO) där 160 gymnasieelever från 40 länder tävlar i geovetenskap. Björn Herland Arvidsson, Henrik … The post Svenska elever tog medalj i olympiad i geovetenskap appeared first on Forskning & Framsteg .",
+      "agent_summary": "",
+      "source_fingerprint": "42ae9719e75c04bee681",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 10,
+      "positive_signals": [
+        "curated-positive-source",
+        "elever",
+        "forskning",
+        "framsteg",
+        "science"
+      ],
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/df172a32-b0d0-4403-be55-3af7e11dd200.webp",
+        "alt": "Svenska elever tog medalj i olympiad i geovetenskap",
+        "user_image_id": "df172a32-b0d0-4403-be55-3af7e11dd200",
+        "match_score": 0.2403,
+        "width": 1280,
+        "height": 848
+      }
+    },
+    {
       "id": "f38ae9faff02e83483b1",
       "title": "Hairless Puppies Grow Up With Their Tiny Best Friend",
       "url": "https://www.dailymotion.com/video/xb6mgl6",
@@ -1665,7 +1651,7 @@
       "source_excerpt": "Nothing was the same without his best friend! Cooper is obsessed with his cat brother Winston, so when Winston suddenly disappeared one night, he was completely thrown. Dodo editor Valentina shares how Cooper spent the next four days anxiously looking for his best friend, and the reunion he’d been waiting for.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/ePGvQ1gftuWesPqrL/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/ePGvQ1gftuWesPqrL/x720",
       "source_image_alt": "Dog Waits Every Day For His Missing Friend",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xb7hpi2",
