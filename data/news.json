@@ -1065,6 +1065,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "8b25b54d7a9f79e75c3f91572826a8733dc5c532b3213760f5d127b72b20f9a4"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/29aeca6225334b64820b-c5e183d06b923e2c4a07-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Låt servicen komma till landsbygden",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "c5e183d06b923e2c4a07",
+        "width": 1280,
+        "height": 848,
+        "sha256": "abb758470eedba9a51e29e03889bec575705522d3f0c573dcb89b252cec02296",
+        "generated_at": "2026-09-15T14:40:10Z"
       }
     },
     {
