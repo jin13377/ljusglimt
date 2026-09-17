@@ -1,10 +1,9 @@
 {
-  "generated_at": "2026-09-17T00:09:25.709706Z",
+  "generated_at": "2026-09-17T14:43:00.545693Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "887ca8f6821ffa5ff64d",
-    "dd773e76fc527e387809"
+    "02b744d47535bf83bd31"
   ],
   "fetch_errors": [],
   "items": [
@@ -352,6 +351,43 @@
       }
     },
     {
+      "id": "02b744d47535bf83bd31",
+      "title": "CLINTEC Faculty Day samlade forskning, samverkan och framtidsfrågor",
+      "url": "https://nyheter.ki.se/clintec-faculty-day-samlade-forskning-samverkan-och-framtidsfragor-1",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-09-17T00:00:00Z",
+      "source_excerpt": "Den 14 september 2026 samlades institutionens postdoktorer, seniora forskare och lärare på Münchenbryggeriet för årets fakultetsdag. Genom föreläsningar, forskningspresentationer och diskussioner belystes aktuell medicinsk forskning samt framtida möjligheter inom samverkan, utbildning och innovation. Dagen inleddes av institutionens prefekt som välkomnade deltagarna och betonade vikten av fakultet",
+      "agent_summary": "",
+      "source_fingerprint": "66e67092a7590d458597",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "innovation"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/efb22cf6-5e7f-475d-9ed6-f6d0f7b940b6.webp",
+        "alt": "CLINTEC Faculty Day samlade forskning, samverkan och framtidsfrågor",
+        "user_image_id": "efb22cf6-5e7f-475d-9ed6-f6d0f7b940b6",
+        "match_score": 0.2582,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/02b744d47535bf83bd31-66e67092-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "66e67092a7590d458597",
+        "width": 1280,
+        "height": 848,
+        "sha256": "97c72dbbc9197e3175fe9d51e118531d466be88eca68e847a0650a98410a6c07"
+      }
+    },
+    {
       "id": "5225fa14c2fcffd96074",
       "title": "Ny metod testad mot bakteriellt toxin i hjärnan",
       "url": "https://nyheter.ki.se/ny-metod-testad-mot-bakteriellt-toxin-i-hjarnan",
@@ -386,44 +422,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "cbfdebbf666720842ac33fc36918ac933ba09d17f7b44c0f826fb85dd937605a"
-      }
-    },
-    {
-      "id": "cdbef8a6018469bab691",
-      "title": "Nationell samverkan ska stärka AI-utvecklingen i Sverige",
-      "url": "https://nyheter.ki.se/nationell-samverkan-ska-starka-ai-utvecklingen-i-sverige",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-09-11T00:00:00Z",
-      "source_excerpt": "Nyligen samlades flera EU-stödda svenska AI-satsningar för att etablera ett mer strukturerat samarbete. Vår gemensamma ambition är tydlig: Att öka genomslaget av vårt arbete och stärka stödet till företag, forskare och offentliga organisationer som utvecklar och implementerar AI-lösningar.",
-      "agent_summary": "",
-      "source_fingerprint": "3e20fc23540acaa0f08b",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 8,
-      "positive_signals": [
-        "curated-positive-source",
-        "lösning",
-        "samarbete",
-        "satsning"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/efb22cf6-5e7f-475d-9ed6-f6d0f7b940b6.webp",
-        "alt": "Nationell samverkan ska stärka AI-utvecklingen i Sverige",
-        "user_image_id": "efb22cf6-5e7f-475d-9ed6-f6d0f7b940b6",
-        "match_score": 0.2582,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/cdbef8a6018469bab691-3e20fc23-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "3e20fc23540acaa0f08b",
-        "width": 1280,
-        "height": 848,
-        "sha256": "ae6f219e46681e083ab757ffb0beed12d61fbfaecf9f309d7a6ee448c0a0fb56"
       }
     },
     {
@@ -1123,33 +1121,6 @@
       }
     },
     {
-      "id": "32b016cbcbeb0b7961f3",
-      "title": "Underjordisk kolbarriär kan minska PFAS i grundvattnet",
-      "url": "https://forskning.se/2026/09/14/underjordisk-barriar-av-kol-kan-minska-pfas-i-grundvattnet",
-      "source": "Forskning.se",
-      "language": "sv",
-      "published_at": "2026-09-14T15:26:40Z",
-      "source_excerpt": "Forskare vid SGI har utvärderat om en barriär av aktivt kol kan minska spridningen av PFAS i ett kraftigt förorenat område. Resultatet visar att den kan det. Efter två år har halterna av PFAS minskat med 99,9 procent. Tekniken skulle kunna bli ett verktyg för att skydda dricksvatten från de svårnedbrytbara evighetskemikalierna PFAS. Resultaten från studien har publicerats i Remediation Journal. Un",
-      "agent_summary": "",
-      "source_fingerprint": "aa0cfad8105f9df1624a",
-      "source_image_verified": true,
-      "source_image_url": "https://forskning.se/app/uploads/2026/09/kran-dricksvatten-1024x576.jpg",
-      "source_image_alt": "Underjordisk kolbarriär kan minska PFAS i grundvattnet",
-      "source_image_credit": "Forskning.se",
-      "source_image_rights_url": "https://forskning.se/2026/09/14/underjordisk-barriar-av-kol-kan-minska-pfas-i-grundvattnet",
-      "source_image_creator": "Forskning.se",
-      "source_image_source_url": "https://forskning.se/2026/09/14/underjordisk-barriar-av-kol-kan-minska-pfas-i-grundvattnet",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "skydda"
-      ],
-      "public_eligible": true
-    },
-    {
       "id": "df0761fcb323588344ef",
       "title": "Naturpodden: Jon Andersson vill pausa avverkningar och inventera skogen",
       "url": "https://www.natursidan.se/nyheter/naturpodden-jon-andersson-vill-pausa-avverkningar-och-inventera-skogen",
@@ -1519,6 +1490,36 @@
       }
     },
     {
+      "id": "d732c5c9b5dfb0010418",
+      "title": "Svenska elever tog medalj i olympiad i geovetenskap",
+      "url": "https://fof.se/artikel/svenska-elever-tog-medalj-i-olympiad-i-geovetenskap",
+      "source": "Forskning & Framsteg",
+      "language": "sv",
+      "published_at": "2026-09-15T11:29:28Z",
+      "source_excerpt": "Sverige har för första gången deltagit i International earth science olympiad (IESO) där 160 gymnasieelever från 40 länder tävlar i geovetenskap. Björn Herland Arvidsson, Henrik … The post Svenska elever tog medalj i olympiad i geovetenskap appeared first on Forskning & Framsteg .",
+      "agent_summary": "",
+      "source_fingerprint": "42ae9719e75c04bee681",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 10,
+      "positive_signals": [
+        "curated-positive-source",
+        "elever",
+        "forskning",
+        "framsteg",
+        "science"
+      ],
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/df172a32-b0d0-4403-be55-3af7e11dd200.webp",
+        "alt": "Svenska elever tog medalj i olympiad i geovetenskap",
+        "user_image_id": "df172a32-b0d0-4403-be55-3af7e11dd200",
+        "match_score": 0.2403,
+        "width": 1280,
+        "height": 848
+      }
+    },
+    {
       "id": "f38ae9faff02e83483b1",
       "title": "Hairless Puppies Grow Up With Their Tiny Best Friend",
       "url": "https://www.dailymotion.com/video/xb6mgl6",
@@ -1528,7 +1529,7 @@
       "source_excerpt": "They look like two little old men! Kathryn was raising her daughter while fostering two tiny hairless puppies, and the three quickly became inseparable. Dodo editor Tarang shares what it was like watching them hit their milestones side by side.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/eJizw1gepvNF3GOk1/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/eJizw1gepvNF3GOk1/x720",
       "source_image_alt": "Hairless Puppies Grow Up With Their Tiny Best Friend",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xb6mgl6",
@@ -1649,7 +1650,7 @@
       "source_excerpt": "Nothing was the same without his best friend! Cooper is obsessed with his cat brother Winston, so when Winston suddenly disappeared one night, he was completely thrown. Dodo editor Valentina shares how Cooper spent the next four days anxiously looking for his best friend, and the reunion he’d been waiting for.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/ePGvQ1ggbz89o4-fp/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/ePGvQ1ggbz89o4-fp/x720",
       "source_image_alt": "Dog Waits Every Day For His Missing Friend",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xb7hpi2",
