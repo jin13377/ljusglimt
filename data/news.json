@@ -1,8 +1,11 @@
 {
-  "generated_at": "2026-09-16T14:38:51.219463Z",
+  "generated_at": "2026-09-17T00:09:25.709706Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "887ca8f6821ffa5ff64d",
+    "dd773e76fc527e387809"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -666,6 +669,61 @@
       }
     },
     {
+      "id": "887ca8f6821ffa5ff64d",
+      "title": "Nästan hälften av alla med kol använder inhalatorn fel",
+      "url": "https://forskning.se/2026/09/16/kol-inhalator-anvands-fel",
+      "source": "Forskning.se",
+      "language": "sv",
+      "published_at": "2026-09-16T15:13:26Z",
+      "source_excerpt": "Nästan 50 procent av patienterna med KOL använder sina inhalatorer felaktigt. Men ett extra utbildningstillfälle förbättrar hur patienterna hanterar inhalatorn. Det visar en ny Vetenskapligt arbete som doktorander gör under sin utbildning för att bli doktor.&lt;br/&gt;Avhandlingen visar doktorandens egen ... Läs mer \" href=\"https://forskning.se/ordlista/avhandling/\" data-mobile-support=\"0\" data-gt",
+      "agent_summary": "",
+      "source_fingerprint": "6056ad4ac4571058ac2e",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/09/kol_inhalator-1024x576.jpg",
+      "source_image_alt": "Nästan hälften av alla med kol använder inhalatorn fel",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/09/16/kol-inhalator-anvands-fel",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/09/16/kol-inhalator-anvands-fel",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "förbättrar"
+      ],
+      "public_eligible": true
+    },
+    {
+      "id": "dd773e76fc527e387809",
+      "title": "App kan fånga upp elever som mår dåligt",
+      "url": "https://forskning.se/2026/09/16/app-kan-fanga-upp-elever-som-mar-daligt",
+      "source": "Forskning.se",
+      "language": "sv",
+      "published_at": "2026-09-16T14:47:07Z",
+      "source_excerpt": "En mobilapp kan ge elever information, råd och förenkla kontakt med skolsköterskor. Men ett digitalt stöd väcker också frågor om sekretess och patientsäkerhet. Många ungdomar som mår psykiskt dåligt söker inte hjälp. En mobilapp skulle kunna bidra till att skolsköterskor tidigare kan upptäcka tecken på psykisk ohälsa hos elever, enligt en studie från Karolinska institutet och Röda korsets högskola",
+      "agent_summary": "",
+      "source_fingerprint": "2778db754ad996fdd563",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/09/mobiltelefon-tonaring-1024x576.jpg",
+      "source_image_alt": "App kan fånga upp elever som mår dåligt",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/09/16/app-kan-fanga-upp-elever-som-mar-daligt",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/09/16/app-kan-fanga-upp-elever-som-mar-daligt",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "elever"
+      ],
+      "public_eligible": true
+    },
+    {
       "id": "ac3e2de220671ba6b739",
       "title": "Stor rapport om världens flyttfåglar pekar ut största hot och bästa lösningar",
       "url": "https://www.natursidan.se/nyheter/stor-rapport-om-varldens-flyttfaglar-pekar-ut-storsta-hot-och-basta-losningar",
@@ -1065,33 +1123,6 @@
       }
     },
     {
-      "id": "5c7043f987448bbdb27d",
-      "title": "Skörd av vass kan ge friskare kustmiljöer",
-      "url": "https://forskning.se/2026/09/14/skord-av-vass-kan-ge-friskare-kustmiljoer",
-      "source": "Forskning.se",
-      "language": "sv",
-      "published_at": "2026-09-14T18:28:15Z",
-      "source_excerpt": "En ny Vetenskapligt arbete som doktorander gör under sin utbildning för att bli doktor.&lt;br/&gt;Avhandlingen visar doktorandens egen ... Läs mer \" href=\"https://forskning.se/ordlista/avhandling/\" data-mobile-support=\"0\" data-gt-translate-attributes='[{\"attribute\":\"data-cmtooltip\", \"format\":\"html\"}]' tabindex='0' role='link'>avhandling har tittat närmare på vass, Phragmites australis, en vanlig v",
-      "agent_summary": "",
-      "source_fingerprint": "facbfeded8283274a3c4",
-      "source_image_verified": true,
-      "source_image_url": "https://forskning.se/app/uploads/2026/09/Vass-1024x576.jpg",
-      "source_image_alt": "Skörd av vass kan ge friskare kustmiljöer",
-      "source_image_credit": "Forskning.se",
-      "source_image_rights_url": "https://forskning.se/2026/09/14/skord-av-vass-kan-ge-friskare-kustmiljoer",
-      "source_image_creator": "Forskning.se",
-      "source_image_source_url": "https://forskning.se/2026/09/14/skord-av-vass-kan-ge-friskare-kustmiljoer",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning"
-      ],
-      "public_eligible": true
-    },
-    {
       "id": "32b016cbcbeb0b7961f3",
       "title": "Underjordisk kolbarriär kan minska PFAS i grundvattnet",
       "url": "https://forskning.se/2026/09/14/underjordisk-barriar-av-kol-kan-minska-pfas-i-grundvattnet",
@@ -1485,36 +1516,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "c02560296b843217aa7846f0c3608084bcee459e1b980bb6e89882850565fb68"
-      }
-    },
-    {
-      "id": "d732c5c9b5dfb0010418",
-      "title": "Svenska elever tog medalj i olympiad i geovetenskap",
-      "url": "https://fof.se/artikel/svenska-elever-tog-medalj-i-olympiad-i-geovetenskap",
-      "source": "Forskning & Framsteg",
-      "language": "sv",
-      "published_at": "2026-09-15T11:29:28Z",
-      "source_excerpt": "Sverige har för första gången deltagit i International earth science olympiad (IESO) där 160 gymnasieelever från 40 länder tävlar i geovetenskap. Björn Herland Arvidsson, Henrik … The post Svenska elever tog medalj i olympiad i geovetenskap appeared first on Forskning & Framsteg .",
-      "agent_summary": "",
-      "source_fingerprint": "42ae9719e75c04bee681",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 10,
-      "positive_signals": [
-        "curated-positive-source",
-        "elever",
-        "forskning",
-        "framsteg",
-        "science"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/df172a32-b0d0-4403-be55-3af7e11dd200.webp",
-        "alt": "Svenska elever tog medalj i olympiad i geovetenskap",
-        "user_image_id": "df172a32-b0d0-4403-be55-3af7e11dd200",
-        "match_score": 0.2403,
-        "width": 1280,
-        "height": 848
       }
     },
     {
