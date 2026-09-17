@@ -385,6 +385,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "97c72dbbc9197e3175fe9d51e118531d466be88eca68e847a0650a98410a6c07"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/02b744d47535bf83bd31-66e67092a7590d458597-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: CLINTEC Faculty Day samlade forskning, samverkan och framtidsfrågor",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "66e67092a7590d458597",
+        "width": 1280,
+        "height": 848,
+        "sha256": "8e10c4ff948030455ff82bbdb805978f1d68648a0b619d7c279667251500c4cf",
+        "generated_at": "2026-09-17T14:43:23Z"
       }
     },
     {
