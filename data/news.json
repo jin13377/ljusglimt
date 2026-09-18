@@ -1,13 +1,8 @@
 {
-  "generated_at": "2026-09-18T14:07:57.929430Z",
+  "generated_at": "2026-09-18T23:54:25.492001Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [
-    "64c47b9b9dd4da348c48",
-    "ab9e3d77d729644a5ad7",
-    "2803a51c395f47f021ad",
-    "186e8c647a742ca73075"
-  ],
+  "new_item_ids": [],
   "fetch_errors": [],
   "items": [
     {
@@ -444,17 +439,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "0bbe029c22ef84e7d8630cf0e6a89a351a476809f87f4b87e8eca8d4d6e95f87"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/2803a51c395f47f021ad-1dd6c7762eb4263d3b8b-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: Han breddar sin traumaforskning med stöd från forskar-AT",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "1dd6c7762eb4263d3b8b",
-        "width": 1280,
-        "height": 848,
-        "sha256": "73e0dce03d11e3235a00a9d9265dbef4fe45fc17ff1870d89ad2dc0fe528bab8",
-        "generated_at": "2026-09-18T14:08:20Z"
       }
     },
     {
@@ -1551,7 +1535,7 @@
       "source_excerpt": "They look like two little old men! Kathryn was raising her daughter while fostering two tiny hairless puppies, and the three quickly became inseparable. Dodo editor Tarang shares what it was like watching them hit their milestones side by side.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/eJizw1gepvNF3GOk1/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/eJizw1gepvNF3GOk1/x720",
       "source_image_alt": "Hairless Puppies Grow Up With Their Tiny Best Friend",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xb6mgl6",
@@ -1672,7 +1656,7 @@
       "source_excerpt": "Nothing was the same without his best friend! Cooper is obsessed with his cat brother Winston, so when Winston suddenly disappeared one night, he was completely thrown. Dodo editor Valentina shares how Cooper spent the next four days anxiously looking for his best friend, and the reunion he’d been waiting for.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/ePGvQ1ggbz89o4-fp/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/ePGvQ1ggbz89o4-fp/x720",
       "source_image_alt": "Dog Waits Every Day For His Missing Friend",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xb7hpi2",
