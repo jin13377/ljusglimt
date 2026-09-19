@@ -1156,6 +1156,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "0bf67fa42468e231393ef7f9c710843705f665afcf6c6cc5ac537888eceb547f"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/8ed42c02659f30eab357-8e5ca64ec70321b00341-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Nya naturreservat i Östergötland",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "8e5ca64ec70321b00341",
+        "width": 1280,
+        "height": 848,
+        "sha256": "6a6f3e1fb855e72650170127afa71bb2ce5683ad4ef20f87e74beff2f5069998",
+        "generated_at": "2026-09-19T13:43:08Z"
       }
     },
     {
