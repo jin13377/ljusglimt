@@ -1,11 +1,16 @@
 {
-  "generated_at": "2026-09-19T13:42:42.827981Z",
+  "generated_at": "2026-09-19T23:55:29.785711Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "8ed42c02659f30eab357"
+    "7083e67f6e3d15f62307"
   ],
-  "fetch_errors": [],
+  "fetch_errors": [
+    {
+      "source": "Mötesplats Social Innovation",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
   "items": [
     {
       "id": "3fe2e7d37ce31017f6dd",
@@ -1156,17 +1161,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "0bf67fa42468e231393ef7f9c710843705f665afcf6c6cc5ac537888eceb547f"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/8ed42c02659f30eab357-8e5ca64ec70321b00341-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: Nya naturreservat i Östergötland",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "8e5ca64ec70321b00341",
-        "width": 1280,
-        "height": 848,
-        "sha256": "6a6f3e1fb855e72650170127afa71bb2ce5683ad4ef20f87e74beff2f5069998",
-        "generated_at": "2026-09-19T13:43:08Z"
       }
     },
     {
@@ -1548,7 +1542,7 @@
       "source_excerpt": "They look like two little old men! Kathryn was raising her daughter while fostering two tiny hairless puppies, and the three quickly became inseparable. Dodo editor Tarang shares what it was like watching them hit their milestones side by side.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/eJizw1gepvNF3GOk1/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/eJizw1gepvNF3GOk1/x720",
       "source_image_alt": "Hairless Puppies Grow Up With Their Tiny Best Friend",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xb6mgl6",
@@ -1600,6 +1594,42 @@
         "community",
         "research",
         "science"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "7083e67f6e3d15f62307",
+      "title": "Freezing Kitten Tries To Get Inside Buildings",
+      "url": "https://www.dailymotion.com/video/xba9cce",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-09-19T17:18:48Z",
+      "source_excerpt": "All Tenzo wanted was for someone to finally stop and help him. Dodo editor Brielle shares the moment rescuer Yassine realized he couldn’t leave freezing little Tenzo outside, especially after watching people repeatedly shut their doors on him. Once he was finally safe, his playful, ridiculously snuggly personality came out in full force.",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s1.dmcdn.net/v/eg_o-1ghiIGCzuC9W/x720",
+      "source_image_alt": "Freezing Kitten Tries To Get Inside Buildings",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xba9cce",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xba9cce",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xba9cce",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xba9cce",
+        "source_url": "https://www.dailymotion.com/video/xba9cce",
+        "title": "Freezing Kitten Tries To Get Inside Buildings"
+      },
+      "source_fingerprint": "005fb5fd248130060adc",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "kitten",
+        "play",
+        "rescue"
       ],
       "public_eligible": false
     },
@@ -1656,41 +1686,6 @@
         "kitten",
         "rescue",
         "restoration"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "007e844582b384f6c716",
-      "title": "Dog Waits Every Day For His Missing Friend",
-      "url": "https://www.dailymotion.com/video/xb7hpi2",
-      "source": "The Dodo",
-      "language": "en",
-      "published_at": "2026-09-14T04:19:27Z",
-      "source_excerpt": "Nothing was the same without his best friend! Cooper is obsessed with his cat brother Winston, so when Winston suddenly disappeared one night, he was completely thrown. Dodo editor Valentina shares how Cooper spent the next four days anxiously looking for his best friend, and the reunion he’d been waiting for.",
-      "agent_summary": "",
-      "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/ePGvQ1ggbz89o4-fp/x720",
-      "source_image_alt": "Dog Waits Every Day For His Missing Friend",
-      "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xb7hpi2",
-      "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xb7hpi2",
-      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
-      "source_video": {
-        "provider": "dailymotion",
-        "video_id": "xb7hpi2",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xb7hpi2",
-        "source_url": "https://www.dailymotion.com/video/xb7hpi2",
-        "title": "Dog Waits Every Day For His Missing Friend"
-      },
-      "source_fingerprint": "0a2f7dad2bb623556b56",
-      "category": "Djur",
-      "source_tier_bonus": 4,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "best friend",
-        "friend"
       ],
       "public_eligible": false
     }
