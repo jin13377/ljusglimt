@@ -1,9 +1,14 @@
 {
-  "generated_at": "2026-09-20T13:58:14.815355Z",
+  "generated_at": "2026-09-20T23:53:00.307835Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [],
-  "fetch_errors": [],
+  "fetch_errors": [
+    {
+      "source": "The Dodo",
+      "error": "<urlopen error [Errno 104] Connection reset by peer>"
+    }
+  ],
   "items": [
     {
       "id": "3fe2e7d37ce31017f6dd",
