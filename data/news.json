@@ -1,8 +1,10 @@
 {
-  "generated_at": "2026-09-22T00:36:53.832716Z",
+  "generated_at": "2026-09-22T14:23:05.553761Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "e193a2588c990aa66241"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -848,34 +850,6 @@
       }
     },
     {
-      "id": "a93de2ecf0ca2e5f4dce",
-      "title": "Svagt stöd för att värnplikten fostrar goda medborgare",
-      "url": "https://forskning.se/2026/09/09/svagt-stod-for-att-varnplikten-fostrar-goda-medborgare",
-      "source": "Forskning.se",
-      "language": "sv",
-      "published_at": "2026-09-09T14:40:18Z",
-      "source_excerpt": "Värnplikten förknippas ofta med föreställningar om att den inte bara stärker försvaret, utan även fostrar goda samhällsmedborgare. Nu visar en rapport från Totalförsvarets forskningsinstitut, FOI, att det vetenskapliga stödet för att värnplikten skulle ha sådana effekter är svagt. Rapporten bygger på en genomgång av nordiska studier om hur värnplikt påverkar ungas attityder och beteenden på […] Th",
-      "agent_summary": "",
-      "source_fingerprint": "55c89a17fb85e7182031",
-      "source_image_verified": true,
-      "source_image_url": "https://forskning.se/app/uploads/2025/03/Militar-Sverige-1024x576.jpg",
-      "source_image_alt": "Svagt stöd för att värnplikten fostrar goda medborgare",
-      "source_image_credit": "Forskning.se",
-      "source_image_rights_url": "https://forskning.se/2026/09/09/svagt-stod-for-att-varnplikten-fostrar-goda-medborgare",
-      "source_image_creator": "Forskning.se",
-      "source_image_source_url": "https://forskning.se/2026/09/09/svagt-stod-for-att-varnplikten-fostrar-goda-medborgare",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "stärker"
-      ],
-      "public_eligible": true
-    },
-    {
       "id": "39d35a286238acbaeb7a",
       "title": "Oväntad upptäckt avslöjar mekanism bakom hjärntumörutveckling",
       "url": "https://www.vetenskaphalsa.se/ovantad-upptackt-avslojar-mekanism-bakom-hjarntumorutveckling",
@@ -1528,40 +1502,33 @@
       }
     },
     {
-      "id": "f38ae9faff02e83483b1",
-      "title": "Hairless Puppies Grow Up With Their Tiny Best Friend",
-      "url": "https://www.dailymotion.com/video/xb6mgl6",
-      "source": "The Dodo",
-      "language": "en",
-      "published_at": "2026-09-10T23:19:26Z",
-      "source_excerpt": "They look like two little old men! Kathryn was raising her daughter while fostering two tiny hairless puppies, and the three quickly became inseparable. Dodo editor Tarang shares what it was like watching them hit their milestones side by side.",
+      "id": "e193a2588c990aa66241",
+      "title": "Rekordvarma sommaren får Alperna att rasa",
+      "url": "https://fof.se/artikel/rekordvarma-sommaren-far-alperna-att-rasa",
+      "source": "Forskning & Framsteg",
+      "language": "sv",
+      "published_at": "2026-09-18T12:15:23Z",
+      "source_excerpt": "Ett stort stenblock lossnar från bergssidan och faller. Bitarna splittras till mindre block och stenar när de krossas mot berget. Bilden på mobilskärmen fylls av … The post Rekordvarma sommaren får Alperna att rasa appeared first on Forskning & Framsteg .",
       "agent_summary": "",
-      "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/eJizw1gepvNF3GOk1/x720",
-      "source_image_alt": "Hairless Puppies Grow Up With Their Tiny Best Friend",
-      "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xb6mgl6",
-      "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xb6mgl6",
-      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
-      "source_video": {
-        "provider": "dailymotion",
-        "video_id": "xb6mgl6",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xb6mgl6",
-        "source_url": "https://www.dailymotion.com/video/xb6mgl6",
-        "title": "Hairless Puppies Grow Up With Their Tiny Best Friend"
-      },
-      "source_fingerprint": "c245b61a3d66bdf886a4",
-      "category": "Djur",
-      "source_tier_bonus": 4,
+      "source_fingerprint": "bbec48f31bcf5033fd7c",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
       "positivity_score": 9,
       "positive_signals": [
         "curated-positive-source",
-        "best friend",
-        "friend",
-        "milestone"
+        "forskning",
+        "framsteg",
+        "rekord"
       ],
-      "public_eligible": false
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/9d2d5fa4-a804-4fc4-982e-03b147d2b634.webp",
+        "alt": "Rekordvarma sommaren får Alperna att rasa",
+        "user_image_id": "9d2d5fa4-a804-4fc4-982e-03b147d2b634",
+        "match_score": 0.24,
+        "width": 1280,
+        "height": 848
+      }
     },
     {
       "id": "d527588764b355660cc8",
@@ -1602,7 +1569,7 @@
       "source_excerpt": "All Tenzo wanted was for someone to finally stop and help him. Dodo editor Brielle shares the moment rescuer Yassine realized he couldn’t leave freezing little Tenzo outside, especially after watching people repeatedly shut their doors on him. Once he was finally safe, his playful, ridiculously snuggly personality came out in full force.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/eg_o-1ghvr5sBdmoy/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/eg_o-1ghvr5sBdmoy/x720",
       "source_image_alt": "Freezing Kitten Tries To Get Inside Buildings",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xba9cce",
@@ -1681,6 +1648,41 @@
         "kitten",
         "rescue",
         "restoration"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "007e844582b384f6c716",
+      "title": "Dog Waits Every Day For His Missing Friend",
+      "url": "https://www.dailymotion.com/video/xb7hpi2",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-09-14T04:19:27Z",
+      "source_excerpt": "Nothing was the same without his best friend! Cooper is obsessed with his cat brother Winston, so when Winston suddenly disappeared one night, he was completely thrown. Dodo editor Valentina shares how Cooper spent the next four days anxiously looking for his best friend, and the reunion he’d been waiting for.",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s2.dmcdn.net/v/ePGvQ1ggbz89o4-fp/x720",
+      "source_image_alt": "Dog Waits Every Day For His Missing Friend",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xb7hpi2",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xb7hpi2",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xb7hpi2",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xb7hpi2",
+        "source_url": "https://www.dailymotion.com/video/xb7hpi2",
+        "title": "Dog Waits Every Day For His Missing Friend"
+      },
+      "source_fingerprint": "0a2f7dad2bb623556b56",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "best friend",
+        "friend"
       ],
       "public_eligible": false
     }
