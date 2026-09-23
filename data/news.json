@@ -386,6 +386,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "71b23bb58a1cf5794c4ce0b2e0091d9160c1bfb88a0b3896cb3b359a30990392"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/2c12a3a29aca56444a8b-51275cdf390b4e84e051-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Klimatfrukost #46: När efterfrågan och lösningar kan mötas för att halvera byggandets utsläpp",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "51275cdf390b4e84e051",
+        "width": 1280,
+        "height": 848,
+        "sha256": "36054a82ab9b41917b9558771d03f906fff77bc42362c9621931b17e1c851dba",
+        "generated_at": "2026-09-23T14:44:13Z"
       }
     },
     {
