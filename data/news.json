@@ -1100,6 +1100,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "0045ef9402b5bd4c1ecdb559d86bda77487a5d7a3a813e7f66dda849dbcd2db1"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/c9d568dbcbaf3f7d6f80-1c82e5fc6fa173f2936a-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: 4 av 5 lantbrukare kan tänka sig burfri uppfödning",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "1c82e5fc6fa173f2936a",
+        "width": 1280,
+        "height": 848,
+        "sha256": "bb23a524a19ed7985a08e09a9c67d2624167e6e8c90b9e1737f69759421f4f4b",
+        "generated_at": "2026-09-23T00:03:18Z"
       }
     },
     {
