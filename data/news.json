@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-09-23T00:02:53.260247Z",
+  "generated_at": "2026-09-23T14:43:43.857491Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "c9d568dbcbaf3f7d6f80"
+    "2c12a3a29aca56444a8b",
+    "9476f8aa9289067f58ee"
   ],
   "fetch_errors": [],
   "items": [
@@ -348,6 +349,43 @@
         "width": 1280,
         "height": 848,
         "sha256": "273484e6265bcfb32ad63f2d1ada4c34b8bdadcd88dd46c95261cc760fae40d5"
+      }
+    },
+    {
+      "id": "2c12a3a29aca56444a8b",
+      "title": "Klimatfrukost #46: När efterfrågan och lösningar kan mötas för att halvera byggandets utsläpp",
+      "url": "https://viablecities.se/klimatfrukost-46-nar-efterfragan-och-losningar-kan-motas-for-att-halvera-byggandets-utslapp",
+      "source": "Viable Cities",
+      "language": "sv",
+      "published_at": "2026-09-23T10:01:31Z",
+      "source_excerpt": "Byggbranschen och beställarna utgör tillsammans en stark drivkraft för omställningen. Byggbranschen visar vad som är möjligt och välkomnar högre ambitioner, samtidigt som beställarna skapar efterfrågan på de lösningar som krävs. Inlägget Klimatfrukost #46: När efterfrågan och lösningar kan mötas för att halvera byggandets utsläpp dök först upp på Viable Cities .",
+      "agent_summary": "",
+      "source_fingerprint": "51275cdf390b4e84e051",
+      "category": "Samhälle",
+      "source_tier_bonus": 5,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "lösning",
+        "omställning"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/491483e7-00f4-4581-9c4d-ba3853e16f74-1.webp",
+        "alt": "Klimatfrukost #46: När efterfrågan och lösningar kan mötas för att halvera byggandets utsläpp",
+        "user_image_id": "491483e7-00f4-4581-9c4d-ba3853e16f74-1",
+        "match_score": 0.2502,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/2c12a3a29aca56444a8b-51275cdf-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "51275cdf390b4e84e051",
+        "width": 1280,
+        "height": 848,
+        "sha256": "71b23bb58a1cf5794c4ce0b2e0091d9160c1bfb88a0b3896cb3b359a30990392"
       }
     },
     {
@@ -720,6 +758,42 @@
         "width": 1280,
         "height": 848,
         "sha256": "da35e92250c0515d62aedd5149cdcfa9db32493eb90f22ded0138d83d4348efb"
+      }
+    },
+    {
+      "id": "9476f8aa9289067f58ee",
+      "title": "Miljon­satsning för att få ut unga i naturen",
+      "url": "https://www.natursidan.se/nyheter/miljonsatsning-for-att-fa-ut-unga-i-naturen",
+      "source": "Natursidan",
+      "language": "sv",
+      "published_at": "2026-09-23T04:59:36Z",
+      "source_excerpt": "I fem svenska städer kommer de närmaste två åren fler ungdomar komma ut i naturen och få prova på friluftsliv.",
+      "agent_summary": "",
+      "source_fingerprint": "3e563ed80a704f454656",
+      "category": "Natur",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "satsning"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/2091a644-1eb7-45ff-afae-1a9300f1c839.webp",
+        "alt": "Miljon­satsning för att få ut unga i naturen",
+        "user_image_id": "2091a644-1eb7-45ff-afae-1a9300f1c839",
+        "match_score": 0.2655,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/9476f8aa9289067f58ee-3e563ed8-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "3e563ed80a704f454656",
+        "width": 1280,
+        "height": 848,
+        "sha256": "1d1550e2271eb755d981115317277221fa2465e588d78a96ccb84d7c6dc53cbd"
       }
     },
     {
@@ -1100,17 +1174,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "0045ef9402b5bd4c1ecdb559d86bda77487a5d7a3a813e7f66dda849dbcd2db1"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/c9d568dbcbaf3f7d6f80-1c82e5fc6fa173f2936a-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: 4 av 5 lantbrukare kan tänka sig burfri uppfödning",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "1c82e5fc6fa173f2936a",
-        "width": 1280,
-        "height": 848,
-        "sha256": "bb23a524a19ed7985a08e09a9c67d2624167e6e8c90b9e1737f69759421f4f4b",
-        "generated_at": "2026-09-23T00:03:18Z"
       }
     },
     {
@@ -1183,42 +1246,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "8b25b54d7a9f79e75c3f91572826a8733dc5c532b3213760f5d127b72b20f9a4"
-      }
-    },
-    {
-      "id": "df0761fcb323588344ef",
-      "title": "Naturpodden: Jon Andersson vill pausa avverkningar och inventera skogen",
-      "url": "https://www.natursidan.se/nyheter/naturpodden-jon-andersson-vill-pausa-avverkningar-och-inventera-skogen",
-      "source": "Natursidan",
-      "language": "sv",
-      "published_at": "2026-09-05T07:07:26Z",
-      "source_excerpt": "Vi lever i den riktiga svenska skogens sista dagar. Skogsbruket har fördärvat vårt land så till den milda grad att det bästa vore att bara låta den vara, menar Jon Andersson. Han jobbar för Skydda Skogen och pratade med Emil vid Fjällsjöälvens strand i somras.",
-      "agent_summary": "",
-      "source_fingerprint": "29f7c43e097299fbbf7a",
-      "category": "Natur",
-      "source_tier_bonus": 5,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "skydda"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/2091a644-1eb7-45ff-afae-1a9300f1c839.webp",
-        "alt": "Naturpodden: Jon Andersson vill pausa avverkningar och inventera skogen",
-        "user_image_id": "2091a644-1eb7-45ff-afae-1a9300f1c839",
-        "match_score": 0.2655,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/df0761fcb323588344ef-29f7c43e-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "29f7c43e097299fbbf7a",
-        "width": 1280,
-        "height": 848,
-        "sha256": "de4c69260b884f4d1826c10f5cbf0b76a6c3504b26824ca5ab72d8e61d20678e"
       }
     },
     {
@@ -1519,36 +1546,6 @@
       }
     },
     {
-      "id": "d732c5c9b5dfb0010418",
-      "title": "Svenska elever tog medalj i olympiad i geovetenskap",
-      "url": "https://fof.se/artikel/svenska-elever-tog-medalj-i-olympiad-i-geovetenskap",
-      "source": "Forskning & Framsteg",
-      "language": "sv",
-      "published_at": "2026-09-15T11:29:28Z",
-      "source_excerpt": "Sverige har för första gången deltagit i International earth science olympiad (IESO) där 160 gymnasieelever från 40 länder tävlar i geovetenskap. Björn Herland Arvidsson, Henrik … The post Svenska elever tog medalj i olympiad i geovetenskap appeared first on Forskning & Framsteg .",
-      "agent_summary": "",
-      "source_fingerprint": "42ae9719e75c04bee681",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 10,
-      "positive_signals": [
-        "curated-positive-source",
-        "elever",
-        "forskning",
-        "framsteg",
-        "science"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/df172a32-b0d0-4403-be55-3af7e11dd200.webp",
-        "alt": "Svenska elever tog medalj i olympiad i geovetenskap",
-        "user_image_id": "df172a32-b0d0-4403-be55-3af7e11dd200",
-        "match_score": 0.2403,
-        "width": 1280,
-        "height": 848
-      }
-    },
-    {
       "id": "d527588764b355660cc8",
       "title": "This frog has been 'invisible' to the science community for over a century. Researchers are finally setting the record straight",
       "url": "https://www.goodgoodgood.co/articles/new-species-discovery-milpe-robber-rain-frog",
@@ -1679,7 +1676,7 @@
       "source_excerpt": "Nothing was the same without his best friend! Cooper is obsessed with his cat brother Winston, so when Winston suddenly disappeared one night, he was completely thrown. Dodo editor Valentina shares how Cooper spent the next four days anxiously looking for his best friend, and the reunion he’d been waiting for.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/ePGvQ1ggbz89o4-fp/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/ePGvQ1ggbz89o4-fp/x720",
       "source_image_alt": "Dog Waits Every Day For His Missing Friend",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xb7hpi2",
