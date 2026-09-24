@@ -272,6 +272,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "e4489ecd7e04731bbde6b229d82ec8b436baf79c8a76a6cc5aaa1422722dfa25"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/05434c76e9e84d537da6-065b25a2a7d9823b71f5-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Forte-film lyfter nya svenska satsningar på demensforskning",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "065b25a2a7d9823b71f5",
+        "width": 1280,
+        "height": 848,
+        "sha256": "9e2050c448b188f0db44db1a6b8f57be26ae36ec09b069e1430d9b443259a199",
+        "generated_at": "2026-09-24T00:16:18Z"
       }
     },
     {
