@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-24T00:15:53.395306Z",
+  "generated_at": "2026-09-24T14:39:28.323206Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "05434c76e9e84d537da6",
-    "497876c691e34237a17d"
+    "863924f715d1b76785e1",
+    "eb682f3bae66912bdf7e"
   ],
   "fetch_errors": [],
   "items": [
@@ -238,6 +238,44 @@
       }
     },
     {
+      "id": "863924f715d1b76785e1",
+      "title": "Företag i EU: Höj miljökraven och fortsätt omställningen",
+      "url": "https://www.natursidan.se/nyheter/foretag-i-eu-hoj-miljokraven-och-fortsatt-omstallningen",
+      "source": "Natursidan",
+      "language": "sv",
+      "published_at": "2026-09-24T04:36:43Z",
+      "source_excerpt": "9 av 10 europeiska företag vill se en omställning till koldioxidsnål och miljömässigt hållbar ekonomi. De anser att det stärker EU:s konkurrenskraft.",
+      "agent_summary": "",
+      "source_fingerprint": "e3a01b301ea93ee63432",
+      "category": "Natur",
+      "source_tier_bonus": 5,
+      "positivity_score": 9,
+      "positive_signals": [
+        "curated-positive-source",
+        "hållbar",
+        "omställning",
+        "stärker"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/7419fff6-d243-4d01-a198-1ebe750bf0f6.webp",
+        "alt": "Företag i EU: Höj miljökraven och fortsätt omställningen",
+        "user_image_id": "7419fff6-d243-4d01-a198-1ebe750bf0f6",
+        "match_score": 0.2841,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/863924f715d1b76785e1-e3a01b30-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "e3a01b301ea93ee63432",
+        "width": 1280,
+        "height": 848,
+        "sha256": "cd1a1ef5ede588ff80b2a8b26e4d150e6144f36e2f686fa41d52a54b0e5a4497"
+      }
+    },
+    {
       "id": "05434c76e9e84d537da6",
       "title": "Forte-film lyfter nya svenska satsningar på demensforskning",
       "url": "https://nyheter.ki.se/forte-film-lyfter-nya-svenska-satsningar-pa-demensforskning",
@@ -272,17 +310,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "e4489ecd7e04731bbde6b229d82ec8b436baf79c8a76a6cc5aaa1422722dfa25"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/05434c76e9e84d537da6-065b25a2a7d9823b71f5-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: Forte-film lyfter nya svenska satsningar på demensforskning",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "065b25a2a7d9823b71f5",
-        "width": 1280,
-        "height": 848,
-        "sha256": "9e2050c448b188f0db44db1a6b8f57be26ae36ec09b069e1430d9b443259a199",
-        "generated_at": "2026-09-24T00:16:18Z"
       }
     },
     {
@@ -772,6 +799,43 @@
       }
     },
     {
+      "id": "eb682f3bae66912bdf7e",
+      "title": "”Framtidens städer behöver byggas även under mark”",
+      "url": "https://www.extrakt.se/framtidens-stader-behover-byggas-aven-under-mark",
+      "source": "Extrakt",
+      "language": "sv",
+      "published_at": "2026-09-24T11:49:01Z",
+      "source_excerpt": "Utrymmen under mark skulle kunna vara en resurs – inte bara en plats att gömma bilar och annat som inte passar in i en hållbar stad. Det är en viktig slutsats i forskningsprojektet SubCity. Men i samhällsplaneringen glöms utvecklingen under ytan ofta bort.",
+      "agent_summary": "",
+      "source_fingerprint": "3bd8a288e42aa1b9cb7c",
+      "category": "Miljö",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "hållbar"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/df172a32-b0d0-4403-be55-3af7e11dd200.webp",
+        "alt": "”Framtidens städer behöver byggas även under mark”",
+        "user_image_id": "df172a32-b0d0-4403-be55-3af7e11dd200",
+        "match_score": 0.2449,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/eb682f3bae66912bdf7e-3bd8a288-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "3bd8a288e42aa1b9cb7c",
+        "width": 1280,
+        "height": 848,
+        "sha256": "e57c2d711b320415b1c861fa0338151273f023d4dc296fcb847c158e57611879"
+      }
+    },
+    {
       "id": "9476f8aa9289067f58ee",
       "title": "Miljon­satsning för att få ut unga i naturen",
       "url": "https://www.natursidan.se/nyheter/miljonsatsning-for-att-fa-ut-unga-i-naturen",
@@ -1080,42 +1144,6 @@
       }
     },
     {
-      "id": "6698c053939f372dce7e",
-      "title": "Parkinsonläkemedel visar lovande effekt mot svårbehandlad depression",
-      "url": "https://www.vetenskaphalsa.se/parkinsonlakemedel-visar-lovande-effekt-mot-svarbehandlad-depression",
-      "source": "Vetenskap & hälsa",
-      "language": "sv",
-      "published_at": "2026-06-26T05:44:00Z",
-      "source_excerpt": "För många med depression handlar sjukdomen inte bara om nedstämdhet, utan också om minskad motivation och svårigheter att uppskatta aktiviteter man tidigare tyckt om. En studie från Lunds universitet och Skånes universitetssjukhus visar att läkemedel mot Parkinsons sjukdom kan fungera som tilläggsbehandling för att lindra dessa symtom hos vissa patienter med svårbehandlad depression. Forskare vid ",
-      "agent_summary": "",
-      "source_fingerprint": "0f7d798fb82c16503b2c",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "lovande"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/491483e7-00f4-4581-9c4d-ba3853e16f74.webp",
-        "alt": "Parkinsonläkemedel visar lovande effekt mot svårbehandlad depression",
-        "user_image_id": "491483e7-00f4-4581-9c4d-ba3853e16f74",
-        "match_score": 0.1728,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/6698c053939f372dce7e-0f7d798f-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "0f7d798fb82c16503b2c",
-        "width": 1280,
-        "height": 848,
-        "sha256": "5c78d9275751e5afca642ce661210a5de80103878979c977390cac3040ffeec5"
-      }
-    },
-    {
       "id": "4390567e79124135517d",
       "title": "Boyfriend Gets The Absolute BEST Valentines Day Gift",
       "url": "https://www.dailymotion.com/video/xadpjn6",
@@ -1185,42 +1213,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "0045ef9402b5bd4c1ecdb559d86bda77487a5d7a3a813e7f66dda849dbcd2db1"
-      }
-    },
-    {
-      "id": "8ed42c02659f30eab357",
-      "title": "Nya naturreservat i Östergötland",
-      "url": "https://www.natursidan.se/nyheter/nya-naturreservat-i-ostergotland",
-      "source": "Natursidan",
-      "language": "sv",
-      "published_at": "2026-09-19T04:27:06Z",
-      "source_excerpt": "Ett ökat intresse från markägare att få skydda natur har lett till fler naturreservat i Östergötland.",
-      "agent_summary": "",
-      "source_fingerprint": "8e5ca64ec70321b00341",
-      "category": "Natur",
-      "source_tier_bonus": 5,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "skydda"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/7419fff6-d243-4d01-a198-1ebe750bf0f6.webp",
-        "alt": "Nya naturreservat i Östergötland",
-        "user_image_id": "7419fff6-d243-4d01-a198-1ebe750bf0f6",
-        "match_score": 0.2841,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/8ed42c02659f30eab357-8e5ca64e-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "8e5ca64ec70321b00341",
-        "width": 1280,
-        "height": 848,
-        "sha256": "0bf67fa42468e231393ef7f9c710843705f665afcf6c6cc5ac537888eceb547f"
       }
     },
     {
@@ -1566,7 +1558,7 @@
       "source_excerpt": "All Tenzo wanted was for someone to finally stop and help him. Dodo editor Brielle shares the moment rescuer Yassine realized he couldn’t leave freezing little Tenzo outside, especially after watching people repeatedly shut their doors on him. Once he was finally safe, his playful, ridiculously snuggly personality came out in full force.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/eg_o-1ghvr5sBdmoy/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/eg_o-1ghvr5sBdmoy/x720",
       "source_image_alt": "Freezing Kitten Tries To Get Inside Buildings",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xba9cce",
@@ -1658,7 +1650,7 @@
       "source_excerpt": "Nothing was the same without his best friend! Cooper is obsessed with his cat brother Winston, so when Winston suddenly disappeared one night, he was completely thrown. Dodo editor Valentina shares how Cooper spent the next four days anxiously looking for his best friend, and the reunion he’d been waiting for.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/ePGvQ1ggbz89o4-fp/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/ePGvQ1ggbz89o4-fp/x720",
       "source_image_alt": "Dog Waits Every Day For His Missing Friend",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xb7hpi2",
