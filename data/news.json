@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-23T14:43:43.857491Z",
+  "generated_at": "2026-09-24T00:15:53.395306Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "2c12a3a29aca56444a8b",
-    "9476f8aa9289067f58ee"
+    "05434c76e9e84d537da6",
+    "497876c691e34237a17d"
   ],
   "fetch_errors": [],
   "items": [
@@ -238,6 +238,43 @@
       }
     },
     {
+      "id": "05434c76e9e84d537da6",
+      "title": "Forte-film lyfter nya svenska satsningar på demensforskning",
+      "url": "https://nyheter.ki.se/forte-film-lyfter-nya-svenska-satsningar-pa-demensforskning",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-09-23T00:00:00Z",
+      "source_excerpt": "En ny video från Forte sätter fokus på två nyligen finansierade svenska forskningscentrum som ska stärka demensforskningen under det kommande decenniet. I filmen diskuterar föreståndarna för TraCeDem vid Karolinska Institutet och DEMSAM vid Göteborgs universitet utmaningarna med demenssjukdomar och behovet av forskning som stödjer människor i vardagen.",
+      "agent_summary": "",
+      "source_fingerprint": "065b25a2a7d9823b71f5",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 9,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "satsning"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/efb22cf6-5e7f-475d-9ed6-f6d0f7b940b6.webp",
+        "alt": "Forte-film lyfter nya svenska satsningar på demensforskning",
+        "user_image_id": "efb22cf6-5e7f-475d-9ed6-f6d0f7b940b6",
+        "match_score": 0.2582,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/05434c76e9e84d537da6-065b25a2-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "065b25a2a7d9823b71f5",
+        "width": 1280,
+        "height": 848,
+        "sha256": "e4489ecd7e04731bbde6b229d82ec8b436baf79c8a76a6cc5aaa1422722dfa25"
+      }
+    },
+    {
       "id": "95af818f13efd4ce9c01",
       "title": "Nature Medicine lyfter två av Karolinska Institutets AI-initiativ",
       "url": "https://nyheter.ki.se/nature-medicine-lyfter-tva-av-karolinska-institutets-ai-initiativ",
@@ -386,17 +423,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "71b23bb58a1cf5794c4ce0b2e0091d9160c1bfb88a0b3896cb3b359a30990392"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/2c12a3a29aca56444a8b-51275cdf390b4e84e051-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: Klimatfrukost #46: När efterfrågan och lösningar kan mötas för att halvera byggandets utsläpp",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "51275cdf390b4e84e051",
-        "width": 1280,
-        "height": 848,
-        "sha256": "36054a82ab9b41917b9558771d03f906fff77bc42362c9621931b17e1c851dba",
-        "generated_at": "2026-09-23T14:44:13Z"
       }
     },
     {
@@ -490,43 +516,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "0bbe029c22ef84e7d8630cf0e6a89a351a476809f87f4b87e8eca8d4d6e95f87"
-      }
-    },
-    {
-      "id": "02b744d47535bf83bd31",
-      "title": "CLINTEC Faculty Day samlade forskning, samverkan och framtidsfrågor",
-      "url": "https://nyheter.ki.se/clintec-faculty-day-samlade-forskning-samverkan-och-framtidsfragor-1",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-09-17T00:00:00Z",
-      "source_excerpt": "Den 14 september 2026 samlades institutionens postdoktorer, seniora forskare och lärare på Münchenbryggeriet för årets fakultetsdag. Genom föreläsningar, forskningspresentationer och diskussioner belystes aktuell medicinsk forskning samt framtida möjligheter inom samverkan, utbildning och innovation. Dagen inleddes av institutionens prefekt som välkomnade deltagarna och betonade vikten av fakultet",
-      "agent_summary": "",
-      "source_fingerprint": "66e67092a7590d458597",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 8,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "innovation"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/efb22cf6-5e7f-475d-9ed6-f6d0f7b940b6.webp",
-        "alt": "CLINTEC Faculty Day samlade forskning, samverkan och framtidsfrågor",
-        "user_image_id": "efb22cf6-5e7f-475d-9ed6-f6d0f7b940b6",
-        "match_score": 0.2582,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/02b744d47535bf83bd31-66e67092-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "66e67092a7590d458597",
-        "width": 1280,
-        "height": 848,
-        "sha256": "97c72dbbc9197e3175fe9d51e118531d466be88eca68e847a0650a98410a6c07"
       }
     },
     {
@@ -1557,35 +1546,6 @@
       }
     },
     {
-      "id": "d527588764b355660cc8",
-      "title": "This frog has been 'invisible' to the science community for over a century. Researchers are finally setting the record straight",
-      "url": "https://www.goodgoodgood.co/articles/new-species-discovery-milpe-robber-rain-frog",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-08-26T17:26:00Z",
-      "source_excerpt": "The adorable frog can be found across 16 million acres in the Chocó forests of Colombia.",
-      "agent_summary": "",
-      "source_fingerprint": "f3f836ae7f74abe4031d",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a8f20d458f26c75132def4f_6a8f20d35cf4a15ca0449699_new-species-discovery-milpe-robber-rain-frog-featured.webp",
-      "source_image_alt": "This frog has been 'invisible' to the science community for over a century. Researchers are finally setting the record straight",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/new-species-discovery-milpe-robber-rain-frog",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/new-species-discovery-milpe-robber-rain-frog",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 9,
-      "positive_signals": [
-        "curated-positive-source",
-        "adorable",
-        "community",
-        "research",
-        "science"
-      ],
-      "public_eligible": false
-    },
-    {
       "id": "7083e67f6e3d15f62307",
       "title": "Freezing Kitten Tries To Get Inside Buildings",
       "url": "https://www.dailymotion.com/video/xba9cce",
@@ -1709,6 +1669,34 @@
         "curated-positive-source",
         "best friend",
         "friend"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "497876c691e34237a17d",
+      "title": "Rescuers made a sea turtle a custom 3D-printed harness after it was struck by a boat and could no longer swim",
+      "url": "https://www.goodgoodgood.co/articles/sea-turtle-rescue-3d-printed-harness-cebu",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-09-23T17:01:00Z",
+      "source_excerpt": "Cebu’s care has also included acupuncture, physical therapy, and stem cell treatments.",
+      "agent_summary": "",
+      "source_fingerprint": "d45df26bf98960d3448e",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6ab40574f9e17210f2e964e5_6ab405736ffc506d2ce5e045_sea-turtle-rescue-3d-printed-harness-cebu-featured.webp",
+      "source_image_alt": "Rescuers made a sea turtle a custom 3D-printed harness after it was struck by a boat and could no longer swim",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/sea-turtle-rescue-3d-printed-harness-cebu",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/sea-turtle-rescue-3d-printed-harness-cebu",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "source_tier_bonus": 2,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "rescue",
+        "treat",
+        "treatment"
       ],
       "public_eligible": false
     }
