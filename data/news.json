@@ -1,10 +1,9 @@
 {
-  "generated_at": "2026-09-24T14:39:28.323206Z",
+  "generated_at": "2026-09-25T00:18:02.795328Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "863924f715d1b76785e1",
-    "eb682f3bae66912bdf7e"
+    "cec0908d3a0cb59c237e"
   ],
   "fetch_errors": [],
   "items": [
@@ -799,6 +798,34 @@
       }
     },
     {
+      "id": "cec0908d3a0cb59c237e",
+      "title": "Probiotika kopplas till färre dödsfall hos för tidigt födda",
+      "url": "https://forskning.se/2026/09/24/probiotika-kopplas-till-farre-dodsfall-hos-for-tidigt-fodda",
+      "source": "Forskning.se",
+      "language": "sv",
+      "published_at": "2026-09-24T17:32:59Z",
+      "source_excerpt": "Mycket för tidigt födda barn löper ökad risk att drabbas av nekrotiserande enterokolit (NEC), en allvarlig tarmsjukdom som kan vara livshotande. Sedan 2020 rekommenderar Svenska neonatalföreningen att barn som föds i graviditetsvecka 28–31 får probiotika varje dag. Probiotika innehåller levande bakterier som kan påverka tarmfloran. Lägre risk för tarmsjukdomen I en Registerforskning bygger på info",
+      "agent_summary": "",
+      "source_fingerprint": "18c5f062141319859a03",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/09/Bifidobacterium-lactis-1024x576.jpg",
+      "source_image_alt": "Probiotika kopplas till färre dödsfall hos för tidigt födda",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/09/24/probiotika-kopplas-till-farre-dodsfall-hos-for-tidigt-fodda",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/09/24/probiotika-kopplas-till-farre-dodsfall-hos-for-tidigt-fodda",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "lägre risk"
+      ],
+      "public_eligible": true
+    },
+    {
       "id": "eb682f3bae66912bdf7e",
       "title": "”Framtidens städer behöver byggas även under mark”",
       "url": "https://www.extrakt.se/framtidens-stader-behover-byggas-aven-under-mark",
@@ -1288,42 +1315,6 @@
       }
     },
     {
-      "id": "87bceb58985940cc7724",
-      "title": "Nytt ljus på svinnet i byggbranschen",
-      "url": "https://www.extrakt.se/nytt-ljus-pa-svinnet-i-byggbranschen",
-      "source": "Extrakt",
-      "language": "sv",
-      "published_at": "2026-08-21T10:08:57Z",
-      "source_excerpt": "Byggbranschen står för 40 procent av allt avfall i Sverige, liksom en betydande del av klimatutsläppen. En orsak är att stora mängder nytt byggmaterial slängs. I en ny satsning ska svinnet i byggbranschen kartläggas.",
-      "agent_summary": "",
-      "source_fingerprint": "ed2cf8618fdbc5df265e",
-      "category": "Miljö",
-      "source_tier_bonus": 5,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "satsning"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/875acd2e-97c1-4178-853f-484bf04ff226.webp",
-        "alt": "Nytt ljus på svinnet i byggbranschen",
-        "user_image_id": "875acd2e-97c1-4178-853f-484bf04ff226",
-        "match_score": 0.2709,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/87bceb58985940cc7724-ed2cf861-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "ed2cf8618fdbc5df265e",
-        "width": 1280,
-        "height": 848,
-        "sha256": "0f797f78745896be8844346a2210df76260c006274bdf95bd567e4b6f323f65e"
-      }
-    },
-    {
       "id": "56c225a54e232fce1fea",
       "title": "Woman Rescues A Cat She Found At A Car Dealership",
       "url": "https://www.dailymotion.com/video/xamxvli",
@@ -1558,7 +1549,7 @@
       "source_excerpt": "All Tenzo wanted was for someone to finally stop and help him. Dodo editor Brielle shares the moment rescuer Yassine realized he couldn’t leave freezing little Tenzo outside, especially after watching people repeatedly shut their doors on him. Once he was finally safe, his playful, ridiculously snuggly personality came out in full force.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/eg_o-1ghvr5sBdmoy/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/eg_o-1ghvr5sBdmoy/x720",
       "source_image_alt": "Freezing Kitten Tries To Get Inside Buildings",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xba9cce",
@@ -1650,7 +1641,7 @@
       "source_excerpt": "Nothing was the same without his best friend! Cooper is obsessed with his cat brother Winston, so when Winston suddenly disappeared one night, he was completely thrown. Dodo editor Valentina shares how Cooper spent the next four days anxiously looking for his best friend, and the reunion he’d been waiting for.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/ePGvQ1ggbz89o4-fp/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/ePGvQ1ggbz89o4-fp/x720",
       "source_image_alt": "Dog Waits Every Day For His Missing Friend",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xb7hpi2",
