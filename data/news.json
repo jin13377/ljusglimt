@@ -1,8 +1,11 @@
 {
-  "generated_at": "2026-09-25T15:01:06.860635Z",
+  "generated_at": "2026-09-26T00:23:32.523498Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "8e03554b88cf3ec15c92",
+    "b813d1a8f3f8b0b1b41c"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -1547,7 +1550,7 @@
       "source_excerpt": "All Tenzo wanted was for someone to finally stop and help him. Dodo editor Brielle shares the moment rescuer Yassine realized he couldn’t leave freezing little Tenzo outside, especially after watching people repeatedly shut their doors on him. Once he was finally safe, his playful, ridiculously snuggly personality came out in full force.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/eg_o-1ghvr5sBdmoy/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/eg_o-1ghvr5sBdmoy/x720",
       "source_image_alt": "Freezing Kitten Tries To Get Inside Buildings",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xba9cce",
@@ -1602,65 +1605,29 @@
       "public_eligible": false
     },
     {
-      "id": "ea5d76d9016bc34b3626",
-      "title": "An environmental restoration company rescued a kitten from an excavator. Now she's their newest 'coworker'",
-      "url": "https://www.goodgoodgood.co/articles/kitten-rescue-excavator-construction-crew",
+      "id": "8e03554b88cf3ec15c92",
+      "title": "After a baby elephant was caught in a poacher's snare, rescuers launched a lifesaving mission to free her",
+      "url": "https://www.goodgoodgood.co/articles/lamuu-baby-elephant-rescue-snare-poachers",
       "source": "Good Good Good",
       "language": "en",
-      "published_at": "2026-08-28T17:11:00Z",
-      "source_excerpt": "Sue was barely a week old when she tumbled into a construction excavator.",
+      "published_at": "2026-09-25T19:22:00Z",
+      "source_excerpt": "After a rope snare left her gravely wounded, a baby elephant vanished out of sight from the Kenya Wildlife Service.",
       "agent_summary": "",
-      "source_fingerprint": "f85943eae3aaa310f9f9",
+      "source_fingerprint": "8d350ab56c6cadcd2a0f",
       "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a91c088de28887e6bf39642_6a91c08631150a509ccd6674_kitten-rescue-excavator-construction-crew-featured.webp",
-      "source_image_alt": "An environmental restoration company rescued a kitten from an excavator. Now she's their newest 'coworker'",
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6ab6c863ccf184ac779e1f1a_6ab6c8612edfd99569f6456e_lamuu-baby-elephant-rescue-snare-poachers-featured-2.webp",
+      "source_image_alt": "After a baby elephant was caught in a poacher's snare, rescuers launched a lifesaving mission to free her",
       "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/kitten-rescue-excavator-construction-crew",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/lamuu-baby-elephant-rescue-snare-poachers",
       "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/kitten-rescue-excavator-construction-crew",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/lamuu-baby-elephant-rescue-snare-poachers",
       "source_image_verification_method": "rss-syndicated-thumbnail-v1",
       "source_tier_bonus": 2,
-      "positivity_score": 8,
+      "positivity_score": 6,
       "positive_signals": [
         "curated-positive-source",
-        "kitten",
-        "rescue",
-        "restoration"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "007e844582b384f6c716",
-      "title": "Dog Waits Every Day For His Missing Friend",
-      "url": "https://www.dailymotion.com/video/xb7hpi2",
-      "source": "The Dodo",
-      "language": "en",
-      "published_at": "2026-09-14T04:19:27Z",
-      "source_excerpt": "Nothing was the same without his best friend! Cooper is obsessed with his cat brother Winston, so when Winston suddenly disappeared one night, he was completely thrown. Dodo editor Valentina shares how Cooper spent the next four days anxiously looking for his best friend, and the reunion he’d been waiting for.",
-      "agent_summary": "",
-      "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/ePGvQ1ggbz89o4-fp/x720",
-      "source_image_alt": "Dog Waits Every Day For His Missing Friend",
-      "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xb7hpi2",
-      "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xb7hpi2",
-      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
-      "source_video": {
-        "provider": "dailymotion",
-        "video_id": "xb7hpi2",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xb7hpi2",
-        "source_url": "https://www.dailymotion.com/video/xb7hpi2",
-        "title": "Dog Waits Every Day For His Missing Friend"
-      },
-      "source_fingerprint": "0a2f7dad2bb623556b56",
-      "category": "Djur",
-      "source_tier_bonus": 4,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "best friend",
-        "friend"
+        "mission",
+        "rescue"
       ],
       "public_eligible": false
     },
@@ -1689,6 +1656,41 @@
         "rescue",
         "treat",
         "treatment"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "b813d1a8f3f8b0b1b41c",
+      "title": "Mama Fox Can’t Get Horlicks Jar Off Her Baby’s Head",
+      "url": "https://www.dailymotion.com/video/xba9t7i",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-09-19T17:49:47Z",
+      "source_excerpt": "Mama tried everything to help him! When his mom couldn’t free him, Wildlife Aid stepped in. Dodo editor Valentina Sanchez follows volunteer Mike as he rescues the tiny fox and gets him safely back to his mom.",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s1.dmcdn.net/v/eh58U1ghoPPr5YwxK/x720",
+      "source_image_alt": "Mama Fox Can’t Get Horlicks Jar Off Her Baby’s Head",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xba9t7i",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xba9t7i",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xba9t7i",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xba9t7i",
+        "source_url": "https://www.dailymotion.com/video/xba9t7i",
+        "title": "Mama Fox Can’t Get Horlicks Jar Off Her Baby’s Head"
+      },
+      "source_fingerprint": "8570d91a2c16666784a8",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "rescue",
+        "volunteer"
       ],
       "public_eligible": false
     }
