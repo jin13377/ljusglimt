@@ -1,10 +1,9 @@
 {
-  "generated_at": "2026-09-26T00:23:32.523498Z",
+  "generated_at": "2026-09-26T14:10:35.966879Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "8e03554b88cf3ec15c92",
-    "b813d1a8f3f8b0b1b41c"
+    "4b5d6e1e1ae799ea190b"
   ],
   "fetch_errors": [],
   "items": [
@@ -1541,6 +1540,42 @@
       }
     },
     {
+      "id": "4b5d6e1e1ae799ea190b",
+      "title": "Bougie Rescue Pigs Absolutely Hate Getting Muddy",
+      "url": "https://www.dailymotion.com/video/xbd79qm",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-09-26T04:18:34Z",
+      "source_excerpt": "Beds, couch-side treats and daily tuck-ins only. Lily and Patrick are rescue pigs who have fully embraced the good life, to the point that they even hate getting muddy. Dodo editor Brielle talked to Emma about their very particular preferences, their love of all things cozy and the sweet life they share with their dog siblings.",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s1.dmcdn.net/v/ezsOE1gjsBPMhfzRy/x720",
+      "source_image_alt": "Bougie Rescue Pigs Absolutely Hate Getting Muddy",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xbd79qm",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xbd79qm",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xbd79qm",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xbd79qm",
+        "source_url": "https://www.dailymotion.com/video/xbd79qm",
+        "title": "Bougie Rescue Pigs Absolutely Hate Getting Muddy"
+      },
+      "source_fingerprint": "3ab5fd399c3e6dc5818f",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "love",
+        "rescue",
+        "treat"
+      ],
+      "public_eligible": false
+    },
+    {
       "id": "7083e67f6e3d15f62307",
       "title": "Freezing Kitten Tries To Get Inside Buildings",
       "url": "https://www.dailymotion.com/video/xba9cce",
@@ -1656,41 +1691,6 @@
         "rescue",
         "treat",
         "treatment"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "b813d1a8f3f8b0b1b41c",
-      "title": "Mama Fox Can’t Get Horlicks Jar Off Her Baby’s Head",
-      "url": "https://www.dailymotion.com/video/xba9t7i",
-      "source": "The Dodo",
-      "language": "en",
-      "published_at": "2026-09-19T17:49:47Z",
-      "source_excerpt": "Mama tried everything to help him! When his mom couldn’t free him, Wildlife Aid stepped in. Dodo editor Valentina Sanchez follows volunteer Mike as he rescues the tiny fox and gets him safely back to his mom.",
-      "agent_summary": "",
-      "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/eh58U1ghoPPr5YwxK/x720",
-      "source_image_alt": "Mama Fox Can’t Get Horlicks Jar Off Her Baby’s Head",
-      "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xba9t7i",
-      "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xba9t7i",
-      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
-      "source_video": {
-        "provider": "dailymotion",
-        "video_id": "xba9t7i",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xba9t7i",
-        "source_url": "https://www.dailymotion.com/video/xba9t7i",
-        "title": "Mama Fox Can’t Get Horlicks Jar Off Her Baby’s Head"
-      },
-      "source_fingerprint": "8570d91a2c16666784a8",
-      "category": "Djur",
-      "source_tier_bonus": 4,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "rescue",
-        "volunteer"
       ],
       "public_eligible": false
     }
