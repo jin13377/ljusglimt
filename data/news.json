@@ -1,8 +1,10 @@
 {
-  "generated_at": "2026-09-27T00:17:56.492458Z",
+  "generated_at": "2026-09-27T15:00:00.647077Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "3412b82f5af36e357da3"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -1205,39 +1207,39 @@
       "public_eligible": true
     },
     {
-      "id": "c9d568dbcbaf3f7d6f80",
-      "title": "4 av 5 lantbrukare kan tänka sig burfri uppfödning",
-      "url": "https://www.natursidan.se/nyheter/4-av-5-lantbrukare-kan-tanka-sig-burfri-uppfodning",
+      "id": "3412b82f5af36e357da3",
+      "title": "Starkt stöd för att återställa natur",
+      "url": "https://www.natursidan.se/nyheter/starkt-stod-for-att-aterstalla-natur",
       "source": "Natursidan",
       "language": "sv",
-      "published_at": "2026-09-22T14:58:39Z",
-      "source_excerpt": "Det finns ett brett stöd bland lantbrukare att sluta med djuruppfödning i burar, om det samtidigt genomförs politiska beslut för att stötta en sådan omställning",
+      "published_at": "2026-09-27T05:13:36Z",
+      "source_excerpt": "En ny undersökning med 3 000 deltagare visar på starkt stöd för att skydda och återställa natur.",
       "agent_summary": "",
-      "source_fingerprint": "1c82e5fc6fa173f2936a",
+      "source_fingerprint": "7c4eb236b310e6851a62",
       "category": "Natur",
       "source_tier_bonus": 5,
       "positivity_score": 6,
       "positive_signals": [
         "curated-positive-source",
-        "omställning"
+        "skydda"
       ],
       "public_eligible": true,
       "user_image": {
         "url": "/news-images/user/fb601de5-40fb-41e6-ad59-02bed671c043.webp",
-        "alt": "4 av 5 lantbrukare kan tänka sig burfri uppfödning",
+        "alt": "Starkt stöd för att återställa natur",
         "user_image_id": "fb601de5-40fb-41e6-ad59-02bed671c043",
         "match_score": 0.2632,
         "width": 1280,
         "height": 848
       },
       "generated_image": {
-        "url": "/news-images/generated/c9d568dbcbaf3f7d6f80-1c82e5fc-v1.svg",
+        "url": "/news-images/generated/3412b82f5af36e357da3-7c4eb236-v1.svg",
         "alt": "Automatiskt skapad redaktionell illustration.",
         "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "1c82e5fc6fa173f2936a",
+        "source_fingerprint": "7c4eb236b310e6851a62",
         "width": 1280,
         "height": 848,
-        "sha256": "0045ef9402b5bd4c1ecdb559d86bda77487a5d7a3a813e7f66dda849dbcd2db1"
+        "sha256": "d88f75cd7bd4126dacd946e972546b2f2d0c3ea0d3dcdeeab4b16e7a31ce3d5b"
       }
     },
     {
@@ -1574,42 +1576,6 @@
       "public_eligible": false
     },
     {
-      "id": "7083e67f6e3d15f62307",
-      "title": "Freezing Kitten Tries To Get Inside Buildings",
-      "url": "https://www.dailymotion.com/video/xba9cce",
-      "source": "The Dodo",
-      "language": "en",
-      "published_at": "2026-09-19T17:18:48Z",
-      "source_excerpt": "All Tenzo wanted was for someone to finally stop and help him. Dodo editor Brielle shares the moment rescuer Yassine realized he couldn’t leave freezing little Tenzo outside, especially after watching people repeatedly shut their doors on him. Once he was finally safe, his playful, ridiculously snuggly personality came out in full force.",
-      "agent_summary": "",
-      "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/eg_o-1ghvr5sBdmoy/x720",
-      "source_image_alt": "Freezing Kitten Tries To Get Inside Buildings",
-      "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xba9cce",
-      "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xba9cce",
-      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
-      "source_video": {
-        "provider": "dailymotion",
-        "video_id": "xba9cce",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xba9cce",
-        "source_url": "https://www.dailymotion.com/video/xba9cce",
-        "title": "Freezing Kitten Tries To Get Inside Buildings"
-      },
-      "source_fingerprint": "005fb5fd248130060adc",
-      "category": "Djur",
-      "source_tier_bonus": 4,
-      "positivity_score": 8,
-      "positive_signals": [
-        "curated-positive-source",
-        "kitten",
-        "play",
-        "rescue"
-      ],
-      "public_eligible": false
-    },
-    {
       "id": "e0c2ab101693d604de71",
       "title": "Researchers bid farewell to rescued sea turtle after 200-day recovery: 'We were all bawling on the boat afterwards'",
       "url": "https://www.goodgoodgood.co/articles/rare-sea-turtle-crush-release",
@@ -1689,6 +1655,41 @@
         "rescue",
         "treat",
         "treatment"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "b813d1a8f3f8b0b1b41c",
+      "title": "Mama Fox Can’t Get Horlicks Jar Off Her Baby’s Head",
+      "url": "https://www.dailymotion.com/video/xba9t7i",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-09-19T17:49:47Z",
+      "source_excerpt": "Mama tried everything to help him! When his mom couldn’t free him, Wildlife Aid stepped in. Dodo editor Valentina Sanchez follows volunteer Mike as he rescues the tiny fox and gets him safely back to his mom.",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s1.dmcdn.net/v/eh58U1ghoPPr5YwxK/x720",
+      "source_image_alt": "Mama Fox Can’t Get Horlicks Jar Off Her Baby’s Head",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xba9t7i",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xba9t7i",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xba9t7i",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xba9t7i",
+        "source_url": "https://www.dailymotion.com/video/xba9t7i",
+        "title": "Mama Fox Can’t Get Horlicks Jar Off Her Baby’s Head"
+      },
+      "source_fingerprint": "8570d91a2c16666784a8",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "rescue",
+        "volunteer"
       ],
       "public_eligible": false
     }
