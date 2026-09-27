@@ -1240,6 +1240,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "d88f75cd7bd4126dacd946e972546b2f2d0c3ea0d3dcdeeab4b16e7a31ce3d5b"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/3412b82f5af36e357da3-7c4eb236b310e6851a62-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Starkt stöd för att återställa natur",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "7c4eb236b310e6851a62",
+        "width": 1280,
+        "height": 848,
+        "sha256": "81ac267ebff79ce87266f696180e3042808c27c514a7a451774ba8461a7ca9c0",
+        "generated_at": "2026-09-27T15:00:24Z"
       }
     },
     {
