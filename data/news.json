@@ -837,6 +837,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "dbb70a1b542063f8345c62c54bdb2bbf1cce2c4ebaf65959263f4c81ca04ce16"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/d731840af02f84e5a6f1-f1be3d1f4b4ae57c5c93-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Klimat, säkerhet och beredskap",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "f1be3d1f4b4ae57c5c93",
+        "width": 1280,
+        "height": 848,
+        "sha256": "505272ba12654d4f26e81474a9f9af6b8859f778e9da5fab3944628ef2412df7",
+        "generated_at": "2026-09-28T00:19:33Z"
       }
     },
     {
