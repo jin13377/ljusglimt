@@ -1,11 +1,16 @@
 {
-  "generated_at": "2026-09-27T15:00:00.647077Z",
+  "generated_at": "2026-09-28T00:19:04.475102Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "3412b82f5af36e357da3"
+    "d731840af02f84e5a6f1"
   ],
-  "fetch_errors": [],
+  "fetch_errors": [
+    {
+      "source": "Mötesplats Social Innovation",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
   "items": [
     {
       "id": "3fe2e7d37ce31017f6dd",
@@ -798,6 +803,43 @@
       }
     },
     {
+      "id": "d731840af02f84e5a6f1",
+      "title": "Klimat, säkerhet och beredskap",
+      "url": "https://viablecities.se/klimat-sakerhet-och-beredskap",
+      "source": "Viable Cities",
+      "language": "sv",
+      "published_at": "2026-09-25T14:52:41Z",
+      "source_excerpt": "Att samordna klimatomställning, klimatanpassning, säkerhet och beredskap är inte bara fördelaktigt – det är en ren nödvändighet. Genom att integrera dessa områden kan städer minska den sammantagna riskexponeringen, skydda kritisk infrastruktur och generera betydande kostnadsbesparingar. I samband med nationella beredskapsveckan publicerar nu Viable Cities en utblick om ämnet. Inlägget Klimat, säke",
+      "agent_summary": "",
+      "source_fingerprint": "f1be3d1f4b4ae57c5c93",
+      "category": "Samhälle",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "omställning",
+        "skydda"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/875acd2e-97c1-4178-853f-484bf04ff226.webp",
+        "alt": "Klimat, säkerhet och beredskap",
+        "user_image_id": "875acd2e-97c1-4178-853f-484bf04ff226",
+        "match_score": 0.2654,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/d731840af02f84e5a6f1-f1be3d1f-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "f1be3d1f4b4ae57c5c93",
+        "width": 1280,
+        "height": 848,
+        "sha256": "dbb70a1b542063f8345c62c54bdb2bbf1cce2c4ebaf65959263f4c81ca04ce16"
+      }
+    },
+    {
       "id": "cec0908d3a0cb59c237e",
       "title": "Probiotika kopplas till färre dödsfall hos för tidigt födda",
       "url": "https://forskning.se/2026/09/24/probiotika-kopplas-till-farre-dodsfall-hos-for-tidigt-fodda",
@@ -1240,17 +1282,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "d88f75cd7bd4126dacd946e972546b2f2d0c3ea0d3dcdeeab4b16e7a31ce3d5b"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/3412b82f5af36e357da3-7c4eb236b310e6851a62-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: Starkt stöd för att återställa natur",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "7c4eb236b310e6851a62",
-        "width": 1280,
-        "height": 848,
-        "sha256": "81ac267ebff79ce87266f696180e3042808c27c514a7a451774ba8461a7ca9c0",
-        "generated_at": "2026-09-27T15:00:24Z"
       }
     },
     {
@@ -1287,42 +1318,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "8b25b54d7a9f79e75c3f91572826a8733dc5c532b3213760f5d127b72b20f9a4"
-      }
-    },
-    {
-      "id": "8212c6f20904a943c6d1",
-      "title": "Att skörda vass kan ge dubbla vinster",
-      "url": "https://www.extrakt.se/att-skorda-vass-kan-ge-dubbla-vinster",
-      "source": "Extrakt",
-      "language": "sv",
-      "published_at": "2026-08-25T10:48:03Z",
-      "source_excerpt": "Skörd av vass längs Östersjöns kust kan gynna både hav och lantbruk. Metoden kan förbättra den biologiska mångfalden och skapa ett hållbart alternativ till traditionellt djurfoder.",
-      "agent_summary": "",
-      "source_fingerprint": "fb671124a310e88f3025",
-      "category": "Miljö",
-      "source_tier_bonus": 5,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "hållbar"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/290629d1-eec3-4f31-9644-49e96e973112-1.webp",
-        "alt": "Att skörda vass kan ge dubbla vinster",
-        "user_image_id": "290629d1-eec3-4f31-9644-49e96e973112-1",
-        "match_score": 0.2636,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/8212c6f20904a943c6d1-fb671124-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "fb671124a310e88f3025",
-        "width": 1280,
-        "height": 848,
-        "sha256": "77b18b8166d6d38173d53d09136060c6e9edb0a3f45e1f85b3117c56666c64d2"
       }
     },
     {
@@ -1560,7 +1555,7 @@
       "source_excerpt": "Beds, couch-side treats and daily tuck-ins only. Lily and Patrick are rescue pigs who have fully embraced the good life, to the point that they even hate getting muddy. Dodo editor Brielle talked to Emma about their very particular preferences, their love of all things cozy and the sweet life they share with their dog siblings.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/ezsOE1gj_C2FZNJ9H/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/ezsOE1gj_C2FZNJ9H/x720",
       "source_image_alt": "Bougie Rescue Pigs Absolutely Hate Getting Muddy",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbd79qm",
