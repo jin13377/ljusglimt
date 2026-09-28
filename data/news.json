@@ -1,16 +1,14 @@
 {
-  "generated_at": "2026-09-28T00:19:04.475102Z",
+  "generated_at": "2026-09-28T17:58:32.591837Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "d731840af02f84e5a6f1"
+    "7ca57fe6ab6b08eb74b1",
+    "72a635baaefada4fad00",
+    "02a53064a05365897898",
+    "a728093edcf2f9b1d793"
   ],
-  "fetch_errors": [
-    {
-      "source": "Mötesplats Social Innovation",
-      "error": "HTTP Error 403: Forbidden"
-    }
-  ],
+  "fetch_errors": [],
   "items": [
     {
       "id": "3fe2e7d37ce31017f6dd",
@@ -239,6 +237,44 @@
         "match_score": 0.1947,
         "width": 1280,
         "height": 848
+      }
+    },
+    {
+      "id": "7ca57fe6ab6b08eb74b1",
+      "title": "Ny molekyl skyddade mot akut leversvikt i studie",
+      "url": "https://nyheter.ki.se/ny-molekyl-skyddade-mot-akut-leversvikt-i-studie",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-09-28T00:00:00Z",
+      "source_excerpt": "Forskare vid Karolinska Institutet har utvecklat en molekyl som stärker cellernas förmåga att reparera oxidativa DNA-skador. I musmodeller av akut leversvikt minskade molekylen leverskadorna och förbättrade överlevnaden, medan odlade humana leverceller blev mer motståndskraftiga mot skador efter exponering för paracetamol. Resultaten publiceras i tidskriften Advanced Science.",
+      "agent_summary": "",
+      "source_fingerprint": "bd0083b913f49869edc6",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 9,
+      "positive_signals": [
+        "curated-positive-source",
+        "science",
+        "skydda",
+        "stärker"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/85548527-df08-4140-9c8b-92075a6971a9.webp",
+        "alt": "Ny molekyl skyddade mot akut leversvikt i studie",
+        "user_image_id": "85548527-df08-4140-9c8b-92075a6971a9",
+        "match_score": 0.2524,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/7ca57fe6ab6b08eb74b1-bd0083b9-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "bd0083b913f49869edc6",
+        "width": 1280,
+        "height": 848,
+        "sha256": "40337b300747efe0d04ec94f561a32daf2bcf973e40b6f43ea1cec822f3d3687"
       }
     },
     {
@@ -524,43 +560,6 @@
       "public_eligible": true
     },
     {
-      "id": "2803a51c395f47f021ad",
-      "title": "Han breddar sin traumaforskning med stöd från forskar-AT",
-      "url": "https://nyheter.ki.se/han-breddar-sin-traumaforskning-med-stod-fran-forskar-at-0",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-09-18T00:00:00Z",
-      "source_excerpt": "Med tolv månaders finansierad forskningstid får Oscar Lapidus möjlighet att bredda sin traumaforskning och ta nästa steg mot en mer självständig forskarroll. Han är en av nio doktorander som beviljats stöd i vårens utlysning av forskar-AT.",
-      "agent_summary": "",
-      "source_fingerprint": "1dd6c7762eb4263d3b8b",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 8,
-      "positive_signals": [
-        "curated-positive-source",
-        "beviljats",
-        "forskning"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/85548527-df08-4140-9c8b-92075a6971a9.webp",
-        "alt": "Han breddar sin traumaforskning med stöd från forskar-AT",
-        "user_image_id": "85548527-df08-4140-9c8b-92075a6971a9",
-        "match_score": 0.2524,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/2803a51c395f47f021ad-1dd6c776-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "1dd6c7762eb4263d3b8b",
-        "width": 1280,
-        "height": 848,
-        "sha256": "0bbe029c22ef84e7d8630cf0e6a89a351a476809f87f4b87e8eca8d4d6e95f87"
-      }
-    },
-    {
       "id": "fd5961abce3292280c5f",
       "title": "MSI startar ny publikationsserie om social innovation",
       "url": "https://socialinnovation.se/nyheter/msi-startar-ny-publikationsserie-om-social-innovation",
@@ -837,17 +836,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "dbb70a1b542063f8345c62c54bdb2bbf1cce2c4ebaf65959263f4c81ca04ce16"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/d731840af02f84e5a6f1-f1be3d1f4b4ae57c5c93-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: Klimat, säkerhet och beredskap",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "f1be3d1f4b4ae57c5c93",
-        "width": 1280,
-        "height": 848,
-        "sha256": "505272ba12654d4f26e81474a9f9af6b8859f778e9da5fab3944628ef2412df7",
-        "generated_at": "2026-09-28T00:19:33Z"
       }
     },
     {
@@ -1260,6 +1248,33 @@
       "public_eligible": true
     },
     {
+      "id": "72a635baaefada4fad00",
+      "title": "Ståuppkomiker vill provocera – men inte tappa publikens förtroende",
+      "url": "https://forskning.se/2026/09/28/stauppkomik-skamt-granser",
+      "source": "Forskning.se",
+      "language": "sv",
+      "published_at": "2026-09-28T07:20:04Z",
+      "source_excerpt": "Vad är roligt? Vad krävs för att nå framgång? Och vad är ståuppkomikerns roll och uppgift i samhället? Allt detta undersöks i en ny Vetenskapligt arbete som doktorander gör under sin utbildning för att bli doktor.&lt;br/&gt;Avhandlingen visar doktorandens egen ... Läs mer \" href=\"https://forskning.se/ordlista/avhandling/\" data-mobile-support=\"0\" data-gt-translate-attributes='[{\"attribute\":\"data-cm",
+      "agent_summary": "",
+      "source_fingerprint": "4c5acb22cd5bb0175aee",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/09/stauppkomiker-1024x576.jpg",
+      "source_image_alt": "Ståuppkomiker vill provocera – men inte tappa publikens förtroende",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/09/28/stauppkomik-skamt-granser",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/09/28/stauppkomik-skamt-granser",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning"
+      ],
+      "public_eligible": true
+    },
+    {
       "id": "3412b82f5af36e357da3",
       "title": "Starkt stöd för att återställa natur",
       "url": "https://www.natursidan.se/nyheter/starkt-stod-for-att-aterstalla-natur",
@@ -1293,42 +1308,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "d88f75cd7bd4126dacd946e972546b2f2d0c3ea0d3dcdeeab4b16e7a31ce3d5b"
-      }
-    },
-    {
-      "id": "29aeca6225334b64820b",
-      "title": "Låt servicen komma till landsbygden",
-      "url": "https://www.extrakt.se/lat-servicen-komma-till-landsbygden",
-      "source": "Extrakt",
-      "language": "sv",
-      "published_at": "2026-09-15T14:19:14Z",
-      "source_excerpt": "För många landsbygdsbor har avståndet ökat till mataffären, vården och annan service. I en ny rapport pekar forskare på lösningar som gör att olika verksamheter blir mer tillgängliga, så att behovet av resor minskar.",
-      "agent_summary": "",
-      "source_fingerprint": "c5e183d06b923e2c4a07",
-      "category": "Miljö",
-      "source_tier_bonus": 5,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "lösning"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/868bab25-bbad-423f-871d-cba0ddc6a2f3.webp",
-        "alt": "Låt servicen komma till landsbygden",
-        "user_image_id": "868bab25-bbad-423f-871d-cba0ddc6a2f3",
-        "match_score": 0.2523,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/29aeca6225334b64820b-c5e183d0-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "c5e183d06b923e2c4a07",
-        "width": 1280,
-        "height": 848,
-        "sha256": "8b25b54d7a9f79e75c3f91572826a8733dc5c532b3213760f5d127b72b20f9a4"
       }
     },
     {
@@ -1566,7 +1545,7 @@
       "source_excerpt": "Beds, couch-side treats and daily tuck-ins only. Lily and Patrick are rescue pigs who have fully embraced the good life, to the point that they even hate getting muddy. Dodo editor Brielle talked to Emma about their very particular preferences, their love of all things cozy and the sweet life they share with their dog siblings.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/ezsOE1gj_C2FZNJ9H/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/ezsOE1gj_C2FZNJ9H/x720",
       "source_image_alt": "Bougie Rescue Pigs Absolutely Hate Getting Muddy",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbd79qm",
@@ -1621,6 +1600,64 @@
       "public_eligible": false
     },
     {
+      "id": "02a53064a05365897898",
+      "title": "Days-old hippo 'Bumpy' given second chance at wildlife sanctuary: 'He sleeps most soundly when cuddled'",
+      "url": "https://www.goodgoodgood.co/articles/bumpy-baby-hippo-rescue-orphaned",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-09-28T17:58:00Z",
+      "source_excerpt": "Bumpy the hippo was spared from a deadly encounter by his mother. Now he has a new adopted family that includes rescued buffalos, elephants, and more.",
+      "agent_summary": "",
+      "source_fingerprint": "d4f17254bce204e14246",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6abaa9c460f01fe16ba2ada7_6abaa9c2d563e627c8c8114e_bumpy-baby-hippo-rescue-orphaned-featured.webp",
+      "source_image_alt": "Days-old hippo 'Bumpy' given second chance at wildlife sanctuary: 'He sleeps most soundly when cuddled'",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/bumpy-baby-hippo-rescue-orphaned",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/bumpy-baby-hippo-rescue-orphaned",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "source_tier_bonus": 2,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "adopted",
+        "cuddle",
+        "rescue"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "a728093edcf2f9b1d793",
+      "title": "NASA ORBIT Challenge 2027",
+      "url": "https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/center-of-excellence-for-collaborative-innovation-coeci/nasa-orbit-challenge-2027",
+      "source": "NASA News Releases",
+      "language": "en",
+      "published_at": "2026-09-28T14:56:39Z",
+      "source_excerpt": "The NASA ORBIT (Opportunities in Research, Business, Innovation, and Technology for the Workforce) Challenge invites university and community college students nationwide to work with real NASA intellectual property and mission challenges. Choose your path: develop commercial applications of NASA patents that solve problems here on Earth (ORBIT Earth), or design next-generation technologies for spa",
+      "agent_summary": "",
+      "source_fingerprint": "01764102f3c2e9807870",
+      "source_tier_bonus": 1,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "community",
+        "innovation",
+        "mission",
+        "research",
+        "technology"
+      ],
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/868bab25-bbad-423f-871d-cba0ddc6a2f3.webp",
+        "alt": "NASA ORBIT Challenge 2027",
+        "user_image_id": "868bab25-bbad-423f-871d-cba0ddc6a2f3",
+        "match_score": 0.253,
+        "width": 1280,
+        "height": 848
+      }
+    },
+    {
       "id": "8e03554b88cf3ec15c92",
       "title": "After a baby elephant was caught in a poacher's snare, rescuers launched a lifesaving mission to free her",
       "url": "https://www.goodgoodgood.co/articles/lamuu-baby-elephant-rescue-snare-poachers",
@@ -1644,69 +1681,6 @@
         "curated-positive-source",
         "mission",
         "rescue"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "497876c691e34237a17d",
-      "title": "Rescuers made a sea turtle a custom 3D-printed harness after it was struck by a boat and could no longer swim",
-      "url": "https://www.goodgoodgood.co/articles/sea-turtle-rescue-3d-printed-harness-cebu",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-09-23T17:01:00Z",
-      "source_excerpt": "Cebu’s care has also included acupuncture, physical therapy, and stem cell treatments.",
-      "agent_summary": "",
-      "source_fingerprint": "d45df26bf98960d3448e",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6ab40574f9e17210f2e964e5_6ab405736ffc506d2ce5e045_sea-turtle-rescue-3d-printed-harness-cebu-featured.webp",
-      "source_image_alt": "Rescuers made a sea turtle a custom 3D-printed harness after it was struck by a boat and could no longer swim",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/sea-turtle-rescue-3d-printed-harness-cebu",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/sea-turtle-rescue-3d-printed-harness-cebu",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "rescue",
-        "treat",
-        "treatment"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "b813d1a8f3f8b0b1b41c",
-      "title": "Mama Fox Can’t Get Horlicks Jar Off Her Baby’s Head",
-      "url": "https://www.dailymotion.com/video/xba9t7i",
-      "source": "The Dodo",
-      "language": "en",
-      "published_at": "2026-09-19T17:49:47Z",
-      "source_excerpt": "Mama tried everything to help him! When his mom couldn’t free him, Wildlife Aid stepped in. Dodo editor Valentina Sanchez follows volunteer Mike as he rescues the tiny fox and gets him safely back to his mom.",
-      "agent_summary": "",
-      "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/eh58U1ghoPPr5YwxK/x720",
-      "source_image_alt": "Mama Fox Can’t Get Horlicks Jar Off Her Baby’s Head",
-      "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xba9t7i",
-      "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xba9t7i",
-      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
-      "source_video": {
-        "provider": "dailymotion",
-        "video_id": "xba9t7i",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xba9t7i",
-        "source_url": "https://www.dailymotion.com/video/xba9t7i",
-        "title": "Mama Fox Can’t Get Horlicks Jar Off Her Baby’s Head"
-      },
-      "source_fingerprint": "8570d91a2c16666784a8",
-      "category": "Djur",
-      "source_tier_bonus": 4,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "rescue",
-        "volunteer"
       ],
       "public_eligible": false
     }
