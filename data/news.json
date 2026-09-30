@@ -1,9 +1,12 @@
 {
-  "generated_at": "2026-09-29T16:21:08.666382Z",
+  "generated_at": "2026-09-30T01:07:07.968595Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "7f374efc7f369b06c29d"
+    "b2586e96ccc7679a74f5",
+    "06be225fe6e43408aac4",
+    "ed322f083f46b1fdc8ac",
+    "d7fa3d6d49f383c998f8"
   ],
   "fetch_errors": [],
   "items": [
@@ -197,44 +200,6 @@
       ],
       "display_title_sv": "Överraskningen med fosterkattungar gav pojkvännen bästa reaktionen",
       "public_eligible": true
-    },
-    {
-      "id": "24b88eddb5c3131c3d69",
-      "title": "Hopp om att skydda och återställa fertiliteten hos personer som överlevt barncancer",
-      "url": "https://nyheter.ki.se/hopp-om-att-skydda-och-aterstalla-fertiliteten-hos-personer-som-overlevt-barncancer",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-07-02T00:00:00Z",
-      "source_excerpt": "Forskare vid Karolinska Institutet har visat att det är möjligt att skapa tidiga könsceller från bevarad testikelvävnad från unga pojkar som står inför cancerbehandling. Studien, som publicerats i tidskriften Human Reproduction Open, kan på sikt bidra till nya sätt att skydda och återställa fertiliteten efter barncancer.",
-      "agent_summary": "",
-      "source_fingerprint": "85e7e46112e29a92a38e",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 10,
-      "positive_signals": [
-        "curated-positive-source",
-        "bevara",
-        "hopp",
-        "skydda"
-      ],
-      "public_eligible": true,
-      "generated_image": {
-        "url": "/news-images/generated/24b88eddb5c3131c3d69-85e7e461-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "85e7e46112e29a92a38e",
-        "width": 1280,
-        "height": 848,
-        "sha256": "ec7e64f095f6f42d68d3129f8ebcd819db7d11896aea9c8708a651a53369a6fa"
-      },
-      "user_image": {
-        "url": "/news-images/user/b137f4a8-9cbd-412a-a30d-3d0c32ef08ad.webp",
-        "alt": "Hopp om att skydda och återställa fertiliteten hos personer som överlevt barncancer",
-        "user_image_id": "b137f4a8-9cbd-412a-a30d-3d0c32ef08ad",
-        "match_score": 0.1947,
-        "width": 1280,
-        "height": 848
-      }
     },
     {
       "id": "7ca57fe6ab6b08eb74b1",
@@ -1273,6 +1238,42 @@
       "public_eligible": true
     },
     {
+      "id": "b2586e96ccc7679a74f5",
+      "title": "Postermingel samlade doktorander över klinikgränserna på KI DS",
+      "url": "https://nyheter.ki.se/postermingel-samlade-doktorander-over-klinikgranserna-pa-ki-ds",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-09-28T00:00:00Z",
+      "source_excerpt": "För att stärka kontakterna mellan doktorander och skapa fler möjligheter till forskningsutbyte anordnade institutionen för kliniska vetenskaper, Danderyds sjukhus (KI DS), ett postermingel den 8 september. Under dagen presenterade doktorander sin forskning för varandra och deltog i utlottningen av tre priser på 20 000 kronor vardera.",
+      "agent_summary": "",
+      "source_fingerprint": "60ae84e47af108a59a63",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/0f5ccfaa-edae-4005-b1c3-08ba4dabda69.webp",
+        "alt": "Postermingel samlade doktorander över klinikgränserna på KI DS",
+        "user_image_id": "0f5ccfaa-edae-4005-b1c3-08ba4dabda69",
+        "match_score": 0.2523,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/b2586e96ccc7679a74f5-60ae84e4-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "60ae84e47af108a59a63",
+        "width": 1280,
+        "height": 848,
+        "sha256": "87b032841ff7ffb84fa858fa4c4c9e3f22a8fa8a726dcebc235b779b3045fc46"
+      }
+    },
+    {
       "id": "3412b82f5af36e357da3",
       "title": "Starkt stöd för att återställa natur",
       "url": "https://www.natursidan.se/nyheter/starkt-stod-for-att-aterstalla-natur",
@@ -1543,7 +1544,7 @@
       "source_excerpt": "Beds, couch-side treats and daily tuck-ins only. Lily and Patrick are rescue pigs who have fully embraced the good life, to the point that they even hate getting muddy. Dodo editor Brielle talked to Emma about their very particular preferences, their love of all things cozy and the sweet life they share with their dog siblings.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/ezsOE1gj_C2FZNJ9H/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/ezsOE1gj_C2FZNJ9H/x720",
       "source_image_alt": "Bougie Rescue Pigs Absolutely Hate Getting Muddy",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbd79qm",
@@ -1598,85 +1599,90 @@
       "public_eligible": false
     },
     {
-      "id": "02a53064a05365897898",
-      "title": "Days-old hippo 'Bumpy' given second chance at wildlife sanctuary: 'He sleeps most soundly when cuddled'",
-      "url": "https://www.goodgoodgood.co/articles/bumpy-baby-hippo-rescue-orphaned",
+      "id": "06be225fe6e43408aac4",
+      "title": "Kangaroo Trapped In Parking Garage Until Rescuers Help",
+      "url": "https://www.dailymotion.com/video/xbexxg6",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-09-30T01:03:53Z",
+      "source_excerpt": "Getting him back outside took hours. A kangaroo somehow ended up trapped inside a parking garage with no way to find his way back out. Dodo editor Brielle shares how rescuers from Vets For Compassion spent hours carefully guiding him through the garage until they could finally get him safely back outside.",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s1.dmcdn.net/v/f906M1gl60wWGDywv/x720",
+      "source_image_alt": "Kangaroo Trapped In Parking Garage Until Rescuers Help",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xbexxg6",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xbexxg6",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xbexxg6",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xbexxg6",
+        "source_url": "https://www.dailymotion.com/video/xbexxg6",
+        "title": "Kangaroo Trapped In Parking Garage Until Rescuers Help"
+      },
+      "source_fingerprint": "87237de41fdb6a250479",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "rescue"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "ed322f083f46b1fdc8ac",
+      "title": "A male elephant 'adopted' a calf and kept her alive long enough for rangers to rescue her",
+      "url": "https://www.goodgoodgood.co/articles/baby-elephant-talek-rescue-kenya",
       "source": "Good Good Good",
       "language": "en",
-      "published_at": "2026-09-28T17:58:00Z",
-      "source_excerpt": "Bumpy the hippo was spared from a deadly encounter by his mother. Now he has a new adopted family that includes rescued buffalos, elephants, and more.",
+      "published_at": "2026-09-29T19:44:00Z",
+      "source_excerpt": "A 7-month-old elephant was found trailing behind a bull for protection, but he couldn’t provide her with the milk she needed to survive.",
       "agent_summary": "",
-      "source_fingerprint": "d4f17254bce204e14246",
+      "source_fingerprint": "63a13d3af2f6c11ae33c",
       "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6abaa9c460f01fe16ba2ada7_6abaa9c2d563e627c8c8114e_bumpy-baby-hippo-rescue-orphaned-featured.webp",
-      "source_image_alt": "Days-old hippo 'Bumpy' given second chance at wildlife sanctuary: 'He sleeps most soundly when cuddled'",
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6abc14af21c94a14ed3075a8_6abc14ae5dd5af5183aaaa2b_baby-elephant-talek-rescue-kenya-featured.webp",
+      "source_image_alt": "A male elephant 'adopted' a calf and kept her alive long enough for rangers to rescue her",
       "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/bumpy-baby-hippo-rescue-orphaned",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/baby-elephant-talek-rescue-kenya",
       "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/bumpy-baby-hippo-rescue-orphaned",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/baby-elephant-talek-rescue-kenya",
       "source_image_verification_method": "rss-syndicated-thumbnail-v1",
       "source_tier_bonus": 2,
       "positivity_score": 6,
       "positive_signals": [
         "curated-positive-source",
         "adopted",
-        "cuddle",
         "rescue"
       ],
       "public_eligible": false
     },
     {
-      "id": "8e03554b88cf3ec15c92",
-      "title": "After a baby elephant was caught in a poacher's snare, rescuers launched a lifesaving mission to free her",
-      "url": "https://www.goodgoodgood.co/articles/lamuu-baby-elephant-rescue-snare-poachers",
+      "id": "d7fa3d6d49f383c998f8",
+      "title": "This herd of rescue elephants 'adopted' a new little brother: 'He will never be alone again'",
+      "url": "https://www.goodgoodgood.co/articles/baby-elephant-daba-rescued-orphaned",
       "source": "Good Good Good",
       "language": "en",
-      "published_at": "2026-09-25T19:22:00Z",
-      "source_excerpt": "After a rope snare left her gravely wounded, a baby elephant vanished out of sight from the Kenya Wildlife Service.",
+      "published_at": "2026-09-29T17:17:00Z",
+      "source_excerpt": "Daba has earned a reputation as a shy — but cheeky — elephant who has adapted quickly to his found family.",
       "agent_summary": "",
-      "source_fingerprint": "8d350ab56c6cadcd2a0f",
+      "source_fingerprint": "ffaf96b7bd03bf61d19e",
       "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6ab6c863ccf184ac779e1f1a_6ab6c8612edfd99569f6456e_lamuu-baby-elephant-rescue-snare-poachers-featured-2.webp",
-      "source_image_alt": "After a baby elephant was caught in a poacher's snare, rescuers launched a lifesaving mission to free her",
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6abbf243612d4c02ed5c2b86_6abbf2425219f8eed4958391_baby-elephant-daba-rescued-orphaned-featured.webp",
+      "source_image_alt": "This herd of rescue elephants 'adopted' a new little brother: 'He will never be alone again'",
       "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/lamuu-baby-elephant-rescue-snare-poachers",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/baby-elephant-daba-rescued-orphaned",
       "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/lamuu-baby-elephant-rescue-snare-poachers",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/baby-elephant-daba-rescued-orphaned",
       "source_image_verification_method": "rss-syndicated-thumbnail-v1",
       "source_tier_bonus": 2,
       "positivity_score": 6,
       "positive_signals": [
         "curated-positive-source",
-        "mission",
+        "adopted",
         "rescue"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "497876c691e34237a17d",
-      "title": "Rescuers made a sea turtle a custom 3D-printed harness after it was struck by a boat and could no longer swim",
-      "url": "https://www.goodgoodgood.co/articles/sea-turtle-rescue-3d-printed-harness-cebu",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-09-23T17:01:00Z",
-      "source_excerpt": "Cebu’s care has also included acupuncture, physical therapy, and stem cell treatments.",
-      "agent_summary": "",
-      "source_fingerprint": "d45df26bf98960d3448e",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6ab40574f9e17210f2e964e5_6ab405736ffc506d2ce5e045_sea-turtle-rescue-3d-printed-harness-cebu-featured.webp",
-      "source_image_alt": "Rescuers made a sea turtle a custom 3D-printed harness after it was struck by a boat and could no longer swim",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/sea-turtle-rescue-3d-printed-harness-cebu",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/sea-turtle-rescue-3d-printed-harness-cebu",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "rescue",
-        "treat",
-        "treatment"
       ],
       "public_eligible": false
     }
