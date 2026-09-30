@@ -1,12 +1,9 @@
 {
-  "generated_at": "2026-09-30T01:07:07.968595Z",
+  "generated_at": "2026-09-30T16:16:47.876038Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "b2586e96ccc7679a74f5",
-    "06be225fe6e43408aac4",
-    "ed322f083f46b1fdc8ac",
-    "d7fa3d6d49f383c998f8"
+    "d203e15532870d5797b2"
   ],
   "fetch_errors": [],
   "items": [
@@ -1211,6 +1208,42 @@
       "public_eligible": true
     },
     {
+      "id": "d203e15532870d5797b2",
+      "title": "Diabetesforskare tog emot Rolf Luft Award",
+      "url": "https://nyheter.ki.se/diabetesforskare-tog-emot-rolf-luft-award",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-09-30T00:00:00Z",
+      "source_excerpt": "Mångårig forskning med stor betydelse för framtidens behandling av diabetes och obesitas belönades den 10 september med Rolf Luft Award. Årets pristagare, Richard DiMarchi och Matthias Tschöp, tog emot priset vid en ceremoni i Nobel Forum och i samband med prisutdelningen höll de båda pristagarna varsin föreläsning.",
+      "agent_summary": "",
+      "source_fingerprint": "f9947dcc0cdada441fa4",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/0f5ccfaa-edae-4005-b1c3-08ba4dabda69.webp",
+        "alt": "Diabetesforskare tog emot Rolf Luft Award",
+        "user_image_id": "0f5ccfaa-edae-4005-b1c3-08ba4dabda69",
+        "match_score": 0.2523,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/d203e15532870d5797b2-f9947dcc-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "f9947dcc0cdada441fa4",
+        "width": 1280,
+        "height": 848,
+        "sha256": "9af4d67ece1133bb5b450b0751a5048bd9e7d6ec2a08d40b18f7c35cdb459053"
+      }
+    },
+    {
       "id": "72a635baaefada4fad00",
       "title": "Ståuppkomiker vill provocera – men inte tappa publikens förtroende",
       "url": "https://forskning.se/2026/09/28/stauppkomik-skamt-granser",
@@ -1236,53 +1269,6 @@
         "forskning"
       ],
       "public_eligible": true
-    },
-    {
-      "id": "b2586e96ccc7679a74f5",
-      "title": "Postermingel samlade doktorander över klinikgränserna på KI DS",
-      "url": "https://nyheter.ki.se/postermingel-samlade-doktorander-over-klinikgranserna-pa-ki-ds",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-09-28T00:00:00Z",
-      "source_excerpt": "För att stärka kontakterna mellan doktorander och skapa fler möjligheter till forskningsutbyte anordnade institutionen för kliniska vetenskaper, Danderyds sjukhus (KI DS), ett postermingel den 8 september. Under dagen presenterade doktorander sin forskning för varandra och deltog i utlottningen av tre priser på 20 000 kronor vardera.",
-      "agent_summary": "",
-      "source_fingerprint": "60ae84e47af108a59a63",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/0f5ccfaa-edae-4005-b1c3-08ba4dabda69.webp",
-        "alt": "Postermingel samlade doktorander över klinikgränserna på KI DS",
-        "user_image_id": "0f5ccfaa-edae-4005-b1c3-08ba4dabda69",
-        "match_score": 0.2523,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/b2586e96ccc7679a74f5-60ae84e4-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "60ae84e47af108a59a63",
-        "width": 1280,
-        "height": 848,
-        "sha256": "87b032841ff7ffb84fa858fa4c4c9e3f22a8fa8a726dcebc235b779b3045fc46"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/b2586e96ccc7679a74f5-60ae84e47af108a59a63-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: Postermingel samlade doktorander över klinikgränserna på KI DS",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "60ae84e47af108a59a63",
-        "width": 1280,
-        "height": 848,
-        "sha256": "9b2410cae36b7e62ac5045803759f2d7e82b9bc97ab4324ead22a4dc5d46df79",
-        "generated_at": "2026-09-30T01:07:33Z"
-      }
     },
     {
       "id": "3412b82f5af36e357da3",
@@ -1619,7 +1605,7 @@
       "source_excerpt": "Getting him back outside took hours. A kangaroo somehow ended up trapped inside a parking garage with no way to find his way back out. Dodo editor Brielle shares how rescuers from Vets For Compassion spent hours carefully guiding him through the garage until they could finally get him safely back outside.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/f906M1gl60wWGDywv/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/f906M1glJ9ODlPXCR/x720",
       "source_image_alt": "Kangaroo Trapped In Parking Garage Until Rescuers Help",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbexxg6",
