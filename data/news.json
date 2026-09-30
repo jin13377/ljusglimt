@@ -1241,6 +1241,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "9af4d67ece1133bb5b450b0751a5048bd9e7d6ec2a08d40b18f7c35cdb459053"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/d203e15532870d5797b2-f9947dcc0cdada441fa4-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Diabetesforskare tog emot Rolf Luft Award",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "f9947dcc0cdada441fa4",
+        "width": 1280,
+        "height": 848,
+        "sha256": "c219492719128efbf16fd76db3b7acaaac6d62fb18b3516ba9538c76e6e4c469",
+        "generated_at": "2026-09-30T16:17:15Z"
       }
     },
     {
