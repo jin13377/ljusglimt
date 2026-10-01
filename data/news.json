@@ -1,10 +1,8 @@
 {
-  "generated_at": "2026-09-30T16:16:47.876038Z",
+  "generated_at": "2026-10-01T01:05:21.629577Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [
-    "d203e15532870d5797b2"
-  ],
+  "new_item_ids": [],
   "fetch_errors": [],
   "items": [
     {
@@ -1241,17 +1239,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "9af4d67ece1133bb5b450b0751a5048bd9e7d6ec2a08d40b18f7c35cdb459053"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/d203e15532870d5797b2-f9947dcc0cdada441fa4-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: Diabetesforskare tog emot Rolf Luft Award",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "f9947dcc0cdada441fa4",
-        "width": 1280,
-        "height": 848,
-        "sha256": "c219492719128efbf16fd76db3b7acaaac6d62fb18b3516ba9538c76e6e4c469",
-        "generated_at": "2026-09-30T16:17:15Z"
       }
     },
     {
@@ -1552,7 +1539,7 @@
       "source_excerpt": "Beds, couch-side treats and daily tuck-ins only. Lily and Patrick are rescue pigs who have fully embraced the good life, to the point that they even hate getting muddy. Dodo editor Brielle talked to Emma about their very particular preferences, their love of all things cozy and the sweet life they share with their dog siblings.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/ezsOE1gj_C2FZNJ9H/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/ezsOE1gj_C2FZNJ9H/x720",
       "source_image_alt": "Bougie Rescue Pigs Absolutely Hate Getting Muddy",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbd79qm",
@@ -1579,34 +1566,6 @@
       "public_eligible": false
     },
     {
-      "id": "e0c2ab101693d604de71",
-      "title": "Researchers bid farewell to rescued sea turtle after 200-day recovery: 'We were all bawling on the boat afterwards'",
-      "url": "https://www.goodgoodgood.co/articles/rare-sea-turtle-crush-release",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-09-02T17:41:00Z",
-      "source_excerpt": "Crush the loggerhead spent over six months in recovery after a cyclone washed her ashore in January.",
-      "agent_summary": "",
-      "source_fingerprint": "bdf9aff95ef1e084b4d2",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6a985f69a4c16a457f3ac7a7_6a985f66ca5e05ce1519c95a_rare-sea-turtle-crush-release-featured.webp",
-      "source_image_alt": "Researchers bid farewell to rescued sea turtle after 200-day recovery: 'We were all bawling on the boat afterwards'",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/rare-sea-turtle-crush-release",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/rare-sea-turtle-crush-release",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 8,
-      "positive_signals": [
-        "curated-positive-source",
-        "recovery",
-        "rescue",
-        "research"
-      ],
-      "public_eligible": false
-    },
-    {
       "id": "06be225fe6e43408aac4",
       "title": "Kangaroo Trapped In Parking Garage Until Rescuers Help",
       "url": "https://www.dailymotion.com/video/xbexxg6",
@@ -1616,7 +1575,7 @@
       "source_excerpt": "Getting him back outside took hours. A kangaroo somehow ended up trapped inside a parking garage with no way to find his way back out. Dodo editor Brielle shares how rescuers from Vets For Compassion spent hours carefully guiding him through the garage until they could finally get him safely back outside.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/f906M1glJ9ODlPXCR/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/f906M1glJ9ODlPXCR/x720",
       "source_image_alt": "Kangaroo Trapped In Parking Garage Until Rescuers Help",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbexxg6",
@@ -1690,6 +1649,34 @@
       "positive_signals": [
         "curated-positive-source",
         "adopted",
+        "rescue"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "02a53064a05365897898",
+      "title": "Days-old hippo 'Bumpy' given second chance at wildlife sanctuary: 'He sleeps most soundly when cuddled'",
+      "url": "https://www.goodgoodgood.co/articles/bumpy-baby-hippo-rescue-orphaned",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-09-28T17:58:00Z",
+      "source_excerpt": "Bumpy the hippo was spared from a deadly encounter by his mother. Now he has a new adopted family that includes rescued buffalos, elephants, and more.",
+      "agent_summary": "",
+      "source_fingerprint": "d4f17254bce204e14246",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6abaa9c460f01fe16ba2ada7_6abaa9c2d563e627c8c8114e_bumpy-baby-hippo-rescue-orphaned-featured.webp",
+      "source_image_alt": "Days-old hippo 'Bumpy' given second chance at wildlife sanctuary: 'He sleeps most soundly when cuddled'",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/bumpy-baby-hippo-rescue-orphaned",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/bumpy-baby-hippo-rescue-orphaned",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "source_tier_bonus": 2,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "adopted",
+        "cuddle",
         "rescue"
       ],
       "public_eligible": false
