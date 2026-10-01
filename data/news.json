@@ -823,6 +823,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "ecd4c85d9ba2fc9e2b2ef0ede9a609253750ca10cbd1f89783a69ba0a8c752c6"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/649b3d4c42f63bb75c4f-dd6e7a1f806a36424430-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Samisk mat till äldre kan ge dubbla hållbarhetsvinster",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "dd6e7a1f806a36424430",
+        "width": 1280,
+        "height": 848,
+        "sha256": "ff1944b2371a5706196565ca2d4dd64c452fbe72646dc47e5db62c0f72591d5c",
+        "generated_at": "2026-10-01T16:54:40Z"
       }
     },
     {
