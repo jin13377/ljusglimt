@@ -824,6 +824,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "35fa2e66c616ff0a4b051cd28dcf3cf973de3b645aa75acbc723607adc9582ac"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/9443e085478e60328c7e-e008b62082a9de593ae2-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Betydligt fler överlever kritisk sjukdom med prisad KI-forskning",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "e008b62082a9de593ae2",
+        "width": 1280,
+        "height": 848,
+        "sha256": "52cdc08634982fd961fe3bd37b923a6cd408fe9bd537bc8159ba06a2d8a14b8b",
+        "generated_at": "2026-10-02T16:07:57Z"
       }
     },
     {
