@@ -1,14 +1,11 @@
 {
-  "generated_at": "2026-10-03T00:57:46.749525Z",
+  "generated_at": "2026-10-03T14:34:33.563290Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
-  "fetch_errors": [
-    {
-      "source": "NASA News Releases",
-      "error": "HTTP Error 429: Too Many Requests"
-    }
+  "new_item_ids": [
+    "5d8413f8e1e1df91333e"
   ],
+  "fetch_errors": [],
   "items": [
     {
       "id": "3fe2e7d37ce31017f6dd",
@@ -1571,6 +1568,34 @@
       "public_eligible": false
     },
     {
+      "id": "5d8413f8e1e1df91333e",
+      "title": "Heading Home: NASA’s SpaceX Crew-12 Concludes Station Science Mission",
+      "url": "https://www.nasa.gov/missions/station/iss-research/heading-home-nasas-spacex-crew-12-concludes-station-science-mission",
+      "source": "NASA News Releases",
+      "language": "en",
+      "published_at": "2026-10-02T19:30:00Z",
+      "source_excerpt": "NASA’s SpaceX Crew-12 mission is ending, with the crew scheduled to return in early October. NASA astronauts Jessica Meir and Jack Hathaway, ESA (European Space Agency) astronaut Sophie Adenot, and Roscosmos cosmonaut Andrey Fedyaev will head home from the International Space Station after supporting research that benefits life on Earth and prepares humans for missions […]",
+      "agent_summary": "",
+      "source_fingerprint": "30ffc2e9bd9ae70f9a19",
+      "source_tier_bonus": 1,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "mission",
+        "research",
+        "science"
+      ],
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/868bab25-bbad-423f-871d-cba0ddc6a2f3.webp",
+        "alt": "Heading Home: NASA’s SpaceX Crew-12 Concludes Station Science Mission",
+        "user_image_id": "868bab25-bbad-423f-871d-cba0ddc6a2f3",
+        "match_score": 0.253,
+        "width": 1280,
+        "height": 848
+      }
+    },
+    {
       "id": "06be225fe6e43408aac4",
       "title": "Kangaroo Trapped In Parking Garage Until Rescuers Help",
       "url": "https://www.dailymotion.com/video/xbexxg6",
@@ -1580,7 +1605,7 @@
       "source_excerpt": "Getting him back outside took hours. A kangaroo somehow ended up trapped inside a parking garage with no way to find his way back out. Dodo editor Brielle shares how rescuers from Vets For Compassion spent hours carefully guiding him through the garage until they could finally get him safely back outside.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/f906M1glJ9ODlPXCR/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/f906M1glJ9ODlPXCR/x720",
       "source_image_alt": "Kangaroo Trapped In Parking Garage Until Rescuers Help",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbexxg6",
@@ -1654,34 +1679,6 @@
       "positive_signals": [
         "curated-positive-source",
         "adopted",
-        "rescue"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "02a53064a05365897898",
-      "title": "Days-old hippo 'Bumpy' given second chance at wildlife sanctuary: 'He sleeps most soundly when cuddled'",
-      "url": "https://www.goodgoodgood.co/articles/bumpy-baby-hippo-rescue-orphaned",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-09-28T17:58:00Z",
-      "source_excerpt": "Bumpy the hippo was spared from a deadly encounter by his mother. Now he has a new adopted family that includes rescued buffalos, elephants, and more.",
-      "agent_summary": "",
-      "source_fingerprint": "d4f17254bce204e14246",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6abaa9c460f01fe16ba2ada7_6abaa9c2d563e627c8c8114e_bumpy-baby-hippo-rescue-orphaned-featured.webp",
-      "source_image_alt": "Days-old hippo 'Bumpy' given second chance at wildlife sanctuary: 'He sleeps most soundly when cuddled'",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/bumpy-baby-hippo-rescue-orphaned",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/bumpy-baby-hippo-rescue-orphaned",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "adopted",
-        "cuddle",
         "rescue"
       ],
       "public_eligible": false
