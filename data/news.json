@@ -1,8 +1,12 @@
 {
-  "generated_at": "2026-10-05T00:28:20.394945Z",
+  "generated_at": "2026-10-05T19:05:11.211297Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "75eb55ae2acdfaeb518c",
+    "029af7f0be3c0ec3dc10",
+    "691cff633e16b9597de9"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -307,44 +311,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "e4489ecd7e04731bbde6b229d82ec8b436baf79c8a76a6cc5aaa1422722dfa25"
-      }
-    },
-    {
-      "id": "95af818f13efd4ce9c01",
-      "title": "Nature Medicine lyfter två av Karolinska Institutets AI-initiativ",
-      "url": "https://nyheter.ki.se/nature-medicine-lyfter-tva-av-karolinska-institutets-ai-initiativ",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-08-24T00:00:00Z",
-      "source_excerpt": "I en ny artikel i Nature Medicine lyfts två Karolinska Institutet-initiativ som nordiska nyckelresurser – KI:s Centrum för AI-innovation och TEF-Health, EU:s test- och försöksanläggning för AI och robotik inom hälso- och sjukvården (Testing and Experimentation Facility for Health AI and Robotics), vars svenska nod drivs av KI.",
-      "agent_summary": "",
-      "source_fingerprint": "98b17a084bb7253abfca",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 9,
-      "positive_signals": [
-        "curated-positive-source",
-        "experiment",
-        "initiativ",
-        "innovation"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/431c3154-4dd0-42c6-ab09-d5e8191643ee.webp",
-        "alt": "Nature Medicine lyfter två av Karolinska Institutets AI-initiativ",
-        "user_image_id": "431c3154-4dd0-42c6-ab09-d5e8191643ee",
-        "match_score": 0.2745,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/95af818f13efd4ce9c01-98b17a08-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "98b17a084bb7253abfca",
-        "width": 1280,
-        "height": 848,
-        "sha256": "547f394c7085239da2ecc44ff60ac4d2ccb6319ef1133249a5ad78295b8660bf"
       }
     },
     {
@@ -787,39 +753,76 @@
       }
     },
     {
-      "id": "9443e085478e60328c7e",
-      "title": "Betydligt fler överlever kritisk sjukdom med prisad KI-forskning",
-      "url": "https://nyheter.ki.se/betydligt-fler-overlever-kritisk-sjukdom-med-prisad-ki-forskning",
+      "id": "75eb55ae2acdfaeb518c",
+      "title": "Ny metod kartlägger tumörers ekosystem",
+      "url": "https://nyheter.ki.se/ny-metod-kartlagger-tumorers-ekosystem",
       "source": "Karolinska Institutet",
       "language": "sv",
-      "published_at": "2026-10-02T00:00:00Z",
-      "source_excerpt": "KI-forskarna Tim Baker och Carl Otto Schell har belönats med Lancets Evidence to Impact Award för sitt arbete med att få fler kritiskt sjuka att överleva. Konceptet som de har utvecklat kallas essentiell vård av kritiskt sjuka och består av 40 grundläggande åtgärder. I den första stora implementeringsstudien minskade dödligheten med 31 procent. ”Vi vill båda göra världen bättre”, säger de.",
+      "published_at": "2026-10-05T00:00:00Z",
+      "source_excerpt": "Tumörer består av mer än bara cancerceller. De innehåller också immunceller och andra stödjeceller som samspelar i ett komplext ekosystem som kallas tumörmikromiljön. En doktorsavhandling av Linglong Huang vid institutionen för onkologi-patologi tyder på att cellernas rumsliga organisering i solida tumörer kan ge kliniskt relevant information om patientutfall.",
       "agent_summary": "",
-      "source_fingerprint": "e008b62082a9de593ae2",
+      "source_fingerprint": "8e2587fe494f8d297f34",
       "category": "Hälsa",
       "source_tier_bonus": 5,
       "positivity_score": 7,
       "positive_signals": [
         "curated-positive-source",
-        "forskning"
+        "ny metod"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/431c3154-4dd0-42c6-ab09-d5e8191643ee.webp",
+        "alt": "Ny metod kartlägger tumörers ekosystem",
+        "user_image_id": "431c3154-4dd0-42c6-ab09-d5e8191643ee",
+        "match_score": 0.2745,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/75eb55ae2acdfaeb518c-8e2587fe-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "8e2587fe494f8d297f34",
+        "width": 1280,
+        "height": 848,
+        "sha256": "35bf7b0c495e6f79a679df8270d8449b567780ac0dde266e90ac8056770730fa"
+      }
+    },
+    {
+      "id": "029af7f0be3c0ec3dc10",
+      "title": "Infrastrukturnämnden satsar på nya tekniker och metoder för KI:s forskare",
+      "url": "https://nyheter.ki.se/infrastrukturnamnden-satsar-pa-nya-tekniker-och-metoder-for-kis-forskare",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-10-05T00:00:00Z",
+      "source_excerpt": "Infrastrukturnämnden vid Karolinska Institutet har beslutat att tilldela medel till fem satsningar inom utlysningen ”Nya tekniker och metoder i frontlinjen”. Totalt avsätts upp till 16 miljoner kronor under 2027 för att stärka forskningsinfrastrukturen och ge forskare tillgång till nya tekniker, metoder och verktyg.",
+      "agent_summary": "",
+      "source_fingerprint": "579f1ee1bbc057575dc5",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "satsning"
       ],
       "public_eligible": true,
       "user_image": {
         "url": "/news-images/user/0f5ccfaa-edae-4005-b1c3-08ba4dabda69.webp",
-        "alt": "Betydligt fler överlever kritisk sjukdom med prisad KI-forskning",
+        "alt": "Infrastrukturnämnden satsar på nya tekniker och metoder för KI:s forskare",
         "user_image_id": "0f5ccfaa-edae-4005-b1c3-08ba4dabda69",
         "match_score": 0.2523,
         "width": 1280,
         "height": 848
       },
       "generated_image": {
-        "url": "/news-images/generated/9443e085478e60328c7e-e008b620-v1.svg",
+        "url": "/news-images/generated/029af7f0be3c0ec3dc10-579f1ee1-v1.svg",
         "alt": "Automatiskt skapad redaktionell illustration.",
         "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "e008b62082a9de593ae2",
+        "source_fingerprint": "579f1ee1bbc057575dc5",
         "width": 1280,
         "height": 848,
-        "sha256": "35fa2e66c616ff0a4b051cd28dcf3cf973de3b645aa75acbc723607adc9582ac"
+        "sha256": "83d07bb5070d05392ea2e811abe7b8e6b1f5b4250943ce290dbd69e1985f005e"
       }
     },
     {
@@ -1241,42 +1244,6 @@
       "public_eligible": true
     },
     {
-      "id": "3412b82f5af36e357da3",
-      "title": "Starkt stöd för att återställa natur",
-      "url": "https://www.natursidan.se/nyheter/starkt-stod-for-att-aterstalla-natur",
-      "source": "Natursidan",
-      "language": "sv",
-      "published_at": "2026-09-27T05:13:36Z",
-      "source_excerpt": "En ny undersökning med 3 000 deltagare visar på starkt stöd för att skydda och återställa natur.",
-      "agent_summary": "",
-      "source_fingerprint": "7c4eb236b310e6851a62",
-      "category": "Natur",
-      "source_tier_bonus": 5,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "skydda"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/fb601de5-40fb-41e6-ad59-02bed671c043.webp",
-        "alt": "Starkt stöd för att återställa natur",
-        "user_image_id": "fb601de5-40fb-41e6-ad59-02bed671c043",
-        "match_score": 0.2632,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/3412b82f5af36e357da3-7c4eb236-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "7c4eb236b310e6851a62",
-        "width": 1280,
-        "height": 848,
-        "sha256": "d88f75cd7bd4126dacd946e972546b2f2d0c3ea0d3dcdeeab4b16e7a31ce3d5b"
-      }
-    },
-    {
       "id": "56c225a54e232fce1fea",
       "title": "Woman Rescues A Cat She Found At A Car Dealership",
       "url": "https://www.dailymotion.com/video/xamxvli",
@@ -1530,6 +1497,41 @@
       }
     },
     {
+      "id": "691cff633e16b9597de9",
+      "title": "Nobel: Strömbrytare revolutionerar hjärnforskningen",
+      "url": "https://fof.se/artikel/nobel-strombrytare-for-nervceller-revolutionerar-hjarnforskningen",
+      "source": "Forskning & Framsteg",
+      "language": "sv",
+      "published_at": "2026-10-05T06:43:23Z",
+      "source_excerpt": "I ett videoklipp syns ett vilt slagsmål mellan två svarta mushannar. De drabbar samman med käftar och klor så att sågspånet yr i den genomskinliga … The post Nobel: Strömbrytare revolutionerar hjärnforskningen appeared first on Forskning & Framsteg .",
+      "agent_summary": "",
+      "source_fingerprint": "f295444c5c5d9c80cf30",
+      "source_video": {
+        "provider": "youtube",
+        "video_id": "qGPpW0hAaaY",
+        "embed_url": "https://www.youtube-nocookie.com/embed/qGPpW0hAaaY",
+        "source_url": "https://www.youtube.com/watch?v=qGPpW0hAaaY",
+        "title": "Nobel: Strömbrytare revolutionerar hjärnforskningen"
+      },
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "framsteg"
+      ],
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/fb601de5-40fb-41e6-ad59-02bed671c043.webp",
+        "alt": "Nobel: Strömbrytare revolutionerar hjärnforskningen",
+        "user_image_id": "fb601de5-40fb-41e6-ad59-02bed671c043",
+        "match_score": 0.232,
+        "width": 1280,
+        "height": 848
+      }
+    },
+    {
       "id": "4b5d6e1e1ae799ea190b",
       "title": "Bougie Rescue Pigs Absolutely Hate Getting Muddy",
       "url": "https://www.dailymotion.com/video/xbd79qm",
@@ -1566,34 +1568,6 @@
       "public_eligible": false
     },
     {
-      "id": "5d8413f8e1e1df91333e",
-      "title": "Heading Home: NASA’s SpaceX Crew-12 Concludes Station Science Mission",
-      "url": "https://www.nasa.gov/missions/station/iss-research/heading-home-nasas-spacex-crew-12-concludes-station-science-mission",
-      "source": "NASA News Releases",
-      "language": "en",
-      "published_at": "2026-10-02T19:30:00Z",
-      "source_excerpt": "NASA’s SpaceX Crew-12 mission is ending, with the crew scheduled to return in early October. NASA astronauts Jessica Meir and Jack Hathaway, ESA (European Space Agency) astronaut Sophie Adenot, and Roscosmos cosmonaut Andrey Fedyaev will head home from the International Space Station after supporting research that benefits life on Earth and prepares humans for missions […]",
-      "agent_summary": "",
-      "source_fingerprint": "30ffc2e9bd9ae70f9a19",
-      "source_tier_bonus": 1,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "mission",
-        "research",
-        "science"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/868bab25-bbad-423f-871d-cba0ddc6a2f3.webp",
-        "alt": "Heading Home: NASA’s SpaceX Crew-12 Concludes Station Science Mission",
-        "user_image_id": "868bab25-bbad-423f-871d-cba0ddc6a2f3",
-        "match_score": 0.253,
-        "width": 1280,
-        "height": 848
-      }
-    },
-    {
       "id": "06be225fe6e43408aac4",
       "title": "Kangaroo Trapped In Parking Garage Until Rescuers Help",
       "url": "https://www.dailymotion.com/video/xbexxg6",
@@ -1603,7 +1577,7 @@
       "source_excerpt": "Getting him back outside took hours. A kangaroo somehow ended up trapped inside a parking garage with no way to find his way back out. Dodo editor Brielle shares how rescuers from Vets For Compassion spent hours carefully guiding him through the garage until they could finally get him safely back outside.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/f906M1glJ9ODlPXCR/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/f906M1glJ9ODlPXCR/x720",
       "source_image_alt": "Kangaroo Trapped In Parking Garage Until Rescuers Help",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbexxg6",
@@ -1677,6 +1651,34 @@
       "positive_signals": [
         "curated-positive-source",
         "adopted",
+        "rescue"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "02a53064a05365897898",
+      "title": "Days-old hippo 'Bumpy' given second chance at wildlife sanctuary: 'He sleeps most soundly when cuddled'",
+      "url": "https://www.goodgoodgood.co/articles/bumpy-baby-hippo-rescue-orphaned",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-09-28T17:58:00Z",
+      "source_excerpt": "Bumpy the hippo was spared from a deadly encounter by his mother. Now he has a new adopted family that includes rescued buffalos, elephants, and more.",
+      "agent_summary": "",
+      "source_fingerprint": "d4f17254bce204e14246",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6abaa9c460f01fe16ba2ada7_6abaa9c2d563e627c8c8114e_bumpy-baby-hippo-rescue-orphaned-featured.webp",
+      "source_image_alt": "Days-old hippo 'Bumpy' given second chance at wildlife sanctuary: 'He sleeps most soundly when cuddled'",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/bumpy-baby-hippo-rescue-orphaned",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/bumpy-baby-hippo-rescue-orphaned",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "source_tier_bonus": 2,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "adopted",
+        "cuddle",
         "rescue"
       ],
       "public_eligible": false
