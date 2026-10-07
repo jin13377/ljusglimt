@@ -1,9 +1,14 @@
 {
-  "generated_at": "2026-10-07T01:13:51.191835Z",
+  "generated_at": "2026-10-07T17:18:15.227138Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "a37c06e2b44d258728a8"
+    "a1dd77c954055ec873f2",
+    "c6e0736e617b91672493",
+    "62fa7170147614368439",
+    "c787d18d6ef90b17b2d3",
+    "b1ce3377909e9e70df1c",
+    "1cf350b3106fdd37c06d"
   ],
   "fetch_errors": [],
   "items": [
@@ -385,6 +390,44 @@
         "width": 1280,
         "height": 848,
         "sha256": "273484e6265bcfb32ad63f2d1ada4c34b8bdadcd88dd46c95261cc760fae40d5"
+      }
+    },
+    {
+      "id": "a1dd77c954055ec873f2",
+      "title": "Nordiska forskare samlas i Stockholm för workshop om ojämlikhet i åldrande",
+      "url": "https://nyheter.ki.se/nordiska-forskare-samlas-i-stockholm-for-workshop-om-ojamlikhet-i-aldrande",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-10-07T00:00:00Z",
+      "source_excerpt": "Forskare från sex länder samlades i Stockholm i september för den femte årliga workshopen som arrangerades av nätverket Social Inequalities in Ageing (SIA). Evenemanget förde samman juniora och seniora forskare för att diskutera pågående studier, stärka forskningssamarbeten och utbyta perspektiv om åldrande och hälsa.",
+      "agent_summary": "",
+      "source_fingerprint": "ec42a587a04fc5103233",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "hope",
+        "samarbete"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/0f5ccfaa-edae-4005-b1c3-08ba4dabda69.webp",
+        "alt": "Nordiska forskare samlas i Stockholm för workshop om ojämlikhet i åldrande",
+        "user_image_id": "0f5ccfaa-edae-4005-b1c3-08ba4dabda69",
+        "match_score": 0.2523,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/a1dd77c954055ec873f2-ec42a587-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "ec42a587a04fc5103233",
+        "width": 1280,
+        "height": 848,
+        "sha256": "2b3cb6a470b917a52ef49bb47e1d78d689dd4bb19bb222fb5e69520acccab127"
       }
     },
     {
@@ -838,43 +881,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "35bf7b0c495e6f79a679df8270d8449b567780ac0dde266e90ac8056770730fa"
-      }
-    },
-    {
-      "id": "029af7f0be3c0ec3dc10",
-      "title": "Infrastrukturnämnden satsar på nya tekniker och metoder för KI:s forskare",
-      "url": "https://nyheter.ki.se/infrastrukturnamnden-satsar-pa-nya-tekniker-och-metoder-for-kis-forskare",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-10-05T00:00:00Z",
-      "source_excerpt": "Infrastrukturnämnden vid Karolinska Institutet har beslutat att tilldela medel till fem satsningar inom utlysningen ”Nya tekniker och metoder i frontlinjen”. Totalt avsätts upp till 16 miljoner kronor under 2027 för att stärka forskningsinfrastrukturen och ge forskare tillgång till nya tekniker, metoder och verktyg.",
-      "agent_summary": "",
-      "source_fingerprint": "579f1ee1bbc057575dc5",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "satsning"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/0f5ccfaa-edae-4005-b1c3-08ba4dabda69.webp",
-        "alt": "Infrastrukturnämnden satsar på nya tekniker och metoder för KI:s forskare",
-        "user_image_id": "0f5ccfaa-edae-4005-b1c3-08ba4dabda69",
-        "match_score": 0.2523,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/029af7f0be3c0ec3dc10-579f1ee1-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "579f1ee1bbc057575dc5",
-        "width": 1280,
-        "height": 848,
-        "sha256": "83d07bb5070d05392ea2e811abe7b8e6b1f5b4250943ce290dbd69e1985f005e"
       }
     },
     {
@@ -1494,27 +1500,35 @@
       }
     },
     {
-      "id": "4f0b81440a7e5c550b5d",
-      "title": "Forskning & Framstegs podd nominerad till tidskriftspris",
-      "url": "https://fof.se/artikel/forskning-framstegs-podd-nominerad-till-tidskriftspris",
+      "id": "c6e0736e617b91672493",
+      "title": "Kemipris för lösning på livets spegelmysterium",
+      "url": "https://fof.se/artikel/nobel26-kemi",
       "source": "Forskning & Framsteg",
       "language": "sv",
-      "published_at": "2026-10-01T10:17:42Z",
-      "source_excerpt": "”Ett nära och underhållande berättande som ger lyssnarna nya insikter och kunskaper inom de ämnen som är tidskriftens kärna. Ett klockrent exempel på hur den … The post Forskning & Framstegs podd nominerad till tidskriftspris appeared first on Forskning & Framsteg .",
+      "published_at": "2026-10-07T06:28:12Z",
+      "source_excerpt": "– Årets pris handlar om att få kemin att välja spegelbild. Så inledde Ellen Moons, ständig sekreterare för Kungl. Vetenskapsakademien, tillkännagivandet. Pristagarna Henri Kagan och Kenso … The post Kemipris för lösning på livets spegelmysterium appeared first on Forskning & Framsteg .",
       "agent_summary": "",
-      "source_fingerprint": "7e8266a2bba6ee540215",
+      "source_fingerprint": "3c452ed518723824f072",
+      "source_video": {
+        "provider": "youtube",
+        "video_id": "a9Bhx9wEt8U",
+        "embed_url": "https://www.youtube-nocookie.com/embed/a9Bhx9wEt8U",
+        "source_url": "https://www.youtube.com/watch?v=a9Bhx9wEt8U",
+        "title": "Kemipris för lösning på livets spegelmysterium"
+      },
       "category": "Vetenskap",
       "source_tier_bonus": 5,
       "positivity_score": 9,
       "positive_signals": [
         "curated-positive-source",
         "forskning",
-        "framsteg"
+        "framsteg",
+        "lösning"
       ],
       "public_eligible": false,
       "user_image": {
         "url": "/news-images/user/9d2d5fa4-a804-4fc4-982e-03b147d2b634.webp",
-        "alt": "Forskning & Framstegs podd nominerad till tidskriftspris",
+        "alt": "Kemipris för lösning på livets spegelmysterium",
         "user_image_id": "9d2d5fa4-a804-4fc4-982e-03b147d2b634",
         "match_score": 0.24,
         "width": 1280,
@@ -1522,38 +1536,136 @@
       }
     },
     {
-      "id": "4b5d6e1e1ae799ea190b",
-      "title": "Bougie Rescue Pigs Absolutely Hate Getting Muddy",
-      "url": "https://www.dailymotion.com/video/xbd79qm",
+      "id": "62fa7170147614368439",
+      "title": "Wild Serval Kittens Found After Fire Make A Comeback",
+      "url": "https://www.dailymotion.com/video/xbjlfve",
       "source": "The Dodo",
       "language": "en",
-      "published_at": "2026-09-26T04:18:34Z",
-      "source_excerpt": "Beds, couch-side treats and daily tuck-ins only. Lily and Patrick are rescue pigs who have fully embraced the good life, to the point that they even hate getting muddy. Dodo editor Brielle talked to Emma about their very particular preferences, their love of all things cozy and the sweet life they share with their dog siblings.",
+      "published_at": "2026-10-07T16:33:40Z",
+      "source_excerpt": "They may have lost their tails, but nothing slowed these two down! Rescued from a burned field at just three weeks old, these two serval kittens had a long recovery ahead of them. Dodo editor Valentina shares their journey alongside Deirdre and Dr. Venter from Wild And Free Rehab as they grow stronger and get closer to returning to the wild.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/ezsOE1gj_C2FZNJ9H/x720",
-      "source_image_alt": "Bougie Rescue Pigs Absolutely Hate Getting Muddy",
+      "source_image_url": "https://s1.dmcdn.net/v/fcqAQ1gndO9qzmEWQ/x720",
+      "source_image_alt": "Wild Serval Kittens Found After Fire Make A Comeback",
       "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xbd79qm",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xbjlfve",
       "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xbd79qm",
+      "source_image_source_url": "https://www.dailymotion.com/video/xbjlfve",
       "source_image_verification_method": "dailymotion-api-thumbnail-v1",
       "source_video": {
         "provider": "dailymotion",
-        "video_id": "xbd79qm",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xbd79qm",
-        "source_url": "https://www.dailymotion.com/video/xbd79qm",
-        "title": "Bougie Rescue Pigs Absolutely Hate Getting Muddy"
+        "video_id": "xbjlfve",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xbjlfve",
+        "source_url": "https://www.dailymotion.com/video/xbjlfve",
+        "title": "Wild Serval Kittens Found After Fire Make A Comeback"
       },
-      "source_fingerprint": "3ab5fd399c3e6dc5818f",
+      "source_fingerprint": "b688e692a2b895ed9de7",
       "category": "Djur",
       "source_tier_bonus": 4,
       "positivity_score": 8,
       "positive_signals": [
         "curated-positive-source",
-        "love",
+        "kitten",
+        "recovery",
+        "rescue"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "c787d18d6ef90b17b2d3",
+      "title": "Puppy Mistaken For 9 Weeks Old Makes Amazing Comeback",
+      "url": "https://www.dailymotion.com/video/xbjkahm",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-10-07T14:34:40Z",
+      "source_excerpt": "She was actually 5 months old and desperately needed someone to help her. Bambi was so malnourished when All Creatures Great and Small rescued her that they initially thought she was only 9 weeks old. Dodo editor Monica shares Bambi’s transformation and the moment she returned to surprise her rescuers looking like a completely different pup.",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s1.dmcdn.net/v/fcd4Q1gndKdJDt0Jv/x720",
+      "source_image_alt": "Puppy Mistaken For 9 Weeks Old Makes Amazing Comeback",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xbjkahm",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xbjkahm",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xbjkahm",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xbjkahm",
+        "source_url": "https://www.dailymotion.com/video/xbjkahm",
+        "title": "Puppy Mistaken For 9 Weeks Old Makes Amazing Comeback"
+      },
+      "source_fingerprint": "ec0c4811ee11a7371f4a",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "puppy",
         "rescue",
-        "treat"
+        "surprise"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "b1ce3377909e9e70df1c",
+      "title": "Toddler’s Pony Best Friend Joins Her For Dinner",
+      "url": "https://www.dailymotion.com/video/xbjkai6",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-10-07T14:34:20Z",
+      "source_excerpt": "Just a completely normal family dinner! Lula and her pony Simba have been inseparable from the beginning, to the point that he’ll casually walk right into the kitchen to join her for dinner. Dodo editor Valentina talks with Lula’s parents about how their friendship started and what life is like when your toddler’s best friend happens to be a pony.",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s1.dmcdn.net/v/fcd4k1gndKcAAXhYk/x720",
+      "source_image_alt": "Toddler’s Pony Best Friend Joins Her For Dinner",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xbjkai6",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xbjkai6",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xbjkai6",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xbjkai6",
+        "source_url": "https://www.dailymotion.com/video/xbjkai6",
+        "title": "Toddler’s Pony Best Friend Joins Her For Dinner"
+      },
+      "source_fingerprint": "d7dff41379f8e39024d7",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "best friend",
+        "friend"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "1cf350b3106fdd37c06d",
+      "title": "She couldn't afford pet-friendly housing, so she gave up her dog of 10 years. Her community raised $18,000 to reunite them",
+      "url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-10-07T14:12:00Z",
+      "source_excerpt": "After 23 years of marriage, Lisa Wilson and her dog Eddie had to find a new home. But Hurricane Helene had left the rental market in shambles.",
+      "agent_summary": "",
+      "source_fingerprint": "84b69c00e5ad3fec48ac",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6ac65295fb513da952f51586_6ac65294666e636761d49559_north-carolina-housing-woman-reunited-pet-dog-featured.webp",
+      "source_image_alt": "She couldn't afford pet-friendly housing, so she gave up her dog of 10 years. Her community raised $18,000 to reunite them",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "source_tier_bonus": 2,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "community",
+        "friend"
       ],
       "public_eligible": false
     },
@@ -1583,94 +1695,6 @@
         "width": 1280,
         "height": 848
       }
-    },
-    {
-      "id": "06be225fe6e43408aac4",
-      "title": "Kangaroo Trapped In Parking Garage Until Rescuers Help",
-      "url": "https://www.dailymotion.com/video/xbexxg6",
-      "source": "The Dodo",
-      "language": "en",
-      "published_at": "2026-09-30T01:03:53Z",
-      "source_excerpt": "Getting him back outside took hours. A kangaroo somehow ended up trapped inside a parking garage with no way to find his way back out. Dodo editor Brielle shares how rescuers from Vets For Compassion spent hours carefully guiding him through the garage until they could finally get him safely back outside.",
-      "agent_summary": "",
-      "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/f906M1glJ9ODlPXCR/x720",
-      "source_image_alt": "Kangaroo Trapped In Parking Garage Until Rescuers Help",
-      "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xbexxg6",
-      "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xbexxg6",
-      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
-      "source_video": {
-        "provider": "dailymotion",
-        "video_id": "xbexxg6",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xbexxg6",
-        "source_url": "https://www.dailymotion.com/video/xbexxg6",
-        "title": "Kangaroo Trapped In Parking Garage Until Rescuers Help"
-      },
-      "source_fingerprint": "87237de41fdb6a250479",
-      "category": "Djur",
-      "source_tier_bonus": 4,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "rescue"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "ed322f083f46b1fdc8ac",
-      "title": "A male elephant 'adopted' a calf and kept her alive long enough for rangers to rescue her",
-      "url": "https://www.goodgoodgood.co/articles/baby-elephant-talek-rescue-kenya",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-09-29T19:44:00Z",
-      "source_excerpt": "A 7-month-old elephant was found trailing behind a bull for protection, but he couldn’t provide her with the milk she needed to survive.",
-      "agent_summary": "",
-      "source_fingerprint": "63a13d3af2f6c11ae33c",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6abc14af21c94a14ed3075a8_6abc14ae5dd5af5183aaaa2b_baby-elephant-talek-rescue-kenya-featured.webp",
-      "source_image_alt": "A male elephant 'adopted' a calf and kept her alive long enough for rangers to rescue her",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/baby-elephant-talek-rescue-kenya",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/baby-elephant-talek-rescue-kenya",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "adopted",
-        "rescue"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "d7fa3d6d49f383c998f8",
-      "title": "This herd of rescue elephants 'adopted' a new little brother: 'He will never be alone again'",
-      "url": "https://www.goodgoodgood.co/articles/baby-elephant-daba-rescued-orphaned",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-09-29T17:17:00Z",
-      "source_excerpt": "Daba has earned a reputation as a shy — but cheeky — elephant who has adapted quickly to his found family.",
-      "agent_summary": "",
-      "source_fingerprint": "ffaf96b7bd03bf61d19e",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6abbf243612d4c02ed5c2b86_6abbf2425219f8eed4958391_baby-elephant-daba-rescued-orphaned-featured.webp",
-      "source_image_alt": "This herd of rescue elephants 'adopted' a new little brother: 'He will never be alone again'",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/baby-elephant-daba-rescued-orphaned",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/baby-elephant-daba-rescued-orphaned",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "adopted",
-        "rescue"
-      ],
-      "public_eligible": false
     }
   ]
 }
