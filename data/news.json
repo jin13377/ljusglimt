@@ -1,10 +1,9 @@
 {
-  "generated_at": "2026-10-06T16:31:37.153497Z",
+  "generated_at": "2026-10-07T01:13:51.191835Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "526391b22a89bcdea009",
-    "c9fa81a8629128b8ccbc"
+    "a37c06e2b44d258728a8"
   ],
   "fetch_errors": [],
   "items": [
@@ -752,6 +751,33 @@
       }
     },
     {
+      "id": "a37c06e2b44d258728a8",
+      "title": "Tidigare okänd släkting till dagens jakar upptäckt",
+      "url": "https://forskning.se/2026/10/06/tidigare-okand-utdod-stor-daggdjursart-upptackt-i-sibirien",
+      "source": "Forskning.se",
+      "language": "sv",
+      "published_at": "2026-10-06T18:01:48Z",
+      "source_excerpt": "Forskare har analyserat förhistoriskt dna från benfragment som hittats i Denisovagrottan, känd för sina många förhistoriska fynd, och på andra platser i södra Sibirien. Genom analyserna kunde de kartlägga arvsmassan hos 20 individer av ett djur som levde vid olika tidpunkter under mer än 200 000 år. Analyserna visar att det rör sig om en […] Tidigare okänd släkting till dagens jakar upptäckt forsk",
+      "agent_summary": "",
+      "source_fingerprint": "4d33502f36e9654c61cf",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/10/Benfragment-1024x576.jpg",
+      "source_image_alt": "Tidigare okänd släkting till dagens jakar upptäckt",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/10/06/tidigare-okand-utdod-stor-daggdjursart-upptackt-i-sibirien",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/10/06/tidigare-okand-utdod-stor-daggdjursart-upptackt-i-sibirien",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "upptäckt"
+      ],
+      "public_eligible": true
+    },
+    {
       "id": "526391b22a89bcdea009",
       "title": "Stor ekologisk förändring upptäckt i Bottniska viken",
       "url": "https://forskning.se/2026/10/06/forskare-upptacker-stor-ekologisk-forandring-i-bottniska-viken",
@@ -1491,41 +1517,6 @@
         "alt": "Forskning & Framstegs podd nominerad till tidskriftspris",
         "user_image_id": "9d2d5fa4-a804-4fc4-982e-03b147d2b634",
         "match_score": 0.24,
-        "width": 1280,
-        "height": 848
-      }
-    },
-    {
-      "id": "691cff633e16b9597de9",
-      "title": "Nobel: Strömbrytare revolutionerar hjärnforskningen",
-      "url": "https://fof.se/artikel/nobel-strombrytare-for-nervceller-revolutionerar-hjarnforskningen",
-      "source": "Forskning & Framsteg",
-      "language": "sv",
-      "published_at": "2026-10-05T06:43:23Z",
-      "source_excerpt": "I ett videoklipp syns ett vilt slagsmål mellan två svarta mushannar. De drabbar samman med käftar och klor så att sågspånet yr i den genomskinliga … The post Nobel: Strömbrytare revolutionerar hjärnforskningen appeared first on Forskning & Framsteg .",
-      "agent_summary": "",
-      "source_fingerprint": "f295444c5c5d9c80cf30",
-      "source_video": {
-        "provider": "youtube",
-        "video_id": "qGPpW0hAaaY",
-        "embed_url": "https://www.youtube-nocookie.com/embed/qGPpW0hAaaY",
-        "source_url": "https://www.youtube.com/watch?v=qGPpW0hAaaY",
-        "title": "Nobel: Strömbrytare revolutionerar hjärnforskningen"
-      },
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 8,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "framsteg"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/fb601de5-40fb-41e6-ad59-02bed671c043.webp",
-        "alt": "Nobel: Strömbrytare revolutionerar hjärnforskningen",
-        "user_image_id": "fb601de5-40fb-41e6-ad59-02bed671c043",
-        "match_score": 0.232,
         "width": 1280,
         "height": 848
       }
