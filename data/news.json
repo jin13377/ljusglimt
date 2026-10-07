@@ -428,6 +428,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "2b3cb6a470b917a52ef49bb47e1d78d689dd4bb19bb222fb5e69520acccab127"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/a1dd77c954055ec873f2-ec42a587a04fc5103233-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Nordiska forskare samlas i Stockholm för workshop om ojämlikhet i åldrande",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "ec42a587a04fc5103233",
+        "width": 1280,
+        "height": 848,
+        "sha256": "484541d2df6e8f77062db1675a6134d0245d6a1ea47bf4569a36584168536b14",
+        "generated_at": "2026-10-07T17:18:41Z"
       }
     },
     {
