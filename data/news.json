@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-08T01:35:13.017108Z",
+  "generated_at": "2026-10-08T17:13:32.759012Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "9045c89f70637dba10d5",
-    "06d12148b390322c1edd"
+    "c9fe56c9a3b7d4652ba1",
+    "ffa8ca9e4a71e16026a5"
   ],
   "fetch_errors": [],
   "items": [
@@ -387,6 +387,34 @@
         "height": 848,
         "sha256": "273484e6265bcfb32ad63f2d1ada4c34b8bdadcd88dd46c95261cc760fae40d5"
       }
+    },
+    {
+      "id": "c9fe56c9a3b7d4652ba1",
+      "title": "HPV-vaccinerade kvinnor hade lägre risk att föda för tidigt",
+      "url": "https://forskning.se/2026/10/08/hpv-vaccinerade-kvinnor-hade-lagre-risk-att-foda-for-tidigt",
+      "source": "Forskning.se",
+      "language": "sv",
+      "published_at": "2026-10-08T13:31:06Z",
+      "source_excerpt": "HPV-vaccinets fördelar kan sträcka sig längre än skyddet mot cancer. I en studie publicerad i The BMJ såg forskare vid Karolinska Institutet att kvinnor som vaccinerats mot HPV hade lägre risk för flera graviditets- och förlossningskomplikationer, särskilt att föda för tidigt. HPV-vaccinerade kvinnor hade lägre risk att föda för tidigt forskning.se .",
+      "agent_summary": "",
+      "source_fingerprint": "79f6a155e7c3b9c57d52",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/10/hpv-vaccin-forlossning-1-1024x576.jpg",
+      "source_image_alt": "HPV-vaccinerade kvinnor hade lägre risk att föda för tidigt",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/10/08/hpv-vaccinerade-kvinnor-hade-lagre-risk-att-foda-for-tidigt",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/10/08/hpv-vaccinerade-kvinnor-hade-lagre-risk-att-foda-for-tidigt",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "lägre risk"
+      ],
+      "public_eligible": true
     },
     {
       "id": "a1dd77c954055ec873f2",
@@ -790,51 +818,32 @@
       }
     },
     {
-      "id": "9045c89f70637dba10d5",
-      "title": "HPV-vaccinerade kvinnor hade lägre risk att föda för tidigt",
-      "url": "https://nyheter.ki.se/hpv-vaccinerade-kvinnor-hade-lagre-risk-att-foda-for-tidigt",
-      "source": "Karolinska Institutet",
+      "id": "ffa8ca9e4a71e16026a5",
+      "title": "Stolta över sin värmländska: Därför vägrar unga släppa dialekten",
+      "url": "https://forskning.se/2026/10/08/stolta-over-sin-varmlandska-darfor-vagrar-unga-slappa-dialekten",
+      "source": "Forskning.se",
       "language": "sv",
-      "published_at": "2026-10-08T00:00:00Z",
-      "source_excerpt": "HPV-vaccinets fördelar kan sträcka sig längre än skyddet mot cancer. I en studie publicerad i The BMJ såg forskare vid Karolinska Institutet att kvinnor som vaccinerats mot HPV hade lägre risk för flera graviditets- och förlossningskomplikationer, särskilt att föda för tidigt.",
+      "published_at": "2026-10-08T12:18:45Z",
+      "source_excerpt": "I en Vetenskapligt arbete som doktorander gör under sin utbildning för att bli doktor.&lt;br/&gt;Avhandlingen visar doktorandens egen ... Läs mer \" href=\"https://forskning.se/ordlista/avhandling/\" data-mobile-support=\"0\" data-gt-translate-attributes='[{\"attribute\":\"data-cmtooltip\", \"format\":\"html\"}]' tabindex='0' role='link'>avhandling från Örebro universitet har elever på vård- och omsorgs-, el- ",
       "agent_summary": "",
-      "source_fingerprint": "82a1d5295d944796409a",
-      "category": "Hälsa",
+      "source_fingerprint": "be4a2c7dc9c33133a545",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/10/varmland-dialekt-unga-1024x576.jpg",
+      "source_image_alt": "Stolta över sin värmländska: Därför vägrar unga släppa dialekten",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/10/08/stolta-over-sin-varmlandska-darfor-vagrar-unga-slappa-dialekten",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/10/08/stolta-over-sin-varmlandska-darfor-vagrar-unga-slappa-dialekten",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
       "source_tier_bonus": 5,
       "positivity_score": 7,
       "positive_signals": [
         "curated-positive-source",
-        "lägre risk"
+        "elever",
+        "forskning"
       ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/431c3154-4dd0-42c6-ab09-d5e8191643ee.webp",
-        "alt": "HPV-vaccinerade kvinnor hade lägre risk att föda för tidigt",
-        "user_image_id": "431c3154-4dd0-42c6-ab09-d5e8191643ee",
-        "match_score": 0.2745,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/9045c89f70637dba10d5-82a1d529-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "82a1d5295d944796409a",
-        "width": 1280,
-        "height": 848,
-        "sha256": "004c82d6a891cb8583c6bf829d979b8f26d25b11dbca846f3e8689cb6f602372"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/9045c89f70637dba10d5-82a1d5295d944796409a-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: HPV-vaccinerade kvinnor hade lägre risk att föda för tidigt",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "82a1d5295d944796409a",
-        "width": 1280,
-        "height": 848,
-        "sha256": "788492da4d61212c59854b3d5cefda80de2c4571c7826c7b7560b1c074d87030",
-        "generated_at": "2026-10-08T01:35:42Z"
-      }
+      "public_eligible": true
     },
     {
       "id": "06d12148b390322c1edd",
@@ -919,6 +928,42 @@
       "public_eligible": true
     },
     {
+      "id": "75eb55ae2acdfaeb518c",
+      "title": "Ny metod kartlägger tumörers ekosystem",
+      "url": "https://nyheter.ki.se/ny-metod-kartlagger-tumorers-ekosystem",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-10-05T00:00:00Z",
+      "source_excerpt": "Tumörer består av mer än bara cancerceller. De innehåller också immunceller och andra stödjeceller som samspelar i ett komplext ekosystem som kallas tumörmikromiljön. En doktorsavhandling av Linglong Huang vid institutionen för onkologi-patologi tyder på att cellernas rumsliga organisering i solida tumörer kan ge kliniskt relevant information om patientutfall.",
+      "agent_summary": "",
+      "source_fingerprint": "8e2587fe494f8d297f34",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "ny metod"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/431c3154-4dd0-42c6-ab09-d5e8191643ee.webp",
+        "alt": "Ny metod kartlägger tumörers ekosystem",
+        "user_image_id": "431c3154-4dd0-42c6-ab09-d5e8191643ee",
+        "match_score": 0.2745,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/75eb55ae2acdfaeb518c-8e2587fe-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "8e2587fe494f8d297f34",
+        "width": 1280,
+        "height": 848,
+        "sha256": "35bf7b0c495e6f79a679df8270d8449b567780ac0dde266e90ac8056770730fa"
+      }
+    },
+    {
       "id": "649b3d4c42f63bb75c4f",
       "title": "Samisk mat till äldre kan ge dubbla hållbarhetsvinster",
       "url": "https://www.extrakt.se/samisk-mat-till-aldre-kan-ge-dubbla-hallbarhetsvinster",
@@ -990,34 +1035,6 @@
         "height": 848,
         "sha256": "dbb70a1b542063f8345c62c54bdb2bbf1cce2c4ebaf65959263f4c81ca04ce16"
       }
-    },
-    {
-      "id": "cec0908d3a0cb59c237e",
-      "title": "Probiotika kopplas till färre dödsfall hos för tidigt födda",
-      "url": "https://forskning.se/2026/09/24/probiotika-kopplas-till-farre-dodsfall-hos-for-tidigt-fodda",
-      "source": "Forskning.se",
-      "language": "sv",
-      "published_at": "2026-09-24T17:32:59Z",
-      "source_excerpt": "Mycket för tidigt födda barn löper ökad risk att drabbas av nekrotiserande enterokolit (NEC), en allvarlig tarmsjukdom som kan vara livshotande. Sedan 2020 rekommenderar Svenska neonatalföreningen att barn som föds i graviditetsvecka 28–31 får probiotika varje dag. Probiotika innehåller levande bakterier som kan påverka tarmfloran. Lägre risk för tarmsjukdomen I en Registerforskning bygger på info",
-      "agent_summary": "",
-      "source_fingerprint": "18c5f062141319859a03",
-      "source_image_verified": true,
-      "source_image_url": "https://forskning.se/app/uploads/2026/09/Bifidobacterium-lactis-1024x576.jpg",
-      "source_image_alt": "Probiotika kopplas till färre dödsfall hos för tidigt födda",
-      "source_image_credit": "Forskning.se",
-      "source_image_rights_url": "https://forskning.se/2026/09/24/probiotika-kopplas-till-farre-dodsfall-hos-for-tidigt-fodda",
-      "source_image_creator": "Forskning.se",
-      "source_image_source_url": "https://forskning.se/2026/09/24/probiotika-kopplas-till-farre-dodsfall-hos-for-tidigt-fodda",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "lägre risk"
-      ],
-      "public_eligible": true
     },
     {
       "id": "eb682f3bae66912bdf7e",
@@ -1235,42 +1252,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "cebe89e0ec7ef7c721aaaf286d84efe7551e26880758e8c87160cd3a25febdb7"
-      }
-    },
-    {
-      "id": "4b85e321cb8f14fe61b4",
-      "title": "Ny metod kan lösa gåtan med dåligt badvatten",
-      "url": "https://www.extrakt.se/ny-metod-kan-losa-gatan-med-daligt-badvatten",
-      "source": "Extrakt",
-      "language": "sv",
-      "published_at": "2026-08-12T07:26:29Z",
-      "source_excerpt": "När badvattnet blir otjänligt är det inte alltid lätt att veta vad som orsakar problemet. En ny metod kan hjälpa kommuner att hitta källan till föroreningarna, så att badvattnet kan bli rent igen.",
-      "agent_summary": "",
-      "source_fingerprint": "096cb972d7586aa6f7dd",
-      "category": "Miljö",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "ny metod"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/586669d7-e165-482e-859f-d434c3bef9c5.webp",
-        "alt": "Ny metod kan lösa gåtan med dåligt badvatten",
-        "user_image_id": "586669d7-e165-482e-859f-d434c3bef9c5",
-        "match_score": 0.2669,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/4b85e321cb8f14fe61b4-096cb972-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "096cb972d7586aa6f7dd",
-        "width": 1280,
-        "height": 848,
-        "sha256": "fa19906b9f4abb9036cecdfffe92ccd69f7d4891d7e72f0ee1d3e0848bc917ba"
       }
     },
     {
@@ -1580,7 +1561,7 @@
       "source_excerpt": "She was actually 5 months old and desperately needed someone to help her. Bambi was so malnourished when All Creatures Great and Small rescued her that they initially thought she was only 9 weeks old. Dodo editor Monica shares Bambi’s transformation and the moment she returned to surprise her rescuers looking like a completely different pup.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/fcd4Q1gndKdJDt0Jv/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/fcd4Q1gndKdJDt0Jv/x720",
       "source_image_alt": "Puppy Mistaken For 9 Weeks Old Makes Amazing Comeback",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbjkahm",
@@ -1616,7 +1597,7 @@
       "source_excerpt": "Just a completely normal family dinner! Lula and her pony Simba have been inseparable from the beginning, to the point that he’ll casually walk right into the kitchen to join her for dinner. Dodo editor Valentina talks with Lula’s parents about how their friendship started and what life is like when your toddler’s best friend happens to be a pony.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/fcd4k1gndKcAAXhYk/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/fcd4k1gndKcAAXhYk/x720",
       "source_image_alt": "Toddler’s Pony Best Friend Joins Her For Dinner",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbjkai6",
