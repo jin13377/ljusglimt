@@ -823,6 +823,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "004c82d6a891cb8583c6bf829d979b8f26d25b11dbca846f3e8689cb6f602372"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/9045c89f70637dba10d5-82a1d5295d944796409a-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: HPV-vaccinerade kvinnor hade lägre risk att föda för tidigt",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "82a1d5295d944796409a",
+        "width": 1280,
+        "height": 848,
+        "sha256": "788492da4d61212c59854b3d5cefda80de2c4571c7826c7b7560b1c074d87030",
+        "generated_at": "2026-10-08T01:35:42Z"
       }
     },
     {
