@@ -1,12 +1,55 @@
 {
-  "generated_at": "2026-10-09T01:45:46.800038Z",
+  "generated_at": "2026-10-09T16:49:56.011870Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "6ce7a4489b05058fe135"
+    "db95838acec3e83099fe",
+    "771ddac0255a7a8e3ce3",
+    "cad872fe70b2ad793a67",
+    "57427bc21153d2017dfc",
+    "7c2ae9bbfedd144ee166"
   ],
   "fetch_errors": [],
   "items": [
+    {
+      "id": "db95838acec3e83099fe",
+      "title": "Ioannis Parodis får internationellt anslag för lupusforskning",
+      "url": "https://nyheter.ki.se/ioannis-parodis-far-internationellt-anslag-for-lupusforskning",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-10-09T00:00:00Z",
+      "source_excerpt": "Ioannis Parodis, forskare vid Karolinska Institutet, har tilldelats 2026 Global Team Science Award från Lupus Research Alliance. Tillsammans med ett internationellt forskarteam får han ett flerårigt anslag på 3 miljoner dollar för att utveckla verktyg som kan förutsäga hur personer med lupus svarar på behandling och därmed bana väg för mer individanpassad vård.",
+      "agent_summary": "",
+      "source_fingerprint": "8a987a0bf14923d59354",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 11,
+      "positive_signals": [
+        "curated-positive-source",
+        "anslag",
+        "forskning",
+        "research",
+        "science"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/431c3154-4dd0-42c6-ab09-d5e8191643ee.webp",
+        "alt": "Ioannis Parodis får internationellt anslag för lupusforskning",
+        "user_image_id": "431c3154-4dd0-42c6-ab09-d5e8191643ee",
+        "match_score": 0.2745,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/db95838acec3e83099fe-8a987a0b-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "8a987a0bf14923d59354",
+        "width": 1280,
+        "height": 848,
+        "sha256": "2b236e0fae0172ad7c93812e3836afd014c464a09a173be6ce0a303c143e7c5a"
+      }
+    },
     {
       "id": "3fe2e7d37ce31017f6dd",
       "title": "KI och IVI stärker samarbetet inom global hälsa",
@@ -388,6 +431,43 @@
       }
     },
     {
+      "id": "771ddac0255a7a8e3ce3",
+      "title": "Anslag från SSMF till forskare vid Labmed",
+      "url": "https://nyheter.ki.se/anslag-fran-ssmf-till-forskare-vid-labmed",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-10-09T00:00:00Z",
+      "source_excerpt": "Tre forskare vid institutionen för laboratoriemedicin har tilldelats anslag på närmare 20 miljoner från Svenska Sällskapet för Medicinsk Forskning (SSMF) 2026 för innovativa projekt om immunsystemets roll vid cancer, hjärnans gliaceller och utvecklingen av NK-cellsminne.",
+      "agent_summary": "",
+      "source_fingerprint": "707d27e1bd7f90401b31",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "anslag",
+        "forskning"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/0f5ccfaa-edae-4005-b1c3-08ba4dabda69.webp",
+        "alt": "Anslag från SSMF till forskare vid Labmed",
+        "user_image_id": "0f5ccfaa-edae-4005-b1c3-08ba4dabda69",
+        "match_score": 0.2523,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/771ddac0255a7a8e3ce3-707d27e1-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "707d27e1bd7f90401b31",
+        "width": 1280,
+        "height": 848,
+        "sha256": "12159bbeeef299ebf74e34a840aa0920cb88e0b6c78b6c1b079e51cd9ed7a39e"
+      }
+    },
+    {
       "id": "c9fe56c9a3b7d4652ba1",
       "title": "HPV-vaccinerade kvinnor hade lägre risk att föda för tidigt",
       "url": "https://forskning.se/2026/10/08/hpv-vaccinerade-kvinnor-hade-lagre-risk-att-foda-for-tidigt",
@@ -414,44 +494,6 @@
         "lägre risk"
       ],
       "public_eligible": true
-    },
-    {
-      "id": "a1dd77c954055ec873f2",
-      "title": "Nordiska forskare samlas i Stockholm för workshop om ojämlikhet i åldrande",
-      "url": "https://nyheter.ki.se/nordiska-forskare-samlas-i-stockholm-for-workshop-om-ojamlikhet-i-aldrande",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-10-07T00:00:00Z",
-      "source_excerpt": "Forskare från sex länder samlades i Stockholm i september för den femte årliga workshopen som arrangerades av nätverket Social Inequalities in Ageing (SIA). Evenemanget förde samman juniora och seniora forskare för att diskutera pågående studier, stärka forskningssamarbeten och utbyta perspektiv om åldrande och hälsa.",
-      "agent_summary": "",
-      "source_fingerprint": "ec42a587a04fc5103233",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 8,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "hope",
-        "samarbete"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/0f5ccfaa-edae-4005-b1c3-08ba4dabda69.webp",
-        "alt": "Nordiska forskare samlas i Stockholm för workshop om ojämlikhet i åldrande",
-        "user_image_id": "0f5ccfaa-edae-4005-b1c3-08ba4dabda69",
-        "match_score": 0.2523,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/a1dd77c954055ec873f2-ec42a587-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "ec42a587a04fc5103233",
-        "width": 1280,
-        "height": 848,
-        "sha256": "2b3cb6a470b917a52ef49bb47e1d78d689dd4bb19bb222fb5e69520acccab127"
-      }
     },
     {
       "id": "7f374efc7f369b06c29d",
@@ -817,6 +859,34 @@
       }
     },
     {
+      "id": "cad872fe70b2ad793a67",
+      "title": "Ungdomar äter ofta utanför skolan",
+      "url": "https://forskning.se/2026/10/09/ungdomar-ater-ofta-utanfor-skolan",
+      "source": "Forskning.se",
+      "language": "sv",
+      "published_at": "2026-10-09T09:41:07Z",
+      "source_excerpt": "Forskare från Karolinska Institutet har undersökt var ungdomar äter under skoldagen och vilken typ av mat de väljer. Totalt deltog 483 elever i åldern 13 till 19 år från två skolor i centrala Stockholm. Elever tog bilder av maten Ungdomarna rapporterade sammanlagt 4 562 bilder av mat och dryck med hjälp av särskilda appar. Varje […] Ungdomar äter ofta utanför skolan forskning.se .",
+      "agent_summary": "",
+      "source_fingerprint": "bc2eebb75352c90d5248",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/10/varmkorv-1024x576.jpg",
+      "source_image_alt": "Ungdomar äter ofta utanför skolan",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/10/09/ungdomar-ater-ofta-utanfor-skolan",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/10/09/ungdomar-ater-ofta-utanfor-skolan",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "elever",
+        "forskning"
+      ],
+      "public_eligible": true
+    },
+    {
       "id": "ffa8ca9e4a71e16026a5",
       "title": "Stolta över sin värmländska: Därför vägrar unga släppa dialekten",
       "url": "https://forskning.se/2026/10/08/stolta-over-sin-varmlandska-darfor-vagrar-unga-slappa-dialekten",
@@ -843,124 +913,6 @@
         "forskning"
       ],
       "public_eligible": true
-    },
-    {
-      "id": "06d12148b390322c1edd",
-      "title": "Bakterie bakom matförgiftning kan orsaka svåra sårinfektioner",
-      "url": "https://forskning.se/2026/10/07/bakterie-bakom-matforgiftning-kan-orsaka-svara-sarinfektioner",
-      "source": "Forskning.se",
-      "language": "sv",
-      "published_at": "2026-10-07T18:55:03Z",
-      "source_excerpt": "NheABC-toxinet från bakterien Bacillus cereus blir särskilt aktivt under de pH-förhållanden som råder i öppna sår. Forskare vid Umeå universitet har visat att toxinet skadar både cellmembran och mitokondrier, cellernas energikraftverk, och hjälper bakterien att etablera sig i sårvävnad. Bakterie bakom matförgiftning kan orsaka svåra sårinfektioner forskning.se .",
-      "agent_summary": "",
-      "source_fingerprint": "535d9b5b0b14afc951cb",
-      "source_image_verified": true,
-      "source_image_url": "https://forskning.se/app/uploads/2026/10/bacillus-cereus-1024x576.jpg",
-      "source_image_alt": "Bakterie bakom matförgiftning kan orsaka svåra sårinfektioner",
-      "source_image_credit": "Forskning.se",
-      "source_image_rights_url": "https://forskning.se/2026/10/07/bakterie-bakom-matforgiftning-kan-orsaka-svara-sarinfektioner",
-      "source_image_creator": "Forskning.se",
-      "source_image_source_url": "https://forskning.se/2026/10/07/bakterie-bakom-matforgiftning-kan-orsaka-svara-sarinfektioner",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "hjälper"
-      ],
-      "public_eligible": true
-    },
-    {
-      "id": "a37c06e2b44d258728a8",
-      "title": "Tidigare okänd släkting till dagens jakar upptäckt",
-      "url": "https://forskning.se/2026/10/06/tidigare-okand-utdod-stor-daggdjursart-upptackt-i-sibirien",
-      "source": "Forskning.se",
-      "language": "sv",
-      "published_at": "2026-10-06T18:01:48Z",
-      "source_excerpt": "Forskare har analyserat förhistoriskt dna från benfragment som hittats i Denisovagrottan, känd för sina många förhistoriska fynd, och på andra platser i södra Sibirien. Genom analyserna kunde de kartlägga arvsmassan hos 20 individer av ett djur som levde vid olika tidpunkter under mer än 200 000 år. Analyserna visar att det rör sig om en […] Tidigare okänd släkting till dagens jakar upptäckt forsk",
-      "agent_summary": "",
-      "source_fingerprint": "4d33502f36e9654c61cf",
-      "source_image_verified": true,
-      "source_image_url": "https://forskning.se/app/uploads/2026/10/Benfragment-1024x576.jpg",
-      "source_image_alt": "Tidigare okänd släkting till dagens jakar upptäckt",
-      "source_image_credit": "Forskning.se",
-      "source_image_rights_url": "https://forskning.se/2026/10/06/tidigare-okand-utdod-stor-daggdjursart-upptackt-i-sibirien",
-      "source_image_creator": "Forskning.se",
-      "source_image_source_url": "https://forskning.se/2026/10/06/tidigare-okand-utdod-stor-daggdjursart-upptackt-i-sibirien",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "upptäckt"
-      ],
-      "public_eligible": true
-    },
-    {
-      "id": "526391b22a89bcdea009",
-      "title": "Stor ekologisk förändring upptäckt i Bottniska viken",
-      "url": "https://forskning.se/2026/10/06/forskare-upptacker-stor-ekologisk-forandring-i-bottniska-viken",
-      "source": "Forskning.se",
-      "language": "sv",
-      "published_at": "2026-10-06T07:58:16Z",
-      "source_excerpt": "Under flera decennier har forskare betraktat fosfor som det huvudsakliga näringsämne som begränsar den biologiska produktionen i Bottniska viken. Nu visar en ny studie ledd av forskare vid Umeå universitet att en grundläggande förändring är på väg att ske. Bottenhavet har övergått till kvävebegränsning, och Bottenviken är på väg i samma riktning. Stor ekologisk förändring upptäckt i Bottniska vike",
-      "agent_summary": "",
-      "source_fingerprint": "05f44e3cb99e98b47ccb",
-      "source_image_verified": true,
-      "source_image_url": "https://forskning.se/app/uploads/2026/10/botten-viken-1024x576.jpg",
-      "source_image_alt": "Stor ekologisk förändring upptäckt i Bottniska viken",
-      "source_image_credit": "Forskning.se",
-      "source_image_rights_url": "https://forskning.se/2026/10/06/forskare-upptacker-stor-ekologisk-forandring-i-bottniska-viken",
-      "source_image_creator": "Forskning.se",
-      "source_image_source_url": "https://forskning.se/2026/10/06/forskare-upptacker-stor-ekologisk-forandring-i-bottniska-viken",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "upptäckt"
-      ],
-      "public_eligible": true
-    },
-    {
-      "id": "75eb55ae2acdfaeb518c",
-      "title": "Ny metod kartlägger tumörers ekosystem",
-      "url": "https://nyheter.ki.se/ny-metod-kartlagger-tumorers-ekosystem",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-10-05T00:00:00Z",
-      "source_excerpt": "Tumörer består av mer än bara cancerceller. De innehåller också immunceller och andra stödjeceller som samspelar i ett komplext ekosystem som kallas tumörmikromiljön. En doktorsavhandling av Linglong Huang vid institutionen för onkologi-patologi tyder på att cellernas rumsliga organisering i solida tumörer kan ge kliniskt relevant information om patientutfall.",
-      "agent_summary": "",
-      "source_fingerprint": "8e2587fe494f8d297f34",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "ny metod"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/431c3154-4dd0-42c6-ab09-d5e8191643ee.webp",
-        "alt": "Ny metod kartlägger tumörers ekosystem",
-        "user_image_id": "431c3154-4dd0-42c6-ab09-d5e8191643ee",
-        "match_score": 0.2745,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/75eb55ae2acdfaeb518c-8e2587fe-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "8e2587fe494f8d297f34",
-        "width": 1280,
-        "height": 848,
-        "sha256": "35bf7b0c495e6f79a679df8270d8449b567780ac0dde266e90ac8056770730fa"
-      }
     },
     {
       "id": "649b3d4c42f63bb75c4f",
@@ -1290,6 +1242,69 @@
       "public_eligible": true
     },
     {
+      "id": "57427bc21153d2017dfc",
+      "title": "Det får människor att nobba våldsbejakande rörelser",
+      "url": "https://forskning.se/2026/10/09/det-far-manniskor-att-nobba-valdsbejakande-rorelser",
+      "source": "Forskning.se",
+      "language": "sv",
+      "published_at": "2026-10-09T12:18:43Z",
+      "source_excerpt": "Tidigare forskning har främst fokuserat på personer som har radikaliserats. I den nya rapporten, som kommer från Jönköping University, riktas i stället uppmärksamheten mot människor som har stått emot påverkan. Genom att undersöka deras erfarenheter identifieras faktorer som tycks stärka motståndskraften mot extremistiska budskap. Familj och vänner är viktiga 22 personer i Göteborg intervjuades i ",
+      "agent_summary": "",
+      "source_fingerprint": "8f839a2651a52808fff7",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/10/mobiltelefon-1024x576.jpg",
+      "source_image_alt": "Det får människor att nobba våldsbejakande rörelser",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/10/09/det-far-manniskor-att-nobba-valdsbejakande-rorelser",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/10/09/det-far-manniskor-att-nobba-valdsbejakande-rorelser",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning"
+      ],
+      "public_eligible": true
+    },
+    {
+      "id": "7c2ae9bbfedd144ee166",
+      "title": "Nya milstolpar för Sveriges ängshökar",
+      "url": "https://www.natursidan.se/nyheter/nya-milstolpar-for-sveriges-angshokar",
+      "source": "Natursidan",
+      "language": "sv",
+      "published_at": "2026-10-07T17:33:54Z",
+      "source_excerpt": "Åtgärdsprogrammet för ängshök firar 15 år med ett framgångsrikt år.",
+      "agent_summary": "",
+      "source_fingerprint": "55c6989c31cf5106c4f7",
+      "category": "Natur",
+      "source_tier_bonus": 5,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "firar"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/4412043e-894c-4672-8414-e2bae48bf2da-1.webp",
+        "alt": "Nya milstolpar för Sveriges ängshökar",
+        "user_image_id": "4412043e-894c-4672-8414-e2bae48bf2da-1",
+        "match_score": 0.2894,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/7c2ae9bbfedd144ee166-55c6989c-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "55c6989c31cf5106c4f7",
+        "width": 1280,
+        "height": 848,
+        "sha256": "7cb9740b83c1133c062cc99a0d3bf5b88a8af0d5a7a6d07985538bd2a3f61fcd"
+      }
+    },
+    {
       "id": "56c225a54e232fce1fea",
       "title": "Woman Rescues A Cat She Found At A Car Dealership",
       "url": "https://www.dailymotion.com/video/xamxvli",
@@ -1524,7 +1539,7 @@
       "source_excerpt": "They may have lost their tails, but nothing slowed these two down! Rescued from a burned field at just three weeks old, these two serval kittens had a long recovery ahead of them. Dodo editor Valentina shares their journey alongside Deirdre and Dr. Venter from Wild And Free Rehab as they grow stronger and get closer to returning to the wild.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/fcqAQ1gneg4feCugq/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/fcqAQ1gneg4feCugq/x720",
       "source_image_alt": "Wild Serval Kittens Found After Fire Make A Comeback",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbjlfve",
@@ -1628,9 +1643,9 @@
       "source": "NASA News Releases",
       "language": "en",
       "published_at": "2026-10-08T19:40:00Z",
-      "source_excerpt": "NASA is launching two new science and technology initiatives to deepen scientific understanding and accelerate the innovation that will shape America’s future in space. The initiatives are announced in conjunction with the White House Office of Science and Technology Policy’s (OSTP) “Science: A Golden Age Summit” in Washington on Thursday with top U.S. agency leaders. […]",
+      "source_excerpt": "Editor’s note: This release was updated Oct. 8, 2026 with the formal name of the summit. NASA is launching two new science and technology initiatives to deepen scientific understanding and accelerate the innovation that will shape America’s future in space. The initiatives are announced in conjunction with the White House Office of Science and Technology […]",
       "agent_summary": "",
-      "source_fingerprint": "8dadc7da54aed9d9d12e",
+      "source_fingerprint": "d3707f582294054779b3",
       "source_tier_bonus": 1,
       "positivity_score": 7,
       "positive_signals": [
