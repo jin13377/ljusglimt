@@ -1,58 +1,12 @@
+import categoryImageManifest from '../../public/news-images/ai/manifest.json'
 import type { NewsArticle, NewsImage, NewsVideo, RawAiNewsImage, RawFetchedNews, RawGeneratedNewsImage, RawSeedNews, RawSourceNewsVideo, RawUserNewsImage } from '../types'
 
-const editorialImageLibrary: Record<string, Array<{ file: string; alt: string }>> = {
-  Hälsa: [
-    { file: '01-health-recovery.webp', alt: 'Papperscollage om hälsa, omsorg och återhämtning.' },
-    { file: '12-clean-water.webp', alt: 'Papperscollage om rent vatten och hälsa.' },
-    { file: '14-mental-wellbeing.webp', alt: 'Papperscollage om psykiskt välbefinnande och lugn.' },
-    { file: '15-medical-breakthrough.webp', alt: 'Papperscollage om medicinsk forskning och framsteg.' },
-  ],
-  Miljö: [
-    { file: '03-clean-energy.webp', alt: 'Papperscollage om ren energi.' },
-    { file: '04-ocean-restoration.webp', alt: 'Papperscollage om havens återhämtning.' },
-    { file: '11-sustainable-agriculture.webp', alt: 'Papperscollage om hållbart jordbruk.' },
-    { file: '12-clean-water.webp', alt: 'Papperscollage om rent vatten.' },
-    { file: '16-green-transport.webp', alt: 'Papperscollage om hållbara transporter.' },
-    { file: '17-circular-economy.webp', alt: 'Papperscollage om återbruk och cirkulär ekonomi.' },
-  ],
-  Natur: [
-    { file: '04-ocean-restoration.webp', alt: 'Papperscollage om hav och sjögräs.' },
-    { file: '05-forest-biodiversity.webp', alt: 'Papperscollage om skog och biologisk mångfald.' },
-    { file: '11-sustainable-agriculture.webp', alt: 'Papperscollage om odling och natur.' },
-    { file: '19-wildlife-protection.webp', alt: 'Papperscollage om djur och skyddade livsmiljöer.' },
-  ],
-  Vetenskap: [
-    { file: '02-science-discovery.webp', alt: 'Papperscollage om vetenskaplig upptäckt.' },
-    { file: '09-technology-for-good.webp', alt: 'Papperscollage om teknik och innovation.' },
-    { file: '10-space-exploration.webp', alt: 'Papperscollage om rymdforskning.' },
-    { file: '15-medical-breakthrough.webp', alt: 'Papperscollage om medicinsk forskning.' },
-  ],
-  Kultur: [
-    { file: '08-culture-creativity.webp', alt: 'Papperscollage om kultur, musik och kreativitet.' },
-    { file: '07-education-learning.webp', alt: 'Papperscollage om böcker och lärande.' },
-    { file: '18-peace-cooperation.webp', alt: 'Papperscollage om möten och samarbete.' },
-  ],
-  Människor: [
-    { file: '06-community-cooperation.webp', alt: 'Papperscollage om gemenskap och samarbete.' },
-    { file: '07-education-learning.webp', alt: 'Papperscollage om utbildning.' },
-    { file: '13-safe-homes.webp', alt: 'Papperscollage om trygga hem.' },
-    { file: '18-peace-cooperation.webp', alt: 'Papperscollage om fred och samarbete.' },
-    { file: '20-entrepreneurship-solutions.webp', alt: 'Papperscollage om lokala lösningar och företagande.' },
-  ],
-  Framsteg: [
-    { file: '03-clean-energy.webp', alt: 'Papperscollage om energiframsteg.' },
-    { file: '07-education-learning.webp', alt: 'Papperscollage om kunskap och möjligheter.' },
-    { file: '09-technology-for-good.webp', alt: 'Papperscollage om teknik för nytta.' },
-    { file: '16-green-transport.webp', alt: 'Papperscollage om hållbara transporter.' },
-    { file: '17-circular-economy.webp', alt: 'Papperscollage om reparation och återbruk.' },
-    { file: '20-entrepreneurship-solutions.webp', alt: 'Papperscollage om entreprenörskap och lösningar.' },
-  ],
-  Djur: [
-    { file: '19-wildlife-protection.webp', alt: 'Papperscollage om djur och skyddade livsmiljöer.' },
-    { file: '05-forest-biodiversity.webp', alt: 'Papperscollage om skogens livsmiljöer.' },
-    { file: '04-ocean-restoration.webp', alt: 'Papperscollage om livet i havet.' },
-  ],
-}
+// The manifest belongs to the seven actual checked-in category images.
+// Do not name an imagined library directory: API and image fallbacks must work offline.
+const editorialImageLibrary: Record<string, Array<{ file: string; alt: string }>> = Object.fromEntries(
+  categoryImageManifest.assets.map(asset => [asset.category, [{ file: asset.file, alt: asset.alt }]]),
+)
+editorialImageLibrary.Djur = editorialImageLibrary.Natur
 
 interface RawImageFields {
   id?: string
@@ -111,7 +65,7 @@ export function getAiCategoryImage(category: string, seed = ''): NewsImage {
   return {
     kind: 'ai',
     aiOrigin: 'category',
-    url: `/news-images/library/${fallback.file}`,
+    url: `/news-images/ai/${fallback.file}`,
     alt: fallback.alt,
     caption: 'AI-illustration – redaktionellt motiv, inte en dokumentation av händelsen.',
     width: 1280,
