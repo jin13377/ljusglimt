@@ -410,7 +410,9 @@ export function selectWorldHighlights(articles: NewsArticle[], heroId?: string):
 
 async function fetchJson<T>(path: string, options?: RequestInit): Promise<T | null> {
   try {
-    const response = await fetch(`${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`, options)
+    const timeout = AbortSignal.timeout(10000)
+    const signal = options?.signal ? AbortSignal.any([options.signal, timeout]) : timeout
+    const response = await fetch(`${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`, {...options, signal})
     if (!response.ok) return null
     return (await response.json()) as T
   } catch {

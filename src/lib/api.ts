@@ -11,28 +11,39 @@ export class ApiError extends Error {
 }
 
 export async function api<T>(url: string, options: RequestInit = {}): Promise<T> {
-  const response = await fetch(url, {
-    credentials: 'same-origin',
-    ...options,
-    headers: options.body
-      ? { 'Content-Type': 'application/json', ...(options.headers ?? {}) }
-      : options.headers,
-  })
-  let data: unknown = {}
-  const contentType = response.headers.get('content-type') || ''
-  if (!contentType.toLowerCase().includes('application/json')) {
-    throw new ApiError('Serverdelen är inte tillgänglig på den statiska webbplatsen.', 503, 'BACKEND_UNAVAILABLE')
-  }
+  const timeout = AbortSignal.timeout(15000)
+  const signal = options.signal ? AbortSignal.any([options.signal, timeout]) : timeout
+  const headers = new Headers(options.headers)
+  if (options.body && !headers.has('Content-Type')) headers.set('Content-Type', 'application/json')
   try {
-    data = await response.json()
-  } catch {
-    data = {}
+    const response = await fetch(url, {
+      credentials: 'same-origin',
+      ...options,
+      headers,
+      signal,
+    })
+    let data: unknown = {}
+    const contentType = response.headers.get('content-type') || ''
+    if (!contentType.toLowerCase().includes('application/json')) {
+      throw new ApiError('Serverdelen är inte tillgänglig på den statiska webbplatsen.', 503, 'BACKEND_UNAVAILABLE')
+    }
+    try {
+      data = await response.json()
+    } catch {
+      signal.throwIfAborted()
+      throw new ApiError('Servern skickade ett oläsbart svar. Försök igen.', 502, 'INVALID_RESPONSE')
+    }
+    if (!response.ok) {
+      const payload = data && typeof data === 'object' ? data as { error?: string; code?: string } : {}
+      throw new ApiError(payload.error || 'Något gick fel. Försök igen.', response.status, payload.code)
+    }
+    return data as T
+  } catch (reason) {
+    if (timeout.aborted && !options.signal?.aborted) {
+      throw new ApiError('Servern svarade inte i tid. Försök igen.', 504, 'REQUEST_TIMEOUT')
+    }
+    throw reason
   }
-  if (!response.ok) {
-    const payload = data as { error?: string; code?: string }
-    throw new ApiError(payload.error || 'Något gick fel. Försök igen.', response.status, payload.code)
-  }
-  return data as T
 }
 
 export function post<T>(url: string, payload: unknown): Promise<T> {
