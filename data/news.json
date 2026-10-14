@@ -1,9 +1,11 @@
 {
-  "generated_at": "2026-10-14T00:54:23.405230Z",
+  "generated_at": "2026-10-14T14:54:26.963340Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "06777a3a79f65d457b63"
+    "da4291a9aef0f7ed7b48",
+    "38a03a3022753d958ed7",
+    "3e6695db3fa633d33dab"
   ],
   "fetch_errors": [],
   "items": [
@@ -465,6 +467,34 @@
       }
     },
     {
+      "id": "da4291a9aef0f7ed7b48",
+      "title": "Grönska nära hemmet i städer kopplas till lägre risk för demens",
+      "url": "https://forskning.se/2026/10/14/gronska-stader-demens",
+      "source": "Forskning.se",
+      "language": "sv",
+      "published_at": "2026-10-14T07:34:43Z",
+      "source_excerpt": "En studie från Stockholms universitet och Karolinska institutet har undersökt Två saker verkar hänga ihop – när den ena ändras, ändras ofta den andra också. Men det betyder inte att den ena orsakar den ... Läs mer \" href=\"https://forskning.se/ordlista/korrelation/\" data-mobile-support=\"0\" data-gt-translate-attributes='[{\"attribute\":\"data-cmtooltip\", \"format\":\"html\"}]' tabindex='0' role='link'>samb",
+      "agent_summary": "",
+      "source_fingerprint": "05505d1b1c12958cc6ab",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/10/gronska-stader-demens-1024x576.jpg",
+      "source_image_alt": "Grönska nära hemmet i städer kopplas till lägre risk för demens",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/10/14/gronska-stader-demens",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/10/14/gronska-stader-demens",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "lägre risk"
+      ],
+      "public_eligible": true
+    },
+    {
       "id": "410fdd710aa09ac4ce56",
       "title": "Ny krokodilart upptäckt",
       "url": "https://forskning.se/2026/10/13/ny-krokodilart-upptackt",
@@ -884,6 +914,42 @@
       }
     },
     {
+      "id": "38a03a3022753d958ed7",
+      "title": "Grönska utanför dörren kopplas till lägre risk för demens",
+      "url": "https://www.extrakt.se/gronska-utanfor-dorren-kopplas-till-lagre-risk-for-demens",
+      "source": "Extrakt",
+      "language": "sv",
+      "published_at": "2026-10-14T11:50:26Z",
+      "source_excerpt": "Äldre stadsbor som har mycket grönska nära bostaden löper lägre risk att utveckla demens. Det visar en ny studie där närmare 3 000 personer följdes under 16 år.",
+      "agent_summary": "",
+      "source_fingerprint": "67d5edb6ed1df994136b",
+      "category": "Miljö",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "lägre risk"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/586669d7-e165-482e-859f-d434c3bef9c5.webp",
+        "alt": "Grönska utanför dörren kopplas till lägre risk för demens",
+        "user_image_id": "586669d7-e165-482e-859f-d434c3bef9c5",
+        "match_score": 0.2669,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/38a03a3022753d958ed7-67d5edb6-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "67d5edb6ed1df994136b",
+        "width": 1280,
+        "height": 848,
+        "sha256": "228d0b0004fcf4dbe231d5edb1b6c99120fdd6ce922e84edec80fd50037f6a7e"
+      }
+    },
+    {
       "id": "649b3d4c42f63bb75c4f",
       "title": "Samisk mat till äldre kan ge dubbla hållbarhetsvinster",
       "url": "https://www.extrakt.se/samisk-mat-till-aldre-kan-ge-dubbla-hallbarhetsvinster",
@@ -1211,40 +1277,31 @@
       "public_eligible": true
     },
     {
-      "id": "7c2ae9bbfedd144ee166",
-      "title": "Nya milstolpar för Sveriges ängshökar",
-      "url": "https://www.natursidan.se/nyheter/nya-milstolpar-for-sveriges-angshokar",
-      "source": "Natursidan",
+      "id": "3e6695db3fa633d33dab",
+      "title": "Astmaläkemedel gav barn med muskelsjukdom bättre motorik och styrka",
+      "url": "https://forskning.se/2026/10/14/astmalakemedel-barn-muskelsjukdom",
+      "source": "Forskning.se",
       "language": "sv",
-      "published_at": "2026-10-07T17:33:54Z",
-      "source_excerpt": "Åtgärdsprogrammet för ängshök firar 15 år med ett framgångsrikt år.",
+      "published_at": "2026-10-14T11:21:33Z",
+      "source_excerpt": "Ett vanligt astmaläkemedel har visat sig kunna förbättra motorik och muskelstyrka hos barn med kongenitala myopatier, en grupp obotliga muskelsjukdomar. I en studie kunde barn som fick läkemedlet både gå och resa sig snabbare. Astmaläkemedel gav barn med muskelsjukdom bättre motorik och styrka forskning.se .",
       "agent_summary": "",
-      "source_fingerprint": "55c6989c31cf5106c4f7",
-      "category": "Natur",
+      "source_fingerprint": "8a89e733e5654f1115d5",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/10/lakemedel-muskelsjukdom-1024x576.jpg",
+      "source_image_alt": "Astmaläkemedel gav barn med muskelsjukdom bättre motorik och styrka",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/10/14/astmalakemedel-barn-muskelsjukdom",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/10/14/astmalakemedel-barn-muskelsjukdom",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
       "source_tier_bonus": 5,
       "positivity_score": 6,
       "positive_signals": [
         "curated-positive-source",
-        "firar"
+        "forskning"
       ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/4412043e-894c-4672-8414-e2bae48bf2da-1.webp",
-        "alt": "Nya milstolpar för Sveriges ängshökar",
-        "user_image_id": "4412043e-894c-4672-8414-e2bae48bf2da-1",
-        "match_score": 0.2894,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/7c2ae9bbfedd144ee166-55c6989c-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "55c6989c31cf5106c4f7",
-        "width": 1280,
-        "height": 848,
-        "sha256": "7cb9740b83c1133c062cc99a0d3bf5b88a8af0d5a7a6d07985538bd2a3f61fcd"
-      }
+      "public_eligible": true
     },
     {
       "id": "56c225a54e232fce1fea",
@@ -1472,63 +1529,6 @@
       }
     },
     {
-      "id": "3c3a6cec5a04936b8dc4",
-      "title": "David Attenborough ger hopp om havets framtid",
-      "url": "https://fof.se/artikel/david-attenborough-ger-hopp-om-havets-framtid",
-      "source": "Forskning & Framsteg",
-      "language": "sv",
-      "published_at": "2026-10-13T14:23:48Z",
-      "source_excerpt": "Ibland när jag läser på om lemurer på Madagaskar eller om kejsarpingviner på Antarktis händer det att jag hör David Attenboroughs karaktäristiska stämma någonstans i … The post David Attenborough ger hopp om havets framtid appeared first on Forskning & Framsteg .",
-      "agent_summary": "",
-      "source_fingerprint": "88f98fd2449220820d39",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 9,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "framsteg",
-        "hopp"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/9d2d5fa4-a804-4fc4-982e-03b147d2b634.webp",
-        "alt": "David Attenborough ger hopp om havets framtid",
-        "user_image_id": "9d2d5fa4-a804-4fc4-982e-03b147d2b634",
-        "match_score": 0.24,
-        "width": 1280,
-        "height": 848
-      }
-    },
-    {
-      "id": "06777a3a79f65d457b63",
-      "title": "Kraftsamling för lokal energiomställning",
-      "url": "https://viablecities.se/kraftsamling-for-lokal-energiomstallning",
-      "source": "Viable Cities",
-      "language": "sv",
-      "published_at": "2026-10-09T12:06:45Z",
-      "source_excerpt": "Sverige står inför en kraftigt ökad elektrifiering som går hand i hand med klimatomställningen. Samtidigt riskerar nätkapacitet, effekttoppar och långa investeringstider att bli flaskhalsar. Viable Cities och Lunds kommun samlade därför tidigare i september kommuner, energibolag, myndigheter och andra aktörer för att diskutera hur lokala energilösningar kan skalas och bidra till omställningen av d",
-      "agent_summary": "",
-      "source_fingerprint": "06a23d0b0d0c13b29573",
-      "category": "Samhälle",
-      "source_tier_bonus": 5,
-      "positivity_score": 8,
-      "positive_signals": [
-        "curated-positive-source",
-        "lösning",
-        "omställning"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/868bab25-bbad-423f-871d-cba0ddc6a2f3.webp",
-        "alt": "Kraftsamling för lokal energiomställning",
-        "user_image_id": "868bab25-bbad-423f-871d-cba0ddc6a2f3",
-        "match_score": 0.253,
-        "width": 1280,
-        "height": 848
-      }
-    },
-    {
       "id": "62fa7170147614368439",
       "title": "Wild Serval Kittens Found After Fire Make A Comeback",
       "url": "https://www.dailymotion.com/video/xbjlfve",
@@ -1538,7 +1538,7 @@
       "source_excerpt": "They may have lost their tails, but nothing slowed these two down! Rescued from a burned field at just three weeks old, these two serval kittens had a long recovery ahead of them. Dodo editor Valentina shares their journey alongside Deirdre and Dr. Venter from Wild And Free Rehab as they grow stronger and get closer to returning to the wild.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/fcqAQ1gneg4feCugq/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/fcqAQ1gneg4feCugq/x720",
       "source_image_alt": "Wild Serval Kittens Found After Fire Make A Comeback",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbjlfve",
@@ -1574,7 +1574,7 @@
       "source_excerpt": "She was actually 5 months old and desperately needed someone to help her. Bambi was so malnourished when All Creatures Great and Small rescued her that they initially thought she was only 9 weeks old. Dodo editor Monica shares Bambi’s transformation and the moment she returned to surprise her rescuers looking like a completely different pup.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/fcd4Q1gndKdJDt0Jv/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/fcd4Q1gndKdJDt0Jv/x720",
       "source_image_alt": "Puppy Mistaken For 9 Weeks Old Makes Amazing Comeback",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbjkahm",
@@ -1636,34 +1636,6 @@
       "public_eligible": false
     },
     {
-      "id": "97e1e09cfe9b2e4642fe",
-      "title": "NASA Science, Cargo Launch on 35th SpaceX Resupply Mission to Station",
-      "url": "https://www.nasa.gov/news-release/nasa-science-cargo-launch-on-35th-spacex-resupply-mission-to-station",
-      "source": "NASA News Releases",
-      "language": "en",
-      "published_at": "2026-10-13T11:12:18Z",
-      "source_excerpt": "NASA’s SpaceX 35th commercial resupply mission lifted off at 6:33 a.m. EDT Tuesday aboard a Falcon 9 rocket from Space Launch Complex 40 at Cape Canaveral Space Force Station in Florida, carrying more than 6,300 pounds of supplies and hardware, bound for the International Space Station. Following its successful launch, the SpaceX Dragon spacecraft will […]",
-      "agent_summary": "",
-      "source_fingerprint": "21aa8cad1f58af78694d",
-      "source_tier_bonus": 1,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "mission",
-        "science",
-        "success"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/586669d7-e165-482e-859f-d434c3bef9c5.webp",
-        "alt": "NASA Science, Cargo Launch on 35th SpaceX Resupply Mission to Station",
-        "user_image_id": "586669d7-e165-482e-859f-d434c3bef9c5",
-        "match_score": 0.2524,
-        "width": 1280,
-        "height": 848
-      }
-    },
-    {
       "id": "1cf350b3106fdd37c06d",
       "title": "She couldn't afford pet-friendly housing, so she gave up her dog of 10 years. Her community raised $18,000 to reunite them",
       "url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
@@ -1689,6 +1661,33 @@
         "friend"
       ],
       "public_eligible": false
+    },
+    {
+      "id": "c9fa81a8629128b8ccbc",
+      "title": "The women putting community at the heart of elephant conservation",
+      "url": "https://www.positive.news/environment/the-women-putting-community-at-the-heart-of-elephant-conservation",
+      "source": "Positive News",
+      "language": "en",
+      "published_at": "2026-10-06T07:00:43Z",
+      "source_excerpt": "Across Africa, women are challenging old assumptions about who conservation is for – and who gets to lead it The post The women putting community at the heart of elephant conservation appeared first on Positive News .",
+      "agent_summary": "",
+      "source_fingerprint": "75ab83efae80efb92aab",
+      "source_tier_bonus": 2,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "community",
+        "conservation"
+      ],
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/868bab25-bbad-423f-871d-cba0ddc6a2f3.webp",
+        "alt": "The women putting community at the heart of elephant conservation",
+        "user_image_id": "868bab25-bbad-423f-871d-cba0ddc6a2f3",
+        "match_score": 0.253,
+        "width": 1280,
+        "height": 848
+      }
     }
   ]
 }
