@@ -55,7 +55,7 @@ describe('news normalizer', () => {
     expect(item.location).toBe('')
     expect(item.excerptLanguage).toBe('en')
     expect(item.image.kind).toBe('ai')
-    expect(item.image.url).toBe('/news-images/library/02-science-discovery.webp')
+    expect(item.image.url).toBe('/news-images/ai/science.webp')
   })
 
   it('keeps the animal category and accepts only a validated YouTube embed', () => {

@@ -1,5 +1,6 @@
 import json
 import os
+import re
 import subprocess
 import tempfile
 import unittest
@@ -71,6 +72,20 @@ class PrepareStaticBuildTests(unittest.TestCase):
             self.assertIn('"@type":"NewsArticle"', article_html)
             self.assertIn('src="/assets/app.js"', article_html)
             self.assertNotIn('<link rel="canonical" href="https://ljusglimt.daniel-eklund1981.workers.dev/">', article_html)
+
+    def test_category_fallbacks_reference_real_webp_files(self):
+        categories = ["Hälsa", "Miljö", "Natur", "Vetenskap", "Kultur", "Människor", "Framsteg", "Djur", "unknown"]
+        articles = [self.valid_seed(slug=f"category-{index}", category=category) for index, category in enumerate(categories)]
+        temporary_directory, output, result = self.run_build(articles)
+        with temporary_directory:
+            self.assertEqual(result.returncode, 0, result.stderr)
+            for article in articles:
+                html = (output / "seo" / "articles" / f"{article['slug']}.html").read_text(encoding="utf-8")
+                image = re.search(r'<meta property="og:image" content="https://ljusglimt\.daniel-eklund1981\.workers\.dev([^\"]+)">', html)
+                self.assertIsNotNone(image)
+                data = (ROOT / "public" / image.group(1).lstrip("/")).read_bytes()
+                self.assertEqual(data[:4], b"RIFF")
+                self.assertEqual(data[8:12], b"WEBP")
 
     def test_rejects_traversal_and_duplicate_slugs_before_article_writes(self):
         for articles in (

@@ -24,20 +24,14 @@ const absoluteImageUrl = (value = '') => {
   if (httpsUrl) return httpsUrl
   return /^\/news-images\/(?:ai|generated|library|user)\/[A-Za-z0-9._/-]+$/.test(value) && !value.includes('..') ? `${siteUrl}${value}` : ''
 }
-const categoryImages = {
-  Hälsa: ['01-health-recovery.webp', '12-clean-water.webp', '14-mental-wellbeing.webp', '15-medical-breakthrough.webp'],
-  Miljö: ['03-clean-energy.webp', '04-ocean-restoration.webp', '11-sustainable-agriculture.webp', '12-clean-water.webp', '16-green-transport.webp', '17-circular-economy.webp'],
-  Natur: ['04-ocean-restoration.webp', '05-forest-biodiversity.webp', '11-sustainable-agriculture.webp', '19-wildlife-protection.webp'],
-  Vetenskap: ['02-science-discovery.webp', '09-technology-for-good.webp', '10-space-exploration.webp', '15-medical-breakthrough.webp'],
-  Kultur: ['08-culture-creativity.webp', '07-education-learning.webp', '18-peace-cooperation.webp'],
-  Människor: ['06-community-cooperation.webp', '07-education-learning.webp', '13-safe-homes.webp', '18-peace-cooperation.webp', '20-entrepreneurship-solutions.webp'],
-  Framsteg: ['03-clean-energy.webp', '07-education-learning.webp', '09-technology-for-good.webp', '16-green-transport.webp', '17-circular-economy.webp', '20-entrepreneurship-solutions.webp'],
-  Djur: ['19-wildlife-protection.webp', '05-forest-biodiversity.webp', '04-ocean-restoration.webp'],
-}
+const categoryImageManifest = JSON.parse(await readFile(resolve(root, 'public/news-images/ai/manifest.json'), 'utf8'))
+const categoryImages = Object.fromEntries(categoryImageManifest.assets.map(asset => [asset.category, [asset.file]]))
+categoryImages.Djur = categoryImages.Natur
+
 const resolveCategoryImage = (category, seed = '') => {
   const choices = categoryImages[category] || categoryImages.Framsteg
   const hash = Array.from(seed).reduce((value, character) => ((value * 31) + character.charCodeAt(0)) >>> 0, 0)
-  return `/news-images/library/${choices[hash % choices.length]}`
+  return `/news-images/ai/${choices[hash % choices.length]}`
 }
 
 const resolveSourceImage = (article) => article.source_image_verified === true
