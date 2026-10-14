@@ -947,6 +947,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "228d0b0004fcf4dbe231d5edb1b6c99120fdd6ce922e84edec80fd50037f6a7e"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/38a03a3022753d958ed7-67d5edb6ed1df994136b-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Grönska utanför dörren kopplas till lägre risk för demens",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "67d5edb6ed1df994136b",
+        "width": 1280,
+        "height": 848,
+        "sha256": "ce1ffd7049a64e368fde36cd21e45e0768af0a4fbc9270744188021db2a3a659",
+        "generated_at": "2026-10-14T14:54:51Z"
       }
     },
     {
