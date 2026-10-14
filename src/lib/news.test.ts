@@ -1,7 +1,26 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { fetchNews, inferCategory, isSuitableForPublicFeed, normalizeFetched, normalizeSeed, selectDailyHero, selectFetchedHighlights, selectWorldHighlights } from './news'
 
-afterEach(() => { vi.unstubAllGlobals() })
+afterEach(() => { vi.unstubAllGlobals(); vi.restoreAllMocks(); vi.useRealTimers() })
+
+it('uses the static news fallback when the API never responds', async () => {
+  vi.useFakeTimers()
+  vi.spyOn(AbortSignal, 'timeout').mockImplementation(ms => {
+    const controller = new AbortController()
+    setTimeout(() => controller.abort(), ms)
+    return controller.signal
+  })
+  vi.stubGlobal('fetch', vi.fn((url: string, options: RequestInit) => {
+    if (url.endsWith('/api/news')) return new Promise((_resolve, reject) => options.signal?.addEventListener('abort', () => reject(new Error('aborted'))))
+    return Promise.resolve(new Response(JSON.stringify(url.endsWith('/data/news.json') ? {items: [], generated_at: '2026-10-14T10:00:00Z'} : {articles: []}), {headers: {'Content-Type': 'application/json'}}))
+  }))
+  const pending = fetchNews()
+  await vi.advanceTimersByTimeAsync(10000)
+  const result = await pending
+  expect(result.fetchedAvailable).toBe(true)
+  expect(result.seedAvailable).toBe(true)
+  expect(result.latestFetchedAt).toBe('2026-10-14T10:00:00Z')
+})
 
 describe('news normalizer', () => {
   const generatedImage = {
@@ -36,7 +55,7 @@ describe('news normalizer', () => {
     expect(item.location).toBe('')
     expect(item.excerptLanguage).toBe('en')
     expect(item.image.kind).toBe('ai')
-    expect(item.image.url).toBe('/news-images/ai/science.webp')
+    expect(item.image.url).toBe('/news-images/library/02-science-discovery.webp')
   })
 
   it('keeps the animal category and accepts only a validated YouTube embed', () => {
@@ -263,7 +282,7 @@ describe('news normalizer', () => {
 
     const result = await fetchNews()
 
-    expect(mockedFetch).toHaveBeenNthCalledWith(3, '/data/news.json', undefined)
+    expect(mockedFetch).toHaveBeenNthCalledWith(3, '/data/news.json', expect.objectContaining({signal: expect.any(AbortSignal)}))
     expect(result.fetchedAvailable).toBe(true)
     expect(result.fetchedCount).toBe(1)
     expect(result.warning).toBe('')
