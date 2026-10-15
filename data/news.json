@@ -1,8 +1,11 @@
 {
-  "generated_at": "2026-10-15T00:18:16.269331Z",
+  "generated_at": "2026-10-15T14:41:37.033020Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "306e78fbe0fc692dcb33",
+    "a266d73316c3b510cc96"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -742,34 +745,6 @@
       }
     },
     {
-      "id": "6930abb2a14628820211",
-      "title": "Stamcellsbehandling mot parkinson visar lovande resultat",
-      "url": "https://forskning.se/2026/08/13/stamcellsbehandling-mot-parkinson-visar-lovande-resultat",
-      "source": "Forskning.se",
-      "language": "sv",
-      "published_at": "2026-08-13T11:19:34Z",
-      "source_excerpt": "Vid Parkinsons sjukdom försvinner nervceller i hjärnan som producerar dopamin. Det orsakar symtom som skakningar, stelhet och svårigheter att röra sig. Dagens behandlingar kompenserar för bristen på dopamin. Men med tiden kan effekten avta, samtidigt som behandlingarna kan ge biverkningar. Mål att ersätta nervceller I en första En klinisk studie är forskning på människor för att förstå sjukdomar o",
-      "agent_summary": "",
-      "source_fingerprint": "d0dc32f2bd3565b896ff",
-      "source_image_verified": true,
-      "source_image_url": "https://forskning.se/app/uploads/2026/08/fibrer-nervtrad-1024x576.jpg",
-      "source_image_alt": "Stamcellsbehandling mot parkinson visar lovande resultat",
-      "source_image_credit": "Forskning.se",
-      "source_image_rights_url": "https://forskning.se/2026/08/13/stamcellsbehandling-mot-parkinson-visar-lovande-resultat",
-      "source_image_creator": "Forskning.se",
-      "source_image_source_url": "https://forskning.se/2026/08/13/stamcellsbehandling-mot-parkinson-visar-lovande-resultat",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 8,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "lovande"
-      ],
-      "public_eligible": true
-    },
-    {
       "id": "5b6153c6015de28addb4",
       "title": "Miljarder i ”hållbara” lån till palmolje­företag",
       "url": "https://www.natursidan.se/nyheter/miljarder-i-hallbara-lan-till-palmoljeforetag",
@@ -844,34 +819,6 @@
       "public_eligible": true
     },
     {
-      "id": "057865da8dd0eb6e51f3",
-      "title": "Längre pappaledighet kopplas till lägre risk för depression",
-      "url": "https://forskning.se/2026/06/19/langre-pappaledighet-kopplas-lagre-risk-depression",
-      "source": "Forskning.se",
-      "language": "sv",
-      "published_at": "2026-06-19T06:00:00Z",
-      "source_excerpt": "Forskning om föräldraledighet har traditionellt fokuserat på mammors hälsa, medan pappors psykiska hälsa studerats i mindre utsträckning. I en studie från bland annat Karolinska institutet har forskare nu följt 746 svenska pappor under 18 månader. Studien startade när deras barn var omkring nio månader gamla och avslutades vid en uppföljning när barnen var cirka 27 […] The post Längre pappaledighe",
-      "agent_summary": "",
-      "source_fingerprint": "fdba70adc681d7c1b16d",
-      "source_image_verified": true,
-      "source_image_url": "https://forskning.se/app/uploads/2026/06/pappor-foraldraledighet-psykisk-halsa-1024x576.jpg",
-      "source_image_alt": "Längre pappaledighet kopplas till lägre risk för depression",
-      "source_image_credit": "Forskning.se",
-      "source_image_rights_url": "https://forskning.se/2026/06/19/langre-pappaledighet-kopplas-lagre-risk-depression",
-      "source_image_creator": "Forskning.se",
-      "source_image_source_url": "https://forskning.se/2026/06/19/langre-pappaledighet-kopplas-lagre-risk-depression",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 8,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "lägre risk"
-      ],
-      "public_eligible": true
-    },
-    {
       "id": "883aa62a7813099dd8b2",
       "title": "ESA och DON’T NOD ger sig ut på en resa till planeten Persephone i Aphelion",
       "url": "https://www.esa.int/Space_in_Member_States/Sweden/ESA_och_DON_T_NOD_ger_sig_ut_paa_en_resa_till_planeten_Persephone_i_Aphelion",
@@ -908,6 +855,34 @@
         "height": 848,
         "sha256": "da35e92250c0515d62aedd5149cdcfa9db32493eb90f22ded0138d83d4348efb"
       }
+    },
+    {
+      "id": "306e78fbe0fc692dcb33",
+      "title": "Skolvalet har inte brutit segregationen i gymnasiet",
+      "url": "https://forskning.se/2026/10/15/skolvalet-har-inte-brutit-segregationen-i-gymnasiet",
+      "source": "Forskning.se",
+      "language": "sv",
+      "published_at": "2026-10-15T11:55:12Z",
+      "source_excerpt": "Skolvalet har inte minskat sambandet mellan var elever bor och vilka skolor de går i. Samtidigt har uppdelningen mellan elever med olika socioekonomisk bakgrund och betyg ökat under de senaste tre decennierna. Det visar en studie av Stockholmsregionens gymnasiemarknad från Göteborgs och Uppsala universitet. Skolvalet har inte brutit segregationen i gymnasiet forskning.se .",
+      "agent_summary": "",
+      "source_fingerprint": "739e0214a288ef5feae2",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/10/gymnasiet-skolval-segregation-1024x576.jpg",
+      "source_image_alt": "Skolvalet har inte brutit segregationen i gymnasiet",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/10/15/skolvalet-har-inte-brutit-segregationen-i-gymnasiet",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/10/15/skolvalet-har-inte-brutit-segregationen-i-gymnasiet",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "elever",
+        "forskning"
+      ],
+      "public_eligible": true
     },
     {
       "id": "38a03a3022753d958ed7",
@@ -1525,6 +1500,34 @@
       }
     },
     {
+      "id": "a266d73316c3b510cc96",
+      "title": "Premiär för Forskning & Framstegs poddserie om adhd",
+      "url": "https://fof.se/artikel/premiar-for-poddserie-om-adhd",
+      "source": "Forskning & Framsteg",
+      "language": "sv",
+      "published_at": "2026-10-14T06:49:10Z",
+      "source_excerpt": "När journalisten Anna Lillkung fick diagnosen adhd för tio år sedan blev den en välkommen förklaring till en omöjlig tillvaro. I dag vet hon knappt längre … The post Premiär för Forskning & Framstegs poddserie om adhd appeared first on Forskning & Framsteg .",
+      "agent_summary": "",
+      "source_fingerprint": "c634e69af47234ad493a",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 9,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "framsteg"
+      ],
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/9d2d5fa4-a804-4fc4-982e-03b147d2b634.webp",
+        "alt": "Premiär för Forskning & Framstegs poddserie om adhd",
+        "user_image_id": "9d2d5fa4-a804-4fc4-982e-03b147d2b634",
+        "match_score": 0.24,
+        "width": 1280,
+        "height": 848
+      }
+    },
+    {
       "id": "62fa7170147614368439",
       "title": "Wild Serval Kittens Found After Fire Make A Comeback",
       "url": "https://www.dailymotion.com/video/xbjlfve",
@@ -1570,7 +1573,7 @@
       "source_excerpt": "She was actually 5 months old and desperately needed someone to help her. Bambi was so malnourished when All Creatures Great and Small rescued her that they initially thought she was only 9 weeks old. Dodo editor Monica shares Bambi’s transformation and the moment she returned to surprise her rescuers looking like a completely different pup.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/fcd4Q1gndKdJDt0Jv/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/fcd4Q1gndKdJDt0Jv/x720",
       "source_image_alt": "Puppy Mistaken For 9 Weeks Old Makes Amazing Comeback",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbjkahm",
@@ -1606,7 +1609,7 @@
       "source_excerpt": "Just a completely normal family dinner! Lula and her pony Simba have been inseparable from the beginning, to the point that he’ll casually walk right into the kitchen to join her for dinner. Dodo editor Valentina talks with Lula’s parents about how their friendship started and what life is like when your toddler’s best friend happens to be a pony.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/fcd4k1gndKcAAXhYk/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/fcd4k1gndKcAAXhYk/x720",
       "source_image_alt": "Toddler’s Pony Best Friend Joins Her For Dinner",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbjkai6",
