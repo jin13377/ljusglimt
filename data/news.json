@@ -1,12 +1,8 @@
 {
-  "generated_at": "2026-10-14T14:54:26.963340Z",
+  "generated_at": "2026-10-15T00:18:16.269331Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [
-    "da4291a9aef0f7ed7b48",
-    "38a03a3022753d958ed7",
-    "3e6695db3fa633d33dab"
-  ],
+  "new_item_ids": [],
   "fetch_errors": [],
   "items": [
     {
@@ -947,17 +943,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "228d0b0004fcf4dbe231d5edb1b6c99120fdd6ce922e84edec80fd50037f6a7e"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/38a03a3022753d958ed7-67d5edb6ed1df994136b-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: Grönska utanför dörren kopplas till lägre risk för demens",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "67d5edb6ed1df994136b",
-        "width": 1280,
-        "height": 848,
-        "sha256": "ce1ffd7049a64e368fde36cd21e45e0768af0a4fbc9270744188021db2a3a659",
-        "generated_at": "2026-10-14T14:54:51Z"
       }
     },
     {
@@ -1549,7 +1534,7 @@
       "source_excerpt": "They may have lost their tails, but nothing slowed these two down! Rescued from a burned field at just three weeks old, these two serval kittens had a long recovery ahead of them. Dodo editor Valentina shares their journey alongside Deirdre and Dr. Venter from Wild And Free Rehab as they grow stronger and get closer to returning to the wild.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/fcqAQ1gneg4feCugq/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/fcqAQ1gneg4feCugq/x720",
       "source_image_alt": "Wild Serval Kittens Found After Fire Make A Comeback",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbjlfve",
