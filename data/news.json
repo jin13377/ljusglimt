@@ -1309,6 +1309,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "af334dd8350b169d06d1c1b83f330aeb5cdaee9061df3aa3e626cff43b287957"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/ad090236fd6a496a23f3-f2c121ff6fcf4d06ace3-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Träning gav mätbar förbättring i KOL-lungan",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "f2c121ff6fcf4d06ace3",
+        "width": 1280,
+        "height": 848,
+        "sha256": "e50889c0d3e9b0b4e2ccddcd359290804ab757ce45070e8a4f234e86f998f0d6",
+        "generated_at": "2026-10-16T14:35:02Z"
       }
     },
     {
