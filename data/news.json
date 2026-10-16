@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-10-16T00:06:10.484754Z",
+  "generated_at": "2026-10-16T14:34:34.582315Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "53bbcf1ad4102f256186"
+    "9a4f3c59b6206fd4554e",
+    "ad090236fd6a496a23f3"
   ],
   "fetch_errors": [],
   "items": [
@@ -856,6 +857,34 @@
       }
     },
     {
+      "id": "9a4f3c59b6206fd4554e",
+      "title": "Så begränsas barns rörelse i skolan",
+      "url": "https://forskning.se/2026/10/16/sa-begransas-barns-rorelse-i-skolan",
+      "source": "Forskning.se",
+      "language": "sv",
+      "published_at": "2026-10-16T07:46:52Z",
+      "source_excerpt": "Enligt läroplanen ska skolan sträva efter att erbjuda alla elever daglig fysisk aktivitet, inom ramen för hela skoldagen. Men en rad osynliga hinder finns för barns rörelse, i skolmiljön. Det framgår av en ny Vetenskapligt arbete som doktorander gör under sin utbildning för att bli doktor.&lt;br/&gt;Avhandlingen visar doktorandens egen ... Läs mer \" href=\"https://forskning.se/ordlista/avhandling/\"",
+      "agent_summary": "",
+      "source_fingerprint": "f0b6db79886c5fe58702",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/10/fotboll-1-1024x576.jpg",
+      "source_image_alt": "Så begränsas barns rörelse i skolan",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/10/16/sa-begransas-barns-rorelse-i-skolan",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/10/16/sa-begransas-barns-rorelse-i-skolan",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "elever",
+        "forskning"
+      ],
+      "public_eligible": true
+    },
+    {
       "id": "306e78fbe0fc692dcb33",
       "title": "Skolvalet har inte brutit segregationen i gymnasiet",
       "url": "https://forskning.se/2026/10/15/skolvalet-har-inte-brutit-segregationen-i-gymnasiet",
@@ -1247,31 +1276,40 @@
       "public_eligible": true
     },
     {
-      "id": "3e6695db3fa633d33dab",
-      "title": "Astmaläkemedel gav barn med muskelsjukdom bättre motorik och styrka",
-      "url": "https://forskning.se/2026/10/14/astmalakemedel-barn-muskelsjukdom",
-      "source": "Forskning.se",
+      "id": "ad090236fd6a496a23f3",
+      "title": "Träning gav mätbar förbättring i KOL-lungan",
+      "url": "https://www.vetenskaphalsa.se/traning-gav-matbar-forbattring-i-kol-lungan",
+      "source": "Vetenskap & hälsa",
       "language": "sv",
-      "published_at": "2026-10-14T11:21:33Z",
-      "source_excerpt": "Ett vanligt astmaläkemedel har visat sig kunna förbättra motorik och muskelstyrka hos barn med kongenitala myopatier, en grupp obotliga muskelsjukdomar. I en studie kunde barn som fick läkemedlet både gå och resa sig snabbare. Astmaläkemedel gav barn med muskelsjukdom bättre motorik och styrka forskning.se .",
+      "published_at": "2026-10-16T05:06:00Z",
+      "source_excerpt": "Att personer med KOL mår bättre och får bättre fysisk kapacitet av träning är känt sedan tidigare. Nu visar en multicenterstudie ledd från Lunds universitet i samarbete med Uppsala universitet att träning också följs av mätbara förändringar i lungornas små luftvägar – förbättringar som till stor del inte fångas av vanliga lungfunktionstester. Över 400 miljoner […]",
       "agent_summary": "",
-      "source_fingerprint": "8a89e733e5654f1115d5",
-      "source_image_verified": true,
-      "source_image_url": "https://forskning.se/app/uploads/2026/10/lakemedel-muskelsjukdom-1024x576.jpg",
-      "source_image_alt": "Astmaläkemedel gav barn med muskelsjukdom bättre motorik och styrka",
-      "source_image_credit": "Forskning.se",
-      "source_image_rights_url": "https://forskning.se/2026/10/14/astmalakemedel-barn-muskelsjukdom",
-      "source_image_creator": "Forskning.se",
-      "source_image_source_url": "https://forskning.se/2026/10/14/astmalakemedel-barn-muskelsjukdom",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "category": "Vetenskap",
+      "source_fingerprint": "f2c121ff6fcf4d06ace3",
+      "category": "Hälsa",
       "source_tier_bonus": 5,
       "positivity_score": 6,
       "positive_signals": [
         "curated-positive-source",
-        "forskning"
+        "samarbete"
       ],
-      "public_eligible": true
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/41b44212-70c7-43df-9365-483ed4b08c49.webp",
+        "alt": "Träning gav mätbar förbättring i KOL-lungan",
+        "user_image_id": "41b44212-70c7-43df-9365-483ed4b08c49",
+        "match_score": 0.2361,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/ad090236fd6a496a23f3-f2c121ff-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "f2c121ff6fcf4d06ace3",
+        "width": 1280,
+        "height": 848,
+        "sha256": "af334dd8350b169d06d1c1b83f330aeb5cdaee9061df3aa3e626cff43b287957"
+      }
     },
     {
       "id": "56c225a54e232fce1fea",
@@ -1499,34 +1537,6 @@
       }
     },
     {
-      "id": "a266d73316c3b510cc96",
-      "title": "Premiär för Forskning & Framstegs poddserie om adhd",
-      "url": "https://fof.se/artikel/premiar-for-poddserie-om-adhd",
-      "source": "Forskning & Framsteg",
-      "language": "sv",
-      "published_at": "2026-10-14T06:49:10Z",
-      "source_excerpt": "När journalisten Anna Lillkung fick diagnosen adhd för tio år sedan blev den en välkommen förklaring till en omöjlig tillvaro. I dag vet hon knappt längre … The post Premiär för Forskning & Framstegs poddserie om adhd appeared first on Forskning & Framsteg .",
-      "agent_summary": "",
-      "source_fingerprint": "c634e69af47234ad493a",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 9,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "framsteg"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/9d2d5fa4-a804-4fc4-982e-03b147d2b634.webp",
-        "alt": "Premiär för Forskning & Framstegs poddserie om adhd",
-        "user_image_id": "9d2d5fa4-a804-4fc4-982e-03b147d2b634",
-        "match_score": 0.24,
-        "width": 1280,
-        "height": 848
-      }
-    },
-    {
       "id": "62fa7170147614368439",
       "title": "Wild Serval Kittens Found After Fire Make A Comeback",
       "url": "https://www.dailymotion.com/video/xbjlfve",
@@ -1536,7 +1546,7 @@
       "source_excerpt": "They may have lost their tails, but nothing slowed these two down! Rescued from a burned field at just three weeks old, these two serval kittens had a long recovery ahead of them. Dodo editor Valentina shares their journey alongside Deirdre and Dr. Venter from Wild And Free Rehab as they grow stronger and get closer to returning to the wild.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/fcqAQ1gneg4feCugq/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/fcqAQ1gneg4feCugq/x720",
       "source_image_alt": "Wild Serval Kittens Found After Fire Make A Comeback",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbjlfve",
@@ -1572,7 +1582,7 @@
       "source_excerpt": "She was actually 5 months old and desperately needed someone to help her. Bambi was so malnourished when All Creatures Great and Small rescued her that they initially thought she was only 9 weeks old. Dodo editor Monica shares Bambi’s transformation and the moment she returned to surprise her rescuers looking like a completely different pup.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/fcd4Q1gndKdJDt0Jv/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/fcd4Q1gndKdJDt0Jv/x720",
       "source_image_alt": "Puppy Mistaken For 9 Weeks Old Makes Amazing Comeback",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbjkahm",
