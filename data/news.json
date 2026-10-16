@@ -1,10 +1,9 @@
 {
-  "generated_at": "2026-10-15T14:41:37.033020Z",
+  "generated_at": "2026-10-16T00:06:10.484754Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "306e78fbe0fc692dcb33",
-    "a266d73316c3b510cc96"
+    "53bbcf1ad4102f256186"
   ],
   "fetch_errors": [],
   "items": [
@@ -1635,6 +1634,35 @@
       "public_eligible": false
     },
     {
+      "id": "53bbcf1ad4102f256186",
+      "title": "NASA Awards Enable Research, Technology to Build Future Workforce",
+      "url": "https://www.nasa.gov/learning-resources/nasa-awards-enable-research-technology-to-build-future-workforce",
+      "source": "NASA News Releases",
+      "language": "en",
+      "published_at": "2026-10-15T15:57:47Z",
+      "source_excerpt": "NASA has selected 12 U.S. institutions to receive $12 million to accelerate academic research and technology development in support of the agency’s priorities for exploring the Moon, Mars, and deep space. Through NASA’s Minority University Research and Education Project (MUREP) Space Technology Artemis Research (M‑STAR) initiative, selected institutions will each receive up to $1 million […]",
+      "agent_summary": "",
+      "source_fingerprint": "4b73d35e74f6d496c6d4",
+      "source_tier_bonus": 1,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "education",
+        "initiativ",
+        "research",
+        "technology"
+      ],
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/868bab25-bbad-423f-871d-cba0ddc6a2f3.webp",
+        "alt": "NASA Awards Enable Research, Technology to Build Future Workforce",
+        "user_image_id": "868bab25-bbad-423f-871d-cba0ddc6a2f3",
+        "match_score": 0.253,
+        "width": 1280,
+        "height": 848
+      }
+    },
+    {
       "id": "1cf350b3106fdd37c06d",
       "title": "She couldn't afford pet-friendly housing, so she gave up her dog of 10 years. Her community raised $18,000 to reunite them",
       "url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
@@ -1660,33 +1688,6 @@
         "friend"
       ],
       "public_eligible": false
-    },
-    {
-      "id": "c9fa81a8629128b8ccbc",
-      "title": "The women putting community at the heart of elephant conservation",
-      "url": "https://www.positive.news/environment/the-women-putting-community-at-the-heart-of-elephant-conservation",
-      "source": "Positive News",
-      "language": "en",
-      "published_at": "2026-10-06T07:00:43Z",
-      "source_excerpt": "Across Africa, women are challenging old assumptions about who conservation is for – and who gets to lead it The post The women putting community at the heart of elephant conservation appeared first on Positive News .",
-      "agent_summary": "",
-      "source_fingerprint": "75ab83efae80efb92aab",
-      "source_tier_bonus": 2,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "community",
-        "conservation"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/868bab25-bbad-423f-871d-cba0ddc6a2f3.webp",
-        "alt": "The women putting community at the heart of elephant conservation",
-        "user_image_id": "868bab25-bbad-423f-871d-cba0ddc6a2f3",
-        "match_score": 0.253,
-        "width": 1280,
-        "height": 848
-      }
     }
   ]
 }
