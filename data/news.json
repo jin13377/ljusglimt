@@ -1,9 +1,14 @@
 {
-  "generated_at": "2026-10-17T00:10:14.341668Z",
+  "generated_at": "2026-10-17T13:28:39.406420Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [],
-  "fetch_errors": [],
+  "fetch_errors": [
+    {
+      "source": "NASA News Releases",
+      "error": "HTTP Error 429: Too Many Requests"
+    }
+  ],
   "items": [
     {
       "id": "fe7045e43ac99852c9a6",
