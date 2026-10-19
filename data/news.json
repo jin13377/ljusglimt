@@ -313,6 +313,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "4614b28c15625d3760e35618120e9e4727f317130bf3c61347847e891a52fad4"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/352b1bf2b201e1b826ce-7f4b62b9bca5f5bf26cb-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Ny teknik ska bidra till hållbar naturturism",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "7f4b62b9bca5f5bf26cb",
+        "width": 1280,
+        "height": 848,
+        "sha256": "dc3a6066f4cdabd52b6613ff3061c349885d2d2e269af6180c85cefb9161555a",
+        "generated_at": "2026-10-19T16:49:22Z"
       }
     },
     {
