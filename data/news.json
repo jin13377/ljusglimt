@@ -1,8 +1,13 @@
 {
-  "generated_at": "2026-10-18T23:56:15.765782Z",
+  "generated_at": "2026-10-19T16:48:58.095183Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "352b1bf2b201e1b826ce",
+    "8201f10174e85d723a24",
+    "277664b74d5f09b3759f",
+    "0a2f9710d41a8ac57b3b"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -274,6 +279,43 @@
       "public_eligible": true
     },
     {
+      "id": "352b1bf2b201e1b826ce",
+      "title": "Ny teknik ska bidra till hållbar naturturism",
+      "url": "https://www.extrakt.se/ny-teknik-ska-bidra-till-hallbar-naturturism",
+      "source": "Extrakt",
+      "language": "sv",
+      "published_at": "2026-10-19T08:10:08Z",
+      "source_excerpt": "Vandringsleder, fiskesjöar och kanotvatten lockar allt fler besökare till värmländska Glaskogen. Här utvecklas nu ett nytt digitalt verktyg för hållbar turism, som ska göra det möjligt att planera smartare.",
+      "agent_summary": "",
+      "source_fingerprint": "7f4b62b9bca5f5bf26cb",
+      "category": "Miljö",
+      "source_tier_bonus": 5,
+      "positivity_score": 9,
+      "positive_signals": [
+        "curated-positive-source",
+        "hållbar",
+        "ny teknik"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/efb22cf6-5e7f-475d-9ed6-f6d0f7b940b6.webp",
+        "alt": "Ny teknik ska bidra till hållbar naturturism",
+        "user_image_id": "efb22cf6-5e7f-475d-9ed6-f6d0f7b940b6",
+        "match_score": 0.2949,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/352b1bf2b201e1b826ce-7f4b62b9-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "7f4b62b9bca5f5bf26cb",
+        "width": 1280,
+        "height": 848,
+        "sha256": "4614b28c15625d3760e35618120e9e4727f317130bf3c61347847e891a52fad4"
+      }
+    },
+    {
       "id": "7ca57fe6ab6b08eb74b1",
       "title": "Ny molekyl skyddade mot akut leversvikt i studie",
       "url": "https://nyheter.ki.se/ny-molekyl-skyddade-mot-akut-leversvikt-i-studie",
@@ -347,43 +389,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "cd1a1ef5ede588ff80b2a8b26e4d150e6144f36e2f686fa41d52a54b0e5a4497"
-      }
-    },
-    {
-      "id": "05434c76e9e84d537da6",
-      "title": "Forte-film lyfter nya svenska satsningar på demensforskning",
-      "url": "https://nyheter.ki.se/forte-film-lyfter-nya-svenska-satsningar-pa-demensforskning",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-09-23T00:00:00Z",
-      "source_excerpt": "En ny video från Forte sätter fokus på två nyligen finansierade svenska forskningscentrum som ska stärka demensforskningen under det kommande decenniet. I filmen diskuterar föreståndarna för TraCeDem vid Karolinska Institutet och DEMSAM vid Göteborgs universitet utmaningarna med demenssjukdomar och behovet av forskning som stödjer människor i vardagen.",
-      "agent_summary": "",
-      "source_fingerprint": "065b25a2a7d9823b71f5",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 9,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "satsning"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/efb22cf6-5e7f-475d-9ed6-f6d0f7b940b6.webp",
-        "alt": "Forte-film lyfter nya svenska satsningar på demensforskning",
-        "user_image_id": "efb22cf6-5e7f-475d-9ed6-f6d0f7b940b6",
-        "match_score": 0.2582,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/05434c76e9e84d537da6-065b25a2-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "065b25a2a7d9823b71f5",
-        "width": 1280,
-        "height": 848,
-        "sha256": "e4489ecd7e04731bbde6b229d82ec8b436baf79c8a76a6cc5aaa1422722dfa25"
       }
     },
     {
@@ -854,60 +859,41 @@
       }
     },
     {
-      "id": "9a4f3c59b6206fd4554e",
-      "title": "Så begränsas barns rörelse i skolan",
-      "url": "https://forskning.se/2026/10/16/sa-begransas-barns-rorelse-i-skolan",
-      "source": "Forskning.se",
+      "id": "8201f10174e85d723a24",
+      "title": "Minskad cancerrisk efter överviktskirurgi oavsett ålder och kön",
+      "url": "https://nyheter.ki.se/minskad-cancerrisk-efter-overviktskirurgi-oavsett-alder-och-kon",
+      "source": "Karolinska Institutet",
       "language": "sv",
-      "published_at": "2026-10-16T07:46:52Z",
-      "source_excerpt": "Enligt läroplanen ska skolan sträva efter att erbjuda alla elever daglig fysisk aktivitet, inom ramen för hela skoldagen. Men en rad osynliga hinder finns för barns rörelse, i skolmiljön. Det framgår av en ny Vetenskapligt arbete som doktorander gör under sin utbildning för att bli doktor.&lt;br/&gt;Avhandlingen visar doktorandens egen ... Läs mer \" href=\"https://forskning.se/ordlista/avhandling/\"",
+      "published_at": "2026-10-15T00:00:00Z",
+      "source_excerpt": "Överviktskirurgi minskar risken för fetmarelaterad cancer oavsett kön och ålder visar en stor nordisk registerstudie ledd av forskare vid Karolinska Institutet. Resultaten, som publiceras i JAMA Surgery, stärker kunskapen om överviktskirurgins cancerförebyggande effekter för flera cancerformer kopplade till fetma.",
       "agent_summary": "",
-      "source_fingerprint": "f0b6db79886c5fe58702",
-      "source_image_verified": true,
-      "source_image_url": "https://forskning.se/app/uploads/2026/10/fotboll-1-1024x576.jpg",
-      "source_image_alt": "Så begränsas barns rörelse i skolan",
-      "source_image_credit": "Forskning.se",
-      "source_image_rights_url": "https://forskning.se/2026/10/16/sa-begransas-barns-rorelse-i-skolan",
-      "source_image_creator": "Forskning.se",
-      "source_image_source_url": "https://forskning.se/2026/10/16/sa-begransas-barns-rorelse-i-skolan",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "category": "Vetenskap",
+      "source_fingerprint": "644ef6746d6630b7f3b6",
+      "category": "Hälsa",
       "source_tier_bonus": 5,
       "positivity_score": 7,
       "positive_signals": [
         "curated-positive-source",
-        "elever",
-        "forskning"
+        "förebygga",
+        "stärker"
       ],
-      "public_eligible": true
-    },
-    {
-      "id": "306e78fbe0fc692dcb33",
-      "title": "Skolvalet har inte brutit segregationen i gymnasiet",
-      "url": "https://forskning.se/2026/10/15/skolvalet-har-inte-brutit-segregationen-i-gymnasiet",
-      "source": "Forskning.se",
-      "language": "sv",
-      "published_at": "2026-10-15T11:55:12Z",
-      "source_excerpt": "Skolvalet har inte minskat sambandet mellan var elever bor och vilka skolor de går i. Samtidigt har uppdelningen mellan elever med olika socioekonomisk bakgrund och betyg ökat under de senaste tre decennierna. Det visar en studie av Stockholmsregionens gymnasiemarknad från Göteborgs och Uppsala universitet. Skolvalet har inte brutit segregationen i gymnasiet forskning.se .",
-      "agent_summary": "",
-      "source_fingerprint": "739e0214a288ef5feae2",
-      "source_image_verified": true,
-      "source_image_url": "https://forskning.se/app/uploads/2026/10/gymnasiet-skolval-segregation-1024x576.jpg",
-      "source_image_alt": "Skolvalet har inte brutit segregationen i gymnasiet",
-      "source_image_credit": "Forskning.se",
-      "source_image_rights_url": "https://forskning.se/2026/10/15/skolvalet-har-inte-brutit-segregationen-i-gymnasiet",
-      "source_image_creator": "Forskning.se",
-      "source_image_source_url": "https://forskning.se/2026/10/15/skolvalet-har-inte-brutit-segregationen-i-gymnasiet",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "elever",
-        "forskning"
-      ],
-      "public_eligible": true
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/5494fcb3-c7bf-4552-a084-22103a580955.webp",
+        "alt": "Minskad cancerrisk efter överviktskirurgi oavsett ålder och kön",
+        "user_image_id": "5494fcb3-c7bf-4552-a084-22103a580955",
+        "match_score": 0.2342,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/8201f10174e85d723a24-644ef674-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "644ef6746d6630b7f3b6",
+        "width": 1280,
+        "height": 848,
+        "sha256": "f12fab2bafe8e16f94b608f32391d9a9468437fbf0b849bb48d023b6f21af282"
+      }
     },
     {
       "id": "38a03a3022753d958ed7",
@@ -1273,6 +1259,42 @@
       "public_eligible": true
     },
     {
+      "id": "277664b74d5f09b3759f",
+      "title": "Att leva med rovdjur – nytt svenskt projekt med europeiskt fokus",
+      "url": "https://www.natursidan.se/nyheter/att-leva-med-rovdjur-nytt-svenskt-projekt-med-europeiskt-fokus",
+      "source": "Natursidan",
+      "language": "sv",
+      "published_at": "2026-10-19T12:55:23Z",
+      "source_excerpt": "På vissa håll går det alldeles utmärkt att leva med rovdjur. På andra håll väcker det ramaskri och påstås vara omöjligt. Trots att både problemen och lösningarna är ungefär de samma överallt i världen. Dessa lösningar vill det nya projektet Living Side By Side fokusera på.",
+      "agent_summary": "",
+      "source_fingerprint": "b298e3fe611f717be6c7",
+      "category": "Natur",
+      "source_tier_bonus": 5,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "lösning"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/4412043e-894c-4672-8414-e2bae48bf2da-1.webp",
+        "alt": "Att leva med rovdjur – nytt svenskt projekt med europeiskt fokus",
+        "user_image_id": "4412043e-894c-4672-8414-e2bae48bf2da-1",
+        "match_score": 0.2894,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/277664b74d5f09b3759f-b298e3fe-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "b298e3fe611f717be6c7",
+        "width": 1280,
+        "height": 848,
+        "sha256": "5617604fd1c24bd8fa861b3e8ed09c134adc0285cb1af4c03acae9cf58be4462"
+      }
+    },
+    {
       "id": "ad090236fd6a496a23f3",
       "title": "Träning gav mätbar förbättring i KOL-lungan",
       "url": "https://www.vetenskaphalsa.se/traning-gav-matbar-forbattring-i-kol-lungan",
@@ -1543,7 +1565,7 @@
       "source_excerpt": "They may have lost their tails, but nothing slowed these two down! Rescued from a burned field at just three weeks old, these two serval kittens had a long recovery ahead of them. Dodo editor Valentina shares their journey alongside Deirdre and Dr. Venter from Wild And Free Rehab as they grow stronger and get closer to returning to the wild.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/fcqAQ1gneg4feCugq/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/fcqAQ1gneg4feCugq/x720",
       "source_image_alt": "Wild Serval Kittens Found After Fire Make A Comeback",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbjlfve",
@@ -1641,6 +1663,34 @@
       "public_eligible": false
     },
     {
+      "id": "0a2f9710d41a8ac57b3b",
+      "title": "Volunteers became salmon, deer and earthworms. Then they set out to save their river",
+      "url": "https://www.positive.news/society/volunteers-became-salmon-deer-and-earthworms-then-they-set-out-to-save-their-river",
+      "source": "Positive News",
+      "language": "en",
+      "published_at": "2026-10-19T07:00:44Z",
+      "source_excerpt": "An experiment is helping a Somerset community see its landscape through the eyes of wildlife – and plot a 30-year route to change it The post Volunteers became salmon, deer and earthworms. Then they set out to save their river appeared first on Positive News .",
+      "agent_summary": "",
+      "source_fingerprint": "bdf479d973eac0ad2213",
+      "source_tier_bonus": 2,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "community",
+        "experiment",
+        "volunteer"
+      ],
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/868bab25-bbad-423f-871d-cba0ddc6a2f3.webp",
+        "alt": "Volunteers became salmon, deer and earthworms. Then they set out to save their river",
+        "user_image_id": "868bab25-bbad-423f-871d-cba0ddc6a2f3",
+        "match_score": 0.253,
+        "width": 1280,
+        "height": 848
+      }
+    },
+    {
       "id": "1cf350b3106fdd37c06d",
       "title": "She couldn't afford pet-friendly housing, so she gave up her dog of 10 years. Her community raised $18,000 to reunite them",
       "url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
@@ -1664,33 +1714,6 @@
         "curated-positive-source",
         "community",
         "friend"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "ed322f083f46b1fdc8ac",
-      "title": "A male elephant 'adopted' a calf and kept her alive long enough for rangers to rescue her",
-      "url": "https://www.goodgoodgood.co/articles/baby-elephant-talek-rescue-kenya",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-09-29T19:44:00Z",
-      "source_excerpt": "A 7-month-old elephant was found trailing behind a bull for protection, but he couldn’t provide her with the milk she needed to survive.",
-      "agent_summary": "",
-      "source_fingerprint": "63a13d3af2f6c11ae33c",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6abc14af21c94a14ed3075a8_6abc14ae5dd5af5183aaaa2b_baby-elephant-talek-rescue-kenya-featured.webp",
-      "source_image_alt": "A male elephant 'adopted' a calf and kept her alive long enough for rangers to rescue her",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/baby-elephant-talek-rescue-kenya",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/baby-elephant-talek-rescue-kenya",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "adopted",
-        "rescue"
       ],
       "public_eligible": false
     }
