@@ -1,12 +1,52 @@
 {
-  "generated_at": "2026-10-20T00:55:12.212901Z",
+  "generated_at": "2026-10-20T14:43:22.543285Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "3d45c3ab5abb44177577"
+    "9cf6616f23c2c0970f90"
   ],
   "fetch_errors": [],
   "items": [
+    {
+      "id": "9cf6616f23c2c0970f90",
+      "title": "Una Smailovic tilldelas forskningsanslag inom epilepsi",
+      "url": "https://nyheter.ki.se/una-smailovic-tilldelas-forskningsanslag-inom-epilepsi",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-10-20T00:00:00Z",
+      "source_excerpt": "SSMF (Svenska sällskapet för medicinsk forskning) har tilldelat projektet \"Quantitative EEG as a biomarker of disease severity, disease progression and treatment response in monogenic epilepsies\", som leds av KI-forskaren Una Smailovic, ett postdoktoralt anslag på 2,1 miljoner kronor.",
+      "agent_summary": "",
+      "source_fingerprint": "5e7305a98a7b6facff67",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 12,
+      "positive_signals": [
+        "curated-positive-source",
+        "anslag",
+        "forskning",
+        "progress",
+        "treat",
+        "treatment"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/85548527-df08-4140-9c8b-92075a6971a9.webp",
+        "alt": "Una Smailovic tilldelas forskningsanslag inom epilepsi",
+        "user_image_id": "85548527-df08-4140-9c8b-92075a6971a9",
+        "match_score": 0.2524,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/9cf6616f23c2c0970f90-5e7305a9-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "5e7305a98a7b6facff67",
+        "width": 1280,
+        "height": 848,
+        "sha256": "026299cb5c0e264c03a64aa318f8b21e1f34646e1027354716e6f8fe9ae0555a"
+      }
+    },
     {
       "id": "fe7045e43ac99852c9a6",
       "title": "Forskningsprojekt hjälper Stockholm att nå mål om hållbar mat",
@@ -310,44 +350,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "4614b28c15625d3760e35618120e9e4727f317130bf3c61347847e891a52fad4"
-      }
-    },
-    {
-      "id": "7ca57fe6ab6b08eb74b1",
-      "title": "Ny molekyl skyddade mot akut leversvikt i studie",
-      "url": "https://nyheter.ki.se/ny-molekyl-skyddade-mot-akut-leversvikt-i-studie",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-09-28T00:00:00Z",
-      "source_excerpt": "Forskare vid Karolinska Institutet har utvecklat en molekyl som stärker cellernas förmåga att reparera oxidativa DNA-skador. I musmodeller av akut leversvikt minskade molekylen leverskadorna och förbättrade överlevnaden, medan odlade humana leverceller blev mer motståndskraftiga mot skador efter exponering för paracetamol. Resultaten publiceras i tidskriften Advanced Science.",
-      "agent_summary": "",
-      "source_fingerprint": "bd0083b913f49869edc6",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 9,
-      "positive_signals": [
-        "curated-positive-source",
-        "science",
-        "skydda",
-        "stärker"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/85548527-df08-4140-9c8b-92075a6971a9.webp",
-        "alt": "Ny molekyl skyddade mot akut leversvikt i studie",
-        "user_image_id": "85548527-df08-4140-9c8b-92075a6971a9",
-        "match_score": 0.2524,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/7ca57fe6ab6b08eb74b1-bd0083b9-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "bd0083b913f49869edc6",
-        "width": 1280,
-        "height": 848,
-        "sha256": "40337b300747efe0d04ec94f561a32daf2bcf973e40b6f43ea1cec822f3d3687"
       }
     },
     {
@@ -1626,7 +1628,7 @@
       "source_excerpt": "Just a completely normal family dinner! Lula and her pony Simba have been inseparable from the beginning, to the point that he’ll casually walk right into the kitchen to join her for dinner. Dodo editor Valentina talks with Lula’s parents about how their friendship started and what life is like when your toddler’s best friend happens to be a pony.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/fcd4k1gndKcAAXhYk/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/fcd4k1gndKcAAXhYk/x720",
       "source_image_alt": "Toddler’s Pony Best Friend Joins Her For Dinner",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbjkai6",
