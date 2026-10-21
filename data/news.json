@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-10-20T14:43:22.543285Z",
+  "generated_at": "2026-10-21T00:23:45.964266Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "9cf6616f23c2c0970f90"
+    "6c58a209d0538de59b5e",
+    "e351f39e708cae8be674"
   ],
   "fetch_errors": [],
   "items": [
@@ -45,17 +46,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "026299cb5c0e264c03a64aa318f8b21e1f34646e1027354716e6f8fe9ae0555a"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/9cf6616f23c2c0970f90-5e7305a98a7b6facff67-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: Una Smailovic tilldelas forskningsanslag inom epilepsi",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "5e7305a98a7b6facff67",
-        "width": 1280,
-        "height": 848,
-        "sha256": "5391dc9fdd352e2fbf11ce1433563deb08543ecf6c55ed1a071c60717dd04cec",
-        "generated_at": "2026-10-20T14:43:48Z"
       }
     },
     {
@@ -476,6 +466,34 @@
         "height": 848,
         "sha256": "273484e6265bcfb32ad63f2d1ada4c34b8bdadcd88dd46c95261cc760fae40d5"
       }
+    },
+    {
+      "id": "6c58a209d0538de59b5e",
+      "title": "Nytt läkemedel mot ovanlig form av ALS visar lovande resultat",
+      "url": "https://forskning.se/2026/10/20/nytt-lakemedel-mot-ovanlig-form-av-als-visar-lovande-resultat",
+      "source": "Forskning.se",
+      "language": "sv",
+      "published_at": "2026-10-20T18:00:59Z",
+      "source_excerpt": "Ett nytt precisionsläkemedel visar goda resultat för den grupp ALS-patienter som har den ovanliga FUS-varianten av sjukdomen. Som enda representant från Norden har ALS-forskargruppen vid Norrlands universitetssjukhus och Umeå universitet bidragit i studien. Nytt läkemedel mot ovanlig form av ALS visar lovande resultat forskning.se .",
+      "agent_summary": "",
+      "source_fingerprint": "53157a21e60cacd43e9f",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/09/Nervceller-illustration-1024x576.jpg",
+      "source_image_alt": "Nytt läkemedel mot ovanlig form av ALS visar lovande resultat",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/10/20/nytt-lakemedel-mot-ovanlig-form-av-als-visar-lovande-resultat",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/10/20/nytt-lakemedel-mot-ovanlig-form-av-als-visar-lovande-resultat",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "lovande"
+      ],
+      "public_eligible": true
     },
     {
       "id": "da4291a9aef0f7ed7b48",
@@ -1297,42 +1315,6 @@
       "public_eligible": true
     },
     {
-      "id": "277664b74d5f09b3759f",
-      "title": "Att leva med rovdjur – nytt svenskt projekt med europeiskt fokus",
-      "url": "https://www.natursidan.se/nyheter/att-leva-med-rovdjur-nytt-svenskt-projekt-med-europeiskt-fokus",
-      "source": "Natursidan",
-      "language": "sv",
-      "published_at": "2026-10-19T12:55:23Z",
-      "source_excerpt": "På vissa håll går det alldeles utmärkt att leva med rovdjur. På andra håll väcker det ramaskri och påstås vara omöjligt. Trots att både problemen och lösningarna är ungefär de samma överallt i världen. Dessa lösningar vill det nya projektet Living Side By Side fokusera på.",
-      "agent_summary": "",
-      "source_fingerprint": "b298e3fe611f717be6c7",
-      "category": "Natur",
-      "source_tier_bonus": 5,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "lösning"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/4412043e-894c-4672-8414-e2bae48bf2da-1.webp",
-        "alt": "Att leva med rovdjur – nytt svenskt projekt med europeiskt fokus",
-        "user_image_id": "4412043e-894c-4672-8414-e2bae48bf2da-1",
-        "match_score": 0.2894,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/277664b74d5f09b3759f-b298e3fe-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "b298e3fe611f717be6c7",
-        "width": 1280,
-        "height": 848,
-        "sha256": "5617604fd1c24bd8fa861b3e8ed09c134adc0285cb1af4c03acae9cf58be4462"
-      }
-    },
-    {
       "id": "56c225a54e232fce1fea",
       "title": "Woman Rescues A Cat She Found At A Car Dealership",
       "url": "https://www.dailymotion.com/video/xamxvli",
@@ -1567,7 +1549,7 @@
       "source_excerpt": "They may have lost their tails, but nothing slowed these two down! Rescued from a burned field at just three weeks old, these two serval kittens had a long recovery ahead of them. Dodo editor Valentina shares their journey alongside Deirdre and Dr. Venter from Wild And Free Rehab as they grow stronger and get closer to returning to the wild.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/fcqAQ1gneg4feCugq/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/fcqAQ1gneg4feCugq/x720",
       "source_image_alt": "Wild Serval Kittens Found After Fire Make A Comeback",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbjlfve",
@@ -1639,7 +1621,7 @@
       "source_excerpt": "Just a completely normal family dinner! Lula and her pony Simba have been inseparable from the beginning, to the point that he’ll casually walk right into the kitchen to join her for dinner. Dodo editor Valentina talks with Lula’s parents about how their friendship started and what life is like when your toddler’s best friend happens to be a pony.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/fcd4k1gndKcAAXhYk/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/fcd4k1gndKcAAXhYk/x720",
       "source_image_alt": "Toddler’s Pony Best Friend Joins Her For Dinner",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbjkai6",
@@ -1663,6 +1645,42 @@
         "friend"
       ],
       "public_eligible": false
+    },
+    {
+      "id": "e351f39e708cae8be674",
+      "title": "NASA Provides Progress Update on Moon Base Rovers",
+      "url": "https://www.nasa.gov/missions/moon-base/nasa-provides-progress-update-on-moon-base-rovers",
+      "source": "NASA News Releases",
+      "language": "en",
+      "published_at": "2026-10-20T15:00:10Z",
+      "source_excerpt": "As NASA works to build the Moon Base, crewed and robotic lunar rovers will play a crucial role during early development through technology demonstrations, astronaut transport, terrain mapping, scientific investigations, and resource prospecting. Data from these early missions will inform future mobility systems and infrastructure needed for astronauts to live and work on the Moon. […]",
+      "agent_summary": "",
+      "source_fingerprint": "d6eb9801ef47f68f2c72",
+      "source_video": {
+        "provider": "youtube",
+        "video_id": "Zezt6EsG9WE",
+        "embed_url": "https://www.youtube-nocookie.com/embed/Zezt6EsG9WE",
+        "source_url": "https://www.youtube.com/watch?v=Zezt6EsG9WE",
+        "title": "NASA Provides Progress Update on Moon Base Rovers"
+      },
+      "source_tier_bonus": 1,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "mission",
+        "play",
+        "progress",
+        "technology"
+      ],
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/491483e7-00f4-4581-9c4d-ba3853e16f74.webp",
+        "alt": "NASA Provides Progress Update on Moon Base Rovers",
+        "user_image_id": "491483e7-00f4-4581-9c4d-ba3853e16f74",
+        "match_score": 0.2502,
+        "width": 1280,
+        "height": 848
+      }
     },
     {
       "id": "0a2f9710d41a8ac57b3b",
@@ -1691,33 +1709,6 @@
         "width": 1280,
         "height": 848
       }
-    },
-    {
-      "id": "1cf350b3106fdd37c06d",
-      "title": "She couldn't afford pet-friendly housing, so she gave up her dog of 10 years. Her community raised $18,000 to reunite them",
-      "url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-10-07T14:12:00Z",
-      "source_excerpt": "After 23 years of marriage, Lisa Wilson and her dog Eddie had to find a new home. But Hurricane Helene had left the rental market in shambles.",
-      "agent_summary": "",
-      "source_fingerprint": "84b69c00e5ad3fec48ac",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6ac65295fb513da952f51586_6ac65294666e636761d49559_north-carolina-housing-woman-reunited-pet-dog-featured.webp",
-      "source_image_alt": "She couldn't afford pet-friendly housing, so she gave up her dog of 10 years. Her community raised $18,000 to reunite them",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "community",
-        "friend"
-      ],
-      "public_eligible": false
     }
   ]
 }
