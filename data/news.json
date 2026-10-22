@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-22T00:27:15.177608Z",
+  "generated_at": "2026-10-22T14:53:39.007548Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "88934994ac6291a942dc",
-    "d994fb962c09d3b00887"
+    "8ee2e7026b5d3b6d3869",
+    "a0a95622d4e184757dce"
   ],
   "fetch_errors": [
     {
-      "source": "Forskning.se",
-      "error": "syntax error: line 1, column 0"
+      "source": "Viable Cities",
+      "error": "The read operation timed out"
     }
   ],
   "items": [
@@ -283,6 +283,44 @@
       "public_eligible": true
     },
     {
+      "id": "8ee2e7026b5d3b6d3869",
+      "title": "MMK-forskare utsedd till DDLS Fellow – får långsiktigt forskningsstöd",
+      "url": "https://nyheter.ki.se/mmk-forskare-utsedd-till-ddls-fellow-far-langsiktigt-forskningsstod",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-10-22T00:00:00Z",
+      "source_excerpt": "Vi gratulerar David Marlevi och teamet för translationell kardiovaskulär bilddiagnostik till utnämningen som fellow inom Data-Driven Life Science (DDLS), samt till det långsiktiga finansieringsstöd som beviljats inom ramen för DDLS-programmet.",
+      "agent_summary": "",
+      "source_fingerprint": "c48e1beab217992a4abf",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 9,
+      "positive_signals": [
+        "curated-positive-source",
+        "beviljats",
+        "forskning",
+        "science"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/5494fcb3-c7bf-4552-a084-22103a580955.webp",
+        "alt": "MMK-forskare utsedd till DDLS Fellow – får långsiktigt forskningsstöd",
+        "user_image_id": "5494fcb3-c7bf-4552-a084-22103a580955",
+        "match_score": 0.2342,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/8ee2e7026b5d3b6d3869-c48e1bea-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "c48e1beab217992a4abf",
+        "width": 1280,
+        "height": 848,
+        "sha256": "aea77d08469f5ed2278edb27298e33649515a274dea419b3ccdeb7d66f4ceb1f"
+      }
+    },
+    {
       "id": "88934994ac6291a942dc",
       "title": "Formas finansierar forskning om inomhusmiljö och hälsa i ett förändrat klimat",
       "url": "https://nyheter.ki.se/formas-finansierar-forskning-om-inomhusmiljo-och-halsa-i-ett-forandrat-klimat",
@@ -318,17 +356,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "e91fedff5ff2f7b411e17db32250dbf57d06d8f938f0c63527d3657785a20a3d"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/88934994ac6291a942dc-a0211c036e1c589e807e-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: Formas finansierar forskning om inomhusmiljö och hälsa i ett förändrat klimat",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "a0211c036e1c589e807e",
-        "width": 1280,
-        "height": 848,
-        "sha256": "585d83475b3bbc71e14b0f07fb771b75f6fe173cffe6fd669dba35e3b09a331a",
-        "generated_at": "2026-10-22T00:27:36Z"
       }
     },
     {
@@ -899,42 +926,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "da35e92250c0515d62aedd5149cdcfa9db32493eb90f22ded0138d83d4348efb"
-      }
-    },
-    {
-      "id": "d994fb962c09d3b00887",
-      "title": "1 400 medarbetare deltar i KI:s stora AI-satsning",
-      "url": "https://nyheter.ki.se/1-400-medarbetare-deltar-i-kis-stora-ai-satsning",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-10-21T00:00:00Z",
-      "source_excerpt": "Hur kan AI underlätta arbetet på KI, och hur används tekniken på ett säkert sätt? Det är fokus i KI:s hittills största satsning på personalutbildning. De första utbildningstillfällena inom ramen för AI-lyftet har väckt stort intresse och engagemang.",
-      "agent_summary": "",
-      "source_fingerprint": "0da196eaf4fa9eabc5fd",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "satsning"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/5494fcb3-c7bf-4552-a084-22103a580955.webp",
-        "alt": "1 400 medarbetare deltar i KI:s stora AI-satsning",
-        "user_image_id": "5494fcb3-c7bf-4552-a084-22103a580955",
-        "match_score": 0.2342,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/d994fb962c09d3b00887-0da196ea-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "0da196eaf4fa9eabc5fd",
-        "width": 1280,
-        "height": 848,
-        "sha256": "26c9c00cbfc477c616053b6aa20f5aa9ea28f94e73a361ca90778bd35ae4784b"
       }
     },
     {
@@ -1563,7 +1554,7 @@
       "source_excerpt": "They may have lost their tails, but nothing slowed these two down! Rescued from a burned field at just three weeks old, these two serval kittens had a long recovery ahead of them. Dodo editor Valentina shares their journey alongside Deirdre and Dr. Venter from Wild And Free Rehab as they grow stronger and get closer to returning to the wild.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/fcqAQ1gneg4feCugq/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/fcqAQ1gneg4feCugq/x720",
       "source_image_alt": "Wild Serval Kittens Found After Fire Make A Comeback",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbjlfve",
@@ -1599,7 +1590,7 @@
       "source_excerpt": "She was actually 5 months old and desperately needed someone to help her. Bambi was so malnourished when All Creatures Great and Small rescued her that they initially thought she was only 9 weeks old. Dodo editor Monica shares Bambi’s transformation and the moment she returned to surprise her rescuers looking like a completely different pup.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/fcd4Q1gndKdJDt0Jv/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/fcd4Q1gndKdJDt0Jv/x720",
       "source_image_alt": "Puppy Mistaken For 9 Weeks Old Makes Amazing Comeback",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbjkahm",
@@ -1661,6 +1652,34 @@
       "public_eligible": false
     },
     {
+      "id": "a0a95622d4e184757dce",
+      "title": "Faster to Science: A Letter to the Science Community",
+      "url": "https://science.nasa.gov/directorates/smd/faster-to-science-a-letter-to-the-science-community",
+      "source": "NASA News Releases",
+      "language": "en",
+      "published_at": "2026-10-22T00:00:16Z",
+      "source_excerpt": "NASA Science wants to deliver science faster, so we’re changing how we compete and select missions. On Monday, October 26, we will host a virtual NASA Science Town Hall.",
+      "agent_summary": "",
+      "source_fingerprint": "b4ce3dbde69b1eb3fb75",
+      "source_tier_bonus": 1,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "community",
+        "mission",
+        "science"
+      ],
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/491483e7-00f4-4581-9c4d-ba3853e16f74.webp",
+        "alt": "Faster to Science: A Letter to the Science Community",
+        "user_image_id": "491483e7-00f4-4581-9c4d-ba3853e16f74",
+        "match_score": 0.2502,
+        "width": 1280,
+        "height": 848
+      }
+    },
+    {
       "id": "0a2f9710d41a8ac57b3b",
       "title": "Volunteers became salmon, deer and earthworms. Then they set out to save their river",
       "url": "https://www.positive.news/society/volunteers-became-salmon-deer-and-earthworms-then-they-set-out-to-save-their-river",
@@ -1687,33 +1706,6 @@
         "width": 1280,
         "height": 848
       }
-    },
-    {
-      "id": "1cf350b3106fdd37c06d",
-      "title": "She couldn't afford pet-friendly housing, so she gave up her dog of 10 years. Her community raised $18,000 to reunite them",
-      "url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-10-07T14:12:00Z",
-      "source_excerpt": "After 23 years of marriage, Lisa Wilson and her dog Eddie had to find a new home. But Hurricane Helene had left the rental market in shambles.",
-      "agent_summary": "",
-      "source_fingerprint": "84b69c00e5ad3fec48ac",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6ac65295fb513da952f51586_6ac65294666e636761d49559_north-carolina-housing-woman-reunited-pet-dog-featured.webp",
-      "source_image_alt": "She couldn't afford pet-friendly housing, so she gave up her dog of 10 years. Her community raised $18,000 to reunite them",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "community",
-        "friend"
-      ],
-      "public_eligible": false
     }
   ]
 }
