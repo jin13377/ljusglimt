@@ -318,6 +318,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "e91fedff5ff2f7b411e17db32250dbf57d06d8f938f0c63527d3657785a20a3d"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/88934994ac6291a942dc-a0211c036e1c589e807e-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Formas finansierar forskning om inomhusmiljö och hälsa i ett förändrat klimat",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "a0211c036e1c589e807e",
+        "width": 1280,
+        "height": 848,
+        "sha256": "585d83475b3bbc71e14b0f07fb771b75f6fe173cffe6fd669dba35e3b09a331a",
+        "generated_at": "2026-10-22T00:27:36Z"
       }
     },
     {
