@@ -318,6 +318,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "aea77d08469f5ed2278edb27298e33649515a274dea419b3ccdeb7d66f4ceb1f"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/8ee2e7026b5d3b6d3869-c48e1beab217992a4abf-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: MMK-forskare utsedd till DDLS Fellow – får långsiktigt forskningsstöd",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "c48e1beab217992a4abf",
+        "width": 1280,
+        "height": 848,
+        "sha256": "91ea853783bb54c63f317d0632a23504d59e06b7bbf9a62f7fd61d3523a2120d",
+        "generated_at": "2026-10-22T14:54:23Z"
       }
     },
     {
