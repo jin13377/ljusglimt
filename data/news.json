@@ -1,28 +1,15 @@
 {
-  "generated_at": "2026-10-21T14:53:10.177037Z",
+  "generated_at": "2026-10-22T00:27:15.177608Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "88934994ac6291a942dc",
+    "d994fb962c09d3b00887"
+  ],
   "fetch_errors": [
     {
       "source": "Forskning.se",
       "error": "syntax error: line 1, column 0"
-    },
-    {
-      "source": "ESA Sverige",
-      "error": "mismatched tag: line 8, column 32"
-    },
-    {
-      "source": "Natursidan",
-      "error": "HTTP Error 503: Service Temporarily Unavailable"
-    },
-    {
-      "source": "Karolinska Institutet",
-      "error": "HTTP Error 503: Service Unavailable"
-    },
-    {
-      "source": "Vetenskap & hälsa",
-      "error": "<urlopen error [Errno 111] Connection refused>"
     }
   ],
   "items": [
@@ -259,45 +246,6 @@
       }
     },
     {
-      "id": "f10fc9398ccb39326e3a",
-      "title": "Två KI-forskare får innovationsfinansiering från Knut och Alice Wallenbergs Stiftelse",
-      "url": "https://nyheter.ki.se/tva-ki-forskare-far-innovationsfinansiering-fran-knut-och-alice-wallenbergs-stiftelse",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-07-24T00:00:00Z",
-      "source_excerpt": "Professor Gonçalo Castelo-Branco och professor Janne Lehtiö vid KI får anslag inom Knut och Alice Wallenbergs Stiftelses och SciLifeLabs program Proof of Concept. Målet med programmet är att stärka vägen från akademisk forskning till innovation och kommersiell tillämpning inom livsvetenskap, life science.",
-      "agent_summary": "",
-      "source_fingerprint": "4a1c4a8137c50ea786d3",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 10,
-      "positive_signals": [
-        "curated-positive-source",
-        "anslag",
-        "forskning",
-        "innovation",
-        "science"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/9c4f3e46-0f94-45e9-9ab8-7fe2ecb6998f.webp",
-        "alt": "Två KI-forskare får innovationsfinansiering från Knut och Alice Wallenbergs Stiftelse",
-        "user_image_id": "9c4f3e46-0f94-45e9-9ab8-7fe2ecb6998f",
-        "match_score": 0.2082,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/f10fc9398ccb39326e3a-4a1c4a81-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "4a1c4a8137c50ea786d3",
-        "width": 1280,
-        "height": 848,
-        "sha256": "1f6d2b6dc79086146d1435c3b5a8fff53d822cddb7900615fed8fb547a719aac"
-      }
-    },
-    {
       "id": "772deb64d5f80c5b5454",
       "title": "Boyfriend Has Best Reaction To Surprise Foster Kittens",
       "url": "https://www.dailymotion.com/video/xamx6nm",
@@ -333,6 +281,44 @@
       ],
       "display_title_sv": "Överraskningen med fosterkattungar gav pojkvännen bästa reaktionen",
       "public_eligible": true
+    },
+    {
+      "id": "88934994ac6291a942dc",
+      "title": "Formas finansierar forskning om inomhusmiljö och hälsa i ett förändrat klimat",
+      "url": "https://nyheter.ki.se/formas-finansierar-forskning-om-inomhusmiljo-och-halsa-i-ett-forandrat-klimat",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-10-21T00:00:00Z",
+      "source_excerpt": "Ett nytt tvärvetenskapligt forskningsprojekt vid tre universitet, Uppsala universitet, Karolinska Institutet och Umeå universitet, har beviljats finansiering av Formas. Projektet ska undersöka hur inomhusmiljöer påverkar hälsorisker kopplade till klimatförändringar och hur anpassningsåtgärder bättre kan skydda utsatta grupper.",
+      "agent_summary": "",
+      "source_fingerprint": "a0211c036e1c589e807e",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 9,
+      "positive_signals": [
+        "curated-positive-source",
+        "beviljats",
+        "forskning",
+        "skydda"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/41b44212-70c7-43df-9365-483ed4b08c49.webp",
+        "alt": "Formas finansierar forskning om inomhusmiljö och hälsa i ett förändrat klimat",
+        "user_image_id": "41b44212-70c7-43df-9365-483ed4b08c49",
+        "match_score": 0.2361,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/88934994ac6291a942dc-a0211c03-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "a0211c036e1c589e807e",
+        "width": 1280,
+        "height": 848,
+        "sha256": "e91fedff5ff2f7b411e17db32250dbf57d06d8f938f0c63527d3657785a20a3d"
+      }
     },
     {
       "id": "352b1bf2b201e1b826ce",
@@ -905,6 +891,42 @@
       }
     },
     {
+      "id": "d994fb962c09d3b00887",
+      "title": "1 400 medarbetare deltar i KI:s stora AI-satsning",
+      "url": "https://nyheter.ki.se/1-400-medarbetare-deltar-i-kis-stora-ai-satsning",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-10-21T00:00:00Z",
+      "source_excerpt": "Hur kan AI underlätta arbetet på KI, och hur används tekniken på ett säkert sätt? Det är fokus i KI:s hittills största satsning på personalutbildning. De första utbildningstillfällena inom ramen för AI-lyftet har väckt stort intresse och engagemang.",
+      "agent_summary": "",
+      "source_fingerprint": "0da196eaf4fa9eabc5fd",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "satsning"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/5494fcb3-c7bf-4552-a084-22103a580955.webp",
+        "alt": "1 400 medarbetare deltar i KI:s stora AI-satsning",
+        "user_image_id": "5494fcb3-c7bf-4552-a084-22103a580955",
+        "match_score": 0.2342,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/d994fb962c09d3b00887-0da196ea-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "0da196eaf4fa9eabc5fd",
+        "width": 1280,
+        "height": 848,
+        "sha256": "26c9c00cbfc477c616053b6aa20f5aa9ea28f94e73a361ca90778bd35ae4784b"
+      }
+    },
+    {
       "id": "3d45c3ab5abb44177577",
       "title": "Lärarens kroppsspråk har betydelse under utvecklingssamtalet",
       "url": "https://forskning.se/2026/10/19/lararens-kroppssprak-har-betydelse-under-utvecklingssamtalet",
@@ -931,43 +953,6 @@
         "elever"
       ],
       "public_eligible": true
-    },
-    {
-      "id": "8201f10174e85d723a24",
-      "title": "Minskad cancerrisk efter överviktskirurgi oavsett ålder och kön",
-      "url": "https://nyheter.ki.se/minskad-cancerrisk-efter-overviktskirurgi-oavsett-alder-och-kon",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-10-15T00:00:00Z",
-      "source_excerpt": "Överviktskirurgi minskar risken för fetmarelaterad cancer oavsett kön och ålder visar en stor nordisk registerstudie ledd av forskare vid Karolinska Institutet. Resultaten, som publiceras i JAMA Surgery, stärker kunskapen om överviktskirurgins cancerförebyggande effekter för flera cancerformer kopplade till fetma.",
-      "agent_summary": "",
-      "source_fingerprint": "644ef6746d6630b7f3b6",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "förebygga",
-        "stärker"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/5494fcb3-c7bf-4552-a084-22103a580955.webp",
-        "alt": "Minskad cancerrisk efter överviktskirurgi oavsett ålder och kön",
-        "user_image_id": "5494fcb3-c7bf-4552-a084-22103a580955",
-        "match_score": 0.2342,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/8201f10174e85d723a24-644ef674-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "644ef6746d6630b7f3b6",
-        "width": 1280,
-        "height": 848,
-        "sha256": "f12fab2bafe8e16f94b608f32391d9a9468437fbf0b849bb48d023b6f21af282"
-      }
     },
     {
       "id": "38a03a3022753d958ed7",
@@ -1567,7 +1552,7 @@
       "source_excerpt": "They may have lost their tails, but nothing slowed these two down! Rescued from a burned field at just three weeks old, these two serval kittens had a long recovery ahead of them. Dodo editor Valentina shares their journey alongside Deirdre and Dr. Venter from Wild And Free Rehab as they grow stronger and get closer to returning to the wild.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/fcqAQ1gneg4feCugq/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/fcqAQ1gneg4feCugq/x720",
       "source_image_alt": "Wild Serval Kittens Found After Fire Make A Comeback",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbjlfve",
@@ -1603,7 +1588,7 @@
       "source_excerpt": "She was actually 5 months old and desperately needed someone to help her. Bambi was so malnourished when All Creatures Great and Small rescued her that they initially thought she was only 9 weeks old. Dodo editor Monica shares Bambi’s transformation and the moment she returned to surprise her rescuers looking like a completely different pup.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/fcd4Q1gndKdJDt0Jv/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/fcd4Q1gndKdJDt0Jv/x720",
       "source_image_alt": "Puppy Mistaken For 9 Weeks Old Makes Amazing Comeback",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbjkahm",
@@ -1665,42 +1650,6 @@
       "public_eligible": false
     },
     {
-      "id": "e351f39e708cae8be674",
-      "title": "NASA Provides Progress Update on Moon Base Rovers",
-      "url": "https://www.nasa.gov/missions/moon-base/nasa-provides-progress-update-on-moon-base-rovers",
-      "source": "NASA News Releases",
-      "language": "en",
-      "published_at": "2026-10-20T15:00:10Z",
-      "source_excerpt": "As NASA works to build the Moon Base, crewed and robotic lunar rovers will play a crucial role during early development through technology demonstrations, astronaut transport, terrain mapping, scientific investigations, and resource prospecting. Data from these early missions will inform future mobility systems and infrastructure needed for astronauts to live and work on the Moon. […]",
-      "agent_summary": "",
-      "source_fingerprint": "d6eb9801ef47f68f2c72",
-      "source_video": {
-        "provider": "youtube",
-        "video_id": "Zezt6EsG9WE",
-        "embed_url": "https://www.youtube-nocookie.com/embed/Zezt6EsG9WE",
-        "source_url": "https://www.youtube.com/watch?v=Zezt6EsG9WE",
-        "title": "NASA Provides Progress Update on Moon Base Rovers"
-      },
-      "source_tier_bonus": 1,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "mission",
-        "play",
-        "progress",
-        "technology"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/491483e7-00f4-4581-9c4d-ba3853e16f74.webp",
-        "alt": "NASA Provides Progress Update on Moon Base Rovers",
-        "user_image_id": "491483e7-00f4-4581-9c4d-ba3853e16f74",
-        "match_score": 0.2502,
-        "width": 1280,
-        "height": 848
-      }
-    },
-    {
       "id": "0a2f9710d41a8ac57b3b",
       "title": "Volunteers became salmon, deer and earthworms. Then they set out to save their river",
       "url": "https://www.positive.news/society/volunteers-became-salmon-deer-and-earthworms-then-they-set-out-to-save-their-river",
@@ -1727,6 +1676,33 @@
         "width": 1280,
         "height": 848
       }
+    },
+    {
+      "id": "1cf350b3106fdd37c06d",
+      "title": "She couldn't afford pet-friendly housing, so she gave up her dog of 10 years. Her community raised $18,000 to reunite them",
+      "url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-10-07T14:12:00Z",
+      "source_excerpt": "After 23 years of marriage, Lisa Wilson and her dog Eddie had to find a new home. But Hurricane Helene had left the rental market in shambles.",
+      "agent_summary": "",
+      "source_fingerprint": "84b69c00e5ad3fec48ac",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6ac65295fb513da952f51586_6ac65294666e636761d49559_north-carolina-housing-woman-reunited-pet-dog-featured.webp",
+      "source_image_alt": "She couldn't afford pet-friendly housing, so she gave up her dog of 10 years. Her community raised $18,000 to reunite them",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "source_tier_bonus": 2,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "community",
+        "friend"
+      ],
+      "public_eligible": false
     }
   ]
 }
