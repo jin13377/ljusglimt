@@ -1,8 +1,10 @@
 {
-  "generated_at": "2026-10-23T00:25:09.870301Z",
+  "generated_at": "2026-10-23T14:41:29.994522Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "f5e2c8fe57e9053ad6e3"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -275,6 +277,43 @@
       "public_eligible": true
     },
     {
+      "id": "f5e2c8fe57e9053ad6e3",
+      "title": "aICU-programmet får innovationspris för forskning om AI-baserat beslutsstöd inom intensivvården",
+      "url": "https://nyheter.ki.se/aicu-programmet-far-innovationspris-for-forskning-om-ai-baserat-beslutsstod-inom-intensivvarden",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-10-23T00:00:00Z",
+      "source_excerpt": "Forskningsprogrammet aICU vid Karolinska Institutet och Södersjukhuset har utsetts till Årets Innovation av Region Stockholm. Priset delades ut på Innovationsfondens dag den 14 oktober och togs emot av Villiam Kildal, forskare vid institutionen för klinisk forskning och utbildning, Södersjukhuset.",
+      "agent_summary": "",
+      "source_fingerprint": "f5606150d5e955e748d2",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 9,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "innovation"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/41b44212-70c7-43df-9365-483ed4b08c49.webp",
+        "alt": "aICU-programmet får innovationspris för forskning om AI-baserat beslutsstöd inom intensivvården",
+        "user_image_id": "41b44212-70c7-43df-9365-483ed4b08c49",
+        "match_score": 0.2361,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/f5e2c8fe57e9053ad6e3-f5606150-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "f5606150d5e955e748d2",
+        "width": 1280,
+        "height": 848,
+        "sha256": "0440c199c7e86a88eb53150e1f9f2068173b21c65b52bc05c5a0124ca765bdec"
+      }
+    },
+    {
       "id": "8ee2e7026b5d3b6d3869",
       "title": "MMK-forskare utsedd till DDLS Fellow – får långsiktigt forskningsstöd",
       "url": "https://nyheter.ki.se/mmk-forskare-utsedd-till-ddls-fellow-far-langsiktigt-forskningsstod",
@@ -310,44 +349,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "aea77d08469f5ed2278edb27298e33649515a274dea419b3ccdeb7d66f4ceb1f"
-      }
-    },
-    {
-      "id": "88934994ac6291a942dc",
-      "title": "Formas finansierar forskning om inomhusmiljö och hälsa i ett förändrat klimat",
-      "url": "https://nyheter.ki.se/formas-finansierar-forskning-om-inomhusmiljo-och-halsa-i-ett-forandrat-klimat",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-10-21T00:00:00Z",
-      "source_excerpt": "Ett nytt tvärvetenskapligt forskningsprojekt vid tre universitet, Uppsala universitet, Karolinska Institutet och Umeå universitet, har beviljats finansiering av Formas. Projektet ska undersöka hur inomhusmiljöer påverkar hälsorisker kopplade till klimatförändringar och hur anpassningsåtgärder bättre kan skydda utsatta grupper.",
-      "agent_summary": "",
-      "source_fingerprint": "a0211c036e1c589e807e",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 9,
-      "positive_signals": [
-        "curated-positive-source",
-        "beviljats",
-        "forskning",
-        "skydda"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/41b44212-70c7-43df-9365-483ed4b08c49.webp",
-        "alt": "Formas finansierar forskning om inomhusmiljö och hälsa i ett förändrat klimat",
-        "user_image_id": "41b44212-70c7-43df-9365-483ed4b08c49",
-        "match_score": 0.2361,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/88934994ac6291a942dc-a0211c03-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "a0211c036e1c589e807e",
-        "width": 1280,
-        "height": 848,
-        "sha256": "e91fedff5ff2f7b411e17db32250dbf57d06d8f938f0c63527d3657785a20a3d"
       }
     },
     {
@@ -1546,7 +1547,7 @@
       "source_excerpt": "They may have lost their tails, but nothing slowed these two down! Rescued from a burned field at just three weeks old, these two serval kittens had a long recovery ahead of them. Dodo editor Valentina shares their journey alongside Deirdre and Dr. Venter from Wild And Free Rehab as they grow stronger and get closer to returning to the wild.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/fcqAQ1gneg4feCugq/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/fcqAQ1gneg4feCugq/x720",
       "source_image_alt": "Wild Serval Kittens Found After Fire Make A Comeback",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbjlfve",
