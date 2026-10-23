@@ -311,6 +311,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "0440c199c7e86a88eb53150e1f9f2068173b21c65b52bc05c5a0124ca765bdec"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/f5e2c8fe57e9053ad6e3-f5606150d5e955e748d2-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: aICU-programmet får innovationspris för forskning om AI-baserat beslutsstöd inom intensivvården",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "f5606150d5e955e748d2",
+        "width": 1280,
+        "height": 848,
+        "sha256": "bba6bb6f8ad5cf4f9e7972c0055cc26a6bb9541da828ab07366f6e856bece6bf",
+        "generated_at": "2026-10-23T14:42:09Z"
       }
     },
     {
