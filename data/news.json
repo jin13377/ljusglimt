@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-23T14:41:29.994522Z",
+  "generated_at": "2026-10-24T00:18:08.454304Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "f5e2c8fe57e9053ad6e3"
+    "d59761d040945cf3a5a0"
   ],
   "fetch_errors": [],
   "items": [
@@ -311,17 +311,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "0440c199c7e86a88eb53150e1f9f2068173b21c65b52bc05c5a0124ca765bdec"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/f5e2c8fe57e9053ad6e3-f5606150d5e955e748d2-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: aICU-programmet får innovationspris för forskning om AI-baserat beslutsstöd inom intensivvården",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "f5606150d5e955e748d2",
-        "width": 1280,
-        "height": 848,
-        "sha256": "bba6bb6f8ad5cf4f9e7972c0055cc26a6bb9541da828ab07366f6e856bece6bf",
-        "generated_at": "2026-10-23T14:42:09Z"
       }
     },
     {
@@ -933,34 +922,6 @@
       }
     },
     {
-      "id": "3d45c3ab5abb44177577",
-      "title": "Lärarens kroppsspråk har betydelse under utvecklingssamtalet",
-      "url": "https://forskning.se/2026/10/19/lararens-kroppssprak-har-betydelse-under-utvecklingssamtalet",
-      "source": "Forskning.se",
-      "language": "sv",
-      "published_at": "2026-10-19T17:17:01Z",
-      "source_excerpt": "En studie från Örebro universitet och Mälardalens universitet visar att lärarens icke-verbala språk är avgörande för elevernas delaktighet. – Antingen tar lärare sina kroppsliga signaler för givna, eller så är de helt omedvetna om vad deras kroppsspråk faktiskt förmedlar till eleven, säger forskaren Britt-Marie Bader vid Örebro universitet i ett pressmeddelande. Små signaler får stora […] Lärarens",
-      "agent_summary": "",
-      "source_fingerprint": "6a580a63d9b6b7f698c4",
-      "source_image_verified": true,
-      "source_image_url": "https://forskning.se/app/uploads/2026/10/samtal-skolelev-1024x576.jpg",
-      "source_image_alt": "Lärarens kroppsspråk har betydelse under utvecklingssamtalet",
-      "source_image_credit": "Forskning.se",
-      "source_image_rights_url": "https://forskning.se/2026/10/19/lararens-kroppssprak-har-betydelse-under-utvecklingssamtalet",
-      "source_image_creator": "Forskning.se",
-      "source_image_source_url": "https://forskning.se/2026/10/19/lararens-kroppssprak-har-betydelse-under-utvecklingssamtalet",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "delaktighet",
-        "elever"
-      ],
-      "public_eligible": true
-    },
-    {
       "id": "38a03a3022753d958ed7",
       "title": "Grönska utanför dörren kopplas till lägre risk för demens",
       "url": "https://www.extrakt.se/gronska-utanfor-dorren-kopplas-till-lagre-risk-for-demens",
@@ -1324,6 +1285,33 @@
       "public_eligible": true
     },
     {
+      "id": "d59761d040945cf3a5a0",
+      "title": "Bränd björk viktig för skogens skalbaggar",
+      "url": "https://forskning.se/2026/10/23/brand-bjork-viktig-for-skogens-skalbaggar",
+      "source": "Forskning.se",
+      "language": "sv",
+      "published_at": "2026-10-23T16:06:21Z",
+      "source_excerpt": "Vissa arter är helt beroende av att skogen brinner. Därför är naturvårdsbränningar, där skog bränns under kontrollerade former, ett viktigt verktyg för att återskapa och bevara livsmiljöer för olika arter i Sverige. Nu visar en studie från Sveriges lantbruksuniversitet att brända björkstammar lockade fler vedlevande skalbaggar än brända tallar under de första åren efter en […] Bränd björk viktig f",
+      "agent_summary": "",
+      "source_fingerprint": "10fb20374c8583f5f02a",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/10/Skog-eld-plastlada-1024x576.jpg",
+      "source_image_alt": "Bränd björk viktig för skogens skalbaggar",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/10/23/brand-bjork-viktig-for-skogens-skalbaggar",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/10/23/brand-bjork-viktig-for-skogens-skalbaggar",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "bevara"
+      ],
+      "public_eligible": true
+    },
+    {
       "id": "56c225a54e232fce1fea",
       "title": "Woman Rescues A Cat She Found At A Car Dealership",
       "url": "https://www.dailymotion.com/video/xamxvli",
@@ -1558,7 +1546,7 @@
       "source_excerpt": "They may have lost their tails, but nothing slowed these two down! Rescued from a burned field at just three weeks old, these two serval kittens had a long recovery ahead of them. Dodo editor Valentina shares their journey alongside Deirdre and Dr. Venter from Wild And Free Rehab as they grow stronger and get closer to returning to the wild.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/fcqAQ1gneg4feCugq/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/fcqAQ1gneg4feCugq/x720",
       "source_image_alt": "Wild Serval Kittens Found After Fire Make A Comeback",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbjlfve",
@@ -1594,7 +1582,7 @@
       "source_excerpt": "She was actually 5 months old and desperately needed someone to help her. Bambi was so malnourished when All Creatures Great and Small rescued her that they initially thought she was only 9 weeks old. Dodo editor Monica shares Bambi’s transformation and the moment she returned to surprise her rescuers looking like a completely different pup.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/fcd4Q1gndKdJDt0Jv/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/fcd4Q1gndKdJDt0Jv/x720",
       "source_image_alt": "Puppy Mistaken For 9 Weeks Old Makes Amazing Comeback",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbjkahm",
@@ -1630,7 +1618,7 @@
       "source_excerpt": "Just a completely normal family dinner! Lula and her pony Simba have been inseparable from the beginning, to the point that he’ll casually walk right into the kitchen to join her for dinner. Dodo editor Valentina talks with Lula’s parents about how their friendship started and what life is like when your toddler’s best friend happens to be a pony.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/fcd4k1gndKcAAXhYk/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/fcd4k1gndKcAAXhYk/x720",
       "source_image_alt": "Toddler’s Pony Best Friend Joins Her For Dinner",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbjkai6",
@@ -1654,34 +1642,6 @@
         "friend"
       ],
       "public_eligible": false
-    },
-    {
-      "id": "a0a95622d4e184757dce",
-      "title": "Faster to Science: A Letter to the Science Community",
-      "url": "https://science.nasa.gov/directorates/smd/faster-to-science-a-letter-to-the-science-community",
-      "source": "NASA News Releases",
-      "language": "en",
-      "published_at": "2026-10-22T00:00:16Z",
-      "source_excerpt": "NASA Science wants to deliver science faster, so we’re changing how we compete and select missions. On Monday, October 26, we will host a virtual NASA Science Town Hall.",
-      "agent_summary": "",
-      "source_fingerprint": "b4ce3dbde69b1eb3fb75",
-      "source_tier_bonus": 1,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "community",
-        "mission",
-        "science"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/491483e7-00f4-4581-9c4d-ba3853e16f74.webp",
-        "alt": "Faster to Science: A Letter to the Science Community",
-        "user_image_id": "491483e7-00f4-4581-9c4d-ba3853e16f74",
-        "match_score": 0.2502,
-        "width": 1280,
-        "height": 848
-      }
     },
     {
       "id": "0a2f9710d41a8ac57b3b",
@@ -1710,6 +1670,33 @@
         "width": 1280,
         "height": 848
       }
+    },
+    {
+      "id": "1cf350b3106fdd37c06d",
+      "title": "She couldn't afford pet-friendly housing, so she gave up her dog of 10 years. Her community raised $18,000 to reunite them",
+      "url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-10-07T14:12:00Z",
+      "source_excerpt": "After 23 years of marriage, Lisa Wilson and her dog Eddie had to find a new home. But Hurricane Helene had left the rental market in shambles.",
+      "agent_summary": "",
+      "source_fingerprint": "84b69c00e5ad3fec48ac",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6ac65295fb513da952f51586_6ac65294666e636761d49559_north-carolina-housing-woman-reunited-pet-dog-featured.webp",
+      "source_image_alt": "She couldn't afford pet-friendly housing, so she gave up her dog of 10 years. Her community raised $18,000 to reunite them",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "source_tier_bonus": 2,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "community",
+        "friend"
+      ],
+      "public_eligible": false
     }
   ]
 }
