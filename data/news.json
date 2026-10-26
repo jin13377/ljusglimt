@@ -1,8 +1,10 @@
 {
-  "generated_at": "2026-10-26T00:59:55.541715Z",
+  "generated_at": "2026-10-26T17:08:38.523570Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "9059cf29b9a387da17b1"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -1580,7 +1582,7 @@
       "source_excerpt": "She was actually 5 months old and desperately needed someone to help her. Bambi was so malnourished when All Creatures Great and Small rescued her that they initially thought she was only 9 weeks old. Dodo editor Monica shares Bambi’s transformation and the moment she returned to surprise her rescuers looking like a completely different pup.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/fcd4Q1gndKdJDt0Jv/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/fcd4Q1gndKdJDt0Jv/x720",
       "source_image_alt": "Puppy Mistaken For 9 Weeks Old Makes Amazing Comeback",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbjkahm",
@@ -1642,6 +1644,33 @@
       "public_eligible": false
     },
     {
+      "id": "9059cf29b9a387da17b1",
+      "title": "Oregon Zoo shares footage of rescued sea otters playing basketball with pumpkins: 'It plays a critical role in their well-being'",
+      "url": "https://www.goodgoodgood.co/articles/otters-playing-basketball-halloween-pumpkins",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-10-26T17:08:00Z",
+      "source_excerpt": "Juno, Lincoln, and Uni Sushi are rewarded for their tricks on the “court” with fresh seafood.",
+      "agent_summary": "",
+      "source_fingerprint": "84b2a9f428b6cbcb666b",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6adf87e6cca8030ef580c93b_6adf87e49806c40109016a31_otters-playing-basketball-halloween-pumpkins-featured.webp",
+      "source_image_alt": "Oregon Zoo shares footage of rescued sea otters playing basketball with pumpkins: 'It plays a critical role in their well-being'",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/otters-playing-basketball-halloween-pumpkins",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/otters-playing-basketball-halloween-pumpkins",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "source_tier_bonus": 2,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "play",
+        "rescue"
+      ],
+      "public_eligible": false
+    },
+    {
       "id": "0a2f9710d41a8ac57b3b",
       "title": "Volunteers became salmon, deer and earthworms. Then they set out to save their river",
       "url": "https://www.positive.news/society/volunteers-became-salmon-deer-and-earthworms-then-they-set-out-to-save-their-river",
@@ -1668,33 +1697,6 @@
         "width": 1280,
         "height": 848
       }
-    },
-    {
-      "id": "1cf350b3106fdd37c06d",
-      "title": "She couldn't afford pet-friendly housing, so she gave up her dog of 10 years. Her community raised $18,000 to reunite them",
-      "url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-10-07T14:12:00Z",
-      "source_excerpt": "After 23 years of marriage, Lisa Wilson and her dog Eddie had to find a new home. But Hurricane Helene had left the rental market in shambles.",
-      "agent_summary": "",
-      "source_fingerprint": "84b69c00e5ad3fec48ac",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6ac65295fb513da952f51586_6ac65294666e636761d49559_north-carolina-housing-woman-reunited-pet-dog-featured.webp",
-      "source_image_alt": "She couldn't afford pet-friendly housing, so she gave up her dog of 10 years. Her community raised $18,000 to reunite them",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "community",
-        "friend"
-      ],
-      "public_eligible": false
     }
   ]
 }
