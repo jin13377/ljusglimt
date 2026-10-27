@@ -537,6 +537,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "0dcafa8f01a3a7ba576f4f9484dbd83a91a3ce435534aaa9bb647074db68671b"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/98a3fd22e17cab009bc3-417b8c23a03e62f00e0e-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Insamlade bidrag hjälper till att rädda skogar",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "417b8c23a03e62f00e0e",
+        "width": 1280,
+        "height": 848,
+        "sha256": "f8dc6e68754d1965e3c38bd6a9ba8146f311b6f46baeed3c5fc55c6da1f3caa7",
+        "generated_at": "2026-10-27T16:13:26Z"
       }
     },
     {
