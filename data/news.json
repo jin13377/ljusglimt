@@ -1330,6 +1330,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "f67e96b0e325f82870812c775a560c9fdbc41f44eeac6c6824899266f42167cc"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/5d57e84c5c661d3d2370-02459021b2fdc7e432a9-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Naturpodden: Skogen behöver både hjärta och hjärna menar Sebastian Kirppu",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "02459021b2fdc7e432a9",
+        "width": 1280,
+        "height": 848,
+        "sha256": "1a9557d92ea403be6ea97e49ba779d160b7b3408950d31a896f2434c2db854e0",
+        "generated_at": "2026-10-27T01:51:05Z"
       }
     },
     {
