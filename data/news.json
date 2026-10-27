@@ -1,11 +1,17 @@
 {
-  "generated_at": "2026-10-26T17:08:38.523570Z",
+  "generated_at": "2026-10-27T01:50:23.951615Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "9059cf29b9a387da17b1"
+    "5d57e84c5c661d3d2370",
+    "eebde76227e0ef936855"
   ],
-  "fetch_errors": [],
+  "fetch_errors": [
+    {
+      "source": "Forskning & Framsteg",
+      "error": "The read operation timed out"
+    }
+  ],
   "items": [
     {
       "id": "9cf6616f23c2c0970f90",
@@ -708,34 +714,6 @@
       "public_eligible": true
     },
     {
-      "id": "ab9e3d77d729644a5ad7",
-      "title": "Blivande lärare känner sig inte redo att hantera elevers ohälsa",
-      "url": "https://forskning.se/2026/09/18/lararstudenter-psykisk-halsa-elever",
-      "source": "Forskning.se",
-      "language": "sv",
-      "published_at": "2026-09-18T07:22:30Z",
-      "source_excerpt": "Larmrapporterna om barns och ungas hälsa avlöser varandra – och skolan lyfts fram som en viktig förebyggande arena. Nu har forskare vid Malmö universitet undersökt hur redo blivande lärare är för att arbeta med hälsofrågor. – Vi vet att psykisk hälsa är avgörande både för lärandet och skolnärvaron. Men hur väl rustade är våra egna […] Blivande lärare känner sig inte redo att hantera elevers ohälsa",
-      "agent_summary": "",
-      "source_fingerprint": "2710dc525918995fd8aa",
-      "source_image_verified": true,
-      "source_image_url": "https://forskning.se/app/uploads/2026/09/larare-elever-psykisk-halsa-1024x576.jpg",
-      "source_image_alt": "Blivande lärare känner sig inte redo att hantera elevers ohälsa",
-      "source_image_credit": "Forskning.se",
-      "source_image_rights_url": "https://forskning.se/2026/09/18/lararstudenter-psykisk-halsa-elever",
-      "source_image_creator": "Forskning.se",
-      "source_image_source_url": "https://forskning.se/2026/09/18/lararstudenter-psykisk-halsa-elever",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 8,
-      "positive_signals": [
-        "curated-positive-source",
-        "elever",
-        "förebygga"
-      ],
-      "public_eligible": true
-    },
-    {
       "id": "fd5961abce3292280c5f",
       "title": "MSI startar ny publikationsserie om social innovation",
       "url": "https://socialinnovation.se/nyheter/msi-startar-ny-publikationsserie-om-social-innovation",
@@ -1312,6 +1290,49 @@
       "public_eligible": true
     },
     {
+      "id": "5d57e84c5c661d3d2370",
+      "title": "Naturpodden: Skogen behöver både hjärta och hjärna menar Sebastian Kirppu",
+      "url": "https://www.natursidan.se/nyheter/naturpodden-skogen-behover-bade-hjarta-och-hjarna-menar-sebastian-kirppu",
+      "source": "Natursidan",
+      "language": "sv",
+      "published_at": "2026-10-22T11:21:51Z",
+      "source_excerpt": "Vi har 25 år på oss att rädda de sista oskyddade naturskogarna i Sverige, samtidigt som politiken har gått baklänges senaste åren. Emil pratar med Sebastian Kirppu från Skydda Skogen om hur vi naturälskare kan engagera oss för skogen.",
+      "agent_summary": "",
+      "source_fingerprint": "02459021b2fdc7e432a9",
+      "source_video": {
+        "provider": "youtube",
+        "video_id": "SdRAQtp6ouI",
+        "embed_url": "https://www.youtube-nocookie.com/embed/SdRAQtp6ouI",
+        "source_url": "https://www.youtube.com/watch?v=SdRAQtp6ouI",
+        "title": "Naturpodden: Skogen behöver både hjärta och hjärna menar Sebastian Kirppu"
+      },
+      "category": "Natur",
+      "source_tier_bonus": 5,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "skydda"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/4412043e-894c-4672-8414-e2bae48bf2da-1.webp",
+        "alt": "Naturpodden: Skogen behöver både hjärta och hjärna menar Sebastian Kirppu",
+        "user_image_id": "4412043e-894c-4672-8414-e2bae48bf2da-1",
+        "match_score": 0.2894,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/5d57e84c5c661d3d2370-02459021-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "02459021b2fdc7e432a9",
+        "width": 1280,
+        "height": 848,
+        "sha256": "f67e96b0e325f82870812c775a560c9fdbc41f44eeac6c6824899266f42167cc"
+      }
+    },
+    {
       "id": "56c225a54e232fce1fea",
       "title": "Woman Rescues A Cat She Found At A Car Dealership",
       "url": "https://www.dailymotion.com/video/xamxvli",
@@ -1582,7 +1603,7 @@
       "source_excerpt": "She was actually 5 months old and desperately needed someone to help her. Bambi was so malnourished when All Creatures Great and Small rescued her that they initially thought she was only 9 weeks old. Dodo editor Monica shares Bambi’s transformation and the moment she returned to surprise her rescuers looking like a completely different pup.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/fcd4Q1gndKdJDt0Jv/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/fcd4Q1gndKdJDt0Jv/x720",
       "source_image_alt": "Puppy Mistaken For 9 Weeks Old Makes Amazing Comeback",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbjkahm",
@@ -1609,36 +1630,35 @@
       "public_eligible": false
     },
     {
-      "id": "b1ce3377909e9e70df1c",
-      "title": "Toddler’s Pony Best Friend Joins Her For Dinner",
-      "url": "https://www.dailymotion.com/video/xbjkai6",
+      "id": "eebde76227e0ef936855",
+      "title": "Jess Taylor’s 10-Year Friendship With A Donkey",
+      "url": "https://www.dailymotion.com/video/xbreamy",
       "source": "The Dodo",
       "language": "en",
-      "published_at": "2026-10-07T14:34:20Z",
-      "source_excerpt": "Just a completely normal family dinner! Lula and her pony Simba have been inseparable from the beginning, to the point that he’ll casually walk right into the kitchen to join her for dinner. Dodo editor Valentina talks with Lula’s parents about how their friendship started and what life is like when your toddler’s best friend happens to be a pony.",
+      "published_at": "2026-10-26T20:48:53Z",
+      "source_excerpt": "Imagine meeting a donkey on vacation and accidentally starting a decade-long friendship! Jess Taylor may spend her days selling real estate on a hit Netflix show, but for the past 10 years, every trip to Mallorca has included a visit to the same donkey. She tells Dodo editor Brielle how climbing through shrubs and over walls to meet him turned into a decade-long tradition, and why no trip to the i",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/fcd4k1gndKcAAXhYk/x720",
-      "source_image_alt": "Toddler’s Pony Best Friend Joins Her For Dinner",
+      "source_image_url": "https://s2.dmcdn.net/v/gOpHQ1gtxvD7KJo3i/x720",
+      "source_image_alt": "Jess Taylor’s 10-Year Friendship With A Donkey",
       "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xbjkai6",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xbreamy",
       "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xbjkai6",
+      "source_image_source_url": "https://www.dailymotion.com/video/xbreamy",
       "source_image_verification_method": "dailymotion-api-thumbnail-v1",
       "source_video": {
         "provider": "dailymotion",
-        "video_id": "xbjkai6",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xbjkai6",
-        "source_url": "https://www.dailymotion.com/video/xbjkai6",
-        "title": "Toddler’s Pony Best Friend Joins Her For Dinner"
+        "video_id": "xbreamy",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xbreamy",
+        "source_url": "https://www.dailymotion.com/video/xbreamy",
+        "title": "Jess Taylor’s 10-Year Friendship With A Donkey"
       },
-      "source_fingerprint": "d7dff41379f8e39024d7",
+      "source_fingerprint": "2dee120fcafcab5425c9",
       "category": "Djur",
       "source_tier_bonus": 4,
-      "positivity_score": 8,
+      "positivity_score": 6,
       "positive_signals": [
         "curated-positive-source",
-        "best friend",
         "friend"
       ],
       "public_eligible": false
