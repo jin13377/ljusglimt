@@ -1,9 +1,20 @@
 {
-  "generated_at": "2026-10-28T02:01:42.575430Z",
+  "generated_at": "2026-10-28T17:00:20.569111Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
-  "fetch_errors": [],
+  "new_item_ids": [
+    "348c0d628ea0a4736bdd",
+    "9177afbabe46040360f0",
+    "51719ac12baa589ff596",
+    "14c6d7ecad14dcdc984c",
+    "ab2ff085fa32408c9c10"
+  ],
+  "fetch_errors": [
+    {
+      "source": "Viable Cities",
+      "error": "The read operation timed out"
+    }
+  ],
   "items": [
     {
       "id": "9cf6616f23c2c0970f90",
@@ -43,6 +54,45 @@
         "width": 1280,
         "height": 848,
         "sha256": "026299cb5c0e264c03a64aa318f8b21e1f34646e1027354716e6f8fe9ae0555a"
+      }
+    },
+    {
+      "id": "348c0d628ea0a4736bdd",
+      "title": "Stora anslag till forskning om klimatförändringarnas påverkan på hälsan",
+      "url": "https://nyheter.ki.se/stora-anslag-till-forskning-om-klimatforandringarnas-paverkan-pa-halsan",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-10-28T00:00:00Z",
+      "source_excerpt": "Hur påverkas människors hälsa när värmeböljor, luftföroreningar och översvämningar inträffar samtidigt eller tätt efter varandra? Och hur kan samhället minska hälsoriskerna i ett förändrat klimat? Forskare vid Institutet för miljömedicin, Karolinska Institutet, har beviljats sammanlagt 59 miljoner kronor från forskningsrådet Formas för två nya forskningssatsningar om klimat och hälsa.",
+      "agent_summary": "",
+      "source_fingerprint": "942fe5c185415ef77ee0",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 11,
+      "positive_signals": [
+        "curated-positive-source",
+        "anslag",
+        "beviljats",
+        "forskning",
+        "satsning"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/5494fcb3-c7bf-4552-a084-22103a580955.webp",
+        "alt": "Stora anslag till forskning om klimatförändringarnas påverkan på hälsan",
+        "user_image_id": "5494fcb3-c7bf-4552-a084-22103a580955",
+        "match_score": 0.2342,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/348c0d628ea0a4736bdd-942fe5c1-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "942fe5c185415ef77ee0",
+        "width": 1280,
+        "height": 848,
+        "sha256": "3355d1bec63e0a150d67570c92e5e68626e777c40fe74c8b84cedd011990132f"
       }
     },
     {
@@ -309,44 +359,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "0440c199c7e86a88eb53150e1f9f2068173b21c65b52bc05c5a0124ca765bdec"
-      }
-    },
-    {
-      "id": "8ee2e7026b5d3b6d3869",
-      "title": "MMK-forskare utsedd till DDLS Fellow – får långsiktigt forskningsstöd",
-      "url": "https://nyheter.ki.se/mmk-forskare-utsedd-till-ddls-fellow-far-langsiktigt-forskningsstod",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-10-22T00:00:00Z",
-      "source_excerpt": "Vi gratulerar David Marlevi och teamet för translationell kardiovaskulär bilddiagnostik till utnämningen som fellow inom Data-Driven Life Science (DDLS), samt till det långsiktiga finansieringsstöd som beviljats inom ramen för DDLS-programmet.",
-      "agent_summary": "",
-      "source_fingerprint": "c48e1beab217992a4abf",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 9,
-      "positive_signals": [
-        "curated-positive-source",
-        "beviljats",
-        "forskning",
-        "science"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/5494fcb3-c7bf-4552-a084-22103a580955.webp",
-        "alt": "MMK-forskare utsedd till DDLS Fellow – får långsiktigt forskningsstöd",
-        "user_image_id": "5494fcb3-c7bf-4552-a084-22103a580955",
-        "match_score": 0.2342,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/8ee2e7026b5d3b6d3869-c48e1bea-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "c48e1beab217992a4abf",
-        "width": 1280,
-        "height": 848,
-        "sha256": "aea77d08469f5ed2278edb27298e33649515a274dea419b3ccdeb7d66f4ceb1f"
       }
     },
     {
@@ -929,6 +941,34 @@
       }
     },
     {
+      "id": "9177afbabe46040360f0",
+      "title": "Gammalt virus kopplas till hjärnans utveckling",
+      "url": "https://forskning.se/2026/10/28/gammalt-virus-kopplas-till-hjarnans-utveckling",
+      "source": "Forskning.se",
+      "language": "sv",
+      "published_at": "2026-10-28T12:30:24Z",
+      "source_excerpt": "Pandemier har uppstått både förr och i modern tid när populationer av människor eller djur varit tillräckligt stora. Nu har forskare vid Lunds universitet upptäckt att ett virus kan förändra en dna-sekvens hos en hel Population är hela den grupp eller allt det material som en studie handlar om.&lt;br/&gt;Ur den populationen väljer forskarna ofta ett ... Läs mer \" href=\"https://forskning.se/ordlist",
+      "agent_summary": "",
+      "source_fingerprint": "603a6f682907dc437b1b",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/10/Schimpanser-unga-1024x576.jpg",
+      "source_image_alt": "Gammalt virus kopplas till hjärnans utveckling",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/10/28/gammalt-virus-kopplas-till-hjarnans-utveckling",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/10/28/gammalt-virus-kopplas-till-hjarnans-utveckling",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "upptäckt"
+      ],
+      "public_eligible": true
+    },
+    {
       "id": "38a03a3022753d958ed7",
       "title": "Grönska utanför dörren kopplas till lägre risk för demens",
       "url": "https://www.extrakt.se/gronska-utanfor-dorren-kopplas-till-lagre-risk-for-demens",
@@ -1292,49 +1332,6 @@
       "public_eligible": true
     },
     {
-      "id": "5d57e84c5c661d3d2370",
-      "title": "Naturpodden: Skogen behöver både hjärta och hjärna menar Sebastian Kirppu",
-      "url": "https://www.natursidan.se/nyheter/naturpodden-skogen-behover-bade-hjarta-och-hjarna-menar-sebastian-kirppu",
-      "source": "Natursidan",
-      "language": "sv",
-      "published_at": "2026-10-22T11:21:51Z",
-      "source_excerpt": "Vi har 25 år på oss att rädda de sista oskyddade naturskogarna i Sverige, samtidigt som politiken har gått baklänges senaste åren. Emil pratar med Sebastian Kirppu från Skydda Skogen om hur vi naturälskare kan engagera oss för skogen.",
-      "agent_summary": "",
-      "source_fingerprint": "02459021b2fdc7e432a9",
-      "source_video": {
-        "provider": "youtube",
-        "video_id": "SdRAQtp6ouI",
-        "embed_url": "https://www.youtube-nocookie.com/embed/SdRAQtp6ouI",
-        "source_url": "https://www.youtube.com/watch?v=SdRAQtp6ouI",
-        "title": "Naturpodden: Skogen behöver både hjärta och hjärna menar Sebastian Kirppu"
-      },
-      "category": "Natur",
-      "source_tier_bonus": 5,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "skydda"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/fb601de5-40fb-41e6-ad59-02bed671c043.webp",
-        "alt": "Naturpodden: Skogen behöver både hjärta och hjärna menar Sebastian Kirppu",
-        "user_image_id": "fb601de5-40fb-41e6-ad59-02bed671c043",
-        "match_score": 0.2632,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/5d57e84c5c661d3d2370-02459021-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "02459021b2fdc7e432a9",
-        "width": 1280,
-        "height": 848,
-        "sha256": "f67e96b0e325f82870812c775a560c9fdbc41f44eeac6c6824899266f42167cc"
-      }
-    },
-    {
       "id": "56c225a54e232fce1fea",
       "title": "Woman Rescues A Cat She Found At A Car Dealership",
       "url": "https://www.dailymotion.com/video/xamxvli",
@@ -1560,107 +1557,110 @@
       }
     },
     {
-      "id": "62fa7170147614368439",
-      "title": "Wild Serval Kittens Found After Fire Make A Comeback",
-      "url": "https://www.dailymotion.com/video/xbjlfve",
+      "id": "51719ac12baa589ff596",
+      "title": "She Was A Dog Person Until Her Dog Adopted A Kitten",
+      "url": "https://www.dailymotion.com/video/xbrsdva",
       "source": "The Dodo",
       "language": "en",
-      "published_at": "2026-10-07T16:33:40Z",
-      "source_excerpt": "They may have lost their tails, but nothing slowed these two down! Rescued from a burned field at just three weeks old, these two serval kittens had a long recovery ahead of them. Dodo editor Valentina shares their journey alongside Deirdre and Dr. Venter from Wild And Free Rehab as they grow stronger and get closer to returning to the wild.",
+      "published_at": "2026-10-28T15:34:34Z",
+      "source_excerpt": "Pretty sure sleeping belly-up on a dog is the coziest spot on Earth! Tessa always considered herself a dog person, until her dog Melons completely fell in love with rescued kitten Mango. Dodo editor Tarang caught up with her about how their unlikely friendship turned Mango into the ultimate gateway cat for the family, so when a second helpless kitten appeared on the highway, “what’s one more cat?”",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/fcqAQ1gneg4feCugq/x720",
-      "source_image_alt": "Wild Serval Kittens Found After Fire Make A Comeback",
+      "source_image_url": "https://s1.dmcdn.net/v/gRJms1guXTv39odBn/x720",
+      "source_image_alt": "She Was A Dog Person Until Her Dog Adopted A Kitten",
       "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xbjlfve",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xbrsdva",
       "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xbjlfve",
+      "source_image_source_url": "https://www.dailymotion.com/video/xbrsdva",
       "source_image_verification_method": "dailymotion-api-thumbnail-v1",
       "source_video": {
         "provider": "dailymotion",
-        "video_id": "xbjlfve",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xbjlfve",
-        "source_url": "https://www.dailymotion.com/video/xbjlfve",
-        "title": "Wild Serval Kittens Found After Fire Make A Comeback"
+        "video_id": "xbrsdva",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xbrsdva",
+        "source_url": "https://www.dailymotion.com/video/xbrsdva",
+        "title": "She Was A Dog Person Until Her Dog Adopted A Kitten"
       },
-      "source_fingerprint": "b688e692a2b895ed9de7",
+      "source_fingerprint": "d67e87726a5f0314072d",
       "category": "Djur",
       "source_tier_bonus": 4,
-      "positivity_score": 8,
+      "positivity_score": 11,
       "positive_signals": [
         "curated-positive-source",
+        "adopted",
+        "friend",
         "kitten",
-        "recovery",
+        "love",
         "rescue"
       ],
       "public_eligible": false
     },
     {
-      "id": "c787d18d6ef90b17b2d3",
-      "title": "Puppy Mistaken For 9 Weeks Old Makes Amazing Comeback",
-      "url": "https://www.dailymotion.com/video/xbjkahm",
+      "id": "14c6d7ecad14dcdc984c",
+      "title": "Rescue Dog Has Very Special Love Language For Kittens",
+      "url": "https://www.dailymotion.com/video/xbrs1aa",
       "source": "The Dodo",
       "language": "en",
-      "published_at": "2026-10-07T14:34:40Z",
-      "source_excerpt": "She was actually 5 months old and desperately needed someone to help her. Bambi was so malnourished when All Creatures Great and Small rescued her that they initially thought she was only 9 weeks old. Dodo editor Monica shares Bambi’s transformation and the moment she returned to surprise her rescuers looking like a completely different pup.",
+      "published_at": "2026-10-28T14:49:36Z",
+      "source_excerpt": "The tiny love nibbles — reserved for her favorite kittens — are impossible to resist! Our producer Mackenzie shared how Red unexpectedly became the ultimate foster mom to kittens — and how seriously she takes the job.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/fcd4Q1gndKdJDt0Jv/x720",
-      "source_image_alt": "Puppy Mistaken For 9 Weeks Old Makes Amazing Comeback",
+      "source_image_url": "https://s1.dmcdn.net/v/gRFo21guWpebfy7yk/x720",
+      "source_image_alt": "Rescue Dog Has Very Special Love Language For Kittens",
       "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xbjkahm",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xbrs1aa",
       "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xbjkahm",
+      "source_image_source_url": "https://www.dailymotion.com/video/xbrs1aa",
       "source_image_verification_method": "dailymotion-api-thumbnail-v1",
       "source_video": {
         "provider": "dailymotion",
-        "video_id": "xbjkahm",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xbjkahm",
-        "source_url": "https://www.dailymotion.com/video/xbjkahm",
-        "title": "Puppy Mistaken For 9 Weeks Old Makes Amazing Comeback"
+        "video_id": "xbrs1aa",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xbrs1aa",
+        "source_url": "https://www.dailymotion.com/video/xbrs1aa",
+        "title": "Rescue Dog Has Very Special Love Language For Kittens"
       },
-      "source_fingerprint": "ec0c4811ee11a7371f4a",
+      "source_fingerprint": "0c344f37ca98da5b7f46",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 10,
+      "positive_signals": [
+        "curated-positive-source",
+        "kitten",
+        "love",
+        "rescue"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "ab2ff085fa32408c9c10",
+      "title": "Lonely Blind Horse Finds A Best Friend In A Giant",
+      "url": "https://www.dailymotion.com/video/xbrru06",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-10-28T14:22:26Z",
+      "source_excerpt": "Jake needed a home. Violet needed a friend. The moment this gentle giant arrived, they chose each other! Violet had been struggling without a horse companion when Melissa at Twilight Springs Horse Sanctuary welcomed Jake, a gentle giant who needed a home. Dodo editor Brielle shares how the two immediately gravitated toward each other, and how their unlikely friendship gave Violet exactly the comfo",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s2.dmcdn.net/v/gRDUc1guWNXnv46Ai/x720",
+      "source_image_alt": "Lonely Blind Horse Finds A Best Friend In A Giant",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xbrru06",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xbrru06",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xbrru06",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xbrru06",
+        "source_url": "https://www.dailymotion.com/video/xbrru06",
+        "title": "Lonely Blind Horse Finds A Best Friend In A Giant"
+      },
+      "source_fingerprint": "9c04e1fe31a0b148c6f0",
       "category": "Djur",
       "source_tier_bonus": 4,
       "positivity_score": 8,
       "positive_signals": [
         "curated-positive-source",
-        "puppy",
-        "rescue",
-        "surprise"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "eebde76227e0ef936855",
-      "title": "Jess Taylor’s 10-Year Friendship With A Donkey",
-      "url": "https://www.dailymotion.com/video/xbreamy",
-      "source": "The Dodo",
-      "language": "en",
-      "published_at": "2026-10-26T20:48:53Z",
-      "source_excerpt": "Imagine meeting a donkey on vacation and accidentally starting a decade-long friendship! Jess Taylor may spend her days selling real estate on a hit Netflix show, but for the past 10 years, every trip to Mallorca has included a visit to the same donkey. She tells Dodo editor Brielle how climbing through shrubs and over walls to meet him turned into a decade-long tradition, and why no trip to the i",
-      "agent_summary": "",
-      "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/gOpHQ1gtxvD7KJo3i/x720",
-      "source_image_alt": "Jess Taylor’s 10-Year Friendship With A Donkey",
-      "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xbreamy",
-      "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xbreamy",
-      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
-      "source_video": {
-        "provider": "dailymotion",
-        "video_id": "xbreamy",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xbreamy",
-        "source_url": "https://www.dailymotion.com/video/xbreamy",
-        "title": "Jess Taylor’s 10-Year Friendship With A Donkey"
-      },
-      "source_fingerprint": "2dee120fcafcab5425c9",
-      "category": "Djur",
-      "source_tier_bonus": 4,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
+        "best friend",
         "friend"
       ],
       "public_eligible": false
