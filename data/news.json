@@ -93,6 +93,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "3355d1bec63e0a150d67570c92e5e68626e777c40fe74c8b84cedd011990132f"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/348c0d628ea0a4736bdd-942fe5c185415ef77ee0-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Stora anslag till forskning om klimatförändringarnas påverkan på hälsan",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "942fe5c185415ef77ee0",
+        "width": 1280,
+        "height": 848,
+        "sha256": "5611842efe8fdaff2af5a07b5aa5b72a17c3139f07b627290589bb7daa8f6af5",
+        "generated_at": "2026-10-28T17:01:02Z"
       }
     },
     {
