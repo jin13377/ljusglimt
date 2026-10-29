@@ -1,8 +1,12 @@
 {
-  "generated_at": "2026-10-29T02:08:47.832141Z",
+  "generated_at": "2026-10-29T17:19:05.635643Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "a096a61a8fa78fff9673",
+    "826f5f0d0ec03755e570",
+    "cc2f5d016e4a56c4597c"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -502,6 +506,44 @@
       }
     },
     {
+      "id": "a096a61a8fa78fff9673",
+      "title": "NY TIDNING: Diabetes – från vetenskap till vardag",
+      "url": "https://www.vetenskaphalsa.se/diabetestidning",
+      "source": "Vetenskap & hälsa",
+      "language": "sv",
+      "published_at": "2026-10-29T08:55:02Z",
+      "source_excerpt": "Forskningen har tagit diabetes från dödlig till behandlingsbar och snart kanske botbar. Diabetes har komplexa orsaker och nu vet vi att diabetes inte bara handlar om typ 1 och 2 utan har flera undergrupper. Läs om hur arv, miljö, fysisk aktivitet och övervikt påverkar risken att insjukna. Ta del av forskningens framsteg mot att förebygga, […]",
+      "agent_summary": "",
+      "source_fingerprint": "06f3696733bfd43dd516",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "framsteg",
+        "förebygga"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/ca17e92f-ec53-4cd1-b11c-3f69f0912247.webp",
+        "alt": "NY TIDNING: Diabetes – från vetenskap till vardag",
+        "user_image_id": "ca17e92f-ec53-4cd1-b11c-3f69f0912247",
+        "match_score": 0.2479,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/a096a61a8fa78fff9673-06f36967-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "06f3696733bfd43dd516",
+        "width": 1280,
+        "height": 848,
+        "sha256": "9ba361823021e62551cf45a98fcafed8bf1eedb2a319764b4ff4f76a2f5170e1"
+      }
+    },
+    {
       "id": "98a3fd22e17cab009bc3",
       "title": "Insamlade bidrag hjälper till att rädda skogar",
       "url": "https://www.natursidan.se/nyheter/insamlade-bidrag-hjalper-till-att-radda-skogar",
@@ -930,6 +972,80 @@
       }
     },
     {
+      "id": "826f5f0d0ec03755e570",
+      "title": "Två blev fem – om nya grupper av diabetes",
+      "url": "https://www.vetenskaphalsa.se/tva-blev-fem-om-nya-grupper-av-diabetes",
+      "source": "Vetenskap & hälsa",
+      "language": "sv",
+      "published_at": "2026-10-29T08:50:23Z",
+      "source_excerpt": "Diabetes har sedan länge delats in i två grupper, typ 1 och typ 2. Men senare års forskning har visat att diabetes kan delas in i fem olika grupper med olika sjukdomsutveckling och olika risker för komplikationer. Den nya kunskapen om undergrupperna öppnar för möjligheter till mer individanpassad vård och förebyggande behandlingar. 2018 presenterade forskare […]",
+      "agent_summary": "",
+      "source_fingerprint": "fd3bde8dcfc6ada3a922",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "förebygga"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/290629d1-eec3-4f31-9644-49e96e973112.webp",
+        "alt": "Två blev fem – om nya grupper av diabetes",
+        "user_image_id": "290629d1-eec3-4f31-9644-49e96e973112",
+        "match_score": 0.2432,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/826f5f0d0ec03755e570-fd3bde8d-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "fd3bde8dcfc6ada3a922",
+        "width": 1280,
+        "height": 848,
+        "sha256": "2a6b0c2992bbf6b8ea0e4f1a499cea95c32b6d693ec022bbfbee2356cce15574"
+      }
+    },
+    {
+      "id": "cc2f5d016e4a56c4597c",
+      "title": "Viktigt att kvinnor som haft graviditetsdiabetes följs upp",
+      "url": "https://www.vetenskaphalsa.se/viktigt-att-kvinnor-som-haft-graviditetsdiabetes-foljs-upp",
+      "source": "Vetenskap & hälsa",
+      "language": "sv",
+      "published_at": "2026-10-29T08:04:51Z",
+      "source_excerpt": "Kvinnor som tidigare haft graviditetsdiabetes löper tio gånger högre risk att drabbas av typ 2-diabetes. Ändå är det bara en minoritet av dem som följs upp inom primärvården efter förlossningen. Med fler kontroller och förebyggande insatser skulle risken minska, menar läkaren och doktoranden Amanda Björk Javanshiri. – Vår forskning visar att det här verkligen är […]",
+      "agent_summary": "",
+      "source_fingerprint": "6e0110cf56f10d6a8be0",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "förebygga"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/fb601de5-40fb-41e6-ad59-02bed671c043.webp",
+        "alt": "Viktigt att kvinnor som haft graviditetsdiabetes följs upp",
+        "user_image_id": "fb601de5-40fb-41e6-ad59-02bed671c043",
+        "match_score": 0.2341,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/cc2f5d016e4a56c4597c-6e0110cf-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "6e0110cf56f10d6a8be0",
+        "width": 1280,
+        "height": 848,
+        "sha256": "fe53ea2d0b9ec1587db920be774873371e1d8c89a613d3271722acd03e2b40e7"
+      }
+    },
+    {
       "id": "9177afbabe46040360f0",
       "title": "Gammalt virus kopplas till hjärnans utveckling",
       "url": "https://forskning.se/2026/10/28/gammalt-virus-kopplas-till-hjarnans-utveckling",
@@ -1173,115 +1289,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "8718b46608576159113a3b800399960170d7ed28aa4eeba05a984288e914f21c"
-      }
-    },
-    {
-      "id": "ac3e2de220671ba6b739",
-      "title": "Stor rapport om världens flyttfåglar pekar ut största hot och bästa lösningar",
-      "url": "https://www.natursidan.se/nyheter/stor-rapport-om-varldens-flyttfaglar-pekar-ut-storsta-hot-och-basta-losningar",
-      "source": "Natursidan",
-      "language": "sv",
-      "published_at": "2026-09-14T06:55:10Z",
-      "source_excerpt": "En stor sammanställning av hur det går för världens flyttfåglar ger en relativt tydlig bild av läget för den biologiska mångfalden. Rapporten visar vilka hot som är störst, men också vilka åtgärder som är viktigast.",
-      "agent_summary": "",
-      "source_fingerprint": "c00d83730885f7ea740d",
-      "category": "Natur",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "lösning"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/4412043e-894c-4672-8414-e2bae48bf2da.webp",
-        "alt": "Stor rapport om världens flyttfåglar pekar ut största hot och bästa lösningar",
-        "user_image_id": "4412043e-894c-4672-8414-e2bae48bf2da",
-        "match_score": 0.2894,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/ac3e2de220671ba6b739-c00d8373-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "c00d83730885f7ea740d",
-        "width": 1280,
-        "height": 848,
-        "sha256": "be6e644befade7f8c29bcf0b11ac845cf518f58837ec512ed4ba7f85154814e8"
-      }
-    },
-    {
-      "id": "39d35a286238acbaeb7a",
-      "title": "Oväntad upptäckt avslöjar mekanism bakom hjärntumörutveckling",
-      "url": "https://www.vetenskaphalsa.se/ovantad-upptackt-avslojar-mekanism-bakom-hjarntumorutveckling",
-      "source": "Vetenskap & hälsa",
-      "language": "sv",
-      "published_at": "2026-09-08T05:31:00Z",
-      "source_excerpt": "När forskare vid Lunds universitet undersökte hur molekylen UM171 fungerar, en molekyl som används för att få blodstamceller att föröka sig, gjorde de en oväntad koppling. Resultaten ger nya insikter i hur en av de vanligaste elakartade hjärntumörerna hos barn i framtiden skulle kunna behandlas. UM171 är en syntetisk molekyl som utvecklats av forskare vid […]",
-      "agent_summary": "",
-      "source_fingerprint": "81f8dae589d8a080992d",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "upptäckt"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/ca17e92f-ec53-4cd1-b11c-3f69f0912247.webp",
-        "alt": "Oväntad upptäckt avslöjar mekanism bakom hjärntumörutveckling",
-        "user_image_id": "ca17e92f-ec53-4cd1-b11c-3f69f0912247",
-        "match_score": 0.2479,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/39d35a286238acbaeb7a-81f8dae5-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "81f8dae589d8a080992d",
-        "width": 1280,
-        "height": 848,
-        "sha256": "6187493030d84b0a4929cba452c4d7ae2c8c058e9bfbd3198876fe92f9aa1e3d"
-      }
-    },
-    {
-      "id": "07b5b8ec5086fbca3fdf",
-      "title": "Bidrottningar dumpar gifter på sin avkomma",
-      "url": "https://www.natursidan.se/nyheter/bidrottningar-dumpar-gifter-pa-sin-avkomma",
-      "source": "Natursidan",
-      "language": "sv",
-      "published_at": "2026-08-27T04:34:48Z",
-      "source_excerpt": "För att skydda sig själv överför honungsbins drottningar bekämpningsmedel till sina ägg. Det visar ny forskning.",
-      "agent_summary": "",
-      "source_fingerprint": "d334d2ac0a71900e67c2",
-      "category": "Natur",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "skydda"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/290629d1-eec3-4f31-9644-49e96e973112.webp",
-        "alt": "Bidrottningar dumpar gifter på sin avkomma",
-        "user_image_id": "290629d1-eec3-4f31-9644-49e96e973112",
-        "match_score": 0.287,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/07b5b8ec5086fbca3fdf-d334d2ac-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "d334d2ac0a71900e67c2",
-        "width": 1280,
-        "height": 848,
-        "sha256": "cebe89e0ec7ef7c721aaaf286d84efe7551e26880758e8c87160cd3a25febdb7"
       }
     },
     {
@@ -1555,7 +1562,7 @@
       "source_excerpt": "Pretty sure sleeping belly-up on a dog is the coziest spot on Earth! Tessa always considered herself a dog person, until her dog Melons completely fell in love with rescued kitten Mango. Dodo editor Tarang caught up with her about how their unlikely friendship turned Mango into the ultimate gateway cat for the family, so when a second helpless kitten appeared on the highway, “what’s one more cat?”",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/gRJms1guXTv39odBn/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/gRJms1guXTv39odBn/x720",
       "source_image_alt": "She Was A Dog Person Until Her Dog Adopted A Kitten",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbrsdva",
@@ -1629,7 +1636,7 @@
       "source_excerpt": "Jake needed a home. Violet needed a friend. The moment this gentle giant arrived, they chose each other! Violet had been struggling without a horse companion when Melissa at Twilight Springs Horse Sanctuary welcomed Jake, a gentle giant who needed a home. Dodo editor Brielle shares how the two immediately gravitated toward each other, and how their unlikely friendship gave Violet exactly the comfo",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/gRDUc1guWNXnv46Ai/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/gRDUc1guWNXnv46Ai/x720",
       "source_image_alt": "Lonely Blind Horse Finds A Best Friend In A Giant",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbrru06",
