@@ -1,20 +1,9 @@
 {
-  "generated_at": "2026-10-28T17:00:20.569111Z",
+  "generated_at": "2026-10-29T02:08:47.832141Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [
-    "348c0d628ea0a4736bdd",
-    "9177afbabe46040360f0",
-    "51719ac12baa589ff596",
-    "14c6d7ecad14dcdc984c",
-    "ab2ff085fa32408c9c10"
-  ],
-  "fetch_errors": [
-    {
-      "source": "Viable Cities",
-      "error": "The read operation timed out"
-    }
-  ],
+  "new_item_ids": [],
+  "fetch_errors": [],
   "items": [
     {
       "id": "9cf6616f23c2c0970f90",
@@ -93,17 +82,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "3355d1bec63e0a150d67570c92e5e68626e777c40fe74c8b84cedd011990132f"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/348c0d628ea0a4736bdd-942fe5c185415ef77ee0-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: Stora anslag till forskning om klimatförändringarnas påverkan på hälsan",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "942fe5c185415ef77ee0",
-        "width": 1280,
-        "height": 848,
-        "sha256": "5611842efe8fdaff2af5a07b5aa5b72a17c3139f07b627290589bb7daa8f6af5",
-        "generated_at": "2026-10-28T17:01:02Z"
       }
     },
     {
@@ -1651,7 +1629,7 @@
       "source_excerpt": "Jake needed a home. Violet needed a friend. The moment this gentle giant arrived, they chose each other! Violet had been struggling without a horse companion when Melissa at Twilight Springs Horse Sanctuary welcomed Jake, a gentle giant who needed a home. Dodo editor Brielle shares how the two immediately gravitated toward each other, and how their unlikely friendship gave Violet exactly the comfo",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/gRDUc1guWNXnv46Ai/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/gRDUc1guWNXnv46Ai/x720",
       "source_image_alt": "Lonely Blind Horse Finds A Best Friend In A Giant",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbrru06",
