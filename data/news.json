@@ -541,6 +541,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "9ba361823021e62551cf45a98fcafed8bf1eedb2a319764b4ff4f76a2f5170e1"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/a096a61a8fa78fff9673-06f3696733bfd43dd516-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: NY TIDNING: Diabetes – från vetenskap till vardag",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "06f3696733bfd43dd516",
+        "width": 1280,
+        "height": 848,
+        "sha256": "050734edd3de8ac05fb0f21f6dd6119af9c2a4854cf12b9fe8f97f61b3d40416",
+        "generated_at": "2026-10-29T17:19:34Z"
       }
     },
     {
