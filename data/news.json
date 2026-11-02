@@ -1,11 +1,10 @@
 {
-  "generated_at": "2026-11-02T02:07:56.426447Z",
+  "generated_at": "2026-11-02T20:38:10.317770Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "31e77154ddb10b9e3fff",
-    "fd16dbf723c3df28aaa3",
-    "398aeae8811416ca684d"
+    "245891e2e9ea80548e52",
+    "c69dd214c380ad1a8b44"
   ],
   "fetch_errors": [],
   "items": [
@@ -1046,34 +1045,6 @@
       }
     },
     {
-      "id": "9177afbabe46040360f0",
-      "title": "Gammalt virus kopplas till hjärnans utveckling",
-      "url": "https://forskning.se/2026/10/28/gammalt-virus-kopplas-till-hjarnans-utveckling",
-      "source": "Forskning.se",
-      "language": "sv",
-      "published_at": "2026-10-28T12:30:24Z",
-      "source_excerpt": "Pandemier har uppstått både förr och i modern tid när populationer av människor eller djur varit tillräckligt stora. Nu har forskare vid Lunds universitet upptäckt att ett virus kan förändra en dna-sekvens hos en hel Population är hela den grupp eller allt det material som en studie handlar om.&lt;br/&gt;Ur den populationen väljer forskarna ofta ett ... Läs mer \" href=\"https://forskning.se/ordlist",
-      "agent_summary": "",
-      "source_fingerprint": "603a6f682907dc437b1b",
-      "source_image_verified": true,
-      "source_image_url": "https://forskning.se/app/uploads/2026/10/Schimpanser-unga-1024x576.jpg",
-      "source_image_alt": "Gammalt virus kopplas till hjärnans utveckling",
-      "source_image_credit": "Forskning.se",
-      "source_image_rights_url": "https://forskning.se/2026/10/28/gammalt-virus-kopplas-till-hjarnans-utveckling",
-      "source_image_creator": "Forskning.se",
-      "source_image_source_url": "https://forskning.se/2026/10/28/gammalt-virus-kopplas-till-hjarnans-utveckling",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "upptäckt"
-      ],
-      "public_eligible": true
-    },
-    {
       "id": "38a03a3022753d958ed7",
       "title": "Grönska utanför dörren kopplas till lägre risk för demens",
       "url": "https://www.extrakt.se/gronska-utanfor-dorren-kopplas-till-lagre-risk-for-demens",
@@ -1328,6 +1299,42 @@
       "public_eligible": true
     },
     {
+      "id": "245891e2e9ea80548e52",
+      "title": "Naturpodden: Marie Karlsson inventerar tretåig hackspett",
+      "url": "https://www.natursidan.se/nyheter/naturpodden-marie-karlsson-inventerar-tretaig-hackspett",
+      "source": "Natursidan",
+      "language": "sv",
+      "published_at": "2026-10-30T05:51:33Z",
+      "source_excerpt": "Emil har fått följa med inventeraren Marie Karlsson till en oskyddad skog utanför Överkalix i Norrbotten. Där hittar de spår efter tretåig hackspett, en art som Marie kartlägger för att kunna skydda naturskogar från avverkning.",
+      "agent_summary": "",
+      "source_fingerprint": "d6f47639d328eab4f885",
+      "category": "Natur",
+      "source_tier_bonus": 5,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "skydda"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/4412043e-894c-4672-8414-e2bae48bf2da.webp",
+        "alt": "Naturpodden: Marie Karlsson inventerar tretåig hackspett",
+        "user_image_id": "4412043e-894c-4672-8414-e2bae48bf2da",
+        "match_score": 0.2894,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/245891e2e9ea80548e52-d6f47639-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "d6f47639d328eab4f885",
+        "width": 1280,
+        "height": 848,
+        "sha256": "0c9558089490df49f8c15843c8b3c3fa11f354fcdd2b2c6d5cdc49394944b7ac"
+      }
+    },
+    {
       "id": "56c225a54e232fce1fea",
       "title": "Woman Rescues A Cat She Found At A Car Dealership",
       "url": "https://www.dailymotion.com/video/xamxvli",
@@ -1562,7 +1569,7 @@
       "source_excerpt": "You'd never guess Stevie was born without developed eyes watching her play. When Carmen found Stevie near a pool, she had no idea the tiny kitten had been born with undeveloped eyes. Dodo editor Brielle talked with Carmen about how Stevie settled into her new home and became a playful, energetic cat who loves wrestling and running on her exercise wheel.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/gXXJU1gvw11Orr7vs/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/gXXJU1gvw11Orr7vs/x720",
       "source_image_alt": "Kitten Born Without Eyes Is Completely Unstoppable",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbsraam",
@@ -1598,7 +1605,7 @@
       "source_excerpt": "Have you ever seen a cat swim like this?! Life on the road looks a little different for Bronson and Kim thanks to their cat Noca, who joins them on hikes, paddleboarding trips and even swims in the great outdoors. Dodo editor Tarang shares how traveling with Noca has changed the way they experience the world together.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/gXT6o1gvuwlv2vXOd/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/gXT6o1gvuwlv2vXOd/x720",
       "source_image_alt": "Tiny Cat Loves Swimming And Exploring The World",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbsqx0y",
@@ -1624,37 +1631,36 @@
       "public_eligible": false
     },
     {
-      "id": "398aeae8811416ca684d",
-      "title": "Fearful Dog Hid Under The Bed Until Dad Won Him Over",
-      "url": "https://www.dailymotion.com/video/xbsra9u",
+      "id": "c69dd214c380ad1a8b44",
+      "title": "Rescuer Gets Word A Stray Dog Is Threatened With A Gun",
+      "url": "https://www.dailymotion.com/video/xbstuuu",
       "source": "The Dodo",
       "language": "en",
-      "published_at": "2026-11-01T20:18:51Z",
-      "source_excerpt": "From hiding under the bed to stealing every kitchen towel he can get! When Aubrie saw Tiki on Isabel Klee’s Instagram, she immediately sent his photo to her husband Vince, convinced he belonged with them. Dodo editor Monica follows Tiki’s adjustment to his new home, from the moment Aubrie caught Vince playing guitar for him to the little breakthroughs that show just how much a fearful dog can chan",
+      "published_at": "2026-11-02T05:18:46Z",
+      "source_excerpt": "She searched for Theodore for 3 weeks before he suddenly disappeared. Audray rushed to help Theodore after learning someone was threatening to shoot him, but getting him to safety turned into a weeks-long chase. When he suddenly disappeared, she feared she’d never see him again. Dodo editor Tarang tells the story of the completely unexpected way Theodore eventually found his way back into her life",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/gXXJ21gvw11C7QdRX/x720",
-      "source_image_alt": "Fearful Dog Hid Under The Bed Until Dad Won Him Over",
+      "source_image_url": "https://s2.dmcdn.net/v/gX-bs1gw1xIwEQoHl/x720",
+      "source_image_alt": "Rescuer Gets Word A Stray Dog Is Threatened With A Gun",
       "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xbsra9u",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xbstuuu",
       "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xbsra9u",
+      "source_image_source_url": "https://www.dailymotion.com/video/xbstuuu",
       "source_image_verification_method": "dailymotion-api-thumbnail-v1",
       "source_video": {
         "provider": "dailymotion",
-        "video_id": "xbsra9u",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xbsra9u",
-        "source_url": "https://www.dailymotion.com/video/xbsra9u",
-        "title": "Fearful Dog Hid Under The Bed Until Dad Won Him Over"
+        "video_id": "xbstuuu",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xbstuuu",
+        "source_url": "https://www.dailymotion.com/video/xbstuuu",
+        "title": "Rescuer Gets Word A Stray Dog Is Threatened With A Gun"
       },
-      "source_fingerprint": "9c0303a2e2b6b722b805",
+      "source_fingerprint": "cda1b626756cb0e7bf12",
       "category": "Djur",
       "source_tier_bonus": 4,
       "positivity_score": 6,
       "positive_signals": [
         "curated-positive-source",
-        "breakthrough",
-        "play"
+        "rescue"
       ],
       "public_eligible": false
     },
@@ -1686,32 +1692,31 @@
       "public_eligible": false
     },
     {
-      "id": "0a2f9710d41a8ac57b3b",
-      "title": "Volunteers became salmon, deer and earthworms. Then they set out to save their river",
-      "url": "https://www.positive.news/society/volunteers-became-salmon-deer-and-earthworms-then-they-set-out-to-save-their-river",
-      "source": "Positive News",
+      "id": "1cf350b3106fdd37c06d",
+      "title": "She couldn't afford pet-friendly housing, so she gave up her dog of 10 years. Her community raised $18,000 to reunite them",
+      "url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
+      "source": "Good Good Good",
       "language": "en",
-      "published_at": "2026-10-19T07:00:44Z",
-      "source_excerpt": "An experiment is helping a Somerset community see its landscape through the eyes of wildlife – and plot a 30-year route to change it The post Volunteers became salmon, deer and earthworms. Then they set out to save their river appeared first on Positive News .",
+      "published_at": "2026-10-07T14:12:00Z",
+      "source_excerpt": "After 23 years of marriage, Lisa Wilson and her dog Eddie had to find a new home. But Hurricane Helene had left the rental market in shambles.",
       "agent_summary": "",
-      "source_fingerprint": "bdf479d973eac0ad2213",
+      "source_fingerprint": "84b69c00e5ad3fec48ac",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6ac65295fb513da952f51586_6ac65294666e636761d49559_north-carolina-housing-woman-reunited-pet-dog-featured.webp",
+      "source_image_alt": "She couldn't afford pet-friendly housing, so she gave up her dog of 10 years. Her community raised $18,000 to reunite them",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
       "source_tier_bonus": 2,
       "positivity_score": 6,
       "positive_signals": [
         "curated-positive-source",
         "community",
-        "experiment",
-        "volunteer"
+        "friend"
       ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/868bab25-bbad-423f-871d-cba0ddc6a2f3.webp",
-        "alt": "Volunteers became salmon, deer and earthworms. Then they set out to save their river",
-        "user_image_id": "868bab25-bbad-423f-871d-cba0ddc6a2f3",
-        "match_score": 0.253,
-        "width": 1280,
-        "height": 848
-      }
+      "public_eligible": false
     }
   ]
 }
