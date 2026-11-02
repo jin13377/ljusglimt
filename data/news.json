@@ -1332,6 +1332,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "0c9558089490df49f8c15843c8b3c3fa11f354fcdd2b2c6d5cdc49394944b7ac"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/245891e2e9ea80548e52-d6f47639d328eab4f885-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Naturpodden: Marie Karlsson inventerar tretåig hackspett",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "d6f47639d328eab4f885",
+        "width": 1280,
+        "height": 848,
+        "sha256": "94a3ccf4cdee83b2bb3632ef13bbfd80c7fb3a18f7155ba0a08f8fe9d3152828",
+        "generated_at": "2026-11-02T20:38:43Z"
       }
     },
     {
