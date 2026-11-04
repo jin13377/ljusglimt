@@ -1,10 +1,8 @@
 {
-  "generated_at": "2026-11-03T18:15:09.779790Z",
+  "generated_at": "2026-11-04T02:55:30.184300Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [
-    "e949b0d2052b87718d15"
-  ],
+  "new_item_ids": [],
   "fetch_errors": [],
   "items": [
     {
@@ -501,17 +499,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "27f46afb4762550bf0e9df9cb75b54df6f770042d5d0f748b809fc2f3fbe7b56"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/e949b0d2052b87718d15-c229e665c143b7d0c3e2-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: Nytt Forte-anslag ska utveckla framtidens screening för kolorektalcancer",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "c229e665c143b7d0c3e2",
-        "width": 1280,
-        "height": 848,
-        "sha256": "02ecab21e9e91b8eafd00345e97baf9e33e89eb124852651c0f1ae697c999a16",
-        "generated_at": "2026-11-03T18:15:44Z"
       }
     },
     {
@@ -1615,7 +1602,7 @@
       "source_excerpt": "Have you ever seen a cat swim like this?! Life on the road looks a little different for Bronson and Kim thanks to their cat Noca, who joins them on hikes, paddleboarding trips and even swims in the great outdoors. Dodo editor Tarang shares how traveling with Noca has changed the way they experience the world together.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/gXT6o1gvuwlv2vXOd/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/gXT6o1gvuwlv2vXOd/x720",
       "source_image_alt": "Tiny Cat Loves Swimming And Exploring The World",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbsqx0y",
@@ -1650,7 +1637,7 @@
       "source_excerpt": "She searched for Theodore for 3 weeks before he suddenly disappeared. Audray rushed to help Theodore after learning someone was threatening to shoot him, but getting him to safety turned into a weeks-long chase. When he suddenly disappeared, she feared she’d never see him again. Dodo editor Tarang tells the story of the completely unexpected way Theodore eventually found his way back into her life",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/gX-bs1gw1xIwEQoHl/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/gX-bs1gw1xIwEQoHl/x720",
       "source_image_alt": "Rescuer Gets Word A Stray Dog Is Threatened With A Gun",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbstuuu",
