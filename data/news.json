@@ -464,6 +464,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "85542b889fc28c189b399bf0ce1f08043e3e5e1e0ad2c6850dd31eb91983b170"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/1714bf807ae94f943cdd-335382ed27dfdca3e5fe-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Fyra FyFa-forskare beviljas 22 miljoner kronor för banbrytande forskning inom grundvetenskap och klinisk medicin",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "335382ed27dfdca3e5fe",
+        "width": 1280,
+        "height": 848,
+        "sha256": "0fd466a064f014e2dd57e5936df37f64f737cb15939f86b64e928a1cf10eddec",
+        "generated_at": "2026-11-04T18:29:36Z"
       }
     },
     {
