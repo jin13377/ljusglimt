@@ -94,6 +94,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "7ded29892d365e0af314488dba1ae2d7ca8bf8dbaa802d5e1e91004ea998e57d"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/b7aaa70577d198832dc6-c3f33309d74b34b0aef6-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: ESA och Playmobil lanserar Mars-mission-kollektion",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "c3f33309d74b34b0aef6",
+        "width": 1280,
+        "height": 848,
+        "sha256": "11a8145a462b59092013fc22332da43a214cecd8742f3ffc6b3e66c17dd075af",
+        "generated_at": "2026-11-05T18:32:33Z"
       }
     },
     {
