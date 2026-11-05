@@ -1,17 +1,18 @@
 {
-  "generated_at": "2026-11-05T03:13:55.140008Z",
+  "generated_at": "2026-11-05T18:31:59.645424Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "cf0939d3a99d50536b7f",
-    "5df801fde6616e50d1ff",
-    "39194f1058f5f092437a",
-    "b58bca7e6c4fb90bb9ba"
+    "b7aaa70577d198832dc6",
+    "bd2b6037ea2f95553062",
+    "df6b5447f9799af4f3bd",
+    "6a81ca3be6106fb20b4f",
+    "e16e941453c8c7a414b5"
   ],
   "fetch_errors": [
     {
-      "source": "NASA News Releases",
-      "error": "HTTP Error 429: Too Many Requests"
+      "source": "Karolinska Institutet",
+      "error": "not well-formed (invalid token): line 4, column 17"
     }
   ],
   "items": [
@@ -56,9 +57,9 @@
       }
     },
     {
-      "id": "cf0939d3a99d50536b7f",
+      "id": "b7aaa70577d198832dc6",
       "title": "ESA och Playmobil lanserar Mars-mission-kollektion",
-      "url": "https://new.esa.int/sv/articles/about-us/who-we-are/member-states/sweden/esa-och-playmobil-lanserar-mars-mission-kollektion",
+      "url": "https://www.esa.int/sv/articles/about-us/who-we-are/member-states/sweden/esa-och-playmobil-lanserar-mars-mission-kollektion",
       "source": "ESA Sverige",
       "language": "sv",
       "published_at": "2026-09-29T18:28:04Z",
@@ -78,32 +79,21 @@
       ],
       "public_eligible": true,
       "user_image": {
-        "url": "/news-images/user/491483e7-00f4-4581-9c4d-ba3853e16f74.webp",
+        "url": "/news-images/user/ca17e92f-ec53-4cd1-b11c-3f69f0912247.webp",
         "alt": "ESA och Playmobil lanserar Mars-mission-kollektion",
-        "user_image_id": "491483e7-00f4-4581-9c4d-ba3853e16f74",
-        "match_score": 0.2502,
+        "user_image_id": "ca17e92f-ec53-4cd1-b11c-3f69f0912247",
+        "match_score": 0.2512,
         "width": 1280,
         "height": 848
       },
       "generated_image": {
-        "url": "/news-images/generated/cf0939d3a99d50536b7f-c3f33309-v1.svg",
+        "url": "/news-images/generated/b7aaa70577d198832dc6-c3f33309-v1.svg",
         "alt": "Automatiskt skapad redaktionell illustration.",
         "style_version": "glimt-paper-collage-v2",
         "source_fingerprint": "c3f33309d74b34b0aef6",
         "width": 1280,
         "height": 848,
-        "sha256": "3c28af4b97c07b729151f5d75f4774b1dfb537347d8a97065af2e62454dd0a0b"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/cf0939d3a99d50536b7f-c3f33309d74b34b0aef6-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: ESA och Playmobil lanserar Mars-mission-kollektion",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "c3f33309d74b34b0aef6",
-        "width": 1280,
-        "height": 848,
-        "sha256": "d7ff3ecd71997c4e35fd38502085aa6311a8a37862e9ca8a870e668614fa7efc",
-        "generated_at": "2026-11-05T03:14:21Z"
+        "sha256": "7ded29892d365e0af314488dba1ae2d7ca8bf8dbaa802d5e1e91004ea998e57d"
       }
     },
     {
@@ -337,9 +327,9 @@
       "public_eligible": true
     },
     {
-      "id": "5df801fde6616e50d1ff",
+      "id": "bd2b6037ea2f95553062",
       "title": "SubOrbital Express-5 skickar upp tolv experiment till mikrogravitation",
-      "url": "https://new.esa.int/sv/articles/about-us/who-we-are/member-states/sweden/suborbital-express-5-skickar-upp-tolv-experiment-till-mikrogravitation",
+      "url": "https://www.esa.int/sv/articles/about-us/who-we-are/member-states/sweden/suborbital-express-5-skickar-upp-tolv-experiment-till-mikrogravitation",
       "source": "ESA Sverige",
       "language": "sv",
       "published_at": "2026-10-30T22:15:58Z",
@@ -357,27 +347,27 @@
       ],
       "public_eligible": true,
       "user_image": {
-        "url": "/news-images/user/6c8c7eb1-698f-4124-b28e-e36c60416fca.webp",
+        "url": "/news-images/user/491483e7-00f4-4581-9c4d-ba3853e16f74.webp",
         "alt": "SubOrbital Express-5 skickar upp tolv experiment till mikrogravitation",
-        "user_image_id": "6c8c7eb1-698f-4124-b28e-e36c60416fca",
-        "match_score": 0.2477,
+        "user_image_id": "491483e7-00f4-4581-9c4d-ba3853e16f74",
+        "match_score": 0.2502,
         "width": 1280,
         "height": 848
       },
       "generated_image": {
-        "url": "/news-images/generated/5df801fde6616e50d1ff-4972c7a2-v1.svg",
+        "url": "/news-images/generated/bd2b6037ea2f95553062-4972c7a2-v1.svg",
         "alt": "Automatiskt skapad redaktionell illustration.",
         "style_version": "glimt-paper-collage-v2",
         "source_fingerprint": "4972c7a2487e14364f1a",
         "width": 1280,
         "height": 848,
-        "sha256": "7f06cfc6d99e37a35d28d015ac909d4de02541759a682749605a96b35d7f01c1"
+        "sha256": "2f186ad39c335858ab61a603f98c44e1baa0bd21986bb5625e79a1f7ce7a0398"
       }
     },
     {
-      "id": "39194f1058f5f092437a",
+      "id": "df6b5447f9799af4f3bd",
       "title": "20 år med ESERO: att föra rymden till miljontals elever",
-      "url": "https://new.esa.int/sv/articles/about-us/who-we-are/member-states/sweden/20-ar-med-esero-att-fora-rymden-till-miljontals-elever",
+      "url": "https://www.esa.int/sv/articles/about-us/who-we-are/member-states/sweden/20-ar-med-esero-att-fora-rymden-till-miljontals-elever",
       "source": "ESA Sverige",
       "language": "sv",
       "published_at": "2026-10-30T22:15:54Z",
@@ -395,21 +385,21 @@
       ],
       "public_eligible": true,
       "user_image": {
-        "url": "/news-images/user/27a110a7-8c7f-436c-8734-1da378791869.webp",
+        "url": "/news-images/user/6c8c7eb1-698f-4124-b28e-e36c60416fca.webp",
         "alt": "20 år med ESERO: att föra rymden till miljontals elever",
-        "user_image_id": "27a110a7-8c7f-436c-8734-1da378791869",
-        "match_score": 0.2433,
+        "user_image_id": "6c8c7eb1-698f-4124-b28e-e36c60416fca",
+        "match_score": 0.2477,
         "width": 1280,
         "height": 848
       },
       "generated_image": {
-        "url": "/news-images/generated/39194f1058f5f092437a-d9af4976-v1.svg",
+        "url": "/news-images/generated/df6b5447f9799af4f3bd-d9af4976-v1.svg",
         "alt": "Automatiskt skapad redaktionell illustration.",
         "style_version": "glimt-paper-collage-v2",
         "source_fingerprint": "d9af49767da396c37a25",
         "width": 1280,
         "height": 848,
-        "sha256": "cf2f692da48011fd53cb669296d56ab6f2677225cb38c66116f72473763d1a78"
+        "sha256": "116a2185d4fa5aebc23fbc1cc64678b3178aabc23b2aafaf57cda28c6dcf412a"
       }
     },
     {
@@ -562,9 +552,9 @@
       }
     },
     {
-      "id": "b58bca7e6c4fb90bb9ba",
+      "id": "6a81ca3be6106fb20b4f",
       "title": "ESA och DON’T NOD ger sig ut på en resa till planeten Persephone i Aphelion",
-      "url": "https://new.esa.int/sv/articles/about-us/who-we-are/member-states/sweden/esa-och-don-t-nod-ger-sig-ut-pa-en-resa-till-planeten-persephone-i-aphelion",
+      "url": "https://www.esa.int/sv/articles/about-us/who-we-are/member-states/sweden/esa-och-don-t-nod-ger-sig-ut-pa-en-resa-till-planeten-persephone-i-aphelion",
       "source": "ESA Sverige",
       "language": "sv",
       "published_at": "2026-10-31T00:08:21Z",
@@ -582,21 +572,21 @@
       ],
       "public_eligible": true,
       "user_image": {
-        "url": "/news-images/user/c17a6275-7192-431b-a468-a375743e3913-1.webp",
+        "url": "/news-images/user/27a110a7-8c7f-436c-8734-1da378791869.webp",
         "alt": "ESA och DON’T NOD ger sig ut på en resa till planeten Persephone i Aphelion",
-        "user_image_id": "c17a6275-7192-431b-a468-a375743e3913-1",
-        "match_score": 0.2425,
+        "user_image_id": "27a110a7-8c7f-436c-8734-1da378791869",
+        "match_score": 0.2433,
         "width": 1280,
         "height": 848
       },
       "generated_image": {
-        "url": "/news-images/generated/b58bca7e6c4fb90bb9ba-0fdd22aa-v1.svg",
+        "url": "/news-images/generated/6a81ca3be6106fb20b4f-0fdd22aa-v1.svg",
         "alt": "Automatiskt skapad redaktionell illustration.",
         "style_version": "glimt-paper-collage-v2",
         "source_fingerprint": "0fdd22aa8c36a2ed2fe4",
         "width": 1280,
         "height": 848,
-        "sha256": "9be0149edeba81c6517b24f0acff62f4a4681f89cf197be248f155119db51f42"
+        "sha256": "a8b0514ce8734a2a88884e1cd8c1cdd9853dbbcfe7ae4aae1569d4c611a1e46f"
       }
     },
     {
@@ -605,10 +595,10 @@
       "url": "https://www.vetenskaphalsa.se/diabetestidning",
       "source": "Vetenskap & hälsa",
       "language": "sv",
-      "published_at": "2026-10-29T08:55:02Z",
+      "published_at": "2026-10-29T08:59:00Z",
       "source_excerpt": "Forskningen har tagit diabetes från dödlig till behandlingsbar och snart kanske botbar. Diabetes har komplexa orsaker och nu vet vi att diabetes inte bara handlar om typ 1 och 2 utan har flera undergrupper. Läs om hur arv, miljö, fysisk aktivitet och övervikt påverkar risken att insjukna. Ta del av forskningens framsteg mot att förebygga, […]",
       "agent_summary": "",
-      "source_fingerprint": "06f3696733bfd43dd516",
+      "source_fingerprint": "32488d3ecbaba03a7bad",
       "category": "Hälsa",
       "source_tier_bonus": 5,
       "positivity_score": 8,
@@ -620,21 +610,21 @@
       ],
       "public_eligible": true,
       "user_image": {
-        "url": "/news-images/user/ca17e92f-ec53-4cd1-b11c-3f69f0912247.webp",
+        "url": "/news-images/user/378d7d6e-9868-45d5-8604-345fe46b402c.webp",
         "alt": "NY TIDNING: Diabetes – från vetenskap till vardag",
-        "user_image_id": "ca17e92f-ec53-4cd1-b11c-3f69f0912247",
-        "match_score": 0.2479,
+        "user_image_id": "378d7d6e-9868-45d5-8604-345fe46b402c",
+        "match_score": 0.2356,
         "width": 1280,
         "height": 848
       },
       "generated_image": {
-        "url": "/news-images/generated/a096a61a8fa78fff9673-06f36967-v1.svg",
+        "url": "/news-images/generated/a096a61a8fa78fff9673-32488d3e-v1.svg",
         "alt": "Automatiskt skapad redaktionell illustration.",
         "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "06f3696733bfd43dd516",
+        "source_fingerprint": "32488d3ecbaba03a7bad",
         "width": 1280,
         "height": 848,
-        "sha256": "9ba361823021e62551cf45a98fcafed8bf1eedb2a319764b4ff4f76a2f5170e1"
+        "sha256": "ec4dc477c1ba1260d9ca811f940515f9a9dba5dcaf1c5f2386c70acf8e1eaeb2"
       }
     },
     {
@@ -1591,7 +1581,7 @@
       "source_excerpt": "You'd never guess Stevie was born without developed eyes watching her play. When Carmen found Stevie near a pool, she had no idea the tiny kitten had been born with undeveloped eyes. Dodo editor Brielle talked with Carmen about how Stevie settled into her new home and became a playful, energetic cat who loves wrestling and running on her exercise wheel.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/gXXJU1gvw11Orr7vs/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/gXXJU1gvw11Orr7vs/x720",
       "source_image_alt": "Kitten Born Without Eyes Is Completely Unstoppable",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbsraam",
@@ -1627,7 +1617,7 @@
       "source_excerpt": "Have you ever seen a cat swim like this?! Life on the road looks a little different for Bronson and Kim thanks to their cat Noca, who joins them on hikes, paddleboarding trips and even swims in the great outdoors. Dodo editor Tarang shares how traveling with Noca has changed the way they experience the world together.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/gXT6o1gvuwlv2vXOd/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/gXT6o1gvuwlv2vXOd/x720",
       "source_image_alt": "Tiny Cat Loves Swimming And Exploring The World",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbsqx0y",
@@ -1653,6 +1643,34 @@
       "public_eligible": false
     },
     {
+      "id": "e16e941453c8c7a414b5",
+      "title": "NASA Announces X-70 Experimental Aircraft to Advance Flight Research",
+      "url": "https://www.nasa.gov/news-release/nasa-announces-x-70-experimental-aircraft-to-advance-flight-research",
+      "source": "NASA News Releases",
+      "language": "en",
+      "published_at": "2026-11-05T01:43:21Z",
+      "source_excerpt": "On Wednesday, NASA unveiled its newest experimental aircraft, the X-70 Fractal, during the UP.Summit at the agency’s Kennedy Space Center in Florida. This high-performance, highly adaptable research platform is designed to accelerate the development and testing of advanced aviation technologies. The crewed X-70 features advanced, rapidly reconfigurable flight-control technology that will allow NAS",
+      "agent_summary": "",
+      "source_fingerprint": "325ea81df96d83fb4859",
+      "source_tier_bonus": 1,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "experiment",
+        "research",
+        "technology"
+      ],
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/c17a6275-7192-431b-a468-a375743e3913-1.webp",
+        "alt": "NASA Announces X-70 Experimental Aircraft to Advance Flight Research",
+        "user_image_id": "c17a6275-7192-431b-a468-a375743e3913-1",
+        "match_score": 0.2425,
+        "width": 1280,
+        "height": 848
+      }
+    },
+    {
       "id": "c69dd214c380ad1a8b44",
       "title": "Rescuer Gets Word A Stray Dog Is Threatened With A Gun",
       "url": "https://www.dailymotion.com/video/xbstuuu",
@@ -1662,7 +1680,7 @@
       "source_excerpt": "She searched for Theodore for 3 weeks before he suddenly disappeared. Audray rushed to help Theodore after learning someone was threatening to shoot him, but getting him to safety turned into a weeks-long chase. When he suddenly disappeared, she feared she’d never see him again. Dodo editor Tarang tells the story of the completely unexpected way Theodore eventually found his way back into her life",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/gX-bs1gw1xIwEQoHl/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/gX-bs1gw1xIwEQoHl/x720",
       "source_image_alt": "Rescuer Gets Word A Stray Dog Is Threatened With A Gun",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbstuuu",
@@ -1710,33 +1728,6 @@
         "curated-positive-source",
         "play",
         "rescue"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "1cf350b3106fdd37c06d",
-      "title": "She couldn't afford pet-friendly housing, so she gave up her dog of 10 years. Her community raised $18,000 to reunite them",
-      "url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-10-07T14:12:00Z",
-      "source_excerpt": "After 23 years of marriage, Lisa Wilson and her dog Eddie had to find a new home. But Hurricane Helene had left the rental market in shambles.",
-      "agent_summary": "",
-      "source_fingerprint": "84b69c00e5ad3fec48ac",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6ac65295fb513da952f51586_6ac65294666e636761d49559_north-carolina-housing-woman-reunited-pet-dog-featured.webp",
-      "source_image_alt": "She couldn't afford pet-friendly housing, so she gave up her dog of 10 years. Her community raised $18,000 to reunite them",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "community",
-        "friend"
       ],
       "public_eligible": false
     }
