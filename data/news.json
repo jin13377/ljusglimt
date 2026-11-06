@@ -240,6 +240,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "5e8276c5310e13f400512d3ffa6d4db1e46bef076d4def32d74b3128cdda6d9f"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/5109cfb193e292e2dd5b-d2a55580248af67f1b16-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: VR-anslag för forskning om blodbiomarkörer vid Alzheimers sjukdom",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "d2a55580248af67f1b16",
+        "width": 1280,
+        "height": 848,
+        "sha256": "4a2fbcf6b3514f661722d526eb2099a49c320b8ef8ea7398580ab25b99d1db5f",
+        "generated_at": "2026-11-06T17:49:13Z"
       }
     },
     {
