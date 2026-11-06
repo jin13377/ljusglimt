@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-11-06T03:13:47.741941Z",
+  "generated_at": "2026-11-06T17:48:46.429760Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "5288c785792c729c6776"
+    "5109cfb193e292e2dd5b",
+    "21790e6f07bfd0a04688"
   ],
   "fetch_errors": [],
   "items": [
@@ -204,6 +205,44 @@
       }
     },
     {
+      "id": "5109cfb193e292e2dd5b",
+      "title": "VR-anslag för forskning om blodbiomarkörer vid Alzheimers sjukdom",
+      "url": "https://nyheter.ki.se/vr-anslag-for-forskning-om-blodbiomarkorer-vid-alzheimers-sjukdom",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-11-06T00:00:00Z",
+      "source_excerpt": "KI-forskaren Giulia Grande har beviljats ett etableringsbidrag från Vetenskapsrådet för att studera blodbaserade biomarkörer för Alzheimers sjukdom. I projektet ska forskarna undersöka om en samlad analys av många proteiner kan förbättra möjligheterna att upptäcka sjukdomen och ge en tydligare bild av hur den utvecklas.",
+      "agent_summary": "",
+      "source_fingerprint": "d2a55580248af67f1b16",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 10,
+      "positive_signals": [
+        "curated-positive-source",
+        "anslag",
+        "beviljats",
+        "forskning"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/41b44212-70c7-43df-9365-483ed4b08c49.webp",
+        "alt": "VR-anslag för forskning om blodbiomarkörer vid Alzheimers sjukdom",
+        "user_image_id": "41b44212-70c7-43df-9365-483ed4b08c49",
+        "match_score": 0.2361,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/5109cfb193e292e2dd5b-d2a55580-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "d2a55580248af67f1b16",
+        "width": 1280,
+        "height": 848,
+        "sha256": "5e8276c5310e13f400512d3ffa6d4db1e46bef076d4def32d74b3128cdda6d9f"
+      }
+    },
+    {
       "id": "3fe2e7d37ce31017f6dd",
       "title": "KI och IVI stärker samarbetet inom global hälsa",
       "url": "https://nyheter.ki.se/ki-och-ivi-starker-samarbetet-inom-global-halsa",
@@ -315,6 +354,35 @@
         "surprise"
       ],
       "display_title_sv": "Överraskningen med fosterkattungar gav pojkvännen bästa reaktionen",
+      "public_eligible": true
+    },
+    {
+      "id": "21790e6f07bfd0a04688",
+      "title": "Obesitasläkemedel kan ge nya sätt att skydda hjärnan",
+      "url": "https://forskning.se/2026/11/06/obesitaslakemedel-hjarnan",
+      "source": "Forskning.se",
+      "language": "sv",
+      "published_at": "2026-11-06T07:54:29Z",
+      "source_excerpt": "Läkemedel mot obesitas kan också bidra till att skydda hjärnan. I en översikt i tidskriften Science pekar forskare på hur mer kunskap om läkemedlens effekter kan leda till nya sätt att skydda minnet och andra viktiga förmågor. Obesitasläkemedel kan ge nya sätt att skydda hjärnan forskning.se .",
+      "agent_summary": "",
+      "source_fingerprint": "ebc0c38b50e126b94cfb",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/11/obesitaslakemedel-demens-hjarnan-1024x576.jpg",
+      "source_image_alt": "Obesitasläkemedel kan ge nya sätt att skydda hjärnan",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/11/06/obesitaslakemedel-hjarnan",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/11/06/obesitaslakemedel-hjarnan",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 9,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "science",
+        "skydda"
+      ],
       "public_eligible": true
     },
     {
@@ -503,54 +571,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "92e496a56fcc7e0a012a9e750e6821d6544f97f0ddf0c16e9123597865093e4d"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/5288c785792c729c6776-7f403b6e3bc4f3604555-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: Fyra FyFa-forskare beviljas 22 miljoner kronor för banbrytande forskning",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "7f403b6e3bc4f3604555",
-        "width": 1280,
-        "height": 848,
-        "sha256": "11ebdf59c6335faf27d9a4c8727dc6d00e1798be4df3575ab68caab97d36a2ee",
-        "generated_at": "2026-11-06T03:14:11Z"
-      }
-    },
-    {
-      "id": "e949b0d2052b87718d15",
-      "title": "Nytt Forte-anslag ska utveckla framtidens screening för kolorektalcancer",
-      "url": "https://nyheter.ki.se/nytt-forte-anslag-ska-utveckla-framtidens-screening-for-kolorektalcancer",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-11-02T00:00:00Z",
-      "source_excerpt": "Forte har beviljat nära fem miljoner kronor till ett forskningsprojekt vid Karolinska Institutet och Södersjukhuset som ska utveckla och utvärdera det svenska screeningprogrammet för kolorektalcancer.",
-      "agent_summary": "",
-      "source_fingerprint": "c229e665c143b7d0c3e2",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 8,
-      "positive_signals": [
-        "curated-positive-source",
-        "anslag",
-        "forskning"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/41b44212-70c7-43df-9365-483ed4b08c49.webp",
-        "alt": "Nytt Forte-anslag ska utveckla framtidens screening för kolorektalcancer",
-        "user_image_id": "41b44212-70c7-43df-9365-483ed4b08c49",
-        "match_score": 0.2361,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/e949b0d2052b87718d15-c229e665-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "c229e665c143b7d0c3e2",
-        "width": 1280,
-        "height": 848,
-        "sha256": "27f46afb4762550bf0e9df9cb75b54df6f770042d5d0f748b809fc2f3fbe7b56"
       }
     },
     {
@@ -1277,42 +1297,6 @@
       }
     },
     {
-      "id": "9476f8aa9289067f58ee",
-      "title": "Miljon­satsning för att få ut unga i naturen",
-      "url": "https://www.natursidan.se/nyheter/miljonsatsning-for-att-fa-ut-unga-i-naturen",
-      "source": "Natursidan",
-      "language": "sv",
-      "published_at": "2026-09-23T04:59:36Z",
-      "source_excerpt": "I fem svenska städer kommer de närmaste två åren fler ungdomar komma ut i naturen och få prova på friluftsliv.",
-      "agent_summary": "",
-      "source_fingerprint": "3e563ed80a704f454656",
-      "category": "Natur",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "satsning"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/2091a644-1eb7-45ff-afae-1a9300f1c839.webp",
-        "alt": "Miljon­satsning för att få ut unga i naturen",
-        "user_image_id": "2091a644-1eb7-45ff-afae-1a9300f1c839",
-        "match_score": 0.2655,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/9476f8aa9289067f58ee-3e563ed8-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "3e563ed80a704f454656",
-        "width": 1280,
-        "height": 848,
-        "sha256": "1d1550e2271eb755d981115317277221fa2465e588d78a96ccb84d7c6dc53cbd"
-      }
-    },
-    {
       "id": "4390567e79124135517d",
       "title": "Boyfriend Gets The Absolute BEST Valentines Day Gift",
       "url": "https://www.dailymotion.com/video/xadpjn6",
@@ -1682,7 +1666,7 @@
       "source_excerpt": "She searched for Theodore for 3 weeks before he suddenly disappeared. Audray rushed to help Theodore after learning someone was threatening to shoot him, but getting him to safety turned into a weeks-long chase. When he suddenly disappeared, she feared she’d never see him again. Dodo editor Tarang tells the story of the completely unexpected way Theodore eventually found his way back into her life",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/gX-bs1gw1xIwEQoHl/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/gX-bs1gw1xIwEQoHl/x720",
       "source_image_alt": "Rescuer Gets Word A Stray Dog Is Threatened With A Gun",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbstuuu",
