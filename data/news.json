@@ -1,20 +1,11 @@
 {
-  "generated_at": "2026-11-05T18:31:59.645424Z",
+  "generated_at": "2026-11-06T03:13:47.741941Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "b7aaa70577d198832dc6",
-    "bd2b6037ea2f95553062",
-    "df6b5447f9799af4f3bd",
-    "6a81ca3be6106fb20b4f",
-    "e16e941453c8c7a414b5"
+    "5288c785792c729c6776"
   ],
-  "fetch_errors": [
-    {
-      "source": "Karolinska Institutet",
-      "error": "not well-formed (invalid token): line 4, column 17"
-    }
-  ],
+  "fetch_errors": [],
   "items": [
     {
       "id": "9cf6616f23c2c0970f90",
@@ -94,17 +85,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "7ded29892d365e0af314488dba1ae2d7ca8bf8dbaa802d5e1e91004ea998e57d"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/b7aaa70577d198832dc6-c3f33309d74b34b0aef6-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: ESA och Playmobil lanserar Mars-mission-kollektion",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "c3f33309d74b34b0aef6",
-        "width": 1280,
-        "height": 848,
-        "sha256": "11a8145a462b59092013fc22332da43a214cecd8742f3ffc6b3e66c17dd075af",
-        "generated_at": "2026-11-05T18:32:33Z"
       }
     },
     {
@@ -489,15 +469,15 @@
       }
     },
     {
-      "id": "1714bf807ae94f943cdd",
-      "title": "Fyra FyFa-forskare beviljas 22 miljoner kronor för banbrytande forskning inom grundvetenskap och klinisk medicin",
-      "url": "https://nyheter.ki.se/fyra-fyfa-forskare-beviljas-22-miljoner-kronor-for-banbrytande-forskning-inom-grundvetenskap-och-klinisk-medicin",
+      "id": "5288c785792c729c6776",
+      "title": "Fyra FyFa-forskare beviljas 22 miljoner kronor för banbrytande forskning",
+      "url": "https://nyheter.ki.se/fyra-fyfa-forskare-beviljas-22-miljoner-kronor-for-banbrytande-forskning",
       "source": "Karolinska Institutet",
       "language": "sv",
       "published_at": "2026-11-04T00:00:00Z",
       "source_excerpt": "Hur påverkar läkemedel moderkakan? Kan tidig nedkylning skydda hjärnan efter hjärtstopp? Fyra forskare med anknytning till institutionen för fysiologi och farmakologi, FyFa, vid Karolinska Institutet får stöd från Vetenskapsrådet. Projekten handlar om läkemedel under graviditeten, hjärtstopp, det hormonella tillståndet PCOS och fettlever.",
       "agent_summary": "",
-      "source_fingerprint": "335382ed27dfdca3e5fe",
+      "source_fingerprint": "7f403b6e3bc4f3604555",
       "category": "Hälsa",
       "source_tier_bonus": 5,
       "positivity_score": 8,
@@ -509,20 +489,20 @@
       "public_eligible": true,
       "user_image": {
         "url": "/news-images/user/3559646e-9dfb-4236-b91b-7fad3fce7837.webp",
-        "alt": "Fyra FyFa-forskare beviljas 22 miljoner kronor för banbrytande forskning inom grundvetenskap och klinisk medicin",
+        "alt": "Fyra FyFa-forskare beviljas 22 miljoner kronor för banbrytande forskning",
         "user_image_id": "3559646e-9dfb-4236-b91b-7fad3fce7837",
         "match_score": 0.2739,
         "width": 1280,
         "height": 848
       },
       "generated_image": {
-        "url": "/news-images/generated/1714bf807ae94f943cdd-335382ed-v1.svg",
+        "url": "/news-images/generated/5288c785792c729c6776-7f403b6e-v1.svg",
         "alt": "Automatiskt skapad redaktionell illustration.",
         "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "335382ed27dfdca3e5fe",
+        "source_fingerprint": "7f403b6e3bc4f3604555",
         "width": 1280,
         "height": 848,
-        "sha256": "85542b889fc28c189b399bf0ce1f08043e3e5e1e0ad2c6850dd31eb91983b170"
+        "sha256": "92e496a56fcc7e0a012a9e750e6821d6544f97f0ddf0c16e9123597865093e4d"
       }
     },
     {
@@ -1628,7 +1608,7 @@
       "source_excerpt": "Have you ever seen a cat swim like this?! Life on the road looks a little different for Bronson and Kim thanks to their cat Noca, who joins them on hikes, paddleboarding trips and even swims in the great outdoors. Dodo editor Tarang shares how traveling with Noca has changed the way they experience the world together.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/gXT6o1gvuwlv2vXOd/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/gXT6o1gvuwlv2vXOd/x720",
       "source_image_alt": "Tiny Cat Loves Swimming And Exploring The World",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbsqx0y",
@@ -1691,7 +1671,7 @@
       "source_excerpt": "She searched for Theodore for 3 weeks before he suddenly disappeared. Audray rushed to help Theodore after learning someone was threatening to shoot him, but getting him to safety turned into a weeks-long chase. When he suddenly disappeared, she feared she’d never see him again. Dodo editor Tarang tells the story of the completely unexpected way Theodore eventually found his way back into her life",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/gX-bs1gw1xIwEQoHl/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/gX-bs1gw1xIwEQoHl/x720",
       "source_image_alt": "Rescuer Gets Word A Stray Dog Is Threatened With A Gun",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbstuuu",
