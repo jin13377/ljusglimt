@@ -1,10 +1,9 @@
 {
-  "generated_at": "2026-11-07T02:33:23.404047Z",
+  "generated_at": "2026-11-07T16:45:06.790332Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "e5d661356a23d9528497",
-    "fc08637e7993aac8b7cd"
+    "1208c05ed5353579a658"
   ],
   "fetch_errors": [],
   "items": [
@@ -1567,7 +1566,7 @@
       "source_excerpt": "You'd never guess Stevie was born without developed eyes watching her play. When Carmen found Stevie near a pool, she had no idea the tiny kitten had been born with undeveloped eyes. Dodo editor Brielle talked with Carmen about how Stevie settled into her new home and became a playful, energetic cat who loves wrestling and running on her exercise wheel.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/gXXJU1gvw11Orr7vs/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/gXXJU1gvw11Orr7vs/x720",
       "source_image_alt": "Kitten Born Without Eyes Is Completely Unstoppable",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbsraam",
@@ -1594,6 +1593,41 @@
       "public_eligible": false
     },
     {
+      "id": "1208c05ed5353579a658",
+      "title": "Husky's Face Was Unrecognizable Until She Beat Cancer",
+      "url": "https://www.dailymotion.com/video/xbuhkni",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-11-07T05:18:37Z",
+      "source_excerpt": "Jacaranda could barely eat or breathe when Zadrigman's team discovered that the swelling in her face was cancer. Dodo editor Valentina shares how she made it through treatment and became almost unrecognizable.",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s2.dmcdn.net/v/gicpE1gxhPNMVE_tk/x720",
+      "source_image_alt": "Husky's Face Was Unrecognizable Until She Beat Cancer",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xbuhkni",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xbuhkni",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xbuhkni",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xbuhkni",
+        "source_url": "https://www.dailymotion.com/video/xbuhkni",
+        "title": "Husky's Face Was Unrecognizable Until She Beat Cancer"
+      },
+      "source_fingerprint": "0cb6610098577ca5ce4c",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "treat",
+        "treatment"
+      ],
+      "public_eligible": false
+    },
+    {
       "id": "e5d661356a23d9528497",
       "title": "Woman Buys Her Anxious Dog A Fake Man",
       "url": "https://www.dailymotion.com/video/xbudcle",
@@ -1603,7 +1637,7 @@
       "source_excerpt": "It’s a little creepy... but he LOVES him! Dino’s separation anxiety was so intense that Yaneth could barely leave the house, until she saw another dog find comfort in a human-sized doll and decided to try it herself. Now Dino snuggles up with “Haaland” while she’s gone, and somehow the world’s creepiest petsitter actually works. Dodo editor Valentina shares the hilariously sweet solution that gave",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/ghsi21gxapUwxVeIb/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/ghsi21gxapUwxVeIb/x720",
       "source_image_alt": "Woman Buys Her Anxious Dog A Fake Man",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbudcle",
@@ -1629,68 +1663,6 @@
       "public_eligible": false
     },
     {
-      "id": "fc08637e7993aac8b7cd",
-      "title": "Cane Corso Is Totally Intimidated By Kitten Brother",
-      "url": "https://www.dailymotion.com/video/xbudclu",
-      "source": "The Dodo",
-      "language": "en",
-      "published_at": "2026-11-06T21:48:52Z",
-      "source_excerpt": "Diesel may be the bigger sibling, but Nimbus is clearly calling the shots! People cross the street when they see this giant Cane Corso... meanwhile, at home, he’s being bossed around by a five-pound kitten! Dodo Editor Tarang shares the hilarious dynamic between these two unlikely siblings, from Nimbus stealing Diesel’s bed to their very different ideas about who's in charge.",
-      "agent_summary": "",
-      "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/ghsiI1gxapV3sZRDK/x720",
-      "source_image_alt": "Cane Corso Is Totally Intimidated By Kitten Brother",
-      "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xbudclu",
-      "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xbudclu",
-      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
-      "source_video": {
-        "provider": "dailymotion",
-        "video_id": "xbudclu",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xbudclu",
-        "source_url": "https://www.dailymotion.com/video/xbudclu",
-        "title": "Cane Corso Is Totally Intimidated By Kitten Brother"
-      },
-      "source_fingerprint": "9b56d8bfeb44396ed11b",
-      "category": "Djur",
-      "source_tier_bonus": 4,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "kitten"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "e16e941453c8c7a414b5",
-      "title": "NASA Announces X-70 Experimental Aircraft to Advance Flight Research",
-      "url": "https://www.nasa.gov/news-release/nasa-announces-x-70-experimental-aircraft-to-advance-flight-research",
-      "source": "NASA News Releases",
-      "language": "en",
-      "published_at": "2026-11-05T01:43:21Z",
-      "source_excerpt": "On Wednesday, NASA unveiled its newest experimental aircraft, the X-70 Fractal, during the UP.Summit at the agency’s Kennedy Space Center in Florida. This high-performance, highly adaptable research platform is designed to accelerate the development and testing of advanced aviation technologies. The crewed X-70 features advanced, rapidly reconfigurable flight-control technology that will allow NAS",
-      "agent_summary": "",
-      "source_fingerprint": "325ea81df96d83fb4859",
-      "source_tier_bonus": 1,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "experiment",
-        "research",
-        "technology"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/c17a6275-7192-431b-a468-a375743e3913-1.webp",
-        "alt": "NASA Announces X-70 Experimental Aircraft to Advance Flight Research",
-        "user_image_id": "c17a6275-7192-431b-a468-a375743e3913-1",
-        "match_score": 0.2425,
-        "width": 1280,
-        "height": 848
-      }
-    },
-    {
       "id": "9059cf29b9a387da17b1",
       "title": "Oregon Zoo shares footage of rescued sea otters playing basketball with pumpkins: 'It plays a critical role in their well-being'",
       "url": "https://www.goodgoodgood.co/articles/otters-playing-basketball-halloween-pumpkins",
@@ -1714,6 +1686,33 @@
         "curated-positive-source",
         "play",
         "rescue"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "1cf350b3106fdd37c06d",
+      "title": "She couldn't afford pet-friendly housing, so she gave up her dog of 10 years. Her community raised $18,000 to reunite them",
+      "url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-10-07T14:12:00Z",
+      "source_excerpt": "After 23 years of marriage, Lisa Wilson and her dog Eddie had to find a new home. But Hurricane Helene had left the rental market in shambles.",
+      "agent_summary": "",
+      "source_fingerprint": "84b69c00e5ad3fec48ac",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6ac65295fb513da952f51586_6ac65294666e636761d49559_north-carolina-housing-woman-reunited-pet-dog-featured.webp",
+      "source_image_alt": "She couldn't afford pet-friendly housing, so she gave up her dog of 10 years. Her community raised $18,000 to reunite them",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "source_tier_bonus": 2,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "community",
+        "friend"
       ],
       "public_eligible": false
     }
