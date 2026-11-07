@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-06T17:48:46.429760Z",
+  "generated_at": "2026-11-07T02:33:23.404047Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "5109cfb193e292e2dd5b",
-    "21790e6f07bfd0a04688"
+    "e5d661356a23d9528497",
+    "fc08637e7993aac8b7cd"
   ],
   "fetch_errors": [],
   "items": [
@@ -240,17 +240,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "5e8276c5310e13f400512d3ffa6d4db1e46bef076d4def32d74b3128cdda6d9f"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/5109cfb193e292e2dd5b-d2a55580248af67f1b16-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: VR-anslag för forskning om blodbiomarkörer vid Alzheimers sjukdom",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "d2a55580248af67f1b16",
-        "width": 1280,
-        "height": 848,
-        "sha256": "4a2fbcf6b3514f661722d526eb2099a49c320b8ef8ea7398580ab25b99d1db5f",
-        "generated_at": "2026-11-06T17:49:13Z"
       }
     },
     {
@@ -1605,37 +1594,71 @@
       "public_eligible": false
     },
     {
-      "id": "fd16dbf723c3df28aaa3",
-      "title": "Tiny Cat Loves Swimming And Exploring The World",
-      "url": "https://www.dailymotion.com/video/xbsqx0y",
+      "id": "e5d661356a23d9528497",
+      "title": "Woman Buys Her Anxious Dog A Fake Man",
+      "url": "https://www.dailymotion.com/video/xbudcle",
       "source": "The Dodo",
       "language": "en",
-      "published_at": "2026-11-01T19:04:17Z",
-      "source_excerpt": "Have you ever seen a cat swim like this?! Life on the road looks a little different for Bronson and Kim thanks to their cat Noca, who joins them on hikes, paddleboarding trips and even swims in the great outdoors. Dodo editor Tarang shares how traveling with Noca has changed the way they experience the world together.",
+      "published_at": "2026-11-06T21:49:00Z",
+      "source_excerpt": "It’s a little creepy... but he LOVES him! Dino’s separation anxiety was so intense that Yaneth could barely leave the house, until she saw another dog find comfort in a human-sized doll and decided to try it herself. Now Dino snuggles up with “Haaland” while she’s gone, and somehow the world’s creepiest petsitter actually works. Dodo editor Valentina shares the hilariously sweet solution that gave",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/gXT6o1gvuwlv2vXOd/x720",
-      "source_image_alt": "Tiny Cat Loves Swimming And Exploring The World",
+      "source_image_url": "https://s2.dmcdn.net/v/ghsi21gxapUwxVeIb/x720",
+      "source_image_alt": "Woman Buys Her Anxious Dog A Fake Man",
       "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xbsqx0y",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xbudcle",
       "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xbsqx0y",
+      "source_image_source_url": "https://www.dailymotion.com/video/xbudcle",
       "source_image_verification_method": "dailymotion-api-thumbnail-v1",
       "source_video": {
         "provider": "dailymotion",
-        "video_id": "xbsqx0y",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xbsqx0y",
-        "source_url": "https://www.dailymotion.com/video/xbsqx0y",
-        "title": "Tiny Cat Loves Swimming And Exploring The World"
+        "video_id": "xbudcle",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xbudcle",
+        "source_url": "https://www.dailymotion.com/video/xbudcle",
+        "title": "Woman Buys Her Anxious Dog A Fake Man"
       },
-      "source_fingerprint": "a0dd6b73980b841a2201",
+      "source_fingerprint": "fc09b61ee476aa53d4a1",
       "category": "Djur",
       "source_tier_bonus": 4,
-      "positivity_score": 7,
+      "positivity_score": 6,
       "positive_signals": [
         "curated-positive-source",
         "love",
-        "together"
+        "solution"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "fc08637e7993aac8b7cd",
+      "title": "Cane Corso Is Totally Intimidated By Kitten Brother",
+      "url": "https://www.dailymotion.com/video/xbudclu",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-11-06T21:48:52Z",
+      "source_excerpt": "Diesel may be the bigger sibling, but Nimbus is clearly calling the shots! People cross the street when they see this giant Cane Corso... meanwhile, at home, he’s being bossed around by a five-pound kitten! Dodo Editor Tarang shares the hilarious dynamic between these two unlikely siblings, from Nimbus stealing Diesel’s bed to their very different ideas about who's in charge.",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s2.dmcdn.net/v/ghsiI1gxapV3sZRDK/x720",
+      "source_image_alt": "Cane Corso Is Totally Intimidated By Kitten Brother",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xbudclu",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xbudclu",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xbudclu",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xbudclu",
+        "source_url": "https://www.dailymotion.com/video/xbudclu",
+        "title": "Cane Corso Is Totally Intimidated By Kitten Brother"
+      },
+      "source_fingerprint": "9b56d8bfeb44396ed11b",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "kitten"
       ],
       "public_eligible": false
     },
@@ -1666,40 +1689,6 @@
         "width": 1280,
         "height": 848
       }
-    },
-    {
-      "id": "c69dd214c380ad1a8b44",
-      "title": "Rescuer Gets Word A Stray Dog Is Threatened With A Gun",
-      "url": "https://www.dailymotion.com/video/xbstuuu",
-      "source": "The Dodo",
-      "language": "en",
-      "published_at": "2026-11-02T05:18:46Z",
-      "source_excerpt": "She searched for Theodore for 3 weeks before he suddenly disappeared. Audray rushed to help Theodore after learning someone was threatening to shoot him, but getting him to safety turned into a weeks-long chase. When he suddenly disappeared, she feared she’d never see him again. Dodo editor Tarang tells the story of the completely unexpected way Theodore eventually found his way back into her life",
-      "agent_summary": "",
-      "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/gX-bs1gw1xIwEQoHl/x720",
-      "source_image_alt": "Rescuer Gets Word A Stray Dog Is Threatened With A Gun",
-      "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xbstuuu",
-      "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xbstuuu",
-      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
-      "source_video": {
-        "provider": "dailymotion",
-        "video_id": "xbstuuu",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xbstuuu",
-        "source_url": "https://www.dailymotion.com/video/xbstuuu",
-        "title": "Rescuer Gets Word A Stray Dog Is Threatened With A Gun"
-      },
-      "source_fingerprint": "cda1b626756cb0e7bf12",
-      "category": "Djur",
-      "source_tier_bonus": 4,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "rescue"
-      ],
-      "public_eligible": false
     },
     {
       "id": "9059cf29b9a387da17b1",
