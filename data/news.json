@@ -1,8 +1,11 @@
 {
-  "generated_at": "2026-11-09T02:24:25.663427Z",
+  "generated_at": "2026-11-09T21:18:18.222808Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "6f09d8e7c7972731c9a2",
+    "ff7d4fc2e22cc37906ac"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -1042,10 +1045,10 @@
       "url": "https://viablecities.se/kalender/viable-cities-pa-cop31",
       "source": "Viable Cities",
       "language": "sv",
-      "published_at": "2026-11-04T07:49:56Z",
+      "published_at": "2026-11-09T08:49:56Z",
       "source_excerpt": "Med erfarenheter från Klimatkontrakt 2030 i bagaget medverkar Viable Cities i COP31. Bland annat kommer vi att tala om systemdemonstratorer och nya lösningar för finansiering av klimatomställningen. Inlägget Viable Cities till COP31 dök först upp på Viable Cities .",
       "agent_summary": "",
-      "source_fingerprint": "9bb4c25650a38170ccba",
+      "source_fingerprint": "254b5569b50e4c3b3b8d",
       "category": "Samhälle",
       "source_tier_bonus": 5,
       "positivity_score": 7,
@@ -1064,13 +1067,49 @@
         "height": 848
       },
       "generated_image": {
-        "url": "/news-images/generated/b12cb355fc7b3caab002-9bb4c256-v1.svg",
+        "url": "/news-images/generated/b12cb355fc7b3caab002-254b5569-v1.svg",
         "alt": "Automatiskt skapad redaktionell illustration.",
         "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "9bb4c25650a38170ccba",
+        "source_fingerprint": "254b5569b50e4c3b3b8d",
         "width": 1280,
         "height": 848,
-        "sha256": "ef5b43f7cfbf319510c86aa8c4f8cf97a770d98b4a44d4887ee4ff879eb58cf5"
+        "sha256": "90323e6c1b40f368f2b7379ff1515d5e6322be4f9333a6c29cdc59dec9863d04"
+      }
+    },
+    {
+      "id": "6f09d8e7c7972731c9a2",
+      "title": "Olga Kordas i styrelsen för nytt spanskt klimatinitiativ",
+      "url": "https://viablecities.se/olga-kordas-i-styrelsen-for-nytt-spanskt-klimatinitiativ",
+      "source": "Viable Cities",
+      "language": "sv",
+      "published_at": "2026-11-09T08:37:08Z",
+      "source_excerpt": "Viable Cities programchef Olga Kordas tar plats i styrelsen för nystartade ARRELS-CDTI Chair i Valencia, Spanien. Initiativet samlar många aktörer och ska stärka kommuners kapacitet att förutse och hantera klimatrisker. Inlägget Olga Kordas i styrelsen för nytt spanskt klimatinitiativ dök först upp på Viable Cities .",
+      "agent_summary": "",
+      "source_fingerprint": "9cad69a4068010380f51",
+      "category": "Samhälle",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "initiativ"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/c17a6275-7192-431b-a468-a375743e3913-1.webp",
+        "alt": "Olga Kordas i styrelsen för nytt spanskt klimatinitiativ",
+        "user_image_id": "c17a6275-7192-431b-a468-a375743e3913-1",
+        "match_score": 0.2425,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/6f09d8e7c7972731c9a2-9cad69a4-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "9cad69a4068010380f51",
+        "width": 1280,
+        "height": 848,
+        "sha256": "d7821dcfaafc2b2574f5c88bb7ebd3f4e20a28876c306c3f91f7215808151460"
       }
     },
     {
@@ -1254,43 +1293,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "dbb70a1b542063f8345c62c54bdb2bbf1cce2c4ebaf65959263f4c81ca04ce16"
-      }
-    },
-    {
-      "id": "eb682f3bae66912bdf7e",
-      "title": "”Framtidens städer behöver byggas även under mark”",
-      "url": "https://www.extrakt.se/framtidens-stader-behover-byggas-aven-under-mark",
-      "source": "Extrakt",
-      "language": "sv",
-      "published_at": "2026-09-24T11:49:01Z",
-      "source_excerpt": "Utrymmen under mark skulle kunna vara en resurs – inte bara en plats att gömma bilar och annat som inte passar in i en hållbar stad. Det är en viktig slutsats i forskningsprojektet SubCity. Men i samhällsplaneringen glöms utvecklingen under ytan ofta bort.",
-      "agent_summary": "",
-      "source_fingerprint": "3bd8a288e42aa1b9cb7c",
-      "category": "Miljö",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "hållbar"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/df172a32-b0d0-4403-be55-3af7e11dd200.webp",
-        "alt": "”Framtidens städer behöver byggas även under mark”",
-        "user_image_id": "df172a32-b0d0-4403-be55-3af7e11dd200",
-        "match_score": 0.2449,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/eb682f3bae66912bdf7e-3bd8a288-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "3bd8a288e42aa1b9cb7c",
-        "width": 1280,
-        "height": 848,
-        "sha256": "e57c2d711b320415b1c861fa0338151273f023d4dc296fcb847c158e57611879"
       }
     },
     {
@@ -1591,28 +1593,29 @@
       "public_eligible": false
     },
     {
-      "id": "7fccb3522d0d3bf297a7",
-      "title": "NASA Awards Moon Base Transportation, Technology, Science Projects",
-      "url": "https://www.nasa.gov/news-release/nasa-awards-moon-base-transportation-technology-science-projects",
+      "id": "ff7d4fc2e22cc37906ac",
+      "title": "CHAPEA Mission 2 Crew Reflects After 378 Days on Simulated Mars",
+      "url": "https://www.nasa.gov/centers-and-facilities/johnson/chapea-mission-2-crew-reflects-after-378-days-on-simulated-mars",
       "source": "NASA News Releases",
       "language": "en",
-      "published_at": "2026-11-07T22:47:03Z",
-      "source_excerpt": "NASA announced a suite of awards and mission updates on Saturday to expand the agency’s Moon Base exploration, science, and infrastructure capabilities. The investments will advance commercial robotic deliveries, a nuclear-powered rover named PROMISE, launch and orbital transfer services, and surface infrastructure as the agency works with American industry to establish a sustained presence on […]",
+      "published_at": "2026-11-09T11:00:00Z",
+      "source_excerpt": "After 378 days without windows, the sounds of the outside world, or real-time calls with family and friends, four research volunteers stepped out of NASA’s Mars Dune Alpha habitat on Oct. 31, completing the agency’s second yearlong Mars surface simulation. Ross Elder, Ellen Ellis, James Spicer, and Matthew Montgomery entered the roughly 1,700-square-foot, 3D-printed habitat at […]",
       "agent_summary": "",
-      "source_fingerprint": "514f54d82faf96f9cf02",
+      "source_fingerprint": "b5052235687b3662a33e",
       "source_tier_bonus": 1,
       "positivity_score": 6,
       "positive_signals": [
         "curated-positive-source",
+        "friend",
         "mission",
-        "science",
-        "technology"
+        "research",
+        "volunteer"
       ],
       "public_eligible": false,
       "user_image": {
-        "url": "/news-images/user/c17a6275-7192-431b-a468-a375743e3913-1.webp",
-        "alt": "NASA Awards Moon Base Transportation, Technology, Science Projects",
-        "user_image_id": "c17a6275-7192-431b-a468-a375743e3913-1",
+        "url": "/news-images/user/c17a6275-7192-431b-a468-a375743e3913.webp",
+        "alt": "CHAPEA Mission 2 Crew Reflects After 378 Days on Simulated Mars",
+        "user_image_id": "c17a6275-7192-431b-a468-a375743e3913",
         "match_score": 0.2425,
         "width": 1280,
         "height": 848
