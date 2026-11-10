@@ -1,11 +1,8 @@
 {
-  "generated_at": "2026-11-09T21:18:18.222808Z",
+  "generated_at": "2026-11-10T04:29:43.181096Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [
-    "6f09d8e7c7972731c9a2",
-    "ff7d4fc2e22cc37906ac"
-  ],
+  "new_item_ids": [],
   "fetch_errors": [],
   "items": [
     {
@@ -1110,17 +1107,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "d7821dcfaafc2b2574f5c88bb7ebd3f4e20a28876c306c3f91f7215808151460"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/6f09d8e7c7972731c9a2-9cad69a4068010380f51-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: Olga Kordas i styrelsen för nytt spanskt klimatinitiativ",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "9cad69a4068010380f51",
-        "width": 1280,
-        "height": 848,
-        "sha256": "0a157c1429558a74eecb4a1032f6f43f126a1c593f1a58577b1380ed30fad5f0",
-        "generated_at": "2026-11-09T21:18:42Z"
       }
     },
     {
@@ -1604,35 +1590,6 @@
       "public_eligible": false
     },
     {
-      "id": "ff7d4fc2e22cc37906ac",
-      "title": "CHAPEA Mission 2 Crew Reflects After 378 Days on Simulated Mars",
-      "url": "https://www.nasa.gov/centers-and-facilities/johnson/chapea-mission-2-crew-reflects-after-378-days-on-simulated-mars",
-      "source": "NASA News Releases",
-      "language": "en",
-      "published_at": "2026-11-09T11:00:00Z",
-      "source_excerpt": "After 378 days without windows, the sounds of the outside world, or real-time calls with family and friends, four research volunteers stepped out of NASA’s Mars Dune Alpha habitat on Oct. 31, completing the agency’s second yearlong Mars surface simulation. Ross Elder, Ellen Ellis, James Spicer, and Matthew Montgomery entered the roughly 1,700-square-foot, 3D-printed habitat at […]",
-      "agent_summary": "",
-      "source_fingerprint": "b5052235687b3662a33e",
-      "source_tier_bonus": 1,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "friend",
-        "mission",
-        "research",
-        "volunteer"
-      ],
-      "public_eligible": false,
-      "user_image": {
-        "url": "/news-images/user/c17a6275-7192-431b-a468-a375743e3913.webp",
-        "alt": "CHAPEA Mission 2 Crew Reflects After 378 Days on Simulated Mars",
-        "user_image_id": "c17a6275-7192-431b-a468-a375743e3913",
-        "match_score": 0.2425,
-        "width": 1280,
-        "height": 848
-      }
-    },
-    {
       "id": "1208c05ed5353579a658",
       "title": "Husky's Face Was Unrecognizable Until She Beat Cancer",
       "url": "https://www.dailymotion.com/video/xbuhkni",
@@ -1726,6 +1683,33 @@
         "curated-positive-source",
         "play",
         "rescue"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "1cf350b3106fdd37c06d",
+      "title": "She couldn't afford pet-friendly housing, so she gave up her dog of 10 years. Her community raised $18,000 to reunite them",
+      "url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
+      "source": "Good Good Good",
+      "language": "en",
+      "published_at": "2026-10-07T14:12:00Z",
+      "source_excerpt": "After 23 years of marriage, Lisa Wilson and her dog Eddie had to find a new home. But Hurricane Helene had left the rental market in shambles.",
+      "agent_summary": "",
+      "source_fingerprint": "84b69c00e5ad3fec48ac",
+      "source_image_verified": true,
+      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6ac65295fb513da952f51586_6ac65294666e636761d49559_north-carolina-housing-woman-reunited-pet-dog-featured.webp",
+      "source_image_alt": "She couldn't afford pet-friendly housing, so she gave up her dog of 10 years. Her community raised $18,000 to reunite them",
+      "source_image_credit": "Good Good Good",
+      "source_image_rights_url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
+      "source_image_creator": "Good Good Good",
+      "source_image_source_url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "source_tier_bonus": 2,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "community",
+        "friend"
       ],
       "public_eligible": false
     }
