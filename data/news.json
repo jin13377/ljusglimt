@@ -1,8 +1,10 @@
 {
-  "generated_at": "2026-11-10T18:29:28.946866Z",
+  "generated_at": "2026-11-11T02:33:20.322767Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "aa1e8a01f3e717178f8d"
+  ],
   "fetch_errors": [],
   "items": [
     {
@@ -532,6 +534,34 @@
         "height": 848,
         "sha256": "cd1a1ef5ede588ff80b2a8b26e4d150e6144f36e2f686fa41d52a54b0e5a4497"
       }
+    },
+    {
+      "id": "aa1e8a01f3e717178f8d",
+      "title": "Skarpare röntgenbilder med ny metod",
+      "url": "https://forskning.se/2026/11/10/skarpare-rontgenbilder-med-ny-metod",
+      "source": "Forskning.se",
+      "language": "sv",
+      "published_at": "2026-11-10T19:33:07Z",
+      "source_excerpt": "I ett internationellt samarbete har forskare tagit fram en metod som ger betydligt högre kvalitet på tredimensionella röntgenbilder än tidigare. Det handlar om 3D-bilder som tas med hjälp av så kallad röntgen-nanotomografi. Forskarnas metod bygger på kunskap inom matematik och beräkningsvetenskap. – Vårt arbete visar att begränsningen inte enbart har legat i röntgenoptiken utan också […] Skarpare ",
+      "agent_summary": "",
+      "source_fingerprint": "b89e05758222dbfbb6a5",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/11/elektronmikroskop-1024x576.jpg",
+      "source_image_alt": "Skarpare röntgenbilder med ny metod",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/11/10/skarpare-rontgenbilder-med-ny-metod",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/11/10/skarpare-rontgenbilder-med-ny-metod",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "ny metod",
+        "samarbete"
+      ],
+      "public_eligible": true
     },
     {
       "id": "5288c785792c729c6776",
@@ -1256,43 +1286,6 @@
       }
     },
     {
-      "id": "d731840af02f84e5a6f1",
-      "title": "Klimat, säkerhet och beredskap",
-      "url": "https://viablecities.se/klimat-sakerhet-och-beredskap",
-      "source": "Viable Cities",
-      "language": "sv",
-      "published_at": "2026-09-25T14:52:41Z",
-      "source_excerpt": "Att samordna klimatomställning, klimatanpassning, säkerhet och beredskap är inte bara fördelaktigt – det är en ren nödvändighet. Genom att integrera dessa områden kan städer minska den sammantagna riskexponeringen, skydda kritisk infrastruktur och generera betydande kostnadsbesparingar. I samband med nationella beredskapsveckan publicerar nu Viable Cities en utblick om ämnet. Inlägget Klimat, säke",
-      "agent_summary": "",
-      "source_fingerprint": "f1be3d1f4b4ae57c5c93",
-      "category": "Samhälle",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "omställning",
-        "skydda"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/875acd2e-97c1-4178-853f-484bf04ff226.webp",
-        "alt": "Klimat, säkerhet och beredskap",
-        "user_image_id": "875acd2e-97c1-4178-853f-484bf04ff226",
-        "match_score": 0.2654,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/d731840af02f84e5a6f1-f1be3d1f-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "f1be3d1f4b4ae57c5c93",
-        "width": 1280,
-        "height": 848,
-        "sha256": "dbb70a1b542063f8345c62c54bdb2bbf1cce2c4ebaf65959263f4c81ca04ce16"
-      }
-    },
-    {
       "id": "4390567e79124135517d",
       "title": "Boyfriend Gets The Absolute BEST Valentines Day Gift",
       "url": "https://www.dailymotion.com/video/xadpjn6",
@@ -1634,7 +1627,7 @@
       "source_excerpt": "It’s a little creepy... but he LOVES him! Dino’s separation anxiety was so intense that Yaneth could barely leave the house, until she saw another dog find comfort in a human-sized doll and decided to try it herself. Now Dino snuggles up with “Haaland” while she’s gone, and somehow the world’s creepiest petsitter actually works. Dodo editor Valentina shares the hilariously sweet solution that gave",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/ghsi21gxapUwxVeIb/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/ghsi21gxapUwxVeIb/x720",
       "source_image_alt": "Woman Buys Her Anxious Dog A Fake Man",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbudcle",
