@@ -1,11 +1,18 @@
 {
-  "generated_at": "2026-11-11T02:33:20.322767Z",
+  "generated_at": "2026-11-11T18:24:24.496867Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "aa1e8a01f3e717178f8d"
+    "c734561875169e123520",
+    "d65a7337da3898d60b09",
+    "6f41491e18ad841fd25e"
   ],
-  "fetch_errors": [],
+  "fetch_errors": [
+    {
+      "source": "Positive News",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
   "items": [
     {
       "id": "9cf6616f23c2c0970f90",
@@ -356,6 +363,44 @@
       "public_eligible": true
     },
     {
+      "id": "c734561875169e123520",
+      "title": "Delegation från det tyska hälsoministeriet besöker ARC för att diskutera förebyggande insatser och äldreomsorg",
+      "url": "https://nyheter.ki.se/delegation-fran-det-tyska-halsoministeriet-besoker-arc-for-att-diskutera-forebyggande-insatser-och-aldreomsorg",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-11-11T00:00:00Z",
+      "source_excerpt": "En delegation från Tysklands federala hälsoministerium besökte Aging Research Center (ARC) vid Karolinska Institutet den 4 november. Besöket fokuserade på hur man kan skjuta upp behovet av äldreomsorg och hur forskningsresultat om förebyggande insatser för att senarelägga behovet av äldreomsorg kan omsättas i praktiken.",
+      "agent_summary": "",
+      "source_fingerprint": "96d1d7ae7db10f1d504c",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 9,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "förebygga",
+        "research"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/3559646e-9dfb-4236-b91b-7fad3fce7837.webp",
+        "alt": "Delegation från det tyska hälsoministeriet besöker ARC för att diskutera förebyggande insatser och äldreomsorg",
+        "user_image_id": "3559646e-9dfb-4236-b91b-7fad3fce7837",
+        "match_score": 0.2739,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/c734561875169e123520-96d1d7ae-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "96d1d7ae7db10f1d504c",
+        "width": 1280,
+        "height": 848,
+        "sha256": "690cd17d46f327f37abffafd5aee0f380dd1bd54b31e63d3cdee4b0e11b74064"
+      }
+    },
+    {
       "id": "21790e6f07bfd0a04688",
       "title": "Obesitasläkemedel kan ge nya sätt att skydda hjärnan",
       "url": "https://forskning.se/2026/11/06/obesitaslakemedel-hjarnan",
@@ -562,43 +607,6 @@
         "samarbete"
       ],
       "public_eligible": true
-    },
-    {
-      "id": "5288c785792c729c6776",
-      "title": "Fyra FyFa-forskare beviljas 22 miljoner kronor för banbrytande forskning",
-      "url": "https://nyheter.ki.se/fyra-fyfa-forskare-beviljas-22-miljoner-kronor-for-banbrytande-forskning",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-11-04T00:00:00Z",
-      "source_excerpt": "Hur påverkar läkemedel moderkakan? Kan tidig nedkylning skydda hjärnan efter hjärtstopp? Fyra forskare med anknytning till institutionen för fysiologi och farmakologi, FyFa, vid Karolinska Institutet får stöd från Vetenskapsrådet. Projekten handlar om läkemedel under graviditeten, hjärtstopp, det hormonella tillståndet PCOS och fettlever.",
-      "agent_summary": "",
-      "source_fingerprint": "7f403b6e3bc4f3604555",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 8,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "skydda"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/3559646e-9dfb-4236-b91b-7fad3fce7837.webp",
-        "alt": "Fyra FyFa-forskare beviljas 22 miljoner kronor för banbrytande forskning",
-        "user_image_id": "3559646e-9dfb-4236-b91b-7fad3fce7837",
-        "match_score": 0.2739,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/5288c785792c729c6776-7f403b6e-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "7f403b6e3bc4f3604555",
-        "width": 1280,
-        "height": 848,
-        "sha256": "92e496a56fcc7e0a012a9e750e6821d6544f97f0ddf0c16e9123597865093e4d"
-      }
     },
     {
       "id": "6a81ca3be6106fb20b4f",
@@ -891,34 +899,6 @@
       }
     },
     {
-      "id": "64c47b9b9dd4da348c48",
-      "title": "Bättre samarbete kan minska undvikbara akutbesök bland äldre",
-      "url": "https://forskning.se/2026/09/18/akutbesok-sjukvard-aldre",
-      "source": "Forskning.se",
-      "language": "sv",
-      "published_at": "2026-09-18T12:29:24Z",
-      "source_excerpt": "Äldre personer med flera långvariga sjukdomar står för en stor del av besöken på akutmottagningar, samtidigt som forskning visar att upp till vart fjärde besök kan vara möjligt att undvika. Nu har forskare vid Röda Korsets Högskola undersökt vad som ligger bakom dessa besök. I studien deltog 100 undersköterskor, sjuksköterskor och läkare från bland annat […] Bättre samarbete kan minska undvikbara ",
-      "agent_summary": "",
-      "source_fingerprint": "5de8cbe49bbbe47bfb1b",
-      "source_image_verified": true,
-      "source_image_url": "https://forskning.se/app/uploads/2026/09/akuten-sjukhus-aldre-1024x576.jpg",
-      "source_image_alt": "Bättre samarbete kan minska undvikbara akutbesök bland äldre",
-      "source_image_credit": "Forskning.se",
-      "source_image_rights_url": "https://forskning.se/2026/09/18/akutbesok-sjukvard-aldre",
-      "source_image_creator": "Forskning.se",
-      "source_image_source_url": "https://forskning.se/2026/09/18/akutbesok-sjukvard-aldre",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 8,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "samarbete"
-      ],
-      "public_eligible": true
-    },
-    {
       "id": "fd5961abce3292280c5f",
       "title": "MSI startar ny publikationsserie om social innovation",
       "url": "https://socialinnovation.se/nyheter/msi-startar-ny-publikationsserie-om-social-innovation",
@@ -993,43 +973,6 @@
       }
     },
     {
-      "id": "5b6153c6015de28addb4",
-      "title": "Miljarder i ”hållbara” lån till palmolje­företag",
-      "url": "https://www.natursidan.se/nyheter/miljarder-i-hallbara-lan-till-palmoljeforetag",
-      "source": "Natursidan",
-      "language": "sv",
-      "published_at": "2026-08-13T04:24:42Z",
-      "source_excerpt": "Palmoljebolag som kopplas till korruptionsanklagelser och avskogning i Indonesien har beviljats lån på 31 miljarder dollar från stora internationella banker.",
-      "agent_summary": "",
-      "source_fingerprint": "f34082dee1cb729b8043",
-      "category": "Natur",
-      "source_tier_bonus": 5,
-      "positivity_score": 8,
-      "positive_signals": [
-        "curated-positive-source",
-        "beviljats",
-        "hållbar"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/89080721-b3d1-4322-a704-fc9ca7e0c3fc.webp",
-        "alt": "Miljarder i ”hållbara” lån till palmolje­företag",
-        "user_image_id": "89080721-b3d1-4322-a704-fc9ca7e0c3fc",
-        "match_score": 0.2812,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/5b6153c6015de28addb4-f34082de-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "f34082dee1cb729b8043",
-        "width": 1280,
-        "height": 848,
-        "sha256": "a4a4255cb848cfe7931db7432fc2d2fa428311cacb97388015103160e4689f59"
-      }
-    },
-    {
       "id": "33e4d91318071bc1b90a",
       "title": "This Pig Was On The Run Until Everyone Came Together",
       "url": "https://www.dailymotion.com/video/xamx6sa",
@@ -1065,6 +1008,43 @@
       ],
       "display_title_sv": "Alla hjälptes åt för att rädda grisen Petey",
       "public_eligible": true
+    },
+    {
+      "id": "d65a7337da3898d60b09",
+      "title": "New partnership for urban system demonstrators and circular construction announced at COP31",
+      "url": "https://viablecities.se/urban-system-demonstrators-and-circular-construction-cop31",
+      "source": "Viable Cities",
+      "language": "sv",
+      "published_at": "2026-11-11T10:02:14Z",
+      "source_excerpt": "At COP31, the Global Platform for Sustainable Cities (GPSC) together with Sweden's Viable Cities and the Viability Fund for Cities, announced plans to develop a new initiative to help cities reduce their environmental impact through systems-based approaches and tools. Inlägget New partnership for urban system demonstrators and circular construction announced at COP31 dök först upp på Viable Cities",
+      "agent_summary": "",
+      "source_fingerprint": "2a75e5a0c002051a9dfd",
+      "category": "Samhälle",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "initiativ",
+        "together"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/875acd2e-97c1-4178-853f-484bf04ff226.webp",
+        "alt": "New partnership for urban system demonstrators and circular construction announced at COP31",
+        "user_image_id": "875acd2e-97c1-4178-853f-484bf04ff226",
+        "match_score": 0.2654,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/d65a7337da3898d60b09-2a75e5a0-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "2a75e5a0c002051a9dfd",
+        "width": 1280,
+        "height": 848,
+        "sha256": "cb6058de8049cfa7db11eafef811519cfb8f3afd3c37c4d4b711a3f574092078"
+      }
     },
     {
       "id": "b12cb355fc7b3caab002",
@@ -1320,6 +1300,42 @@
       ],
       "display_title_sv": "Pojkvännen fick den bästa alla hjärtans dag-presenten",
       "public_eligible": true
+    },
+    {
+      "id": "6f41491e18ad841fd25e",
+      "title": "Vanlig genvariant kan öka risken för lunginflammation",
+      "url": "https://www.vetenskaphalsa.se/vanlig-genvariant-kan-oka-risken-for-lunginflammation",
+      "source": "Vetenskap & hälsa",
+      "language": "sv",
+      "published_at": "2026-11-11T14:10:22Z",
+      "source_excerpt": "En vanlig genetisk variant kan försämra lungornas försvar mot bakterier och öka risken för lunginflammation. Det visar en ny studie ledd av forskare vid Lunds universitet. Forskarna har också upptäckt en tidigare okänd mekanism för hur immunförsvaret i luftvägarna upptäcker och bekämpar bakterier. Lunginflammation är en vanlig och ibland allvarlig infektion som årligen drabbar 20 […]",
+      "agent_summary": "",
+      "source_fingerprint": "bdd677581c9416a5a42d",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "upptäckt"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/89080721-b3d1-4322-a704-fc9ca7e0c3fc.webp",
+        "alt": "Vanlig genvariant kan öka risken för lunginflammation",
+        "user_image_id": "89080721-b3d1-4322-a704-fc9ca7e0c3fc",
+        "match_score": 0.235,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/6f41491e18ad841fd25e-bdd67758-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "bdd677581c9416a5a42d",
+        "width": 1280,
+        "height": 848,
+        "sha256": "62ef6459c542678b2ac6f0cbc3086e1c18d71b8fd57f0b1e40f862a02b857ff2"
+      }
     },
     {
       "id": "56c225a54e232fce1fea",
@@ -1592,7 +1608,7 @@
       "source_excerpt": "Jacaranda could barely eat or breathe when Zadrigman's team discovered that the swelling in her face was cancer. Dodo editor Valentina shares how she made it through treatment and became almost unrecognizable.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/gicpE1gxhPNMVE_tk/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/gicpE1gxhPNMVE_tk/x720",
       "source_image_alt": "Husky's Face Was Unrecognizable Until She Beat Cancer",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbuhkni",
