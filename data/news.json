@@ -398,6 +398,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "690cd17d46f327f37abffafd5aee0f380dd1bd54b31e63d3cdee4b0e11b74064"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/c734561875169e123520-96d1d7ae7db10f1d504c-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Delegation från det tyska hälsoministeriet besöker ARC för att diskutera förebyggande insatser och äldreomsorg",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "96d1d7ae7db10f1d504c",
+        "width": 1280,
+        "height": 848,
+        "sha256": "348f229b5688ab168a3129660a4d2f9a7eb6110333544d2eb0e036821b5ca7d7",
+        "generated_at": "2026-11-11T18:24:53Z"
       }
     },
     {
