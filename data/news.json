@@ -1,11 +1,9 @@
 {
-  "generated_at": "2026-11-11T18:24:24.496867Z",
+  "generated_at": "2026-11-12T03:38:06.835352Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "c734561875169e123520",
-    "d65a7337da3898d60b09",
-    "6f41491e18ad841fd25e"
+    "d6b03080c33d68f1348d"
   ],
   "fetch_errors": [
     {
@@ -398,17 +396,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "690cd17d46f327f37abffafd5aee0f380dd1bd54b31e63d3cdee4b0e11b74064"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/c734561875169e123520-96d1d7ae7db10f1d504c-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: Delegation från det tyska hälsoministeriet besöker ARC för att diskutera förebyggande insatser och äldreomsorg",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "96d1d7ae7db10f1d504c",
-        "width": 1280,
-        "height": 848,
-        "sha256": "348f229b5688ab168a3129660a4d2f9a7eb6110333544d2eb0e036821b5ca7d7",
-        "generated_at": "2026-11-11T18:24:53Z"
       }
     },
     {
@@ -1021,6 +1008,33 @@
       "public_eligible": true
     },
     {
+      "id": "d6b03080c33d68f1348d",
+      "title": "Ny metod följer hur tumörceller sprids i hjärnan",
+      "url": "https://forskning.se/2026/11/11/ny-metod-foljer-hur-tumorceller-sprids-i-hjarnan",
+      "source": "Forskning.se",
+      "language": "sv",
+      "published_at": "2026-11-11T19:06:11Z",
+      "source_excerpt": "Glioblastom är en av de mest aggressiva formerna av hjärncancer. Sjukdomen är svår att behandla eftersom tumörceller sprider sig till den omgivande friska hjärnvävnaden, utanför det område som kan avlägsnas med kirurgi. Cellerna som blir kvar kan sedan orsaka återfall. Följer spridningen i hjärnan I en studie presenterar forskare vid Uppsala universitet en ny metod, […] Ny metod följer hur tumörce",
+      "agent_summary": "",
+      "source_fingerprint": "9ba346ee2abbf497657c",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/11/GlioTrace_glioblastom-1024x576.jpg",
+      "source_image_alt": "Ny metod följer hur tumörceller sprids i hjärnan",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/11/11/ny-metod-foljer-hur-tumorceller-sprids-i-hjarnan",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/11/11/ny-metod-foljer-hur-tumorceller-sprids-i-hjarnan",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "ny metod"
+      ],
+      "public_eligible": true
+    },
+    {
       "id": "d65a7337da3898d60b09",
       "title": "New partnership for urban system demonstrators and circular construction announced at COP31",
       "url": "https://viablecities.se/urban-system-demonstrators-and-circular-construction-cop31",
@@ -1311,42 +1325,6 @@
       ],
       "display_title_sv": "Pojkvännen fick den bästa alla hjärtans dag-presenten",
       "public_eligible": true
-    },
-    {
-      "id": "6f41491e18ad841fd25e",
-      "title": "Vanlig genvariant kan öka risken för lunginflammation",
-      "url": "https://www.vetenskaphalsa.se/vanlig-genvariant-kan-oka-risken-for-lunginflammation",
-      "source": "Vetenskap & hälsa",
-      "language": "sv",
-      "published_at": "2026-11-11T14:10:22Z",
-      "source_excerpt": "En vanlig genetisk variant kan försämra lungornas försvar mot bakterier och öka risken för lunginflammation. Det visar en ny studie ledd av forskare vid Lunds universitet. Forskarna har också upptäckt en tidigare okänd mekanism för hur immunförsvaret i luftvägarna upptäcker och bekämpar bakterier. Lunginflammation är en vanlig och ibland allvarlig infektion som årligen drabbar 20 […]",
-      "agent_summary": "",
-      "source_fingerprint": "bdd677581c9416a5a42d",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "upptäckt"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/89080721-b3d1-4322-a704-fc9ca7e0c3fc.webp",
-        "alt": "Vanlig genvariant kan öka risken för lunginflammation",
-        "user_image_id": "89080721-b3d1-4322-a704-fc9ca7e0c3fc",
-        "match_score": 0.235,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/6f41491e18ad841fd25e-bdd67758-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "bdd677581c9416a5a42d",
-        "width": 1280,
-        "height": 848,
-        "sha256": "62ef6459c542678b2ac6f0cbc3086e1c18d71b8fd57f0b1e40f862a02b857ff2"
-      }
     },
     {
       "id": "56c225a54e232fce1fea",
@@ -1654,7 +1632,7 @@
       "source_excerpt": "It’s a little creepy... but he LOVES him! Dino’s separation anxiety was so intense that Yaneth could barely leave the house, until she saw another dog find comfort in a human-sized doll and decided to try it herself. Now Dino snuggles up with “Haaland” while she’s gone, and somehow the world’s creepiest petsitter actually works. Dodo editor Valentina shares the hilariously sweet solution that gave",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/ghsi21gxapUwxVeIb/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/ghsi21gxapUwxVeIb/x720",
       "source_image_alt": "Woman Buys Her Anxious Dog A Fake Man",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbudcle",
