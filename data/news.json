@@ -245,6 +245,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "fcea0f916113baadcb3c697dbb50aa9d1964f4c4a00c02a818bf590bea9b14fd"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/d8302f2b5ee80bf25377-12ab99e7836714e466e6-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Anslag från Hjärt-Lungfonden till forskning vid CLINTEC",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "12ab99e7836714e466e6",
+        "width": 1280,
+        "height": 848,
+        "sha256": "4385c61e8c870bc39e99311f186ebe57a66ed7270b1851bf561421677d133fb5",
+        "generated_at": "2026-11-13T18:25:15Z"
       }
     },
     {
