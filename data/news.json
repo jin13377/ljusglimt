@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T18:42:44.560194Z",
+  "generated_at": "2026-11-13T03:10:03.359416Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [],
@@ -7,10 +7,6 @@
     {
       "source": "Positive News",
       "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "Karolinska Institutet",
-      "error": "not well-formed (invalid token): line 4, column 17"
     }
   ],
   "items": [
@@ -1599,7 +1595,7 @@
       "source_excerpt": "Jacaranda could barely eat or breathe when Zadrigman's team discovered that the swelling in her face was cancer. Dodo editor Valentina shares how she made it through treatment and became almost unrecognizable.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/gicpE1gxhPNMVE_tk/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/gicpE1gxhPNMVE_tk/x720",
       "source_image_alt": "Husky's Face Was Unrecognizable Until She Beat Cancer",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbuhkni",
@@ -1634,7 +1630,7 @@
       "source_excerpt": "It’s a little creepy... but he LOVES him! Dino’s separation anxiety was so intense that Yaneth could barely leave the house, until she saw another dog find comfort in a human-sized doll and decided to try it herself. Now Dino snuggles up with “Haaland” while she’s gone, and somehow the world’s creepiest petsitter actually works. Dodo editor Valentina shares the hilariously sweet solution that gave",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/ghsi21gxapUwxVeIb/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/ghsi21gxapUwxVeIb/x720",
       "source_image_alt": "Woman Buys Her Anxious Dog A Fake Man",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbudcle",
