@@ -395,6 +395,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "bc22116a034fbe448ea04207d4b8ecfbc5625f872194ae99eefd80752d8b8e97"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/1ed4a2831656845c3b00-3a5ff46a693f5a2fd25f-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Innovation och engagemang driver omställning i Nacka",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "3a5ff46a693f5a2fd25f",
+        "width": 1280,
+        "height": 848,
+        "sha256": "a9ffde3dff78b7bb8dcdac5411ed61539db5b260e6515f0fb2609ec7f59e0c7f",
+        "generated_at": "2026-11-16T20:49:21Z"
       }
     },
     {
