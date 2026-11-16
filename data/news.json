@@ -1,8 +1,11 @@
 {
-  "generated_at": "2026-11-16T02:34:37.276697Z",
+  "generated_at": "2026-11-16T20:48:55.254417Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "1ed4a2831656845c3b00",
+    "4497e0edd2925f619d16"
+  ],
   "fetch_errors": [
     {
       "source": "Positive News",
@@ -321,45 +324,6 @@
       }
     },
     {
-      "id": "df0b41c0b56d86428a0f",
-      "title": "Fem KI-forskare får ERC:s startanslag 2026",
-      "url": "https://nyheter.ki.se/fem-ki-forskare-far-ercs-startanslag-2026",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-09-03T00:00:00Z",
-      "source_excerpt": "Fem forskare vid Karolinska Institutet har tilldelats European Research Council (ERC) Starting Grant, ERC:s startanslag, som är ett av Europas viktigaste forskningsanslag för forskare i början av sin karriär. Anslaget ses internationellt som ett kvitto på vetenskaplig excellens, originalitet och en lovande framtid som forskargruppsledare.",
-      "agent_summary": "",
-      "source_fingerprint": "1216df8bbbac41998442",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 10,
-      "positive_signals": [
-        "curated-positive-source",
-        "anslag",
-        "forskning",
-        "lovande",
-        "research"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/3559646e-9dfb-4236-b91b-7fad3fce7837-1.webp",
-        "alt": "Fem KI-forskare får ERC:s startanslag 2026",
-        "user_image_id": "3559646e-9dfb-4236-b91b-7fad3fce7837-1",
-        "match_score": 0.2739,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/df0b41c0b56d86428a0f-1216df8b-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "1216df8bbbac41998442",
-        "width": 1280,
-        "height": 848,
-        "sha256": "8e9c9f13c2685d3ab371253a032932f2a7e0b11b9b82ab0e2da04b13d82019bc"
-      }
-    },
-    {
       "id": "772deb64d5f80c5b5454",
       "title": "Boyfriend Has Best Reaction To Surprise Foster Kittens",
       "url": "https://www.dailymotion.com/video/xamx6nm",
@@ -395,6 +359,81 @@
       ],
       "display_title_sv": "Överraskningen med fosterkattungar gav pojkvännen bästa reaktionen",
       "public_eligible": true
+    },
+    {
+      "id": "1ed4a2831656845c3b00",
+      "title": "Innovation och engagemang driver omställning i Nacka",
+      "url": "https://www.linkedin.com/pulse/innovation-och-engagemang-driver-omst%C3%A4llning-i-nacka-viablecities-2mn9f?trackingId=2Mf0Q4OIQ0m097vjeeu1kw%3D%3D",
+      "source": "Viable Cities",
+      "language": "sv",
+      "published_at": "2026-11-12T14:20:00Z",
+      "source_excerpt": "Klimatstafetten, som engagerade Nackaborna i över 4 000 klimatåtgärder, är ett av flera exempel på hur Nacka kommun arbetar för att omsätta kunskap i handling. Här är klimatomställningen ett lagarbete där alla bidrar. Läs mer om Nackas omställningsresa i årets lägesrapport. Inlägget Innovation och engagemang driver omställning i Nacka dök först upp på Viable Cities .",
+      "agent_summary": "",
+      "source_fingerprint": "3a5ff46a693f5a2fd25f",
+      "category": "Samhälle",
+      "source_tier_bonus": 5,
+      "positivity_score": 9,
+      "positive_signals": [
+        "curated-positive-source",
+        "innovation",
+        "omställning"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/3559646e-9dfb-4236-b91b-7fad3fce7837-1.webp",
+        "alt": "Innovation och engagemang driver omställning i Nacka",
+        "user_image_id": "3559646e-9dfb-4236-b91b-7fad3fce7837-1",
+        "match_score": 0.2529,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/1ed4a2831656845c3b00-3a5ff46a-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "3a5ff46a693f5a2fd25f",
+        "width": 1280,
+        "height": 848,
+        "sha256": "bc22116a034fbe448ea04207d4b8ecfbc5625f872194ae99eefd80752d8b8e97"
+      }
+    },
+    {
+      "id": "c734561875169e123520",
+      "title": "Delegation från det tyska hälsoministeriet besöker ARC för att diskutera förebyggande insatser och äldreomsorg",
+      "url": "https://nyheter.ki.se/delegation-fran-det-tyska-halsoministeriet-besoker-arc-for-att-diskutera-forebyggande-insatser-och-aldreomsorg",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-11-11T00:00:00Z",
+      "source_excerpt": "En delegation från Tysklands federala hälsoministerium besökte Aging Research Center (ARC) vid Karolinska Institutet den 4 november. Besöket fokuserade på hur man kan skjuta upp behovet av äldreomsorg och hur forskningsresultat om förebyggande insatser för att senarelägga behovet av äldreomsorg kan omsättas i praktiken.",
+      "agent_summary": "",
+      "source_fingerprint": "96d1d7ae7db10f1d504c",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 9,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "förebygga",
+        "research"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/89080721-b3d1-4322-a704-fc9ca7e0c3fc.webp",
+        "alt": "Delegation från det tyska hälsoministeriet besöker ARC för att diskutera förebyggande insatser och äldreomsorg",
+        "user_image_id": "89080721-b3d1-4322-a704-fc9ca7e0c3fc",
+        "match_score": 0.235,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/c734561875169e123520-96d1d7ae-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "96d1d7ae7db10f1d504c",
+        "width": 1280,
+        "height": 848,
+        "sha256": "690cd17d46f327f37abffafd5aee0f380dd1bd54b31e63d3cdee4b0e11b74064"
+      }
     },
     {
       "id": "21790e6f07bfd0a04688",
@@ -978,33 +1017,6 @@
       "public_eligible": true
     },
     {
-      "id": "d6b03080c33d68f1348d",
-      "title": "Ny metod följer hur tumörceller sprids i hjärnan",
-      "url": "https://forskning.se/2026/11/11/ny-metod-foljer-hur-tumorceller-sprids-i-hjarnan",
-      "source": "Forskning.se",
-      "language": "sv",
-      "published_at": "2026-11-11T19:06:11Z",
-      "source_excerpt": "Glioblastom är en av de mest aggressiva formerna av hjärncancer. Sjukdomen är svår att behandla eftersom tumörceller sprider sig till den omgivande friska hjärnvävnaden, utanför det område som kan avlägsnas med kirurgi. Cellerna som blir kvar kan sedan orsaka återfall. Följer spridningen i hjärnan I en studie presenterar forskare vid Uppsala universitet en ny metod, […] Ny metod följer hur tumörce",
-      "agent_summary": "",
-      "source_fingerprint": "9ba346ee2abbf497657c",
-      "source_image_verified": true,
-      "source_image_url": "https://forskning.se/app/uploads/2026/11/GlioTrace_glioblastom-1024x576.jpg",
-      "source_image_alt": "Ny metod följer hur tumörceller sprids i hjärnan",
-      "source_image_credit": "Forskning.se",
-      "source_image_rights_url": "https://forskning.se/2026/11/11/ny-metod-foljer-hur-tumorceller-sprids-i-hjarnan",
-      "source_image_creator": "Forskning.se",
-      "source_image_source_url": "https://forskning.se/2026/11/11/ny-metod-foljer-hur-tumorceller-sprids-i-hjarnan",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "ny metod"
-      ],
-      "public_eligible": true
-    },
-    {
       "id": "d65a7337da3898d60b09",
       "title": "New partnership for urban system demonstrators and circular construction announced at COP31",
       "url": "https://viablecities.se/urban-system-demonstrators-and-circular-construction-cop31",
@@ -1297,29 +1309,29 @@
       "public_eligible": true
     },
     {
-      "id": "47b2acf912a2b75d926d",
-      "title": "Betyg inte jämförbara mellan skolor",
-      "url": "https://forskning.se/2026/11/12/betyg-inte-jamforbara-mellan-skolor",
+      "id": "4497e0edd2925f619d16",
+      "title": "Så kan tumörer göras mer mottagliga för immunterapi",
+      "url": "https://forskning.se/2026/11/16/sa-kan-tumorer-goras-mer-mottagliga-for-immunterapi",
       "source": "Forskning.se",
       "language": "sv",
-      "published_at": "2026-11-12T08:01:45Z",
-      "source_excerpt": "Betygen har en central funktion i det svenska utbildningssystemet. Grundskolebetygen avgör vilka elever som kommer in på eftertraktade gymnasieutbildningar. Eftersom elever konkurrerar med varandra om gymnasieplatser behöver samma betyg ha ungefär samma innebörd oavsett var det har satts för att urvalet ska fungera rättvist. Frågan har fått ökad uppmärksamhet under senare år. Svenska genomsnittsbe",
+      "published_at": "2026-11-16T19:56:38Z",
+      "source_excerpt": "Immunterapi hjälper kroppens eget immunförsvar att bekämpa cancer och har förändrat cancervården. Men behandlingen fungerar inte för alla, särskilt inte vid vissa svårbehandlade cancerformer. En viktig faktor för hur väl behandlingen fungerar är immunförsvarets förmåga att organisera sitt angrepp inne i tumören. Där kan nämligen små kluster av immunceller, så kallade tertiära lymfoida strukturer (",
       "agent_summary": "",
-      "source_fingerprint": "e983cb58480994eb8069",
+      "source_fingerprint": "b9f99912ed2859d7a55b",
       "source_image_verified": true,
-      "source_image_url": "https://forskning.se/app/uploads/2026/11/betyg-skola-1024x576.jpg",
-      "source_image_alt": "Betyg inte jämförbara mellan skolor",
+      "source_image_url": "https://forskning.se/app/uploads/2026/11/dendritisk-cell-1024x576.jpg",
+      "source_image_alt": "Så kan tumörer göras mer mottagliga för immunterapi",
       "source_image_credit": "Forskning.se",
-      "source_image_rights_url": "https://forskning.se/2026/11/12/betyg-inte-jamforbara-mellan-skolor",
+      "source_image_rights_url": "https://forskning.se/2026/11/16/sa-kan-tumorer-goras-mer-mottagliga-for-immunterapi",
       "source_image_creator": "Forskning.se",
-      "source_image_source_url": "https://forskning.se/2026/11/12/betyg-inte-jamforbara-mellan-skolor",
+      "source_image_source_url": "https://forskning.se/2026/11/16/sa-kan-tumorer-goras-mer-mottagliga-for-immunterapi",
       "source_image_verification_method": "rss-syndicated-thumbnail-v1",
       "category": "Vetenskap",
       "source_tier_bonus": 5,
       "positivity_score": 6,
       "positive_signals": [
         "curated-positive-source",
-        "elever"
+        "hjälper"
       ],
       "public_eligible": true
     },
@@ -1629,7 +1641,7 @@
       "source_excerpt": "It’s a little creepy... but he LOVES him! Dino’s separation anxiety was so intense that Yaneth could barely leave the house, until she saw another dog find comfort in a human-sized doll and decided to try it herself. Now Dino snuggles up with “Haaland” while she’s gone, and somehow the world’s creepiest petsitter actually works. Dodo editor Valentina shares the hilariously sweet solution that gave",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/ghsi21gxapUwxVeIb/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/ghsi21gxapUwxVeIb/x720",
       "source_image_alt": "Woman Buys Her Anxious Dog A Fake Man",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbudcle",
@@ -1665,7 +1677,7 @@
       "agent_summary": "",
       "source_fingerprint": "84b2a9f428b6cbcb666b",
       "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6adf87e6cca8030ef580c93b_6adf87e49806c40109016a31_otters-playing-basketball-halloween-pumpkins-featured.webp",
+      "source_image_url": "https://cdn.prod.website-files.com/6ac7f2e22eaacd2873850a17/6af4d97765aa363158340e9e_6adf87e6cca8030ef580c93b_6adf87e49806c40109016a31_otters-playing-basketball-halloween-pumpkins-featured.webp",
       "source_image_alt": "Oregon Zoo shares footage of rescued sea otters playing basketball with pumpkins: 'It plays a critical role in their well-being'",
       "source_image_credit": "Good Good Good",
       "source_image_rights_url": "https://www.goodgoodgood.co/articles/otters-playing-basketball-halloween-pumpkins",
@@ -1692,7 +1704,7 @@
       "agent_summary": "",
       "source_fingerprint": "84b69c00e5ad3fec48ac",
       "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/5f6cc9cd16d59d990c8fca33/6ac65295fb513da952f51586_6ac65294666e636761d49559_north-carolina-housing-woman-reunited-pet-dog-featured.webp",
+      "source_image_url": "https://cdn.prod.website-files.com/6ac7f2e22eaacd2873850a17/6ad6c6a751bcdbde58725e06_6ac65295fb513da952f51586_6ac65294666e636761d49559_north-carolina-housing-woman-reunited-pet-dog-featured.webp",
       "source_image_alt": "She couldn't afford pet-friendly housing, so she gave up her dog of 10 years. Her community raised $18,000 to reunite them",
       "source_image_credit": "Good Good Good",
       "source_image_rights_url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
