@@ -1,8 +1,10 @@
 {
-  "generated_at": "2026-11-17T19:38:25.843581Z",
+  "generated_at": "2026-11-18T04:01:50.020175Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "635dbf8d36f9095c3e2a"
+  ],
   "fetch_errors": [
     {
       "source": "Positive News",
@@ -1306,29 +1308,29 @@
       "public_eligible": true
     },
     {
-      "id": "4497e0edd2925f619d16",
-      "title": "Så kan tumörer göras mer mottagliga för immunterapi",
-      "url": "https://forskning.se/2026/11/16/sa-kan-tumorer-goras-mer-mottagliga-for-immunterapi",
+      "id": "635dbf8d36f9095c3e2a",
+      "title": "Virtuella stängsel kan gynna naturbetesmarker",
+      "url": "https://forskning.se/2026/11/17/virtuella-stangsel-kan-gynna-naturbetesmarker",
       "source": "Forskning.se",
       "language": "sv",
-      "published_at": "2026-11-16T19:56:38Z",
-      "source_excerpt": "Immunterapi hjälper kroppens eget immunförsvar att bekämpa cancer och har förändrat cancervården. Men behandlingen fungerar inte för alla, särskilt inte vid vissa svårbehandlade cancerformer. En viktig faktor för hur väl behandlingen fungerar är immunförsvarets förmåga att organisera sitt angrepp inne i tumören. Där kan nämligen små kluster av immunceller, så kallade tertiära lymfoida strukturer (",
+      "published_at": "2026-11-17T20:14:50Z",
+      "source_excerpt": "Naturbetesmarker är viktiga för den biologiska mångfalden och har höga kulturhistoriska värden, men markerna hotas av förändrad användning. Djurens bete är en förutsättning för att bevara och sköta dessa marker. För att nå specifika naturvårdsmål behöver intensiteten i betet variera både över tid och mellan olika delar av betesmarken. GPS visade kornas rörelser I en […] Virtuella stängsel kan gynn",
       "agent_summary": "",
-      "source_fingerprint": "b9f99912ed2859d7a55b",
+      "source_fingerprint": "cad182b73af1d6f38ba0",
       "source_image_verified": true,
-      "source_image_url": "https://forskning.se/app/uploads/2026/11/dendritisk-cell-1024x576.jpg",
-      "source_image_alt": "Så kan tumörer göras mer mottagliga för immunterapi",
+      "source_image_url": "https://forskning.se/app/uploads/2026/11/Kor-betar-1024x576.jpg",
+      "source_image_alt": "Virtuella stängsel kan gynna naturbetesmarker",
       "source_image_credit": "Forskning.se",
-      "source_image_rights_url": "https://forskning.se/2026/11/16/sa-kan-tumorer-goras-mer-mottagliga-for-immunterapi",
+      "source_image_rights_url": "https://forskning.se/2026/11/17/virtuella-stangsel-kan-gynna-naturbetesmarker",
       "source_image_creator": "Forskning.se",
-      "source_image_source_url": "https://forskning.se/2026/11/16/sa-kan-tumorer-goras-mer-mottagliga-for-immunterapi",
+      "source_image_source_url": "https://forskning.se/2026/11/17/virtuella-stangsel-kan-gynna-naturbetesmarker",
       "source_image_verification_method": "rss-syndicated-thumbnail-v1",
       "category": "Vetenskap",
       "source_tier_bonus": 5,
       "positivity_score": 6,
       "positive_signals": [
         "curated-positive-source",
-        "hjälper"
+        "bevara"
       ],
       "public_eligible": true
     },
@@ -1603,7 +1605,7 @@
       "source_excerpt": "Jacaranda could barely eat or breathe when Zadrigman's team discovered that the swelling in her face was cancer. Dodo editor Valentina shares how she made it through treatment and became almost unrecognizable.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/gicpE1gxhPNMVE_tk/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/gicpE1gxhPNMVE_tk/x720",
       "source_image_alt": "Husky's Face Was Unrecognizable Until She Beat Cancer",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbuhkni",
@@ -1638,7 +1640,7 @@
       "source_excerpt": "It’s a little creepy... but he LOVES him! Dino’s separation anxiety was so intense that Yaneth could barely leave the house, until she saw another dog find comfort in a human-sized doll and decided to try it herself. Now Dino snuggles up with “Haaland” while she’s gone, and somehow the world’s creepiest petsitter actually works. Dodo editor Valentina shares the hilariously sweet solution that gave",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/ghsi21gxapUwxVeIb/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/ghsi21gxapUwxVeIb/x720",
       "source_image_alt": "Woman Buys Her Anxious Dog A Fake Man",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbudcle",
