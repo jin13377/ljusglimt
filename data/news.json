@@ -1,9 +1,14 @@
 {
-  "generated_at": "2026-11-18T04:01:50.020175Z",
+  "generated_at": "2026-11-18T19:14:58.361551Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
   "new_item_ids": [
-    "635dbf8d36f9095c3e2a"
+    "4b0fad5b33d948ce2301",
+    "36d4ebbc39d671076e57",
+    "05efe4e902822244a21f",
+    "4c865183d412f61086dc",
+    "731cc1d85a32f97b4362",
+    "f11771be7499e10ca815"
   ],
   "fetch_errors": [
     {
@@ -285,44 +290,6 @@
       }
     },
     {
-      "id": "3fe2e7d37ce31017f6dd",
-      "title": "KI och IVI stärker samarbetet inom global hälsa",
-      "url": "https://nyheter.ki.se/ki-och-ivi-starker-samarbetet-inom-global-halsa",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-09-04T00:00:00Z",
-      "source_excerpt": "Karolinska Institutet (KI) och International Vaccine Institute (IVI) har undertecknat ett samförståndsavtal för att vidareutveckla sitt samarbete inom vaccinforskning och utbildning. Avtalet skapar en ram för att främja vetenskapligt utbyte, gemensam forskning och utbildningsinsatser med fokus på global hälsa.",
-      "agent_summary": "",
-      "source_fingerprint": "58c99a0320c8070282a4",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 10,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "samarbete",
-        "stärker"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/a41b5c39-0a3a-4fe0-b02c-7ab72c5a292a.webp",
-        "alt": "KI och IVI stärker samarbetet inom global hälsa",
-        "user_image_id": "a41b5c39-0a3a-4fe0-b02c-7ab72c5a292a",
-        "match_score": 0.2382,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/3fe2e7d37ce31017f6dd-58c99a03-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "58c99a0320c8070282a4",
-        "width": 1280,
-        "height": 848,
-        "sha256": "1a4e2ecac6444edd95515a1b7450e55723fde7d33284b5d31a5a4fc474da4494"
-      }
-    },
-    {
       "id": "772deb64d5f80c5b5454",
       "title": "Boyfriend Has Best Reaction To Surprise Foster Kittens",
       "url": "https://www.dailymotion.com/video/xamx6nm",
@@ -394,44 +361,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "bc22116a034fbe448ea04207d4b8ecfbc5625f872194ae99eefd80752d8b8e97"
-      }
-    },
-    {
-      "id": "c734561875169e123520",
-      "title": "Delegation från det tyska hälsoministeriet besöker ARC för att diskutera förebyggande insatser och äldreomsorg",
-      "url": "https://nyheter.ki.se/delegation-fran-det-tyska-halsoministeriet-besoker-arc-for-att-diskutera-forebyggande-insatser-och-aldreomsorg",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-11-11T00:00:00Z",
-      "source_excerpt": "En delegation från Tysklands federala hälsoministerium besökte Aging Research Center (ARC) vid Karolinska Institutet den 4 november. Besöket fokuserade på hur man kan skjuta upp behovet av äldreomsorg och hur forskningsresultat om förebyggande insatser för att senarelägga behovet av äldreomsorg kan omsättas i praktiken.",
-      "agent_summary": "",
-      "source_fingerprint": "96d1d7ae7db10f1d504c",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 9,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "förebygga",
-        "research"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/89080721-b3d1-4322-a704-fc9ca7e0c3fc.webp",
-        "alt": "Delegation från det tyska hälsoministeriet besöker ARC för att diskutera förebyggande insatser och äldreomsorg",
-        "user_image_id": "89080721-b3d1-4322-a704-fc9ca7e0c3fc",
-        "match_score": 0.235,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/c734561875169e123520-96d1d7ae-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "96d1d7ae7db10f1d504c",
-        "width": 1280,
-        "height": 848,
-        "sha256": "690cd17d46f327f37abffafd5aee0f380dd1bd54b31e63d3cdee4b0e11b74064"
       }
     },
     {
@@ -612,6 +541,81 @@
         "width": 1280,
         "height": 848,
         "sha256": "0dcea29ea3823c2e1e01956db60a895cc61519ebcb77512c669cc093a50bdce4"
+      }
+    },
+    {
+      "id": "4b0fad5b33d948ce2301",
+      "title": "KI störst mottagare i utdelning från Cancerfonden",
+      "url": "https://nyheter.ki.se/ki-storst-mottagare-i-utdelning-fran-cancerfonden",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-11-18T00:00:00Z",
+      "source_excerpt": "Forskare vid 16 institutioner på Karolinska Institutet får dela på cirka 352 MSEK i Cancerfondens senaste utdelning. Totalt beviljas 98 anslag till KI. I år görs en särskild satsning på tidig upptäckt av cancer.",
+      "agent_summary": "",
+      "source_fingerprint": "a98fba8bc76190a17de3",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "anslag",
+        "satsning",
+        "upptäckt"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/a41b5c39-0a3a-4fe0-b02c-7ab72c5a292a.webp",
+        "alt": "KI störst mottagare i utdelning från Cancerfonden",
+        "user_image_id": "a41b5c39-0a3a-4fe0-b02c-7ab72c5a292a",
+        "match_score": 0.2382,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/4b0fad5b33d948ce2301-a98fba8b-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "a98fba8bc76190a17de3",
+        "width": 1280,
+        "height": 848,
+        "sha256": "6f8ed578e5f52d398fab20d3fb7d8cbaeb1f246ff5a8e22d67a9891394e3a746"
+      }
+    },
+    {
+      "id": "36d4ebbc39d671076e57",
+      "title": "Cancerfonden ger 19 miljoner till forskning vid CLINTEC",
+      "url": "https://nyheter.ki.se/cancerfonden-ger-19-miljoner-till-forskning-vid-clintec",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-11-17T00:00:00Z",
+      "source_excerpt": "Fem forskare vid institutionen för klinisk vetenskap, intervention och teknik (CLINTEC) får tillsammans 19 miljoner kronor i anslag från Cancerfonden, enligt beslut vid forskningsnämndens sammanträde den 9 november 2026. Anslagen går till forskning om bukspottkörtelcancer, prostatacancer, HPV och livmoderhalscancer samt mag- och matstrupscancer.",
+      "agent_summary": "",
+      "source_fingerprint": "936328cdbadee1c6dc5d",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "anslag",
+        "forskning"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/89080721-b3d1-4322-a704-fc9ca7e0c3fc.webp",
+        "alt": "Cancerfonden ger 19 miljoner till forskning vid CLINTEC",
+        "user_image_id": "89080721-b3d1-4322-a704-fc9ca7e0c3fc",
+        "match_score": 0.235,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/36d4ebbc39d671076e57-936328cd-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "936328cdbadee1c6dc5d",
+        "width": 1280,
+        "height": 848,
+        "sha256": "4ac3ce1ef74678e2071d127fb7958dcc2bc1fe6c6e9e0d3c761fca8e2170feef"
       }
     },
     {
@@ -1016,6 +1020,34 @@
       "public_eligible": true
     },
     {
+      "id": "05efe4e902822244a21f",
+      "title": "Starka känslor för havsvikar kan påverka miljöarbetet",
+      "url": "https://forskning.se/2026/11/18/starka-kanslor-for-havsvikar-kan-paverka-miljoarbetet",
+      "source": "Forskning.se",
+      "language": "sv",
+      "published_at": "2026-11-18T15:44:07Z",
+      "source_excerpt": "Grunda och skyddade havsvikar är viktiga för den biologiska mångfalden i Östersjön. Forskning pågår nu om metoder för att kunna skydda och återställa miljöerna. Forskare undersöker också hur människor använder och värderar dessa miljöer – och hur upplevelsen av vikarna påverkas när naturmiljön förändras. – Begreppet platskänsla, ”sense of place”, används inom forskning för att […] Starka känslor f",
+      "agent_summary": "",
+      "source_fingerprint": "8048d66cdbec16d79db5",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/11/Badvik-Sverige-1024x576.jpg",
+      "source_image_alt": "Starka känslor för havsvikar kan påverka miljöarbetet",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/11/18/starka-kanslor-for-havsvikar-kan-paverka-miljoarbetet",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/11/18/starka-kanslor-for-havsvikar-kan-paverka-miljoarbetet",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "skydda"
+      ],
+      "public_eligible": true
+    },
+    {
       "id": "d65a7337da3898d60b09",
       "title": "New partnership for urban system demonstrators and circular construction announced at COP31",
       "url": "https://viablecities.se/urban-system-demonstrators-and-circular-construction-cop31",
@@ -1308,33 +1340,6 @@
       "public_eligible": true
     },
     {
-      "id": "635dbf8d36f9095c3e2a",
-      "title": "Virtuella stängsel kan gynna naturbetesmarker",
-      "url": "https://forskning.se/2026/11/17/virtuella-stangsel-kan-gynna-naturbetesmarker",
-      "source": "Forskning.se",
-      "language": "sv",
-      "published_at": "2026-11-17T20:14:50Z",
-      "source_excerpt": "Naturbetesmarker är viktiga för den biologiska mångfalden och har höga kulturhistoriska värden, men markerna hotas av förändrad användning. Djurens bete är en förutsättning för att bevara och sköta dessa marker. För att nå specifika naturvårdsmål behöver intensiteten i betet variera både över tid och mellan olika delar av betesmarken. GPS visade kornas rörelser I en […] Virtuella stängsel kan gynn",
-      "agent_summary": "",
-      "source_fingerprint": "cad182b73af1d6f38ba0",
-      "source_image_verified": true,
-      "source_image_url": "https://forskning.se/app/uploads/2026/11/Kor-betar-1024x576.jpg",
-      "source_image_alt": "Virtuella stängsel kan gynna naturbetesmarker",
-      "source_image_credit": "Forskning.se",
-      "source_image_rights_url": "https://forskning.se/2026/11/17/virtuella-stangsel-kan-gynna-naturbetesmarker",
-      "source_image_creator": "Forskning.se",
-      "source_image_source_url": "https://forskning.se/2026/11/17/virtuella-stangsel-kan-gynna-naturbetesmarker",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "bevara"
-      ],
-      "public_eligible": true
-    },
-    {
       "id": "56c225a54e232fce1fea",
       "title": "Woman Rescues A Cat She Found At A Car Dealership",
       "url": "https://www.dailymotion.com/video/xamxvli",
@@ -1560,69 +1565,33 @@
       }
     },
     {
-      "id": "31e77154ddb10b9e3fff",
-      "title": "Kitten Born Without Eyes Is Completely Unstoppable",
-      "url": "https://www.dailymotion.com/video/xbsraam",
+      "id": "4c865183d412f61086dc",
+      "title": "Dog Needs Emergency Treatment Immediately",
+      "url": "https://www.dailymotion.com/video/xbxtvti",
       "source": "The Dodo",
       "language": "en",
-      "published_at": "2026-11-01T20:18:58Z",
-      "source_excerpt": "You'd never guess Stevie was born without developed eyes watching her play. When Carmen found Stevie near a pool, she had no idea the tiny kitten had been born with undeveloped eyes. Dodo editor Brielle talked with Carmen about how Stevie settled into her new home and became a playful, energetic cat who loves wrestling and running on her exercise wheel.",
+      "published_at": "2026-11-18T18:18:54Z",
+      "source_excerpt": "Johnny was in such critical condition that Stan couldn’t risk waiting until they reached a clinic. Dodo editor Valentina talks with him about treating Johnny right there in the middle of the night and getting him stable enough to eventually make it back home.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/gXXJU1gvw11Orr7vs/x720",
-      "source_image_alt": "Kitten Born Without Eyes Is Completely Unstoppable",
+      "source_image_url": "https://s2.dmcdn.net/v/h21DM1g_UsXOatlPv/x720",
+      "source_image_alt": "Dog Needs Emergency Treatment Immediately",
       "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xbsraam",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xbxtvti",
       "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xbsraam",
+      "source_image_source_url": "https://www.dailymotion.com/video/xbxtvti",
       "source_image_verification_method": "dailymotion-api-thumbnail-v1",
       "source_video": {
         "provider": "dailymotion",
-        "video_id": "xbsraam",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xbsraam",
-        "source_url": "https://www.dailymotion.com/video/xbsraam",
-        "title": "Kitten Born Without Eyes Is Completely Unstoppable"
+        "video_id": "xbxtvti",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xbxtvti",
+        "source_url": "https://www.dailymotion.com/video/xbxtvti",
+        "title": "Dog Needs Emergency Treatment Immediately"
       },
-      "source_fingerprint": "482b9cef0b4a233ab88b",
+      "source_fingerprint": "c066d882c8d4ee774d58",
       "category": "Djur",
       "source_tier_bonus": 4,
       "positivity_score": 8,
-      "positive_signals": [
-        "curated-positive-source",
-        "kitten",
-        "love",
-        "play"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "1208c05ed5353579a658",
-      "title": "Husky's Face Was Unrecognizable Until She Beat Cancer",
-      "url": "https://www.dailymotion.com/video/xbuhkni",
-      "source": "The Dodo",
-      "language": "en",
-      "published_at": "2026-11-07T05:18:37Z",
-      "source_excerpt": "Jacaranda could barely eat or breathe when Zadrigman's team discovered that the swelling in her face was cancer. Dodo editor Valentina shares how she made it through treatment and became almost unrecognizable.",
-      "agent_summary": "",
-      "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/gicpE1gxhPNMVE_tk/x720",
-      "source_image_alt": "Husky's Face Was Unrecognizable Until She Beat Cancer",
-      "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xbuhkni",
-      "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xbuhkni",
-      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
-      "source_video": {
-        "provider": "dailymotion",
-        "video_id": "xbuhkni",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xbuhkni",
-        "source_url": "https://www.dailymotion.com/video/xbuhkni",
-        "title": "Husky's Face Was Unrecognizable Until She Beat Cancer"
-      },
-      "source_fingerprint": "0cb6610098577ca5ce4c",
-      "category": "Djur",
-      "source_tier_bonus": 4,
-      "positivity_score": 6,
       "positive_signals": [
         "curated-positive-source",
         "treat",
@@ -1631,37 +1600,70 @@
       "public_eligible": false
     },
     {
-      "id": "e5d661356a23d9528497",
-      "title": "Woman Buys Her Anxious Dog A Fake Man",
-      "url": "https://www.dailymotion.com/video/xbudcle",
+      "id": "731cc1d85a32f97b4362",
+      "title": "Woman Stops For Orphaned Puppy Who Won’t Leave His Mom",
+      "url": "https://www.dailymotion.com/video/xbxtvuu",
       "source": "The Dodo",
       "language": "en",
-      "published_at": "2026-11-06T21:49:00Z",
-      "source_excerpt": "It’s a little creepy... but he LOVES him! Dino’s separation anxiety was so intense that Yaneth could barely leave the house, until she saw another dog find comfort in a human-sized doll and decided to try it herself. Now Dino snuggles up with “Haaland” while she’s gone, and somehow the world’s creepiest petsitter actually works. Dodo editor Valentina shares the hilariously sweet solution that gave",
+      "published_at": "2026-11-18T18:19:03Z",
+      "source_excerpt": "Britney spotted tiny Mocha Bean on the side of the road, refusing to leave his mom’s side, and knew she couldn’t drive away without him. Dodo editor Valentina shares how one roadside encounter completely changed this little puppy’s future",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/ghsi21gxapUwxVeIb/x720",
-      "source_image_alt": "Woman Buys Her Anxious Dog A Fake Man",
+      "source_image_url": "https://s2.dmcdn.net/v/h21E61g_UsZD5wFJU/x720",
+      "source_image_alt": "Woman Stops For Orphaned Puppy Who Won’t Leave His Mom",
       "source_image_credit": "The Dodo",
-      "source_image_rights_url": "https://www.dailymotion.com/video/xbudcle",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xbxtvuu",
       "source_image_creator": "The Dodo",
-      "source_image_source_url": "https://www.dailymotion.com/video/xbudcle",
+      "source_image_source_url": "https://www.dailymotion.com/video/xbxtvuu",
       "source_image_verification_method": "dailymotion-api-thumbnail-v1",
       "source_video": {
         "provider": "dailymotion",
-        "video_id": "xbudcle",
-        "embed_url": "https://geo.dailymotion.com/player.html?video=xbudcle",
-        "source_url": "https://www.dailymotion.com/video/xbudcle",
-        "title": "Woman Buys Her Anxious Dog A Fake Man"
+        "video_id": "xbxtvuu",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xbxtvuu",
+        "source_url": "https://www.dailymotion.com/video/xbxtvuu",
+        "title": "Woman Stops For Orphaned Puppy Who Won’t Leave His Mom"
       },
-      "source_fingerprint": "fc09b61ee476aa53d4a1",
+      "source_fingerprint": "4a098b7d8ceab66d2149",
       "category": "Djur",
       "source_tier_bonus": 4,
       "positivity_score": 6,
       "positive_signals": [
         "curated-positive-source",
-        "love",
-        "solution"
+        "puppy"
+      ],
+      "public_eligible": false
+    },
+    {
+      "id": "f11771be7499e10ca815",
+      "title": "Goat Stranded On Remote Island Finally Gets Rescued",
+      "url": "https://www.dailymotion.com/video/xbxtvsu",
+      "source": "The Dodo",
+      "language": "en",
+      "published_at": "2026-11-18T18:18:48Z",
+      "source_excerpt": "Dodo editor Brielle walks us through the incredible effort from Vets For Compassion to rescue a goat who'd been stranded on a remote island for a month, starting with the drone that finally tracked her down.",
+      "agent_summary": "",
+      "source_image_verified": true,
+      "source_image_url": "https://s2.dmcdn.net/v/h21C-1g_UsXB7waR2/x720",
+      "source_image_alt": "Goat Stranded On Remote Island Finally Gets Rescued",
+      "source_image_credit": "The Dodo",
+      "source_image_rights_url": "https://www.dailymotion.com/video/xbxtvsu",
+      "source_image_creator": "The Dodo",
+      "source_image_source_url": "https://www.dailymotion.com/video/xbxtvsu",
+      "source_image_verification_method": "dailymotion-api-thumbnail-v1",
+      "source_video": {
+        "provider": "dailymotion",
+        "video_id": "xbxtvsu",
+        "embed_url": "https://geo.dailymotion.com/player.html?video=xbxtvsu",
+        "source_url": "https://www.dailymotion.com/video/xbxtvsu",
+        "title": "Goat Stranded On Remote Island Finally Gets Rescued"
+      },
+      "source_fingerprint": "d0ed6234d8a13b9e3ebf",
+      "category": "Djur",
+      "source_tier_bonus": 4,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "rescue"
       ],
       "public_eligible": false
     },
