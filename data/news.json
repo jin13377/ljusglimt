@@ -579,6 +579,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "6f8ed578e5f52d398fab20d3fb7d8cbaeb1f246ff5a8e22d67a9891394e3a746"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/4b0fad5b33d948ce2301-a98fba8bc76190a17de3-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: KI störst mottagare i utdelning från Cancerfonden",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "a98fba8bc76190a17de3",
+        "width": 1280,
+        "height": 848,
+        "sha256": "75dc3f41f9b865fd086e0b2dd9ece389b63baa1f546629322dd795fcc04446a6",
+        "generated_at": "2026-11-18T19:15:25Z"
       }
     },
     {
