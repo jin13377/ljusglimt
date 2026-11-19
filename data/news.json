@@ -574,6 +574,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "a5355090603b68e886f1409fa4b455cdca50d7dbae21e284bf52a7e36a39b760"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/7210906b9ec4f80faefa-e34b0e88ef3e9393aae5-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Fyra MMK-forskare får anslag från Cancerfonden",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "e34b0e88ef3e9393aae5",
+        "width": 1280,
+        "height": 848,
+        "sha256": "5cde321ee313134429063ddcf36080b49787c12cb81c27cd0b40dd6ef43ac476",
+        "generated_at": "2026-11-19T19:22:23Z"
       }
     },
     {
