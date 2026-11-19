@@ -1,8 +1,11 @@
 {
-  "generated_at": "2026-11-19T03:58:56.903620Z",
+  "generated_at": "2026-11-19T19:21:59.496700Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "7210906b9ec4f80faefa",
+    "55a1efd9da7c43c82f6b"
+  ],
   "fetch_errors": [
     {
       "source": "Positive News",
@@ -537,6 +540,43 @@
       }
     },
     {
+      "id": "7210906b9ec4f80faefa",
+      "title": "Fyra MMK-forskare får anslag från Cancerfonden",
+      "url": "https://nyheter.ki.se/fyra-mmk-forskare-far-anslag-fran-cancerfonden",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-11-19T00:00:00Z",
+      "source_excerpt": "Fyra forskare vid institutionen för molekylär medicin och kirurgi, MMK, får tillsammans 12,8 miljoner kronor i anslag från Cancerfonden, enligt beslut vid forskningsnämndens sammanträde den 9 november 2026. Anslagen går till forskning om kolorektal cancer och prostatacancer.",
+      "agent_summary": "",
+      "source_fingerprint": "e34b0e88ef3e9393aae5",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "anslag",
+        "forskning"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/290629d1-eec3-4f31-9644-49e96e973112-1.webp",
+        "alt": "Fyra MMK-forskare får anslag från Cancerfonden",
+        "user_image_id": "290629d1-eec3-4f31-9644-49e96e973112-1",
+        "match_score": 0.2432,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/7210906b9ec4f80faefa-e34b0e88-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "e34b0e88ef3e9393aae5",
+        "width": 1280,
+        "height": 848,
+        "sha256": "a5355090603b68e886f1409fa4b455cdca50d7dbae21e284bf52a7e36a39b760"
+      }
+    },
+    {
       "id": "4b0fad5b33d948ce2301",
       "title": "KI störst mottagare i utdelning från Cancerfonden",
       "url": "https://nyheter.ki.se/ki-storst-mottagare-i-utdelning-fran-cancerfonden",
@@ -572,43 +612,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "6f8ed578e5f52d398fab20d3fb7d8cbaeb1f246ff5a8e22d67a9891394e3a746"
-      }
-    },
-    {
-      "id": "36d4ebbc39d671076e57",
-      "title": "Cancerfonden ger 19 miljoner till forskning vid CLINTEC",
-      "url": "https://nyheter.ki.se/cancerfonden-ger-19-miljoner-till-forskning-vid-clintec",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-11-17T00:00:00Z",
-      "source_excerpt": "Fem forskare vid institutionen för klinisk vetenskap, intervention och teknik (CLINTEC) får tillsammans 19 miljoner kronor i anslag från Cancerfonden, enligt beslut vid forskningsnämndens sammanträde den 9 november 2026. Anslagen går till forskning om bukspottkörtelcancer, prostatacancer, HPV och livmoderhalscancer samt mag- och matstrupscancer.",
-      "agent_summary": "",
-      "source_fingerprint": "936328cdbadee1c6dc5d",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 8,
-      "positive_signals": [
-        "curated-positive-source",
-        "anslag",
-        "forskning"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/89080721-b3d1-4322-a704-fc9ca7e0c3fc.webp",
-        "alt": "Cancerfonden ger 19 miljoner till forskning vid CLINTEC",
-        "user_image_id": "89080721-b3d1-4322-a704-fc9ca7e0c3fc",
-        "match_score": 0.235,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/36d4ebbc39d671076e57-936328cd-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "936328cdbadee1c6dc5d",
-        "width": 1280,
-        "height": 848,
-        "sha256": "4ac3ce1ef74678e2071d127fb7958dcc2bc1fe6c6e9e0d3c761fca8e2170feef"
       }
     },
     {
@@ -1013,6 +1016,34 @@
       "public_eligible": true
     },
     {
+      "id": "55a1efd9da7c43c82f6b",
+      "title": "Nattfjäril använder jordens magnetfält som kompass",
+      "url": "https://forskning.se/2026/11/19/navigationslysten-nattfjaril-anvander-jordens-magnetfalt-som-kompass",
+      "source": "Forskning.se",
+      "language": "sv",
+      "published_at": "2026-11-19T18:31:36Z",
+      "source_excerpt": "Varje år ger sig bogong-fjärilen ut på långa flyttresor genom natten. För att hitta rätt använder den stjärnhimlen som vägvisare. Nu visar en ny studie från Lunds universitet att fjärilen, likt flyttfåglar, också har en inbyggd magnetkompass som hjälper den att hålla kursen. Nattfjäril använder jordens magnetfält som kompass forskning.se .",
+      "agent_summary": "",
+      "source_fingerprint": "c3ad22e80b6b95c9e0ef",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/11/Bogong-fjaril-1024x576.jpg",
+      "source_image_alt": "Nattfjäril använder jordens magnetfält som kompass",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/11/19/navigationslysten-nattfjaril-anvander-jordens-magnetfalt-som-kompass",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/11/19/navigationslysten-nattfjaril-anvander-jordens-magnetfalt-som-kompass",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning",
+        "hjälper"
+      ],
+      "public_eligible": true
+    },
+    {
       "id": "05efe4e902822244a21f",
       "title": "Starka känslor för havsvikar kan påverka miljöarbetet",
       "url": "https://forskning.se/2026/11/18/starka-kanslor-for-havsvikar-kan-paverka-miljoarbetet",
@@ -1258,42 +1289,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "228d0b0004fcf4dbe231d5edb1b6c99120fdd6ce922e84edec80fd50037f6a7e"
-      }
-    },
-    {
-      "id": "649b3d4c42f63bb75c4f",
-      "title": "Samisk mat till äldre kan ge dubbla hållbarhetsvinster",
-      "url": "https://www.extrakt.se/samisk-mat-till-aldre-kan-ge-dubbla-hallbarhetsvinster",
-      "source": "Extrakt",
-      "language": "sv",
-      "published_at": "2026-10-01T05:20:17Z",
-      "source_excerpt": "Kulturanpassad mat i äldreomsorgen kan förbättra hälsan hos äldre samer och samtidigt bidra till ett mer hållbart livsmedelssystem.",
-      "agent_summary": "",
-      "source_fingerprint": "22ec70b3d60e8fdb5be3",
-      "category": "Miljö",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "hållbar"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/290629d1-eec3-4f31-9644-49e96e973112-1.webp",
-        "alt": "Samisk mat till äldre kan ge dubbla hållbarhetsvinster",
-        "user_image_id": "290629d1-eec3-4f31-9644-49e96e973112-1",
-        "match_score": 0.2636,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/649b3d4c42f63bb75c4f-22ec70b3-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "22ec70b3d60e8fdb5be3",
-        "width": 1280,
-        "height": 848,
-        "sha256": "88127e15ca1ccf4d365b3249460ff064d00198c5aa0892a8bcd0304b98dfab10"
       }
     },
     {
@@ -1636,7 +1631,7 @@
       "source_excerpt": "Dodo editor Brielle walks us through the incredible effort from Vets For Compassion to rescue a goat who'd been stranded on a remote island for a month, starting with the drone that finally tracked her down.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/h21C-1g_XGOV457KP/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/h21C-1g_XGOV457KP/x720",
       "source_image_alt": "Goat Stranded On Remote Island Finally Gets Rescued",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbxtvsu",
