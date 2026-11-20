@@ -1,11 +1,8 @@
 {
-  "generated_at": "2026-11-19T19:21:59.496700Z",
+  "generated_at": "2026-11-20T03:52:43.136464Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [
-    "7210906b9ec4f80faefa",
-    "55a1efd9da7c43c82f6b"
-  ],
+  "new_item_ids": [],
   "fetch_errors": [
     {
       "source": "Positive News",
@@ -574,17 +571,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "a5355090603b68e886f1409fa4b455cdca50d7dbae21e284bf52a7e36a39b760"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/7210906b9ec4f80faefa-e34b0e88ef3e9393aae5-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: Fyra MMK-forskare får anslag från Cancerfonden",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "e34b0e88ef3e9393aae5",
-        "width": 1280,
-        "height": 848,
-        "sha256": "5cde321ee313134429063ddcf36080b49787c12cb81c27cd0b40dd6ef43ac476",
-        "generated_at": "2026-11-19T19:22:23Z"
       }
     },
     {
@@ -1573,7 +1559,7 @@
       "source_excerpt": "Johnny was in such critical condition that Stan couldn’t risk waiting until they reached a clinic. Dodo editor Valentina talks with him about treating Johnny right there in the middle of the night and getting him stable enough to eventually make it back home.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/h21DM1g_XGsRK4cW8/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/h21DM1g_XGsRK4cW8/x720",
       "source_image_alt": "Dog Needs Emergency Treatment Immediately",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbxtvti",
@@ -1642,7 +1628,7 @@
       "source_excerpt": "Dodo editor Brielle walks us through the incredible effort from Vets For Compassion to rescue a goat who'd been stranded on a remote island for a month, starting with the drone that finally tracked her down.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/h21C-1g_XGOV457KP/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/h21C-1g_XGOV457KP/x720",
       "source_image_alt": "Goat Stranded On Remote Island Finally Gets Rescued",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbxtvsu",
