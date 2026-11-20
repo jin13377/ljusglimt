@@ -1,8 +1,10 @@
 {
-  "generated_at": "2026-11-20T03:52:43.136464Z",
+  "generated_at": "2026-11-20T18:58:22.859616Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "58b5909da560f076493f"
+  ],
   "fetch_errors": [
     {
       "source": "Positive News",
@@ -1041,34 +1043,6 @@
       "public_eligible": true
     },
     {
-      "id": "05efe4e902822244a21f",
-      "title": "Starka känslor för havsvikar kan påverka miljöarbetet",
-      "url": "https://forskning.se/2026/11/18/starka-kanslor-for-havsvikar-kan-paverka-miljoarbetet",
-      "source": "Forskning.se",
-      "language": "sv",
-      "published_at": "2026-11-18T15:44:07Z",
-      "source_excerpt": "Grunda och skyddade havsvikar är viktiga för den biologiska mångfalden i Östersjön. Forskning pågår nu om metoder för att kunna skydda och återställa miljöerna. Forskare undersöker också hur människor använder och värderar dessa miljöer – och hur upplevelsen av vikarna påverkas när naturmiljön förändras. – Begreppet platskänsla, ”sense of place”, används inom forskning för att […] Starka känslor f",
-      "agent_summary": "",
-      "source_fingerprint": "8048d66cdbec16d79db5",
-      "source_image_verified": true,
-      "source_image_url": "https://forskning.se/app/uploads/2026/11/Badvik-Sverige-1024x576.jpg",
-      "source_image_alt": "Starka känslor för havsvikar kan påverka miljöarbetet",
-      "source_image_credit": "Forskning.se",
-      "source_image_rights_url": "https://forskning.se/2026/11/18/starka-kanslor-for-havsvikar-kan-paverka-miljoarbetet",
-      "source_image_creator": "Forskning.se",
-      "source_image_source_url": "https://forskning.se/2026/11/18/starka-kanslor-for-havsvikar-kan-paverka-miljoarbetet",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "skydda"
-      ],
-      "public_eligible": true
-    },
-    {
       "id": "d65a7337da3898d60b09",
       "title": "New partnership for urban system demonstrators and circular construction announced at COP31",
       "url": "https://viablecities.se/urban-system-demonstrators-and-circular-construction-cop31",
@@ -1322,6 +1296,33 @@
         "surprise"
       ],
       "display_title_sv": "Pojkvännen fick den bästa alla hjärtans dag-presenten",
+      "public_eligible": true
+    },
+    {
+      "id": "58b5909da560f076493f",
+      "title": "Stärkt stöd för känguruvård",
+      "url": "https://forskning.se/2026/11/20/starkt-stod-for-kanguruvard",
+      "source": "Forskning.se",
+      "language": "sv",
+      "published_at": "2026-11-20T17:24:31Z",
+      "source_excerpt": "Kängurumetoden innebär att nyfödda barn får ligga hud mot hud på en förälders bröst. En En forskningsöversikt sammanfattar vad tidigare forskning har kommit fram till i ett ämne. &lt;br/&gt;Det finns olika sätt att göra en ... Läs mer \" href=\"https://forskning.se/ordlista/forskningsoversikt/\" data-mobile-support=\"0\" data-gt-translate-attributes='[{\"attribute\":\"data-cmtooltip\", \"format\":\"html\"}]' t",
+      "agent_summary": "",
+      "source_fingerprint": "b52374df320dae634434",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/11/hud-mot-hud-nyfodd-vard-1024x576.jpg",
+      "source_image_alt": "Stärkt stöd för känguruvård",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/11/20/starkt-stod-for-kanguruvard",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/11/20/starkt-stod-for-kanguruvard",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 6,
+      "positive_signals": [
+        "curated-positive-source",
+        "forskning"
+      ],
       "public_eligible": true
     },
     {
@@ -1594,7 +1595,7 @@
       "source_excerpt": "Britney spotted tiny Mocha Bean on the side of the road, refusing to leave his mom’s side, and knew she couldn’t drive away without him. Dodo editor Valentina shares how one roadside encounter completely changed this little puppy’s future",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/h21E61g_YCsXwg2ip/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/h21E61g_YCsXwg2ip/x720",
       "source_image_alt": "Woman Stops For Orphaned Puppy Who Won’t Leave His Mom",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbxtvuu",
@@ -1628,7 +1629,7 @@
       "source_excerpt": "Dodo editor Brielle walks us through the incredible effort from Vets For Compassion to rescue a goat who'd been stranded on a remote island for a month, starting with the drone that finally tracked her down.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/h21C-1g_XGOV457KP/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/h21C-1g_XGOV457KP/x720",
       "source_image_alt": "Goat Stranded On Remote Island Finally Gets Rescued",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbxtvsu",
