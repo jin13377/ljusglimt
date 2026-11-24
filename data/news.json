@@ -1,8 +1,10 @@
 {
-  "generated_at": "2026-11-24T06:47:32.113748Z",
+  "generated_at": "2026-11-24T20:59:55.240570Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "de2c360f06a7d722d63a"
+  ],
   "fetch_errors": [
     {
       "source": "Positive News",
@@ -318,6 +320,44 @@
       ],
       "display_title_sv": "Överraskningen med fosterkattungar gav pojkvännen bästa reaktionen",
       "public_eligible": true
+    },
+    {
+      "id": "de2c360f06a7d722d63a",
+      "title": "Umeå satsar på partnerskap, platser för affärsutveckling och innovation",
+      "url": "https://www.linkedin.com/pulse/ume%C3%A5-satsar-p%C3%A5-partnerskap-platser-f%C3%B6r-aff%C3%A4rsutveckling-och-krmif",
+      "source": "Viable Cities",
+      "language": "sv",
+      "published_at": "2026-11-19T16:54:00Z",
+      "source_excerpt": "Umeå ställer om för klimatet på alla nivåer: från EU-samarbeten till klimatkontrakt med lokala aktörer. Och Estraden utvecklas till en mötesplats för lärande och nya initiativ. Läs mer i om detta på bloggen. Inlägget Umeå satsar på partnerskap, platser för affärsutveckling och innovation dök först upp på Viable Cities .",
+      "agent_summary": "",
+      "source_fingerprint": "92e218e27ec6072b3810",
+      "category": "Samhälle",
+      "source_tier_bonus": 5,
+      "positivity_score": 9,
+      "positive_signals": [
+        "curated-positive-source",
+        "initiativ",
+        "innovation",
+        "samarbete"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/c17a6275-7192-431b-a468-a375743e3913.webp",
+        "alt": "Umeå satsar på partnerskap, platser för affärsutveckling och innovation",
+        "user_image_id": "c17a6275-7192-431b-a468-a375743e3913",
+        "match_score": 0.2425,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/de2c360f06a7d722d63a-92e218e2-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "92e218e27ec6072b3810",
+        "width": 1280,
+        "height": 848,
+        "sha256": "e6f095c9262a0c10ce3fa262f2c4b1dd592365aab21df3abf47c303a7e0c1b88"
+      }
     },
     {
       "id": "1ed4a2831656845c3b00",
@@ -1296,33 +1336,6 @@
       "public_eligible": true
     },
     {
-      "id": "60dbafa6c2e087c1adf5",
-      "title": "De flesta för tidigt födda etablerar sig väl i vuxenlivet",
-      "url": "https://forskning.se/2026/11/20/for-tidigt-fodda-vuxenlivet",
-      "source": "Forskning.se",
-      "language": "sv",
-      "published_at": "2026-11-20T14:21:03Z",
-      "source_excerpt": "Framsteg inom neonatalvården har gjort att betydligt fler barn som föds med extremt låg födelsevikt överlever i dag. Samtidigt innebär en för tidig födsel en ökad risk för hälsoproblem som kan påverka individen långt upp i vuxen ålder. I en ny nationell studie har forskare vid Uppsala universitet undersökt hur väl för tidigt födda personer […] De flesta för tidigt födda etablerar sig väl i vuxenli",
-      "agent_summary": "",
-      "source_fingerprint": "bec78e792fb593b8f9cc",
-      "source_image_verified": true,
-      "source_image_url": "https://forskning.se/app/uploads/2026/11/for-tidigt-fodd-1024x576.jpg",
-      "source_image_alt": "De flesta för tidigt födda etablerar sig väl i vuxenlivet",
-      "source_image_credit": "Forskning.se",
-      "source_image_rights_url": "https://forskning.se/2026/11/20/for-tidigt-fodda-vuxenlivet",
-      "source_image_creator": "Forskning.se",
-      "source_image_source_url": "https://forskning.se/2026/11/20/for-tidigt-fodda-vuxenlivet",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "framsteg"
-      ],
-      "public_eligible": true
-    },
-    {
       "id": "56c225a54e232fce1fea",
       "title": "Woman Rescues A Cat She Found At A Car Dealership",
       "url": "https://www.dailymotion.com/video/xamxvli",
@@ -1592,7 +1605,7 @@
       "source_excerpt": "Britney spotted tiny Mocha Bean on the side of the road, refusing to leave his mom’s side, and knew she couldn’t drive away without him. Dodo editor Valentina shares how one roadside encounter completely changed this little puppy’s future",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/h21E61g_YCsXwg2ip/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/h21E61g_YCsXwg2ip/x720",
       "source_image_alt": "Woman Stops For Orphaned Puppy Who Won’t Leave His Mom",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbxtvuu",
@@ -1626,7 +1639,7 @@
       "source_excerpt": "Dodo editor Brielle walks us through the incredible effort from Vets For Compassion to rescue a goat who'd been stranded on a remote island for a month, starting with the drone that finally tracked her down.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/h21C-1g_XGOV457KP/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/h21C-1g_XGOV457KP/x720",
       "source_image_alt": "Goat Stranded On Remote Island Finally Gets Rescued",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbxtvsu",
