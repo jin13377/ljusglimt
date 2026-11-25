@@ -130,6 +130,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "d5550e4e111fa7dc05fd396d99b3bf58ef1bd3433ab50566ad28528ab005ca68"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/7e6dec2d091306722144-1000b216d2704c8861ef-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Sju initiativ får 13 miljoner för att förstärka klimatomställningen i städer",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "1000b216d2704c8861ef",
+        "width": 1280,
+        "height": 848,
+        "sha256": "dfd119767730998a811525732faf45f5fe1e6425b17e6e1650cdf22c36678208",
+        "generated_at": "2026-11-25T20:23:31Z"
       }
     },
     {
