@@ -1,10 +1,8 @@
 {
-  "generated_at": "2026-11-24T20:59:55.240570Z",
+  "generated_at": "2026-11-25T05:15:08.936403Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [
-    "de2c360f06a7d722d63a"
-  ],
+  "new_item_ids": [],
   "fetch_errors": [
     {
       "source": "Positive News",
@@ -357,17 +355,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "e6f095c9262a0c10ce3fa262f2c4b1dd592365aab21df3abf47c303a7e0c1b88"
-      },
-      "ai_image": {
-        "url": "/news-images/ai/articles/de2c360f06a7d722d63a-92e218e27ec6072b3810-v1.webp",
-        "alt": "Konceptuell AI-illustration till nyheten: Umeå satsar på partnerskap, platser för affärsutveckling och innovation",
-        "model": "cf-lucid-origin",
-        "prompt_version": "cf-editorial-photo-v1",
-        "source_fingerprint": "92e218e27ec6072b3810",
-        "width": 1280,
-        "height": 848,
-        "sha256": "32b71cc6e212d1faba30e4f03ab2d431fb2de3fe3633a33a50a27a4bb7d0b54e",
-        "generated_at": "2026-11-24T21:00:20Z"
       }
     },
     {
@@ -1616,7 +1603,7 @@
       "source_excerpt": "Britney spotted tiny Mocha Bean on the side of the road, refusing to leave his mom’s side, and knew she couldn’t drive away without him. Dodo editor Valentina shares how one roadside encounter completely changed this little puppy’s future",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/h21E61g_YCsXwg2ip/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/h21E61g_YCsXwg2ip/x720",
       "source_image_alt": "Woman Stops For Orphaned Puppy Who Won’t Leave His Mom",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbxtvuu",
