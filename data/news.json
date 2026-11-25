@@ -1,8 +1,11 @@
 {
-  "generated_at": "2026-11-25T05:15:08.936403Z",
+  "generated_at": "2026-11-25T20:22:58.981708Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "7e6dec2d091306722144",
+    "695d6fe3cea429dbec9a"
+  ],
   "fetch_errors": [
     {
       "source": "Positive News",
@@ -88,6 +91,45 @@
         "width": 1280,
         "height": 848,
         "sha256": "7ded29892d365e0af314488dba1ae2d7ca8bf8dbaa802d5e1e91004ea998e57d"
+      }
+    },
+    {
+      "id": "7e6dec2d091306722144",
+      "title": "Sju initiativ får 13 miljoner för att förstärka klimatomställningen i städer",
+      "url": "https://viablecities.se/sju-initiativ-far-13-miljoner-for-att-forstarka-klimatomstallningen-i-stader",
+      "source": "Viable Cities",
+      "language": "sv",
+      "published_at": "2026-11-25T15:32:55Z",
+      "source_excerpt": "Initiativen ska ytterligare förstärka samarbetet mellan städer och bidra till att skala upp lösningar som kan påskynda klimatomställningen, både i Sverige och internationellt. Inlägget Sju initiativ får 13 miljoner för att förstärka klimatomställningen i städer dök först upp på Viable Cities .",
+      "agent_summary": "",
+      "source_fingerprint": "1000b216d2704c8861ef",
+      "category": "Samhälle",
+      "source_tier_bonus": 5,
+      "positivity_score": 11,
+      "positive_signals": [
+        "curated-positive-source",
+        "initiativ",
+        "lösning",
+        "omställning",
+        "samarbete"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/a41b5c39-0a3a-4fe0-b02c-7ab72c5a292a.webp",
+        "alt": "Sju initiativ får 13 miljoner för att förstärka klimatomställningen i städer",
+        "user_image_id": "a41b5c39-0a3a-4fe0-b02c-7ab72c5a292a",
+        "match_score": 0.2464,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/7e6dec2d091306722144-1000b216-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "1000b216d2704c8861ef",
+        "width": 1280,
+        "height": 848,
+        "sha256": "d5550e4e111fa7dc05fd396d99b3bf58ef1bd3433ab50566ad28528ab005ca68"
       }
     },
     {
@@ -318,6 +360,44 @@
       ],
       "display_title_sv": "Överraskningen med fosterkattungar gav pojkvännen bästa reaktionen",
       "public_eligible": true
+    },
+    {
+      "id": "695d6fe3cea429dbec9a",
+      "title": "Forte-anslag för att studera kognitiva och fysiska \"SuperAgers\"",
+      "url": "https://nyheter.ki.se/forte-anslag-for-att-studera-kognitiva-och-fysiska-superagers",
+      "source": "Karolinska Institutet",
+      "language": "sv",
+      "published_at": "2026-11-25T00:00:00Z",
+      "source_excerpt": "Projektet \"SuperAgers med bevarad kognitiv och fysisk funktion: Kan de ge nya insikter om framgångsrikt åldrande i Sverige?” har beviljats ett treårigt projektbidrag på 4 632 000 SEK från Forte.",
+      "agent_summary": "",
+      "source_fingerprint": "b13bf8a5bc3a2e2ab24c",
+      "category": "Hälsa",
+      "source_tier_bonus": 5,
+      "positivity_score": 9,
+      "positive_signals": [
+        "curated-positive-source",
+        "anslag",
+        "bevara",
+        "beviljats"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/89080721-b3d1-4322-a704-fc9ca7e0c3fc.webp",
+        "alt": "Forte-anslag för att studera kognitiva och fysiska \"SuperAgers\"",
+        "user_image_id": "89080721-b3d1-4322-a704-fc9ca7e0c3fc",
+        "match_score": 0.235,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/695d6fe3cea429dbec9a-b13bf8a5-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "b13bf8a5bc3a2e2ab24c",
+        "width": 1280,
+        "height": 848,
+        "sha256": "b886dbced388a8671cab9976621565c4235f9cfa4b75fe3efa60a564e627323d"
+      }
     },
     {
       "id": "de2c360f06a7d722d63a",
@@ -609,44 +689,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "a5355090603b68e886f1409fa4b455cdca50d7dbae21e284bf52a7e36a39b760"
-      }
-    },
-    {
-      "id": "4b0fad5b33d948ce2301",
-      "title": "KI störst mottagare i utdelning från Cancerfonden",
-      "url": "https://nyheter.ki.se/ki-storst-mottagare-i-utdelning-fran-cancerfonden",
-      "source": "Karolinska Institutet",
-      "language": "sv",
-      "published_at": "2026-11-18T00:00:00Z",
-      "source_excerpt": "Forskare vid 16 institutioner på Karolinska Institutet får dela på cirka 352 MSEK i Cancerfondens senaste utdelning. Totalt beviljas 98 anslag till KI. I år görs en särskild satsning på tidig upptäckt av cancer.",
-      "agent_summary": "",
-      "source_fingerprint": "a98fba8bc76190a17de3",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 8,
-      "positive_signals": [
-        "curated-positive-source",
-        "anslag",
-        "satsning",
-        "upptäckt"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/a41b5c39-0a3a-4fe0-b02c-7ab72c5a292a.webp",
-        "alt": "KI störst mottagare i utdelning från Cancerfonden",
-        "user_image_id": "a41b5c39-0a3a-4fe0-b02c-7ab72c5a292a",
-        "match_score": 0.2382,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/4b0fad5b33d948ce2301-a98fba8b-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "a98fba8bc76190a17de3",
-        "width": 1280,
-        "height": 848,
-        "sha256": "6f8ed578e5f52d398fab20d3fb7d8cbaeb1f246ff5a8e22d67a9891394e3a746"
       }
     },
     {
@@ -1307,33 +1349,6 @@
       "public_eligible": true
     },
     {
-      "id": "58b5909da560f076493f",
-      "title": "Stärkt stöd för känguruvård",
-      "url": "https://forskning.se/2026/11/20/starkt-stod-for-kanguruvard",
-      "source": "Forskning.se",
-      "language": "sv",
-      "published_at": "2026-11-20T17:24:31Z",
-      "source_excerpt": "Kängurumetoden innebär att nyfödda barn får ligga hud mot hud på en förälders bröst. En En forskningsöversikt sammanfattar vad tidigare forskning har kommit fram till i ett ämne. &lt;br/&gt;Det finns olika sätt att göra en ... Läs mer \" href=\"https://forskning.se/ordlista/forskningsoversikt/\" data-mobile-support=\"0\" data-gt-translate-attributes='[{\"attribute\":\"data-cmtooltip\", \"format\":\"html\"}]' t",
-      "agent_summary": "",
-      "source_fingerprint": "b52374df320dae634434",
-      "source_image_verified": true,
-      "source_image_url": "https://forskning.se/app/uploads/2026/11/hud-mot-hud-nyfodd-vard-1024x576.jpg",
-      "source_image_alt": "Stärkt stöd för känguruvård",
-      "source_image_credit": "Forskning.se",
-      "source_image_rights_url": "https://forskning.se/2026/11/20/starkt-stod-for-kanguruvard",
-      "source_image_creator": "Forskning.se",
-      "source_image_source_url": "https://forskning.se/2026/11/20/starkt-stod-for-kanguruvard",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "category": "Vetenskap",
-      "source_tier_bonus": 5,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning"
-      ],
-      "public_eligible": true
-    },
-    {
       "id": "56c225a54e232fce1fea",
       "title": "Woman Rescues A Cat She Found At A Car Dealership",
       "url": "https://www.dailymotion.com/video/xamxvli",
@@ -1568,7 +1583,7 @@
       "source_excerpt": "Johnny was in such critical condition that Stan couldn’t risk waiting until they reached a clinic. Dodo editor Valentina talks with him about treating Johnny right there in the middle of the night and getting him stable enough to eventually make it back home.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/h21DM1g_XGsRK4cW8/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/h21DM1g_XGsRK4cW8/x720",
       "source_image_alt": "Dog Needs Emergency Treatment Immediately",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbxtvti",
@@ -1637,7 +1652,7 @@
       "source_excerpt": "Dodo editor Brielle walks us through the incredible effort from Vets For Compassion to rescue a goat who'd been stranded on a remote island for a month, starting with the drone that finally tracked her down.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/h21C-1g_XGOV457KP/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/h21C-1g_XGOV457KP/x720",
       "source_image_alt": "Goat Stranded On Remote Island Finally Gets Rescued",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbxtvsu",
