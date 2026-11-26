@@ -1,8 +1,12 @@
 {
-  "generated_at": "2026-11-26T04:42:43.921299Z",
+  "generated_at": "2026-11-26T19:59:41.868984Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "5068398a150179e16eea",
+    "ed2d9004c855d33b8fc6",
+    "5a177bfab2f44b54c3eb"
+  ],
   "fetch_errors": [
     {
       "source": "Positive News",
@@ -652,40 +656,77 @@
       }
     },
     {
-      "id": "7210906b9ec4f80faefa",
-      "title": "Fyra MMK-forskare får anslag från Cancerfonden",
-      "url": "https://nyheter.ki.se/fyra-mmk-forskare-far-anslag-fran-cancerfonden",
+      "id": "5068398a150179e16eea",
+      "title": "Så kan omställningen i landsbygdskommuner bli mer rättvis",
+      "url": "https://www.extrakt.se/sa-kan-omstallningen-i-landsbygdskommuner-bli-mer-rattvis",
+      "source": "Extrakt",
+      "language": "sv",
+      "published_at": "2026-11-26T13:43:18Z",
+      "source_excerpt": "Människor i landsbygder kan uppleva att klimatomställningen slår olika beroende på var man bor, men det finns mycket som kommuner kan göra för att minska upplevda orättvisor. I samarbete med forskare har Falköpings kommun hittat en plan framåt.",
+      "agent_summary": "",
+      "source_fingerprint": "f66c5f27f2cf8c4a01ce",
+      "category": "Miljö",
+      "source_tier_bonus": 5,
+      "positivity_score": 8,
+      "positive_signals": [
+        "curated-positive-source",
+        "omställning",
+        "samarbete"
+      ],
+      "public_eligible": true,
+      "user_image": {
+        "url": "/news-images/user/586669d7-e165-482e-859f-d434c3bef9c5.webp",
+        "alt": "Så kan omställningen i landsbygdskommuner bli mer rättvis",
+        "user_image_id": "586669d7-e165-482e-859f-d434c3bef9c5",
+        "match_score": 0.2669,
+        "width": 1280,
+        "height": 848
+      },
+      "generated_image": {
+        "url": "/news-images/generated/5068398a150179e16eea-f66c5f27-v1.svg",
+        "alt": "Automatiskt skapad redaktionell illustration.",
+        "style_version": "glimt-paper-collage-v2",
+        "source_fingerprint": "f66c5f27f2cf8c4a01ce",
+        "width": 1280,
+        "height": 848,
+        "sha256": "ff6915b6219cc3ca93dd7ea4b3ea6163f3066b51aacdde4d4d78417ad688301e"
+      }
+    },
+    {
+      "id": "ed2d9004c855d33b8fc6",
+      "title": "Fyraårigt anslag för att studera motion och antitumörimmunitet",
+      "url": "https://nyheter.ki.se/fyraarigt-anslag-for-att-studera-motion-och-antitumorimmunitet",
       "source": "Karolinska Institutet",
       "language": "sv",
-      "published_at": "2026-11-19T00:00:00Z",
-      "source_excerpt": "Fyra forskare vid institutionen för molekylär medicin och kirurgi, MMK, får tillsammans 12,8 miljoner kronor i anslag från Cancerfonden, enligt beslut vid forskningsnämndens sammanträde den 9 november 2026. Anslagen går till forskning om kolorektal cancer och prostatacancer.",
+      "published_at": "2026-11-26T00:00:00Z",
+      "source_excerpt": "Helene Rundqvist vid institutionen för laboratoriemedicin ska leda ett nytt projekt finansierat av World Cancer Research Fund (WCRF), som ska undersöka hur fysisk aktivitet påverkar immuncellers funktion och kan hjälpa immunsystemet att känna igen och angripa cancerceller.",
       "agent_summary": "",
-      "source_fingerprint": "e34b0e88ef3e9393aae5",
+      "source_fingerprint": "29d4a5f265d20b6acc75",
       "category": "Hälsa",
       "source_tier_bonus": 5,
       "positivity_score": 8,
       "positive_signals": [
         "curated-positive-source",
         "anslag",
-        "forskning"
+        "research"
       ],
       "public_eligible": true,
       "user_image": {
         "url": "/news-images/user/290629d1-eec3-4f31-9644-49e96e973112-1.webp",
-        "alt": "Fyra MMK-forskare får anslag från Cancerfonden",
+        "alt": "Fyraårigt anslag för att studera motion och antitumörimmunitet",
         "user_image_id": "290629d1-eec3-4f31-9644-49e96e973112-1",
         "match_score": 0.2432,
         "width": 1280,
         "height": 848
       },
       "generated_image": {
-        "url": "/news-images/generated/7210906b9ec4f80faefa-e34b0e88-v1.svg",
+        "url": "/news-images/generated/ed2d9004c855d33b8fc6-29d4a5f2-v1.svg",
         "alt": "Automatiskt skapad redaktionell illustration.",
         "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "e34b0e88ef3e9393aae5",
+        "source_fingerprint": "29d4a5f265d20b6acc75",
         "width": 1280,
         "height": 848,
-        "sha256": "a5355090603b68e886f1409fa4b455cdca50d7dbae21e284bf52a7e36a39b760"
+        "sha256": "dc05a201e6d2cb33395746d6173936257a23d0ac1e890b49534810487547cc33"
       }
     },
     {
@@ -1090,6 +1131,33 @@
       "public_eligible": true
     },
     {
+      "id": "5a177bfab2f44b54c3eb",
+      "title": "Lakvatten kan renas från PFAS med ny metod",
+      "url": "https://forskning.se/2026/11/26/sa-kan-pfas-separeras-fran-lakvatten-och-sedan-forstoras",
+      "source": "Forskning.se",
+      "language": "sv",
+      "published_at": "2026-11-26T17:24:04Z",
+      "source_excerpt": "PFAS är en samlingsbeteckning för en stor grupp kemikalier som använts inom industrin och i många vardagsprodukter sedan mitten av 1900-talet. Ämnena är mycket svåra att bryta ner i naturen och sprids lätt med vatten. Det gör dem till ett globalt hot mot dricksvattenförsörjningen. PFAS som sprids i samhället hamnar till slut i reningsverk eller […] Lakvatten kan renas från PFAS med ny metod forskn",
+      "agent_summary": "",
+      "source_fingerprint": "16b4d9cd49f1ee48778a",
+      "source_image_verified": true,
+      "source_image_url": "https://forskning.se/app/uploads/2026/11/skumfraktionering-sgi-projekt-1024x576.jpg",
+      "source_image_alt": "Lakvatten kan renas från PFAS med ny metod",
+      "source_image_credit": "Forskning.se",
+      "source_image_rights_url": "https://forskning.se/2026/11/26/sa-kan-pfas-separeras-fran-lakvatten-och-sedan-forstoras",
+      "source_image_creator": "Forskning.se",
+      "source_image_source_url": "https://forskning.se/2026/11/26/sa-kan-pfas-separeras-fran-lakvatten-och-sedan-forstoras",
+      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
+      "category": "Vetenskap",
+      "source_tier_bonus": 5,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "ny metod"
+      ],
+      "public_eligible": true
+    },
+    {
       "id": "d65a7337da3898d60b09",
       "title": "New partnership for urban system demonstrators and circular construction announced at COP31",
       "url": "https://viablecities.se/urban-system-demonstrators-and-circular-construction-cop31",
@@ -1234,79 +1302,6 @@
         "width": 1280,
         "height": 848,
         "sha256": "2a6b0c2992bbf6b8ea0e4f1a499cea95c32b6d693ec022bbfbee2356cce15574"
-      }
-    },
-    {
-      "id": "cc2f5d016e4a56c4597c",
-      "title": "Viktigt att kvinnor som haft graviditetsdiabetes följs upp",
-      "url": "https://www.vetenskaphalsa.se/viktigt-att-kvinnor-som-haft-graviditetsdiabetes-foljs-upp",
-      "source": "Vetenskap & hälsa",
-      "language": "sv",
-      "published_at": "2026-10-29T08:04:51Z",
-      "source_excerpt": "Kvinnor som tidigare haft graviditetsdiabetes löper tio gånger högre risk att drabbas av typ 2-diabetes. Ändå är det bara en minoritet av dem som följs upp inom primärvården efter förlossningen. Med fler kontroller och förebyggande insatser skulle risken minska, menar läkaren och doktoranden Amanda Björk Javanshiri. – Vår forskning visar att det här verkligen är […]",
-      "agent_summary": "",
-      "source_fingerprint": "6e0110cf56f10d6a8be0",
-      "category": "Hälsa",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "forskning",
-        "förebygga"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/fb601de5-40fb-41e6-ad59-02bed671c043.webp",
-        "alt": "Viktigt att kvinnor som haft graviditetsdiabetes följs upp",
-        "user_image_id": "fb601de5-40fb-41e6-ad59-02bed671c043",
-        "match_score": 0.2341,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/cc2f5d016e4a56c4597c-6e0110cf-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "6e0110cf56f10d6a8be0",
-        "width": 1280,
-        "height": 848,
-        "sha256": "fe53ea2d0b9ec1587db920be774873371e1d8c89a613d3271722acd03e2b40e7"
-      }
-    },
-    {
-      "id": "38a03a3022753d958ed7",
-      "title": "Grönska utanför dörren kopplas till lägre risk för demens",
-      "url": "https://www.extrakt.se/gronska-utanfor-dorren-kopplas-till-lagre-risk-for-demens",
-      "source": "Extrakt",
-      "language": "sv",
-      "published_at": "2026-10-14T11:50:26Z",
-      "source_excerpt": "Äldre stadsbor som har mycket grönska nära bostaden löper lägre risk att utveckla demens. Det visar en ny studie där närmare 3 000 personer följdes under 16 år.",
-      "agent_summary": "",
-      "source_fingerprint": "67d5edb6ed1df994136b",
-      "category": "Miljö",
-      "source_tier_bonus": 5,
-      "positivity_score": 7,
-      "positive_signals": [
-        "curated-positive-source",
-        "lägre risk"
-      ],
-      "public_eligible": true,
-      "user_image": {
-        "url": "/news-images/user/586669d7-e165-482e-859f-d434c3bef9c5.webp",
-        "alt": "Grönska utanför dörren kopplas till lägre risk för demens",
-        "user_image_id": "586669d7-e165-482e-859f-d434c3bef9c5",
-        "match_score": 0.2669,
-        "width": 1280,
-        "height": 848
-      },
-      "generated_image": {
-        "url": "/news-images/generated/38a03a3022753d958ed7-67d5edb6-v1.svg",
-        "alt": "Automatiskt skapad redaktionell illustration.",
-        "style_version": "glimt-paper-collage-v2",
-        "source_fingerprint": "67d5edb6ed1df994136b",
-        "width": 1280,
-        "height": 848,
-        "sha256": "228d0b0004fcf4dbe231d5edb1b6c99120fdd6ce922e84edec80fd50037f6a7e"
       }
     },
     {
@@ -1615,7 +1610,7 @@
       "source_excerpt": "Britney spotted tiny Mocha Bean on the side of the road, refusing to leave his mom’s side, and knew she couldn’t drive away without him. Dodo editor Valentina shares how one roadside encounter completely changed this little puppy’s future",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/h21E61g_YCsXwg2ip/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/h21E61g_YCsXwg2ip/x720",
       "source_image_alt": "Woman Stops For Orphaned Puppy Who Won’t Leave His Mom",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbxtvuu",
