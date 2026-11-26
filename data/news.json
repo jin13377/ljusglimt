@@ -690,6 +690,17 @@
         "width": 1280,
         "height": 848,
         "sha256": "ff6915b6219cc3ca93dd7ea4b3ea6163f3066b51aacdde4d4d78417ad688301e"
+      },
+      "ai_image": {
+        "url": "/news-images/ai/articles/5068398a150179e16eea-f66c5f27f2cf8c4a01ce-v1.webp",
+        "alt": "Konceptuell AI-illustration till nyheten: Så kan omställningen i landsbygdskommuner bli mer rättvis",
+        "model": "cf-lucid-origin",
+        "prompt_version": "cf-editorial-photo-v1",
+        "source_fingerprint": "f66c5f27f2cf8c4a01ce",
+        "width": 1280,
+        "height": 848,
+        "sha256": "60c754e4d5273313df4e047583317e16fee05f5a420dcee19c118421f3b54f7e",
+        "generated_at": "2026-11-26T20:00:10Z"
       }
     },
     {
