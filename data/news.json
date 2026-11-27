@@ -1,8 +1,10 @@
 {
-  "generated_at": "2026-11-27T04:48:20.391039Z",
+  "generated_at": "2026-11-27T19:48:21.108548Z",
   "timezone": "Europe/Stockholm",
   "disclaimer": "Rubriker och utdrag kommer från angivna källor. Agent-sammanfattningar ska faktagranskas mot källänken.",
-  "new_item_ids": [],
+  "new_item_ids": [
+    "606ac8fb55254a3b156a"
+  ],
   "fetch_errors": [
     {
       "source": "Positive News",
@@ -1597,6 +1599,35 @@
       "public_eligible": false
     },
     {
+      "id": "606ac8fb55254a3b156a",
+      "title": "NASA’s NG-25 Mission to Launch Pioneering Space Crops Research",
+      "url": "https://science.nasa.gov/science-research/biological-physical-sciences/nasas-ng-25-mission-to-launch-pioneering-space-crops-research",
+      "source": "NASA News Releases",
+      "language": "en",
+      "published_at": "2026-11-27T14:22:00Z",
+      "source_excerpt": "NASA experiments, including a first-of-its-kind space crop production system, will travel to the International Space Station aboard Northrop Grumman’s 25th Commercial Resupply Services mission for the agency. Investigations from NASA’s Biological and Physical Sciences Division will advance research that benefits life on Earth and future exploration, expanding knowledge of space crops and human hea",
+      "agent_summary": "",
+      "source_fingerprint": "6dcef64b4cbc4574db8a",
+      "source_tier_bonus": 1,
+      "positivity_score": 7,
+      "positive_signals": [
+        "curated-positive-source",
+        "experiment",
+        "mission",
+        "research",
+        "science"
+      ],
+      "public_eligible": false,
+      "user_image": {
+        "url": "/news-images/user/fb601de5-40fb-41e6-ad59-02bed671c043.webp",
+        "alt": "NASA’s NG-25 Mission to Launch Pioneering Space Crops Research",
+        "user_image_id": "fb601de5-40fb-41e6-ad59-02bed671c043",
+        "match_score": 0.2464,
+        "width": 1280,
+        "height": 848
+      }
+    },
+    {
       "id": "731cc1d85a32f97b4362",
       "title": "Woman Stops For Orphaned Puppy Who Won’t Leave His Mom",
       "url": "https://www.dailymotion.com/video/xbxtvuu",
@@ -1606,7 +1637,7 @@
       "source_excerpt": "Britney spotted tiny Mocha Bean on the side of the road, refusing to leave his mom’s side, and knew she couldn’t drive away without him. Dodo editor Valentina shares how one roadside encounter completely changed this little puppy’s future",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s1.dmcdn.net/v/h21E61g_YCsXwg2ip/x720",
+      "source_image_url": "https://s2.dmcdn.net/v/h21E61g_YCsXwg2ip/x720",
       "source_image_alt": "Woman Stops For Orphaned Puppy Who Won’t Leave His Mom",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbxtvuu",
@@ -1640,7 +1671,7 @@
       "source_excerpt": "Dodo editor Brielle walks us through the incredible effort from Vets For Compassion to rescue a goat who'd been stranded on a remote island for a month, starting with the drone that finally tracked her down.",
       "agent_summary": "",
       "source_image_verified": true,
-      "source_image_url": "https://s2.dmcdn.net/v/h21C-1g_XGOV457KP/x720",
+      "source_image_url": "https://s1.dmcdn.net/v/h21C-1g_XGOV457KP/x720",
       "source_image_alt": "Goat Stranded On Remote Island Finally Gets Rescued",
       "source_image_credit": "The Dodo",
       "source_image_rights_url": "https://www.dailymotion.com/video/xbxtvsu",
@@ -1688,33 +1719,6 @@
         "curated-positive-source",
         "play",
         "rescue"
-      ],
-      "public_eligible": false
-    },
-    {
-      "id": "1cf350b3106fdd37c06d",
-      "title": "She couldn't afford pet-friendly housing, so she gave up her dog of 10 years. Her community raised $18,000 to reunite them",
-      "url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
-      "source": "Good Good Good",
-      "language": "en",
-      "published_at": "2026-10-07T14:12:00Z",
-      "source_excerpt": "After 23 years of marriage, Lisa Wilson and her dog Eddie had to find a new home. But Hurricane Helene had left the rental market in shambles.",
-      "agent_summary": "",
-      "source_fingerprint": "84b69c00e5ad3fec48ac",
-      "source_image_verified": true,
-      "source_image_url": "https://cdn.prod.website-files.com/6ac7f2e22eaacd2873850a17/6ad6c6a751bcdbde58725e06_6ac65295fb513da952f51586_6ac65294666e636761d49559_north-carolina-housing-woman-reunited-pet-dog-featured.webp",
-      "source_image_alt": "She couldn't afford pet-friendly housing, so she gave up her dog of 10 years. Her community raised $18,000 to reunite them",
-      "source_image_credit": "Good Good Good",
-      "source_image_rights_url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
-      "source_image_creator": "Good Good Good",
-      "source_image_source_url": "https://www.goodgoodgood.co/articles/north-carolina-woman-reunited-pet-dog",
-      "source_image_verification_method": "rss-syndicated-thumbnail-v1",
-      "source_tier_bonus": 2,
-      "positivity_score": 6,
-      "positive_signals": [
-        "curated-positive-source",
-        "community",
-        "friend"
       ],
       "public_eligible": false
     }
